@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: view-clone-connection.html 
+keywords: view clone connection, copy connection information 
+summary: サンドボックスクローンの接続情報を表示およびコピーします。 
+---
+= サンドボックスクローンの接続情報の表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+サンドボックスクローンの接続情報を表示およびコピーします。
+
+.手順
+. にログインし link:https://console.workloads.netapp.com["Workload Factoryコンソール"^]ます。
+. [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
+. [データベース]で、[サンドボックス]タブを選択します。
+. [サンドボックス]タブで、サンドボックスクローンの3つのドットメニューをクリックして接続情報を表示します。
+. [接続情報を表示]*を選択します。
+. [接続情報の表示]ダイアログで、必要に応じて接続情報をコピーします。
+. [* 閉じる * ] をクリックします。
+

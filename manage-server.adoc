@@ -1,0 +1,126 @@
+---
+sidebar: sidebar 
+permalink: manage-server.html 
+keywords: Microsoft SQL Server instance, server instance, manage host, view host, database host, database instance, manage, unmanage 
+summary: Workload Factory for DatabasesでMicrosoft SQL Serverインスタンスを管理します。 
+---
+= Microsoft SQL Serverインスタンスを管理します。
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Microsoft SQL Serverインスタンスを管理して、Workload Factory for Databasesのインスタンスとデータベースのステータス、リソース利用率、保護、ストレージのパフォーマンスを監視します。
+
+データベースは、FSx for ONTAPファイルシステムストレージでのみMicrosoft SQL Serverインスタンスを管理できます。
+
+
+
+== Microsoft SQL Serverインスタンスの管理
+
+Microsoft SQL Serverインスタンスの管理には、次のタスクが含まれます。
+
+* ホストインスタンスを管理します。
+* 管理対象インスタンスの表示
+* データベースの表示
+* ホストインスタンスの管理解除
+
+
+これらのタスクのいずれかを実行するには、が必要です link:detect-host.html["1つ以上のホストインスタンスを検出"^]。
+
+
+
+== ホストインスタンスを管理します。
+
+検出されたホストまたは管理対象外のMicrosoft SQL Serverインスタンスを管理します。
+
+.開始する前に
+作業を開始する前に、次の前提条件を満たしてください。
+
+* 管理に使用できるホストで検出されたインスタンスが必要です。
+* データベースインスタンスを管理するには、PowerShell7が必要です。を参照して、PowerShell7を手動でインストールします link:https://learn.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.4["Windows用のMicrosoft PowerShellのドキュメント"^]。
+* すべての管理処理は、ユーザ権限を使用してAWS System Manager Agentによって実行され `NT Authority\SYSTEM` ます。データベースサーバのユーザに次の権限を付与し `NT Authority\SYSTEM` ます。
++
+** `“ALTER SETTINGS”`
+** `“CONTROL SERVER”`
+** `“ALTER ANY DATABASE”`
+** `“VIEW ANY DEFINITION”`
+** `“CONNECT ANY DATABASE”`
+** `“CREATE ANY DATABASE”`
+
+
+
+
+.手順
+. にログインし link:https://console.workloads.netapp.com["Workload Factoryコンソール"^]ます。
+. [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
+. [データベース]で、*[インベントリ]*タブを選択します。
+. 管理するホストの行で*[管理]*をクリックします。
+. 管理するホストインスタンスを1つ以上選択します。
+. [管理]*をクリックします。
+
+
+Microsoft SQL Serverに特定のPowerShellモジュールと管理スクリプトがないと、処理が失敗します。Workload Factoryは、不足しているモジュールとスクリプトをインストールするための準備リソースジョブをトリガーします。このジョブは、[ジョブの監視]タブに表示できます。ジョブが完了したら、ホストインスタンスの管理を再試行します。
+
+
+
+== 管理対象インスタンスの表示
+
+管理対象インスタンスを表示するには、次の手順を実行します。
+
+.手順
+. にログインし link:https://console.workloads.netapp.com["Workload Factoryコンソール"^]ます。
+. [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
+. [データベース]で、*[インベントリ]*タブを選択します。
+. ドロップダウン矢印をクリックしてホストの行を展開すると、その管理対象インスタンスが表示されます。
++
+ホストが展開され、ホストインスタンスが表示されます。
+
+. 表示するインスタンスの3つのドットメニューをクリックし、*[インスタンスの表示]*を選択します。
+
+
+.結果
+インスタンスの概要が[Inventory]タブに表示されます。
+
+
+
+== データベースの表示
+
+管理対象インスタンスで管理されているデータベースを表示するには、次の手順を実行します。
+
+.手順
+. にログインし link:https://console.workloads.netapp.com["Workload Factoryコンソール"^]ます。
+. [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
+. [データベース]で、*[インベントリ]*タブを選択します。
+. ドロップダウン矢印をクリックしてホストの行を展開し、ホストのデータベースを表示します。
++
+ホストが展開され、ホストインスタンスが表示されます。
+
+. 表示するデータベースを含むインスタンスの3つのドットメニューをクリックします。
+. [データベースの表示]*を選択します。
+
+
+.結果
+インスタンス内のデータベースのリストが[Inventory]タブに表示されます。
+
+
+
+== ホストインスタンスの管理解除
+
+次の手順に従って、ホストインスタンスの管理を解除します。
+
+.手順
+. にログインし link:https://console.workloads.netapp.com["Workload Factoryコンソール"^]ます。
+. [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
+. [データベース]で、*[インベントリ]*タブを選択します。
+. ドロップダウン矢印をクリックして、管理を解除するホストインスタンスの行を展開します。
++
+ホストが展開され、ホストインスタンスが表示されます。
+
+. 管理を解除するインスタンスの3つのドットメニューをクリックします。
+. [Unmanage]*を選択します。
+
+
+.結果
+ホストインスタンスが管理対象外になりました。

@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: delete-clone.html 
+keywords: delete, clone 
+summary: 不要になったサンドボックスクローンを削除します。 
+---
+= ソースデータベースからサンドボックスクローンをスプリットする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+不要になったサンドボックスクローンを削除し、ストレージ容量を解放したい。
+
+.手順
+. にログインし link:https://console.workloads.netapp.com["Workload Factoryコンソール"^]ます。
+. [データベース]タイルで、*[データベースインベントリに移動]*をクリックします。
+. [データベース]で、[サンドボックス]タブを選択します。
+. 削除するサンドボックスクローンの3つのドットメニューをクリックします。
+. 「 * 削除」を選択します。
+. [削除]ダイアログで、*[削除]*をクリックします。
+

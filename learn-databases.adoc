@@ -1,0 +1,183 @@
+---
+sidebar: sidebar 
+permalink: learn-databases.html 
+keywords: Databases 
+summary: データベースは、データベースの導入とメンテナンスのためのエンドツーエンドのサービスです。最適化、自動シンクローニング、監視と解決のためのベストプラクティスが組み込まれています。 
+---
+= データベース向けワークロードファクトリの詳細
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Workload Factory for Databasesは、エンドツーエンドのデータベース導入およびメンテナンスサービスであり、最適化、自動シンクローニング、監視および解決機能のベストプラクティスが組み込まれています。
+
+
+
+== データベースのワークロードファクトリとは
+
+Workload Factory for Databasesは、業界のベストプラクティスに準拠しながら、パフォーマンスとコストの期待に応えるよう最適化されたAmazon FSx for NetApp ONTAP（FSx for ONTAP）環境を検出、評価、計画、プロビジョニング、移行します。Workload Factoryは、ライフサイクル全体を通じて、FSx for ONTAP上のデータベースの継続的な最適化と管理を実現します。
+
+Workload Factoryの詳細については、を参照して link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["Workload Factoryの概要"^]ください。
+
+
+
+== 自己管理データベースに対するWorkload Factoryのメリット
+
+Workload Factoryは、自己管理データベースに次のような有益なベストプラクティスと自動化を提供します。
+
+
+
+=== ベストプラクティス
+
+* AWSクラウド、Microsoft WindowsおよびSQLサーバ、NetApp ONTAP for SQL ServerのEC2インスタンスへの導入に関する統合された知識。
+* TCO（総所有コスト）最適化された導入。
+* AWS、Microsoft、ONTAPのベストプラクティスに沿ったエンドツーエンドの導入自動化
+* 「Quick create」デプロイメントモードを使用すると、手動設定による潜在的な落とし穴を回避できます。
+
+
+
+
+=== Workload Factory Codeboxによる自動化
+
+Workload Factoryでは、_Codebox_を使用した自動化が組み込まれています。Codeboxには、次のような自動化の利点があります。
+
+* *コードスニペットの生成*：IAC（Infrastructure as Code）スニペットはリソース作成時に生成されるため、既存のオーケストレーションワークフローとシームレスに統合できます。
+* *コードとしてのインフラストラクチャのコパイロット*:コードとしてのインフラストラクチャ(IAC)コパイロットであり、開発者とDevOpsがワークロードファクトリーでサポートされているすべての操作を実行するためのコードを生成するのを支援します。
+* *コードビューアと自動化カタログ*:コードボックスは、自動化の迅速な分析のためのコードビューアと、将来の迅速な再利用のための自動化カタログを提供します。
+
+
+
+
+=== Workload Factory for Databasesの機能
+
+Workload Factory for Databasesには次の機能があります。
+
+* *シンプルで迅速な導入*：仕様に関する質問に対する回答を選択し、Microsoft SQL Server on AWSのプロビジョニングおよび構成方法の調査に通常必要な時間を排除することで、プロビジョニングエクスペリエンスを簡素化および合理化します。
+* *自動オーケストレーション*: Workload Factoryのユーザーインターフェイスで、_Quick_and_Advanced_createデプロイメントモード、Workload FactoryのChatbot、AWS CloudFormationのAPIを使用できます。
+* *組み込み機能*：NetApp、Microsoft、Amazonのベストプラクティスと、導入構成に組み込まれたAWSリソースの選択を活用します。
+* *コストの見積もり*: Workload Factoryのストレージ計算ツールを使用して、FSx for ONTAPと比較して、Elastic Block Storeを使用した既存のMicrosoft SQL Server環境のストレージ、コンピューティング、SQLライセンス、スナップショット、クローンの項目別コストを見積もり、詳細化します。
+* *再利用可能な自動化テンプレート*: Workload Factory CodeboxからCloudFormationテンプレートを作成、再利用、カスタマイズして、複数の環境でのMicrosoft SQL Serverの将来の導入に対応します。
+* * AWSリソースの検出とプロビジョニング*：AWSアカウントから導入されたFSx for ONTAP、FSx for Windowsファイルサーバ、Elastic Block StoreでMicrosoft SQL Serverを自動的に検出します。データベースインベントリは、他のAWSストレージシステム内のサーバのコスト削減の余地を探るための出発点として機能し、FSx for ONTAPベースのサーバとインスタンスの管理ツールとして機能します。
+* *サンドボックスの作成*：本番環境のデータに影響を与えることなく、テスト、統合、診断、トレーニングに使用できる、オンデマンドの分離されたデータベース環境を作成します。
+* *データベースの作成*:データベースの照合、ファイル名、およびサイズを構成するために、_Quick_or_Advanced_createモードを使用して、既存のMicrosoft SQL Server用のユーザーデータベースを作成します。ストレージ構成も含まれます。
+* *ジョブ監視*:データベースジョブの実行状況を監視および追跡し、障害が発生した場合の問題を診断およびトラブルシューティングします。
+
+
+
+
+== 自己管理型データベースでのAmazon FSx for ONTAPのメリット
+
+* *耐久性、可用性、信頼性*：FSx for ONTAPは、単一および複数のアベイラビリティゾーンの導入をサポートする高可用性、アプリケーション対応のスナップショット、レプリケーションを使用したディザスタリカバリの向上、効率的なバックアップなど、FSx for ONTAPでホストされる自己管理データベースの耐久性と可用性を強化する複数の機能を提供します。
+* *パフォーマンスと拡張性*：FSx for ONTAPは、高スループット、低レイテンシ、高速ネットワーク接続、複数のファイルシステムによる拡張性によってパフォーマンスを最適化し、ワークロードに必要なアグリゲートパフォーマンスを拡張します。
+* *データの管理と効率化*：FSx for ONTAPは、スペース効率に優れたシンクローン、シンプロビジョニング、圧縮と重複排除、アクセス頻度の低いデータの容量プールへの階層化など、データの管理と効率化を強化する複数の機能を提供します。
+
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["FSx for ONTAP for Workload Factoryの詳細"^]です。
+
+
+
+=== Workload Factoryの動作モード
+
+_basic_、_read_and _automate_の3つの動作モードでは、Workload Factoryの内外での導入に柔軟なオプションを提供します。Workload Factoryの外部で使用するコードスニペットを使用して、ゼロトラストin_basic_modeですぐに値を取得します。_read_and_automate_modesで増分値を取得します。
+
+詳細については、をご覧ください link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Workload Factoryの動作モード"^]。
+
+
+
+== 導入の詳細
+
+
+
+=== サポートされる構成
+
+Workload Factory for Microsoft SQL Serverは、AWS、NetApp ONTAP、SQL Serverのベストプラクティスに従って、高可用性（Always Onフェイルオーバークラスタインスタンス）とシングルインスタンス環境の両方をサポートしています。
+
+[cols="2a,2a,2a,2a"]
+|===
+| SQL Serverのバージョン | Windows Server 2016 | Windows Server 2019 | Windows Server 2022 
+
+
+ a| 
+SQL Server 2016
+ a| 
+はい
+ a| 
+はい
+ a| 
+いいえ
+
+
+
+ a| 
+SQL Server 2019
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+
+
+
+ a| 
+SQL Server 2022
+ a| 
+いいえ
+ a| 
+はい
+ a| 
+はい
+
+|===
+
+
+=== 導入アーキテクチャ
+
+データベースでは、単一のアベイラビリティゾーンおよび複数のアベイラビリティゾーン配置アーキテクチャがサポートされます。
+
+.単一のアベイラビリティゾーン
+次の図は、単一のリージョンに単一のアベイラビリティゾーンがあるスタンドアロンアーキテクチャを示しています。
+
+image:diagram-SAZ-database-architecture.png["単一のリージョンにAmazon FSx for NetApp ONTAPのアベイラビリティゾーンを1つ導入したスタンドアロンアーキテクチャの図"]
+
+.複数のアベイラビリティゾーン
+次の図は、単一のリージョンにフェイルオーバークラスタインスタンス（FCI）クラスタを含む2ノードのハイアベイラビリティ（HA）アーキテクチャを示しています。
+
+image:diagram-MAZ-database-architecture.png["単一のリージョンにフェイルオーバークラスタインスタンスクラスタを配置した2ノードの高可用性アーキテクチャの図"]
+
+
+
+=== AWS統合サービス
+
+データベースには、次のAWS統合サービスが含まれています。
+
+* クラウド形成
+* 簡易通知サービス
+* CloudWatch
+* System Manager
+* シークレットマネージャー
+
+
+
+
+=== サポートされている地域
+
+データベースは、FSx for ONTAPがサポートされるすべての商用リージョンでサポートされます。 https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["サポート対象の Amazon リージョンを表示します。"^]
+
+次のAWSリージョンはサポートされません。
+
+* 中国
+* GovCloud（US）リージョン
+* シークレットクラウド
+* トップシークレットクラウド
+
+
+
+
+== サポートを受ける
+
+Amazon FSx for NetApp ONTAP は、AWSファーストパーティの解決策 です。FSx for ONTAPファイルシステム、インフラ、または本サービスを使用する解決策に関する質問やテクニカルサポートの問題については、AWS管理コンソールのサポートセンターを使用してAWSに対するサポートケースをオープンしてください。「 FSX for ONTAP 」サービスと該当するカテゴリを選択します。AWS サポートケースの作成に必要な残りの情報を指定します。
+
+Workload FactoryまたはWorkload Factoryのアプリケーションとサービスに関する一般的な質問については、を参照してください link:get-help-databases.html["Workload Factoryのデータベースに関するヘルプ"]。

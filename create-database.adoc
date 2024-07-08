@@ -1,0 +1,119 @@
+---
+sidebar: sidebar 
+permalink: create-database.html 
+keywords: create, database, creation, Microsoft SQL 
+summary: Workload Factoryデータベースを使用してMicrosoft SQLデータベースを作成します。 
+---
+= Workload Factory for DatabasesでのMicrosoft SQLデータベースの作成
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Workload Factoryコンソールで新しいMicrosoft SQLデータベースを作成すると、Workload Factory内でリソースを管理できます。
+
+.タスクの内容
+データベースを作成すると、独立したLUNで構成されるFSx for ONTAPファイルシステムに2つのボリュームが作成され、データベースのデータファイルとログファイルをホストします。新しいデータベース内のデータベースファイルはシンプロビジョニングされ、新しいデータベースに割り当てられた合計サイズのわずか数MBしか消費しません。
+
+データベースのストレージを分離する場合は、_ virtualマウントポイント_を使用します。仮想マウントポイントを使用すると、ホスト上のいくつかの共通ドライブにデータベースを統合できます。
+
+Workload Factoryでデータベースを作成するには、自動モードの権限が必要です。または、基本モードでは、部分的に完了したコードテンプレートをコピーまたはダウンロードして、Workload Factoryの外部で操作を完了できます。link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Workload Factoryの動作モードの詳細"^] 使用するモードを決定します。
+
+
+NOTE: SMBプロトコルを使用するMicrosoft SQL Serverでは、データベースの作成はサポートされていません。
+
+.開始する前に
+新しいデータベースを作成する前に、次の前提条件を満たしていることを確認してください。
+
+クレデンシャルと権限:: Workload Factoryで新しいデータベースを作成する必要があり link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWSアカウントのクレデンシャルと_read_or_automate_mode権限"^] ます。
++
+--
+または、[コードボックス]を使用してテンプレートをコピーし、REST APIを使用してWorkload Factoryの外部にデータベースをデプロイすることもできます。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Codebox自動化の詳細"^]です。
+
+--
+Windowsホスト:: _Quick create_modeを使用する場合は、新しいデータベース用の新しいドライブを作成するために、Microsoft SQL Serverに十分な数のドライブレターが必要です。
+Microsoft SQL Server:: 新しいデータベースをホストするには、Workload Factory for Databasesに管理対象のMicrosoft SQL Serverが必要です。
+AWSシステムマネージャ:: AWS System Managerを使用してMicrosoft SQLホストで権限が有効になっていることを確認します `NT Authority\SYSTEM user` 。
+
+
+
+
+== データベースの作成
+
+_Quick create_or_Advanced create_deploymentモードを使用して、_read_or_automate_mode権限を指定してWorkload Factoryでこのタスクを完了できます。
+
+[role="tabbed-block"]
+====
+.クイック作成
+--
+.手順
+. にログインし link:https://console.workloads.netapp.com["Workload Factoryコンソール"^]ます。
+. [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
+. [データベース]で、*[インベントリ]*タブを選択します。
+. [インベントリ]タブで、データベースを作成する管理対象SQLサーバーインスタンスを持つデータベースサーバーを選択します。
+. 管理対象インスタンスの3つのドットメニューをクリックし、*ユーザーデータベースの作成*を選択します。
+. [Create user database]ページの[Database information]で、次の情報を指定します。
++
+.. *データベース名*：データベースの名前を入力します。
+.. *Collation*:データベースの照合を選択します。Microsoft SQL Serverのデフォルト照合SQL_Latin1_General_CP1_CI_ASが選択されています
+
+
+. [ファイルの設定]で、次の情報を入力します。
++
+.. *ファイル設定モード*：*クイック作成*を選択します。
+.. *ファイル名とパス*:
++
+*** *データファイル名*:データファイル名を入力します。
+*** *ログファイル名*:ログファイル名を入力します。
+
+
+.. *ファイルサイズ*：データベースのデータサイズとログサイズを入力します。
+
+
+. [ 作成（ Create ） ] をクリックします。
++
+または、これらのデフォルト設定のいずれかを今すぐ変更する場合は、*ファイル設定モード*を*詳細作成*に変更します。
+
+
+
+--
+.高度な作成
+--
+.手順
+. にログインし link:https://console.workloads.netapp.com["Workload Factoryコンソール"^]ます。
+. [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
+. [データベース]で、*[インベントリ]*タブを選択します。
+. [インベントリ]タブで、データベースを作成する管理対象SQLサーバーインスタンスを持つデータベースサーバーを選択します。
+. 管理対象インスタンスの3つのドットメニューをクリックし、*ユーザーデータベースの作成*を選択します。
+. [ユーザーデータベースの作成]*を選択します。
+. [Create user database]ページの[Database information]で、次の情報を指定します。
++
+.. *データベース名*：データベースの名前を入力します。
+.. *Collation*:データベースの照合を選択します。Microsoft SQL Serverのデフォルト照合SQL_Latin1_General_CP1_CI_ASが選択されています
+
+
+. [ファイルの設定]で、次の情報を入力します。
++
+.. *ファイル設定モード*：*詳細作成*を選択します。
+.. *ファイル名とパス*:
++
+... *データファイル*:ドライブ文字を選択し、データファイル名を入力します。
++
+必要に応じて、*[Virtual mount point]*のボックスをクリックします。
+
+... *ログファイル*:ドライブ文字を選択し、ログファイル名を入力します。
++
+必要に応じて、*[Virtual mount point]*のボックスをクリックします。
+
+
+
+.. *ファイルサイズ*：データベースのデータサイズとログサイズを入力します。
+
+
+. [ 作成（ Create ） ] をクリックします。
+
+
+--
+====
+データベースホストを作成した場合は、*[ジョブ監視]*タブでジョブの進行状況を確認できます。

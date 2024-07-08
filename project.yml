@@ -1,0 +1,75 @@
+---
+settings:
+  name: Database workloads
+  platform: cloud
+  internal:
+    pdf_enabled: true
+    termcheck_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: ja-jp,us-en,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
+sidebar:
+  entries:
+  - title: データベースワークロードのドキュメント
+    url: "/index.html"
+  - title: リリースノート
+    entries:
+    - title: 新機能
+      url: "/whats-new.html"
+    - title: 既知の制限事項
+      url: "/known-limitations.html"
+  - title: はじめに
+    entries:
+    - title: データベース向けワークロードファクトリの詳細
+      url: "/learn-databases.html"
+    - title: クイックスタート
+      url: "/quick-start-databases.html"
+  - title: データベースワークロードを使用
+    entries:
+    - title: コスト削減の詳細
+      url: "/explore-savings.html"
+    - title: 新しいデータベースサーバを作成する
+      url: "/create-database-server.html"
+    - title: データベースサーバの検出
+      url: "/detect-host.html"
+    - title: データベースの作成
+      url: "/create-database.html"
+    - title: Codeboxによる自動化
+      url: "/automate-codebox.html"
+  - title: 管理と監視
+    entries:
+    - title: Microsoft SQL Serverの管理
+      url: "/manage-server.html"
+    - title: クローンの管理
+      entries:
+      - title: サンドボックスクローンの作成
+        url: "/create-sandbox-clone.html"
+      - title: サンドボックスクローンの整合性チェック
+        url: "/check-clone-integrity.html"
+      - title: サンドボックスクローンのリバート
+        url: "/revert-clone.html"
+      - title: サンドボックスクローンの更新
+        url: "/refresh-clone.html"
+      - title: CI / CDパイプラインへの接続
+        url: "/connect-clone-cicd.html"
+      - title: クローン接続情報の表示
+        url: "/view-clone-connection.html"
+      - title: サンドボックスクローンをスプリットする
+        url: "/split-clone.html"
+      - title: サンドボックスクローンを削除する
+        url: "/delete-clone.html"
+    - title: データベースの監視
+      url: "/monitor-databases.html"
+  - title: 知識とサポート
+    entries:
+    - title: サポートに登録します
+      url: "/support-registration-databases.html"
+    - title: ヘルプを表示します
+      url: "/get-help-databases.html"
+  - title: 法的通知
+    url: "/legal-notices.html"
+product-family:
+  name: BlueXP Workload Factory for AWS
+  repo: workload-family

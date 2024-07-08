@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: split-clone.html 
+keywords: split, clone, source, new database 
+summary: ソースデータベースからサンドボックスクローンをスプリットして、新しいデータベースを作成します。 
+---
+= ソースデータベースからサンドボックスクローンをスプリットする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+ソースデータベースからサンドボックスクローンをスプリットすると、一定量のストレージ容量を消費する新しいデータベースが作成されます。スプリットが完了するとクローンが削除され、新しいデータベースがインベントリに表示されます。
+
+.開始する前に
+新しいデータベースに必要なストレージ容量を検討します。作業を開始する前に、FSx for ONTAPファイルシステムが必要な場合 link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capacity.html["ファイルシステムの容量の拡張"^] 。
+
+.手順
+. にログインし link:https://console.workloads.netapp.com["Workload Factoryコンソール"^]ます。
+. [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
+. [データベース]で、[サンドボックス]タブを選択します。
+. [サンドボックス]タブで、分割するサンドボックスクローンの3つのドットメニューをクリックします。
+. [分割]*を選択します。
+. [分割]ダイアログで、*[分割]*をクリックします。
+

@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="08c1bf6e31ef174ff608b5eb3d282063" category="summary">Codeboxを使用すると、ホストの導入やデータベースの作成などを自動化できます。</block>
+  <block id="2ea6aca63123969c1931cd33bf4619a0" category="doc">Codeboxによる自動化</block>
+  <block id="b20a3702e469d533caddf21766655326" category="paragraph">Codeboxを使用すると、ホストの導入やデータベースの作成などを自動化できます。Codeboxは、コードとしてのインフラストラクチャ(IAC)のコパイロットであり、Workload Factoryでサポートされているすべての操作を実行するためのコードを生成するのに役立ちます。</block>
+  <block id="bd282943a337f4287ca0d70f9a836261" category="inline-link-macro">コードボックス自動化</block>
+  <block id="7954c9f6b266222ad558a397a97a8531" category="paragraph">詳細とその使用方法については、こちらをご覧 <block ref="d6a91743d83ea88006a3d66c27289981" category="inline-link-macro-rx"></block> ください。</block>
+  <block id="ac7284049e3ee45d84a53391c4f756c6" category="summary">整合性チェックを実行して、サンドボックスクローンデータに影響がないか破損しているかを確認します。</block>
+  <block id="7a5c12f2d0d30b237d1a31e54803d0f8" category="doc">サンドボックスクローン内のデータの整合性をチェックする</block>
+  <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">タスクの内容</block>
+  <block id="6a2235a7d08e9218e23793c114adf3a3" category="paragraph">ソースデータベースがビジー状態のときにソースデータベースからサンドボックスクローンを作成すると、クローンのデータがソースデータベースの最新のスナップショットと同期していない可能性があります。この処理では、サンドボックスクローン内のすべてのオブジェクトの整合性がチェックされ、サンドボックスクローンデータが最新かどうかが確認されます。</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">手順</block>
+  <block id="8fd935558171bd50056871ef9ee7bd05" category="inline-link-macro">Workload Factoryコンソール</block>
+  <block id="219bd6a410f8c490dbc0ffbcf504910f" category="list-text">にログインし <block ref="ed002915dbbbf90a20b3d8fdf4cc2390" category="inline-link-macro-rx"></block>ます。</block>
+  <block id="a22aeb541c430c47c35bcc20690ea51a" category="list-text">[データベース]タイルで、*[データベースインベントリに移動]*を選択します。</block>
+  <block id="a1029809e498e81eaada752a6b08cd7c" category="list-text">[データベース]で、[サンドボックス]タブを選択します。</block>
+  <block id="627f12b5ce917853e0580a84a419249f" category="list-text">[Sandboxes]タブで、サンドボックスクローンの[three dots]メニューをクリックして整合性をチェックします。</block>
+  <block id="4959cbb15c588c0b15ed2cb6bf243a79" category="list-text">[整合性チェックの実行]*を選択します。</block>
+  <block id="655a2ef85749dcbb368e1b8b32300552" category="list-text">[整合性チェック]ダイアログで、*[整合性チェック]*をクリックします。</block>
+  <block id="d2212da19c03bb2b369faeaf9d65f109" category="list-text">サンドボックスまたはジョブ監視で整合性チェックのステータスを確認します。</block>
+  <block id="8ea37d89915fca644158ae5283f70e68" category="paragraph">整合性チェックに失敗した場合は、サンドボックスクローンを使用せずに、新しいサンドボックスクローンを作成することを推奨します。</block>
+  <block id="4d347b6072ee47e025ccdfd378498ab5" category="summary">REST APIコードを使用してサンドボックスクローンをCI / CDパイプラインに接続し、自動化によってソフトウェア提供を改善します。</block>
+  <block id="2af2cf99863645202599afd2708773e2" category="doc">サンドボックスクローンをCI/CDツールに接続する</block>
+  <block id="51697baa6e97b2ce6c7f23840ca2ca0d" category="paragraph">REST APIコードを使用してサンドボックスクローンを継続的統合/継続的導入（CI / CD）パイプラインに接続し、自動化によるソフトウェア提供の向上を実現します。</block>
+  <block id="bc71cf96586c8edb703f886cce218a0c" category="paragraph">新しいバージョンのソフトウェアをデータベースクローンに自動的に提供するには、CI / CDパイプラインに接続する必要があります。この処理で提供されるREST APIコードを使用して接続を確立します。</block>
+  <block id="efb5b5e68dc2811878125ac310982a90" category="list-text">[サンドボックス]タブで、サンドボックスクローンの3つのドットメニューをクリックしてCI/CDツールに接続します。</block>
+  <block id="452804eac893658bcf658126b3087551" category="list-text">[CI/CDツールに接続]*を選択します。</block>
+  <block id="8191f4b1aee7fafe827afe8814de01a6" category="list-text">[CI/CD]ダイアログで、CI/CDツールへの接続に必要なREST APIコードをコピーまたはダウンロードします。</block>
+  <block id="00a06b08857b60c805bcaf007a9ddc9c" category="list-text">[* 閉じる * ] をクリックします。</block>
+  <block id="392ed963483d69a8e63e73d35e0d94b2" category="summary">Workload Factory for Databases内に新しいMicrosoft SQL Serverを作成します。</block>
+  <block id="380125ed55bd2d330edbd99ae6cf41be" category="doc">Workload Factory for Databasesでのデータベースサーバの作成</block>
+  <block id="d1ac2708b0ee841a10544360a09ab608" category="paragraph">データベースに新しいMicrosoft SQL Server（データベースホスト）を作成するには、FSx for ONTAPファイルシステムの導入とActive Directory用のリソースが必要です。</block>
+  <block id="f60fded57b2858e25ed1e7b7544f0543" category="paragraph">AWSアカウントのクレデンシャルと_automate_permissionsが必要です。</block>
+  <block id="9a0d07e2b680cee18314090ce1313234" category="paragraph">作業を開始する前に、データベースホストの構成で使用可能なストレージ導入タイプ、Active Directoryの導入、ワークロードファクトリの動作モード、およびこの処理を完了するための要件について学習します。</block>
+  <block id="4011a937f681a8e908e8f70efba55370" category="inline-xref">Microsoft SQL Serverでリモート接続を有効にする</block>
+  <block id="cd0ca71df74d472da908105120ebeda6" category="paragraph">導入後は、次の手順を実行する必要があり <block ref="818d2f7834c8414926cca53583c2472c" category="inline-xref-macro-rx"></block>ます。</block>
+  <block id="5149e96cf7ba21fb672788deb7e52f4c" category="list-text">FSx for ONTAPファイルシステムの導入</block>
+  <block id="432996ca9d8b98d98618a3ae333a5e19" category="list-text">新しいMicrosoft SQL Serverを作成するには、ストレージバックエンドとしてFSx for ONTAPファイルシステムが必要です。FSx for ONTAPの既存のファイルシステムを使用することも、新しいファイルシステムを作成することもできます。データベースサーバのストレージバックエンドとして既存のFSx for ONTAPファイルシステムを選択された場合は、Microsoft SQLワークロード用の新しいStorage VMを作成します。</block>
+  <block id="62cc1830ea671ff0a49c111847f3aa99" category="paragraph">FSx for ONTAPファイルシステムには、2つのMicrosoft SQL Server導入モデル（_フェイルオーバークラスタインスタンス（FCI）_または_スタンドアロン_）があります。FSx for ONTAPファイルシステム用に作成されるリソースは、選択したFSx for ONTAP導入モデルに応じて異なります。</block>
+  <block id="9f655fd96391ef4ea50d73553acdb894" category="list-text">*フェイルオーバークラスタインスタンス（FCI）Microsoft SQL導入*：FCI導入用に新しいFSx for ONTAPファイルシステムが選択されると、複数のアベイラビリティゾーンFSx for NetApp ONTAPファイルシステムが導入されます。FCI環境では、データ、ログ、およびtempdbファイル用に別 々 のボリュームとLUNが作成されます。Windowsクラスタのクォーラムまたは監視ディスク用に、追加のボリュームとLUNが作成されます。</block>
+  <block id="90215509e85ac6d78676f148e46c484f" category="list-text">*スタンドアロンのMicrosoft SQL展開*:新しいMicrosoft SQL Serverが作成されると、単一のアベイラビリティゾーンFSx for ONTAPファイルシステムが作成されます。また、データ、ログ、およびtempdbファイル用に別 々 のボリュームとLUNが作成されます。</block>
+  <block id="4fbbbcdfcdfad5270a20167c67509f0b" category="list-text">Active Directory</block>
+  <block id="a63ca0fccfd9f281ab5cc4a603178ae8" category="list-text">導入時にActive Directory（AD）に対して次の処理が実行されます。</block>
+  <block id="bb73fe1381499c37aae0cc2a626cc34e" category="list-text">既存のSQLサービスアカウントを指定しない場合は、ドメインに新しいMicrosoft SQLサービスアカウントが作成されます。</block>
+  <block id="5c8a0e6f8f0d0eaf43a89fbcadc61a51" category="list-text">Windowsクラスタ、ノードホスト名、およびMicrosoft SQL FCI名は、管理対象コンピュータとしてMicrosoft SQLサービスアカウントに追加されます。</block>
+  <block id="b0f68710f10b777e8a3a6a05cbe22baf" category="list-text">Windowsクラスタエントリには、ドメインにコンピュータを追加するための権限が割り当てられています。</block>
+  <block id="83a71d87a2027be5b38c84208aca35a6" category="list-text">リソースのロールバック</block>
+  <block id="80758d39cf7722920381bc3a17b4fc99" category="list-text">Domain Name System（DNS;ドメインネームシステム）リソースをロールバックする場合、ADおよびDNSのリソースレコードは自動的には削除されません。DNSサーバとADからレコードを削除するには、次の手順を実行します。</block>
+  <block id="2f6957866520b1e1ee16fbdc66ca59d0" category="inline-link-macro">ADコンピュータの取り外し</block>
+  <block id="5f7bcf655fe16613a9e06de8707a851b" category="inline-link-macro">DNSリソースレコードの削除</block>
+  <block id="9c807e63fa15554f7ae178b53fcb126a" category="list-text">ユーザ管理ADの場合は、最初に <block ref="8c8c5f6325dee0afa8ed87ded1981e91" category="inline-link-macro-rx"></block>。次に、DNSマネージャおよびからDNSサーバに接続します <block ref="4fc06ea24abf03c6244463030ecbed01" category="inline-link-macro-rx"></block>。</block>
+  <block id="7e386d122b1c96c1323a293908fd7a70" category="inline-link-macro">AD管理ツールのインストール</block>
+  <block id="a6668851eb1b1b621e1d1030ed6ad0d5" category="list-text">AWSマネージドMicrosoft ADの場合は、 <block ref="3e2e7ba22ff1ed0d5158cb4cd69909cc" category="inline-link-macro-rx"></block>次は <block ref="8c8c5f6325dee0afa8ed87ded1981e91" category="inline-link-macro-rx"></block>最後に、DNSマネージャおよびからDNSサーバに接続します <block ref="4fc06ea24abf03c6244463030ecbed01" category="inline-link-macro-rx"></block>。</block>
+  <block id="22330365af0d59bfe8fc09b45647109b" category="list-text">Workload Factoryの動作モード</block>
+  <block id="decd3aa3f727a62561d9e4f042a51d83" category="list-text">Workload Factoryには、Workload FactoryにAWSリソースを管理させる方法に応じて、3つの運用モードが用意されています。</block>
+  <block id="ab665ef2c2283aeabe49f74c3aea5e1e" category="paragraph">*_Basic_mode *:この操作モードでは、Workload FactoryでAWSアカウントのクレデンシャルを関連付ける必要はありません。[コードボックス]から部分的に塗りつぶされたYAMLテンプレートをコピーまたはダウンロードして、ワークロードファクトリの外部で完成させることができます。</block>
+  <block id="8ba114a57f6ce4ebda666a99fa83ec8e" category="paragraph">*_Read_mode *:この操作モードでは、AWSアカウントのクレデンシャルに読み取り権限を付与します。これにより、_Quick create_or_Advanced create_formを完成させ、コピーまたはダウンロードすることができます。入力済みのフォームの詳細を使用して、Workload FactoryからCloudFormationにリダイレクトすることもできます。また、Workload Factoryでデプロイされたデータベースサーバーを管理できるようになります。</block>
+  <block id="ef2ca3f28f5e7d8c76e257d801fe8b55" category="paragraph">*_automate_mode *:この操作モードでは、Workload Factory内でAWSリソースを作成および管理できる自動権限を持つAWSアカウントクレデンシャルを提供します。</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">開始する前に</block>
+  <block id="b2f899f972527ed53c986fff0ea809c9" category="paragraph">新しいデータベースホストを作成する前に、次の前提条件を満たしていることを確認してください。</block>
+  <block id="ee87d4c496da752f756c502bf6d73599" category="list-text">クレデンシャルと権限</block>
+  <block id="1b3eca0f21789e391339e536902a0773" category="inline-link-macro">AWSアカウントのクレデンシャルと自動モードの権限</block>
+  <block id="1027001c3c9edc142515a498b1a0e763" category="list-text">Workload Factoryで新しいデータベースホストを作成する必要があり <block ref="6d0e9cd8cac3e1654b2b4423d6d0dc45" category="inline-link-macro-rx"></block> ます。</block>
+  <block id="4e79c01286f2a10af230320a37d7ce30" category="inline-link-macro">Codebox自動化の詳細</block>
+  <block id="f88042761b360a1068bd7cbff48dfa7e" category="paragraph">または、Codeboxを使用して空のテンプレートをコピーするか、完成したテンプレートを作成して、REST API、AWS CLI、またはAWS CloudFormationを使用してWorkload Factoryの外部にデータベースをデプロイできます。<block ref="2d990d14c53331d19396f393ba4ea98c" category="inline-link-macro-rx"></block>です。</block>
+  <block id="6aa474bc798ba983a2979f974d7af008" category="list-text">Active Directoryに接続する場合は、次の作業を行うための権限を持つ管理者アクセス権が必要です。</block>
+  <block id="711b4926fa677fe43f56947d4d5cafe7" category="list-text">ドメインへの参加</block>
+  <block id="c0b14bebaf39c4dec5b15a38784a4949" category="list-text">コンピュータオブジェクトの作成</block>
+  <block id="cb7601f611115c1e63a99e77a4bf24fe" category="list-text">デフォルトの組織単位（OU）でオブジェクトを作成する</block>
+  <block id="b6daf1d46969dcf0df188883b92605fe" category="list-text">すべてのプロパティの読み取り</block>
+  <block id="8b018b615821339740a7c79a7473918a" category="list-text">ドメインユーザをADノードのローカル管理者にする</block>
+  <block id="045b984ac75a0da892fea6afe6b83555" category="list-text">ADにMicrosoft SQL Serverサービスユーザが存在しない場合は作成します。</block>
+  <block id="15d1ade99815746ab0088981bd7585d3" category="section-title">手順1：データベースサーバを作成する</block>
+  <block id="e501215e9258fda8d54793a123ed721f" category="paragraph">このタスクは、_Quick create_or_Advanced create_deploymentモードを使用して、_automate_mode権限でWorkload Factoryで実行できます。</block>
+  <block id="956eaa6186169471a13345860cad0757" category="open-title">クイック作成</block>
+  <block id="542af019e2aa3ef9ca4b187a71c918bb" category="admonition">クイック作成_では、FCIがデフォルトの配置モデル、Windows 2016がデフォルトのWindowsバージョン、SQL 2019 Standard EditionがデフォルトのSQLバージョンです。</block>
+  <block id="b26136a388864ee3f9e813ac8f6109ee" category="list-text">[データベース]タイルで、*[データベースホストの導入]*を選択します。</block>
+  <block id="6139861719bbe0b1fa9017ee94fd4e8e" category="list-text">[クイック作成]*を選択します。</block>
+  <block id="cc3305aa1264f3bb3f5edf4bbf7f1ab1" category="list-text">[AWS settings]*で、次の情報を指定します。</block>
+  <block id="0ddee9622b04a20edcfe59424067f924" category="list-text">* AWSクレデンシャル*：自動化権限を持つAWSクレデンシャルを選択して、新しいデータベースホストを導入します。</block>
+  <block id="989658c74715bb420a02b641bca5e3ee" category="paragraph">AWSクレデンシャルに_automate_permissionsを指定すると、Workload Factory内のAWSアカウントから新しいデータベースホストを導入して管理できます。</block>
+  <block id="0ea9ee93b8e9fe37a8d633ce2b820307" category="paragraph">AWSクレデンシャルに_read_permissionsを指定すると、Workload FactoryでCloudFormationテンプレートが生成され、AWS CloudFormationコンソールで使用できます。</block>
+  <block id="cad0fb748127e362535a3eb9558531ae" category="paragraph">Workload FactoryにAWSクレデンシャルが関連付けられておらず、Workload Factoryに新しいサーバを作成する場合は、*オプション1 *に従って[Credentials]ページに移動します。データベースワークロードの_automate_modeに必要なクレデンシャルと権限を手動で追加します。</block>
+  <block id="4d02ad7172dc82d3b0274a4825836a82" category="paragraph">AWS CloudFormationで展開するための完全なYAMLファイルテンプレートをダウンロードできるように、Workload FactoryのCreate new serverフォームに入力する場合は、* Option 2 *に従って、AWS CloudFormation内で新しいサーバーを作成するために必要な権限を持っていることを確認します。データベースワークロードの_read_modeに必要なクレデンシャルと権限を手動で追加します。</block>
+  <block id="58e20c30835c21bc7ea424ffc1fc9c8d" category="paragraph">必要に応じて、[コードボックス]から部分的に完成したYAMLファイルテンプレートをダウンロードして、資格情報や権限なしでWorkload Factoryの外部にスタックを作成できます。[コードボックス]のドロップダウンから[CloudFormation]*を選択して、YAMLファイルをダウンロードします。</block>
+  <block id="09928615d6693b314732c4c51a4dd4a0" category="list-text">*リージョンとVPC *：リージョンとVPCネットワークを選択します。</block>
+  <block id="e48a41ea46283193ab3f0eb34ba2a601" category="paragraph">既存のインターフェイスエンドポイントのセキュリティグループが、選択したサブネットへのHTTPS（443）プロトコルへのアクセスを許可するようにします。</block>
+  <block id="cca1c409476405cf34b159f2604adeb6" category="paragraph">AWSサービスインターフェイスエンドポイント（SQS、FSx、EC2、CloudWatch、CloudFormation、 SSM）とS3ゲートウェイエンドポイントが見つからない場合は、導入時に作成されます。</block>
+  <block id="bb05fdf5fa555ab0eb5c1ad195d346ba" category="paragraph">vPC DNS属性<block ref="cb0df2380d372b70fd568d139d704794" prefix=" " category="inline-code"></block> とが<block ref="df550516571c5adda5f49cb0f14d22f1" prefix=" " category="inline-code"></block> 変更され、エンドポイントアドレス解決がまだに設定されていない場合は有効になり<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>ます。</block>
+  <block id="074972cc2eeb54158d45cf3ead1ba8b5" category="list-text">*アベイラビリティゾーン*：フェールオーバークラスタインスタンス（FCI）導入モデルに従って、アベイラビリティゾーンとサブネットを選択します。</block>
+  <block id="4f7f1429fd3acd32e1f66457b4d605d7" category="admonition">FCIの導入は、複数のアベイラビリティゾーン（MAZ）FSx for ONTAP構成でのみサポートされます。</block>
+  <block id="d2805d0c25036c343445306b5e3ea81c" category="paragraph">ハイアベイラビリティを実現するためには、サブネットで同じルートテーブルを共有しないでください。</block>
+  <block id="0fbe3449756361c6d594c565a2009157" category="list-text">[クラスタ構成-ノード1 ]*フィールドで、*[アベイラビリティゾーン]*ドロップダウンメニューからMAZ FSx for ONTAP構成のプライマリアベイラビリティゾーンを選択し、*[サブネット]*ドロップダウンメニューからプライマリアベイラビリティゾーンのサブネットを選択します。</block>
+  <block id="dc67031d01ba3577fe2760ad82a640df" category="list-text">[クラスタ構成-ノード2 ]*フィールドで、*[アベイラビリティゾーン]*ドロップダウンメニューからMAZ FSx for ONTAP構成のセカンダリアベイラビリティゾーンを選択し、*[サブネット]*ドロップダウンメニューからセカンダリアベイラビリティゾーンのサブネットを選択します。</block>
+  <block id="2f022bed5250436b90771285f1f6a9df" category="list-text">[アプリケーションの設定]*で、*データベースクレデンシャル*のユーザ名とパスワードを入力します。</block>
+  <block id="88b2fc06992e980baf9199d497fb30ab" category="list-text">[Connectivity]*で、次の情報を入力します。</block>
+  <block id="b9f4ef730385cad4811d976802af654c" category="list-text">*キーペア*:キーペアを選択します。</block>
+  <block id="dd0ba3d66b6f5cc15f6f5c56e1c6d448" category="list-text">* Active Directory *：</block>
+  <block id="7b931672482908e0f2749ed886d9980a" category="list-text">[ドメイン名]フィールドで、ドメインの名前を選択または入力します。</block>
+  <block id="7abc8b3d8c0ac7ad04dc0d8aca98f2cb" category="list-text">AWSが管理するActive Directoryの場合、ドロップダウンメニューにドメイン名が表示されます。</block>
+  <block id="7fed51b9fff2ae648f50803610ff429b" category="list-text">ユーザー管理Active Directoryの場合は、*[検索と追加]*フィールドに名前を入力し、*[追加]*をクリックします。</block>
+  <block id="2a0d7ec425838346cfebda7db76d2977" category="list-text">[DNSアドレス]*フィールドに、ドメインのDNS IPアドレスを入力します。IP アドレスは 3 個まで追加できます。</block>
+  <block id="5870520716564c2878d89201c15b751d" category="paragraph">AWSが管理するActive Directoryの場合、DNS IPアドレスがドロップダウンメニューに表示されます。</block>
+  <block id="90c43a42e05e6c50aaaf430e4c4f1d7a" category="list-text">[ユーザ名]フィールドに、Active Directoryドメインのユーザ名を入力します。</block>
+  <block id="15433f61816ea86787a6ceb5febc37c6" category="list-text">[パスワード]*フィールドに、Active Directoryドメインのパスワードを入力します。</block>
+  <block id="6edf8a68d918685d74e5c3ab48d8044f" category="list-text">[インフラストラクチャー設定]*で、次の情報を入力します。</block>
+  <block id="9c5e50ea001b69e2f51eb58ac703b659" category="list-text">* FSx for ONTAPシステム*：新しいFSx for ONTAPファイルシステムを作成するか、既存のFSx for ONTAPファイルシステムを使用します。</block>
+  <block id="4f670f6a49f149724742e59aa64d20d3" category="list-text">*新しいFSx for ONTAPを作成*：ユーザー名とパスワードを入力します。</block>
+  <block id="cb91b70111a4b80dbaca125491a11e6f" category="paragraph">新しいFSx for ONTAPファイルシステムでは、インストールに30分以上かかる場合があります。</block>
+  <block id="9c4c4a74e809d66c62df4153c9d1fa16" category="list-text">*既存のFSx for ONTAPを選択*：ドロップダウンメニューからFSx for ONTAP名を選択し、ファイルシステムのユーザ名とパスワードを入力します。</block>
+  <block id="7ad9b6ff1a0ef5933f70efdfce675896" category="list-text">*データドライブサイズ*：データドライブの容量を入力し、容量単位を選択します。</block>
+  <block id="1300f86974cafc2d65eb1f082a26bdf1" category="list-text">概要：</block>
+  <block id="356f59d9f97fd1e41067dba7467dc768" category="list-text">*デフォルトのプレビュー*：クイック作成で設定されたデフォルトの構成を確認します。</block>
+  <block id="5e96fbfd25b5bc5a26328566be9c79e3" category="list-text">*推定コスト*：表示されているリソースを導入した場合に発生する可能性のある料金の見積もりを提供します。</block>
+  <block id="f2a42a68e067e481d094b018459ef895" category="list-text">[ 作成（ Create ） ] をクリックします。</block>
+  <block id="eecdcbc4c1ede0e1634023ae31b70561" category="paragraph">または'これらのデフォルト設定のいずれかをここで変更する場合は'詳細作成を使用してデータベース・サーバを作成します</block>
+  <block id="f6b1c2d6e49d4a0229e9b0bde1ad3236" category="paragraph">[構成の保存]*を選択して、あとでホストを導入することもできます。</block>
+  <block id="28cdc97b1969c0c544a77fde4457a7e5" category="open-title">高度な作成</block>
+  <block id="089584ffc23019d87cbdef44b1671be2" category="list-text">[詳細作成]*を選択します。</block>
+  <block id="93b004a62753aa3ecb7a47929a80309e" category="list-text">[Deployment model]*で、*[Failover Cluster Instance]*または*[Single instance]*を選択します。</block>
+  <block id="cd1a078082e7012671955f628fc5a709" category="paragraph">AWSサービスインターフェイスエンドポイント（SQS、FSx、EC2、CloudWatch、Cloud Formation、 SSM）とS3ゲートウェイエンドポイントが見つからない場合は、導入時に作成されます。</block>
+  <block id="4f8707176b7235252f943ef6ef597d55" category="paragraph">vPC DNS属性<block ref="cb0df2380d372b70fd568d139d704794" prefix=" " category="inline-code"></block> とが<block ref="df550516571c5adda5f49cb0f14d22f1" prefix=" " category="inline-code"></block> 、エンドポイントアドレス解決を有効にするように変更されます（まだに設定されていない場合）<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>。</block>
+  <block id="4a7e9ea93c0e42c9eebad0069ff58fa9" category="list-text">*アベイラビリティゾーン*：選択した導入モデルに従ってアベイラビリティゾーンとサブネットを選択します。</block>
+  <block id="d2547fab6cf9d1064e2c017687d213c5" category="list-text">単一インスタンス環境向け</block>
+  <block id="8738f299dd52a2650f23bf1ae30694fa" category="list-text">[クラスタ構成-ノード1 ]*フィールドで、ドロップダウンメニューの*[アベイラビリティゾーン]*からアベイラビリティゾーンを選択し、*[サブネット]*ドロップダウンメニューからサブネットを選択します。</block>
+  <block id="9c622025b2f6aaf628ede7de56df481b" category="list-text">FCI導入の場合</block>
+  <block id="5ac7c1b392927ce429f17a8855e854b5" category="list-text">*セキュリティグループ*:既存のセキュリティグループを選択するか、新しいセキュリティグループを作成します。</block>
+  <block id="a2c08d4b7f2bbde30396036629003448" category="paragraph">新しいサーバの導入時に、3つのセキュリティグループがSQLノード（EC2インスタンス）に接続されます。</block>
+  <block id="ba4f09fe932ad91d759a5dd3636acec6" category="list-text">ノード上のMicrosoft SQLおよびWindowsクラスタ通信に必要なポートとプロトコルを許可するために、ワークロードセキュリティグループが作成されます。</block>
+  <block id="1f653bdd2a02e3ebdc4f28328a96b00f" category="list-text">AWSが管理するActive Directoryの場合、ディレクトリサービスに関連付けられたセキュリティグループがMicrosoft SQLノードに自動的に追加され、Active Directoryとの通信が可能になります。</block>
+  <block id="84c62c2707904a024819612ef450ef1d" category="list-text">既存のFSx for ONTAPファイルシステムでは、関連付けられているセキュリティグループがSQLノードに自動的に追加され、ファイルシステムとの通信が可能になります。新しいFSx for ONTAPシステムが作成されると、FSx for ONTAPファイルシステム用の新しいセキュリティグループが作成され、同じセキュリティグループがSQLノードに接続されます。</block>
+  <block id="9379b88943e79d06a7624e886bcd4ea3" category="paragraph">ユーザー管理Active Directoryの場合は、データベースに接続する必要がある既存のシステムからのトラフィックを許可するセキュリティグループを選択できます。セキュリティグループは、Microsoft SQLのEC2インスタンスが設定されているサブネットからActive Directoryドメインコントローラへの通信を許可する必要があります。</block>
+  <block id="1001245fbd8a96ced15590168ee50912" category="list-text">[アプリケーションの設定]*で、次の情報を入力します。</block>
+  <block id="5f90cc9084764f349d384957856b0b40" category="list-text">[SQL Server install type]*で、*[License included AMI]または*[Use custom AMI]を選択します。</block>
+  <block id="51af4699ded2f99936c69e9d355ac856" category="list-text">[License Included AMI]を選択した場合は、次の情報を入力します。</block>
+  <block id="c8663d2accf7a3841b333a494fef96b8" category="list-text">*オペレーティング・システム*：* Windows server 2016 *、* Windows server 2019 *、* Windows server 2022 *を選択します。</block>
+  <block id="fc885995de6490f8a85b4df7420752c4" category="list-text">*データベースエディション*：* SQL Server Standard Edition *または* SQL Server Enterprise Edition *を選択します。</block>
+  <block id="82ca52a606de078c560022a638200727" category="list-text">*データベースバージョン*：* SQL Server 2016 *、* SQL Server 2019 *、または* SQL Server 2022 *を選択します。</block>
+  <block id="5e8d3d709fd671620935054b84e5af34" category="list-text">* SQL Server AMI *：ドロップダウンメニューからSQL Server AMIを選択します。</block>
+  <block id="dffb61bff3a89c2a5db1dca05670f262" category="list-text">[Use custom AMI]を選択した場合は、ドロップダウンメニューからAMIを選択します。</block>
+  <block id="3dd91497136cfa20f800dae22c9ecd0f" category="list-text">* SQL Server照合*:サーバーの照合セットを選択します。</block>
+  <block id="33138d7e6684674bb338acb1551c10b8" category="admonition">選択した照合セットがインストールに互換性がない場合は'デフォルトの照合"SQL_Latin1_General_CP1_CI_AS"を選択することをお勧めします</block>
+  <block id="d913a0735d4b73aea5387a05984d1494" category="list-text">*データベース名*：データベースクラスタ名を入力します。</block>
+  <block id="b39aea14ebbc4064f4e04e6d992d1a1a" category="list-text">*データベース資格情報*：新しいサービスアカウントのユーザー名とパスワードを入力するか、Active Directoryの既存のサービスアカウント資格情報を使用します。</block>
+  <block id="832a326b93ed81646cc7d84e4be33192" category="list-text">*キーペア*:インスタンスに安全に接続するキーペアを選択します。</block>
+  <block id="04d8d8fa2e9081fa8f16bc804c467ff1" category="list-text">* Active Directory *：次のActive Directoryの詳細を指定します。</block>
+  <block id="da04d472e177489fce5d8bdf8433c0d2" category="list-text">* DBインスタンスタイプ*：ドロップダウン・メニューからデータベース・インスタンス・タイプを選択します。</block>
+  <block id="3ab69cd085bc314ab1583cc9c5154b64" category="list-text">* Snapshotポリシー*：デフォルトで有効になっています。Snapshotは毎日作成され、保持期間は7日間です。</block>
+  <block id="39d8e23262d2fe67579167ecd8a57b99" category="paragraph">Snapshotは、SQLワークロード用に作成されたボリュームに割り当てられます。</block>
+  <block id="f59cdcbbbfff432c998b9a6832f9687c" category="list-text">*[Provisioned IOPS]*：*[Automatic]*または*[User-Provisioned]*を選択します。[User-Provisioned]*を選択した場合は、IOPS値を入力します。</block>
+  <block id="fc851ed7f45bda5714237ba9a67a7c28" category="list-text">*スループット容量*：ドロップダウンメニューからスループット容量を選択します。</block>
+  <block id="9b68f6da92a250a28b5722b9b0d1eedf" category="paragraph">一部の地域では、4Gbpsのスループット容量を選択できます。4Gbpsのスループット容量をプロビジョニングするには、FSx for ONTAPファイルシステムが、少なくとも5、120GiBのSSDストレージ容量と16、000 IOPSで構成されている必要があります。</block>
+  <block id="e425fbbda95b27f4febb4cb53da4adaa" category="list-text">*暗号化*：アカウントからキーを選択するか、別のアカウントからキーを選択します。別のアカウントの暗号化キーARNを入力する必要があります。</block>
+  <block id="14830aaa14b83ecf09d726cad53016e9" category="paragraph">FSx for ONTAPのカスタム暗号化キーは、サービスの適用性に応じて表示されません。適切なFSx暗号化キーを選択します。FSx以外の暗号化キーを使用すると、サーバの作成に失敗します。</block>
+  <block id="1fa9e3c24535ee6f1854ca64ba63dac4" category="paragraph">AWSで管理されるキーは、サービスの適用可能性に基づいてフィルタリングされます。</block>
+  <block id="2b53a86cbafdb4b83cbab64885039fd5" category="list-text">*タグ*:オプションで、最大40個のタグを追加できます。</block>
+  <block id="fd8ebfaf2540ade79e0ba78e4eceddb2" category="list-text">* Simple Notification Service *：必要に応じて、ドロップダウンメニューからMicrosoft SQL ServerのSNSトピックを選択して、この構成のSimple Notification Service（SNS）を有効にすることができます。</block>
+  <block id="d86500a8e53ffaefc94b047f54149bf3" category="list-text">Simple Notification Serviceを有効にします。</block>
+  <block id="9a7296e5162ebbf57df7f45a0fb2da0c" category="list-text">ドロップダウンメニューからARNを選択します。</block>
+  <block id="1bcb8771a35af9fc5219b534925d1d87" category="list-text">*CloudWatchの監視*:必要に応じて、CloudWatchの監視を有効にすることができます。</block>
+  <block id="89d6bb6efbcd338f4267b8654f5dc154" category="paragraph">失敗した場合のデバッグ用にCloudWatchを有効にすることをお勧めします。AWS CloudFormationコンソールに表示されるイベントは高レベルであり、根本原因を特定するものではありません。すべての詳細ログは、EC2インスタンスのフォルダに保存され<block ref="7f396c1a3745270a7f2b1a19e5adb578" prefix=" " category="inline-code"></block> ます。</block>
+  <block id="4a1e1b42efe2bd7284aa7c0c5431b535" category="paragraph">CloudWatchでは、スタックの名前でロググループが作成されます。すべての検証ノードとSQLノードのログストリームがロググループの下に表示されます。CloudWatchには、スクリプトの進行状況が表示され、導入が失敗した場合とそのタイミングを理解するのに役立つ情報が提供されます。</block>
+  <block id="e221bb9868688b2de47614a7375f4b53" category="list-text">*リソースロールバック*:この機能は現在サポートされていません。</block>
+  <block id="290612199861c31d1036b185b4e69b75" category="list-text">概要</block>
+  <block id="4ccb7f07ed88979e7d922e8ca47d0b66" category="list-text">[作成]*をクリックして、新しいデータベースホストを導入します。</block>
+  <block id="a070d14ddb3496f7acf3a639f1253fd2" category="paragraph">または、設定を保存することもできます。</block>
+  <block id="4f603a7b143bb4422df39ee8286cd42d" category="section-title">手順2：Microsoft SQL Serverでリモート接続を有効にする</block>
+  <block id="dd47a29282cb01a03505df7eafe39815" category="paragraph">サーバの導入後、Workload FactoryではMicrosoft SQL Serverでのリモート接続は有効になりません。リモート接続を有効にするには、次の手順を実行します。</block>
+  <block id="701dfd287f4bd5b26fb9bbfd5bdad402" category="inline-link-macro">ネットワークセキュリティ:ローカルシステムがNTLMのコンピュータIDを使用できるようにする</block>
+  <block id="daebb668da3731a16be970ea0c6ec4e8" category="list-text">Microsoftのマニュアルのを参照して、NTLMのコンピュータIDを使用します <block ref="e9640e51aa5d938334e80d8a15f50622" category="inline-link-macro-rx"></block> 。</block>
+  <block id="b09af3ec2d0b1fcd3adf33186f9ee76a" category="inline-link-macro">SQL Serverへの接続の確立中に、ネットワーク関連またはインスタンス固有のエラーが発生しました。</block>
+  <block id="ffef3ac5a9fd0c8804db95a99784a71d" category="list-text">Microsoftのマニュアルのを参照して、動的ポート設定を確認します <block ref="b30b6ec2388a7fc9fdc852f17e9a82ad" category="inline-link-macro-rx"></block> 。</block>
+  <block id="298702b12ebe631e3987c7bf6f8d6c8a" category="list-text">セキュリティグループ内で必要なクライアントIPまたはサブネットを許可します。</block>
+  <block id="01e12de62fa77fda2815719aed8ff892" category="paragraph-title">次のステップ</block>
+  <block id="cecba1c08cd956bd8efc84e03fe0051b" category="inline-link-macro">Workload Factoryでのデータベースの作成</block>
+  <block id="4be7f4c9ee72f7d9ff329e34f8516426" category="paragraph">できるようになりまし <block ref="dd25846ee2f23b5705b078fd5b3e0a08" category="inline-link-macro-rx"></block>た。</block>
+  <block id="1ff40e7ecab50f1eac1d1559206dc1cb" category="summary">Workload Factoryデータベースを使用してMicrosoft SQLデータベースを作成します。</block>
+  <block id="9864328db0fb814f0ec67f16ad765411" category="doc">Workload Factory for DatabasesでのMicrosoft SQLデータベースの作成</block>
+  <block id="b17224e7c59ba4af1e7dfa0cabc2d8ec" category="paragraph">Workload Factoryコンソールで新しいMicrosoft SQLデータベースを作成すると、Workload Factory内でリソースを管理できます。</block>
+  <block id="6f03d6ad36824b69611930dbe2fb4d42" category="paragraph">データベースを作成すると、独立したLUNで構成されるFSx for ONTAPファイルシステムに2つのボリュームが作成され、データベースのデータファイルとログファイルをホストします。新しいデータベース内のデータベースファイルはシンプロビジョニングされ、新しいデータベースに割り当てられた合計サイズのわずか数MBしか消費しません。</block>
+  <block id="6d7b2a50e46356cb2ecf2805e3b5bb59" category="paragraph">データベースのストレージを分離する場合は、_ virtualマウントポイント_を使用します。仮想マウントポイントを使用すると、ホスト上のいくつかの共通ドライブにデータベースを統合できます。</block>
+  <block id="1b4c344cbe2ee72aa44b7f0ac1a2d68c" category="inline-link-macro">Workload Factoryの動作モードの詳細</block>
+  <block id="a9d8e9fd10870af41307f40f633824d3" category="paragraph">Workload Factoryでデータベースを作成するには、自動モードの権限が必要です。または、基本モードでは、部分的に完了したコードテンプレートをコピーまたはダウンロードして、Workload Factoryの外部で操作を完了できます。<block ref="d512574672e174dde3ce54b17df0d9b0" category="inline-link-macro-rx"></block> 使用するモードを決定します。</block>
+  <block id="92e04fe5d2a269f38993f394f5b1eb9b" category="admonition">SMBプロトコルを使用するMicrosoft SQL Serverでは、データベースの作成はサポートされていません。</block>
+  <block id="7dd1095f5b5a654fc784015352d1066d" category="paragraph">新しいデータベースを作成する前に、次の前提条件を満たしていることを確認してください。</block>
+  <block id="5c42fb317128e01d6e1476bcde042be1" category="inline-link-macro">AWSアカウントのクレデンシャルと_read_or_automate_mode権限</block>
+  <block id="cfaa59ee1538a75c56439e69e19ac0c9" category="list-text">Workload Factoryで新しいデータベースを作成する必要があり <block ref="2d1718ee7160678739db1128b08d1c1f" category="inline-link-macro-rx"></block> ます。</block>
+  <block id="3aaf7efcd209a4ee760edca7e000ef0c" category="paragraph">または、[コードボックス]を使用してテンプレートをコピーし、REST APIを使用してWorkload Factoryの外部にデータベースをデプロイすることもできます。<block ref="2d990d14c53331d19396f393ba4ea98c" category="inline-link-macro-rx"></block>です。</block>
+  <block id="0b059e758179ae9106a6228fd71a42cb" category="list-text">Windowsホスト</block>
+  <block id="db205765ba81a6c0d96687e971328059" category="list-text">_Quick create_modeを使用する場合は、新しいデータベース用の新しいドライブを作成するために、Microsoft SQL Serverに十分な数のドライブレターが必要です。</block>
+  <block id="78898e52fcbdc5337204a384f2456d4f" category="list-text">Microsoft SQL Server</block>
+  <block id="428d91baa4d6169eda3886bd9f33651b" category="list-text">新しいデータベースをホストするには、Workload Factory for Databasesに管理対象のMicrosoft SQL Serverが必要です。</block>
+  <block id="113b1ad9ce6cdc3a37ad8475bc9bb2b2" category="list-text">AWSシステムマネージャ</block>
+  <block id="eb9283ad3309785d5def8a502da2a5fa" category="list-text">AWS System Managerを使用してMicrosoft SQLホストで権限が有効になっていることを確認します<block ref="83cdffdaa23e1c6056018d21fda6ed6d" prefix=" " category="inline-code"></block> 。</block>
+  <block id="1271a3d360115d2332889fc326f89944" category="section-title">データベースの作成</block>
+  <block id="85ea77b3506d3360eddcaf94ae057314" category="paragraph">_Quick create_or_Advanced create_deploymentモードを使用して、_read_or_automate_mode権限を指定してWorkload Factoryでこのタスクを完了できます。</block>
+  <block id="ceef677928e7c6188983fdf4dd271a6e" category="list-text">[データベース]で、*[インベントリ]*タブを選択します。</block>
+  <block id="8b882c3fbdc1d7d9a3892836061c41c2" category="list-text">[インベントリ]タブで、データベースを作成する管理対象SQLサーバーインスタンスを持つデータベースサーバーを選択します。</block>
+  <block id="d5db8d6216dad5bc8022812b7a525fca" category="list-text">管理対象インスタンスの3つのドットメニューをクリックし、*ユーザーデータベースの作成*を選択します。</block>
+  <block id="16b7e1ed68be5b41e619ec00b93a3de0" category="list-text">[Create user database]ページの[Database information]で、次の情報を指定します。</block>
+  <block id="a657ad1c8328b5552791626de3484dcb" category="list-text">*データベース名*：データベースの名前を入力します。</block>
+  <block id="16aa8185bcc829996f58f9ef641ffca9" category="list-text">*Collation*:データベースの照合を選択します。Microsoft SQL Serverのデフォルト照合SQL_Latin1_General_CP1_CI_ASが選択されています</block>
+  <block id="9252f84e8941f540136a48296314c46f" category="list-text">[ファイルの設定]で、次の情報を入力します。</block>
+  <block id="2a672acc350dafaf0c2bb3f9d2c25230" category="list-text">*ファイル設定モード*：*クイック作成*を選択します。</block>
+  <block id="c02dffc47685c6186911093f4648a672" category="list-text">*ファイル名とパス*:</block>
+  <block id="43dd818c47ec340c5541768786b82a5b" category="list-text">*データファイル名*:データファイル名を入力します。</block>
+  <block id="8f881c0aef4cb8a658c1664ab32d2a44" category="list-text">*ログファイル名*:ログファイル名を入力します。</block>
+  <block id="efdcff467b96e67bc1503aded841f49d" category="list-text">*ファイルサイズ*：データベースのデータサイズとログサイズを入力します。</block>
+  <block id="5014a6954bce63317492b68348e51670" category="paragraph">または、これらのデフォルト設定のいずれかを今すぐ変更する場合は、*ファイル設定モード*を*詳細作成*に変更します。</block>
+  <block id="237089459c3619339c30fa9c5eb5a934" category="list-text">[ユーザーデータベースの作成]*を選択します。</block>
+  <block id="a942ed39152c21f9cd671a056a9e59b6" category="list-text">*Collation*:データベースの照合を選択します。Microsoft SQL Serverのデフォルト照合SQL_Latin1_General_CP1_CI_ASが選択されています</block>
+  <block id="a56a556ec4c3b242949e1997e5e88e6d" category="list-text">*ファイル設定モード*：*詳細作成*を選択します。</block>
+  <block id="d11e3169a86667b0ce0de9508d6546d2" category="list-text">*データファイル*:ドライブ文字を選択し、データファイル名を入力します。</block>
+  <block id="10ad652c7f447af44990df8e9828a0a2" category="paragraph">必要に応じて、*[Virtual mount point]*のボックスをクリックします。</block>
+  <block id="7f5feea9a3187d324d3efdfbdae2477a" category="list-text">*ログファイル*:ドライブ文字を選択し、ログファイル名を入力します。</block>
+  <block id="1679e79d01cec56d49e52ccb811c967f" category="paragraph">データベースホストを作成した場合は、*[ジョブ監視]*タブでジョブの進行状況を確認できます。</block>
+  <block id="9f54c49471da83bd6f911be3f1e09893" category="summary">Workload Factory for Databasesでサンドボックスクローンを作成します。</block>
+  <block id="6adb9945165eb23a5f9bb28ebf840e7a" category="doc">Workload Factoryでデータベース用のサンドボックスクローンを作成する</block>
+  <block id="4d648b143fcbfebd1d26af3a5c9dfd0a" category="paragraph">Workload Factory for Databasesでデータベースのサンドボックスクローンを作成すると、クローンを開発、テスト、統合、分析、トレーニング、 QAなど、ソースデータベースを変更する必要はありません。</block>
+  <block id="944311d4a84e7d454ea59856dc26eae6" category="paragraph">サンドボックスクローンは、ソースデータベースの最新のSnapshotから作成されます。ソースデータベースと同じMicrosoft SQL Serverでクローニングすることも、別のMicrosoft SQL Serverでクローニングすることもできます。ただし、同じFSx for ONTAPファイルシステムを共有している必要があります。</block>
+  <block id="e40afef0cb2c3b82a9c6800c8c2f0f8a" category="paragraph">サンドボックスクローンを作成する前に、次の前提条件を満たしていることを確認してください。</block>
+  <block id="4ab92ab47b2d3e85e9c5028965903181" category="list-text">Workload Factoryでサンドボックスクローンを作成する必要があり <block ref="2d1718ee7160678739db1128b08d1c1f" category="inline-link-macro-rx"></block> ます。</block>
+  <block id="19d25173728d8d76e86a76626ff0e340" category="paragraph">または、[コードボックス]を使用して部分的に完成したテンプレートをコピーしたり、完成したテンプレートを作成して、REST APIを使用してWorkload Factoryの外部でサンドボックスクローンを作成したりすることもできます。<block ref="2d990d14c53331d19396f393ba4ea98c" category="inline-link-macro-rx"></block>です。</block>
+  <block id="a4e02a27092dabbe95de913f392dcf07" category="list-text">新しいサンドボックスクローンをホストするには、Workload Factory for Databasesに管理対象のMicrosoft SQL Serverが必要です。</block>
+  <block id="643d722e4b683cc7d65a0dca14d8df6e" category="list-text">AWS Systems Managerを使用してMicrosoft SQLホストでユーザ権限が有効になっていることを確認します<block ref="7254170b56a28e207df989a3f40b911f" prefix=" " category="inline-code"></block> 。</block>
+  <block id="6d75a53f3497a91632eb53863b237177" category="list-text">ソースデータベース</block>
+  <block id="099ef1d3b9d5d76aafe25fa74a879a54" category="list-text">クローンに使用できるソースデータベースが必要です。</block>
+  <block id="7a4ee61e686f7a2654e0de589bb56945" category="list-text">[サンドボックス]タブで、*[新しいサンドボックスの作成]*を選択します。</block>
+  <block id="a52444590926ede8f4c66b5fa95a9dcc" category="list-text">[Create new sandbox]ページの[Database source]で、次の情報を指定します。</block>
+  <block id="d63aa00e9cb281e7cc97e4e0a6bd3e85" category="list-text">*ソースデータベースホスト*：ソースデータベースホストを選択します。</block>
+  <block id="8aec4b247979ba796bbfe1b11f7b0b7e" category="list-text">*ソースデータベースインスタンス*:ソースデータベースインスタンスを選択します。</block>
+  <block id="e6c4f21a510bdf6e040779f7c7bb57b3" category="list-text">*ソースデータベース*：クローニング元のソースデータベースを選択します。</block>
+  <block id="136a3c07dff694327852945e7661c252" category="list-text">[データベースターゲット]で、次の情報を入力します。</block>
+  <block id="b6b9aec3a98d2a803dfd7a3e7b836cb2" category="list-text">*ターゲットデータベースホスト*：同じVPC内にあり、ソースホストと同じFSx for ONTAPファイルシステムを持つサンドボックスクローンのターゲットデータベースホストを選択します。</block>
+  <block id="04bd2b110b2a3aaa82dccc7fe837f151" category="list-text">*ターゲットデータベースインスタンス*：サンドボックスクローンのターゲットデータベースインスタンスを選択します。</block>
+  <block id="26e615a604b088a660581f026763c30b" category="list-text">*ターゲットデータベース*：サンドボックスクローンの名前を入力します。</block>
+  <block id="7f63d4b83f27b850d1eb970cfa4666b3" category="list-text">*マウント*：*マウントポイントの自動割り当て*または*マウントポイントパスの定義*を選択します。[マウントポイントパスの定義]*を選択した場合は、マウントポイントパスを入力します。</block>
+  <block id="f3346b0efa80289c47d4e6113a73a3ab" category="list-text">*タグを定義*：サンドボックスクローンを定義するタグを選択します。</block>
+  <block id="34775e5e4b0b832c45a2707ae9b18f95" category="paragraph">ジョブの進行状況を確認するには、*ジョブ監視*タブに移動します。</block>
+  <block id="18a852f2a54ab28755adc6bcf4897e75" category="summary">不要になったサンドボックスクローンを削除します。</block>
+  <block id="5697f3fa0c3bfd3435b1268d395d044b" category="doc">ソースデータベースからサンドボックスクローンをスプリットする</block>
+  <block id="27f9c597ec304cf826c7ed4e780c6c34" category="paragraph">不要になったサンドボックスクローンを削除し、ストレージ容量を解放したい。</block>
+  <block id="cae7cdfa55ee9d21054e32871fcf98f8" category="list-text">[データベース]タイルで、*[データベースインベントリに移動]*をクリックします。</block>
+  <block id="60fd4df454072e2b3067c30385649e4a" category="list-text">削除するサンドボックスクローンの3つのドットメニューをクリックします。</block>
+  <block id="0f024621e0673f1f4e657983682d6e72" category="list-text">「 * 削除」を選択します。</block>
+  <block id="1aef21babcea64bea2aff92468198535" category="list-text">[削除]ダイアログで、*[削除]*をクリックします。</block>
+  <block id="fa10c83d33b34bb97fc2a7dad1f2e4cb" category="summary">Workload Factory for DatabasesでMicrosoft SQL Serverインスタンスを検出します。</block>
+  <block id="107c83bbd5efd331077f3ba178a657b5" category="doc">Microsoft SQL Serverインスタンスの検出</block>
+  <block id="89d4e8decf00d1ba7948a89df7b705a6" category="paragraph">このタスクでは、_undetectedインスタンス_を検出します。</block>
+  <block id="d56f5e6bdac7aa1986011738ada6f98e" category="paragraph">AWSクレデンシャルがWorkload Factoryに関連付けられている場合、データベースでは次のAWSストレージタイプを使用したSQL Server 2016以降のMicrosoft SQL Serverの自動検出が可能になります。</block>
+  <block id="36df1b975561708b246ef1801ea416e5" category="list-text">FSX for ONTAP の略</block>
+  <block id="4b222d59a012c5cc128037a5a473cde7" category="list-text">Elastic Block Store（EBS）</block>
+  <block id="abef82f89770aefd53c1cafe296c05f7" category="list-text">FSx for Windowsファイルサーバ</block>
+  <block id="0c58524f460d0dca6bc74f75070e81b4" category="paragraph">データベースでは、検出されたインスタンスは次のように分類されます。</block>
+  <block id="ef94176eb3d9b5d7bac8387c4427a66b" category="list-text">_検出されないインスタンス_：Workload Factoryによって自動的に検出された検出されないインスタンス。次の場合、インスタンスは検出されません。</block>
+  <block id="8482966e54e535a17c37e8a9e60719d9" category="list-text">Microsoft SQL Server認証に失敗します。</block>
+  <block id="8265f911f4a9e6da8845af6bed179958" category="list-text">Microsoft SQL Server向けFSx for ONTAPファイルシステムがワークロードファクトリのアカウントに登録されていません。</block>
+  <block id="05ee37d98e176091e09283409f5c3311" category="list-text">_管理対象外インスタンス_：Workload Factoryで管理されていないインスタンスを検出しました。</block>
+  <block id="c308e91ba915ce0131545996e584679a" category="list-text">_管理対象インスタンス_：Workload Factoryで管理されている検出済みインスタンス</block>
+  <block id="36583ffdfd0a47e5d60aa8b6ab716d80" category="paragraph">Workload Factory for DatabasesでMicrosoft SQL Serverインスタンス（ホストインスタンス）を管理する最初の手順は、検出されていないデータベースサーバインスタンスを検出することです。</block>
+  <block id="d7d2bdfad20e8678423a16803cafd735" category="paragraph">検出されていないデータベースサーバインスタンスを検出するための要件は次のとおりです。</block>
+  <block id="38a12b37ae4221c5fda46c9430a61d47" category="inline-link-macro">AWSアカウントノクレデンシャル</block>
+  <block id="d1f85e78e0ae269b8d5d2f8ec807e86c" category="list-text">Workload Factoryでデータベースサーバインスタンスを検出する必要があり <block ref="8daf2318f1eb74a04bc7cb12c8d5f7c1" category="inline-link-macro-rx"></block> ます。</block>
+  <block id="dc009403919a36e84e394bfc7dac9390" category="list-text">インスタンスのストレージタイプは次のいずれかである必要があります。</block>
+  <block id="3962b6fab28418ee6542523fce705073" category="list-text">EC2インスタンスには、SSM接続による検出を可能にするロール/インスタンスプロファイルが必要です。</block>
+  <block id="5dff7dc03e6adf7d4ca469820cdba620" category="inline-link-macro">SSMのトラブルシューティングの詳細</block>
+  <block id="a218784743407787312891b174efa23d" category="paragraph">Microsoft SQLインスタンスが検出されても、既存の環境は変更されません。検出はAWS Systems Manager Session Manager（SSM）を介して行われます。適切なIAMインスタンスプロファイルがないと、検出に失敗します。<block ref="6d65103434cb07e7afb870839cad8f12" category="inline-link-macro-rx"></block>です。</block>
+  <block id="95b565a5e9864d62ea1fb7e39b926b3b" category="list-text">ドロップダウン矢印をクリックして、検出するホストの行を展開します。</block>
+  <block id="8dbec57fc4c47759d905a8c83da70c0f" category="paragraph">ホストが展開され、ホストインスタンスが表示されます。</block>
+  <block id="2cb6ba113505ade5a7c3bcb4dd91f24a" category="list-text">検出するインスタンスの3つのドットメニューをクリックします。</block>
+  <block id="a01b2b217874340f2cbed78113cf3f07" category="list-text">[検出]*をクリックします。</block>
+  <block id="52f93363b11de846f37617dc280f35b6" category="list-text">[インスタンスの検出]ダイアログで、Microsoft SQL Serverのユーザー名とパスワード、またはFSx for ONTAPのユーザー名とパスワードを入力します。</block>
+  <block id="9658587ec96bf37cc94d75d662fe91d1" category="paragraph">Workload Factoryは、Microsoft SQLのクレデンシャルまたはFSx for ONTAPのクレデンシャルの検証を試みます。</block>
+  <block id="ebd63afb95c4e8de3d3cce81ea20f103" category="paragraph">これらの資格情報のいずれかが使用できない場合、Workload FactoryはPowerShellにモジュールをインストールしようとし<block ref="80caa08185fe6ba2da6b227f3c292956" prefix=" " category="inline-code"></block> ます。</block>
+  <block id="aee0a08114ee057480ece887eabe9d05" category="paragraph">検出されたインスタンス情報が表示されます</block>
+  <block id="1fed0bc2c72e36c6e777e5a1e7def8f8" category="list-text">[Yes、Manage instance via Workload Factory]*または*[No]*を選択します。</block>
+  <block id="e13a15252a4dbf9779c44afe477e3343" category="list-text">[ 完了（ Done ） ] をクリックします。</block>
+  <block id="9e9448a6d1fd2450a4d206c8b1b51faf" category="inline-link-macro">Workload Factoryを使用したインスタンスの管理</block>
+  <block id="21deafc6f9746f4f6c79c24fd4433020" category="paragraph">ホストインスタンスのストレージタイプがFSx for ONTAPの場合は可能です <block ref="eb4f13ee4ce82a926f1570589adcc507" category="inline-link-macro-rx"></block>。</block>
+  <block id="2c413a839846c70f3e347572379e59eb" category="summary">Amazon Elastic Block Store（EBS）ストレージを使用したデータベースワークロードの削減効果を確認できます。</block>
+  <block id="b9c536d894e64c5ba02e664043160322" category="doc">データベース向けワークロードファクトリでのコスト削減の詳細を見る</block>
+  <block id="aa535236468b661f18e6382175c6c685" category="paragraph">Workload Factoryには計算ツールが用意されているため、FSx for ONTAPファイルシステム上のデータベースワークロードについて、ストレージ、コンピューティング、SQLライセンス、Snapshot、クローンなど、Microsoft SQL Serverワークロードを実行するためのさまざまなコストコンポーネントをElastic Block Store（EBS）ストレージと比較できます。ストレージ要件によっては、FSx for ONTAPファイルシステムがデータベースワークロードにとって最も対費用効果の高いファイルシステムであることがわかります。</block>
+  <block id="2c84d2f326a80650e1f5b43257e48421" category="paragraph">FSx for ONTAPファイルシステムを使用した場合、これらのMicrosoft SQL Server上のデータベースワークロード用ストレージのコストを削減できるかどうかが計算ツールに表示されます。</block>
+  <block id="2171dfd3cf6eceef09743d94bd21cc81" category="paragraph">FSx for ONTAPファイルシステムでこれらのワークロードを実行することでコストを削減できるとWorkload Factoryが判断した場合は、Workload Factoryの電卓から直接Microsoft SQL over FSx for ONTAPを導入できます。Workload Factoryでは、現在使用しているストレージの容量やデータベースワークロードのパフォーマンス特性に基づいて、複数のファイルシステムの導入を推奨する場合があります。Workload Factoryでは、現在使用しているストレージの容量やデータベースワークロードのパフォーマンス特性に基づいて、複数のファイルシステムの導入を推奨する場合があります。</block>
+  <block id="181e3284c48fd57addc02c9c3cecca81" category="section-title">システム要件の入力</block>
+  <block id="2a94b287f3d99e0e52e81c4f752895f6" category="inline-link-macro">モードの詳細</block>
+  <block id="c8add51a412bd14b1fa8548ea7d4cc9c" category="paragraph">Workload FactoryアカウントにAWSクレデンシャルを追加して_automate_mode ()を有効にした場合<block ref="3ac12273abf0be5e05b49ceaac600ad4" category="inline-link-macro-rx"></block>、Workload FactoryはAWSアカウントで使用可能なすべてのストレージシステムを特定し、それらのシステム上のボリュームの特性を[Storage inventory]ページに表示できます。検索されるAWSアカウントは、Workload Factoryアカウントで定義したクレデンシャルに基づいています。</block>
+  <block id="0281a53baaa49bd24211566406a670bd" category="paragraph">この図は、AWSアカウントで検出されたFSx for Windowsファイルサーバシステム上のボリュームを示しています。</block>
+  <block id="5d607e96f80f5e0c54fe4550ff3646df" category="inline-image-macro">FSx for Windowsファイルサーバ上のボリュームの現在のインベントリを示すストレージインベントリページ。</block>
+  <block id="1b6b615e774f37106845ba90d2603b7c" category="paragraph"><block ref="1b6b615e774f37106845ba90d2603b7c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="16203b7e08e16041d0c8fdff61a3a4f3" category="paragraph">Workload FactoryアカウントをAWSアカウント（_basic_mode）にリンクするためのクレデンシャルを追加していない場合は、導入予定のストレージシステムに必要な特性を手動で入力すると、コストに基づいてストレージ計算ツールが最適なファイルシステムを判断します。この方法を使用すると、_automate_modeを使用しながら、新しいFSx for ONTAPファイルシステムの範囲を決定することもできます。</block>
+  <block id="358b1837aae1be80f9df6667968fb7dd" category="paragraph">この図は、ストレージ計算ツールのページでFSx for ONTAPとEBSストレージを比較したものです。</block>
+  <block id="770b3813731da1b92ad91e1b7d040019" category="inline-image-macro">FSx for ONTAPとElastic Block Storeのストレージの比較が記載されたストレージ計算ツールのページです。</block>
+  <block id="0804cd2e6d379bedf0c48b78b009bac3" category="paragraph"><block ref="0804cd2e6d379bedf0c48b78b009bac3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bfe3baeb9acd99f2f2bce618befc4139" category="paragraph">作業を開始する前に、次の前提条件を満たしてください。</block>
+  <block id="ed8b2920ddc5b14cb6c0ba24c4b6c3af" category="inline-link-macro">権限の付与</block>
+  <block id="fb9d6e1577faaf2582c56f2b6e871a0e" category="list-text">AWSアカウントで、データベースインベントリ内のElastic Block Store（EBS）システムを検出していることを確認してください <block ref="d9270f60c282b5496f17a4b48a6da305" category="inline-link-macro-rx"></block> 。</block>
+  <block id="def9511b261c88922ac5674a45135773" category="inline-link-macro">ホストの検出方法</block>
+  <block id="00cfda556057e95fb5c041a6d6e864eb" category="list-text">データベースインベントリでEBSストレージ内のホストを検出します。<block ref="c3d02703f332265b4bfd19fd03e6dd21" category="inline-link-macro-rx"></block>です。</block>
+  <block id="f319ba887c03b66fa6a83807c78f65e9" category="list-text">[データベース]タイルで、*[データベースインベントリに移動]*を選択します。</block>
+  <block id="e721578ef71057f68d9b8f95eaa8a01b" category="list-text">[Explore savings]*タブを選択します。</block>
+  <block id="a9a4b0133e73452e9114b1d65b1a03c5" category="list-text">[Explore savings using EBS storage]*をクリックします。</block>
+  <block id="b6934442f27355012b8f3897d317094b" category="list-text">必要に応じて、EBSストレージのクローンとSnapshotに関する以下の詳細情報を指定し、コスト削減の見積もりをより正確にします。</block>
+  <block id="892b05a8b32a4e09e4e991c1c453d0ec" category="list-text">* Snapshotの頻度*：ドロップダウンからSnapshotの頻度を選択します。</block>
+  <block id="6ca8fb2d85dfb104bf65c1de74c7fe8e" category="list-text">*クローンの更新頻度*：ドロップダウンからクローンの更新頻度を選択します。</block>
+  <block id="201c4d58b6fa62f021a1865e894234ef" category="list-text">*毎月の変更率*：クローンおよびスナップショットのデータの1カ月あたりの平均変更率を入力します。</block>
+  <block id="6b08b43202e1e504a7c87375b1a13b76" category="list-text">ページに表示された計算方法と推奨事項を確認します。</block>
+  <block id="c06f81033cfa9dba0a118343022622ca" category="paragraph">さらに、ページの一番下までスクロールして* PDFのエクスポート*を表示します。</block>
+  <block id="aca77c97dcf29f670f572a7129863195" category="section-title">FSx for ONTAPファイルシステムの導入</block>
+  <block id="d41ee345c8d0261fd097678a17139b63" category="paragraph">コスト削減を実現するためにFSx for ONTAPに切り替えたい場合は、*[作成]*をクリックしてFSx for ONTAPファイルシステムの作成ウィザードから直接ファイルシステムを作成するか、*[保存]*をクリックして推奨構成を保存しておきます。</block>
+  <block id="f31ed490fd3768dff2a1121a0a06095c" category="list-text">導入方法</block>
+  <block id="11ed0b3202d6d086758a8d450bf14383" category="list-text">_automate_modeでは、FSx for ONTAPファイルシステムをワークロードファクトリから直接導入できます。Codeboxウィンドウからコンテンツをコピーし、Codeboxメソッドのいずれかを使用してシステムを展開することもできます。</block>
+  <block id="543b29a63a3d070c0ff920d687259dfc" category="paragraph">_basic_modeでは、Codeboxウィンドウからコンテンツをコピーし、いずれかのCodeboxメソッドを使用してFSx for ONTAPファイルシステムを導入できます。</block>
+  <block id="3c6efe0ce159fb5b8ee4882bcf3ad973" category="summary">NetAppは、Workload Factoryとそのクラウドサービスをさまざまな方法でサポートしています。ナレッジベース（ KB ）記事やコミュニティフォーラムなど、 24 時間 365 日利用可能な幅広いセルフサポートオプションをご用意しています。サポート登録には、 Web チケット処理によるリモートテクニカルサポートが含まれます。</block>
+  <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">ヘルプを表示します</block>
+  <block id="6a7b2c9c4cec65ad972b108fa0a1192b" category="section-title">FSx for ONTAPのサポートを利用する</block>
+  <block id="4435b263dd1a35bcd8dfda050db92b3b" category="paragraph">FSx for ONTAP、そのインフラ、またはサービスを使用するソリューションに関連するテクニカルサポートについては、その製品のワークロードファクトリドキュメントの「困ったときは」を参照してください。</block>
+  <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">Amazon FSx for ONTAP</block>
+  <block id="9d06990508d25d367d9158c6558eb9c8" category="paragraph"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
+  <block id="35f9849ffdd809bda11d0fc56e1e3583" category="paragraph">Workload Factoryおよびそのストレージソリューションおよびサービスに固有のテクニカルサポートを受けるには、以下に説明するサポートオプションを使用してください。</block>
+  <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">セルフサポートオプションを使用します</block>
+  <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">次のオプションは、 1 日 24 時間、週 7 日間無料でご利用いただけます。</block>
+  <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">ドキュメント</block>
+  <block id="d935525f4850c4638cbf48ae53fb4686" category="paragraph">現在表示しているWorkload Factoryのドキュメント。</block>
+  <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">ナレッジベース</block>
+  <block id="436f63b446dba5a418c698d49bd39718" category="list-text"><block ref="436f63b446dba5a418c698d49bd39718" category="inline-link-rx"></block></block>
+  <block id="ba6274b9c9d1f81bb3a648fa289986b8" category="paragraph">Workload Factoryナレッジベースを検索すると、問題のトラブルシューティングに役立つ記事が見つかります。</block>
+  <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">コミュニティ</block>
+  <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
+  <block id="7faef90df03399696ba9d4815b37171a" category="paragraph">Workload Factoryコミュニティに参加して、進行中のディスカッションをフォローしたり、新しいディスカッションを作成したりできます。</block>
+  <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">ネットアップサポートと一緒にケースを作成します</block>
+  <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">上記のセルフサポートオプションに加え、サポートを有効にしたあとで問題が発生した場合は、ネットアップサポートの担当者と相談して解決できます。</block>
+  <block id="8fece025a1a8fef7018449bf104a2527" category="paragraph-title">始める前に</block>
+  <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">サポートに登録する方法について説明します</block>
+  <block id="a12ea39ddf1c98adfd7f751299705efa" category="paragraph">ケースの作成*機能を使用するには、まずサポートに登録する必要があります。 NetAppサポートサイトのクレデンシャルをワークロードファクトリログインに関連付けます。<block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>です。</block>
+  <block id="356c88ac4b0ec3f7689cc91f54701fef" category="list-text">Workload Factoryコンソールの右上で、*[ヘルプ]&gt;[サポート]*を選択します。</block>
+  <block id="aadd86a3fadf19221852692c6e4adc2f" category="paragraph">このオプションを選択すると、BlueXPコンソールの新しいブラウザタブが開き、サポートダッシュボードがロードされます。</block>
+  <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">[*Resources*]ページで、[Technical Support]で次のいずれかのオプションを選択します。</block>
+  <block id="6a1b74969231967ed071d465206b15c7" category="list-text">電話で誰かと話をしたい場合は、*[電話]*を選択します。netapp.comのページに移動し、電話番号が表示されます。</block>
+  <block id="d65a2a6fc9caad1867728d4382eeb989" category="list-text">[ケースの作成]*を選択して、NetAppサポートスペシャリストとのチケットをオープンします。</block>
+  <block id="d7d0da18fbb8f8f85c1364883fbdf4c7" category="list-text">* Service *：* Workload Factory *を選択します。</block>
+  <block id="e6f29fb3c7636dc0040600dd0e84bb79" category="list-text">*ケース優先度*：ケースの優先度を選択します。優先度は、[低]、[中]、[高]、[クリティカル]のいずれかになります。</block>
+  <block id="835eb4008e97c2a7f69bbb2725285e34" category="paragraph">これらの優先度の詳細を確認するには、フィールド名の横にある情報アイコンの上にマウスポインタを合わせます。</block>
+  <block id="0f7d9319c95a8be1492e74601c4b3259" category="list-text">*事象の説明 *：実行したエラーメッセージやトラブルシューティング手順など、問題の詳細な概要 を入力します。</block>
+  <block id="002c6f26fb01affb37b8cf3cef7a1fb0" category="list-text">*その他のメールアドレス*：この問題 を他のユーザーに知らせる場合は、追加のメールアドレスを入力します。</block>
+  <block id="c7f5c1a75acc58c6f004efc0ce1eba09" category="list-text">*添付ファイル（オプション）*：一度に1つずつ、最大5つの添付ファイルをアップロードできます。</block>
+  <block id="bfa80e7aaad6da353b431bff3a0e12d6" category="paragraph">添付ファイルはファイルあたり25 MBに制限されています。サポートされているファイル拡張子は、txt、log、pdf、jpg/jpeg、rtf、 doc/docx、xls/xlsx、およびcsv。</block>
+  <block id="baaf0e61add7d12cf8d12e023d5aef18" category="inline-image-macro">ネットアップサポートでケースを作成できるケースの作成フォームのスクリーンショット。</block>
+  <block id="b0c6c3ee60a29925d3f09cd609b79483" category="paragraph"><block ref="b0c6c3ee60a29925d3f09cd609b79483" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">終了後</block>
+  <block id="18f487556417bb6d9721a7005ae097c9" category="paragraph">ポップアップにサポートケース番号が表示されます。ネットアップのサポート担当者がケースを確認し、すぐに対応させていただきます。</block>
+  <block id="0ff9b4b8684b9e03c9c1e1320935eae3" category="paragraph">サポートケースの履歴を確認するには、*[設定]&gt;[タイムライン]*を選択し、「サポートケースの作成」というアクションを検索します。右端のボタンをクリックすると、アクションを展開して詳細を表示できます。</block>
+  <block id="5c56753585e89a84941bb3a78bc681af" category="paragraph">ケースを作成しようとすると、次のエラーメッセージが表示される場合があります。</block>
+  <block id="a30f69ab0ec85d427a3e8835713525bd" category="paragraph">"選択したサービスに対してケースを作成する権限がありません"</block>
+  <block id="c7b7a5ae9f37fd7d24e4d641b9186fe9" category="paragraph">このエラーは、NSSアカウントとそれに関連付けられているレコードの会社が、BlueXPアカウントのシリアル番号(例960xxxx）または動作環境のシリアル番号。次のいずれかのオプションを使用して、サポートを受けることができます。</block>
+  <block id="e01df0b4dfd95eba2c59333419e4fac6" category="list-text">製品内のチャットを使用します</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link"></block>
+  <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">テクニカル以外のケースを<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
+  <block id="898e35e1a4bf4b025c3edec879439b08" category="section-title">サポートケースの管理（プレビュー）</block>
+  <block id="8b74b053fbeeff5c3b6f4991cb1d028d" category="paragraph">アクティブなサポートケースと解決済みのサポートケースは、BlueXPから直接表示および管理できます。NSSアカウントと会社に関連付けられたケースを管理できます。</block>
+  <block id="394ef093ad3259b9ff0fe7406f015b83" category="paragraph">ケース管理はプレビューとして使用できます。今後のリリースでは、この点をさらに改良し、機能を強化する予定です。製品内のチャットでご意見をお寄せください。</block>
+  <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">次の点に注意してください。</block>
+  <block id="5e4e7672ec2ba2b8a763da7f6714e212" category="list-text">ページ上部のケース管理ダッシュボードには、次の2つのビューがあります。</block>
+  <block id="01c3ffea552d74a5ae390b10e71a1f26" category="list-text">左側のビューには、指定したユーザNSSアカウントによって過去3カ月間にオープンされたケースの総数が表示されます。</block>
+  <block id="e3b6c09a5686233f72ce1ea60a1eb088" category="list-text">右側のビューには、ユーザのNSSアカウントに基づいて、過去3カ月間にオープンしたケースの総数が会社レベルで表示されます。</block>
+  <block id="b19b168cc8a2b8c984465e140256b3a2" category="paragraph">テーブルの結果には、選択したビューに関連するケースが反映されます。</block>
+  <block id="56dcadeee6b0e5c47a52673f9b5a0bb3" category="list-text">目的の列を追加または削除したり、[優先度]や[ステータス]などの列の内容をフィルタリングしたりできます。他の列には、並べ替え機能だけがあります。</block>
+  <block id="6f936762e1223311f031685422fcd3a4" category="paragraph">詳細については、以下の手順を参照してください。</block>
+  <block id="b14929795a61440e9b4ec9f8a4885ae3" category="list-text">ケースごとに、ケースノートを更新したり、ステータスが「Closed」または「Pending Closed」でないケースをクローズしたりすることができます。</block>
+  <block id="0a4050ac39772e9281a9aba225254bf8" category="list-text">[ケース管理]*を選択し、プロンプトが表示されたらNSSアカウントをBlueXPに追加します。</block>
+  <block id="d8ce1865cf1fe3cffd60300b4b86ad63" category="paragraph">ケース管理*ページには、BlueXPユーザアカウントに関連付けられたNSSアカウントに関連するオープンケースが表示されます。これは、* NSS管理*ページの上部に表示されるNSSアカウントと同じです。</block>
+  <block id="2ae5ae78bdb2d222f15fd8e89248709c" category="list-text">必要に応じて、テーブルに表示される情報を変更します。</block>
+  <block id="1d39d3ab518e1e3f16cbafb2a56e1fd9" category="list-text">[Organization's Cases]*で[View]*を選択すると、会社に関連付けられているすべてのケースが表示されます。</block>
+  <block id="059e856250b59be3069246887b74a23c" category="list-text">正確な日付範囲を選択するか、別の期間を選択して、日付範囲を変更します。</block>
+  <block id="dfb3764bce2548df4e06357403f9c7d0" category="inline-image-macro">[Case Management]ページのテーブルの上にあるオプションのスクリーンショット。正確な日付範囲、または過去7日、30日、または3カ月を選択できます。</block>
+  <block id="4f7062c5c309a833cf46e4a1a5a5d366" category="paragraph"><block ref="4f7062c5c309a833cf46e4a1a5a5d366" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a1bb576be9e5a356290f231efb51b3f5" category="list-text">列の内容をフィルタリングします。</block>
+  <block id="3753f10a59e21f58b30e3e67d416453e" category="inline-image-macro">[Status]列のフィルタオプションのスクリーンショット。[Active]や[Closed]など、特定のステータスに一致するケースを除外できます。</block>
+  <block id="8f624dee500d9670a27c4404084a7a62" category="paragraph"><block ref="8f624dee500d9670a27c4404084a7a62" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1c6ea5ef583389e18e7d7bda70beaa71" category="inline-image-macro">テーブルに表示されるプラスアイコン</block>
+  <block id="002f1c0a8cf4a68b888010ddef3a7f7e" category="list-text">テーブルに表示される列を変更するには、を選択し <block ref="e55ec8dc42ae68d9326c51261c8a5f4f" category="inline-image-macro-rx" type="image"></block> 、表示する列を選択します。</block>
+  <block id="370b44009f1b82d0b6b178bb80cc62fa" category="inline-image-macro">表に表示できる列を示すスクリーンショット。</block>
+  <block id="72c5c65442a2c44e7f2546b8b4c957df" category="paragraph"><block ref="72c5c65442a2c44e7f2546b8b4c957df" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ad0ae9ea1f2e8d973a9a0f6bb169f494" category="inline-image-macro">テーブルの最後の列に表示される3つの点を持つアイコン</block>
+  <block id="000a1376035909240f559b8ab724030c" category="list-text">使用可能なオプションのいずれかを選択して、既存のケースを管理し <block ref="54181d1b918b28e5f92545f8b3b4a30c" category="inline-image-macro-rx" type="image"></block> ます。</block>
+  <block id="6d9dd74e7709ef802d299966f7898f6b" category="list-text">*ケースの表示*:特定のケースの詳細を表示します。</block>
+  <block id="8e6b52a532a4fbbfc98dca3ebfa5f1e6" category="list-text">*ケースノートの更新*：問題の詳細を入力するか、*ファイルのアップロード*を選択して最大5つのファイルを添付します。</block>
+  <block id="bb6d5d351525342dd6b3cf4d15b6f298" category="list-text">*ケースをクローズ*：ケースをクローズする理由の詳細を入力し、*ケースをクローズ*を選択します。</block>
+  <block id="e93217b2f709a398ce3c0fb753beb05f" category="inline-image-macro">テーブルの最後の列でメニューを選択した後に実行できる操作を示すスクリーンショット。</block>
+  <block id="6f7cf78e14aa346236a87d9541221fb2" category="paragraph"><block ref="6f7cf78e14aa346236a87d9541221fb2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1eba71d64e6c5e410e558530711e835b" category="summary">このリリースの製品でサポートされていない、または正しく相互運用できないプラットフォーム、デバイス、または機能については、既知の制限事項が記載されています。これらの制限事項をよく確認してください。</block>
+  <block id="482723983a4f2af954e36ff41e567451" category="doc">既知の制限事項</block>
+  <block id="ef338156e543ebe7d256b6d8f22f9e85" category="section-title">AMIイメージバージョンのサポート</block>
+  <block id="b45d2f01140a8438773e64e031e1034d" category="paragraph">SQLバージョンごとに、AMIイメージの最新バージョンまたはリビジョンが4つまで表示されます。最新の4つのバージョンより古いAMIイメージからのインストールは許可されていません。</block>
+  <block id="17817d9ebecefa73cfa5f281bd12bda0" category="section-title">カスタムAMI</block>
+  <block id="3e8378d52f1b29a77eda46e2080cc12a" category="paragraph">カスタムAMIを使用した展開では、インストールメディアがイメージに存在することが前提となります。これは、次の理由からFCIの設定に必要です。</block>
+  <block id="42eed7fbc29558ead5943c21ff6ccd23" category="list-text">アンインストールして再設定し、FCIクラスタを形成するには</block>
+  <block id="38d570bac53577943aa45cc2faecb81c" category="list-text">スタンドアロン展開用にイメージ内の照合セット以外の照合を選択する場合</block>
+  <block id="a798873e710657564aa8785b54567904" category="paragraph">導入の一環として、Workload Factoryでは、複数のMicrosoft SQL ServerインスタンスでカスタムAMIをインストールすることはありません。デフォルトのMicrosoft SQL Serverインスタンスのみが選択され、導入時に構成されます。</block>
+  <block id="8eaca2a1775da148197249302df3a48e" category="section-title">失敗した導入環境のロールバックと再試行</block>
+  <block id="b4eda91cb9cfd770c8fe6fd1fbba8622" category="paragraph">失敗した展開のロールバックと再試行は、Workload Factoryではサポートされていません。AWSのCloudFormationコンソールから、失敗したスタックをロールバックまたは再試行できます。</block>
+  <block id="a8db05f211fc300c9067ae545363770c" category="section-title">Active DirectoryおよびDNSリソースのロールバック</block>
+  <block id="9cb9f514238b54d29a883c0023dea05f" category="paragraph">AWSのCloudFormationコンソールからテストまたはデプロイに失敗した場合、次のDNSリソースはActive DirectoryおよびDNSから削除されません。</block>
+  <block id="97d161e9138710f13b20232b3994b61b" category="list-text">SQL環境の各ノードの管理IPアドレスへの割り当て</block>
+  <block id="88ed858c862be91e7fb8e6110db8a7db" category="list-text">FCIの場合は、EC2インスタンスの予約済みセカンダリIPアドレスに対するWindowsクラスタ名</block>
+  <block id="c02230cc7ae4768be220cae485a92f5a" category="list-text">FCIの両方のEC2インスタンスから2つの予約済みIPアドレスへのSQL FCI名</block>
+  <block id="fa0e735ec30b8d46ef287abb49f81115" category="paragraph">手動でクリーンアップするか、ドメインが古いエントリをパージするのを待つ必要があります。</block>
+  <block id="050f76e7ea0d72ee5f314133fc2f2ea0" category="section-title">Always-On可用性グループ構成のサポート</block>
+  <block id="24b348c8bd07496b62afd8994bae270d" category="paragraph">常時稼働可用性グループ構成の管理は、Workload Factoryではサポートされていません。</block>
+  <block id="67452f95912effa4aa65611cfdc03c1e" category="section-title">ユーザ管理のActive Directoryセキュリティグループ</block>
+  <block id="510b43743eda65eede671d1132c8ae46" category="paragraph">Workload FactoryでMicrosoft SQL Serverを導入する際に「User-managed Active Directory」を選択した場合は、EC2インスタンスとディレクトリサービス間のトラフィックを導入用に許可するセキュリティグループを指定する必要があります。Workload Factoryは、AWS Managed Microsoft ADのように、ユーザー管理Active Directoryのセキュリティグループを自動的に添付しません。</block>
+  <block id="eaa7c0518c6da1cd852899e0ac6e2378" category="section-title">カスタム暗号化キー</block>
+  <block id="7a54f916884cb200639bac0c32ef1bec" category="paragraph">FSx for ONTAPのカスタム暗号化キーは、サービスの適用性に応じて表示されません。適切なキーを選択する必要があります。AWSで管理されるキーは、サービスへの適用性に基づいてフィルタリングされます。</block>
+  <block id="cb3bcee5e2029f06ad38b81d08ad4170" category="section-title">Microsoft SQL Serverの検出</block>
+  <block id="5424656079a2831a2c08effc8c949f00" category="paragraph">Microsoft SQL Serverの検出は保存されません。Workload Factoryのデータベースにアクセスするたびに、Microsoft SQL Serverの検出が再度実行され、リージョン内のSQLインストールが特定されます。</block>
+  <block id="8705a3301d5f73e6ea84b65029e83433" category="section-title">CloudFormationテンプレート</block>
+  <block id="744086615b7afe69eb64b5ed9b1b2fc2" category="paragraph">ダウンロードまたはコピーされたCodeboxで生成されたCloudFormationテンプレート（YAMLファイル）の保存期間は7日間に制限されています。</block>
+  <block id="0d966ee7b6d851b13a0a1f2ed24a24f2" category="section-title">サンドボックスのサポート</block>
+  <block id="db3c885c5e8af2c0a6d13c3c191c6317" category="list-text">データベースサーバから作成できるサンドボックスクローンの最大数は50です。</block>
+  <block id="5d607187a8dfda63b556426b96ca4433" category="list-text">次の場合、サンドボックスの作成はサポートされません。</block>
+  <block id="29b82a6a22751f3fb1ee2f3272c4ebd0" category="list-text">データファイルとログファイルは同じディスク上に存在します。</block>
+  <block id="26d49aa4fda6be53d0166489827d4d7e" category="list-text">ソースデータベースには複数のデータファイルがあります。</block>
+  <block id="16af4c40ef745904a4b9f7f47ce1554d" category="section-title">Microsoft SQL Serverの検出と管理</block>
+  <block id="b51c61da776514997803f3c2d879f6cd" category="list-text">外部接続のないプライベートネットワークを使用している場合、Microsoft SQLインスタンスの検出と管理はサポートされていません。</block>
+  <block id="b7e66788f3dbbc1f39b770c356e6b0bb" category="list-text">Microsoft SQLインスタンスがWindowsベースの認証をブロックし、Microsoft SQLユーザー認証のみを許可する場合、Microsoft SQL Serverの検出はサポートされますが、管理操作はサポートされません。</block>
+  <block id="cf48d7891f28d92c4308fb5debb574b0" category="section-title">コスト削減の詳細</block>
+  <block id="dc1fe4aeb4ef49ddd2886b9ad39d5fa0" category="list-text">[Inventory]タブでは、Microsoft SQLインスタンスごとに表示される推定コストは、SQLインスタンスをホストしているボリュームではなく、FSx for ONTAPファイルシステムレベルで計算されます。</block>
+  <block id="15e6f9d1eeb705afffca65fbfcab4fb8" category="list-text">Exploreによる削減額の計算はFSx for Windowsファイルサーバではサポートされていません。</block>
+  <block id="08a80e13fd6056e3676428e5f462bea2" category="summary">データベースは、データベースの導入とメンテナンスのためのエンドツーエンドのサービスです。最適化、自動シンクローニング、監視と解決のためのベストプラクティスが組み込まれています。</block>
+  <block id="da799d994391b08e1d7460381c98559f" category="doc">データベース向けワークロードファクトリの詳細</block>
+  <block id="84f91afd14d8353e5afe232c3387e4ca" category="paragraph">Workload Factory for Databasesは、エンドツーエンドのデータベース導入およびメンテナンスサービスであり、最適化、自動シンクローニング、監視および解決機能のベストプラクティスが組み込まれています。</block>
+  <block id="7ce6bc9cdba7682a4a441a03e40d503c" category="section-title">データベースのワークロードファクトリとは</block>
+  <block id="a72b771aab79f247f6de493cbb441b0c" category="paragraph">Workload Factory for Databasesは、業界のベストプラクティスに準拠しながら、パフォーマンスとコストの期待に応えるよう最適化されたAmazon FSx for NetApp ONTAP（FSx for ONTAP）環境を検出、評価、計画、プロビジョニング、移行します。Workload Factoryは、ライフサイクル全体を通じて、FSx for ONTAP上のデータベースの継続的な最適化と管理を実現します。</block>
+  <block id="6ae8e58cb52cd45b321927bcb2961f4e" category="inline-link-macro">Workload Factoryの概要</block>
+  <block id="1de2994a7e96b0f9f5ffc5fbf74c7cfe" category="paragraph">Workload Factoryの詳細については、を参照して <block ref="74c54dbaee345ad32db577029257fe31" category="inline-link-macro-rx"></block>ください。</block>
+  <block id="b6e94273667fda2a79903f22b68e8dfd" category="section-title">自己管理データベースに対するWorkload Factoryのメリット</block>
+  <block id="e64b68425fc9016aa12a0706d8ce873b" category="paragraph">Workload Factoryは、自己管理データベースに次のような有益なベストプラクティスと自動化を提供します。</block>
+  <block id="c2ffe02d76c4f089648f1647b43e4ee5" category="section-title">ベストプラクティス</block>
+  <block id="8c13e82e1f3b94b558fc62725c62e275" category="list-text">AWSクラウド、Microsoft WindowsおよびSQLサーバ、NetApp ONTAP for SQL ServerのEC2インスタンスへの導入に関する統合された知識。</block>
+  <block id="3c346a6e5b8bfffe9f594d4b570f64b2" category="list-text">TCO（総所有コスト）最適化された導入。</block>
+  <block id="95b422671139518fef625dc57caa75d6" category="list-text">AWS、Microsoft、ONTAPのベストプラクティスに沿ったエンドツーエンドの導入自動化</block>
+  <block id="a5bf0aed4e29e1013fda731bbe113130" category="list-text">「Quick create」デプロイメントモードを使用すると、手動設定による潜在的な落とし穴を回避できます。</block>
+  <block id="5354d1e9ecaabd928d4235d17bb92d9e" category="section-title">Workload Factory Codeboxによる自動化</block>
+  <block id="d9c90e086fcb11b72cc6731b0bd016c2" category="paragraph">Workload Factoryでは、_Codebox_を使用した自動化が組み込まれています。Codeboxには、次のような自動化の利点があります。</block>
+  <block id="b6cb73add7d1e5bdd9c209cdffe99073" category="list-text">*コードスニペットの生成*：IAC（Infrastructure as Code）スニペットはリソース作成時に生成されるため、既存のオーケストレーションワークフローとシームレスに統合できます。</block>
+  <block id="3b9355b880979c4a10f7d88ded288364" category="list-text">*コードとしてのインフラストラクチャのコパイロット*:コードとしてのインフラストラクチャ(IAC)コパイロットであり、開発者とDevOpsがワークロードファクトリーでサポートされているすべての操作を実行するためのコードを生成するのを支援します。</block>
+  <block id="d8135e6fae6748dcba5e9d108c9af427" category="list-text">*コードビューアと自動化カタログ*:コードボックスは、自動化の迅速な分析のためのコードビューアと、将来の迅速な再利用のための自動化カタログを提供します。</block>
+  <block id="1dfcc4058d887e51547cd071ae73d5ca" category="section-title">Workload Factory for Databasesの機能</block>
+  <block id="0494ceb57b82f2b9e1bd730752e840ff" category="paragraph">Workload Factory for Databasesには次の機能があります。</block>
+  <block id="bd3efbff9056d0d06b47ed96623fda0d" category="list-text">*シンプルで迅速な導入*：仕様に関する質問に対する回答を選択し、Microsoft SQL Server on AWSのプロビジョニングおよび構成方法の調査に通常必要な時間を排除することで、プロビジョニングエクスペリエンスを簡素化および合理化します。</block>
+  <block id="c84184a44160f51b596f38b61353a112" category="list-text">*自動オーケストレーション*: Workload Factoryのユーザーインターフェイスで、_Quick_and_Advanced_createデプロイメントモード、Workload FactoryのChatbot、AWS CloudFormationのAPIを使用できます。</block>
+  <block id="7cefdd05c6620bfdf3062de5a70831ff" category="list-text">*組み込み機能*：NetApp、Microsoft、Amazonのベストプラクティスと、導入構成に組み込まれたAWSリソースの選択を活用します。</block>
+  <block id="7adc4f191e47df4c954a86e42c12345b" category="list-text">*コストの見積もり*: Workload Factoryのストレージ計算ツールを使用して、FSx for ONTAPと比較して、Elastic Block Storeを使用した既存のMicrosoft SQL Server環境のストレージ、コンピューティング、SQLライセンス、スナップショット、クローンの項目別コストを見積もり、詳細化します。</block>
+  <block id="00642e68a741fc0fb7b3297f3d85e094" category="list-text">*再利用可能な自動化テンプレート*: Workload Factory CodeboxからCloudFormationテンプレートを作成、再利用、カスタマイズして、複数の環境でのMicrosoft SQL Serverの将来の導入に対応します。</block>
+  <block id="6a38d48a56c8cf63764ec7a649aee027" category="list-text">* AWSリソースの検出とプロビジョニング*：AWSアカウントから導入されたFSx for ONTAP、FSx for Windowsファイルサーバ、Elastic Block StoreでMicrosoft SQL Serverを自動的に検出します。データベースインベントリは、他のAWSストレージシステム内のサーバのコスト削減の余地を探るための出発点として機能し、FSx for ONTAPベースのサーバとインスタンスの管理ツールとして機能します。</block>
+  <block id="7d90beb1bb8e5bcdda770d6f48cd32a0" category="list-text">*サンドボックスの作成*：本番環境のデータに影響を与えることなく、テスト、統合、診断、トレーニングに使用できる、オンデマンドの分離されたデータベース環境を作成します。</block>
+  <block id="33b7686f3230da73b8d9f40afd7a5f0b" category="list-text">*データベースの作成*:データベースの照合、ファイル名、およびサイズを構成するために、_Quick_or_Advanced_createモードを使用して、既存のMicrosoft SQL Server用のユーザーデータベースを作成します。ストレージ構成も含まれます。</block>
+  <block id="e8c2713d52e7c0b242eb104ecd1ab10d" category="list-text">*ジョブ監視*:データベースジョブの実行状況を監視および追跡し、障害が発生した場合の問題を診断およびトラブルシューティングします。</block>
+  <block id="8badaf3a6e7dceba915a34b1cb4f0380" category="section-title">自己管理型データベースでのAmazon FSx for ONTAPのメリット</block>
+  <block id="3f6d25a55efe97b6946734de9f11179a" category="list-text">*耐久性、可用性、信頼性*：FSx for ONTAPは、単一および複数のアベイラビリティゾーンの導入をサポートする高可用性、アプリケーション対応のスナップショット、レプリケーションを使用したディザスタリカバリの向上、効率的なバックアップなど、FSx for ONTAPでホストされる自己管理データベースの耐久性と可用性を強化する複数の機能を提供します。</block>
+  <block id="8a1827433b93fc37d164f704e5105ae4" category="list-text">*パフォーマンスと拡張性*：FSx for ONTAPは、高スループット、低レイテンシ、高速ネットワーク接続、複数のファイルシステムによる拡張性によってパフォーマンスを最適化し、ワークロードに必要なアグリゲートパフォーマンスを拡張します。</block>
+  <block id="831029cddd4860adff9325d95aeb21bf" category="list-text">*データの管理と効率化*：FSx for ONTAPは、スペース効率に優れたシンクローン、シンプロビジョニング、圧縮と重複排除、アクセス頻度の低いデータの容量プールへの階層化など、データの管理と効率化を強化する複数の機能を提供します。</block>
+  <block id="b637a3cf08f073bba2452017262c6f0e" category="inline-link-macro">FSx for ONTAP for Workload Factoryの詳細</block>
+  <block id="5451b14a2cc0c73081374e5d49684660" category="paragraph"><block ref="c8d2af036244cbf733f21cfd3484b898" category="inline-link-macro-rx"></block>です。</block>
+  <block id="4f7eefbe2de22aca4f898d56772c8c9f" category="section-title">Workload Factoryの動作モード</block>
+  <block id="31944e919fe42c8abb03674ffd29b57c" category="paragraph">_basic_、_read_and _automate_の3つの動作モードでは、Workload Factoryの内外での導入に柔軟なオプションを提供します。Workload Factoryの外部で使用するコードスニペットを使用して、ゼロトラストin_basic_modeですぐに値を取得します。_read_and_automate_modesで増分値を取得します。</block>
+  <block id="d7df29879844d570a3e64b343a7227e2" category="inline-link-macro">Workload Factoryの動作モード</block>
+  <block id="dde084f0d745ae579f63b79d128d3cac" category="paragraph">詳細については、をご覧ください <block ref="006fa329b97a0e61c793bc816f297534" category="inline-link-macro-rx"></block>。</block>
+  <block id="ac4cc23ff41c1cade709408d699aa76e" category="section-title">導入の詳細</block>
+  <block id="1f0b82560627b660c6c6958a1df834b8" category="section-title">サポートされる構成</block>
+  <block id="93cc72dd51765bcbce5d06693efbf636" category="paragraph">Workload Factory for Microsoft SQL Serverは、AWS、NetApp ONTAP、SQL Serverのベストプラクティスに従って、高可用性（Always Onフェイルオーバークラスタインスタンス）とシングルインスタンス環境の両方をサポートしています。</block>
+  <block id="b014dec561cac856e6794b24ddf4e0ae" category="cell">SQL Serverのバージョン</block>
+  <block id="ed590cb2453f0683b64cb528f78610a2" category="cell">Windows Server 2016</block>
+  <block id="31f8757839909e87266f2b53482c86ef" category="cell">Windows Server 2019</block>
+  <block id="de547bcab0e20f54ec4d5e95ba44b0b1" category="cell">Windows Server 2022</block>
+  <block id="6398e4fc7f27908af1536ab8fc6a8a8c" category="paragraph">SQL Server 2016</block>
+  <block id="93cba07454f06a4a960172bbd6e2a435" category="paragraph">はい</block>
+  <block id="bafd7322c6e97d25b6299b5d6fe8920b" category="paragraph">いいえ</block>
+  <block id="e40ceeaead715c564e85bdc9b183e491" category="paragraph">SQL Server 2019</block>
+  <block id="4299db16db1e4a3a88d3942050ce43f2" category="paragraph">SQL Server 2022</block>
+  <block id="1db243dea70edead0d0207ad0a6fcf03" category="section-title">導入アーキテクチャ</block>
+  <block id="116c94009b6bbaaad10e64be0dc2ae6e" category="paragraph">データベースでは、単一のアベイラビリティゾーンおよび複数のアベイラビリティゾーン配置アーキテクチャがサポートされます。</block>
+  <block id="213cb4fa8613615178e793d9dcd42165" category="paragraph-title">単一のアベイラビリティゾーン</block>
+  <block id="eceb487f9210f0e2c685f44aa826a428" category="paragraph">次の図は、単一のリージョンに単一のアベイラビリティゾーンがあるスタンドアロンアーキテクチャを示しています。</block>
+  <block id="3a208403e9b3bdc3d47e8d86caa46a2d" category="inline-image-macro">単一のリージョンにAmazon FSx for NetApp ONTAPのアベイラビリティゾーンを1つ導入したスタンドアロンアーキテクチャの図</block>
+  <block id="2605703227c311becf078f90ead130a4" category="paragraph"><block ref="2605703227c311becf078f90ead130a4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bc2a46f921494df9fc5f911909c03874" category="paragraph-title">複数のアベイラビリティゾーン</block>
+  <block id="45ff909c10981ab6ad483d76f5f0eb91" category="paragraph">次の図は、単一のリージョンにフェイルオーバークラスタインスタンス（FCI）クラスタを含む2ノードのハイアベイラビリティ（HA）アーキテクチャを示しています。</block>
+  <block id="d1839628bae5aadf28be4f64d597e494" category="inline-image-macro">単一のリージョンにフェイルオーバークラスタインスタンスクラスタを配置した2ノードの高可用性アーキテクチャの図</block>
+  <block id="19ed9a0af6785ad2fee15941251e87c1" category="paragraph"><block ref="19ed9a0af6785ad2fee15941251e87c1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="49d814834d377dce6b3bd66dc0f18083" category="section-title">AWS統合サービス</block>
+  <block id="da0a192f6b5c69db0c8e520f16669cc8" category="paragraph">データベースには、次のAWS統合サービスが含まれています。</block>
+  <block id="58e3bfbabf904de43a6a22aca509b0d8" category="list-text">クラウド形成</block>
+  <block id="7ba6eb634dd2e14688216874c0948a82" category="list-text">簡易通知サービス</block>
+  <block id="311bdda432aba736b8dcb987523c0c92" category="list-text">CloudWatch</block>
+  <block id="8e75b153e61c22a8ea4e14aadc7cb4ee" category="list-text">System Manager</block>
+  <block id="6557196a178a8218ef6c930021f81c27" category="list-text">シークレットマネージャー</block>
+  <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">サポートされている地域</block>
+  <block id="d5b1044cbc510048a5dac270bde89ed5" category="inline-link">サポート対象の Amazon リージョンを表示します。</block>
+  <block id="ad308330f566581c7c1ac5769e060883" category="paragraph">データベースは、FSx for ONTAPがサポートされるすべての商用リージョンでサポートされます。<block ref="54b85ac4e794c565ea8c7aad421e6e67" category="inline-link-rx"></block></block>
+  <block id="186585d175a4fff1722ac82a5520c584" category="paragraph">次のAWSリージョンはサポートされません。</block>
+  <block id="cc6dcf46ebcb08f1caa420526cc0ab18" category="list-text">中国</block>
+  <block id="1411debdb32e6b128ca27ec92a708cbd" category="list-text">GovCloud（US）リージョン</block>
+  <block id="ecd96786b112acf6970d6aaf3be575ca" category="list-text">シークレットクラウド</block>
+  <block id="151ef168e17772f7a361db78a0c86552" category="list-text">トップシークレットクラウド</block>
+  <block id="20c404f3ca0633629eee9b1b4ccd6737" category="section-title">サポートを受ける</block>
+  <block id="da444b283df699667b2316206972bdfe" category="paragraph">Amazon FSx for NetApp ONTAP は、AWSファーストパーティの解決策 です。FSx for ONTAPファイルシステム、インフラ、または本サービスを使用する解決策に関する質問やテクニカルサポートの問題については、AWS管理コンソールのサポートセンターを使用してAWSに対するサポートケースをオープンしてください。「 FSX for ONTAP 」サービスと該当するカテゴリを選択します。AWS サポートケースの作成に必要な残りの情報を指定します。</block>
+  <block id="fc00732c3b79a8178cfd0556a8722a13" category="inline-link-macro">Workload Factoryのデータベースに関するヘルプ</block>
+  <block id="5a0bab72bf8800539ee19d4ebfcb6501" category="paragraph">Workload FactoryまたはWorkload Factoryのアプリケーションとサービスに関する一般的な質問については、を参照してください <block ref="4318b5ec74addc6e7964ffb1638ebe63" category="inline-link-macro-rx"></block>。</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法的通知</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">法的通知では、著作権に関する声明、商標、特許などにアクセスできます。</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">著作権</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商標</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp、NetAppのロゴ、およびNetAppの商標ページに記載されているマークは、NetApp、Inc.の商標です。 その他の会社名および製品名は、それを所有する各社の商標である場合があります。</block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">特許</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">NetAppが所有する特許の最新リストは、次のサイトで参照できます。</block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">プライバシーポリシー</block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">オープンソース</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。</block>
+  <block id="22e5a7336ebe77138f0282cedcb069ab" category="inline-link">ワークロードファクトリ</block>
+  <block id="7ffcbeca3b450b8d05f9cf0eedb617f8" category="list-text"><block ref="7ffcbeca3b450b8d05f9cf0eedb617f8" category="inline-link-rx"></block></block>
+  <block id="887f800d53dc2cd5a7894464a6f60a6b" category="inline-link">データベース用ワークロードファクトリ</block>
+  <block id="7e505d4c691d86e5bd415f9ccb849966" category="list-text"><block ref="7e505d4c691d86e5bd415f9ccb849966" category="inline-link-rx"></block></block>
+  <block id="9591e2d54c998ae1c9d48fd5be7762e9" category="inline-link">GenAI向けワークロードファクトリー</block>
+  <block id="f38c7416013fc239c3dd3288d40a40c0" category="list-text"><block ref="f38c7416013fc239c3dd3288d40a40c0" category="inline-link-rx"></block></block>
+  <block id="404a5efb62a3a3f22b02593091042608" category="inline-link">VMwareのワークロードファクトリー</block>
+  <block id="9a211183d3fa82368d76fdbab5abdeda" category="list-text"><block ref="9a211183d3fa82368d76fdbab5abdeda" category="inline-link-rx"></block></block>
+  <block id="aee6f8bed903be1fd0e588691dc83ee2" category="summary">Workload Factory for DatabasesでMicrosoft SQL Serverインスタンスを管理します。</block>
+  <block id="9d971c2b6396eeae14d925b1644bb589" category="doc">Microsoft SQL Serverインスタンスを管理します。</block>
+  <block id="128a387db84d21648193a1164f2b6275" category="paragraph">Microsoft SQL Serverインスタンスを管理して、Workload Factory for Databasesのインスタンスとデータベースのステータス、リソース利用率、保護、ストレージのパフォーマンスを監視します。</block>
+  <block id="6130b5542240619621b88baf10547d84" category="paragraph">データベースは、FSx for ONTAPファイルシステムストレージでのみMicrosoft SQL Serverインスタンスを管理できます。</block>
+  <block id="b43307219a7b65a8301c057d6f6b5478" category="section-title">Microsoft SQL Serverインスタンスの管理</block>
+  <block id="7c6c9edd9611134efa9dc1ed2f630486" category="paragraph">Microsoft SQL Serverインスタンスの管理には、次のタスクが含まれます。</block>
+  <block id="4c2074388cf4ff8bed676ca933f2b317" category="list-text">ホストインスタンスを管理します。</block>
+  <block id="994fd8f490177306769be0a7cbfcc3e6" category="list-text">管理対象インスタンスの表示</block>
+  <block id="948d113c0ab3cb85650dda6912a734c5" category="list-text">データベースの表示</block>
+  <block id="516bc1905150a9c47ed4ba785d304c08" category="list-text">ホストインスタンスの管理解除</block>
+  <block id="327ffbd91edd4e33d5518e4e2ffe32a7" category="inline-link-macro">1つ以上のホストインスタンスを検出</block>
+  <block id="f55f72ac990fbff5b0fa9fa6ef2a43f8" category="paragraph">これらのタスクのいずれかを実行するには、が必要です <block ref="7590173c3966c31656f7462bb5d71596" category="inline-link-macro-rx"></block>。</block>
+  <block id="9ee949a52ce818bc3dc8adf7994630ff" category="paragraph">検出されたホストまたは管理対象外のMicrosoft SQL Serverインスタンスを管理します。</block>
+  <block id="cd78ff90ddf6720085af92558142d117" category="list-text">管理に使用できるホストで検出されたインスタンスが必要です。</block>
+  <block id="ec23fcbca926c2c56578aa4b009e5426" category="inline-link-macro">Windows用のMicrosoft PowerShellのドキュメント</block>
+  <block id="0a2076265c3748f47dd0af532c7aface" category="list-text">データベースインスタンスを管理するには、PowerShell7が必要です。を参照して、PowerShell7を手動でインストールします <block ref="83fcecee5da20c347486b34eede460ed" category="inline-link-macro-rx"></block>。</block>
+  <block id="14018e7d1ee628c58a60c375fd95df80" category="list-text">すべての管理処理は、ユーザ権限を使用してAWS System Manager Agentによって実行され<block ref="7254170b56a28e207df989a3f40b911f" prefix=" " category="inline-code"></block> ます。データベースサーバのユーザに次の権限を付与し<block ref="7254170b56a28e207df989a3f40b911f" prefix=" " category="inline-code"></block> ます。</block>
+  <block id="c502f2bcb11d9b0ae9cc04006ed9085c" category="list-text"><block ref="f3df1667f9c6ceb0ff9503ed0049f55c" prefix="" category="inline-code"></block></block>
+  <block id="901633010bf118aaf6f388141cdd64f9" category="list-text"><block ref="e3181656ffc465b7de7742ba402b2527" prefix="" category="inline-code"></block></block>
+  <block id="0806315ac4bdc0f00042fe455dd8dfeb" category="list-text"><block ref="f787572bd533c2e129b8fe16237eb4bf" prefix="" category="inline-code"></block></block>
+  <block id="5051d68578089ab9d5878b78fa2dffe3" category="list-text"><block ref="651c416ccdee61d9b2abf2d88f4a4e97" prefix="" category="inline-code"></block></block>
+  <block id="afd582c0b2df85a795497b5f15267fc2" category="list-text"><block ref="ef6ac19c607206bb40d2ebb779ec2c8c" prefix="" category="inline-code"></block></block>
+  <block id="69ef3028600d545d3574c333e7ca55b2" category="list-text"><block ref="056ceeb0ee0b0e9d88285e8e483f5943" prefix="" category="inline-code"></block></block>
+  <block id="aac2a7646728f5a7e043cf96134ccdb3" category="list-text">管理するホストの行で*[管理]*をクリックします。</block>
+  <block id="2fb4e3404c1ed4190dc6ef818393c670" category="list-text">管理するホストインスタンスを1つ以上選択します。</block>
+  <block id="5a71da60e1bd3ad61adeed4b3b25dfd4" category="list-text">[管理]*をクリックします。</block>
+  <block id="142e8c494504dba40c34648c3aee0f93" category="paragraph">Microsoft SQL Serverに特定のPowerShellモジュールと管理スクリプトがないと、処理が失敗します。Workload Factoryは、不足しているモジュールとスクリプトをインストールするための準備リソースジョブをトリガーします。このジョブは、[ジョブの監視]タブに表示できます。ジョブが完了したら、ホストインスタンスの管理を再試行します。</block>
+  <block id="c08e85e895d76938ea6dece5bb44d66e" category="paragraph">管理対象インスタンスを表示するには、次の手順を実行します。</block>
+  <block id="8719fc3365176d7b81bdcbf4c1ff4a2f" category="list-text">ドロップダウン矢印をクリックしてホストの行を展開すると、その管理対象インスタンスが表示されます。</block>
+  <block id="7a85061671bf8d085efe2cb8dfd1c79e" category="paragraph">ホストが展開され、ホストインスタンスが表示されます。</block>
+  <block id="d389f01b8dde275b0dcea0f5988294e9" category="list-text">表示するインスタンスの3つのドットメニューをクリックし、*[インスタンスの表示]*を選択します。</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">結果</block>
+  <block id="124a4b88b8d9e1fc268a022789dfa437" category="paragraph">インスタンスの概要が[Inventory]タブに表示されます。</block>
+  <block id="12d2adb5a33b1aa2d5dffa5f023e36e4" category="paragraph">管理対象インスタンスで管理されているデータベースを表示するには、次の手順を実行します。</block>
+  <block id="ca6b20c311193d70fa95150e9aadfeff" category="list-text">ドロップダウン矢印をクリックしてホストの行を展開し、ホストのデータベースを表示します。</block>
+  <block id="80dfa1b683b7a7caa12e2cd38f13eb9e" category="list-text">表示するデータベースを含むインスタンスの3つのドットメニューをクリックします。</block>
+  <block id="bab47e98a40b74089a0df1373390d048" category="list-text">[データベースの表示]*を選択します。</block>
+  <block id="c86b7424c07159a13fb442303997ee5e" category="paragraph">インスタンス内のデータベースのリストが[Inventory]タブに表示されます。</block>
+  <block id="1654b38c29f5708868d01a77911262a6" category="paragraph">次の手順に従って、ホストインスタンスの管理を解除します。</block>
+  <block id="65cc39a76868117dd307472ad16886fe" category="list-text">ドロップダウン矢印をクリックして、管理を解除するホストインスタンスの行を展開します。</block>
+  <block id="2c5e94e7fb3f058dd79551c37346e05f" category="list-text">管理を解除するインスタンスの3つのドットメニューをクリックします。</block>
+  <block id="15dbb4d45ce02c5b74e74fc25c85c667" category="list-text">[Unmanage]*を選択します。</block>
+  <block id="96a30701e83b6fe09ce36fcd863cb65b" category="paragraph">ホストインスタンスが管理対象外になりました。</block>
+  <block id="653f8072d269cfaef8cb67c5329e4429" category="summary">Workload Factory for Databases内でデータベースジョブを追跡し、データベースを監視します。</block>
+  <block id="252215232d636a7c096b2327e9a20b42" category="doc">データベースの監視</block>
+  <block id="3b686e6b914c6cbbc0c51a086c2bac15" category="paragraph">Workload Factory for Databasesを使用して、データベースジョブを追跡し、データベースを監視します。</block>
+  <block id="8e6a6b95adffc91a47a882f2247cc6b3" category="paragraph">データベースにはジョブ監視機能があり、ジョブの進捗状況を追跡したり、障害が発生した場合の診断とトラブルシューティングを行うことができます。また、タイプとステータス、検索機能、およびジョブテーブルをダウンロードするためのオプションによってフィルタリングされ、データベースジョブのナビゲーションとレポート作成に役立ちます。</block>
+  <block id="67b0a66954400448325457f930e0f82b" category="paragraph">ジョブ監視では、ジョブに応じて最大3つのレベルの監視がサポートされます。たとえば、新しいデータベースおよびサンドボックスクローンの作成では、ジョブ監視によって親ジョブとサブジョブが追跡されます。</block>
+  <block id="b830a8f027299af6d1d8ffbb130bcc58" category="list-text">ジョブ監視レベル</block>
+  <block id="f52bf93027629736a089ef7f590091e0" category="list-text">レベル1（親ジョブ）：ホスト導入ジョブを追跡します。</block>
+  <block id="0954e42bf0119b1189263290f1e567d2" category="list-text">レベル2（サブジョブ）：ホスト展開の親ジョブに関連するサブジョブを追跡します。</block>
+  <block id="df942ff3756f5cbd24f42b521acc64f8" category="list-text">レベル3（タスク）：各リソースに対して実行された一連のアクションを一覧表示します。</block>
+  <block id="79ea79a1991592553b64d7ab6d30bdc0" category="list-text">ジョブステータス</block>
+  <block id="b281132bb97bdf5fa0ee45a03264aa8b" category="list-text">ジョブ監視機能は、_進行中_、_完了_、_失敗_のジョブを毎日、毎週、隔週、および毎月追跡します。</block>
+  <block id="5c7a83ffcacee6b5f8b97e61c20dc908" category="list-text">ジョブイベントの保持</block>
+  <block id="a4c455fbdb91b6c5a283d4a40626cd5b" category="list-text">ジョブ監視イベントは、ユーザインターフェイスに30日間保持されます。</block>
+  <block id="4639d0e2e2909a747265c2f704128bca" category="section-title">ジョブの監視</block>
+  <block id="96ea9efb359a91a00480c8f67e682c8f" category="list-text">[データベース]で、*[ジョブの監視]*タブを選択します。</block>
+  <block id="59d6e1b8f6bd894db211d6ad27845f97" category="list-text">[ジョブ監視]タブで、フィルタを使用するか検索してジョブの結果を絞り込みます。ジョブレポートをダウンロードすることもできます。</block>
+  <block id="3edf792d0146bcfb61f393f728075b2a" category="list-text">ジョブの3つのドットメニューをクリックし、* Go to CloudFormation *をクリックして、AWS CloudFormationコンソールにジョブログを表示します。</block>
+  <block id="22358702cb945913fe9b03fc1642777a" category="summary">データベースには、要件が異なる3つのモードがあります。</block>
+  <block id="dea4dab62098ccd6801827376d992a3d" category="doc">データベースのクイックスタート</block>
+  <block id="74c38aced7ecd3644388954bed39db62" category="paragraph">データベースを使用すると、_basic_modeですぐに開始できます。Workload Factoryを使用してホストの検出やリソースの管理などを行う場合は、いくつかの手順で作業を開始できます。</block>
+  <block id="837dba0f12ab5569290872fa3522be2b" category="paragraph">開始するにはAWSアカウントが必要です。</block>
+  <block id="5d9619a28eecf7942aa537cd7938d8e1" category="paragraph">Workload Factoryデータベースを使用するには、次の手順を実行します。</block>
+  <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">1つ</block>
+  <block id="3d784fb83da69a092542ad97e84229a1" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Workload Factoryへのログイン</block>
+  <block id="e3f4d5b3a0d16b68c0f95c7031bbab0f" category="inline-link-macro">Workload Factoryでアカウントを設定する</block>
+  <block id="0d6187a6dbf87b209ebf23f8fee502f9" category="inline-link-macro">ログイン</block>
+  <block id="21f5ea0bd2c3e06693357df598869216" category="paragraph">必要なのは <block ref="9144f2d687cdfc71041a1a85068f8ab7" category="inline-link-macro-rx"></block> <block ref="10204cc30f2f30795b6ce82a21da7b1a" category="inline-link-macro-rx"></block></block>
+  <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">2つ</block>
+  <block id="27c19be9febabd1e2fb82d7a39784f2d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> クレデンシャルと権限の追加</block>
+  <block id="ef10fd0583cb29fae9962398dccb7949" category="inline-link-macro">_basic_、_read_、および_automate_operationalモード</block>
+  <block id="bdb2387bd633174e2bf3ed30c7e23fcd" category="paragraph">いずれかを選択し <block ref="c3b5a6253a0d0b0237f0d9c1e9a7dfa2" category="inline-link-macro-rx"></block>ます。</block>
+  <block id="f13bb46705b371ce5ebc0ccc10f09bb0" category="inline-link-macro">データベースサーバの導入方法</block>
+  <block id="ec7d5e9cf31139aff85fee41410fc280" category="paragraph">_basic_modeで操作する場合は、これ以上操作する必要はありません。Workload Factory Databasesを使用して、部分的に完了したコードサンプルをコピーできます。[データベース]タイルで、*[データベースホストの導入]*をクリックします。<block ref="cf724fcba48c8dc4cbe06a87f2c5df99" category="inline-link-macro-rx"></block>です。</block>
+  <block id="ce8e7e98b5597e78e8fd7d6bc94729cb" category="inline-link-macro">アカウントへのクレデンシャルの手動追加</block>
+  <block id="9b0784be448bb1dc8f08485434f9a91a" category="paragraph">_read_or_automate_modeで操作する場合は、データベースやAIなどのワークロード機能の選択や、_read_or_automate_modeで操作するための適切な権限があることを確認するためのIAMポリシーの作成が必要 <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> です。</block>
+  <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">3つ</block>
+  <block id="6f6390592b833a81a0bda8c296a3c5b6" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> データベースサーバの導入</block>
+  <block id="078f40fa23e0672777adc7c05d4773dd" category="inline-link-macro">導入する</block>
+  <block id="84c21b8cc296c1da3bb78060284eaac1" category="inline-link-macro">データベースサーバの検出</block>
+  <block id="fb4bdf4175298f0102e06e87845aa4d6" category="paragraph">最後に、_automate_modeで動作するように選択した場合は、またはホストリソースを管理してから、ユーザデータベースを追加する必要があります <block ref="59bd3d71ec0b7c2f2cdc48f826101be3" category="inline-link-macro-rx"></block> <block ref="ce52b47cf84b17846dfd2d3004a17efa" category="inline-link-macro-rx"></block> 。</block>
+  <block id="76e0353f7732c65129a16b1dee5f98f2" category="inline-link-macro">ユーザデータベースの作成</block>
+  <block id="9099614931eafcd02d62211a634872c7" category="inline-link-macro">ホストのクローンを作成してサンドボックスを作成する</block>
+  <block id="64cae7d199a0b43d21cb5921156fe660" category="paragraph">データベースインベントリにFSx for ONTAP管理ホストがある場合は、またはを実行できます <block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block> <block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block>。</block>
+  <block id="62fb4ddd9c2ed78b886998ecd2d0e7c9" category="inline-link-macro">Storage Savings Calculatorでコスト削減効果を確認する</block>
+  <block id="46e1e62b294ac077d36c03536775e77e" category="paragraph">[Databases]インベントリにElastic Block Storeホストがある場合は、これを実行できます <block ref="83cf511a46d8dbc3be6811900e4a471e" category="inline-link-macro-rx"></block>。</block>
+  <block id="01e2aa96525681771afc8a780e68ac21" category="summary">Workload Factory for Databasesでサンドボックスクローンを更新します。</block>
+  <block id="4bf23107249668a7430988813a4ca710" category="doc">データベースのワークロードファクトリでのサンドボックスクローンの更新</block>
+  <block id="ba10e3e27f28a2dc29897fda5f22e311" category="paragraph">現在または過去の時点のソースデータベースと同等になるように、データベースクローンを更新します。</block>
+  <block id="24ba9febbdf4f0bdec223ad9cf7f746f" category="paragraph">クローンを更新すると、現在のソースデータベース、または過去の時点で作成されたソースデータベースのスナップショットに対してクローンが更新されます。サンドボックスクローンに対する変更はすべて削除されます。</block>
+  <block id="397fb4bed63b1f030827aee0d3d2a9f3" category="paragraph">更新は、ソースデータベースがアクティブな場合にのみ実行できます。</block>
+  <block id="745d72e1ba4e4047caaf9e8b73eca0e0" category="paragraph">Snapshotからデータベースクローンを更新するには、処理用にソースデータベースに少なくとも1つのSnapshotが必要です。</block>
+  <block id="cab3779344e3617fc74d747eece40a4b" category="list-text">[サンドボックス]タブで、更新するサンドボックスクローンの3つのドットメニューをクリックします。</block>
+  <block id="112777b2a7f0a6d4155f3e87ae0eb154" category="list-text">[更新]*を選択します。</block>
+  <block id="8d614611d1796186ed0a5e31381198f3" category="list-text">[Refresh]ダイアログで、次のいずれかのオプションを選択します。</block>
+  <block id="566e9d53702323dfc23f81cbdc95c142" category="list-text">*現在の時刻に更新*</block>
+  <block id="d8d2ddd0343da02a81aaa9fd2bb270e7" category="list-text">*ポイントインタイムに更新*</block>
+  <block id="a9b30d5aec7c9f917986ea976c3be0c1" category="paragraph">このオプションでは、に更新するデータベーススナップショットをドロップダウンメニューから選択します。</block>
+  <block id="d687cb57e7c0a2bc72631659265b9d28" category="list-text">[* 更新 * ] をクリックします。</block>
+  <block id="b035db432577d47ec268d940961fcf04" category="summary">Workload Factory for Databasesでサンドボックスクローンをリバートします。</block>
+  <block id="8c47d6d63e7f24e4db4a86b8caab2370" category="doc">Workload Factory for Databasesでのサンドボックスクローンのリバート</block>
+  <block id="119092644393b63350941f731f4e02dd" category="paragraph">データベースクローンを作成時の元のバージョンに戻します。</block>
+  <block id="36bfe5aa9dbfbad068e6721ddea626bb" category="paragraph">データベースをクローニングする場合、作成時のクローンは_baseline_cloneになります。クローンデータベース内のデータは、作成時のソースデータベースと同じです。サンドボックスデータベースクローン内のデータが時間の経過とともに変化する場合は、クローンが最初に作成されたときにデータをベースラインに戻すことができます。この処理は、クローンのベースラインの再設定と呼ばれます。新しいクローンを作成するのではなくクローンのベースラインを再設定すると、スペースが節約されますが、サンドボックスクローンに対する変更はすべて削除されます。</block>
+  <block id="e25b967c54d3008b230ffd4e18be90cb" category="list-text">[サンドボックス]タブで、元に戻すサンドボックスクローンの3つのドットメニューをクリックします。</block>
+  <block id="0975db7a2f5f2be54dab36d8b76af890" category="list-text">[ベースラインの再設定]*を選択します。</block>
+  <block id="ee39d3157a6b84476b1e530c43e7e0af" category="list-text">[ベースラインの再設定]ダイアログで、*[ベースラインの再設定]*をクリックします。</block>
+  <block id="60662f13dd467742de00d5852483a73d" category="summary">ソースデータベースからサンドボックスクローンをスプリットして、新しいデータベースを作成します。</block>
+  <block id="7e63ac86d460cf0995a5ac132e4c8092" category="paragraph">ソースデータベースからサンドボックスクローンをスプリットすると、一定量のストレージ容量を消費する新しいデータベースが作成されます。スプリットが完了するとクローンが削除され、新しいデータベースがインベントリに表示されます。</block>
+  <block id="bad5772919d73bf3b17433524b58ead6" category="inline-link-macro">ファイルシステムの容量の拡張</block>
+  <block id="eed30e1e95c32e95da513640e3e7e215" category="paragraph">新しいデータベースに必要なストレージ容量を検討します。作業を開始する前に、FSx for ONTAPファイルシステムが必要な場合 <block ref="ecf193ca0846a4137269dac878e92281" category="inline-link-macro-rx"></block> 。</block>
+  <block id="be0c57159940db106da8c592b3a6f1a7" category="list-text">[サンドボックス]タブで、分割するサンドボックスクローンの3つのドットメニューをクリックします。</block>
+  <block id="54e2c4dd2b9e992b761540f131754e81" category="list-text">[分割]*を選択します。</block>
+  <block id="05b751f4cbd4ae2611783e6ab193a961" category="list-text">[分割]ダイアログで、*[分割]*をクリックします。</block>
+  <block id="b334128403ed60ff931947907046e1f0" category="summary">NetAppテクニカルサポートでサポートケースをオープンするには、NetAppサポートサイトのアカウントをWorkload Factoryに追加してから、サポートに登録する必要があります。</block>
+  <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">サポートに登録します</block>
+  <block id="996ad73a480311d4f86d6946935389d2" category="paragraph">Workload Factoryおよびそのストレージソリューションとサービスに固有のテクニカルサポートを受けるには、サポート登録が必要です。BlueXPコンソールからサポートに登録する必要があります。BlueXPコンソールはWorkload Factoryとは別のWebベースのコンソールです。</block>
+  <block id="c552970fd4dc8118ba1806da596acad9" category="paragraph">サポートに登録しても、クラウドプロバイダのファイルサービスでNetAppのサポートは有効になりません。クラウドプロバイダのファイルサービス、そのインフラ、またはサービスを使用するソリューションに関連するテクニカルサポートについては、その製品のWorkload Factoryドキュメントの「Getting help」を参照してください。</block>
+  <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">サポート登録の概要</block>
+  <block id="d7e4bb081bf4ec4814d83edcfbdb8b96" category="paragraph">アカウントIDサポートサブスクリプション（BlueXPの[Support Resources]ページに記載されている20桁の960xxxxxxxxxシリアル番号）を登録すると、単一のサポートサブスクリプションIDとして機能します。各BlueXPアカウントレベルのサポート契約が登録されている必要があります。</block>
+  <block id="f9e05c2b383e3f11e3b4bebbe8952225" category="paragraph">登録すると、サポートチケットのオープンやケースの自動生成などの機能が有効になります。登録を完了するには、以下の手順でNetApp Support Site（NSS）アカウントをBlueXPに追加してください。</block>
+  <block id="856edc4caec68fece6859c4be9360f3c" category="section-title">NetAppサポートのアカウントを登録する</block>
+  <block id="2d6573b6ae4c51dc24e58109473f2490" category="paragraph">サポートに登録してサポート利用資格をアクティブ化するには、アカウントの1人のユーザがNetAppサポートサイトのアカウントをBlueXPログインに関連付ける必要があります。ネットアップサポートへの登録方法は、NetApp Support Site （NSS）アカウントがあるかどうかによって異なります。</block>
+  <block id="bf4c731c0ee7f60c8018ad8f96828dda" category="section-title">NSSアカウントをお持ちの既存のお客様</block>
+  <block id="7e177185e7eddff33dd8f3aeb7551132" category="paragraph">NSSアカウントをお持ちのネットアップのお客様は、BlueXPからサポートに登録するだけで済みます。</block>
+  <block id="0307a12e5749f8dd930472ee78f69d2c" category="list-text">BlueXPコンソールの右上で、[設定]アイコンを選択し、*[クレデンシャル]*を選択します。</block>
+  <block id="f19ab635e6d5f884a22ee4ce067fdbfd" category="list-text">[ユーザクレデンシャル]*を選択します。</block>
+  <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">[NSSクレデンシャルの追加]*を選択し、NetApp Support Site（NSS）認証プロンプトに従います。</block>
+  <block id="cfc5506589d5a4d055e721267d5f0732" category="list-text">登録プロセスが正常に完了したことを確認するには、[ヘルプ]アイコンを選択し、*[サポート]*を選択します。</block>
+  <block id="8add4eb0d3f6ce61d374f3df3ee4eadf" category="paragraph">[リソース]ページに、アカウントがサポートに登録されていることが表示されます。</block>
+  <block id="10c56875db7a47f791d653e5d5bff0e9" category="inline-image-macro">アカウントのシリアル番号、緑のチェックボックス、サポート登録済みのテキストを示すスクリーンショット。</block>
+  <block id="fa7897454f637026faa3e00ccbfec239" category="paragraph"><block ref="fa7897454f637026faa3e00ccbfec239" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d9a01bdcfab6f0a10fc126999b4d5988" category="paragraph">他のBlueXPユーザにNetApp Support Siteアカウントが関連付けられていない場合、このサポート登録ステータスは表示されません。ただし、BlueXPアカウントがサポートに登録されていないわけではありません。アカウント内の1人のユーザーがこれらの手順を実行している限り、アカウントは登録されています。</block>
+  <block id="1ff5aefce774ec72a211f2b3bb10b950" category="section-title">NSSアカウントを持たない既存のお客様</block>
+  <block id="bdd862f49d428a850400bcf2f53cdaf2" category="paragraph">NetAppの既存のお客様で、ライセンスとシリアル番号は_NO_NSSアカウントしかお持ちでない場合は、NSSアカウントを作成してBlueXPログインに関連付ける必要があります。</block>
+  <block id="5b2b7f628f804bcb786a097c7e45aa41" category="inline-link">NetApp Support Site ユーザー登録フォーム</block>
+  <block id="0c4a8b62da9473fbd5401273c4f85ee0" category="list-text">NetAppサポートサイトのアカウントを作成するには、<block ref="041bcb6d9bdf91f7d6ac92ae3a196e12" category="inline-link-rx"></block></block>
+  <block id="d61c9f72493817776f392db42ac446a2" category="list-text">適切なユーザレベルを選択してください。通常は*ネットアップのお客様/エンドユーザ*がこれに該当します。</block>
+  <block id="5226d4ec1f4f81b740cbbd27635b441f" category="list-text">必ず、上記のシリアル番号フィールドに使用されているBlueXPアカウントのシリアル番号(960xxxx)をコピーしてください。これにより、アカウント処理が高速化されます。</block>
+  <block id="0499bba105f8a891a2c671f1ba99dd34" category="list-text">の手順を実行して、新しいNSSアカウントをBlueXPログインに関連付けます <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>。</block>
+  <block id="e9b1f53d6cabb3394833a4e102eb6a69" category="section-title">ネットアップのソリューションを初めて導入する場合は</block>
+  <block id="c20c107d0d4eef6351660f3590324232" category="paragraph">ネットアップ製品を初めてご利用になり、NSSアカウントをお持ちでない場合は、以下の手順に従ってください。</block>
+  <block id="f5d7029ed18f998c0a9d780b2554e538" category="list-text">[Support Resources]ページでアカウントIDのシリアル番号を確認します。</block>
+  <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">[ ヘルプ ] メニューのスクリーンショット。サポートは最初に表示されるオプションです</block>
+  <block id="55adf589d087b17fca134b34f65498ed" category="paragraph"><block ref="55adf589d087b17fca134b34f65498ed" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dd50e314c18933734174c1156dd9237f" category="inline-link">ネットアップサポート登録サイト</block>
+  <block id="78f94e749b89d69dcbf3baff21ccb958" category="list-text">[I am not a registered NetApp Customer]に移動して<block ref="e1c4be66250fd76d5c52bfe2cb7daee2" category="inline-link-rx"></block> 選択します。</block>
+  <block id="d4f633ef130727b2776fa7f45024ca7d" category="list-text">必須フィールドに入力します（赤いアスタリスクのフィールド）。</block>
+  <block id="1128fc8d5ec64880f4d49337ed798d31" category="list-text">[*製品ライン*（Product Line *）]フィールドで、[* Cloud Manager *]を選択し、該当する課金プロバイダーを選択します。</block>
+  <block id="50a1dc01b7312307c34a888071586955" category="list-text">上記の手順2からアカウントのシリアル番号をコピーし、セキュリティチェックを完了して、ネットアップのグローバルデータプライバシーポリシーを確認します。</block>
+  <block id="3a24c87c9971d2011b4df223718f84b4" category="paragraph">この安全なトランザクションを完了するために、メールボックスに電子メールがすぐに送信されます。確認メールが数分で届かない場合は、必ずスパムフォルダを確認してください。</block>
+  <block id="03413baeca1ff7222737d8ce299bd4e8" category="list-text">Eメールからアクションを確認します。</block>
+  <block id="201080500e946070a2e4873042507c77" category="paragraph">確認ではネットアップにリクエストが送信され、NetApp Support Site アカウントを作成することを推奨します。</block>
+  <block id="cc8b0535948da368f832027c19b7f853" category="list-text">シリアル番号フィールドには、上記のアカウントのシリアル番号（960xxxx）を必ずコピーしてください。これにより、アカウント処理が高速化されます。</block>
+  <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">このプロセスについては、ネットアップからご連絡ください。これは、新規ユーザ向けの1回限りのオンボーディング演習です。</block>
+  <block id="5cdee814e2d9ba3490a8f16d00c65759" category="paragraph">NetAppサポートサイトのアカウントを取得したら、の手順を実行してアカウントをBlueXPログインに関連付けます。 <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block></block>
+  <block id="d22b15618e51b122d71ea62d0c31cfdb" category="summary">サンドボックスクローンの接続情報を表示およびコピーします。</block>
+  <block id="5e121c3e57ce0f4b69bb4130bd318d27" category="doc">サンドボックスクローンの接続情報の表示</block>
+  <block id="5a329dc3d14f5744534c14ef1f73aee2" category="list-text">[サンドボックス]タブで、サンドボックスクローンの3つのドットメニューをクリックして接続情報を表示します。</block>
+  <block id="43c2cf40a7db4f77b2c6c793066c47a5" category="list-text">[接続情報を表示]*を選択します。</block>
+  <block id="383d22dfa0525ab8f4cf0db98c16e30f" category="list-text">[接続情報の表示]ダイアログで、必要に応じて接続情報をコピーします。</block>
+  <block id="d3e4e4eeddf743f9d82a0c8532d7731c" category="summary">Workload Factory for Databasesの新機能について説明します。</block>
+  <block id="490414e0366b091220802d406e52c076" category="doc">新機能</block>
+  <block id="e180b7ca8fea43e3b6bee94a5f547753" category="paragraph">データベースの最新情報をご確認ください。</block>
+  <block id="755eba92a1ce7cdbaf7f5be63339d16d" category="section-title">7月7日</block>
+  <block id="ed54fefae379fac8157c0d466e30a150" category="section-title">Workload Factory for Databasesの初版リリース</block>
+  <block id="7737adcb101b7285a3a8567ae4d22021" category="paragraph">初期リリースには、データベースワークロードのストレージ環境としてAmazon FSx for NetApp ONTAPを使用した場合のコスト削減の検討、Microsoft SQL Serverの検出、管理、導入、データベースの導入とクローニング、Workload Factory内でのジョブの監視が含まれています。</block>
+  <block id="76d820a16128270adf6a061b253cca06" category="inline-link-macro">データベースの詳細</block>
+  <block id="c8b559206fbe2064f93b1a567d84e637" category="paragraph"><block ref="eda6f6881c0c5cc5180d85b417e4f376" category="inline-link-macro-rx"></block>です。</block>
+  <block id="701d958bca3a33a19f563321cfb869c3" category="sidebar">BlueXPワークロードファクトリーでは、FSx for ONTAPファイルシステムストレージ上にMicrosoft SQL Server構成を導入し、データベース環境を管理できます。</block>
+  <block id="e3e11adbab76168641c9e2c9a8f51784" category="sidebar">Workload Factory for Databases Workloadsドキュメント</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">はじめに</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">リリースノート</block>
+  <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">クイックスタート</block>
+  <block id="68522a08da2b47b97c0f927b7dc471b9" category="sidebar">データベースの使用</block>
+  <block id="83f5267b900a40e93e73e9ace47d4412" category="sidebar">データベースサーバの作成</block>
+  <block id="47f5bdacbf3f064bc2cd6ba54baf7150" category="sidebar">データベースの監視</block>
+  <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識とサポート</block>
+  <block id="aef814f0c9c4dccfb365b3322172cb51" category="sidebar">データベースワークロードのドキュメント</block>
+  <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新機能</block>
+  <block id="991fc877b6135bcda7435016745ae066" category="sidebar">データベースワークロードを使用</block>
+  <block id="fbe27670bf06b7e38d268c77e7f002f0" category="sidebar">新しいデータベースサーバを作成する</block>
+  <block id="4564dd7bc0da251c3d18fb2269904a81" category="sidebar">データベースサーバの検出</block>
+  <block id="5eb43e1edd4f0757c83c6d6f6632ff94" category="sidebar">管理と監視</block>
+  <block id="077bbf8da979e97e9f7ec7239eb76073" category="sidebar">Microsoft SQL Serverの管理</block>
+  <block id="6ea5d3d06add60328b6497a58edc5878" category="sidebar">クローンの管理</block>
+  <block id="7375873088079584bbffaf102f0fdae4" category="sidebar">サンドボックスクローンの作成</block>
+  <block id="566d7361c862d8d2bd63be4cb3f852cd" category="sidebar">サンドボックスクローンの整合性チェック</block>
+  <block id="6de665240f982d480aa54b5ebea09683" category="sidebar">サンドボックスクローンのリバート</block>
+  <block id="6f78b6d7089b4700a6ce9674115ea116" category="sidebar">サンドボックスクローンの更新</block>
+  <block id="93aaedd59af13c8ec678bc053a076fe4" category="sidebar">CI / CDパイプラインへの接続</block>
+  <block id="d1512bc8e97fad026d3a9604a38eafeb" category="sidebar">クローン接続情報の表示</block>
+  <block id="3ed62cfc8918e6f101daf8572a05eac8" category="sidebar">サンドボックスクローンをスプリットする</block>
+  <block id="651b8da486ba685aa80d9dd4866d0171" category="sidebar">サンドボックスクローンを削除する</block>
+</blocks>

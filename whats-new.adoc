@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes, new features, workload factory, databases, workload factory' 
+summary: Workload Factory for Databasesの新機能について説明します。 
+---
+= 新機能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+データベースの最新情報をご確認ください。
+
+
+
+== 7月7日
+
+
+
+=== Workload Factory for Databasesの初版リリース
+
+初期リリースには、データベースワークロードのストレージ環境としてAmazon FSx for NetApp ONTAPを使用した場合のコスト削減の検討、Microsoft SQL Serverの検出、管理、導入、データベースの導入とクローニング、Workload Factory内でのジョブの監視が含まれています。
+
+link:learn-databases.html["データベースの詳細"]です。
