@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: explore-savings.html 
 keywords: cost, savings, compare costs, EBS, FSx for ONTAP 
-summary: Amazon Elastic Block Store（EBS）ストレージを使用したデータベースワークロードの削減効果を確認できます。 
+summary: Amazon Elastic Block Store（EBS）ストレージとFSx for ONTAPストレージの使用コストを比較して、データベースワークロードの削減効果をご確認ください。 
 ---
 = データベース向けワークロードファクトリでのコスト削減の詳細を見る
 :allow-uri-read: 
@@ -11,29 +11,27 @@ summary: Amazon Elastic Block Store（EBS）ストレージを使用したデー
 
 
 [role="lead"]
-Amazon Elastic Block Store（EBS）ストレージを使用したデータベースワークロードの削減効果を確認できます。
+Amazon Elastic Block Store（EBS）ストレージとFSx for ONTAPストレージの使用コストを比較して、データベースワークロードの削減効果をご確認ください。
 
-Workload Factoryには計算ツールが用意されているため、FSx for ONTAPファイルシステム上のデータベースワークロードについて、ストレージ、コンピューティング、SQLライセンス、Snapshot、クローンなど、Microsoft SQL Serverワークロードを実行するためのさまざまなコストコンポーネントをElastic Block Store（EBS）ストレージと比較できます。ストレージ要件によっては、FSx for ONTAPファイルシステムがデータベースワークロードにとって最も対費用効果の高いファイルシステムであることがわかります。
+Workload Factoryにはコスト削減計算ツールが用意されているため、FSx for ONTAPファイルシステム上のデータベースワークロードについて、ストレージ、コンピューティング、SQLライセンス、Snapshot、クローンなど、Microsoft SQL Serverワークロードを実行する際のさまざまなコストコンポーネントをElastic Block Store（EBS）ストレージと比較できます。ストレージ要件によっては、FSx for ONTAPファイルシステムがデータベースワークロードにとって最も対費用効果の高いファイルシステムであることがわかります。
 
 FSx for ONTAPファイルシステムを使用した場合、これらのMicrosoft SQL Server上のデータベースワークロード用ストレージのコストを削減できるかどうかが計算ツールに表示されます。
 
-FSx for ONTAPファイルシステムでこれらのワークロードを実行することでコストを削減できるとWorkload Factoryが判断した場合は、Workload Factoryの電卓から直接Microsoft SQL over FSx for ONTAPを導入できます。Workload Factoryでは、現在使用しているストレージの容量やデータベースワークロードのパフォーマンス特性に基づいて、複数のファイルシステムの導入を推奨する場合があります。Workload Factoryでは、現在使用しているストレージの容量やデータベースワークロードのパフォーマンス特性に基づいて、複数のファイルシステムの導入を推奨する場合があります。
+image:screenshot-ebs-savings-calculator.png["削減試算ツールページのスクリーンショットには、左側に選択したAmazon Elastic Block Store上のMicrosoft SQL Server構成が表示され、スナップショットとクローンの値をカスタマイズするオプションが表示されます。コスト削減額の単位での金額と割合の削減に加え、左側に表示されるFSx for ONTAPおよびElastic Block StoreストレージでMicrosoft SQL Serverを使用した場合の月額総コストも表示されます。"]
+
+FSx for ONTAPファイルシステムでこれらのワークロードを実行することでコストを削減できるとWorkload Factoryが判断した場合は、Workload Factoryの電卓から直接Microsoft SQL over FSx for ONTAPを導入できます。Elastic Block Storeストレージで複数のMicrosoft SQL Serverインスタンスを使用している場合は、単一のSQLインスタンスを使用するFSx for ONTAP構成を推奨します。
 
 
 
 == システム要件の入力
 
-Workload FactoryアカウントにAWSクレデンシャルを追加して_automate_mode ()を有効にした場合link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["モードの詳細"]、Workload FactoryはAWSアカウントで使用可能なすべてのストレージシステムを特定し、それらのシステム上のボリュームの特性を[Storage inventory]ページに表示できます。検索されるAWSアカウントは、Workload Factoryアカウントで定義したクレデンシャルに基づいています。
+Workload FactoryアカウントにAWSクレデンシャルを追加して_automate_mode ()を有効にした場合link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["モードの詳細"]、Workload Factoryは、AWSアカウントで使用可能なMicrosoft SQL Serverを実行するすべてのストレージシステムを識別できます。検索されるAWSアカウントは、Workload Factoryアカウントで定義したクレデンシャルに基づいています。
 
-この図は、AWSアカウントで検出されたFSx for Windowsファイルサーバシステム上のボリュームを示しています。
+この図は、AWSアカウントで検出されたEBSストレージ上のMicrosoft SQL Serverホストを[Explore saving]タブで示しています。
 
-image:screenshot-storage-inventory.png["FSx for Windowsファイルサーバ上のボリュームの現在のインベントリを示すストレージインベントリページ。"]
+image:screenshot-explore-savings-tab.png["この図は、[Explore saving]タブで検出された、AWSアカウントで検出されたMicrosoft SQL Serverホストと管理対象外のMicrosoft SQL Serverホストを示しています。"]
 
-Workload FactoryアカウントをAWSアカウント（_basic_mode）にリンクするためのクレデンシャルを追加していない場合は、導入予定のストレージシステムに必要な特性を手動で入力すると、コストに基づいてストレージ計算ツールが最適なファイルシステムを判断します。この方法を使用すると、_automate_modeを使用しながら、新しいFSx for ONTAPファイルシステムの範囲を決定することもできます。
-
-この図は、ストレージ計算ツールのページでFSx for ONTAPとEBSストレージを比較したものです。
-
-image:screenshot-ebs-calculator.png["FSx for ONTAPとElastic Block Storeのストレージの比較が記載されたストレージ計算ツールのページです。"]
+選択したホストの削減量を自動的に確認することも、導入予定のMicrosoft SQL Server構成の設定を手動で入力することもできます。コスト削減試算ツールは、コストを基にFSx for ONTAPの最適な構成を判断します。
 
 .開始する前に
 作業を開始する前に、次の前提条件を満たしてください。
@@ -42,6 +40,18 @@ image:screenshot-ebs-calculator.png["FSx for ONTAPとElastic Block Storeのス�
 * データベースインベントリでEBSストレージ内のホストを検出します。link:detect-host.html["ホストの検出方法"]です。
 
 
+
+
+== コスト削減の詳細
+
+選択したホストの削減量を確認するか、手動方式を使用できます。
+
+[role="tabbed-block"]
+====
+.選択したホストの削減効果を確認する
+--
+Workload Factoryは、選択したホスト特性を入力して、削減効果を自動的に確認できるようにします。
+
 .手順
 . にログインし link:https://console.workloads.netapp.com["Workload Factoryコンソール"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
@@ -49,22 +59,68 @@ image:screenshot-ebs-calculator.png["FSx for ONTAPとElastic Block Storeのス�
 . [Explore savings using EBS storage]*をクリックします。
 . 必要に応じて、EBSストレージのクローンとSnapshotに関する以下の詳細情報を指定し、コスト削減の見積もりをより正確にします。
 +
-.. * Snapshotの頻度*：ドロップダウンからSnapshotの頻度を選択します。
-.. *クローンの更新頻度*：ドロップダウンからクローンの更新頻度を選択します。
+.. * Snapshotの頻度*：ドロップダウンメニューからSnapshotの頻度を選択します。
+.. *クローンの更新頻度*：クローンの更新頻度をドロップダウンメニューから選択します。
+.. *クローニングされたコピーの数*：EBS設定のクローニングされたコピーの数を入力します。
 .. *毎月の変更率*：クローンおよびスナップショットのデータの1カ月あたりの平均変更率を入力します。
 
 
 . ページに表示された計算方法と推奨事項を確認します。
 +
-さらに、ページの一番下までスクロールして* PDFのエクスポート*を表示します。
+さらに、ページの一番下までスクロールして* PDFのエクスポート*または*計算の表示*を表示します。
 
 
 
+--
+.削減効果を手動で確認する
+--
+Microsoft SQL Server、Amazon EC2、Elastic Block Storeの設定をカスタマイズして、削減効果を手動で確認できます。
+
+.手順
+. にログインし link:https://console.workloads.netapp.com["Workload Factoryコンソール"^]ます。
+. [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
+. [Explore savings]*タブを選択します。
+. [Manual explore savings]で*[Explore savings manually]*をクリックします
+. [Explore savings manually]ページで、次の詳細を指定します。
++
+.. *リージョン*:ドロップダウンメニューからリージョンを選択します。
+.. *展開モデル*:ドロップダウンメニューから展開モデルを選択します。
+.. * SQL Serverエディション*:ドロップダウンメニューからSQL Serverエディションを選択します。
+.. *毎月のデータ変更率（%）*：クローンおよびスナップショットのデータ変更率を1カ月あたりの平均で入力します。
+.. * Snapshotの頻度*：ドロップダウンメニューからSnapshotの頻度を選択します。
+.. *クローニングされたコピーの数*：EBS設定のクローニングされたコピーの数を入力します。
+.. [EC2 specifications]で、次の情報を入力します。
++
+*** *マシンの説明*：オプションで、マシンを説明する名前を入力します。
+*** *インスタンスタイプ*：ドロップダウンメニューからEC2インスタンスタイプを選択します。
+
+
+.. [Volume Types]で、少なくとも1つのボリュームタイプについて次の詳細を指定します。IOPSとスループットは特定のディスクタイプボリュームに適用されます。
++
+*** *ボリューム数*
+*** *ボリュームあたりのストレージ容量（GiB）*
+*** *ボリュームあたりのプロビジョニングIOPS *
+*** *スループット（MB/秒）*
+
+
+.. 常時稼働の可用性導入モデルを選択した場合は、*セカンダリEC2の仕様*および*ボリュームタイプ*の詳細を指定します。
+
+
+. ページに表示された計算方法と推奨事項を確認します。
++
+さらに、ページの一番下までスクロールして* PDFのエクスポート*または*計算の表示*を表示します。
+
+
+
+--
+====
 
 
 == FSx for ONTAPファイルシステムの導入
 
 コスト削減を実現するためにFSx for ONTAPに切り替えたい場合は、*[作成]*をクリックしてFSx for ONTAPファイルシステムの作成ウィザードから直接ファイルシステムを作成するか、*[保存]*をクリックして推奨構成を保存しておきます。
+
+Workload Factoryでは、複数のFSx for ONTAPファイルシステムの保存や作成はサポートされていません。
 
 導入方法:: _automate_modeでは、FSx for ONTAPファイルシステムをワークロードファクトリから直接導入できます。Codeboxウィンドウからコンテンツをコピーし、Codeboxメソッドのいずれかを使用してシステムを展開することもできます。
 +

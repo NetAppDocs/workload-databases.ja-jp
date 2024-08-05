@@ -108,3 +108,9 @@ Microsoft SQL Serverの検出は保存されません。Workload Factoryのデ�
 * [Inventory]タブでは、Microsoft SQLインスタンスごとに表示される推定コストは、SQLインスタンスをホストしているボリュームではなく、FSx for ONTAPファイルシステムレベルで計算されます。
 * Exploreによる削減額の計算はFSx for Windowsファイルサーバではサポートされていません。
 
+
+
+
+== 複数のFSx for ONTAPファイルシステム
+
+Workload Factoryでは、複数のFSx for ONTAPファイルシステムを使用するMicrosoft SQL Serverの構成の作成や保存はサポートされていません。FSx for ONTAPファイルシステム構成の導入は1つだけサポートされます。
