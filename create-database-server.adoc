@@ -30,6 +30,11 @@ FSx for ONTAPファイルシステムには、2つのMicrosoft SQL Server導入�
 
 
 --
+MicrosoftマルチパスI/O構成:: Microsoft SQL Serverの導入モデルでは、どちらもiSCSIストレージプロトコルを使用してLUNを作成する必要があります。Workload Factoryでは、SQL Server over FSx for ONTAP用のLUNの設定の一環として、MicrosoftマルチパスI/O（MPIO）が設定されます。MPIOは、AWSとNetAppのベストプラクティスに基づいて設定されます。
+
+
+詳細については、を参照してください link:https://aws.amazon.com/blogs/modernizing-with-aws/sql-server-high-availability-amazon-fsx-for-netapp-ontap/["Amazon FSx for NetApp ONTAPを使用したSQL Server高可用性環境"^]。
+
 Active Directory:: 導入時にActive Directory（AD）に対して次の処理が実行されます。
 +
 --
@@ -173,6 +178,14 @@ AWSが管理するActive Directoryの場合、DNS IPアドレスがドロップ�
 新しいFSx for ONTAPファイルシステムでは、インストールに30分以上かかる場合があります。
 
 ... *既存のFSx for ONTAPを選択*：ドロップダウンメニューからFSx for ONTAP名を選択し、ファイルシステムのユーザ名とパスワードを入力します。
++
+既存のFSx for ONTAPファイルシステムについては、次の点を確認します。
+
++
+**** FSx for ONTAPに関連付けられたルーティンググループを使用すると、サブネットへのルートを導入に使用できるようになります。
+**** セキュリティグループは、導入に使用されるサブネット、特にHTTPS（443）とiSCSI（3260）のTCPポートからのトラフィックを許可します。
+
+
 
 
 .. *データドライブサイズ*：データドライブの容量を入力し、容量単位を選択します。
@@ -264,7 +277,7 @@ FCI導入の場合::
 ... AWSが管理するActive Directoryの場合、ディレクトリサービスに関連付けられたセキュリティグループがMicrosoft SQLノードに自動的に追加され、Active Directoryとの通信が可能になります。
 ... 既存のFSx for ONTAPファイルシステムでは、関連付けられているセキュリティグループがSQLノードに自動的に追加され、ファイルシステムとの通信が可能になります。新しいFSx for ONTAPシステムが作成されると、FSx for ONTAPファイルシステム用の新しいセキュリティグループが作成され、同じセキュリティグループがSQLノードに接続されます。
 +
-ユーザー管理Active Directoryの場合は、データベースに接続する必要がある既存のシステムからのトラフィックを許可するセキュリティグループを選択できます。セキュリティグループは、Microsoft SQLのEC2インスタンスが設定されているサブネットからActive Directoryドメインコントローラへの通信を許可する必要があります。
+ユーザが管理するActive Directoryの場合は、ADインスタンスに設定されたセキュリティグループが、導入に使用するサブネットからのトラフィックを許可していることを確認します。セキュリティグループは、Microsoft SQLのEC2インスタンスが設定されているサブネットからActive Directoryドメインコントローラへの通信を許可する必要があります。
 
 
 
@@ -325,6 +338,14 @@ AWSが管理するActive Directoryの場合、DNS IPアドレスがドロップ�
 新しいFSx for ONTAPファイルシステムでは、インストールに30分以上かかる場合があります。
 
 ... *既存のFSx for ONTAPを選択*：ドロップダウンメニューからFSx for ONTAP名を選択し、ファイルシステムのユーザ名とパスワードを入力します。
++
+既存のFSx for ONTAPファイルシステムについては、次の点を確認します。
+
++
+**** FSx for ONTAPに関連付けられたルーティンググループを使用すると、サブネットへのルートを導入に使用できるようになります。
+**** セキュリティグループは、導入に使用されるサブネット、特にHTTPS（443）とiSCSI（3260）のTCPポートからのトラフィックを許可します。
+
+
 
 
 .. * Snapshotポリシー*：デフォルトで有効になっています。Snapshotは毎日作成され、保持期間は7日間です。

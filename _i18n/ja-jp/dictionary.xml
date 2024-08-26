@@ -129,7 +129,6 @@
   <block id="ba4f09fe932ad91d759a5dd3636acec6" category="list-text">ノード上のMicrosoft SQLおよびWindowsクラスタ通信に必要なポートとプロトコルを許可するために、ワークロードセキュリティグループが作成されます。</block>
   <block id="1f653bdd2a02e3ebdc4f28328a96b00f" category="list-text">AWSが管理するActive Directoryの場合、ディレクトリサービスに関連付けられたセキュリティグループがMicrosoft SQLノードに自動的に追加され、Active Directoryとの通信が可能になります。</block>
   <block id="84c62c2707904a024819612ef450ef1d" category="list-text">既存のFSx for ONTAPファイルシステムでは、関連付けられているセキュリティグループがSQLノードに自動的に追加され、ファイルシステムとの通信が可能になります。新しいFSx for ONTAPシステムが作成されると、FSx for ONTAPファイルシステム用の新しいセキュリティグループが作成され、同じセキュリティグループがSQLノードに接続されます。</block>
-  <block id="9379b88943e79d06a7624e886bcd4ea3" category="paragraph">ユーザー管理Active Directoryの場合は、データベースに接続する必要がある既存のシステムからのトラフィックを許可するセキュリティグループを選択できます。セキュリティグループは、Microsoft SQLのEC2インスタンスが設定されているサブネットからActive Directoryドメインコントローラへの通信を許可する必要があります。</block>
   <block id="1001245fbd8a96ced15590168ee50912" category="list-text">[アプリケーションの設定]*で、次の情報を入力します。</block>
   <block id="5f90cc9084764f349d384957856b0b40" category="list-text">[SQL Server install type]*で、*[License included AMI]または*[Use custom AMI]を選択します。</block>
   <block id="51af4699ded2f99936c69e9d355ac856" category="list-text">[License Included AMI]を選択した場合は、次の情報を入力します。</block>
@@ -765,4 +764,12 @@
   <block id="85f439a5ead422005f331327c6b4d189" category="inline-link-macro">データベースワークロードのためのFSx for ONTAPによるコスト削減についてご説明します。</block>
   <block id="ffcdb01d64d534ead82555dabfbdd7da" category="paragraph"><block ref="ffcdb01d64d534ead82555dabfbdd7da" category="inline-link-macro-rx"></block></block>
   <block id="1d949c7c5600289e10795f178278edd1" category="section-title">2024年7月7日</block>
+  <block id="b43b4421683dbb9b1b6736babc3a3104" category="list-text">MicrosoftマルチパスI/O構成</block>
+  <block id="bc032bc6a4cd520164072ac886f6e6fe" category="list-text">Microsoft SQL Serverの導入モデルでは、どちらもiSCSIストレージプロトコルを使用してLUNを作成する必要があります。Workload Factoryでは、SQL Server over FSx for ONTAP用のLUNの設定の一環として、MicrosoftマルチパスI/O（MPIO）が設定されます。MPIOは、AWSとNetAppのベストプラクティスに基づいて設定されます。</block>
+  <block id="79cd591b45c99c7009501060c190216b" category="inline-link-macro">Amazon FSx for NetApp ONTAPを使用したSQL Server高可用性環境</block>
+  <block id="1ff667d8710153a8539d76d68aecd4b5" category="paragraph">詳細については、を参照してください <block ref="36ceba25653f76919b1587a7f1d056fa" category="inline-link-macro-rx"></block>。</block>
+  <block id="42284190cc0e4af01d69e70bf8966f0e" category="paragraph">既存のFSx for ONTAPファイルシステムについては、次の点を確認します。</block>
+  <block id="996d6e2f42d7b52c1cba72a8225cbb65" category="list-text">FSx for ONTAPに関連付けられたルーティンググループを使用すると、サブネットへのルートを導入に使用できるようになります。</block>
+  <block id="74c33b9e5d949f9ac1669cc2da38be60" category="list-text">セキュリティグループは、導入に使用されるサブネット、特にHTTPS（443）とiSCSI（3260）のTCPポートからのトラフィックを許可します。</block>
+  <block id="513217cdb8cfdacc4a193bdd0bbbee78" category="paragraph">ユーザが管理するActive Directoryの場合は、ADインスタンスに設定されたセキュリティグループが、導入に使用するサブネットからのトラフィックを許可していることを確認します。セキュリティグループは、Microsoft SQLのEC2インスタンスが設定されているサブネットからActive Directoryドメインコントローラへの通信を許可する必要があります。</block>
 </blocks>
