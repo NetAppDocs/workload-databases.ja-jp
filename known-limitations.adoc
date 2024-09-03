@@ -70,12 +70,6 @@ FSx for ONTAPのカスタム暗号化キーは、サービスの適用性に応�
 
 
 
-== Microsoft SQL Serverの検出
-
-Microsoft SQL Serverの検出は保存されません。Workload Factoryのデータベースにアクセスするたびに、Microsoft SQL Serverの検出が再度実行され、リージョン内のSQLインストールが特定されます。
-
-
-
 == CloudFormationテンプレート
 
 ダウンロードまたはコピーされたCodeboxで生成されたCloudFormationテンプレート（YAMLファイル）の保存期間は7日間に制限されています。
@@ -85,12 +79,7 @@ Microsoft SQL Serverの検出は保存されません。Workload Factoryのデ�
 == サンドボックスのサポート
 
 * データベースサーバから作成できるサンドボックスクローンの最大数は50です。
-* 次の場合、サンドボックスの作成はサポートされません。
-+
-** データファイルとログファイルは同じディスク上に存在します。
-** ソースデータベースには複数のデータファイルがあります。
-
-
+* ソースデータベースに複数のデータファイルが2つ以上のディスクに分散している場合、サンドボックスの作成はサポートされません。
 
 
 
@@ -98,7 +87,7 @@ Microsoft SQL Serverの検出は保存されません。Workload Factoryのデ�
 == Microsoft SQL Serverの検出と管理
 
 * 外部接続のないプライベートネットワークを使用している場合、Microsoft SQLインスタンスの検出と管理はサポートされていません。
-* Microsoft SQLインスタンスがWindowsベースの認証をブロックし、Microsoft SQLユーザー認証のみを許可する場合、Microsoft SQL Serverの検出はサポートされますが、管理操作はサポートされません。
+* Microsoft SQL Serverの検出は保存されません。Workload Factoryのデータベースにアクセスするたびに、Microsoft SQL Serverの検出が再度実行され、リージョン内のSQLインストールが特定されます。
 
 
 
