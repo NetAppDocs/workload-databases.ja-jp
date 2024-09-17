@@ -233,7 +233,6 @@
   <block id="b6b9aec3a98d2a803dfd7a3e7b836cb2" category="list-text">*ターゲットデータベースホスト*：同じVPC内にあり、ソースホストと同じFSx for ONTAPファイルシステムを持つサンドボックスクローンのターゲットデータベースホストを選択します。</block>
   <block id="04bd2b110b2a3aaa82dccc7fe837f151" category="list-text">*ターゲットデータベースインスタンス*：サンドボックスクローンのターゲットデータベースインスタンスを選択します。</block>
   <block id="26e615a604b088a660581f026763c30b" category="list-text">*ターゲットデータベース*：サンドボックスクローンの名前を入力します。</block>
-  <block id="7f63d4b83f27b850d1eb970cfa4666b3" category="list-text">*マウント*：*マウントポイントの自動割り当て*または*マウントポイントパスの定義*を選択します。[マウントポイントパスの定義]*を選択した場合は、マウントポイントパスを入力します。</block>
   <block id="f3346b0efa80289c47d4e6113a73a3ab" category="list-text">*タグを定義*：サンドボックスクローンを定義するタグを選択します。</block>
   <block id="34775e5e4b0b832c45a2707ae9b18f95" category="paragraph">ジョブの進行状況を確認するには、*ジョブ監視*タブに移動します。</block>
   <block id="18a852f2a54ab28755adc6bcf4897e75" category="summary">不要になったサンドボックスクローンを削除します。</block>
@@ -781,4 +780,11 @@
   <block id="e6ae9aa516c09658fbcbb0830276915c" category="paragraph">_basic_modeでは、Codeboxウィンドウからコンテンツをコピーし、Codeboxメソッドのいずれかを使用して推奨構成を展開できます。</block>
   <block id="0bbe82b56668e820bcb7722aa8566ea5" category="list-text">ソースデータベースに複数のデータファイルが2つ以上のディスクに分散している場合、サンドボックスの作成はサポートされません。</block>
   <block id="b5cef683aab00353096b98823a237e69" category="section-title">2024年9月1日</block>
+  <block id="969e7140d33129e87f01e95c59fed40f" category="list-text">*マウント*：複数のデータファイルやログファイルを含むSQLデータベースをクローニングする場合、Workload Factoryは自動割り当てまたは定義されたドライブレターの下にあるすべてのファイルをクローニングします。</block>
+  <block id="ed09bad7864ec765b3bccff9b87f25fb" category="paragraph">次のいずれかのオプションを選択します。</block>
+  <block id="f5154bf526cc04b2839db0c72b2a7c22" category="list-text">*マウントポイントの自動割り当て*</block>
+  <block id="c9e660490143e459ec13d72934832f2c" category="list-text">*マウントポイントパスの定義*</block>
+  <block id="8dc9fd2e016e27559302505db1795c2c" category="paragraph">以下を指定してマウントポイントパスを定義します。</block>
+  <block id="431673d13b715d86ce4d92ad7cf17f75" category="list-text">データファイルパスのドライブ文字を入力します。</block>
+  <block id="d8cf051243077cb10ccd52dd0de9d181" category="list-text">ログファイルパスのドライブレターを入力します。</block>
 </blocks>
