@@ -23,7 +23,7 @@ summary: Workload Factory for Databasesの新機能について説明します�
 
 Amazon EC2上で検出されたMicrosoft SQL Serverの削減効果を、FSx for Windows File Serverストレージを使用して試算ツールで確認できるようになりました。SQL Serverとストレージの要件によっては、FSx for ONTAPストレージがデータベースワークロードにとって最も対費用効果の高いストレージであることがわかります。
 
-link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["データベースワークロードのためのFSx for ONTAPによるコスト削減効果をご確認ください^"]
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["データベースワークロード向けFSx for ONTAPによるコスト削減額をご確認ください"^]
 
 
 
@@ -35,7 +35,7 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["デ�
 
 Amazon EC2上のMicrosoft SQL Serverの構成設定を、FSx for Windows File ServerとElastic Block Storeストレージを使用してコスト削減試算ツールでカスタマイズできるようになりました。お客様のストレージ要件によっては、FSx for ONTAPストレージがデータベースワークロードにとって最も対費用効果の高いストレージであることがわかります。
 
-link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["データベースワークロードのためのFSx for ONTAPによるコスト削減効果をご確認ください^"]
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["データベースワークロード向けFSx for ONTAPによるコスト削減額をご確認ください"^]
 
 
 
@@ -75,7 +75,7 @@ Microsoft SQL Server、Amazon EC2、Elastic Block Storeの設定をカスタマ�
 
 
 
-link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["データベースワークロードのためのFSx for ONTAPによるコスト削減効果をご確認ください^"]
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["データベースワークロード向けFSx for ONTAPによるコスト削減額をご確認ください"^]
 
 
 
@@ -87,4 +87,4 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["デ�
 
 初期リリースには、データベースワークロードのストレージ環境としてAmazon FSx for NetApp ONTAPを使用した場合のコスト削減の検討、Microsoft SQL Serverの検出、管理、導入、データベースの導入とクローニング、Workload Factory内でのジョブの監視が含まれています。
 
-link:https://docs.netapp.com/us-en/workload-databases/learn-databases.html["データベースの詳細"^]です。
+link:https://docs.netapp.com/us-en/workload-databases/learn-databases.html["データベースの詳細"^]
