@@ -278,12 +278,7 @@
   <block id="b9c536d894e64c5ba02e664043160322" category="doc">データベース向けワークロードファクトリでのコスト削減の詳細を見る</block>
   <block id="bfe3baeb9acd99f2f2bce618befc4139" category="paragraph">作業を開始する前に、次の前提条件を満たしてください。</block>
   <block id="ed8b2920ddc5b14cb6c0ba24c4b6c3af" category="inline-link-macro">権限の付与</block>
-  <block id="fb9d6e1577faaf2582c56f2b6e871a0e" category="list-text">AWSアカウントで、データベースインベントリ内のElastic Block Store（EBS）システムを検出していることを確認してください <block ref="d9270f60c282b5496f17a4b48a6da305" category="inline-link-macro-rx"></block> 。</block>
   <block id="def9511b261c88922ac5674a45135773" category="inline-link-macro">ホストの検出方法</block>
-  <block id="00cfda556057e95fb5c041a6d6e864eb" category="list-text">データベースインベントリでEBSストレージ内のホストを検出します。<block ref="c3d02703f332265b4bfd19fd03e6dd21" category="inline-link-macro-rx"></block>です。</block>
-  <block id="e721578ef71057f68d9b8f95eaa8a01b" category="list-text">[Explore savings]*タブを選択します。</block>
-  <block id="a9a4b0133e73452e9114b1d65b1a03c5" category="list-text">[Explore savings using EBS storage]*をクリックします。</block>
-  <block id="b6934442f27355012b8f3897d317094b" category="list-text">必要に応じて、EBSストレージのクローンとSnapshotに関する以下の詳細情報を指定し、コスト削減の見積もりをより正確にします。</block>
   <block id="201c4d58b6fa62f021a1865e894234ef" category="list-text">*毎月の変更率*：クローンおよびスナップショットのデータの1カ月あたりの平均変更率を入力します。</block>
   <block id="6b08b43202e1e504a7c87375b1a13b76" category="list-text">ページに表示された計算方法と推奨事項を確認します。</block>
   <block id="f31ed490fd3768dff2a1121a0a06095c" category="list-text">導入方法</block>
@@ -393,10 +388,8 @@
   <block id="0d966ee7b6d851b13a0a1f2ed24a24f2" category="section-title">サンドボックスのサポート</block>
   <block id="db3c885c5e8af2c0a6d13c3c191c6317" category="list-text">データベースサーバから作成できるサンドボックスクローンの最大数は50です。</block>
   <block id="16af4c40ef745904a4b9f7f47ce1554d" category="section-title">Microsoft SQL Serverの検出と管理</block>
-  <block id="b51c61da776514997803f3c2d879f6cd" category="list-text">外部接続のないプライベートネットワークを使用している場合、Microsoft SQLインスタンスの検出と管理はサポートされていません。</block>
   <block id="cf48d7891f28d92c4308fb5debb574b0" category="section-title">コスト削減の詳細</block>
   <block id="dc1fe4aeb4ef49ddd2886b9ad39d5fa0" category="list-text">[Inventory]タブでは、Microsoft SQLインスタンスごとに表示される推定コストは、SQLインスタンスをホストしているボリュームではなく、FSx for ONTAPファイルシステムレベルで計算されます。</block>
-  <block id="15e6f9d1eeb705afffca65fbfcab4fb8" category="list-text">Exploreによる削減額の計算はFSx for Windowsファイルサーバではサポートされていません。</block>
   <block id="08a80e13fd6056e3676428e5f462bea2" category="summary">データベースは、データベースの導入とメンテナンスのためのエンドツーエンドのサービスです。最適化、自動シンクローニング、監視と解決のためのベストプラクティスが組み込まれています。</block>
   <block id="da799d994391b08e1d7460381c98559f" category="doc">データベース向けワークロードファクトリの詳細</block>
   <block id="84f91afd14d8353e5afe232c3387e4ca" category="paragraph">Workload Factory for Databasesは、エンドツーエンドのデータベース導入およびメンテナンスサービスであり、最適化、自動シンクローニング、監視および解決機能のベストプラクティスが組み込まれています。</block>
@@ -668,7 +661,6 @@
   <block id="ed54fefae379fac8157c0d466e30a150" category="section-title">Workload Factory for Databasesの初版リリース</block>
   <block id="7737adcb101b7285a3a8567ae4d22021" category="paragraph">初期リリースには、データベースワークロードのストレージ環境としてAmazon FSx for NetApp ONTAPを使用した場合のコスト削減の検討、Microsoft SQL Serverの検出、管理、導入、データベースの導入とクローニング、Workload Factory内でのジョブの監視が含まれています。</block>
   <block id="76d820a16128270adf6a061b253cca06" category="inline-link-macro">データベースの詳細</block>
-  <block id="c8b559206fbe2064f93b1a567d84e637" category="paragraph"><block ref="eda6f6881c0c5cc5180d85b417e4f376" category="inline-link-macro-rx"></block>です。</block>
   <block id="701d958bca3a33a19f563321cfb869c3" category="sidebar">BlueXPワークロードファクトリーでは、FSx for ONTAPファイルシステムストレージ上にMicrosoft SQL Server構成を導入し、データベース環境を管理できます。</block>
   <block id="e3e11adbab76168641c9e2c9a8f51784" category="sidebar">Workload Factory for Databases Workloadsドキュメント</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">はじめに</block>
@@ -731,8 +723,6 @@
   <block id="c740ba36619fc4bc695bdeaf1e4ec860" category="paragraph">Amazon Elastic Block Storeを使用して、複数のMicrosoft SQL Serverインスタンスをホストする構成のコスト削減額を計算できるようになりました。</block>
   <block id="6c8658cb4905e48d7d602b288bfcf8be" category="list-text">計算ツールの設定をカスタマイズ</block>
   <block id="3d97983d64bf9e9b4ee62805c09d1774" category="paragraph">Microsoft SQL Server、Amazon EC2、Elastic Block Storeの設定をカスタマイズして、削減効果を手動で確認できるようになりました。コスト削減試算ツールは、コストに基づいて最適な構成を判断します。</block>
-  <block id="85f439a5ead422005f331327c6b4d189" category="inline-link-macro">データベースワークロードのためのFSx for ONTAPによるコスト削減についてご説明します。</block>
-  <block id="ffcdb01d64d534ead82555dabfbdd7da" category="paragraph"><block ref="ffcdb01d64d534ead82555dabfbdd7da" category="inline-link-macro-rx"></block></block>
   <block id="1d949c7c5600289e10795f178278edd1" category="section-title">2024年7月7日</block>
   <block id="b43b4421683dbb9b1b6736babc3a3104" category="list-text">MicrosoftマルチパスI/O構成</block>
   <block id="bc032bc6a4cd520164072ac886f6e6fe" category="list-text">Microsoft SQL Serverの導入モデルでは、どちらもiSCSIストレージプロトコルを使用してLUNを作成する必要があります。Workload Factoryでは、SQL Server over FSx for ONTAP用のLUNの設定の一環として、MicrosoftマルチパスI/O（MPIO）が設定されます。MPIOは、AWSとNetAppのベストプラクティスに基づいて設定されます。</block>
@@ -746,15 +736,11 @@
   <block id="bfbd25ddeba7cedc974f1a5a1d0a295c" category="paragraph">Amazon EC2上のMicrosoft SQL Serverの構成設定を、FSx for Windows File ServerとElastic Block Storeストレージを使用してコスト削減試算ツールでカスタマイズできるようになりました。お客様のストレージ要件によっては、FSx for ONTAPストレージがデータベースワークロードにとって最も対費用効果の高いストレージであることがわかります。</block>
   <block id="f94c119bb7d164adbb1a390a249741e0" category="section-title">ホームページからSavings Calculatorに移動する</block>
   <block id="370242ff4edf6eea7ad9f29f501888cd" category="paragraph"><block ref="ed002915dbbbf90a20b3d8fdf4cc2390" category="inline-link-macro-rx"></block>ホームページからSavings Calculatorに移動できるようになりました。まずは、Elastic Block StoreとFSx for Windows File Serverから選択してください。</block>
-  <block id="1bd7517fe14fe5f1784a4d71ebf0c2e1" category="inline-image-macro">Workload Factoryコンソールのホームページのスクリーンショット。新しい[Explore Savings]ボタンが表示されたデータベースタイルの図。ボタンをクリックしてドロップダウンメニューを開きます。ドロップダウンメニューには、Elastic Block StoreとFSx for Windows File Serverの2つのオプションがあります。いずれかのオプションを選択すると、Savings Calculatorに移動して、削減効果を確認できます。</block>
-  <block id="ace456f52a384b923a9eedd83d20db48" category="paragraph"><block ref="ace456f52a384b923a9eedd83d20db48" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ed63f509875218d0378b5ddba1aecb80" category="summary">Amazon Elastic Block Store（EBS）およびFSx for WindowsファイルサーバストレージとFSx for ONTAPストレージを使用する場合のコストを比較して、データベースワークロードの削減効果をご確認ください。</block>
   <block id="700bbf9bdd344aa4590539879dabfb86" category="paragraph">Workload Factoryにはコスト削減計算ツールが用意されているため、FSx for ONTAPファイルシステム上のデータベースワークロードについて、ストレージ、コンピューティング、SQLライセンス、スナップショット、クローンなど、Microsoft SQL Serverワークロードを実行する際のさまざまなコストコンポーネントを、Elastic Block Store（EBS）やFSx for Windowsファイルサーバストレージと比較できます。ストレージ要件によっては、FSx for ONTAPファイルシステムがデータベースワークロードにとって最も対費用効果の高いファイルシステムであることがわかります。FSx for ONTAPファイルシステムを使用した場合、これらのMicrosoft SQL Server上のデータベースワークロード用ストレージのコストを削減できるかどうかが計算ツールに表示されます。</block>
   <block id="61d9dc1380811848e422522f4e4122a9" category="paragraph">FSx for ONTAPファイルシステムでこれらのワークロードを実行することでコストを削減できるとWorkload Factoryが判断した場合は、Workload Factoryの電卓から直接Microsoft SQL over FSx for ONTAPを導入できます。Elastic Block StoreまたはFSx for Windowsファイルサーバストレージで複数のMicrosoft SQL Serverインスタンスを使用している場合は、単一のSQLインスタンスを使用するFSx for ONTAP構成を推奨します。</block>
   <block id="9c34331abb32017c0949af1d664fefb5" category="section-title">電卓オプション</block>
-  <block id="a235c1c225af92b6423395beadcd9990" category="paragraph">お客様のシステムとFSx for ONTAPのコストを比較するために、Amazonストレージ環境のカスタマイズと自動検出という2つの計算ツールオプションが用意されています。</block>
   <block id="58e73141ee65f1324f33ca6b0e47a481" category="paragraph">カスタマイズによるコスト削減の詳細を見る:地域、導入モデル、SQL Serverエディション、毎月のデータ変更率、スナップショットの頻度など、EBSまたはFSx for Windows File Serverを搭載したAmazon EC2上のMicrosoft SQL Serverの構成設定を提供します。</block>
-  <block id="4ee8a0888e15ce32635ae1f06ea7dcba" category="paragraph">検出されたストレージ環境の削減効果を確認する：Workload Factoryは既存のAWSストレージ環境にリンクし、詳細を計算ツールに入力して自動比較します。この計算ツールオプションを使用するには、自動化権限を付与する必要があります。ユースケースは変更できますが、その他の詳細はすべて計算で自動的に決定されます。</block>
   <block id="c4765968842ae076126d5ea6e55cb9cb" category="paragraph">ストレージタイプに応じたタブの手順に従います。</block>
   <block id="8e276a5c4eecb9cd5c1fbb0729744eb5" category="open-title">Amazon Elastic Block Store（EBS）</block>
   <block id="1feb39b44e4fcef3d4be063a2f0c0c2c" category="list-text">にログインします。 <block ref="372504cb6bb48559009ff8f8cdb9a245" category="inline-link-macro-rx"></block></block>
@@ -771,14 +757,10 @@
   <block id="68d83ae7a042e508f76dc0e27a5f9a29" category="list-text">*プロビジョニングされたSSD IOPS *：構成に対してプロビジョニングされたSSDのIOPSを入力します。</block>
   <block id="9b6155708dd8947d64ec42276f1174dd" category="list-text">*スループット（MB/秒）*：スループットをMB/秒単位で入力します。</block>
   <block id="a5d2a4e28080feba2d0ba29a55f0eeab" category="list-text">[EC2仕様（EC2 specifications）]で、ドロップダウンメニューから*[インスタンスタイプ（Instance type）]*を選択します。</block>
-  <block id="754cab29df96851e5cc6bac19fb8e4de" category="section-title">検出されたEBSホストの削減効果を確認する</block>
-  <block id="de1eb6dc4a8c018c4d8f3fcc5ceb9221" category="paragraph">Workload Factoryは、検出されたElastic Block Storeホスト特性を入力するため、削減効果を自動的に確認できます。</block>
-  <block id="72255b529ff08813154e30f94dac81c3" category="list-text">[データベース]で、*[データベースインベントリに移動]*を選択します。</block>
   <block id="10d39a5cdb7cfb8abf1a05097e8f20bc" category="section-title">FSx for ONTAPを使用してAWS EC2にMicrosoft SQL Serverを導入</block>
   <block id="933800b579b2bf7e0f9916f0fa54607d" category="paragraph">コスト削減を実現するためにFSx for ONTAPに切り替えたい場合は、*[作成]*をクリックして新しいMicrosoft SQL Serverの作成ウィザードから直接推奨構成を作成するか、*[保存]*をクリックして推奨構成を保存しておきます。</block>
   <block id="97bdf4c6d565fdd5cba849eeb1621649" category="list-text">_automate_modeでは、Workload Factoryから直接FSx for ONTAPを使用して、新しいMicrosoft SQL ServerをAWS EC2に導入できます。Codeboxウィンドウからコンテンツをコピーし、Codeboxメソッドのいずれかを使用して推奨構成を展開することもできます。</block>
   <block id="e6ae9aa516c09658fbcbb0830276915c" category="paragraph">_basic_modeでは、Codeboxウィンドウからコンテンツをコピーし、Codeboxメソッドのいずれかを使用して推奨構成を展開できます。</block>
-  <block id="0bbe82b56668e820bcb7722aa8566ea5" category="list-text">ソースデータベースに複数のデータファイルが2つ以上のディスクに分散している場合、サンドボックスの作成はサポートされません。</block>
   <block id="b5cef683aab00353096b98823a237e69" category="section-title">2024年9月1日</block>
   <block id="969e7140d33129e87f01e95c59fed40f" category="list-text">*マウント*：複数のデータファイルやログファイルを含むSQLデータベースをクローニングする場合、Workload Factoryは自動割り当てまたは定義されたドライブレターの下にあるすべてのファイルをクローニングします。</block>
   <block id="ed09bad7864ec765b3bccff9b87f25fb" category="paragraph">次のいずれかのオプションを選択します。</block>
@@ -787,4 +769,33 @@
   <block id="8dc9fd2e016e27559302505db1795c2c" category="paragraph">以下を指定してマウントポイントパスを定義します。</block>
   <block id="431673d13b715d86ce4d92ad7cf17f75" category="list-text">データファイルパスのドライブ文字を入力します。</block>
   <block id="d8cf051243077cb10ccd52dd0de9d181" category="list-text">ログファイルパスのドライブレターを入力します。</block>
+  <block id="2153d6ab291e00be0a49d2a42e481b36" category="paragraph"><block ref="9a178ca3815f6aeb284a65e10447f086" category="inline-link-macro-rx"></block>です。</block>
+  <block id="4ac33bc47ec0338e6c23f5e315a2b5ec" category="inline-link-macro">データベースワークロードのためのFSx for ONTAPによるコスト削減効果をご確認ください^</block>
+  <block id="f9ca6ec7df5da581020634d84b3e477c" category="paragraph"><block ref="f9ca6ec7df5da581020634d84b3e477c" category="inline-link-macro-rx"></block></block>
+  <block id="b6e7a46e866a97d8ad38a3ce2e41e926" category="inline-image-macro">Workload Factoryコンソールのホームページのスクリーンショット。新しい[Explore Savings]ボタンが表示されたデータベースタイルの図。ボタンをクリックしてドロップダウンメニューを開きます。ドロップダウンメニューには、Microsoft SQL Server on EBSとMicrosoft SQL Server on FSx for Windows File Serverの2つのオプションがあります。</block>
+  <block id="a7396d19dde0193e37cada3b5524bb0b" category="paragraph"><block ref="a7396d19dde0193e37cada3b5524bb0b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cf88fa43b4b0e1b1bfb66e894b188442" category="doc">FSx for Windowsファイルサーバで検出されたMicrosoft SQLサーバの削減効果を確認</block>
+  <block id="0df73578de7c34ef150c1f37953113f5" category="paragraph">Amazon EC2上で検出されたMicrosoft SQL Serverの削減効果を、FSx for Windows File Serverストレージを使用して試算ツールで確認できるようになりました。SQL Serverとストレージの要件によっては、FSx for ONTAPストレージがデータベースワークロードにとって最も対費用効果の高いストレージであることがわかります。</block>
+  <block id="b68e42fa600661a13849ea15c997cea3" category="paragraph">お客様のシステムとFSx for ONTAPのコストを比較するために、カスタマイズと検出という2つの計算ツールオプションが用意されています。</block>
+  <block id="dd095c788b75342151d27fab6777362e" category="paragraph">検出されたホストの削減効果を確認します。Workload Factoryは既存のMicrosoft SQLサーバーにリンクし、詳細を計算ツールに入力して自動比較します。この計算ツールオプションを使用するには、自動化権限を付与する必要があります。ユースケースは変更できますが、その他の詳細はすべて計算で自動的に決定されます。</block>
+  <block id="0e98c2470a9fecd3035980d6c9bd5dfe" category="section-title">検出されたホストの削減量を確認する</block>
+  <block id="e5af3e73361e966fe2adc79aadc34d57" category="paragraph">Workload Factoryは、検出されたElastic Block StoreとFSx for Windows File Serverホストの特性を入力するため、削減効果を自動的に確認できます。</block>
+  <block id="6db04c74eaedc9c295cd941f8d691d5f" category="list-text">AWSアカウントに登録して、データベースインベントリにElastic Block Store（EBS）システムとFSx for Windowsシステムが検出されていることを確認して<block ref="d9270f60c282b5496f17a4b48a6da305" category="inline-link-macro-rx"></block>ください。</block>
+  <block id="70cd361d4d146e35701d6144f1c0ab2b" category="list-text">データベースインベントリ内のEBSおよびFSx for Windowsストレージのホストを検出します。<block ref="c3d02703f332265b4bfd19fd03e6dd21" category="inline-link-macro-rx"></block>です。</block>
+  <block id="8f334cc9204ebef849d5d29b3d23b485" category="list-text">[Databases]タイルで、ドロップダウンメニューから*[Explore savings]*を選択し、*[Microsoft SQL Server on FSx for Windows]を選択します。</block>
+  <block id="bd0005565e08b9807da651535d09e628" category="inline-xref">カスタマイズによるコスト削減の詳細</block>
+  <block id="8792c25f641e40dfbd968350e410bed0" category="paragraph">Workload FactoryがEBSホストを検出した場合は、Explore savingsタブにリダイレクトされます。Workload FactoryがEBSホストを検出しない場合は、にリダイレクトされます<block ref="1aa155ccc357a88465786c9c4e421569" category="inline-xref-macro-rx"></block>。</block>
+  <block id="b2b254b73e406acc574452e9f29f5d9a" category="list-text">[Explore savings]タブで、EBSストレージを使用してデータベースサーバの*[Explore savings]*をクリックします。</block>
+  <block id="3f1c1b5d06b7f8c588cd928fa1ac5e90" category="list-text">コスト削減試算ツールでは、必要に応じて、EBSストレージ内のクローンとSnapshotに関する以下の詳細情報を入力することで、より正確なコスト削減試算を行うことができます。</block>
+  <block id="7ca6391eb61738d8b33e189705bb5857" category="paragraph">Workload FactoryがFSx for Windowsホストを検出した場合は、Explore savingsタブにリダイレクトされます。Workload FactoryがFSx for Windowsホストを検出しない場合は、にリダイレクトされます<block ref="1aa155ccc357a88465786c9c4e421569" category="inline-xref-macro-rx"></block>。</block>
+  <block id="8918771901c5636214df46e39006b50c" category="list-text">[コスト削減の詳細]タブで、FSx for Windowsファイルサーバストレージを使用したデータベースサーバの*コスト削減の詳細*をクリックします。</block>
+  <block id="60d184cc6fb4054879723de86764a020" category="list-text">必要に応じて、Savings Calculatorで、FSx for Windowsストレージのクローン（シャドウコピー）とスナップショットに関する以下の詳細情報を提供し、コスト削減の見積もりをより正確にします。</block>
+  <block id="c552646e3717f4144059bd229d9b3c96" category="paragraph">FSx for Windowsのシャドウコピーが検出された場合、デフォルト値は* Daily *です。シャドウコピーが検出されない場合、デフォルト値は*スナップショット頻度なし*です。</block>
+  <block id="724d4c3a0255dd97a61657dd67fdf48f" category="list-text">*クローンコピーの数*：FSx for Windows構成でクローンコピーの数を入力します。</block>
+  <block id="55376293ec338d45989562b49241fa71" category="paragraph">外部接続のないプライベートネットワークでホストインスタンスを管理するには、SQLサーバが存在するサブネットに関連付けられたVPCで次のエンドポイントが使用可能である必要があります。接続されているセキュリティグループのポート443が、インターフェイスエンドポイントで許可されていることを確認します。</block>
+  <block id="021cd7b44c92e0977eee47344e7f4a7b" category="list-text"><block ref="d2c8dc6d0833da0998d37357f2d65fca" prefix="" category="inline-code"></block></block>
+  <block id="afe3dddd43fed2e0f76617fa08ab254a" category="list-text"><block ref="078aab7ae8c1a0df339ac8525790d5e1" prefix="" category="inline-code"></block></block>
+  <block id="cfa54b7dd19dd91bb87ede68126951eb" category="list-text"><block ref="25f6388206f436c2d1de63216302b13d" prefix="" category="inline-code"></block></block>
+  <block id="8d461d34b0f2c02565383f3301044282" category="list-text"><block ref="fea0543b0b4b9d4c240c6219de0db41c" prefix="" category="inline-code"></block></block>
+  <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">2024年9月29日</block>
 </blocks>
