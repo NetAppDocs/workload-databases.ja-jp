@@ -465,7 +465,6 @@
   <block id="20c404f3ca0633629eee9b1b4ccd6737" category="section-title">サポートを受ける</block>
   <block id="da444b283df699667b2316206972bdfe" category="paragraph">Amazon FSx for NetApp ONTAP は、AWSファーストパーティの解決策 です。FSx for ONTAPファイルシステム、インフラ、または本サービスを使用する解決策に関する質問やテクニカルサポートの問題については、AWS管理コンソールのサポートセンターを使用してAWSに対するサポートケースをオープンしてください。「 FSX for ONTAP 」サービスと該当するカテゴリを選択します。AWS サポートケースの作成に必要な残りの情報を指定します。</block>
   <block id="fc00732c3b79a8178cfd0556a8722a13" category="inline-link-macro">Workload Factoryのデータベースに関するヘルプ</block>
-  <block id="5a0bab72bf8800539ee19d4ebfcb6501" category="paragraph">Workload FactoryまたはWorkload Factoryのアプリケーションとサービスに関する一般的な質問については、を参照してください <block ref="4318b5ec74addc6e7964ffb1638ebe63" category="inline-link-macro-rx"></block>。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法的通知</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">法的通知では、著作権に関する声明、商標、特許などにアクセスできます。</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">著作権</block>
@@ -798,4 +797,5 @@
   <block id="7d6d6d8a97f883d860bff04c0be1019c" category="inline-link-macro">データベースワークロード向けFSx for ONTAPによるコスト削減額をご確認ください</block>
   <block id="293758d509326f8da42abf75db2d37e6" category="paragraph"><block ref="293758d509326f8da42abf75db2d37e6" category="inline-link-macro-rx"></block></block>
   <block id="fbcbba8054f71f57fa8e2b950179bb23" category="paragraph">データベースサーバから作成できるサンドボックスクローンの最大数は90です。</block>
+  <block id="642917b2f642764c3a6f56b4bd9b6b24" category="paragraph">Workload FactoryまたはWorkload Factoryのアプリケーションとサービスに関する一般的な質問については、を参照してください <block ref="cdcdf14c020a2cc1f9ea3df8ed40ccf4" category="inline-link-macro-rx"></block>。</block>
 </blocks>

@@ -22,6 +22,6 @@ indexpage:
   - title: 知識とサポート
     links:
     - title: サポートに登録します
-      url: "/support-registration-databases.html"
+      url: "/support-registration.html"
     - title: ヘルプを表示します
-      url: "/get-help-databases.html"
+      url: "/get-help.html"

@@ -180,4 +180,4 @@ image:diagram-MAZ-database-architecture.png["1つのリージョンにフェイ�
 
 Amazon FSx for NetApp ONTAP は、AWSファーストパーティの解決策 です。FSx for ONTAPファイルシステム、インフラ、または本サービスを使用する解決策に関する質問やテクニカルサポートの問題については、AWS管理コンソールのサポートセンターを使用してAWSに対するサポートケースをオープンしてください。「 FSX for ONTAP 」サービスと該当するカテゴリを選択します。AWS サポートケースの作成に必要な残りの情報を指定します。
 
-Workload FactoryまたはWorkload Factoryのアプリケーションとサービスに関する一般的な質問については、を参照してください link:get-help-databases.html["Workload Factoryのデータベースに関するヘルプ"]。
+Workload FactoryまたはWorkload Factoryのアプリケーションとサービスに関する一般的な質問については、を参照してください link:get-help.html["Workload Factoryのデータベースに関するヘルプ"]。
