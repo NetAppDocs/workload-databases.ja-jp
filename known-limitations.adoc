@@ -97,3 +97,9 @@ Microsoft SQL Serverの検出は保存されません。Workload Factoryのデ�
 == 複数のFSx for ONTAPファイルシステム
 
 Workload Factoryでは、複数のFSx for ONTAPファイルシステムを使用するMicrosoft SQL Serverの構成の作成や保存はサポートされていません。FSx for ONTAPファイルシステム構成の導入は1つだけサポートされます。
+
+
+
+== Terraformを使用したプライベートネットワークでのMicrosoft SQL Serverの導入が地域ごとに可能
+
+Terraformを使用したアウトバウンド接続のないプライベートネットワークへのMicrosoft SQL Serverの導入は、us-east-1（北バージニア）リージョンでのみサポートされます。

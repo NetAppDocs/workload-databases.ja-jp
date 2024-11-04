@@ -91,7 +91,10 @@ Active Directory:: Active Directoryに接続する場合は、次の作業を行
 
 == 手順1：データベースサーバを作成する
 
-このタスクは、_Quick create_or_Advanced create_deploymentモードを使用して、_automate_mode権限でWorkload Factoryで実行できます。
+このタスクは、_Quick create_or_Advanced create_deploymentモードを使用して、_automate_mode権限でWorkload Factoryで実行できます。Codeboxで利用可能なREST API、CloudFormation、Terraformの各ツールを使用することもできます。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Codeboxを使用して自動化する方法"^]です。
+
+
+NOTE: CodeboxからTerraformを使用すると、コピーまたはダウンロードしたコードが非表示になり、パスワードが表示され `fsxadmin` `vsadmin` ます。コードを実行するときは、パスワードを再入力する必要があります。ユーザーアカウントには、_automate_mode権限に加えて、次の権限を含める必要があります。および `iam:TagInstanceProfile`。 `iam:TagRole`
 
 [role="tabbed-block"]
 ====

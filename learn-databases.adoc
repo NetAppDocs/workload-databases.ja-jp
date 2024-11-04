@@ -63,6 +63,7 @@ Workload Factory for Databasesには次の機能があります。
 * *サンドボックスの作成*：本番環境のデータに影響を与えることなく、テスト、統合、診断、トレーニングに使用できる、オンデマンドの分離されたデータベース環境を作成します。
 * *データベースの作成*:データベースの照合、ファイル名、およびサイズを構成するために、_Quick_or_Advanced_createモードを使用して、既存のMicrosoft SQL Server用のユーザーデータベースを作成します。ストレージ構成も含まれます。
 * *ジョブ監視*:データベースジョブの実行状況を監視および追跡し、障害が発生した場合の問題を診断およびトラブルシューティングします。
+* *継続的な最適化*：Microsoft SQL Server環境をオフラインで継続的にスキャンし、優れた運用性の実現に役立つインサイト、機会、推奨事項の包括的なレポートを提供します。
 
 
 
@@ -83,6 +84,18 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["FSx 
 _basic_、_read_and _automate_の3つの動作モードでは、Workload Factoryの内外での導入に柔軟なオプションを提供します。Workload Factoryの外部で使用するコードスニペットを使用して、ゼロトラストin_basic_modeですぐに値を取得します。_read_and_automate_modesで増分値を取得します。
 
 詳細については、をご覧ください link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Workload Factoryの動作モード"^]。
+
+
+
+== Workload Factoryを使用するツール
+
+BlueXP Workload Factoryは次のツールで使用できます。
+
+* * Workload Factoryコンソール*: Workload Factoryコンソールは、アプリケーションとプロジェクトの全体的なビューを提供するビジュアルインターフェイスを提供します。
+* * REST API *：Workload Factory REST APIを使用して、Microsoft SQL Serverやその他のAWSリソースを導入および管理できます。
+* * CloudFormation *：AWS CloudFormationコードを使用すると、Workload Factoryコンソールで定義したアクションを実行して、AWSアカウントのCloudFormationスタックからAWSおよびサードパーティのリソースをモデル化、プロビジョニング、管理できます。
+* * Terraform BlueXPワークロードファクトリプロバイダ*：Terraformを使用すると、ワークロードファクトリコンソールで生成されるインフラワークフローを構築、管理できます。
+
 
 
 
