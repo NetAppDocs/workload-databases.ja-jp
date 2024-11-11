@@ -4,32 +4,32 @@ permalink: quick-start-databases.html
 keywords: requirements, basic mode, read mode, automate mode 
 summary: データベースには、要件が異なる3つのモードがあります。 
 ---
-= データベースのクイックスタート
+= データベース用のBlueXP  ワークロード工場のクイックスタート
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-データベースを使用すると、_basic_modeですぐに開始できます。Workload Factoryを使用してホストの検出やリソースの管理などを行う場合は、いくつかの手順で作業を開始できます。
+BlueXP  Workload Factory for Databasesでは、_basic_modeですぐに作業を開始できます。ワークロードファクトリを使用してホストの検出やリソースの管理などを行いたい場合は、いくつかの手順で作業を開始できます。
 
-開始するにはAWSアカウントが必要です。
+データベースを使用するにはAWSアカウントが必要です。
 
-Workload Factoryデータベースを使用するには、次の手順を実行します。
+開始するには、次の手順を実行します。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1つ"] Workload Factoryへのログイン
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1つ"]BlueXP  ワークロードファクトリにログイン
 [role="quick-margin-para"]
-必要なのは link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Workload Factoryでアカウントを設定する"^] link:https://console.workloads.netapp.com["ログイン"^]
+のいずれかを使用してログインする必要がありますlink:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["ワークロードファクトリでアカウントを設定する"^]link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2つ"] クレデンシャルと権限の追加
 [role="quick-margin-para"]
 いずれかを選択し link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["_basic_、_read_、および_automate_operationalモード"^]ます。
 
 [role="quick-margin-para"]
-_basic_modeで操作する場合は、これ以上操作する必要はありません。Workload Factory Databasesを使用して、部分的に完了したコードサンプルをコピーできます。[データベース]タイルで、*[データベースホストの導入]*をクリックします。link:create-database-server.html["データベースサーバの導入方法"]です。
+_basic_modeで操作する場合は、これ以上操作する必要はありません。データベースの使用を開始して、部分的に完了したコードサンプルをコピーできます。[データベース]タイルで、*[データベースホストの導入]*をクリックします。link:create-database-server.html["データベースサーバの導入方法"]です。
 
 [role="quick-margin-para"]
-_read_or_automate_modeで操作する場合は、データベースやAIなどのワークロード機能の選択や、_read_or_automate_modeで操作するための適切な権限があることを確認するためのIAMポリシーの作成が必要 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["アカウントへのクレデンシャルの手動追加"^] です。
+_read_or_automate_modeで操作する場合は、データベースや 生成AIなどのワークロード機能の選択、および_read_or_automate_modeで操作するための正しい権限を確実に持つためのIAMポリシーの作成が必要link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["アカウントへのクレデンシャルの手動追加"^]です。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["3つ"] データベースサーバの導入
 [role="quick-margin-para"]

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: detect-host.html 
 keywords: detect, detect server instance, instance, detect a database host, instance 
-summary: Workload Factory for DatabasesでMicrosoft SQL Serverインスタンスを検出します。 
+summary: データベース用のBlueXP  ワークロードファクトリでMicrosoft SQL Serverインスタンスを検出します。 
 ---
 = Microsoft SQL Serverインスタンスの検出
 :allow-uri-read: 
@@ -11,12 +11,12 @@ summary: Workload Factory for DatabasesでMicrosoft SQL Serverインスタンス
 
 
 [role="lead"]
-Workload Factory for DatabasesでMicrosoft SQL Serverインスタンスを検出します。
+データベース用のBlueXP  ワークロードファクトリでMicrosoft SQL Serverインスタンスを検出します。
 
 このタスクでは、_undetectedインスタンス_を検出します。
 
 .タスクの内容
-AWSクレデンシャルがWorkload Factoryに関連付けられている場合、データベースでは次のAWSストレージタイプを使用したSQL Server 2016以降のMicrosoft SQL Serverの自動検出が可能になります。
+AWSクレデンシャルがワークロードファクトリに関連付けられている場合、データベースでは、次のAWSストレージタイプを使用したSQL Server 2016以降のMicrosoft SQL Serverの自動検出が可能になります。
 
 * FSX for ONTAP の略
 * Elastic Block Store（EBS）
@@ -25,22 +25,22 @@ AWSクレデンシャルがWorkload Factoryに関連付けられている場合�
 
 データベースでは、検出されたインスタンスは次のように分類されます。
 
-* _検出されないインスタンス_：Workload Factoryによって自動的に検出された検出されないインスタンス。次の場合、インスタンスは検出されません。
+* _検出されないインスタンス_：ワークロードファクトリによって自動的に検出された検出されないインスタンス。次の場合、インスタンスは検出されません。
 +
 ** Microsoft SQL Server認証に失敗します。
-** Microsoft SQL Server向けFSx for ONTAPファイルシステムがワークロードファクトリのアカウントに登録されていません。
+** Microsoft SQL Server向けFSx for ONTAPファイルシステムは、ワークロード工場のお客様のアカウントに登録されていません。
 
 
-* _管理対象外インスタンス_：Workload Factoryで管理されていないインスタンスを検出しました。
-* _管理対象インスタンス_：Workload Factoryで管理されている検出済みインスタンス
+* _管理対象外インスタンス_：ワークロードファクトリで管理されていないインスタンスを検出しました
+* _管理対象インスタンス_：Workload Factoryで管理されているインスタンスを検出しました。
 
 
-Workload Factory for DatabasesでMicrosoft SQL Serverインスタンス（ホストインスタンス）を管理する最初の手順は、検出されていないデータベースサーバインスタンスを検出することです。
+データベースのワークロードファクトリでMicrosoft SQL Serverインスタンス（ホストインスタンス）を管理するための最初のステップは、検出されていないデータベースサーバインスタンスを検出することです。
 
 .開始する前に
 検出されていないデータベースサーバインスタンスを検出するための要件は次のとおりです。
 
-* Workload Factoryでデータベースサーバインスタンスを検出する必要があり link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWSアカウントノクレデンシャル"^] ます。
+* ワークロードファクトリでデータベースサーバインスタンスを検出する必要がありlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWSアカウントノクレデンシャル"^]ます。
 * インスタンスのストレージタイプは次のいずれかである必要があります。
 +
 ** FSX for ONTAP の略
@@ -55,7 +55,7 @@ Microsoft SQLインスタンスが検出されても、既存の環境は変更�
 
 
 .手順
-. にログインし link:https://console.workloads.netapp.com["Workload Factoryコンソール"^]ます。
+. いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
 . [データベース]で、*[インベントリ]*タブを選択します。
 . ドロップダウン矢印をクリックして、検出するホストの行を展開します。
@@ -66,10 +66,10 @@ Microsoft SQLインスタンスが検出されても、既存の環境は変更�
 . [検出]*をクリックします。
 . [インスタンスの検出]ダイアログで、Microsoft SQL Serverのユーザー名とパスワード、またはFSx for ONTAPのユーザー名とパスワードを入力します。
 +
-Workload Factoryは、Microsoft SQLのクレデンシャルまたはFSx for ONTAPのクレデンシャルの検証を試みます。
+ワークロードファクトリでは、Microsoft SQLのクレデンシャルまたはFSx for ONTAPのクレデンシャルが検証されます。
 
 +
-これらの資格情報のいずれかが使用できない場合、Workload FactoryはPowerShellにモジュールをインストールしようとし `aws.tools.SimpleSystemsManagement` ます。
+これらの資格情報のいずれかが使用できない場合、Workload FactoryはPowerShellにモジュールをインストールしようとし `aws.tools.SimpleSystemsManagement`ます。
 
 . [検出]*をクリックします。
 +
@@ -80,4 +80,4 @@ Workload Factoryは、Microsoft SQLのクレデンシャルまたはFSx for ONTA
 
 
 .次のステップ
-ホストインスタンスのストレージタイプがFSx for ONTAPの場合は可能です link:manage-server.html["Workload Factoryを使用したインスタンスの管理"]。
+ホストインスタンスのストレージタイプがFSx for ONTAPの場合は可能です link:manage-server.html["Workload Factory経由でインスタンスを管理"]。

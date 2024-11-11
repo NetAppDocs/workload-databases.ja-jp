@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: split-clone.html 
 keywords: split, clone, source, new database 
-summary: ソースデータベースからサンドボックスクローンをスプリットして、新しいデータベースを作成します。 
+summary: ソースデータベースからサンドボックスクローンをスプリットして、BlueXP  ワークロードファクトリでデータベース用の新しいデータベースを作成します。 
 ---
 = ソースデータベースからサンドボックスクローンをスプリットする
 :allow-uri-read: 
@@ -11,13 +11,13 @@ summary: ソースデータベースからサンドボックスクローンを�
 
 
 [role="lead"]
-ソースデータベースからサンドボックスクローンをスプリットすると、一定量のストレージ容量を消費する新しいデータベースが作成されます。スプリットが完了するとクローンが削除され、新しいデータベースがインベントリに表示されます。
+BlueXP  Workload Factory for Databasesでは、ソースデータベースからサンドボックスクローンをスプリットすると、一定量のストレージ容量を消費する新しいデータベースが作成されます。スプリットが完了するとクローンが削除され、新しいデータベースがインベントリに表示されます。
 
 .開始する前に
 新しいデータベースに必要なストレージ容量を検討します。作業を開始する前に、FSx for ONTAPファイルシステムが必要な場合 link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capacity.html["ファイルシステムの容量の拡張"^] 。
 
 .手順
-. にログインし link:https://console.workloads.netapp.com["Workload Factoryコンソール"^]ます。
+. いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
 . [データベース]で、[サンドボックス]タブを選択します。
 . [サンドボックス]タブで、分割するサンドボックスクローンの3つのドットメニューをクリックします。

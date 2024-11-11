@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes, new features, workload factory, databases, workload factory' 
-summary: Workload Factory for Databasesの新機能について説明します。 
+summary: データベース向けBlueXP  ワークロードファクトリーの最新情報をご確認ください。 
 ---
-= 新機能
+= データベース向けBlueXP  ワークロードファクトリの最新情報
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -63,9 +63,9 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["デ�
 
 === ホームページからSavings Calculatorに移動する
 
-link:https://console.workloads.netapp.com["Workload Factoryコンソール"^]ホームページからSavings Calculatorに移動できるようになりました。まずは、Elastic Block StoreとFSx for Windows File Serverから選択してください。
+link:https://console.workloads.netapp.com["ワークロードファクトリコンソール"^]ホームページからSavings Calculatorに移動できるようになりました。まずは、Elastic Block StoreとFSx for Windows File Serverから選択してください。
 
-image:screenshot-explore-savings-home-small.png["Workload Factoryコンソールのホームページのスクリーンショット。新しい[Explore Savings]ボタンが表示されたデータベースタイルの図。ボタンをクリックしてドロップダウンメニューを開きます。ドロップダウンメニューには、Microsoft SQL Server on EBSとMicrosoft SQL Server on FSx for Windows File Serverの2つのオプションがあります。"]
+image:screenshot-explore-savings-home-small.png["ワークロードファクトリコンソールのホームページのスクリーンショット。新しい[Explore Savings]ボタンが表示されたデータベースタイルの図。ボタンをクリックしてドロップダウンメニューを開きます。ドロップダウンメニューには、Microsoft SQL Server on EBSとMicrosoft SQL Server on FSx for Windows File Serverの2つのオプションがあります。"]
 
 
 
@@ -105,8 +105,8 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["デ�
 
 
 
-=== Workload Factory for Databasesの初版リリース
+=== BlueXP  Workload Factory for Databasesの初版リリース
 
-初期リリースには、データベースワークロードのストレージ環境としてAmazon FSx for NetApp ONTAPを使用した場合のコスト削減の検討、Microsoft SQL Serverの検出、管理、導入、データベースの導入とクローニング、Workload Factory内でのジョブの監視が含まれています。
+初期リリースには、データベースワークロードのストレージ環境としてAmazon FSx for NetApp ONTAPを使用した場合のコスト削減の検討、Microsoft SQL Serverの検出、管理、導入、データベースの導入とクローニング、ワークロードファクトリ内でのジョブの監視が含まれています。
 
 link:https://docs.netapp.com/us-en/workload-databases/learn-databases.html["データベースの詳細"^]

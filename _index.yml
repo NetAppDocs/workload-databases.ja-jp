@@ -1,7 +1,7 @@
 ---
 indexpage:
-  title: Workload Factory for Databases Workloadsドキュメント
-  lead: BlueXPワークロードファクトリーでは、FSx for ONTAPファイルシステムストレージ上にMicrosoft SQL Server構成を導入し、データベース環境を管理できます。
+  title: データベースに関するドキュメント用のBlueXP  ワークロードファクトリ
+  lead: BlueXP  ワークロード工場にあるFSx for ONTAPファイルシステムストレージ上にMicrosoft SQL Server構成を導入し、データベース環境を管理します。
   tiles:
   - title: はじめに
     links:

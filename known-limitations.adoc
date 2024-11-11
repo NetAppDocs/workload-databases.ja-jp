@@ -4,7 +4,7 @@ permalink: known-limitations.html
 keywords: limitations, databases 
 summary: このリリースの製品でサポートされていない、または正しく相互運用できないプラットフォーム、デバイス、または機能については、既知の制限事項が記載されています。これらの制限事項をよく確認してください。 
 ---
-= 既知の制限事項
+= データベース用のBlueXP  ワークロードファクトリに関する既知の制限事項
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -35,7 +35,7 @@ SQLバージョンごとに、AMIイメージの最新バージョンまたは�
 
 == 失敗した導入環境のロールバックと再試行
 
-失敗した展開のロールバックと再試行は、Workload Factoryではサポートされていません。AWSのCloudFormationコンソールから、失敗したスタックをロールバックまたは再試行できます。
+失敗した展開のロールバックと再試行は、ワークロードファクトリではサポートされていません。AWSのCloudFormationコンソールから、失敗したスタックをロールバックまたは再試行できます。
 
 
 
@@ -54,13 +54,13 @@ AWSのCloudFormationコンソールからテストまたはデプロイに失敗
 
 == Always-On可用性グループ構成のサポート
 
-常時稼働可用性グループ構成の管理は、Workload Factoryではサポートされていません。
+Always On可用性グループ構成の管理は、ワークロードファクトリではサポートされていません。
 
 
 
 == ユーザ管理のActive Directoryセキュリティグループ
 
-Workload FactoryでMicrosoft SQL Serverを導入する際に「User-managed Active Directory」を選択した場合は、EC2インスタンスとディレクトリサービス間のトラフィックを導入用に許可するセキュリティグループを指定する必要があります。Workload Factoryは、AWS Managed Microsoft ADのように、ユーザー管理Active Directoryのセキュリティグループを自動的に添付しません。
+ワークロード工場でのMicrosoft SQL Serverの導入時に[User-managed Active Directory]を選択した場合は、EC2インスタンスとディレクトリサービスの間のトラフィックを許可するセキュリティグループを指定する必要があります。Workload Factoryでは、AWS Managed Microsoft ADと同様に、ユーザ管理Active Directoryのセキュリティグループが自動的に付加されません。
 
 
 
@@ -84,7 +84,7 @@ FSx for ONTAPのカスタム暗号化キーは、サービスの適用性に応�
 
 == Microsoft SQL Serverの検出と管理
 
-Microsoft SQL Serverの検出は保存されません。Workload Factoryのデータベースにアクセスするたびに、Microsoft SQL Serverの検出が再度実行され、リージョン内のSQLインストールが特定されます。
+Microsoft SQL Serverの検出は保存されません。[Databases in workload factory]にアクセスするたびに、Microsoft SQL Serverの検出が再度実行され、リージョン内のSQLインストールが特定されます。
 
 
 

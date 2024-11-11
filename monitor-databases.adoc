@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: monitor-databases.html 
 keywords: monitor databases, monitor jobs, track database jobs 
-summary: Workload Factory for Databases内でデータベースジョブを追跡し、データベースを監視します。 
+summary: データベースのジョブを追跡し、BlueXP  ワークロードファクトリ内のデータベースを監視します。 
 ---
-= データベースの監視
+= BlueXP  Workload Factoryでのデータベースの監視
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Workload Factory for Databasesを使用して、データベースジョブを追跡し、データベースを監視します。
+データベースのジョブを追跡し、BlueXP  ワークロードファクトリ内のデータベースを監視します。
 
 .タスクの内容
 データベースにはジョブ監視機能があり、ジョブの進捗状況を追跡したり、障害が発生した場合の診断とトラブルシューティングを行うことができます。また、タイプとステータス、検索機能、およびジョブテーブルをダウンロードするためのオプションによってフィルタリングされ、データベースジョブのナビゲーションとレポート作成に役立ちます。
@@ -36,7 +36,7 @@ Workload Factory for Databasesを使用して、データベースジョブを�
 == ジョブの監視
 
 .手順
-. にログインし link:https://console.workloads.netapp.com["Workload Factoryコンソール"^]ます。
+. いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
 . [データベース]で、*[ジョブの監視]*タブを選択します。
 . [ジョブ監視]タブで、フィルタを使用するか検索してジョブの結果を絞り込みます。ジョブレポートをダウンロードすることもできます。

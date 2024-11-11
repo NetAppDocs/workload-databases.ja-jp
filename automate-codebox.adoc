@@ -4,13 +4,13 @@ permalink: automate-codebox.html
 keywords: automation, code automation, automate 
 summary: Codeboxを使用すると、ホストの導入やデータベースの作成などを自動化できます。 
 ---
-= Codeboxによる自動化
+= データベース向けBlueXP  ワークロード工場のCodeboxで自動化
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Codeboxを使用すると、ホストの導入やデータベースの作成などを自動化できます。Codeboxは、コードとしてのインフラストラクチャ(IAC)のコパイロットであり、Workload Factoryでサポートされているすべての操作を実行するためのコードを生成するのに役立ちます。
+BlueXP  Workload Factory for Databasesでは、ホストの導入、データベースの作成などを自動化できます。Codeboxは、コードとしてのインフラストラクチャ（IAC）のコパイロットであり、ワークロードファクトリでサポートされているすべての操作を実行するためのコードを生成するのに役立ちます。
 
 詳細とその使用方法については、こちらをご覧 link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["コードボックス自動化"^] ください。

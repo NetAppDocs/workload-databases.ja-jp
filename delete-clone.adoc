@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: delete-clone.html 
 keywords: delete, clone 
-summary: 不要になったサンドボックスクローンを削除します。 
+summary: BlueXP  ワークロードファクトリで不要になったサンドボックスクローンを削除します。 
 ---
 = ソースデータベースからサンドボックスクローンをスプリットする
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: 不要になったサンドボックスクローンを削除します�
 
 
 [role="lead"]
-不要になったサンドボックスクローンを削除し、ストレージ容量を解放したい。
+BlueXP  ワークロードファクトリでデータベース用のサンドボックスクローンが不要になり、ストレージ容量を解放したい場合は削除します。
 
 .手順
-. にログインし link:https://console.workloads.netapp.com["Workload Factoryコンソール"^]ます。
+. いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*をクリックします。
 . [データベース]で、[サンドボックス]タブを選択します。
 . 削除するサンドボックスクローンの3つのドットメニューをクリックします。

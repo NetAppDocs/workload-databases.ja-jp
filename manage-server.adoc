@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-server.html 
 keywords: Microsoft SQL Server instance, server instance, manage host, view host, database host, database instance, manage, unmanage 
-summary: Workload Factory for DatabasesでMicrosoft SQL Serverインスタンスを管理します。 
+summary: データベース用のBlueXP  ワークロードファクトリでMicrosoft SQL Serverインスタンスを管理します。 
 ---
-= Microsoft SQL Serverインスタンスを管理します。
+= BlueXP  ワークロード工場でのMicrosoft SQL Serverインスタンスの管理
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Microsoft SQL Serverインスタンスを管理して、Workload Factory for Databasesのインスタンスとデータベースのステータス、リソース利用率、保護、ストレージのパフォーマンスを監視します。
+Microsoft SQL Serverインスタンスを管理して、BlueXP  Workload Factory for Databasesのインスタンスとデータベースのステータス、リソース利用率、保護、ストレージのパフォーマンスを監視します。
 
 データベースは、FSx for ONTAPファイルシステムストレージでのみMicrosoft SQL Serverインスタンスを管理できます。
 
@@ -61,7 +61,7 @@ Microsoft SQL Serverインスタンスの管理には、次のタスクが含ま
 
 
 .手順
-. にログインし link:https://console.workloads.netapp.com["Workload Factoryコンソール"^]ます。
+. いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
 . [データベース]で、*[インベントリ]*タブを選択します。
 . 管理するホストの行で*[管理]*をクリックします。
@@ -69,7 +69,7 @@ Microsoft SQL Serverインスタンスの管理には、次のタスクが含ま
 . [管理]*をクリックします。
 
 
-Microsoft SQL Serverに特定のPowerShellモジュールと管理スクリプトがないと、処理が失敗します。Workload Factoryは、不足しているモジュールとスクリプトをインストールするための準備リソースジョブをトリガーします。このジョブは、[ジョブの監視]タブに表示できます。ジョブが完了したら、ホストインスタンスの管理を再試行します。
+Microsoft SQL Serverに特定のPowerShellモジュールと管理スクリプトがないと、処理が失敗します。Workload Factoryは、不足しているモジュールとスクリプトをインストールするためのリソース準備ジョブをトリガーします。このジョブは、[ジョブの監視]タブに表示できます。ジョブが完了したら、ホストインスタンスの管理を再試行します。
 
 
 
@@ -78,7 +78,7 @@ Microsoft SQL Serverに特定のPowerShellモジュールと管理スクリプ�
 管理対象インスタンスを表示するには、次の手順を実行します。
 
 .手順
-. にログインし link:https://console.workloads.netapp.com["Workload Factoryコンソール"^]ます。
+. いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
 . [データベース]で、*[インベントリ]*タブを選択します。
 . ドロップダウン矢印をクリックしてホストの行を展開すると、その管理対象インスタンスが表示されます。
@@ -98,7 +98,7 @@ Microsoft SQL Serverに特定のPowerShellモジュールと管理スクリプ�
 管理対象インスタンスで管理されているデータベースを表示するには、次の手順を実行します。
 
 .手順
-. にログインし link:https://console.workloads.netapp.com["Workload Factoryコンソール"^]ます。
+. いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
 . [データベース]で、*[インベントリ]*タブを選択します。
 . ドロップダウン矢印をクリックしてホストの行を展開し、ホストのデータベースを表示します。
@@ -119,7 +119,7 @@ Microsoft SQL Serverに特定のPowerShellモジュールと管理スクリプ�
 次の手順に従って、ホストインスタンスの管理を解除します。
 
 .手順
-. にログインし link:https://console.workloads.netapp.com["Workload Factoryコンソール"^]ます。
+. いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
 . [データベース]で、*[インベントリ]*タブを選択します。
 . ドロップダウン矢印をクリックして、管理を解除するホストインスタンスの行を展開します。
