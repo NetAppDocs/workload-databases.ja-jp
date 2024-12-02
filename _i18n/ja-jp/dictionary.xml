@@ -57,7 +57,6 @@
   <block id="15d1ade99815746ab0088981bd7585d3" category="section-title">手順1：データベースサーバを作成する</block>
   <block id="956eaa6186169471a13345860cad0757" category="open-title">クイック作成</block>
   <block id="542af019e2aa3ef9ca4b187a71c918bb" category="admonition">クイック作成_では、FCIがデフォルトの配置モデル、Windows 2016がデフォルトのWindowsバージョン、SQL 2019 Standard EditionがデフォルトのSQLバージョンです。</block>
-  <block id="b26136a388864ee3f9e813ac8f6109ee" category="list-text">[データベース]タイルで、*[データベースホストの導入]*を選択します。</block>
   <block id="6139861719bbe0b1fa9017ee94fd4e8e" category="list-text">[クイック作成]*を選択します。</block>
   <block id="cc3305aa1264f3bb3f5edf4bbf7f1ab1" category="list-text">[AWS settings]*で、次の情報を指定します。</block>
   <block id="0ddee9622b04a20edcfe59424067f924" category="list-text">* AWSクレデンシャル*：自動化権限を持つAWSクレデンシャルを選択して、新しいデータベースホストを導入します。</block>
@@ -398,14 +397,6 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">オープンソース</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。</block>
-  <block id="22e5a7336ebe77138f0282cedcb069ab" category="inline-link">ワークロードファクトリ</block>
-  <block id="7ffcbeca3b450b8d05f9cf0eedb617f8" category="list-text"><block ref="7ffcbeca3b450b8d05f9cf0eedb617f8" category="inline-link-rx"></block></block>
-  <block id="887f800d53dc2cd5a7894464a6f60a6b" category="inline-link">データベース用ワークロードファクトリ</block>
-  <block id="7e505d4c691d86e5bd415f9ccb849966" category="list-text"><block ref="7e505d4c691d86e5bd415f9ccb849966" category="inline-link-rx"></block></block>
-  <block id="9591e2d54c998ae1c9d48fd5be7762e9" category="inline-link">GenAI向けワークロードファクトリー</block>
-  <block id="f38c7416013fc239c3dd3288d40a40c0" category="list-text"><block ref="f38c7416013fc239c3dd3288d40a40c0" category="inline-link-rx"></block></block>
-  <block id="404a5efb62a3a3f22b02593091042608" category="inline-link">VMwareのワークロードファクトリー</block>
-  <block id="9a211183d3fa82368d76fdbab5abdeda" category="list-text"><block ref="9a211183d3fa82368d76fdbab5abdeda" category="inline-link-rx"></block></block>
   <block id="6130b5542240619621b88baf10547d84" category="paragraph">データベースは、FSx for ONTAPファイルシステムストレージでのみMicrosoft SQL Serverインスタンスを管理できます。</block>
   <block id="b43307219a7b65a8301c057d6f6b5478" category="section-title">Microsoft SQL Serverインスタンスの管理</block>
   <block id="7c6c9edd9611134efa9dc1ed2f630486" category="paragraph">Microsoft SQL Serverインスタンスの管理には、次のタスクが含まれます。</block>
@@ -866,4 +857,38 @@
   <block id="9d57e52330b97c81921959c45b7d8a7c" category="sidebar">BlueXP  ワークロード工場にあるFSx for ONTAPファイルシステムストレージ上にMicrosoft SQL Server構成を導入し、データベース環境を管理します。</block>
   <block id="e214e71355e2ee8687f09c83bfbdaabc" category="sidebar">データベースに関するドキュメント用のBlueXP  ワークロードファクトリ</block>
   <block id="f3ffe4a909ed7f4cc0f396f199ae3471" category="sidebar">データベース向けワークロードファクトリの詳細</block>
+  <block id="18caf85143cff2e29943f7fa50a9d531" category="doc">継続的な最適化により、コンピューティングの修正と評価を追加</block>
+  <block id="275b08f4e33388b6598899e256fe46b3" category="paragraph">Microsoft SQL Serverインスタンスのコンピューティングリソースの最適化に役立つ分析情報と推奨事項がデータベースから提供されるようになりました。CPU利用率を測定し、AWS Compute Optimizerサービスを活用して最適なサイズのインスタンスタイプを推奨し、利用可能なオペレーティングシステムパッチをユーザに通知します。コンピューティングリソースを最適化することで、インスタンスタイプに関する十分な情報に基づいた意思決定が可能になり、コスト削減とリソース利用率の効率化につながります。</block>
+  <block id="9aa94e25ba754a44d094b78775213e48" category="inline-link-macro">コンピューティングリソースの構成を最適化</block>
+  <block id="25a5dc6deeba5d476ff665ad9c968a2b" category="paragraph"><block ref="25a5dc6deeba5d476ff665ad9c968a2b" category="inline-link-macro-rx"></block></block>
+  <block id="f3cfd7c95d3ff2b556d90beb191fa77a" category="section-title">PostgreSQLのサポート</block>
+  <block id="49db1f79602c9ba8e5704a68010c4023" category="paragraph">スタンドアロンPostgreSQLサーバーの配置をデータベースに配置して管理できるようになりました。</block>
+  <block id="3627a14d7dc2feba3834d63a37ebb394" category="inline-link-macro">PostgreSQLサーバの作成</block>
+  <block id="02b7dd87f2a54e2b540ac84598c20252" category="paragraph"><block ref="02b7dd87f2a54e2b540ac84598c20252" category="inline-link-macro-rx"></block></block>
+  <block id="a08c0d26c5f5640f1f5e9c497b9e6819" category="paragraph">または、Codeboxを使用して空のテンプレートをコピーするか、完成したテンプレートを作成して、REST API、AWS CLI、およびAWS CloudFormationを使用してワークロードファクトリの外部にデータベースを導入できます。<block ref="2d990d14c53331d19396f393ba4ea98c" category="inline-link-macro-rx"></block>です。</block>
+  <block id="6a5525182ed1f6bca47fea4ee51a3e58" category="list-text">[データベース]タイルで*[データベースホストの導入]*を選択し、ドロップダウンメニューから*[Microsoft SQL Server]*を選択します。</block>
+  <block id="16982b5e2c79b1d8f052bfa663a64d77" category="summary">データベース用のBlueXP  ワークロードファクトリ内に新しいPostgreSQLサーバを作成します。</block>
+  <block id="c4f70f11159098cce8873623bffb07aa" category="doc">BlueXP  ワークロードファクトリでPostgreSQLサーバを作成する</block>
+  <block id="5f8d928d8901c8b01302b1c3be720b44" category="paragraph">BlueXP  Workload Factory for Databasesで新しいPostgreSQLサーバ（データベースホスト）を作成するには、FSx for ONTAPファイルシステムの導入とActive Directory用のリソースが必要です。</block>
+  <block id="7a65409a338637d9c410720ad6eb8500" category="list-text">新しいPostgreSQLサーバを作成するには、ストレージバックエンドとしてFSx for ONTAPファイルシステムが必要です。FSx for ONTAPの既存のファイルシステムを使用することも、新しいファイルシステムを作成することもできます。データベースサーバのストレージバックエンドとして既存のFSx for ONTAPファイルシステムを選択した場合は、PostgreSQLワークロード用の新しいStorage VMを作成します。</block>
+  <block id="0f691a321e4cb91f0a8529931ba7bd47" category="paragraph">FSx for ONTAPファイルシステムは、PostgreSQLの_standalone_deploymentsをサポートしています。ワークロード工場では、データ、ログ、tempdbファイル用のボリュームとLUNに加えて、単一のアベイラビリティゾーンFSx for ONTAPファイルシステムが作成されています。</block>
+  <block id="2fd4d401e5c831dec7c9d6e1b557896e" category="paragraph">このタスクは、_Quick create_or_Advanced create_deploymentモードを使用して、_automate_mode権限でワークロードファクトリで実行できます。また、Codeboxで利用可能なREST APIおよびCloudFormationツールを使用することもできます。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>です。</block>
+  <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
+  <block id="dc1a4c3a44cba39fe1ecdcc15fe01cc7" category="list-text">[データベース]タイルで*[データベースホストの配置]*を選択し、ドロップダウンメニューから*[PostgreSQL]*を選択します。</block>
+  <block id="26bef182e4e84557ce657df6398df5a0" category="list-text">導入モデル*の場合、*スタンドアロンインスタンス*がデフォルトです。</block>
+  <block id="75b39c0795d7295af69b1d13bbf82285" category="list-text">*アベイラビリティゾーン*：アベイラビリティゾーンとサブネットを選択します。</block>
+  <block id="d576650f664651e9b2569ccb346b6649" category="list-text">[クラスタ構成-ノード1 ]*フィールドで、*[アベイラビリティゾーン]*ドロップダウンメニューからアベイラビリティゾーンを選択し、*[サブネット]*ドロップダウンメニューからサブネットを選択します。</block>
+  <block id="720301aea3fac96d94759700c949e15f" category="paragraph">新しいサーバの導入時に、2つのセキュリティグループがSQLノード（EC2インスタンス）に接続されます。</block>
+  <block id="f8473adfeac8aca2a2eaa799d6cde778" category="list-text">PostgreSQLに必要なポートとプロトコルを許可するために、ワークロードセキュリティグループが作成されます。</block>
+  <block id="a405e08f97e410f1eb5924541a4cb30c" category="list-text">既存のFSx for ONTAPファイルシステムでは、関連付けられているセキュリティグループがPostgreSQLノードに自動的に追加され、ファイルシステムとの通信が可能になります。新しいFSx for ONTAPシステムが作成されると、FSx for ONTAPファイルシステム用の新しいセキュリティグループが作成され、同じセキュリティグループがSQLノードに接続されます。</block>
+  <block id="5d48b45f2ad58c8e1145b474d95593f9" category="list-text">ドロップダウン・メニューから*[Operating system]*を選択します。</block>
+  <block id="6dd53f240f48678994cf9b0109fa0ec2" category="list-text">ドロップダウンメニューから* PostgreSQLバージョン*を選択します。</block>
+  <block id="d456e032669379ad4e2388045a89301d" category="list-text">*データベースサーバ名*：データベースクラスタ名を入力します。</block>
+  <block id="b4d85afb201cbf3edb4623ef0d8da5e6" category="list-text">[Connectivity]*で、インスタンスに安全に接続するキーペアを選択します。</block>
+  <block id="54d16066caaf498f7f6443098c30a2be" category="paragraph">Snapshotは、PostgreSQLワークロード用に作成されたボリュームに割り当てられます。</block>
+  <block id="428b0b39be2352757edeb5f9f12a7bdd" category="inline-link">BlueXP  ワークロードファクトリ</block>
+  <block id="7cf449620aa459bc5c449db69b07e507" category="paragraph"><block ref="7cf449620aa459bc5c449db69b07e507" category="inline-link-rx"></block></block>
+  <block id="6ad17d07338dffda7982d8efdad3a276" category="section-title">2024年12月1日</block>
+  <block id="d35a0f72475ce4ac5dbb2e790338586d" category="sidebar">Microsoft SQL Serverの作成</block>
+  <block id="b7414b1741661cf43c6fb35227e98183" category="sidebar">PostgreSQLサーバの作成</block>
 </blocks>

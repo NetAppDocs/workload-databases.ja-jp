@@ -67,7 +67,7 @@ Active Directory:: 導入時にActive Directory（AD）に対して次の処理�
 クレデンシャルと権限:: ワークロードファクトリで新しいデータベースホストを作成する必要がありlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWSアカウントのクレデンシャルと自動モードの権限"^]ます。
 +
 --
-または、Codeboxを使用して空のテンプレートをコピーするか、完成したテンプレートを作成して、REST API、AWS CLI、またはAWS CloudFormationを使用してワークロードファクトリの外部にデータベースを導入できます。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Codebox自動化の詳細"^]です。
+または、Codeboxを使用して空のテンプレートをコピーするか、完成したテンプレートを作成して、REST API、AWS CLI、およびAWS CloudFormationを使用してワークロードファクトリの外部にデータベースを導入できます。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Codebox自動化の詳細"^]です。
 
 --
 Active Directory:: Active Directoryに接続する場合は、次の作業を行うための権限を持つ管理者アクセス権が必要です。
@@ -102,7 +102,7 @@ NOTE: クイック作成_では、FCIがデフォルトの配置モデル、Wind
 
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
-. [データベース]タイルで、*[データベースホストの導入]*を選択します。
+. [データベース]タイルで*[データベースホストの導入]*を選択し、ドロップダウンメニューから*[Microsoft SQL Server]*を選択します。
 . [クイック作成]*を選択します。
 . [AWS settings]*で、次の情報を指定します。
 +
@@ -136,9 +136,6 @@ vPC DNS属性 `EnableDnsSupport` とが `EnableDnsHostnames` 変更され、エ�
 +
 
 NOTE: FCIの導入は、複数のアベイラビリティゾーン（MAZ）FSx for ONTAP構成でのみサポートされます。
-
-+
-ハイアベイラビリティを実現するためには、サブネットで同じルートテーブルを共有しないでください。
 
 +
 ... [クラスタ構成-ノード1 ]*フィールドで、*[アベイラビリティゾーン]*ドロップダウンメニューからMAZ FSx for ONTAP構成のプライマリアベイラビリティゾーンを選択し、*[サブネット]*ドロップダウンメニューからプライマリアベイラビリティゾーンのサブネットを選択します。
@@ -211,7 +208,7 @@ AWSが管理するActive Directoryの場合、DNS IPアドレスがドロップ�
 --
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
-. [データベース]タイルで、*[データベースホストの導入]*を選択します。
+. [データベース]タイルで*[データベースホストの導入]*を選択し、ドロップダウンメニューから*[Microsoft SQL Server]*を選択します。
 . [詳細作成]*を選択します。
 . [Deployment model]*で、*[Failover Cluster Instance]*または*[Single instance]*を選択します。
 . [AWS settings]*で、次の情報を指定します。

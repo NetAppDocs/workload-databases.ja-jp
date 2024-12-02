@@ -11,7 +11,7 @@ settings:
   rss_page: whats-new.html
   release_notes_autogen:
     release_notes_repo: workload-relnotes
-  langs: ja-jp,us-en,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
+  langs: ja-jp,us-en,de-de,es-es,fr-fr,it-it,pt-br,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
   - title: データベースワークロードのドキュメント
@@ -33,7 +33,11 @@ sidebar:
     - title: コスト削減の詳細
       url: "/explore-savings.html"
     - title: 新しいデータベースサーバを作成する
-      url: "/create-database-server.html"
+      entries:
+      - title: Microsoft SQL Serverの作成
+        url: "/create-database-server.html"
+      - title: PostgreSQLサーバの作成
+        url: "/create-postgresql-server.html"
     - title: データベースサーバの検出
       url: "/detect-host.html"
     - title: データベースの作成
