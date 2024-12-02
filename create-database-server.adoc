@@ -65,11 +65,6 @@ Active Directory:: 導入時にActive Directory（AD）に対して次の処理�
 新しいデータベースホストを作成する前に、次の前提条件を満たしていることを確認してください。
 
 クレデンシャルと権限:: ワークロードファクトリで新しいデータベースホストを作成する必要がありlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWSアカウントのクレデンシャルと自動モードの権限"^]ます。
-+
---
-または、Codeboxを使用して空のテンプレートをコピーするか、完成したテンプレートを作成して、REST API、AWS CLI、およびAWS CloudFormationを使用してワークロードファクトリの外部にデータベースを導入できます。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Codebox自動化の詳細"^]です。
-
---
 Active Directory:: Active Directoryに接続する場合は、次の作業を行うための権限を持つ管理者アクセス権が必要です。
 +
 --
@@ -88,7 +83,7 @@ Active Directory:: Active Directoryに接続する場合は、次の作業を行
 
 == 手順1：データベースサーバを作成する
 
-このタスクは、_Quick create_or_Advanced create_deploymentモードを使用して、_automate_mode権限でワークロードファクトリで実行できます。Codeboxで利用可能なREST API、CloudFormation、Terraformの各ツールを使用することもできます。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Codeboxを使用して自動化する方法"^]です。
+このタスクは、_Quick create_or_Advanced create_deploymentモードを使用して、_automate_mode権限でワークロードファクトリで実行できます。Codeboxで利用可能なREST API、AWS CLI、AWS CloudFormation、Terraformの各ツールを使用することもできます。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Codeboxを使用して自動化する方法"^]です。
 
 
 NOTE: CodeboxからTerraformを使用すると、コピーまたはダウンロードしたコードが非表示になり、パスワードが表示され `fsxadmin` `vsadmin` ます。コードを実行するときは、パスワードを再入力する必要があります。ユーザーアカウントには、_automate_mode権限に加えて、次の権限を含める必要があります。および `iam:TagInstanceProfile`。 `iam:TagRole`

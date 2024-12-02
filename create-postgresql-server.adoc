@@ -19,37 +19,34 @@ AWSアカウントのクレデンシャルと_automate_permissionsが必要で�
 作業を開始する前に、データベースホストの構成で使用可能なストレージ導入タイプ、Active Directoryの導入、ワークロードの工場出荷時の動作モード、およびこの処理を完了するための要件について学習します。
 
 FSx for ONTAPファイルシステムの導入:: 新しいPostgreSQLサーバを作成するには、ストレージバックエンドとしてFSx for ONTAPファイルシステムが必要です。FSx for ONTAPの既存のファイルシステムを使用することも、新しいファイルシステムを作成することもできます。データベースサーバのストレージバックエンドとして既存のFSx for ONTAPファイルシステムを選択した場合は、PostgreSQLワークロード用の新しいStorage VMを作成します。
-
-
++
+--
 FSx for ONTAPファイルシステムは、PostgreSQLの_standalone_deploymentsをサポートしています。ワークロード工場では、データ、ログ、tempdbファイル用のボリュームとLUNに加えて、単一のアベイラビリティゾーンFSx for ONTAPファイルシステムが作成されています。
 
+--
 ワークロードファクトリ動作モード:: Workload Factoryには、ワークロードファクトリがAWSリソースを管理できるようにする方法に応じて、3つの運用モードが用意されています。
-
-
++
+--
 *_Basic_mode *：この操作モードでは、ワークロードファクトリにAWSアカウントのクレデンシャルを関連付ける必要はありません。部分的に塗りつぶされたYAMLテンプレートをコードボックスからコピーまたはダウンロードして、ワークロードファクトリの外で完成させることができます。
 
 *_Read_mode *:この操作モードでは、AWSアカウントのクレデンシャルに読み取り権限を付与します。これにより、_Quick create_or_Advanced create_formを完成させ、コピーまたはダウンロードすることができます。入力したフォームの詳細を使用して、ワークロードファクトリからCloudFormationにリダイレクトすることもできます。また、ワークロードファクトリに導入されたデータベースサーバを管理できるようになります。
 
 *_automate_mode *：この操作モードでは、AWSアカウントのクレデンシャルに自動化権限を付与します。これにより、ワークロードファクトリ内でAWSリソースを作成および管理できます。
 
+--
+
+
 .開始する前に
 新しいデータベースホストを作成する前に、次の前提条件を満たしていることを確認してください。
 
 クレデンシャルと権限:: ワークロードファクトリで新しいデータベースホストを作成する必要がありlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWSアカウントのクレデンシャルと自動モードの権限"^]ます。
-+
---
-または、Codeboxを使用して空のテンプレートをコピーするか、完成したテンプレートを作成して、REST API、AWS CLI、またはAWS CloudFormationを使用してワークロードファクトリの外部にデータベースを導入できます。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Codebox自動化の詳細"^]です。
-
---
 
 
 
 
 == データベースサーバの作成
 
-このタスクは、_Quick create_or_Advanced create_deploymentモードを使用して、_automate_mode権限でワークロードファクトリで実行できます。また、Codeboxで利用可能なREST APIおよびCloudFormationツールを使用することもできます。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Codeboxを使用して自動化する方法"^]です。
-
-+
+このタスクは、_Advanced create_deploymentモードを使用して、_automate_mode権限でワークロードファクトリで実行できます。Codeboxで利用可能なREST API、AWS CLI、AWS CloudFormationの各ツールを使用することもできます。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Codeboxを使用して自動化する方法"^]です。
 
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
@@ -179,6 +176,3 @@ CloudWatchでは、スタックの名前でロググループが作成されま�
 または、設定を保存することもできます。
 
 
-
-.次のステップ
-できるようになりまし link:create-database.html["BlueXP  ワークロードファクトリでデータベース用のデータベースを作成"]た。

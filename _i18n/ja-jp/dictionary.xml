@@ -734,8 +734,6 @@
   <block id="a538aa1311e84c0f42a362aece349223" category="paragraph">*_Read_mode *:この操作モードでは、AWSアカウントのクレデンシャルに読み取り権限を付与します。これにより、_Quick create_or_Advanced create_formを完成させ、コピーまたはダウンロードすることができます。入力したフォームの詳細を使用して、ワークロードファクトリからCloudFormationにリダイレクトすることもできます。また、ワークロードファクトリに導入されたデータベースサーバを管理できるようになります。</block>
   <block id="02b7989729e7d5233996b9d03d093fc1" category="paragraph">*_automate_mode *：この操作モードでは、AWSアカウントのクレデンシャルに自動化権限を付与します。これにより、ワークロードファクトリ内でAWSリソースを作成および管理できます。</block>
   <block id="6e604948d399e1365a2d5a11ee7838d8" category="list-text">ワークロードファクトリで新しいデータベースホストを作成する必要があり<block ref="6d0e9cd8cac3e1654b2b4423d6d0dc45" category="inline-link-macro-rx"></block>ます。</block>
-  <block id="8f10f2087cc578fb58ebdc9c43f20b29" category="paragraph">または、Codeboxを使用して空のテンプレートをコピーするか、完成したテンプレートを作成して、REST API、AWS CLI、またはAWS CloudFormationを使用してワークロードファクトリの外部にデータベースを導入できます。<block ref="2d990d14c53331d19396f393ba4ea98c" category="inline-link-macro-rx"></block>です。</block>
-  <block id="7e7ea1d0ebe76ee78c10b35c9a89d522" category="paragraph">このタスクは、_Quick create_or_Advanced create_deploymentモードを使用して、_automate_mode権限でワークロードファクトリで実行できます。Codeboxで利用可能なREST API、CloudFormation、Terraformの各ツールを使用することもできます。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>です。</block>
   <block id="cef4156e4fa9e5869d4dee02c1b39d6e" category="paragraph">_automate_permissionsを指定したAWSクレデンシャルを使用すると、ワークロードファクトリ内のAWSアカウントから新しいデータベースホストを導入して管理できます。</block>
   <block id="cc04c98a943715d655ef7f99796aae2a" category="paragraph">AWSクレデンシャルに_read_permissionsを指定すると、ワークロードファクトリでCloudFormationテンプレートが生成され、AWS CloudFormationコンソールで使用できます。</block>
   <block id="b4db11619512665a02befd7699ec1538" category="paragraph">ワークロードファクトリにAWSクレデンシャルが関連付けられておらず、ワークロードファクトリに新しいサーバを作成する場合は、*オプション1 *に従って[クレデンシャル]ページに移動します。データベースワークロードの_automate_modeに必要なクレデンシャルと権限を手動で追加します。</block>
@@ -865,15 +863,12 @@
   <block id="49db1f79602c9ba8e5704a68010c4023" category="paragraph">スタンドアロンPostgreSQLサーバーの配置をデータベースに配置して管理できるようになりました。</block>
   <block id="3627a14d7dc2feba3834d63a37ebb394" category="inline-link-macro">PostgreSQLサーバの作成</block>
   <block id="02b7dd87f2a54e2b540ac84598c20252" category="paragraph"><block ref="02b7dd87f2a54e2b540ac84598c20252" category="inline-link-macro-rx"></block></block>
-  <block id="a08c0d26c5f5640f1f5e9c497b9e6819" category="paragraph">または、Codeboxを使用して空のテンプレートをコピーするか、完成したテンプレートを作成して、REST API、AWS CLI、およびAWS CloudFormationを使用してワークロードファクトリの外部にデータベースを導入できます。<block ref="2d990d14c53331d19396f393ba4ea98c" category="inline-link-macro-rx"></block>です。</block>
   <block id="6a5525182ed1f6bca47fea4ee51a3e58" category="list-text">[データベース]タイルで*[データベースホストの導入]*を選択し、ドロップダウンメニューから*[Microsoft SQL Server]*を選択します。</block>
   <block id="16982b5e2c79b1d8f052bfa663a64d77" category="summary">データベース用のBlueXP  ワークロードファクトリ内に新しいPostgreSQLサーバを作成します。</block>
   <block id="c4f70f11159098cce8873623bffb07aa" category="doc">BlueXP  ワークロードファクトリでPostgreSQLサーバを作成する</block>
   <block id="5f8d928d8901c8b01302b1c3be720b44" category="paragraph">BlueXP  Workload Factory for Databasesで新しいPostgreSQLサーバ（データベースホスト）を作成するには、FSx for ONTAPファイルシステムの導入とActive Directory用のリソースが必要です。</block>
   <block id="7a65409a338637d9c410720ad6eb8500" category="list-text">新しいPostgreSQLサーバを作成するには、ストレージバックエンドとしてFSx for ONTAPファイルシステムが必要です。FSx for ONTAPの既存のファイルシステムを使用することも、新しいファイルシステムを作成することもできます。データベースサーバのストレージバックエンドとして既存のFSx for ONTAPファイルシステムを選択した場合は、PostgreSQLワークロード用の新しいStorage VMを作成します。</block>
   <block id="0f691a321e4cb91f0a8529931ba7bd47" category="paragraph">FSx for ONTAPファイルシステムは、PostgreSQLの_standalone_deploymentsをサポートしています。ワークロード工場では、データ、ログ、tempdbファイル用のボリュームとLUNに加えて、単一のアベイラビリティゾーンFSx for ONTAPファイルシステムが作成されています。</block>
-  <block id="2fd4d401e5c831dec7c9d6e1b557896e" category="paragraph">このタスクは、_Quick create_or_Advanced create_deploymentモードを使用して、_automate_mode権限でワークロードファクトリで実行できます。また、Codeboxで利用可能なREST APIおよびCloudFormationツールを使用することもできます。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>です。</block>
-  <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
   <block id="dc1a4c3a44cba39fe1ecdcc15fe01cc7" category="list-text">[データベース]タイルで*[データベースホストの配置]*を選択し、ドロップダウンメニューから*[PostgreSQL]*を選択します。</block>
   <block id="26bef182e4e84557ce657df6398df5a0" category="list-text">導入モデル*の場合、*スタンドアロンインスタンス*がデフォルトです。</block>
   <block id="75b39c0795d7295af69b1d13bbf82285" category="list-text">*アベイラビリティゾーン*：アベイラビリティゾーンとサブネットを選択します。</block>
@@ -891,4 +886,6 @@
   <block id="6ad17d07338dffda7982d8efdad3a276" category="section-title">2024年12月1日</block>
   <block id="d35a0f72475ce4ac5dbb2e790338586d" category="sidebar">Microsoft SQL Serverの作成</block>
   <block id="b7414b1741661cf43c6fb35227e98183" category="sidebar">PostgreSQLサーバの作成</block>
+  <block id="723e2c2f1ab301b9588bd4fda85b4eae" category="paragraph">このタスクは、_Quick create_or_Advanced create_deploymentモードを使用して、_automate_mode権限でワークロードファクトリで実行できます。Codeboxで利用可能なREST API、AWS CLI、AWS CloudFormation、Terraformの各ツールを使用することもできます。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>です。</block>
+  <block id="21e80f3d16a915bc267e2251c057686f" category="paragraph">このタスクは、_Advanced create_deploymentモードを使用して、_automate_mode権限でワークロードファクトリで実行できます。Codeboxで利用可能なREST API、AWS CLI、AWS CloudFormationの各ツールを使用することもできます。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>です。</block>
 </blocks>
