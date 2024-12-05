@@ -667,7 +667,6 @@
   <block id="2532cd63354e6e99119077d45134b5ef" category="inline-link-macro">コードボックスからTerraformを使用</block>
   <block id="11cb17d1b990bbf37a24337d5692efa1" category="list-text"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">Codeboxを使用して自動化する方法</block>
-  <block id="5de582d1d412797088979e47e496c2fe" category="admonition">CodeboxからTerraformを使用すると、コピーまたはダウンロードしたコードが非表示になり、パスワードが表示され<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block><block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> ます。コードを実行するときは、パスワードを再入力する必要があります。ユーザーアカウントには、_automate_mode権限に加えて、次の権限を含める必要があります。および<block ref="319bffed0f518819193d82ffe99b1444" prefix=" " category="inline-code"></block>。<block ref="7f862a4b8fc22b0af5dda5c9ababa346" prefix=" " category="inline-code"></block></block>
   <block id="b2636246cf1e5e567e3ded4a9d65b1da" category="section-title">Terraformを使用したプライベートネットワークでのMicrosoft SQL Serverの導入が地域ごとに可能</block>
   <block id="eb4fca182b3b78e9a38aa1f6f59c8857" category="paragraph">Terraformを使用したアウトバウンド接続のないプライベートネットワークへのMicrosoft SQL Serverの導入は、us-east-1（北バージニア）リージョンでのみサポートされます。</block>
   <block id="0937bd87e3f84605f28e13c1956980d3" category="list-text">*継続的な最適化*：Microsoft SQL Server環境をオフラインで継続的にスキャンし、優れた運用性の実現に役立つインサイト、機会、推奨事項の包括的なレポートを提供します。</block>
@@ -888,4 +887,8 @@
   <block id="b7414b1741661cf43c6fb35227e98183" category="sidebar">PostgreSQLサーバの作成</block>
   <block id="723e2c2f1ab301b9588bd4fda85b4eae" category="paragraph">このタスクは、_Quick create_or_Advanced create_deploymentモードを使用して、_automate_mode権限でワークロードファクトリで実行できます。Codeboxで利用可能なREST API、AWS CLI、AWS CloudFormation、Terraformの各ツールを使用することもできます。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>です。</block>
   <block id="21e80f3d16a915bc267e2251c057686f" category="paragraph">このタスクは、_Advanced create_deploymentモードを使用して、_automate_mode権限でワークロードファクトリで実行できます。Codeboxで利用可能なREST API、AWS CLI、AWS CloudFormationの各ツールを使用することもできます。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>です。</block>
+  <block id="81a9b579c806be28ed6e048084a47b52" category="inline-link-macro">CodeboxからTerraformを使用する方法を確認する</block>
+  <block id="0ec2c706568900a3077d2c43bb52bde7" category="admonition">CodeboxからTerraformを使用すると、コピーまたはダウンロードしたコードが非表示になり、パスワードが表示され<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block><block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> ます。コードを実行するときは、パスワードを再入力する必要があります。ユーザーアカウントには、_automate_mode権限に加えて、次の権限を含める必要があります。および<block ref="319bffed0f518819193d82ffe99b1444" prefix=" " category="inline-code"></block>。<block ref="7f862a4b8fc22b0af5dda5c9ababa346" prefix=" " category="inline-code"></block><block ref="916d5d5f037ba2ec9358c38001da7d8f" category="inline-link-macro-rx"></block>です。</block>
+  <block id="037f00cd2eafb994bfbd866e78bb7bc3" category="paragraph">導入したPostgreSQLサーバ上で、ユーザ、リモートアクセス、およびデータベースを手動で設定できます。</block>
+  <block id="3b801b5b7ccdf00990044d1e2711d31e" category="paragraph">PostgreSQLは、Amazon CloudWatchやプライベートネットワークでの展開をサポートしていません。</block>
 </blocks>
