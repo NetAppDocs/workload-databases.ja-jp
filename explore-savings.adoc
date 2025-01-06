@@ -13,11 +13,48 @@ summary: Amazon Elastic Block Store（EBS）およびFSx for Windowsファイル
 [role="lead"]
 Amazon Elastic Block Store（EBS）およびFSx for WindowsファイルサーバストレージとFSx for ONTAPストレージを使用した場合のコストを比較して、データベースワークロードのデータベース向けBlueXP  ワークロード工場でのコスト削減についてご確認ください。
 
-Workload Factoryにはコスト削減計算ツールが用意されているため、FSx for ONTAPファイルシステム上のデータベースワークロードについて、ストレージ、コンピューティング、SQLライセンス、Snapshot、クローンなど、Microsoft SQL Serverワークロードを実行する際のさまざまなコストコンポーネントを、Elastic Block Store（EBS）やFSx for Windowsファイルサーバストレージと比較できます。ストレージ要件によっては、FSx for ONTAPファイルシステムがデータベースワークロードにとって最も対費用効果の高いファイルシステムであることがわかります。FSx for ONTAPファイルシステムを使用した場合、これらのMicrosoft SQL Server上のデータベースワークロード用ストレージのコストを削減できるかどうかが計算ツールに表示されます。
+
+
+== タスクの内容
+
+Workload Factoryにはコスト削減計算ツールが用意されているため、FSx for ONTAPファイルシステム上のデータベースワークロードについて、ストレージ、コンピューティング、SQLライセンス、Snapshot、クローンなど、Microsoft SQL Serverワークロードを実行する際のさまざまなコストコンポーネントを、Elastic Block Store（EBS）やFSx for Windowsファイルサーバストレージと比較できます。ストレージ要件によっては、FSx for ONTAPファイルシステムがデータベースワークロードにとって最も対費用効果の高いファイルシステムであることがわかります。
+
+FSx for ONTAPファイルシステムを使用した場合、これらのMicrosoft SQL Server上のデータベースワークロード用ストレージのコストを削減できるかどうかが計算ツールに表示されます。
 
 image:screenshot-ebs-savings-calculator.png["削減試算ツールページのスクリーンショットには、左側に選択したAmazon Elastic Block Store上のMicrosoft SQL Server構成が表示され、スナップショットとクローンの値をカスタマイズするオプションが表示されます。コスト削減額の単位での金額と割合の削減に加え、左側に表示されるFSx for ONTAPおよびElastic Block StoreストレージでMicrosoft SQL Serverを使用した場合の月額総コストも表示されます。"]
 
 FSx for ONTAPファイルシステムでこれらのワークロードを実行することでコストを削減できるとワークロードファクトリが判断した場合は、ワークロードファクトリの計算ツールから直接Microsoft SQL over FSx for ONTAPを導入できます。Elastic Block StoreまたはFSx for Windowsファイルサーバストレージで複数のMicrosoft SQL Serverインスタンスを使用している場合は、単一のSQLインスタンスを使用するFSx for ONTAP構成を推奨します。
+
+
+
+== SQL Server導入の分析
+
+この計算ツールは、SQL Server環境の包括的な分析を実行して、使用されているリソースと機能がSQL Serverエディションと適切に一致していることを確認します。Standard Editionへのダウングレードを推奨する前に、Calculatorがチェックする主な要因と条件は次のとおりです。
+
+導入モデル:: Calculatorは、導入モデルとEnterprise Editionが必要かどうかを評価します。
+割り当てられたリソース:: Calculatorは、次のライセンスに依存して割り当てられたリソースの条件を評価します。
++
+--
+* Target Instance vCPU：インスタンスの仮想CPU数が48個以下である。
+* Memory Allocation：インスタンスのメモリ容量は128GB以下です。
+
+
+--
+エンタープライズ機能の使用:: 計算ツールは、次のエンタープライズ機能のいずれかが使用されているかどうかを確認します。
++
+--
+* データベースレベルのエンタープライズ機能
+* オンラインインデックス操作
+* リソースガバナ
+* ピアツーピアまたはOracleレプリケーション
+* R/Python拡張
+* メモリに最適化されたtempdb
+
+
+--
+
+
+評価されたSQL Serverインスタンスが上記のEnterprise機能のいずれも使用せず、リソースの制約を満たしている場合は、ライセンスをStandard Editionにダウングレードすることをお勧めします。この推奨事項は、パフォーマンスや機能を犠牲にすることなく、SQL Serverのライセンスコストを最適化することを目的としています。
 
 
 
@@ -31,7 +68,7 @@ FSx for ONTAPファイルシステムでこれらのワークロードを実行�
 
 
 
-== カスタマイズによるコスト削減の詳細
+=== カスタマイズによるコスト削減の詳細
 
 ストレージタイプに応じたタブの手順に従います。
 
@@ -111,7 +148,7 @@ FSx for ONTAPファイルシステムでこれらのワークロードを実行�
 ====
 
 
-== 検出されたホストの削減量を確認する
+=== 検出されたホストの削減量を確認する
 
 Workload factoryには、検出されたElastic Block StoreとFSx for Windows File Serverホストの特性が入力されるため、削減効果を自動的に確認できます。
 

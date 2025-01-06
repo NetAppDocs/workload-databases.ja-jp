@@ -38,4 +38,4 @@ _read_or_automate_modeで操作する場合は、データベースや 生成AI�
 .次のステップ
 データベースインベントリにFSx for ONTAP管理ホストがある場合は、またはを実行できます link:create-database.html["ユーザデータベースの作成"] link:create-sandbox-clone.html["ホストのクローンを作成してサンドボックスを作成する"]。
 
-[Databases]インベントリにElastic Block Storeホストがある場合は、これを実行できます link:explore-savings.html["Storage Savings Calculatorでコスト削減効果を確認する"]。
+データベースのインベントリにElastic Block StoreやFSx for Windowsファイルサーバのホストがあれば、それを実行できますlink:explore-savings.html["コスト削減試算ツールでコスト削減額を確認する"]。

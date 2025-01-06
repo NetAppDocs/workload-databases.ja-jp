@@ -102,10 +102,4 @@ Workload Factoryでは、複数のFSx for ONTAPファイルシステムを使用
 
 == Terraformを使用したプライベートネットワークでのMicrosoft SQL Serverの導入が地域ごとに可能
 
-Terraformを使用したアウトバウンド接続のないプライベートネットワークへのMicrosoft SQL Serverの導入は、us-east-1（北バージニア）リージョンでのみサポートされます。
-
-
-
-== PostgreSQLのサポート
-
-PostgreSQLは、Amazon CloudWatchやプライベートネットワークでの展開をサポートしていません。
+Terraformを使用したアウトバウンド接続のないプライベートネットワークへのMicrosoft SQL Serverの導入は、us-east-1（北バージニア）リージョンでのみサポートされます。PostgreSQLは、Amazon CloudWatchやプライベートネットワークでの展開をサポートしていません。

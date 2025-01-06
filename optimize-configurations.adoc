@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: optimize-configurations.html 
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
-summary: BlueXP  Workload Factory for Databasesは、Microsoft SQL Serverのストレージ構成をスキャンし、優れた運用性を実現するための分析情報と推奨事項を提供します。 
+summary: BlueXP  Workload Factory for Databasesは、Microsoft SQL Serverの構成をスキャンし、優れた運用性の実現に役立つ分析情報と推奨事項を提供します。 
 ---
 = Microsoft SQL Server環境向けに構成を最適化
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: BlueXP  Workload Factory for Databasesは、Microsoft SQL Serverのス
 
 
 [role="lead"]
-BlueXP  Workload Factory for Databasesは、Amazon FSx for NetApp ONTAPで実行されるMicrosoft SQL Server導入構成を継続的にスキャンして評価します。評価によって分析情報、推奨事項、最適化が提供されるため、優れた運用性を実現できます。
+BlueXP  Workload Factory for Databasesは、Amazon FSx for NetApp ONTAPで実行されるMicrosoft SQL Server導入構成を継続的にスキャンして評価します。この機能は、分析情報と推奨事項を提供するとともに、最適化されていない構成を自動的に最適化して、データベースワークロードの優れた運用性を実現するオプションも提供します。
 
 .タスクの内容
 この評価は、ワークロード工場で管理されているFSx for ONTAPストレージを使用して、Microsoft SQL Serverインスタンスについて毎日1回自動的かつ継続的に実行されます。評価レポートは、導入後またはインスタンスの管理後に毎日スケジュールされたジョブが実行された場合にのみ、最適化ダッシュボードで使用できます。
@@ -24,7 +24,8 @@ BlueXP  Workload Factory for Databasesは、Amazon FSx for NetApp ONTAPで実�
 * ストレージのサイジング：ストレージ階層、ファイルシステムのヘッドルーム、ログドライブのサイズ、tempdbドライブのサイズを含む
 * ストレージレイアウト：ユーザデータファイルの配置、ログファイルの配置、tempdbの配置を含む
 * ストレージ構成：容量管理、シンプロビジョニング、階層化ポリシー、Snapshot、マルチパスI/Oステータス、ポリシー、セッションなど
-* コンピューティング：サイズ適正化を含む
+* コンピューティング：サイズ適正化とオペレーティングシステムのパッチを含む
+* アプリケーション：Microsoft SQL Serverライセンスを含む
 
 
 --
@@ -39,18 +40,17 @@ BlueXP  Workload Factory for Databasesは、Amazon FSx for NetApp ONTAPで実�
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
-. [データベース]で、*[インベントリ]*タブを選択します。
-. ドロップダウン矢印をクリックしてホストの行を展開すると、その管理対象インスタンスが表示されます。
+. [Inventory]*タブで、ドロップダウン矢印を選択してホストの行を展開し、管理対象インスタンスを表示します。
 +
 ホストが展開され、ホストインスタンスが表示されます。
 
-. スキャンするインスタンスの3つのドットメニューを選択し、*最適化*を選択します。
-. ホストの[Optimize instance]ページで、ストレージ評価の結果を確認します。
+. インスタンスの3ドットメニューを選択し、*最適化*を選択します。
+. SQL Serverインスタンスの[Optimize instance]ページで、評価結果を確認します。
 +
-フィルタを使用して、カテゴリ、サブカテゴリ、ステータス、重大度、およびタグでソートできます。
+カテゴリ、サブカテゴリ、ステータス、重大度、およびタグでフィルタリングできます。
 
 +
-必要に応じて、* PDFのエクスポート*を選択して所見のレポートをダウンロードできます。
+[Export PDF]を選択して、評価結果のレポートをダウンロードすることもできます。
 
 . ドロップダウン矢印を選択すると、構成の推奨事項が表示されます。推奨事項をよく確認してください。
 +

@@ -71,9 +71,9 @@ sidebar:
     - title: SQL Serverの最適化
       entries:
       - title: 継続的最適化の概要
-        url: optimize-overview.html
+        url: "/optimize-overview.html"
       - title: 構成を最適化
-        url: optimize-configurations.html
+        url: "/optimize-configurations.html"
   - title: 知識とサポート
     entries:
     - title: サポートに登録します
@@ -83,5 +83,5 @@ sidebar:
   - title: 法的通知
     url: "/legal-notices.html"
 product-family:
-  name: BlueXP workload factory for AWS
+  name: BlueXP workload factory
   repo: workload-family
