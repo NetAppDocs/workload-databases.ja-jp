@@ -639,7 +639,6 @@
   <block id="2532cd63354e6e99119077d45134b5ef" category="inline-link-macro">コードボックスからTerraformを使用</block>
   <block id="11cb17d1b990bbf37a24337d5692efa1" category="list-text"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">Codeboxを使用して自動化する方法</block>
-  <block id="b2636246cf1e5e567e3ded4a9d65b1da" category="section-title">Terraformを使用したプライベートネットワークでのMicrosoft SQL Serverの導入が地域ごとに可能</block>
   <block id="0937bd87e3f84605f28e13c1956980d3" category="list-text">*継続的な最適化*：Microsoft SQL Server環境をオフラインで継続的にスキャンし、優れた運用性の実現に役立つインサイト、機会、推奨事項の包括的なレポートを提供します。</block>
   <block id="13025ba9f92de77af2aeaf1af07a4aa8" category="doc">Microsoft SQL Server環境向けに構成を最適化</block>
   <block id="6f2bcb2f8d4f34c036395a199095be9a" category="paragraph">この評価は、ワークロード工場で管理されているFSx for ONTAPストレージを使用して、Microsoft SQL Serverインスタンスについて毎日1回自動的かつ継続的に実行されます。評価レポートは、導入後またはインスタンスの管理後に毎日スケジュールされたジョブが実行された場合にのみ、最適化ダッシュボードで使用できます。</block>
@@ -901,7 +900,6 @@
   <block id="fc3e8f3c2017c33d444d483913a485ba" category="paragraph">Workload Factoryコミュニティに参加して、進行中のディスカッションをフォローしたり、新しいディスカッションを作成したりできます。</block>
   <block id="ffa18fada5deeeb1e533786297855e7d" category="paragraph">[Create a Case]*機能を使用するには、最初にサポートに登録する必要があります。NetAppサポートサイトのクレデンシャルをワークロードファクトリログインに関連付けます。<block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>です。</block>
   <block id="e13a5649dfef3a1c76c4be8e463226d7" category="list-text">Workload Factory Consoleの右上で、*[ヘルプ]&gt;[サポート]*を選択します。</block>
-  <block id="eb3607016e0d79a6f82dfbbdd3422282" category="paragraph">Terraformを使用したアウトバウンド接続のないプライベートネットワークへのMicrosoft SQL Serverの導入は、us-east-1（北バージニア）リージョンでのみサポートされます。PostgreSQLは、Amazon CloudWatchやプライベートネットワークでの展開をサポートしていません。</block>
   <block id="e75c7b17297b3cf3a7564e3033ef939f" category="list-text">表示するインスタンスの3ドットメニューをクリックし、*[インスタンスの表示]*を選択します。</block>
   <block id="6b30d701929b5a35aad77b847528d165" category="list-text">表示するデータベースを含むインスタンスの3ドットのメニューをクリックします。</block>
   <block id="77b932b7ecf2d2b3689c445fe72bb66a" category="list-text">管理を解除するインスタンスの3ドットメニューをクリックします。</block>
@@ -926,4 +924,11 @@
   <block id="2cbcc262b0a39ec19c5f69bffccb70fb" category="paragraph">サポートに登録しても、クラウドプロバイダのファイルサービスでNetAppのサポートは有効になりません。クラウドプロバイダのファイルサービス、そのインフラ、またはサービスを使用するソリューションに関連するテクニカルサポートについては、その製品のワークロードファクトリドキュメントの「困ったときは」を参照してください。</block>
   <block id="195066d54d760bc240b0879aa7a483bf" category="list-text">[Sandboxes]タブで、サンドボックスクローンの3ドットのメニューをクリックして接続情報を表示します。</block>
   <block id="13ac5039f81a1aa4ae7419bf17b5b6a0" category="section-title">2025年1月6日</block>
+  <block id="f2398fe4ddb880ba6c52b376ef9b960c" category="list-text"><block ref="f2398fe4ddb880ba6c52b376ef9b960c" category="inline-link-macro-rx"></block></block>
+  <block id="f7626e6c4414254923965c059c538355" category="section-title">最適化のためのオペレーティングシステムパッチ評価</block>
+  <block id="caf2103b4a30210f2be52ce13c522aad" category="inline-link-macro">AWS Cloud Operationsブログ「How to patch Windows EC2 instances in private subnets using AWS Systems Manager」</block>
+  <block id="51d9963cd25d44afd5ce890896443f71" category="paragraph">最適化のために行われたオペレーティングシステムのパッチ評価は、プライベートネットワークでは機能しない場合があります。この評価には、AWS Patch Managerが使用されます。プライベートネットワークでWindows EC2インスタンスにパッチを適用する方法については、を参照してください<block ref="8e97bc3ab59f50cb9b025f85a2445baf" category="inline-link-macro-rx"></block>。</block>
+  <block id="a61ebf6aa74399e268808d3801b03702" category="section-title">コンピューティングのサイズ適正化</block>
+  <block id="f72f493648b25528319887c50a65f0ce" category="inline-link-macro">Amazon Elastic Compute Cloudのドキュメント</block>
+  <block id="bd5d7b32e4164faa655582f169744a05" category="paragraph">特定のインスタンスタイプに変更すると、ネットワーク設定がリセットされ、最適化中にノード接続エラーが発生してジョブが失敗することがあります。DNS設定とiSCSIセッションを確認および更新するには、手動操作が必要になる場合があります。EC2サイズ変更の制限の詳細については、を参照してください<block ref="b8406a09c509d5c1d937367114bd51b3" category="inline-link-macro-rx"></block>。</block>
 </blocks>

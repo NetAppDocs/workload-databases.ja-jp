@@ -100,6 +100,12 @@ Workload Factoryでは、複数のFSx for ONTAPファイルシステムを使用
 
 
 
-== Terraformを使用したプライベートネットワークでのMicrosoft SQL Serverの導入が地域ごとに可能
+== 最適化のためのオペレーティングシステムパッチ評価
 
-Terraformを使用したアウトバウンド接続のないプライベートネットワークへのMicrosoft SQL Serverの導入は、us-east-1（北バージニア）リージョンでのみサポートされます。PostgreSQLは、Amazon CloudWatchやプライベートネットワークでの展開をサポートしていません。
+最適化のために行われたオペレーティングシステムのパッチ評価は、プライベートネットワークでは機能しない場合があります。この評価には、AWS Patch Managerが使用されます。プライベートネットワークでWindows EC2インスタンスにパッチを適用する方法については、を参照してくださいlink:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["AWS Cloud Operationsブログ「How to patch Windows EC2 instances in private subnets using AWS Systems Manager」"^]。
+
+
+
+== コンピューティングのサイズ適正化
+
+特定のインスタンスタイプに変更すると、ネットワーク設定がリセットされ、最適化中にノード接続エラーが発生してジョブが失敗することがあります。DNS設定とiSCSIセッションを確認および更新するには、手動操作が必要になる場合があります。EC2サイズ変更の制限の詳細については、を参照してくださいlink:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resize-limitations.html["Amazon Elastic Compute Cloudのドキュメント"^]。
