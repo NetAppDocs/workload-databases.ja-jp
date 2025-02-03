@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: explore-savings.html 
-keywords: cost, savings, compare costs, EBS, FSx for ONTAP 
-summary: Amazon Elastic Block Store（EBS）およびFSx for WindowsファイルサーバストレージとFSx for ONTAPストレージを使用する場合のコストを比較して、データベースワークロードの削減効果をご確認ください。 
+keywords: cost, savings, compare costs, EBS, FSx for Windows File Server, SQL Server on-premises, on-premises, FSx for ONTAP 
+summary: Amazon Elastic Block Store（EBS）、FSx for Windowsファイルサーバ、SQL ServerのオンプレミスデータベースストレージとFSx for ONTAPストレージを使用した場合のコストを比較します。 
 ---
 = データベース向けのBlueXP  ワークロード工場でのコスト削減について詳しく見る
 :allow-uri-read: 
@@ -11,19 +11,19 @@ summary: Amazon Elastic Block Store（EBS）およびFSx for Windowsファイル
 
 
 [role="lead"]
-Amazon Elastic Block Store（EBS）およびFSx for WindowsファイルサーバストレージとFSx for ONTAPストレージを使用した場合のコストを比較して、データベースワークロードのデータベース向けBlueXP  ワークロード工場でのコスト削減についてご確認ください。
+Amazon Elastic Block Store（EBS）、FSx for Windowsファイルサーバ、オンプレミスストレージでMicrosoft SQL Serverを使用するコストをFSx for ONTAPストレージと比較して、データベースワークロードのデータベース向けBlueXP  ワークロード工場におけるコスト削減についてご確認ください。
 
 
 
 == タスクの内容
 
-Workload Factoryにはコスト削減計算ツールが用意されているため、FSx for ONTAPファイルシステム上のデータベースワークロードについて、ストレージ、コンピューティング、SQLライセンス、Snapshot、クローンなど、Microsoft SQL Serverワークロードを実行する際のさまざまなコストコンポーネントを、Elastic Block Store（EBS）やFSx for Windowsファイルサーバストレージと比較できます。ストレージ要件によっては、FSx for ONTAPファイルシステムがデータベースワークロードにとって最も対費用効果の高いファイルシステムであることがわかります。
+Workload Factoryにはコスト削減計算ツールが用意されているため、FSx for ONTAPファイルシステム上のデータベースワークロードについて、ストレージ、コンピューティング、SQLライセンス、Snapshot、クローンなど、Microsoft SQL Serverワークロードを実行する際のさまざまなコストコンポーネントを、Elastic Block Store（EBS）、FSx for Windowsファイルサーバ、オンプレミスストレージと比較できます。ストレージ要件によっては、FSx for ONTAPファイルシステムがデータベースワークロードにとって最も対費用効果の高いファイルシステムであることがわかります。
 
 FSx for ONTAPファイルシステムを使用した場合、これらのMicrosoft SQL Server上のデータベースワークロード用ストレージのコストを削減できるかどうかが計算ツールに表示されます。
 
 image:screenshot-ebs-savings-calculator.png["削減試算ツールページのスクリーンショットには、左側に選択したAmazon Elastic Block Store上のMicrosoft SQL Server構成が表示され、スナップショットとクローンの値をカスタマイズするオプションが表示されます。コスト削減額の単位での金額と割合の削減に加え、左側に表示されるFSx for ONTAPおよびElastic Block StoreストレージでMicrosoft SQL Serverを使用した場合の月額総コストも表示されます。"]
 
-FSx for ONTAPファイルシステムでこれらのワークロードを実行することでコストを削減できるとワークロードファクトリが判断した場合は、ワークロードファクトリの計算ツールから直接Microsoft SQL over FSx for ONTAPを導入できます。Elastic Block StoreまたはFSx for Windowsファイルサーバストレージで複数のMicrosoft SQL Serverインスタンスを使用している場合は、単一のSQLインスタンスを使用するFSx for ONTAP構成を推奨します。
+FSx for ONTAPファイルシステムでこれらのワークロードを実行することでコストを削減できるとワークロードファクトリが判断した場合は、ワークロードファクトリの計算ツールから直接Microsoft SQL over FSx for ONTAPを導入できます。Elastic Block Store、FSx for Windowsファイルサーバ、またはオンプレミスのストレージで複数のMicrosoft SQL Serverインスタンスを使用している場合は、単一のSQLインスタンスを使用するFSx for ONTAP構成を推奨します。
 
 
 
@@ -64,7 +64,7 @@ FSx for ONTAPファイルシステムでこれらのワークロードを実行�
 
 カスタマイズによるコスト削減の詳細を見る:地域、導入モデル、SQL Serverエディション、毎月のデータ変更率、スナップショットの頻度など、EBSまたはFSx for Windows File Serverを搭載したAmazon EC2上のMicrosoft SQL Serverの構成設定を提供します。
 
-検出されたホストの削減効果を確認します。ワークロードファクトリは既存のMicrosoft SQL Serverにリンクし、詳細を計算ツールに入力して自動比較します。この計算ツールオプションを使用するには、自動化権限を付与する必要があります。ユースケースは変更できますが、その他の詳細はすべて計算で自動的に決定されます。
+検出されたホストの削減効果を確認します。ワークロードのファクトリは既存のMicrosoft SQL Serverにリンクし、詳細を計算ツールに入力して自動比較します。この計算ツールオプションを使用するには、自動化権限を付与する必要があります。ユースケースは変更できますが、その他の詳細はすべて計算で自動的に決定されます。
 
 
 
@@ -204,6 +204,45 @@ FSx for Windowsのシャドウコピーが検出された場合、デフォル�
 
 .. *クローンの更新頻度*：クローンの更新頻度をドロップダウンメニューから選択します。
 .. *クローンコピーの数*：FSx for Windows構成でクローンコピーの数を入力します。
+.. *毎月の変更率*：クローンおよびスナップショットのデータの1カ月あたりの平均変更率を入力します。
+
+
+. ページに表示された計算方法と推奨事項を確認します。
++
+さらに、ページの一番下までスクロールして* PDFのエクスポート*または*計算の表示*を表示します。
+
+
+
+--
+.オンプレミスのMicrosoft SQL Server
+--
+.手順
+. いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
+. [データベース]タイルで、ドロップダウンメニューから*[削減効果の確認]*を選択し、*[Microsoft SQL Serverオンプレミス]*を選択します。
+. [SQL Server On-Premises]タブからスクリプトをダウンロードし、オンプレミスのSQL Server環境を評価します。
++
+.. 評価スクリプトをダウンロードスクリプトは、PowerShellをベースとしたデータ収集ツールです。SQL Serverの構成データとパフォーマンスデータを収集し、BlueXP  ワークロード工場にアップロードします。移行アドバイザはデータを評価し、SQL Server環境向けのFSx for ONTAPの導入を計画します。
++
+image:screenshot-download-script-on-premises.png["[SQL Server On-Premises]タブのスクリーンショットには、評価スクリプトをダウンロードするためのオプションが表示されています。"]
+
+.. SQL Serverホストでスクリプトを実行します。
+.. ワークロードファクトリの[SQL Server On-Premises]タブでスクリプトの出力をアップロードします。
++
+image:screenshot-upload-script-on-premises.png["[SQL Server On-Premises]タブのスクリーンショットには、評価スクリプトをアップロードするオプションが表示されています。"]
+
+
+
+. [SQL Server On-Premises]タブで*[Explore Savings]*を選択し、FSx for ONTAPに対するSQL Serverオンプレミスホストのコスト分析を実行します。
+. 削減量計算ツールで、オンプレミスホストのリージョンを選択します。
+. より正確な結果を得るには、コンピューティング情報とストレージとパフォーマンスの詳細を更新してください。
+. 必要に応じて、オンプレミスデータベース環境のクローン（シャドウコピー）とSnapshotに関する次の詳細情報を指定し、コスト削減の見積もりをより正確にします。
++
+.. * Snapshotの頻度*：ドロップダウンメニューからSnapshotの頻度を選択します。
++
+FSx for Windowsのシャドウコピーが検出された場合、デフォルト値は* Daily *です。シャドウコピーが検出されない場合、デフォルト値は*スナップショット頻度なし*です。
+
+.. *クローンの更新頻度*：クローンの更新頻度をドロップダウンメニューから選択します。
+.. *クローンコピーの数*：オンプレミス構成のクローンコピーの数を入力します。
 .. *毎月の変更率*：クローンおよびスナップショットのデータの1カ月あたりの平均変更率を入力します。
 
 
