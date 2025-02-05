@@ -958,4 +958,9 @@
   <block id="7a4fa85db3c457278cffd34e817477ab" category="list-text">設定または構成の最適化を選択する前に、各推奨事項をよく確認してください。RSSおよびMAXDOPの設定については、本番環境を変更する前に、推奨設定をテストしてパフォーマンスの向上を確認することをお勧めします。</block>
   <block id="926cb4c482170392f69cc268b20f8346" category="admonition">最適化プロセスによって、インスタンスのダウンタイムやサービスの中断が発生する可能性があります。構成の最適化を選択する前に、最適化の概要とアクション項目を必ず確認してください。</block>
   <block id="1c8d307950dbef59ce61b6bc729fdb52" category="section-title">2025年2月3日</block>
+  <block id="382e51924c0a806fea2a0017322199a5" category="section-title">最適化の制限事項</block>
+  <block id="d65e48d2f6a810cde4c31e5a88aecedb" category="section-title">ONTAPとOSの設定の最適化</block>
+  <block id="8e29c0a71b0719e3f6ed28d4a7c0b30d" category="paragraph">複数のSQL Serverインスタンスの一括最適化は、ONTAP構成およびOS構成ではサポートされていません。</block>
+  <block id="7dd6090f4d4627220763b41db74bb898" category="section-title">オンプレミスでのコスト削減額の計算</block>
+  <block id="9fb10d1d0413bc062aa3f807aa200e53" category="paragraph">オンプレミスのMicrosoft SQL Serverストレージのボリュームサイズのコスト削減率と削減率の計算は考慮されません。</block>
 </blocks>

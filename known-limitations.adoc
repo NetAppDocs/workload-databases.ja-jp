@@ -100,12 +100,28 @@ Workload Factoryでは、複数のFSx for ONTAPファイルシステムを使用
 
 
 
-== 最適化のためのオペレーティングシステムパッチ評価
+== 最適化の制限事項
+
+
+
+=== コンピューティングのサイズ適正化
+
+特定のインスタンスタイプに変更すると、ネットワーク設定がリセットされ、最適化中にノード接続エラーが発生してジョブが失敗することがあります。DNS設定とiSCSIセッションを確認および更新するには、手動操作が必要になる場合があります。EC2サイズ変更の制限の詳細については、を参照してくださいlink:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resize-limitations.html["Amazon Elastic Compute Cloudのドキュメント"^]。
+
+
+
+=== ONTAPとOSの設定の最適化
+
+複数のSQL Serverインスタンスの一括最適化は、ONTAP構成およびOS構成ではサポートされていません。
+
+
+
+=== 最適化のためのオペレーティングシステムパッチ評価
 
 最適化のために行われたオペレーティングシステムのパッチ評価は、プライベートネットワークでは機能しない場合があります。この評価には、AWS Patch Managerが使用されます。プライベートネットワークでWindows EC2インスタンスにパッチを適用する方法については、を参照してくださいlink:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["AWS Cloud Operationsブログ「How to patch Windows EC2 instances in private subnets using AWS Systems Manager」"^]。
 
 
 
-== コンピューティングのサイズ適正化
+== オンプレミスでのコスト削減額の計算
 
-特定のインスタンスタイプに変更すると、ネットワーク設定がリセットされ、最適化中にノード接続エラーが発生してジョブが失敗することがあります。DNS設定とiSCSIセッションを確認および更新するには、手動操作が必要になる場合があります。EC2サイズ変更の制限の詳細については、を参照してくださいlink:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resize-limitations.html["Amazon Elastic Compute Cloudのドキュメント"^]。
+オンプレミスのMicrosoft SQL Serverストレージのボリュームサイズのコスト削減率と削減率の計算は考慮されません。
