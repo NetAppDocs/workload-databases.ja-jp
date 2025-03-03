@@ -26,6 +26,7 @@ BlueXP  Workload Factory for Databasesは、Amazon FSx for NetApp ONTAPで実�
 * ストレージ構成：容量管理、シンプロビジョニング、階層化ポリシー、Snapshot、マルチパスI/Oステータス、ポリシー、セッションなど
 * コンピューティング：サイズ適正化、オペレーティングシステムのパッチ、受信側スケーリング（RSS）やTCPオフロードなどのネットワークアダプタ設定を含む
 * アプリケーション：Microsoft SQL Serverライセンス、Microsoft SQL Serverパッチ、およびMAXDOP設定を含む
+* 耐障害性：ローカルSnapshotを含む
 
 
 --

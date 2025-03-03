@@ -17,13 +17,21 @@ Amazon Elastic Block Store（EBS）、FSx for Windowsファイルサーバ、オ
 
 == タスクの内容
 
-Workload Factoryにはコスト削減計算ツールが用意されているため、FSx for ONTAPファイルシステム上のデータベースワークロードについて、ストレージ、コンピューティング、SQLライセンス、Snapshot、クローンなど、Microsoft SQL Serverワークロードを実行する際のさまざまなコストコンポーネントを、Elastic Block Store（EBS）、FSx for Windowsファイルサーバ、オンプレミスストレージと比較できます。ストレージ要件によっては、FSx for ONTAPファイルシステムがデータベースワークロードにとって最も対費用効果の高いファイルシステムであることがわかります。
+Workload Factoryには、Amazon Elastic Block Store（EBS）、FSx for Windows File Server、オンプレミスストレージで実行されているデータベースワークロードの削減効果を確認するための方法がいくつかあります。ダッシュボード、[Inventory]タブ、および[Explore savings]タブから確認できます。いずれの場合も、コスト削減試算ツールを使用して、FSx for ONTAPファイルシステム上のデータベースワークロードについて、ストレージ、コンピューティング、SQLライセンス、Snapshot、クローンなど、Microsoft SQL Serverワークロードを実行する際のさまざまなコストコンポーネントを、Elastic Block Store（EBS）、FSx for Windowsファイルサーバ、オンプレミスストレージと比較できます。
 
-FSx for ONTAPファイルシステムを使用した場合、これらのMicrosoft SQL Server上のデータベースワークロード用ストレージのコストを削減できるかどうかが計算ツールに表示されます。
+FSx for ONTAPファイルシステムでこれらのワークロードを実行することでコストを削減できるとワークロードファクトリが判断した場合は、ワークロードファクトリのコスト削減試算ツールから直接Microsoft SQL over FSx for ONTAPを導入できます。Elastic Block Store、FSx for Windowsファイルサーバ、またはオンプレミスのストレージで複数のMicrosoft SQL Serverインスタンスを使用している場合は、単一のSQLインスタンスを使用するFSx for ONTAP構成を推奨します。
 
-image:screenshot-ebs-savings-calculator.png["削減試算ツールページのスクリーンショットには、左側に選択したAmazon Elastic Block Store上のMicrosoft SQL Server構成が表示され、スナップショットとクローンの値をカスタマイズするオプションが表示されます。コスト削減額の単位での金額と割合の削減に加え、左側に表示されるFSx for ONTAPおよびElastic Block StoreストレージでMicrosoft SQL Serverを使用した場合の月額総コストも表示されます。"]
+.すべてのデータベースワークロードの潜在的な削減効果
+Workload Factory ConsoleからDatabases * Dashboard *にアクセスして、FSx for ONTAPですべてのデータベースワークロードを実行することで実現可能なコスト削減の概要を確認してください。[Potential Savings]タイルでは、Elastic Block StoreとFSx for Windows File Server上にあるすべてのデータベースワークロードの数、潜在的なコスト削減率、削減率、ビジュアル表示を棒グラフで確認できます。
 
-FSx for ONTAPファイルシステムでこれらのワークロードを実行することでコストを削減できるとワークロードファクトリが判断した場合は、ワークロードファクトリの計算ツールから直接Microsoft SQL over FSx for ONTAPを導入できます。Elastic Block Store、FSx for Windowsファイルサーバ、またはオンプレミスのストレージで複数のMicrosoft SQL Serverインスタンスを使用している場合は、単一のSQLインスタンスを使用するFSx for ONTAP構成を推奨します。
+image:screenshot-dashboard-potential-savings-tile.png["ワークロードファクトリコンソールのデータベースダッシュボードの[潜在的な削減量]タイルのスクリーンショット。[Potential Savings]タイルには、Elastic Block StoreとFSx for Windows File Server上にあるすべてのデータベースワークロードの数、潜在的なコスト削減率、削減率、棒グラフに視覚的に表示されます。"]
+
+.削減額計算ツール
+コスト削減計算ツールを使用すると、FSx for ONTAPファイルシステム上のデータベースワークロードについて、ストレージ、コンピューティング、SQLライセンス、Snapshot、クローンなど、Microsoft SQL Serverワークロードを実行する際のさまざまなコストコンポーネントを、Elastic Block Store（EBS）、FSx for Windowsファイルサーバ、オンプレミスストレージと比較できます。ストレージ要件によっては、FSx for ONTAPファイルシステムがデータベースワークロードにとって最も対費用効果の高いファイルシステムであることがわかります。
+
+FSx for ONTAPファイルシステムを使用した場合、これらのMicrosoft SQL Server上のデータベースワークロード用ストレージのコストを削減できるかどうかが計算ツールに表示されます。<<電卓オプション,計算ツールの使用方法について説明します。>>
+
+image:screenshot-ebs-savings-calculator-update.png["削減試算ツールページのスクリーンショットには、左側に選択したAmazon Elastic Block Store上のMicrosoft SQL Server構成が表示され、スナップショットとクローンの値をカスタマイズするオプションが表示されます。コスト削減額の単位での金額と割合の削減に加え、左側に表示されるFSx for ONTAPおよびElastic Block StoreストレージでMicrosoft SQL Serverを使用した場合の月額総コストも表示されます。"]
 
 
 
@@ -66,6 +74,8 @@ FSx for ONTAPファイルシステムでこれらのワークロードを実行�
 
 検出されたホストの削減効果を確認します。ワークロードのファクトリは既存のMicrosoft SQL Serverにリンクし、詳細を計算ツールに入力して自動比較します。この計算ツールオプションを使用するには、自動化権限を付与する必要があります。ユースケースは変更できますが、その他の詳細はすべて計算で自動的に決定されます。
 
+さらに、計算機分析の精度を向上させることができますlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWSクレデンシャルを追加"^]。[既存のリソースに基づいてコスト削減を計算する]*を選択します。[クレデンシャルの追加]ページにリダイレクトされます。クレデンシャルを追加したら、FSx for ONTAPと比較する既存のリソースを選択し、*[削減効果を確認する]*を選択します。
+
 
 
 === カスタマイズによるコスト削減の詳細
@@ -105,10 +115,6 @@ FSx for ONTAPファイルシステムでこれらのワークロードを実行�
 .. 常時稼働の可用性導入モデルを選択した場合は、*セカンダリEC2の仕様*および*ボリュームタイプ*の詳細を指定します。
 
 
-. ページに表示された計算方法と推奨事項を確認します。
-+
-さらに、ページの一番下までスクロールして* PDFのエクスポート*または*計算の表示*を表示します。
-
 
 
 --
@@ -138,14 +144,21 @@ FSx for ONTAPファイルシステムでこれらのワークロードを実行�
 .. [EC2仕様（EC2 specifications）]で、ドロップダウンメニューから*[インスタンスタイプ（Instance type）]*を選択します。
 
 
-. ページに表示された計算方法と推奨事項を確認します。
-+
-さらに、ページの一番下までスクロールして* PDFのエクスポート*または*計算の表示*を表示します。
-
 
 
 --
 ====
+データベースホストの設定の詳細を指定したら、ページに表示される計算式と推奨事項を確認します。
+
+さらに、次のいずれかを選択して、ページの一番下までスクロールしてレポートを表示します。
+
+* * PDFのエクスポート*
+* *電子メールで送信*
+* *計算結果を表示*
+
+
+FSx for ONTAPに切り替えるには、の手順に従います <<FSx for ONTAPを使用してAWS EC2にMicrosoft SQL Serverを導入,FSx for ONTAPファイルシステムを使用してAQS EC2にMicrosoft SQL Serverを導入>>。
+
 
 
 === 検出されたホストの削減量を確認する
@@ -180,10 +193,6 @@ Workload factoryには、検出されたElastic Block StoreとFSx for Windows Fi
 .. *毎月の変更率*：クローンおよびスナップショットのデータの1カ月あたりの平均変更率を入力します。
 
 
-. ページに表示された計算方法と推奨事項を確認します。
-+
-さらに、ページの一番下までスクロールして* PDFのエクスポート*または*計算の表示*を表示します。
-
 
 
 --
@@ -206,10 +215,6 @@ FSx for Windowsのシャドウコピーが検出された場合、デフォル�
 .. *クローンコピーの数*：FSx for Windows構成でクローンコピーの数を入力します。
 .. *毎月の変更率*：クローンおよびスナップショットのデータの1カ月あたりの平均変更率を入力します。
 
-
-. ページに表示された計算方法と推奨事項を確認します。
-+
-さらに、ページの一番下までスクロールして* PDFのエクスポート*または*計算の表示*を表示します。
 
 
 
@@ -246,14 +251,21 @@ FSx for Windowsのシャドウコピーが検出された場合、デフォル�
 .. *毎月の変更率*：クローンおよびスナップショットのデータの1カ月あたりの平均変更率を入力します。
 
 
-. ページに表示された計算方法と推奨事項を確認します。
-+
-さらに、ページの一番下までスクロールして* PDFのエクスポート*または*計算の表示*を表示します。
-
 
 
 --
 ====
+データベースホストの設定の詳細を指定したら、ページに表示される計算式と推奨事項を確認します。
+
+さらに、次のいずれかを選択して、ページの一番下までスクロールしてレポートを表示します。
+
+* * PDFのエクスポート*
+* *電子メールで送信*
+* *計算結果を表示*
+
+
+FSx for ONTAPに切り替えるには、の手順に従います <<FSx for ONTAPを使用してAWS EC2にMicrosoft SQL Serverを導入,FSx for ONTAPファイルシステムを使用してAQS EC2にMicrosoft SQL Serverを導入>>。
+
 
 
 == FSx for ONTAPを使用してAWS EC2にMicrosoft SQL Serverを導入

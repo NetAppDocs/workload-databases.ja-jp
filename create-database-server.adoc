@@ -14,9 +14,7 @@ summary: データベース用のBlueXP  ワークロードファクトリ内�
 BlueXP  Workload Factory for Databasesで新しいMicrosoft SQL Server（データベースホスト）を作成するには、FSx for ONTAPファイルシステムの導入とActive Directory用のリソースが必要です。
 
 .タスクの内容
-AWSアカウントのクレデンシャルと_automate_permissionsが必要です。
-
-作業を開始する前に、データベースホストの構成で使用可能なストレージ導入タイプ、Active Directoryの導入、ワークロードの工場出荷時の動作モード、およびこの処理を完了するための要件について学習します。
+ワークロードファクトリからMicrosoft SQL Serverを作成する前に、データベースホストの構成に使用できるストレージ導入タイプ、Active Directoryの導入、ワークロードファクトリの動作モード、およびこの処理を完了するための要件について学習します。
 
 導入後は、次の手順を実行する必要があり <<手順2：Microsoft SQL Serverでリモート接続を有効にする,Microsoft SQL Serverでリモート接続を有効にする>>ます。
 
