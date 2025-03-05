@@ -8,4 +8,4 @@
 
 初期リリースには、データベースワークロードのストレージ環境としてAmazon FSx for NetApp ONTAPを使用した場合のコスト削減の検討、Microsoft SQL Serverの検出、管理、導入、データベースの導入とクローニング、ワークロードファクトリ内でのジョブの監視が含まれています。
 
-link:https://docs.netapp.com/us-en/workload-databases/learn-databases.html["データベースの詳細"^]
+link:https://docs.netapp.com/us-en/workload-databases/learn-databases.html["データベースの詳細"]

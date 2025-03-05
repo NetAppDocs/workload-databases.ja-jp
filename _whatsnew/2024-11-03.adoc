@@ -16,6 +16,6 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 CodeboxからTerraformを使用してMicrosoft SQL Serverを導入できるようになりました。
 
-* link:https://docs.netapp.com/us-en/workload-databases/create-database-server.html["データベースサーバの作成"^]
-* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["コードボックスからTerraformを使用"^]
+* link:https://docs.netapp.com/us-en/workload-databases/create-database-server.html["データベースサーバの作成"]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["コードボックスからTerraformを使用"]
 
