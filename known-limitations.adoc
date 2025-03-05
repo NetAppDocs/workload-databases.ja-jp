@@ -58,12 +58,6 @@ Always On可用性グループ構成の管理は、ワークロードファク�
 
 
 
-== ユーザ管理のActive Directoryセキュリティグループ
-
-ワークロード工場でのMicrosoft SQL Serverの導入時に[User-managed Active Directory]を選択した場合は、EC2インスタンスとディレクトリサービスの間のトラフィックを許可するセキュリティグループを指定する必要があります。Workload Factoryでは、AWS Managed Microsoft ADと同様に、ユーザ管理Active Directoryのセキュリティグループが自動的に付加されません。
-
-
-
 == カスタム暗号化キー
 
 FSx for ONTAPのカスタム暗号化キーは、サービスの適用性に応じて表示されません。適切なキーを選択する必要があります。AWSで管理されるキーは、サービスへの適用性に基づいてフィルタリングされます。

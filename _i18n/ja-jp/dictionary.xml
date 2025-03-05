@@ -98,7 +98,6 @@
   <block id="8738f299dd52a2650f23bf1ae30694fa" category="list-text">[クラスタ構成-ノード1 ]*フィールドで、ドロップダウンメニューの*[アベイラビリティゾーン]*からアベイラビリティゾーンを選択し、*[サブネット]*ドロップダウンメニューからサブネットを選択します。</block>
   <block id="9c622025b2f6aaf628ede7de56df481b" category="list-text">FCI導入の場合</block>
   <block id="5ac7c1b392927ce429f17a8855e854b5" category="list-text">*セキュリティグループ*:既存のセキュリティグループを選択するか、新しいセキュリティグループを作成します。</block>
-  <block id="a2c08d4b7f2bbde30396036629003448" category="paragraph">新しいサーバの導入時に、3つのセキュリティグループがSQLノード（EC2インスタンス）に接続されます。</block>
   <block id="ba4f09fe932ad91d759a5dd3636acec6" category="list-text">ノード上のMicrosoft SQLおよびWindowsクラスタ通信に必要なポートとプロトコルを許可するために、ワークロードセキュリティグループが作成されます。</block>
   <block id="1f653bdd2a02e3ebdc4f28328a96b00f" category="list-text">AWSが管理するActive Directoryの場合、ディレクトリサービスに関連付けられたセキュリティグループがMicrosoft SQLノードに自動的に追加され、Active Directoryとの通信が可能になります。</block>
   <block id="84c62c2707904a024819612ef450ef1d" category="list-text">既存のFSx for ONTAPファイルシステムでは、関連付けられているセキュリティグループがSQLノードに自動的に追加され、ファイルシステムとの通信が可能になります。新しいFSx for ONTAPシステムが作成されると、FSx for ONTAPファイルシステム用の新しいセキュリティグループが作成され、同じセキュリティグループがSQLノードに接続されます。</block>
@@ -1004,4 +1003,5 @@
   <block id="05e1e00bdb39e9c766a6a0f69a222a3b" category="list-text"><block ref="05e1e00bdb39e9c766a6a0f69a222a3b" category="inline-link-macro-rx"></block></block>
   <block id="7115d78353263dbb2dbe063624f9f601" category="list-text"><block ref="7115d78353263dbb2dbe063624f9f601" category="inline-link-macro-rx"></block></block>
   <block id="4666cc74583e6d5c1f202a52bee57a9b" category="list-text"><block ref="4666cc74583e6d5c1f202a52bee57a9b" category="inline-link-macro-rx"></block></block>
+  <block id="b344730cd36668c36266c1d50c447eea" category="list-text">*セキュリティグループ*:既存のセキュリティグループを選択するか、新しいセキュリティグループを作成します。新しいサーバの導入時に、3つのセキュリティグループがSQLノード（EC2インスタンス）に接続されます。</block>
 </blocks>
