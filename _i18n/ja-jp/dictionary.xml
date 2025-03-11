@@ -968,10 +968,8 @@
   <block id="a54a2d2457f861c5ced69c71edee65c9" category="paragraph">FSx for ONTAPファイルシステムには、_High Availability（HA）_OR_SINGLE INSTANCE_という2つのPostgreSQLサーバ導入モデルがあります。FSx for ONTAPファイルシステム用に作成されるリソースは、選択したFSx for ONTAP導入モデルに応じて異なります。</block>
   <block id="7081d1beb2d41751a0211b5a5c5f3b56" category="list-text">*ハイアベイラビリティ（HA）導入*：新しいFSx for ONTAPファイルシステムがHA導入用に選択されると、マルチアベイラビリティゾーンFSx for NetApp ONTAPファイルシステムが導入されます。HA環境では、データ、ログ、およびtempdbファイル用に別 々 のボリュームとLUNが作成されます。Windowsクラスタのクォーラムまたは監視ディスク用に、追加のボリュームとLUNが作成されます。HA配置では、プライマリとセカンダリのPostgreSQLサーバ間でストリーミングレプリケーションが構成されます。</block>
   <block id="30e232f58ccaf796b9d3c66a4c7f3eae" category="list-text">*単一インスタンスの導入*:新しいPostgreSQLサーバが作成されると、単一アベイラビリティゾーンFSx for ONTAPファイルシステムが作成されます。また、データ、ログ、およびtempdbファイル用に別 々 のボリュームとLUNが作成されます。</block>
-  <block id="958f5530e9f1db947c4f18b3cc30b2e9" category="admonition">クイック作成_では、HAがデフォルトの配置モデル、Windows 2016がデフォルトのWindowsバージョン、SQL 2019 Standard EditionがデフォルトのSQLバージョンです。</block>
   <block id="8afd299f4346ad5e3b322116411294bc" category="list-text">[データベース]タイルで*[データベースホストの配置]*を選択し、ドロップダウンメニューから*[PostgreSQL Server]*を選択します。</block>
   <block id="5ac68d725f8eef71a0523eb1c6cca14f" category="list-text">[ランディングゾーン]*で、次の情報を入力します。</block>
-  <block id="a18df64f6d327d9f4d8ffd9736b846f6" category="admonition">HAの導入は、複数のアベイラビリティゾーン（MAZ）FSx for ONTAP構成でのみサポートされます。</block>
   <block id="9a7005e13653f915b8e1367cbdc68e4e" category="list-text">[導入モデル]*で、*[スタンドアロンインスタンス]*または*[ハイアベイラビリティ（HA）]*を選択します。</block>
   <block id="c4ccde85ea5b8e0593caaf8004ff8930" category="list-text">HA導入の場合</block>
   <block id="d2eadd2943100e3e5ea25460fadf93c2" category="list-text">新しいFSx for ONTAPファイルシステムの場合は、新しいセキュリティグループが作成されてSQLノードに接続されます。既存のFSx for ONTAPファイルシステムでは、関連付けられているセキュリティグループがPostgreSQLノードに自動的に追加され、ファイルシステムとの通信が可能になります。</block>
@@ -1004,4 +1002,5 @@
   <block id="7115d78353263dbb2dbe063624f9f601" category="list-text"><block ref="7115d78353263dbb2dbe063624f9f601" category="inline-link-macro-rx"></block></block>
   <block id="4666cc74583e6d5c1f202a52bee57a9b" category="list-text"><block ref="4666cc74583e6d5c1f202a52bee57a9b" category="inline-link-macro-rx"></block></block>
   <block id="b344730cd36668c36266c1d50c447eea" category="list-text">*セキュリティグループ*:既存のセキュリティグループを選択するか、新しいセキュリティグループを作成します。新しいサーバの導入時に、3つのセキュリティグループがSQLノード（EC2インスタンス）に接続されます。</block>
+  <block id="372b286436aa00cac0e53fa1f2a9c659" category="paragraph">このタスクは、_Advanced create_deploymentモードを使用して、_automate_mode権限でワークロードファクトリで実行できます。Codeboxで利用可能なREST API、AWS CLI、AWS CloudFormation、Terraformの各ツールを使用することもできます。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>です。</block>
 </blocks>
