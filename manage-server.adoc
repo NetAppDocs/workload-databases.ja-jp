@@ -58,14 +58,45 @@ EC2インスタンスからのすべてのアウトバウンド接続にプロ�
 * データベースインスタンスを管理するには、PowerShell7が必要です。を参照して、PowerShell7を手動でインストールします link:https://learn.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.4["Windows用のMicrosoft PowerShellのドキュメント"^]。
 * すべての管理処理は、ユーザ権限を使用してAWS System Manager Agentによって実行され `NT Authority\SYSTEM` ます。データベースサーバのユーザに次の権限を付与し `NT Authority\SYSTEM` ます。
 +
-** `“ALTER SETTINGS”`
-** `“CONTROL SERVER”`
-** `“ALTER ANY DATABASE”`
-** `“VIEW ANY DEFINITION”`
-** `“CONNECT ANY DATABASE”`
-** `“CREATE ANY DATABASE”`
+[cols="2,2a"]
+|===
+| ログインセキュリティ | 必要な場所 
 
 
+| `VIEW ANY DEFINITION`  a| 
+インベントリ、評価、修正、データベースの作成、サンドボックスクローンの作成、削減効果の確認
+
+
+
+| `CONNECT ANY DATABASE`  a| 
+インベントリ、評価、修正、データベースの作成、サンドボックスクローンの作成
+
+
+
+| `VIEW SERVER STATE`  a| 
+インベントリ、評価、修正、データベースの作成、サンドボックスクローンの作成
+
+
+
+| `CREATE ANY DATABASE`  a| 
+データベースの作成、サンドボックスクローンの作成
+
+
+
+| `CONTROL SERVER`  a| 
+サンドボックスクローンの作成
+
+
+
+| `ALTER ANY DATABASE`  a| 
+サンドボックスクローンの作成
+
+
+
+| `ALTER SETTINGS`  a| 
+サンドボックスクローンの作成、MAXDOPの修復
+
+|===
 
 
 .手順

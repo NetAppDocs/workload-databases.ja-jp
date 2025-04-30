@@ -72,7 +72,7 @@ image:screenshot-ebs-savings-calculator-update.png["削減試算ツールペー�
 
 カスタマイズによるコスト削減の詳細を見る:地域、導入モデル、SQL Serverエディション、毎月のデータ変更率、スナップショットの頻度など、EBSまたはFSx for Windows File Serverを搭載したAmazon EC2上のMicrosoft SQL Serverの構成設定を提供します。
 
-検出されたホストの削減効果を確認します。ワークロードのファクトリは既存のMicrosoft SQL Serverにリンクし、詳細を計算ツールに入力して自動比較します。この計算ツールオプションを使用するには、自動化権限を付与する必要があります。ユースケースは変更できますが、その他の詳細はすべて計算で自動的に決定されます。
+検出されたホストの削減効果を確認します。ワークロードのファクトリは既存のMicrosoft SQL Serverにリンクし、詳細を計算ツールに入力して自動比較します。この電卓オプションを使用するには、grant_read-only_or_read/write_permissionsが必要です。ユースケースは変更できますが、その他の詳細はすべて計算で自動的に決定されます。
 
 さらに、計算機分析の精度を向上させることができますlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWSクレデンシャルを追加"^]。[既存のリソースに基づいてコスト削減を計算する]*を選択します。[クレデンシャルの追加]ページにリダイレクトされます。クレデンシャルを追加したら、FSx for ONTAPと比較する既存のリソースを選択し、*[削減効果を確認する]*を選択します。
 
@@ -168,7 +168,7 @@ Workload factoryには、検出されたElastic Block StoreとFSx for Windows Fi
 .開始する前に
 作業を開始する前に、次の前提条件を満たしてください。
 
-* AWSアカウントに登録して、データベースインベントリにElastic Block Store（EBS）システムとFSx for Windowsシステムが検出されていることを確認してlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["権限の付与"^]ください。
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["grant_read-only_or_read/write_permissions"^]AWSアカウントで、*[Explore savings]*タブでElastic Block Store（EBS）とFSx for Windowsシステムを検出し、削減額の計算結果をSavings Calculatorに表示します。
 * データベースインベントリ内のEBSおよびFSx for Windowsストレージのホストを検出します。link:detect-host.html["ホストの検出方法"]です。
 
 
