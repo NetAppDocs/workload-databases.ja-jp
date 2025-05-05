@@ -633,7 +633,6 @@
   <block id="5f4f392649432d3064fdf2a04015472b" category="list-text">ドロップダウン矢印を選択すると、構成の推奨事項が表示されます。推奨事項をよく確認してください。</block>
   <block id="c9e425055996f71ecfc858708d926276" category="paragraph">推奨事項には、最適化されていない構成のベストプラクティスと潜在的な落とし穴が記載されています。</block>
   <block id="ea3bf0643d3540c97b9b92a3fb2bbf75" category="list-text">[Optimize * unoptimized configurations]を選択します。</block>
-  <block id="fa01f4b57079f7ca82b8d852cbf4ed43" category="list-text">最適化ダイアログに表示される最適化の概要とアクション項目を確認して、最適化を選択した場合の動作を確認します。最適化処理によっては、インスタンスのダウンタイムやサービスの中断が発生する場合があります。</block>
   <block id="78a5af6b8a486797f81f9b0dff06821e" category="list-text">構成を最適化するには、* Continue *を選択します。</block>
   <block id="c6ff3995f3c633f2808f96020f887fd9" category="paragraph">最適化プロセスが開始されます。[ジョブ監視]*タブを選択して処理のステータスを表示します。</block>
   <block id="0c47496112bcf6ed0b29fe1fe1d65d62" category="summary">BlueXP  Workload Factory for Databasesは、Amazon FSx for NetApp ONTAPストレージ上のMicrosoft SQL Server環境を継続的に最適化します。</block>
@@ -875,8 +874,6 @@
   <block id="10f9689e79d67ec4a1651805229939e6" category="list-text">ジョブの3ドットメニューをクリックし、* Go to CloudFormation *をクリックして、AWS CloudFormationコンソールにジョブログを表示します。</block>
   <block id="820e39a5de0a231b1bdee7ce11de7c77" category="summary">BlueXP  Workload Factory for Databasesは、Microsoft SQL Serverの構成をスキャンし、優れた運用性の実現に役立つ分析情報と推奨事項を提供します。</block>
   <block id="d156d1de362b4c66bc3effc1835aafe1" category="paragraph">BlueXP  Workload Factory for Databasesは、Amazon FSx for NetApp ONTAPで実行されるMicrosoft SQL Server導入構成を継続的にスキャンして評価します。この機能は、分析情報と推奨事項を提供するとともに、最適化されていない構成を自動的に最適化して、データベースワークロードの優れた運用性を実現するオプションも提供します。</block>
-  <block id="53c8dd8acbb0f2913fab098279485e71" category="list-text">[Inventory]*タブで、ドロップダウン矢印を選択してホストの行を展開し、管理対象インスタンスを表示します。</block>
-  <block id="14237fbd8e1fcf850f132ae839f0337b" category="list-text">インスタンスの3ドットメニューを選択し、*最適化*を選択します。</block>
   <block id="162d1fe2bfd40fdaf4d1507dff7ac010" category="list-text">SQL Serverインスタンスの[Optimize instance]ページで、評価結果を確認します。</block>
   <block id="1d40c1f145e4257a51df779ce509811e" category="paragraph">カテゴリ、サブカテゴリ、ステータス、重大度、およびタグでフィルタリングできます。</block>
   <block id="2c43db36710e9c59ec3e8117665a6dd6" category="paragraph">[Export PDF]を選択して、評価結果のレポートをダウンロードすることもできます。</block>
@@ -1038,4 +1035,51 @@
   <block id="3f21b90f61021d5dd0aefe08d40a11a9" category="cell"><block ref="83a834b3af30dbb7c2007ab7f9bc913b" prefix="" category="inline-code"></block></block>
   <block id="eb0cdf74b605d67e1444197ac2f77c91" category="cell"><block ref="8fdca9c0332e9935139d7384c2a814df" prefix="" category="inline-code"></block></block>
   <block id="538b18c6800ad42458e0bf0bc8a311b6" category="paragraph">サンドボックスクローンの作成、MAXDOPの修復</block>
+  <block id="25696569671071b8bd3db9a4c5f6613e" category="doc">ダッシュボードの機能拡張</block>
+  <block id="04f9acced28b52e064ba8ccb957a615c" category="list-text">BlueXP  ワークロードファクトリコンソールのタブ間を移動すると、アカウント間ビューとリージョン間ビューを使用できます。新しいビューは、リソースの管理、監視、最適化を改善します。</block>
+  <block id="6e21267988cadc818dd398393c695465" category="list-text">ダッシュボードの* Potential Savings *タイルから、Amazon Elastic Block StoreまたはAmazon FSx for WindowsファイルサーバからFSx for ONTAPに切り替えることで、削減可能なコストをすばやく確認できます。</block>
+  <block id="255a96bb0a74416846fbad7e40f8ddf4" category="section-title">データベース構成で使用可能なアドホックスキャン</block>
+  <block id="2b1a16b6cd72c9555872ec61d3334af5" category="paragraph">BlueXP  Workload Factory for Databasesは、管理対象のMicrosoft SQL ServerインスタンスをFSx for ONTAPストレージで自動的にスキャンし、潜在的な構成の問題がないかどうかを確認します。毎日のスキャンに加えて、いつでもスキャンできます。</block>
+  <block id="365d8fe4130e8c12f4a3defc920178dd" category="section-title">オンプレミス評価記録の削除</block>
+  <block id="c4fd25bd6650f0eaedfd01e29fbecddd" category="paragraph">オンプレミスのMicrosoft SQL Serverホストの削減効果を確認したら、オンプレミスのホストレコードをBlueXP  ワークロードファクトリから削除することもできます。</block>
+  <block id="ae548505379d0043460d8c15540cb546" category="section-title">クローンのクリーンアップ</block>
+  <block id="0d003b1e16a8cf8a4b6c0774ee3a0f41" category="paragraph">クローンクリーンアップの評価と修正では、コストのかかる古いクローンを特定して管理します。60日を経過したクローンは、BlueXP  ワークロードファクトリコンソールで更新または削除できます。</block>
+  <block id="6da89f0beda0fbec41b06125b0b7ad32" category="section-title">構成分析の延期と却下</block>
+  <block id="4a9a50cea48d9e2ded3becc284af4e41" category="paragraph">一部の設定はデータベース環境に適用されない場合があります。特定の構成分析を30日延期するか、分析を却下するかを選択できるようになりました。</block>
+  <block id="514f1fc0ac0ff6e4200d3637146367f1" category="section-title">権限に関する用語を更新</block>
+  <block id="a7b97ab7d88b015e92ed51ef4bee9c25" category="paragraph">ワークロードファクトリのユーザインターフェイスとドキュメントでは、読み取り権限を「読み取り専用」に、自動権限を「読み取り/書き込み」に指定するようになりました。</block>
+  <block id="2d07fc9146d02690dffeffa52fbd2ec4" category="list-text">オンプレミスのホストの削除</block>
+  <block id="1c28fa92b25f4914c091b667402466d3" category="list-text">オンプレミスのMicrosoft SQL Serverホストの削減効果を確認したら、オンプレミスのホストレコードをBlueXP  ワークロードファクトリから削除することもできます。Microsoft SQL Serverオンプレミスホストの3ドットメニューを選択し、*[削除]*を選択します。</block>
+  <block id="d824014300a5fc7a6853a9182b4be5ef" category="list-text">クローン：60日を超過したクローン（サンドボックス）を更新および削除するオプションが含まれます。</block>
+  <block id="04467e563313dfe5a1da17bd70a4de75" category="list-text">[インベントリ（Inventory）]*タブで、*[インスタンス（Instances）]*タブを選択します。</block>
+  <block id="8e3db49aef4ba359c0140eea33f2459c" category="list-text">最適化するインスタンスの3ドットメニューを選択し、*最適化*を選択します。</block>
+  <block id="77b2be525ee3461ec499242fca3978f8" category="list-text">クローンクリーンアップを除くすべての構成について、最適化ダイアログで最適化の詳細を確認し、最適化を選択した場合の動作を確認してください。最適化処理によっては、インスタンスのダウンタイムやサービスの中断が発生する場合があります。</block>
+  <block id="c5d0b906e655aeb0e712fdc99742d179" category="list-text">クローンクリーンアップでは、更新または削除するクローンデータベース（サンドボックス）を選択します。</block>
+  <block id="64b911fb444d2ba4347dbcba8d839d9c" category="list-text">クローンを更新すると、クローンがソースデータベースと同期されます。更新は、ワークロード工場で作成されたクローンに対してのみ使用できます。</block>
+  <block id="b11d77d1a514a3b0bdf01908bc4826e9" category="list-text">クローンを削除すると、クローンが完全に削除され、ストレージスペースが解放されてコストが削減されます。ワークロードファクトリ内外で作成されたクローンを削除できます。</block>
+  <block id="cf00508631c0415d4089fb10cbe0511d" category="summary">不要なアラートや不正確な最適化結果を回避するために、データベース環境に適用されない特定のデータベース構成の分析を延期または却下します。</block>
+  <block id="0cdf26a09e8e4cde6653e44f4abd73fb" category="doc">データベース設定の分析を延期または却下する</block>
+  <block id="77df5d7dfd76cd0e6a1a7a837c509672" category="paragraph">不要なアラートや不正確な最適化結果を回避するために、データベース環境に適用されない特定のデータベース構成の分析を延期または却下します。延期または却下された構成分析は、いつでも再アクティブ化できます。</block>
+  <block id="54498ab3155b38b14174ab9dd5caef5a" category="paragraph">データベース構成のアプリケーション要件は異なります。Workload Factoryには、特定のデータベース構成の分析を省略する2つのオプションがあります。これにより、関連する問題のみを監視し、関連する構成の健全性を正確に把握できます。特定の構成分析が延期または却下された場合、その構成は合計最適化スコアに含まれません。</block>
+  <block id="47112685bf756c67c8ac297ef60e48dc" category="paragraph">構成レベルおよびSQL Serverインスタンスレベルで、構成分析の延期、却下、および再アクティブ化を行うことができます。</block>
+  <block id="8a219fba8bbd202ad1f7a47267ff5a2d" category="list-text">* 30日間延期*：解析を延期すると、解析が30日間停止します。30日後、分析は自動的に再開されます。</block>
+  <block id="71e07950d625dfcf829cac7019fb6f26" category="list-text">*却下*：解析を却下すると、解析が無期限に延期されます。必要に応じて解析を再開できます。</block>
+  <block id="cd5a81e0d9eeff49759cb9a6eaa2e1e2" category="paragraph">Microsoft SQL Serverインスタンスについては、次の設定を延期または却下できます。</block>
+  <block id="999cc42b236c7aee1157ff02d6f1bcd5" category="list-text">クローン</block>
+  <block id="75d9a01908e416c932fa5ee3fa0c77a3" category="paragraph">次の手順では、設定レベルで分析を延期、却下、または再アクティブ化する方法について説明します。特定のSQL Serverインスタンスについて次のタスクを実行するには、*[ダッシュボード]*タブからを開始します。</block>
+  <block id="43d86b2167e8a3464a552ee706d46d88" category="paragraph-title">延期</block>
+  <block id="38d07dc1916e6ca30a9f936368828d18" category="paragraph">設定分析を30日間停止するように延期します。30日後、分析は自動的に再開されます。</block>
+  <block id="b8bad4787f04ab4d4933464f551ed74c" category="list-text">[Inventory]*タブで、[Postpone]の設定まで下にスクロールし、3ドットのメニューを選択して[* Postpone for 30 days]*を選択します。</block>
+  <block id="136dc09835924029e4299fa28f17233d" category="list-text">「 * Continue * 」を選択します。</block>
+  <block id="8dca288df860b62f4b631d87b4320f91" category="paragraph">設定の分析が30日間停止します。</block>
+  <block id="c8a59e7135a20b362f9c768b09454fdb" category="paragraph-title">却下</block>
+  <block id="26765b6cc82b68114c879d49f83b0e5a" category="paragraph">構成分析を無期限に停止するには、[却下]をクリックします。必要に応じて解析を再開できます。</block>
+  <block id="fd9eed8a1f28cfe92f0d2d738455682b" category="list-text">[Inventory]*タブで、閉じる構成まで下にスクロールし、3ドットのメニューを選択して、*[Dismiss]*を選択します。</block>
+  <block id="bfc2ef5a56455cfacfde13cf1612e36b" category="paragraph">構成分析が停止します。</block>
+  <block id="8e88e8d3ce1694ab82d525e91ae7c572" category="paragraph-title">再アクティブ化</block>
+  <block id="54a679b97854ca1a358ef23dc83cfce6" category="paragraph">延期または却下された構成分析をいつでも再アクティブ化できます。</block>
+  <block id="58e2f7c25b65ba2e36fc6778b985ab34" category="list-text">[Inventory]*タブで、再アクティブ化する構成まで下にスクロールし、3ドットのメニューを選択して[* Reactivate]*を選択します。</block>
+  <block id="f01282bfdabc9c97224d922f36d898b8" category="paragraph">構成分析が再アクティブ化され、毎日実行されます。</block>
+  <block id="822748e99c70e9162ce5432b2e1eff5c" category="section-title">2025年5月4日</block>
+  <block id="f865802ec5f0fe104a096589d51b39a4" category="sidebar">構成解析の延期</block>
 </blocks>

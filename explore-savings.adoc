@@ -266,6 +266,9 @@ FSx for Windowsのシャドウコピーが検出された場合、デフォル�
 
 FSx for ONTAPに切り替えるには、の手順に従います <<FSx for ONTAPを使用してAWS EC2にMicrosoft SQL Serverを導入,FSx for ONTAPファイルシステムを使用してAQS EC2にMicrosoft SQL Serverを導入>>。
 
+オンプレミスのホストの削除:: オンプレミスのMicrosoft SQL Serverホストの削減効果を確認したら、オンプレミスのホストレコードをBlueXP  ワークロードファクトリから削除することもできます。Microsoft SQL Serverオンプレミスホストの3ドットメニューを選択し、*[削除]*を選択します。
+
+
 
 
 == FSx for ONTAPを使用してAWS EC2にMicrosoft SQL Serverを導入
