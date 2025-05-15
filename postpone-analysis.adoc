@@ -38,9 +38,9 @@ Microsoft SQL Serverインスタンスについては、次の設定を延期ま
 [role="tabbed-block"]
 ====
 .延期
+--
 設定分析を30日間停止するように延期します。30日後、分析は自動的に再開されます。
 
---
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
@@ -53,9 +53,9 @@ Microsoft SQL Serverインスタンスについては、次の設定を延期ま
 
 --
 .却下
+--
 構成分析を無期限に停止するには、[却下]をクリックします。必要に応じて解析を再開できます。
 
---
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
@@ -68,9 +68,9 @@ Microsoft SQL Serverインスタンスについては、次の設定を延期ま
 
 --
 .再アクティブ化
+--
 延期または却下された構成分析をいつでも再アクティブ化できます。
 
---
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
