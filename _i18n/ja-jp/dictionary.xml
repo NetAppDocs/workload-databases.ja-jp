@@ -1002,7 +1002,6 @@
   <block id="425a11288e6c089ecf9966b89b9be4eb" category="list-text">最適化評価では、ターゲットのFSx for ONTAPファイルシステムが別のAWSアカウントにある場合、リージョン間レプリケーション（CRR）が使用されているかどうかを判断できません。</block>
   <block id="a73971e47314d5a9302d6e0e452948e6" category="list-text">Workload Factoryでは、ソースFSx for ONTAPファイルシステムのCRR構成のみが評価されます。</block>
   <block id="af64c2575cf7c41d9a388382dfd2aef2" category="section-title">SQL Serverインスタンス内のデータベース数</block>
-  <block id="b4f10df58cb8c1f0e0b30bd6fc637ddd" category="paragraph">[Inventory]タブとダッシュボードでは、ワークロードファクトリでSQL Serverインスタンス内の最大850のデータベースがサポートされます。</block>
   <block id="fb090b715eaceea73761a137a2eb45c0" category="list-text">耐障害性：ローカルSnapshot、FSx for ONTAPバックアップ、リージョン間レプリケーション（CRR）など</block>
   <block id="765282496f8377d23a4dec7887b9cea8" category="paragraph">*すべて選択*がデフォルトですが、最適化する特定のリソースを選択できます。</block>
   <block id="c69c68bea63a58faad0233887cb8a9aa" category="section-title">2025年4月4日</block>
@@ -1081,4 +1080,5 @@
   <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">* REST API *：ワークロードファクトリREST APIを使用して、FSx for ONTAPファイルシステムやその他のAWSリソースを導入、管理します。</block>
   <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">* CloudFormation *：AWS CloudFormationコードを使用して、ワークロードファクトリコンソールで定義したアクションを実行し、AWSアカウントのCloudFormationスタックからAWSおよびサードパーティリソースをモデル化、プロビジョニング、管理します。</block>
   <block id="06c2e2277da374dd2cc7b735a1d1e848" category="list-text">* Terraform BlueXP  ワークロードファクトリプロバイダ*：Terraformを使用して、ワークロードファクトリコンソールで生成されるインフラワークフローを構築および管理します。</block>
+  <block id="5614519834733a69bfb8911eae5d33b8" category="paragraph">[Inventory]タブとダッシュボードでは、ワークロードファクトリでSQL Serverインスタンス内の最大1,500のデータベースがサポートされます。</block>
 </blocks>
