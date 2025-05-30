@@ -169,7 +169,56 @@ Workload factoryには、検出されたElastic Block StoreとFSx for Windows Fi
 作業を開始する前に、次の前提条件を満たしてください。
 
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["grant_read-only_or_read/write_permissions"^]AWSアカウントで、*[Explore savings]*タブでElastic Block Store（EBS）とFSx for Windowsシステムを検出し、削減額の計算結果をSavings Calculatorに表示します。
-* データベースインベントリ内のEBSおよびFSx for Windowsストレージのホストを検出します。link:detect-host.html["ホストの検出方法"]です。
+* インスタンス タイプの推奨事項を取得し、コストの精度を向上させるには、次の手順を実行します。
++
+.. Amazon CloudWatch および AWS Compute Optimizer に権限を付与します。
++
+... AWS マネジメントコンソールにサインインし、IAM サービスを開きます。
+... IAMロールのポリシーを編集します。以下のAmazon CloudWatchとAWS Compute Optimizerの権限をコピーして追加します。
++
+[source, json]
+----
+{
+"Version": "2012-10-17",
+"Statement": [
+  {
+   "Effect": "Allow",
+   "Action": "compute-optimizer:GetEnrollmentStatus",
+   "Resource": "*"
+  },
+  {
+   "Effect": "Allow",
+   "Action": "compute-optimizer:PutRecommendationPreferences",
+   "Resource": "*"
+  },
+  {
+   "Effect": "Allow",
+   "Action": "compute-optimizer:GetEffectiveRecommendationPreferences",
+   "Resource": "*"
+  },
+  {
+   "Effect": "Allow",
+   "Action": "compute-optimizer:GetEC2InstanceRecommendations",
+   "Resource": "*"
+  },
+  {
+   "Effect": "Allow",
+   "Action": "autoscaling:DescribeAutoScalingGroups",
+   "Resource": "*"
+  },
+  {
+   "Effect": "Allow",
+   "Action": "autoscaling:DescribeAutoScalingInstances",
+   "Resource": "*"
+  }
+]
+}
+----
+
+
+.. 課金対象の AWS アカウントを AWS Compute Optimizer に登録します。
+
+
 
 
 ストレージタイプに応じたタブの手順に従います。
