@@ -50,7 +50,7 @@ EC2インスタンスからのすべてのアウトバウンド接続にプロ�
 
 == 開始する前に
 
-インスタンスのホストはインベントリタブに表示されている必要があります。ホストがインベントリに表示されるには、 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWSアカウントの認証情報と_read_または_automate_モードの権限を追加する必要があります"^] 。
+インスタンスのホストはインベントリタブに表示されている必要があります。ホストがインベントリに表示されるには、 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWSアカウントの認証情報と_読み取り専用_または_読み取り/書き込み_モードの権限を追加する必要があります"^] 。
 
 
 

@@ -19,7 +19,7 @@ BlueXP  Workload Factory for Databasesでデータベースのサンドボッ�
 .開始する前に
 サンドボックスクローンを作成する前に、次の前提条件を満たしていることを確認してください。
 
-クレデンシャルと権限:: ワークロードファクトリでサンドボックスクローンを作成する必要がありlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWSアカウントのクレデンシャルと_read_or_automate_mode権限"^]ます。
+クレデンシャルと権限:: ワークロードファクトリでサンドボックスクローンを作成する必要がありlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS アカウントの認証情報と _読み取り専用_ または _読み取り/書き込み_ モードの権限"^]ます。
 +
 --
 または、[コードボックス]を使用して部分的に完成したテンプレートをコピーするか、完成したテンプレートを作成して、REST APIを使用してワークロードファクトリの外部にサンドボックスクローンを作成できます。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Codebox自動化の詳細"^]です。
