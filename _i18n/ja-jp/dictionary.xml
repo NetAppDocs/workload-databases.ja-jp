@@ -41,7 +41,6 @@
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">開始する前に</block>
   <block id="b2f899f972527ed53c986fff0ea809c9" category="paragraph">新しいデータベースホストを作成する前に、次の前提条件を満たしていることを確認してください。</block>
   <block id="ee87d4c496da752f756c502bf6d73599" category="list-text">クレデンシャルと権限</block>
-  <block id="1b3eca0f21789e391339e536902a0773" category="inline-link-macro">AWSアカウントのクレデンシャルと自動モードの権限</block>
   <block id="4e79c01286f2a10af230320a37d7ce30" category="inline-link-macro">Codebox自動化の詳細</block>
   <block id="6aa474bc798ba983a2979f974d7af008" category="list-text">Active Directoryに接続する場合は、次の作業を行うための権限を持つ管理者アクセス権が必要です。</block>
   <block id="711b4926fa677fe43f56947d4d5cafe7" category="list-text">ドメインへの参加</block>
@@ -191,26 +190,6 @@
   <block id="5697f3fa0c3bfd3435b1268d395d044b" category="doc">ソースデータベースからサンドボックスクローンをスプリットする</block>
   <block id="0f024621e0673f1f4e657983682d6e72" category="list-text">「 * 削除」を選択します。</block>
   <block id="1aef21babcea64bea2aff92468198535" category="list-text">[削除]ダイアログで、*[削除]*をクリックします。</block>
-  <block id="107c83bbd5efd331077f3ba178a657b5" category="doc">Microsoft SQL Serverインスタンスの検出</block>
-  <block id="89d4e8decf00d1ba7948a89df7b705a6" category="paragraph">このタスクでは、_undetectedインスタンス_を検出します。</block>
-  <block id="36df1b975561708b246ef1801ea416e5" category="list-text">FSX for ONTAP の略</block>
-  <block id="4b222d59a012c5cc128037a5a473cde7" category="list-text">Elastic Block Store（EBS）</block>
-  <block id="abef82f89770aefd53c1cafe296c05f7" category="list-text">FSx for Windowsファイルサーバ</block>
-  <block id="0c58524f460d0dca6bc74f75070e81b4" category="paragraph">データベースでは、検出されたインスタンスは次のように分類されます。</block>
-  <block id="8482966e54e535a17c37e8a9e60719d9" category="list-text">Microsoft SQL Server認証に失敗します。</block>
-  <block id="d7d2bdfad20e8678423a16803cafd735" category="paragraph">検出されていないデータベースサーバインスタンスを検出するための要件は次のとおりです。</block>
-  <block id="38a12b37ae4221c5fda46c9430a61d47" category="inline-link-macro">AWSアカウントノクレデンシャル</block>
-  <block id="dc009403919a36e84e394bfc7dac9390" category="list-text">インスタンスのストレージタイプは次のいずれかである必要があります。</block>
-  <block id="3962b6fab28418ee6542523fce705073" category="list-text">EC2インスタンスには、SSM接続による検出を可能にするロール/インスタンスプロファイルが必要です。</block>
-  <block id="5dff7dc03e6adf7d4ca469820cdba620" category="inline-link-macro">SSMのトラブルシューティングの詳細</block>
-  <block id="a218784743407787312891b174efa23d" category="paragraph">Microsoft SQLインスタンスが検出されても、既存の環境は変更されません。検出はAWS Systems Manager Session Manager（SSM）を介して行われます。適切なIAMインスタンスプロファイルがないと、検出に失敗します。<block ref="6d65103434cb07e7afb870839cad8f12" category="inline-link-macro-rx"></block>です。</block>
-  <block id="95b565a5e9864d62ea1fb7e39b926b3b" category="list-text">ドロップダウン矢印をクリックして、検出するホストの行を展開します。</block>
-  <block id="8dbec57fc4c47759d905a8c83da70c0f" category="paragraph">ホストが展開され、ホストインスタンスが表示されます。</block>
-  <block id="a01b2b217874340f2cbed78113cf3f07" category="list-text">[検出]*をクリックします。</block>
-  <block id="52f93363b11de846f37617dc280f35b6" category="list-text">[インスタンスの検出]ダイアログで、Microsoft SQL Serverのユーザー名とパスワード、またはFSx for ONTAPのユーザー名とパスワードを入力します。</block>
-  <block id="aee0a08114ee057480ece887eabe9d05" category="paragraph">検出されたインスタンス情報が表示されます</block>
-  <block id="1fed0bc2c72e36c6e777e5a1e7def8f8" category="list-text">[Yes、Manage instance via Workload Factory]*または*[No]*を選択します。</block>
-  <block id="e13a15252a4dbf9779c44afe477e3343" category="list-text">[ 完了（ Done ） ] をクリックします。</block>
   <block id="bfe3baeb9acd99f2f2bce618befc4139" category="paragraph">作業を開始する前に、次の前提条件を満たしてください。</block>
   <block id="201c4d58b6fa62f021a1865e894234ef" category="list-text">*毎月の変更率*：クローンおよびスナップショットのデータの1カ月あたりの平均変更率を入力します。</block>
   <block id="f31ed490fd3768dff2a1121a0a06095c" category="list-text">導入方法</block>
@@ -378,36 +357,11 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">オープンソース</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。</block>
-  <block id="6130b5542240619621b88baf10547d84" category="paragraph">データベースは、FSx for ONTAPファイルシステムストレージでのみMicrosoft SQL Serverインスタンスを管理できます。</block>
-  <block id="b43307219a7b65a8301c057d6f6b5478" category="section-title">Microsoft SQL Serverインスタンスの管理</block>
-  <block id="7c6c9edd9611134efa9dc1ed2f630486" category="paragraph">Microsoft SQL Serverインスタンスの管理には、次のタスクが含まれます。</block>
-  <block id="4c2074388cf4ff8bed676ca933f2b317" category="list-text">ホストインスタンスを管理します。</block>
-  <block id="994fd8f490177306769be0a7cbfcc3e6" category="list-text">管理対象インスタンスの表示</block>
   <block id="948d113c0ab3cb85650dda6912a734c5" category="list-text">データベースの表示</block>
-  <block id="516bc1905150a9c47ed4ba785d304c08" category="list-text">ホストインスタンスの管理解除</block>
-  <block id="327ffbd91edd4e33d5518e4e2ffe32a7" category="inline-link-macro">1つ以上のホストインスタンスを検出</block>
-  <block id="f55f72ac990fbff5b0fa9fa6ef2a43f8" category="paragraph">これらのタスクのいずれかを実行するには、が必要です <block ref="7590173c3966c31656f7462bb5d71596" category="inline-link-macro-rx"></block>。</block>
-  <block id="9ee949a52ce818bc3dc8adf7994630ff" category="paragraph">検出されたホストまたは管理対象外のMicrosoft SQL Serverインスタンスを管理します。</block>
-  <block id="cd78ff90ddf6720085af92558142d117" category="list-text">管理に使用できるホストで検出されたインスタンスが必要です。</block>
-  <block id="ec23fcbca926c2c56578aa4b009e5426" category="inline-link-macro">Windows用のMicrosoft PowerShellのドキュメント</block>
-  <block id="0a2076265c3748f47dd0af532c7aface" category="list-text">データベースインスタンスを管理するには、PowerShell7が必要です。を参照して、PowerShell7を手動でインストールします <block ref="83fcecee5da20c347486b34eede460ed" category="inline-link-macro-rx"></block>。</block>
-  <block id="14018e7d1ee628c58a60c375fd95df80" category="list-text">すべての管理処理は、ユーザ権限を使用してAWS System Manager Agentによって実行され<block ref="7254170b56a28e207df989a3f40b911f" prefix=" " category="inline-code"></block> ます。データベースサーバのユーザに次の権限を付与し<block ref="7254170b56a28e207df989a3f40b911f" prefix=" " category="inline-code"></block> ます。</block>
-  <block id="aac2a7646728f5a7e043cf96134ccdb3" category="list-text">管理するホストの行で*[管理]*をクリックします。</block>
-  <block id="2fb4e3404c1ed4190dc6ef818393c670" category="list-text">管理するホストインスタンスを1つ以上選択します。</block>
-  <block id="5a71da60e1bd3ad61adeed4b3b25dfd4" category="list-text">[管理]*をクリックします。</block>
-  <block id="c08e85e895d76938ea6dece5bb44d66e" category="paragraph">管理対象インスタンスを表示するには、次の手順を実行します。</block>
-  <block id="8719fc3365176d7b81bdcbf4c1ff4a2f" category="list-text">ドロップダウン矢印をクリックしてホストの行を展開すると、その管理対象インスタンスが表示されます。</block>
   <block id="7a85061671bf8d085efe2cb8dfd1c79e" category="paragraph">ホストが展開され、ホストインスタンスが表示されます。</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">結果</block>
-  <block id="124a4b88b8d9e1fc268a022789dfa437" category="paragraph">インスタンスの概要が[Inventory]タブに表示されます。</block>
-  <block id="12d2adb5a33b1aa2d5dffa5f023e36e4" category="paragraph">管理対象インスタンスで管理されているデータベースを表示するには、次の手順を実行します。</block>
   <block id="ca6b20c311193d70fa95150e9aadfeff" category="list-text">ドロップダウン矢印をクリックしてホストの行を展開し、ホストのデータベースを表示します。</block>
   <block id="bab47e98a40b74089a0df1373390d048" category="list-text">[データベースの表示]*を選択します。</block>
-  <block id="c86b7424c07159a13fb442303997ee5e" category="paragraph">インスタンス内のデータベースのリストが[Inventory]タブに表示されます。</block>
-  <block id="1654b38c29f5708868d01a77911262a6" category="paragraph">次の手順に従って、ホストインスタンスの管理を解除します。</block>
-  <block id="65cc39a76868117dd307472ad16886fe" category="list-text">ドロップダウン矢印をクリックして、管理を解除するホストインスタンスの行を展開します。</block>
-  <block id="15dbb4d45ce02c5b74e74fc25c85c667" category="list-text">[Unmanage]*を選択します。</block>
-  <block id="96a30701e83b6fe09ce36fcd863cb65b" category="paragraph">ホストインスタンスが管理対象外になりました。</block>
   <block id="252215232d636a7c096b2327e9a20b42" category="doc">データベースの監視</block>
   <block id="67b0a66954400448325457f930e0f82b" category="paragraph">ジョブ監視では、ジョブに応じて最大3つのレベルの監視がサポートされます。たとえば、新しいデータベースおよびサンドボックスクローンの作成では、ジョブ監視によって親ジョブとサブジョブが追跡されます。</block>
   <block id="b830a8f027299af6d1d8ffbb130bcc58" category="list-text">ジョブ監視レベル</block>
@@ -420,22 +374,15 @@
   <block id="4639d0e2e2909a747265c2f704128bca" category="section-title">ジョブの監視</block>
   <block id="96ea9efb359a91a00480c8f67e682c8f" category="list-text">[データベース]で、*[ジョブの監視]*タブを選択します。</block>
   <block id="59d6e1b8f6bd894db211d6ad27845f97" category="list-text">[ジョブ監視]タブで、フィルタを使用するか検索してジョブの結果を絞り込みます。ジョブレポートをダウンロードすることもできます。</block>
-  <block id="22358702cb945913fe9b03fc1642777a" category="summary">データベースには、要件が異なる3つのモードがあります。</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">1つ</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">2つ</block>
   <block id="27c19be9febabd1e2fb82d7a39784f2d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> クレデンシャルと権限の追加</block>
-  <block id="ef10fd0583cb29fae9962398dccb7949" category="inline-link-macro">_basic_、_read_、および_automate_operationalモード</block>
-  <block id="bdb2387bd633174e2bf3ed30c7e23fcd" category="paragraph">いずれかを選択し <block ref="c3b5a6253a0d0b0237f0d9c1e9a7dfa2" category="inline-link-macro-rx"></block>ます。</block>
   <block id="f13bb46705b371ce5ebc0ccc10f09bb0" category="inline-link-macro">データベースサーバの導入方法</block>
   <block id="ce8e7e98b5597e78e8fd7d6bc94729cb" category="inline-link-macro">アカウントへのクレデンシャルの手動追加</block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">3つ</block>
   <block id="6f6390592b833a81a0bda8c296a3c5b6" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> データベースサーバの導入</block>
-  <block id="078f40fa23e0672777adc7c05d4773dd" category="inline-link-macro">導入する</block>
-  <block id="84c21b8cc296c1da3bb78060284eaac1" category="inline-link-macro">データベースサーバの検出</block>
-  <block id="fb4bdf4175298f0102e06e87845aa4d6" category="paragraph">最後に、_automate_modeで動作するように選択した場合は、またはホストリソースを管理してから、ユーザデータベースを追加する必要があります <block ref="59bd3d71ec0b7c2f2cdc48f826101be3" category="inline-link-macro-rx"></block> <block ref="ce52b47cf84b17846dfd2d3004a17efa" category="inline-link-macro-rx"></block> 。</block>
   <block id="76e0353f7732c65129a16b1dee5f98f2" category="inline-link-macro">ユーザデータベースの作成</block>
   <block id="9099614931eafcd02d62211a634872c7" category="inline-link-macro">ホストのクローンを作成してサンドボックスを作成する</block>
-  <block id="64cae7d199a0b43d21cb5921156fe660" category="paragraph">データベースインベントリにFSx for ONTAP管理ホストがある場合は、またはを実行できます <block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block> <block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block>。</block>
   <block id="24ba9febbdf4f0bdec223ad9cf7f746f" category="paragraph">クローンを更新すると、現在のソースデータベース、または過去の時点で作成されたソースデータベースのスナップショットに対してクローンが更新されます。サンドボックスクローンに対する変更はすべて削除されます。</block>
   <block id="397fb4bed63b1f030827aee0d3d2a9f3" category="paragraph">更新は、ソースデータベースがアクティブな場合にのみ実行できます。</block>
   <block id="745d72e1ba4e4047caaf9e8b73eca0e0" category="paragraph">Snapshotからデータベースクローンを更新するには、処理用にソースデータベースに少なくとも1つのSnapshotが必要です。</block>
@@ -506,7 +453,6 @@
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新機能</block>
   <block id="991fc877b6135bcda7435016745ae066" category="sidebar">データベースワークロードを使用</block>
   <block id="fbe27670bf06b7e38d268c77e7f002f0" category="sidebar">新しいデータベースサーバを作成する</block>
-  <block id="4564dd7bc0da251c3d18fb2269904a81" category="sidebar">データベースサーバの検出</block>
   <block id="5eb43e1edd4f0757c83c6d6f6632ff94" category="sidebar">管理と監視</block>
   <block id="077bbf8da979e97e9f7ec7239eb76073" category="sidebar">Microsoft SQL Serverの管理</block>
   <block id="6ea5d3d06add60328b6497a58edc5878" category="sidebar">クローンの管理</block>
@@ -602,7 +548,6 @@
   <block id="60d184cc6fb4054879723de86764a020" category="list-text">必要に応じて、Savings Calculatorで、FSx for Windowsストレージのクローン（シャドウコピー）とスナップショットに関する以下の詳細情報を提供し、コスト削減の見積もりをより正確にします。</block>
   <block id="c552646e3717f4144059bd229d9b3c96" category="paragraph">FSx for Windowsのシャドウコピーが検出された場合、デフォルト値は* Daily *です。シャドウコピーが検出されない場合、デフォルト値は*スナップショット頻度なし*です。</block>
   <block id="724d4c3a0255dd97a61657dd67fdf48f" category="list-text">*クローンコピーの数*：FSx for Windows構成でクローンコピーの数を入力します。</block>
-  <block id="55376293ec338d45989562b49241fa71" category="paragraph">外部接続のないプライベートネットワークでホストインスタンスを管理するには、SQLサーバが存在するサブネットに関連付けられたVPCで次のエンドポイントが使用可能である必要があります。接続されているセキュリティグループのポート443が、インターフェイスエンドポイントで許可されていることを確認します。</block>
   <block id="021cd7b44c92e0977eee47344e7f4a7b" category="list-text"><block ref="d2c8dc6d0833da0998d37357f2d65fca" prefix="" category="inline-code"></block></block>
   <block id="afe3dddd43fed2e0f76617fa08ab254a" category="list-text"><block ref="078aab7ae8c1a0df339ac8525790d5e1" prefix="" category="inline-code"></block></block>
   <block id="cfa54b7dd19dd91bb87ede68126951eb" category="list-text"><block ref="25f6388206f436c2d1de63216302b13d" prefix="" category="inline-code"></block></block>
@@ -619,36 +564,17 @@
   <block id="2532cd63354e6e99119077d45134b5ef" category="inline-link-macro">コードボックスからTerraformを使用</block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">Codeboxを使用して自動化する方法</block>
   <block id="0937bd87e3f84605f28e13c1956980d3" category="list-text">*継続的な最適化*：Microsoft SQL Server環境をオフラインで継続的にスキャンし、優れた運用性の実現に役立つインサイト、機会、推奨事項の包括的なレポートを提供します。</block>
-  <block id="13025ba9f92de77af2aeaf1af07a4aa8" category="doc">Microsoft SQL Server環境向けに構成を最適化</block>
-  <block id="6f2bcb2f8d4f34c036395a199095be9a" category="paragraph">この評価は、ワークロード工場で管理されているFSx for ONTAPストレージを使用して、Microsoft SQL Serverインスタンスについて毎日1回自動的かつ継続的に実行されます。評価レポートは、導入後またはインスタンスの管理後に毎日スケジュールされたジョブが実行された場合にのみ、最適化ダッシュボードで使用できます。</block>
-  <block id="246db1206cb640c61b32f7cea2560b8e" category="list-text">スキャン対象</block>
-  <block id="af27bafd548aa3e366e582049aeb65f1" category="list-text">Workload Factoryは、Microsoft SQL Serverインスタンスについて次の構成の最適化ステータスを評価します。</block>
   <block id="04dff47f9a41cfa54b616dd86a4a6043" category="list-text">ストレージのサイジング：ストレージ階層、ファイルシステムのヘッドルーム、ログドライブのサイズ、tempdbドライブのサイズを含む</block>
   <block id="b1107628010e55afc5ec740439838f10" category="list-text">ストレージレイアウト：ユーザデータファイルの配置、ログファイルの配置、tempdbの配置を含む</block>
   <block id="8bc38d27c74401312cd5c45bfd8a7d05" category="list-text">ストレージ構成：容量管理、シンプロビジョニング、階層化ポリシー、Snapshot、マルチパスI/Oステータス、ポリシー、セッションなど</block>
-  <block id="1a0e703f0bdb101f4848a5510dd8ec1c" category="list-text">読み取りまたは自動化の権限を持つクレデンシャルが必要です。</block>
-  <block id="86bd4600548ee1b734f704338ab13665" category="list-text">Microsoft SQL Serverインスタンスのストレージを評価するには、インスタンスがワークロード工場で管理されていて、ストレージタイプがFSx for ONTAPである必要があります。</block>
-  <block id="5f4f392649432d3064fdf2a04015472b" category="list-text">ドロップダウン矢印を選択すると、構成の推奨事項が表示されます。推奨事項をよく確認してください。</block>
-  <block id="c9e425055996f71ecfc858708d926276" category="paragraph">推奨事項には、最適化されていない構成のベストプラクティスと潜在的な落とし穴が記載されています。</block>
-  <block id="ea3bf0643d3540c97b9b92a3fb2bbf75" category="list-text">[Optimize * unoptimized configurations]を選択します。</block>
-  <block id="78a5af6b8a486797f81f9b0dff06821e" category="list-text">構成を最適化するには、* Continue *を選択します。</block>
-  <block id="c6ff3995f3c633f2808f96020f887fd9" category="paragraph">最適化プロセスが開始されます。[ジョブ監視]*タブを選択して処理のステータスを表示します。</block>
-  <block id="0c47496112bcf6ed0b29fe1fe1d65d62" category="summary">BlueXP  Workload Factory for Databasesは、Amazon FSx for NetApp ONTAPストレージ上のMicrosoft SQL Server環境を継続的に最適化します。</block>
-  <block id="9d62eb1e78c18c53c2bc3d807f4d5b04" category="doc">データベース向けのBlueXP  ワークロードファクトリ向けの継続的な最適化</block>
-  <block id="b97ec9fa7955169dbb93f4727a02e87d" category="paragraph">継続的最適化データベースインフラを大規模に自動的にスキャンして評価することで、大規模な環境で最高のパフォーマンス、コスト効率、ベストプラクティスへの準拠を実現します。この機能は、最適化のためのインサイトと推奨事項の包括的なレポートを提供します。</block>
-  <block id="638c7d8777be813a6cc36be0ae2ccf68" category="paragraph">継続的な最適化により、データベースインフラの問題を検出し、何を変更する必要があるかを把握して対策を講じることができます。</block>
   <block id="1c11d2e59190fe6a4e37f1e68abafcb4" category="paragraph">主な機能は次のとおりです。</block>
-  <block id="5767d06d754465b4eceaed828d43069f" category="list-text">継続的な評価</block>
   <block id="8c0981b34ea19373e1dcf1c3d034f097" category="list-text">ベストプラクティスの自動検証</block>
   <block id="029d49350caff46ab3e1f31c9c60f494" category="list-text">サイズの適正化に関する推奨事項</block>
   <block id="3583e4a3e4e2e122cff65b8ad9045348" category="list-text">プロアクティブなオブザーバビリティ</block>
   <block id="16fcd85dc9469370b62b4b46381f8e2a" category="list-text">インサイトからアクションへ</block>
   <block id="7a3fc3cf12e9da54628c7311398bee5c" category="list-text">AWS Well-Architected Framework Advisor</block>
   <block id="de29686d1474303323860ff8044fc4ed" category="paragraph">最適化の範囲は、評価するコンポーネントによって異なります。たとえば、ストレージの最適化はSQLインスタンスレベルで行われ、コンピューティングの最適化はホストレベルで行われます。</block>
-  <block id="ca3feda4f22b6d2a240006fa0a33f99e" category="paragraph"><block ref="ca3feda4f22b6d2a240006fa0a33f99e" category="inline-link-macro-rx"></block></block>
   <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">2024年11月3日</block>
-  <block id="372aea905d324ed9cf6878e3f3ed7abc" category="sidebar">SQL Serverの最適化</block>
-  <block id="6ca43380ae924ff967599986889184b3" category="sidebar">継続的最適化の概要</block>
   <block id="d1e68728a28b7936858b1484445ef50f" category="sidebar">構成を最適化</block>
   <block id="35c4b7b7975b86786b96de60f8d9159c" category="doc">BlueXP  Workload Factory for Databasesの初版リリース</block>
   <block id="fe582581097e432c4b1b3f3135f39b72" category="paragraph">初期リリースには、データベースワークロードのストレージ環境としてAmazon FSx for NetApp ONTAPを使用した場合のコスト削減の検討、Microsoft SQL Serverの検出、管理、導入、データベースの導入とクローニング、ワークロードファクトリ内でのジョブの監視が含まれています。</block>
@@ -662,15 +588,7 @@
   <block id="e1e54933838bb7ba662301d01c937d2d" category="list-text">いずれかを使用してログインし<block ref="68ceec76279c6913cdee16884c2d813a" category="inline-link-macro-rx"></block>ます。</block>
   <block id="842cadd8705fae5a3bbfb5a3b59568fe" category="paragraph">REST APIコードを使用してサンドボックスクローンを継続的統合/継続的導入（CI / CD）パイプラインに接続し、データベース向けBlueXP  ワークロードファクトリでの自動化を通じてソフトウェア提供を改善します。</block>
   <block id="920d5db87e34d780e98c3efabde9041b" category="summary">データベース用のBlueXP  ワークロードファクトリ内に新しいMicrosoft SQL Serverを作成します。</block>
-  <block id="0eafa9073db40c1542192aa961e80360" category="doc">データベース用のBlueXP  ワークロードファクトリにデータベースサーバを作成</block>
-  <block id="c3882e9ef595e2071c5d33931b535f75" category="paragraph">BlueXP  Workload Factory for Databasesで新しいMicrosoft SQL Server（データベースホスト）を作成するには、FSx for ONTAPファイルシステムの導入とActive Directory用のリソースが必要です。</block>
   <block id="e688adbe92be47aae67ff0624dc5033a" category="list-text">Microsoft SQL Serverの導入モデルでは、どちらもiSCSIストレージプロトコルを使用してLUNを作成する必要があります。SQL Server over FSx for ONTAP用のLUNの設定の一環として、ワークロード工場でMicrosoftマルチパスI/O（MPIO）が設定されます。MPIOは、AWSとNetAppのベストプラクティスに基づいて設定されます。</block>
-  <block id="0d52db4b096880e69c4e146f0ba49f37" category="list-text">ワークロードファクトリ動作モード</block>
-  <block id="f9d2517e544fb26af8171abd3daf978c" category="list-text">Workload Factoryには、ワークロードファクトリがAWSリソースを管理できるようにする方法に応じて、3つの運用モードが用意されています。</block>
-  <block id="22d129236109e381371997931d9e2552" category="paragraph">*_Basic_mode *：この操作モードでは、ワークロードファクトリにAWSアカウントのクレデンシャルを関連付ける必要はありません。部分的に塗りつぶされたYAMLテンプレートをコードボックスからコピーまたはダウンロードして、ワークロードファクトリの外で完成させることができます。</block>
-  <block id="a538aa1311e84c0f42a362aece349223" category="paragraph">*_Read_mode *:この操作モードでは、AWSアカウントのクレデンシャルに読み取り権限を付与します。これにより、_Quick create_or_Advanced create_formを完成させ、コピーまたはダウンロードすることができます。入力したフォームの詳細を使用して、ワークロードファクトリからCloudFormationにリダイレクトすることもできます。また、ワークロードファクトリに導入されたデータベースサーバを管理できるようになります。</block>
-  <block id="02b7989729e7d5233996b9d03d093fc1" category="paragraph">*_automate_mode *：この操作モードでは、AWSアカウントのクレデンシャルに自動化権限を付与します。これにより、ワークロードファクトリ内でAWSリソースを作成および管理できます。</block>
-  <block id="6e604948d399e1365a2d5a11ee7838d8" category="list-text">ワークロードファクトリで新しいデータベースホストを作成する必要があり<block ref="6d0e9cd8cac3e1654b2b4423d6d0dc45" category="inline-link-macro-rx"></block>ます。</block>
   <block id="cef4156e4fa9e5869d4dee02c1b39d6e" category="paragraph">_automate_permissionsを指定したAWSクレデンシャルを使用すると、ワークロードファクトリ内のAWSアカウントから新しいデータベースホストを導入して管理できます。</block>
   <block id="cc04c98a943715d655ef7f99796aae2a" category="paragraph">AWSクレデンシャルに_read_permissionsを指定すると、ワークロードファクトリでCloudFormationテンプレートが生成され、AWS CloudFormationコンソールで使用できます。</block>
   <block id="b4db11619512665a02befd7699ec1538" category="paragraph">ワークロードファクトリにAWSクレデンシャルが関連付けられておらず、ワークロードファクトリに新しいサーバを作成する場合は、*オプション1 *に従って[クレデンシャル]ページに移動します。データベースワークロードの_automate_modeに必要なクレデンシャルと権限を手動で追加します。</block>
@@ -697,18 +615,6 @@
   <block id="23fb636062a19e5367fc7e960e315c4c" category="list-text">*マウント*：複数のデータファイルやログファイルを含むSQLデータベースをクローニングする場合、ワークロード工場では、自動割り当てまたは定義されたドライブレターの下にあるすべてのファイルのクローンが作成されます。</block>
   <block id="f18c09ef6c0024eb6c989751920a14b8" category="summary">BlueXP  ワークロードファクトリで不要になったサンドボックスクローンを削除します。</block>
   <block id="b77d65b48658772b1938bb5f92515cad" category="paragraph">BlueXP  ワークロードファクトリでデータベース用のサンドボックスクローンが不要になり、ストレージ容量を解放したい場合は削除します。</block>
-  <block id="fbb4a1d64b556827c605ba040ca56ae4" category="summary">データベース用のBlueXP  ワークロードファクトリでMicrosoft SQL Serverインスタンスを検出します。</block>
-  <block id="178414bb543c963fec57976ea2336e31" category="paragraph">AWSクレデンシャルがワークロードファクトリに関連付けられている場合、データベースでは、次のAWSストレージタイプを使用したSQL Server 2016以降のMicrosoft SQL Serverの自動検出が可能になります。</block>
-  <block id="89431105385d4cca92651e5744f72524" category="list-text">_検出されないインスタンス_：ワークロードファクトリによって自動的に検出された検出されないインスタンス。次の場合、インスタンスは検出されません。</block>
-  <block id="419a941115159d4985613564bc390429" category="list-text">Microsoft SQL Server向けFSx for ONTAPファイルシステムは、ワークロード工場のお客様のアカウントに登録されていません。</block>
-  <block id="ed7308cd20331dcb0eda88490074a613" category="list-text">_管理対象外インスタンス_：ワークロードファクトリで管理されていないインスタンスを検出しました</block>
-  <block id="05a7af3bced3936cf1cba360e81ad241" category="list-text">_管理対象インスタンス_：Workload Factoryで管理されているインスタンスを検出しました。</block>
-  <block id="1469195c081bd9ee6ffd6a3cb8fb9125" category="paragraph">データベースのワークロードファクトリでMicrosoft SQL Serverインスタンス（ホストインスタンス）を管理するための最初のステップは、検出されていないデータベースサーバインスタンスを検出することです。</block>
-  <block id="9a7295dfae67ffbc9b3db0308d671d81" category="list-text">ワークロードファクトリでデータベースサーバインスタンスを検出する必要があり<block ref="8daf2318f1eb74a04bc7cb12c8d5f7c1" category="inline-link-macro-rx"></block>ます。</block>
-  <block id="9a5427eccfb5f1515fe411b7234b8d16" category="paragraph">ワークロードファクトリでは、Microsoft SQLのクレデンシャルまたはFSx for ONTAPのクレデンシャルが検証されます。</block>
-  <block id="e16048662fe75d93a18c006c49a59e5b" category="paragraph">これらの資格情報のいずれかが使用できない場合、Workload FactoryはPowerShellにモジュールをインストールしようとし<block ref="80caa08185fe6ba2da6b227f3c292956" prefix=" " category="inline-code"></block>ます。</block>
-  <block id="ee7e8786e2029f74d5565c2e6e78c36b" category="inline-link-macro">Workload Factory経由でインスタンスを管理</block>
-  <block id="64fc7ef1abfec5624461bb34e030bb56" category="paragraph">ホストインスタンスのストレージタイプがFSx for ONTAPの場合は可能です <block ref="ff12e6f62a651f5b7e33780a9c5be656" category="inline-link-macro-rx"></block>。</block>
   <block id="51bdfc0a469b2ea10ef9ab2e5263224e" category="doc">データベース向けのBlueXP  ワークロード工場でのコスト削減について詳しく見る</block>
   <block id="5817c5b26a2a7f4c1334dc3c03403f64" category="paragraph">Workload factoryには、検出されたElastic Block StoreとFSx for Windows File Serverホストの特性が入力されるため、削減効果を自動的に確認できます。</block>
   <block id="02cb01a24a3bd2f230f64c9dacb47b9b" category="paragraph">ワークロードファクトリがEBSホストを検出した場合は、[Explore savings（節約の確認）]タブにリダイレクトされます。ワークロードファクトリがEBSホストを検出しない場合は、にリダイレクトされます<block ref="1aa155ccc357a88465786c9c4e421569" category="inline-xref-macro-rx"></block>。</block>
@@ -723,10 +629,6 @@
   <block id="4a50857e1707616ee60a78ae42c9b8a0" category="paragraph">Always On可用性グループ構成の管理は、ワークロードファクトリではサポートされていません。</block>
   <block id="620aae64a79a6a9f3dd3cbcf536b15df" category="paragraph">ワークロード工場でのMicrosoft SQL Serverの導入時に[User-managed Active Directory]を選択した場合は、EC2インスタンスとディレクトリサービスの間のトラフィックを許可するセキュリティグループを指定する必要があります。Workload Factoryでは、AWS Managed Microsoft ADと同様に、ユーザ管理Active Directoryのセキュリティグループが自動的に付加されません。</block>
   <block id="647fea922cff8e907550de558b4cd653" category="paragraph">Microsoft SQL Serverの検出は保存されません。[Databases in workload factory]にアクセスするたびに、Microsoft SQL Serverの検出が再度実行され、リージョン内のSQLインストールが特定されます。</block>
-  <block id="2d2f2539dd2892084fc34cbfe31682b2" category="summary">BlueXP  Workload Factory for Databasesは、データベースの導入とメンテナンスをエンドツーエンドで行うサービスです。最適化、自動シンクローニング、監視と解決のためのベストプラクティスが組み込まれています。</block>
-  <block id="9917001ac32006ffab5f623defff5594" category="doc">データベース向けBlueXP  ワークロードファクトリの詳細</block>
-  <block id="ca48023f43ae7d0f01c30714fa4362cc" category="section-title">BlueXP  Workload Factoryとは何ですか？</block>
-  <block id="61a2b695c9f4d3466b19505da26ac088" category="paragraph">BlueXP  Workload Factory for Databasesは、業界のベストプラクティスに準拠しながら、パフォーマンスとコストの期待に応えるよう最適化されたAmazon FSx for NetApp ONTAP（FSx for ONTAP）環境を検出、評価、計画、プロビジョニング、移行します。ライフサイクル全体を通じて、ワークロードファクトリはFSx for ONTAP上のデータベースの継続的な最適化と管理を提供します。</block>
   <block id="70cb57a8d5d75d8762d6b082d319dec7" category="inline-link-macro">ワークロードファクトリの概要</block>
   <block id="092d6885b847467d6999738db9651764" category="paragraph">ワークロードファクトリの詳細については、を参照して<block ref="f3c978a33f5f67b2b7f311b0ac6d0acd" category="inline-link-macro-rx"></block>ください。</block>
   <block id="ebfbd585b037101117706b78fcfab22b" category="section-title">自己管理データベースに対するWorkload Factoryのメリット</block>
@@ -743,27 +645,20 @@
   <block id="11366d0688d978b3372702f5c4d33b84" category="inline-link-macro">FSx for ONTAP for Workload Factoryの詳細</block>
   <block id="27dfabff613e2389e886e5b797252438" category="paragraph"><block ref="2e826ed2a2f94b608ac7d80f7c1db3b6" category="inline-link-macro-rx"></block>です。</block>
   <block id="5e403a4c3b152d7f395a9974ccfd4e4c" category="section-title">Workload Factoryの動作モード</block>
-  <block id="63aab450b65202ef9696852b9418f590" category="paragraph">_basic_、_read_and _automate_という3つの運用モードでは、ワークロード工場の内外に導入するための柔軟なオプションが提供されます。ワークロードファクトリの外部で使用するコードスニペットを使用して、ゼロトラストのIN_BASIC_MODEですぐに価値を得ることができます。_read_and_automate_modesで増分値を取得します。</block>
   <block id="eb6e457556694fbc8d187534ac1188e1" category="inline-link-macro">Workload Factoryの動作モード</block>
   <block id="7bb004aef4b112c40189995d006d040c" category="paragraph">詳細については、をご覧ください <block ref="eda3e48a35318d9f8306be63aaa1ab6b" category="inline-link-macro-rx"></block>。</block>
   <block id="b5a374f3f5b31b5057808689d26fe2c4" category="paragraph">BlueXP  ワークロード工場では、次のツールを使用できます。</block>
   <block id="37c0391f707d07b4c1d64a02e6944c56" category="paragraph">Microsoft SQL Serverのワークロード工場では、AWS、NetApp ONTAP、SQL Serverのベストプラクティスに従って、高可用性（Always Onフェイルオーバークラスタインスタンス）とシングルインスタンス環境の両方がサポートされています。</block>
   <block id="b9aff8d3c5ff2dd2a4ce0963f381f957" category="paragraph">ワークロードファクトリまたはワークロードファクトリのアプリケーションとサービスに関する一般的な質問については、を参照してください<block ref="b9da93c3ce08d7fb81177157f233c056" category="inline-link-macro-rx"></block>。</block>
   <block id="71e2f5eacc9fc09317bbe70e053aeb1e" category="summary">データベース用のBlueXP  ワークロードファクトリでMicrosoft SQL Serverインスタンスを管理します。</block>
-  <block id="6dfa042d17c941d5173ba2a408668399" category="doc">BlueXP  ワークロード工場でのMicrosoft SQL Serverインスタンスの管理</block>
-  <block id="83cfe3edf099a1d48675a62ae60f03ce" category="paragraph">Microsoft SQL Serverインスタンスを管理して、BlueXP  Workload Factory for Databasesのインスタンスとデータベースのステータス、リソース利用率、保護、ストレージのパフォーマンスを監視します。</block>
-  <block id="23528eaa34e1b5044421f8a835380bbd" category="paragraph">Microsoft SQL Serverに特定のPowerShellモジュールと管理スクリプトがないと、処理が失敗します。Workload Factoryは、不足しているモジュールとスクリプトをインストールするためのリソース準備ジョブをトリガーします。このジョブは、[ジョブの監視]タブに表示できます。ジョブが完了したら、ホストインスタンスの管理を再試行します。</block>
   <block id="72f7ef1037108c5eeefad1bcee23a0a8" category="summary">データベースのジョブを追跡し、BlueXP  ワークロードファクトリ内のデータベースを監視します。</block>
   <block id="671ef5b67f2b7cbf660faa04c3d4622a" category="doc">BlueXP  Workload Factoryでのデータベースの監視</block>
-  <block id="a4ed8b9b5c07e17e147e982e5e6be7b7" category="doc">データベース用のBlueXP  ワークロード工場のクイックスタート</block>
-  <block id="a84f8251adb867b65a51f661db71e24f" category="paragraph">BlueXP  Workload Factory for Databasesでは、_basic_modeですぐに作業を開始できます。ワークロードファクトリを使用してホストの検出やリソースの管理などを行いたい場合は、いくつかの手順で作業を開始できます。</block>
   <block id="eb7ed5d3b1a2ff72006245ad37f9817b" category="paragraph">データベースを使用するにはAWSアカウントが必要です。</block>
   <block id="c37e590e9c50960a15f3292676cc0c18" category="paragraph">開始するには、次の手順を実行します。</block>
   <block id="3e7340039619cc08d8c1c5a3cd4bfb43" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>BlueXP  ワークロードファクトリにログイン</block>
   <block id="d9eebdefd5feceb309eadc305ce81e6f" category="inline-link-macro">ワークロードファクトリでアカウントを設定する</block>
   <block id="f6c71053fa21be1c35ee95758a3d1050" category="paragraph">のいずれかを使用してログインする必要があります<block ref="782deaad814daa4f2ae09237c9394f09" category="inline-link-macro-rx"></block><block ref="68ceec76279c6913cdee16884c2d813a" category="inline-link-macro-rx"></block>。</block>
   <block id="a4470118de925b41004832644492fcab" category="paragraph">_basic_modeで操作する場合は、これ以上操作する必要はありません。データベースの使用を開始して、部分的に完了したコードサンプルをコピーできます。[データベース]タイルで、*[データベースホストの導入]*をクリックします。<block ref="cf724fcba48c8dc4cbe06a87f2c5df99" category="inline-link-macro-rx"></block>です。</block>
-  <block id="32a8aefac32feaf1c84e6e0e9a9f24c1" category="paragraph">_read_or_automate_modeで操作する場合は、データベースや 生成AIなどのワークロード機能の選択、および_read_or_automate_modeで操作するための正しい権限を確実に持つためのIAMポリシーの作成が必要<block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>です。</block>
   <block id="c1b68fc67f0e2b970d81dd29c91edb3c" category="summary">BlueXP  ワークロードファクトリでデータベース用のサンドボックスクローンを更新します。</block>
   <block id="6aa117cc6340cd2479e82444cbbadea9" category="doc">BlueXP  ワークロードファクトリでデータベース用のサンドボックスクローンを更新する</block>
   <block id="99ce2cd9a13526e0582af2c9fa2a4382" category="paragraph">現在または過去の時点のソースデータベースと同等になるように、BlueXP  ワークロードファクトリ内のデータベースクローンをデータベース用に更新します。</block>
@@ -831,7 +726,6 @@
   <block id="5e85f9bc067e4ee023078ba85e21857b" category="list-text">管理対象インスタンスの3ドットのメニューをクリックし、* Create user database *を選択します。</block>
   <block id="934fed95fff79f45510cc744c25ff3f4" category="list-text">[データベース]タイルで、*[データベースインベントリに移動]*をクリックします。</block>
   <block id="6e07e3cf1d291785f594756e71522cfe" category="list-text">削除するサンドボックスクローンの3ドットメニューをクリックします。</block>
-  <block id="ff3a68054c116e7f9e9ea8cf123e0963" category="list-text">検出するインスタンスの3ドットメニューをクリックします。</block>
   <block id="770dee3f954306dca2e369d2ef823c94" category="section-title">SQL Server導入の分析</block>
   <block id="1d93f11e5331c46990f076ad4257106e" category="paragraph">この計算ツールは、SQL Server環境の包括的な分析を実行して、使用されているリソースと機能がSQL Serverエディションと適切に一致していることを確認します。Standard Editionへのダウングレードを推奨する前に、Calculatorがチェックする主な要因と条件は次のとおりです。</block>
   <block id="a0e3089d312c100208595d685b4104d2" category="list-text">導入モデル</block>
@@ -856,17 +750,11 @@
   <block id="fc3e8f3c2017c33d444d483913a485ba" category="paragraph">Workload Factoryコミュニティに参加して、進行中のディスカッションをフォローしたり、新しいディスカッションを作成したりできます。</block>
   <block id="ffa18fada5deeeb1e533786297855e7d" category="paragraph">[Create a Case]*機能を使用するには、最初にサポートに登録する必要があります。NetAppサポートサイトのクレデンシャルをワークロードファクトリログインに関連付けます。<block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>です。</block>
   <block id="e13a5649dfef3a1c76c4be8e463226d7" category="list-text">Workload Factory Consoleの右上で、*[ヘルプ]&gt;[サポート]*を選択します。</block>
-  <block id="e75c7b17297b3cf3a7564e3033ef939f" category="list-text">表示するインスタンスの3ドットメニューをクリックし、*[インスタンスの表示]*を選択します。</block>
   <block id="6b30d701929b5a35aad77b847528d165" category="list-text">表示するデータベースを含むインスタンスの3ドットのメニューをクリックします。</block>
-  <block id="77b932b7ecf2d2b3689c445fe72bb66a" category="list-text">管理を解除するインスタンスの3ドットメニューをクリックします。</block>
   <block id="5f08a8bbfa89b18958e70a8c6cbc44c3" category="paragraph">データベースにはジョブ監視機能があり、ジョブの進捗状況を追跡したり、障害が発生した場合の診断とトラブルシューティングを行うことができます。タイプとステータスでジョブをフィルタリングしたり、検索機能を使用してジョブを検索したり、ジョブテーブルをダウンロードしたりできます。</block>
   <block id="5ade2a57e46cf328c900013574754aa9" category="list-text">ジョブ監視機能では、_ in progress_、_ completed_、_ completed with issues_、_ failed_jobs daily、weekly、bi-weekly、およびmonthlyが追跡されます。</block>
   <block id="10f9689e79d67ec4a1651805229939e6" category="list-text">ジョブの3ドットメニューをクリックし、* Go to CloudFormation *をクリックして、AWS CloudFormationコンソールにジョブログを表示します。</block>
   <block id="820e39a5de0a231b1bdee7ce11de7c77" category="summary">BlueXP  Workload Factory for Databasesは、Microsoft SQL Serverの構成をスキャンし、優れた運用性の実現に役立つ分析情報と推奨事項を提供します。</block>
-  <block id="d156d1de362b4c66bc3effc1835aafe1" category="paragraph">BlueXP  Workload Factory for Databasesは、Amazon FSx for NetApp ONTAPで実行されるMicrosoft SQL Server導入構成を継続的にスキャンして評価します。この機能は、分析情報と推奨事項を提供するとともに、最適化されていない構成を自動的に最適化して、データベースワークロードの優れた運用性を実現するオプションも提供します。</block>
-  <block id="162d1fe2bfd40fdaf4d1507dff7ac010" category="list-text">SQL Serverインスタンスの[Optimize instance]ページで、評価結果を確認します。</block>
-  <block id="1d40c1f145e4257a51df779ce509811e" category="paragraph">カテゴリ、サブカテゴリ、ステータス、重大度、およびタグでフィルタリングできます。</block>
-  <block id="2c43db36710e9c59ec3e8117665a6dd6" category="paragraph">[Export PDF]を選択して、評価結果のレポートをダウンロードすることもできます。</block>
   <block id="7bbfa484f6d4f2fd489e0f9cbab2b174" category="inline-link-macro">コスト削減試算ツールでコスト削減額を確認する</block>
   <block id="7634b96d2de45d4657e04dff8ecded5f" category="paragraph">データベースのインベントリにElastic Block StoreやFSx for Windowsファイルサーバのホストがあれば、それを実行できます<block ref="481992ff67d8db3be48d151b768f7ce5" category="inline-link-macro-rx"></block>。</block>
   <block id="1f14f9d15a2087e9bbf3c4dd4b699191" category="list-text">[Sandboxes]タブで、更新するサンドボックスクローンの3ドットのメニューをクリックします。</block>
@@ -910,11 +798,8 @@
   <block id="222ef17ae6eab247553156232cd650e1" category="list-text">より正確な結果を得るには、コンピューティング情報とストレージとパフォーマンスの詳細を更新してください。</block>
   <block id="b0398f49dbe9d04be8ddd17378899545" category="list-text">必要に応じて、オンプレミスデータベース環境のクローン（シャドウコピー）とSnapshotに関する次の詳細情報を指定し、コスト削減の見積もりをより正確にします。</block>
   <block id="7240997fa0d75a11f0b991615772d5d3" category="list-text">*クローンコピーの数*：オンプレミス構成のクローンコピーの数を入力します。</block>
-  <block id="2eb9a2599d85acb350f462d9f474f6c6" category="paragraph">ワークロードファクトリからは、FSx for ONTAPストレージのベストプラクティスに基づいて構成を最適化するための詳細な推奨事項が提供されます。推奨事項を確認し、最適化されていない構成を最適化することができます。</block>
   <block id="4597adc0f9f3096964b3b3efbe708588" category="list-text">コンピューティング：サイズ適正化、オペレーティングシステムのパッチ、受信側スケーリング（RSS）やTCPオフロードなどのネットワークアダプタ設定を含む</block>
   <block id="af022f8b2257d68b04e48e672c457177" category="list-text">アプリケーション：Microsoft SQL Serverライセンス、Microsoft SQL Serverパッチ、およびMAXDOP設定を含む</block>
-  <block id="7a4fa85db3c457278cffd34e817477ab" category="list-text">設定または構成の最適化を選択する前に、各推奨事項をよく確認してください。RSSおよびMAXDOPの設定については、本番環境を変更する前に、推奨設定をテストしてパフォーマンスの向上を確認することをお勧めします。</block>
-  <block id="926cb4c482170392f69cc268b20f8346" category="admonition">最適化プロセスによって、インスタンスのダウンタイムやサービスの中断が発生する可能性があります。構成の最適化を選択する前に、最適化の概要とアクション項目を必ず確認してください。</block>
   <block id="1c8d307950dbef59ce61b6bc729fdb52" category="section-title">2025年2月3日</block>
   <block id="382e51924c0a806fea2a0017322199a5" category="section-title">最適化の制限事項</block>
   <block id="d65e48d2f6a810cde4c31e5a88aecedb" category="section-title">ONTAPとOSの設定の最適化</block>
@@ -937,7 +822,6 @@
   <block id="3231190e9014bf678d835272ec7c9234" category="paragraph">BlueXP  Workload Factory for Databasesでは、最大並列化(MAXDOP)サーバ構成の修復がサポートされるようになりました。MAXDOP設定が最適でない場合、BlueXP  Workload Factoryに設定を最適化させることができます。</block>
   <block id="4a21bedf189bb26f9f4aeb26c0dc26a2" category="section-title">コスト削減分析レポートをEメールで送信</block>
   <block id="5b89ef008454fd9a61723d3572865363" category="paragraph">Amazon Elastic Block StoreとFSx for Windowsファイルサーバのストレージ環境でFSx for ONTAPと比較してコスト削減を検討している場合、推奨レポートを自分、チームメンバー、お客様にEメールで送信できるようになりました。</block>
-  <block id="11ddb0c16aeebaa5c378a44c0d6300d8" category="paragraph">ワークロードファクトリからMicrosoft SQL Serverを作成する前に、データベースホストの構成に使用できるストレージ導入タイプ、Active Directoryの導入、ワークロードファクトリの動作モード、およびこの処理を完了するための要件について学習します。</block>
   <block id="d165069c83b8bcdcdac74dac0647a6f8" category="paragraph">BlueXP  ワークロードファクトリからPostgreSQLサーバーを作成する前に、データベースホスト構成で使用可能なストレージ配置タイプ、ワークロードファクトリ操作モード、およびこの操作を完了するための要件について学習します。</block>
   <block id="a54a2d2457f861c5ced69c71edee65c9" category="paragraph">FSx for ONTAPファイルシステムには、_High Availability（HA）_OR_SINGLE INSTANCE_という2つのPostgreSQLサーバ導入モデルがあります。FSx for ONTAPファイルシステム用に作成されるリソースは、選択したFSx for ONTAP導入モデルに応じて異なります。</block>
   <block id="7081d1beb2d41751a0211b5a5c5f3b56" category="list-text">*ハイアベイラビリティ（HA）導入*：新しいFSx for ONTAPファイルシステムがHA導入用に選択されると、マルチアベイラビリティゾーンFSx for NetApp ONTAPファイルシステムが導入されます。HA環境では、データ、ログ、およびtempdbファイル用に別 々 のボリュームとLUNが作成されます。Windowsクラスタのクォーラムまたは監視ディスク用に、追加のボリュームとLUNが作成されます。HA配置では、プライマリとセカンダリのPostgreSQLサーバ間でストリーミングレプリケーションが構成されます。</block>
@@ -999,7 +883,6 @@
   <block id="b06b1cc67628f13db38ca890693627fb" category="section-title">リージョン間レプリケーションの評価</block>
   <block id="425a11288e6c089ecf9966b89b9be4eb" category="list-text">最適化評価では、ターゲットのFSx for ONTAPファイルシステムが別のAWSアカウントにある場合、リージョン間レプリケーション（CRR）が使用されているかどうかを判断できません。</block>
   <block id="a73971e47314d5a9302d6e0e452948e6" category="list-text">Workload Factoryでは、ソースFSx for ONTAPファイルシステムのCRR構成のみが評価されます。</block>
-  <block id="af64c2575cf7c41d9a388382dfd2aef2" category="section-title">SQL Serverインスタンス内のデータベース数</block>
   <block id="fb090b715eaceea73761a137a2eb45c0" category="list-text">耐障害性：ローカルSnapshot、FSx for ONTAPバックアップ、リージョン間レプリケーション（CRR）など</block>
   <block id="765282496f8377d23a4dec7887b9cea8" category="paragraph">*すべて選択*がデフォルトですが、最適化する特定のリソースを選択できます。</block>
   <block id="c69c68bea63a58faad0233887cb8a9aa" category="section-title">2025年4月4日</block>
@@ -1010,20 +893,6 @@
   <block id="bcfa2187892cfb20acb57dea1d6a38b4" category="paragraph">検出されたホストの削減効果を確認します。ワークロードのファクトリは既存のMicrosoft SQL Serverにリンクし、詳細を計算ツールに入力して自動比較します。この電卓オプションを使用するには、grant_read-only_or_read/write_permissionsが必要です。ユースケースは変更できますが、その他の詳細はすべて計算で自動的に決定されます。</block>
   <block id="f2f8123dee39336570b9e59a3326fd18" category="inline-link-macro">grant_read-only_or_read/write_permissions</block>
   <block id="f557e9f26b531156ccdbc9c32935d13a" category="list-text"><block ref="6a1dbb436eb1da80c34b82a70d7d9175" category="inline-link-macro-rx"></block>AWSアカウントで、*[Explore savings]*タブでElastic Block Store（EBS）とFSx for Windowsシステムを検出し、削減額の計算結果をSavings Calculatorに表示します。</block>
-  <block id="3c424272d86dd628323516001aa99e6e" category="cell">ログインセキュリティ</block>
-  <block id="7b749fcc97c5c2a0bb8e16cb377f5a71" category="cell">必要な場所</block>
-  <block id="c9bc7594ee62d0c351dae6b83370562b" category="cell"><block ref="ef51f73dd4b173855a32e89075ae6d6a" prefix="" category="inline-code"></block></block>
-  <block id="55b9e1ad0e3385fe9e930e60422bf964" category="paragraph">インベントリ、評価、修正、データベースの作成、サンドボックスクローンの作成、削減効果の確認</block>
-  <block id="52dbdba9f8efc424e3647d5fa9481b33" category="cell"><block ref="997eaa81353e01df1a3834bc67b02895" prefix="" category="inline-code"></block></block>
-  <block id="9c63fb58881db7f963fbc50219125431" category="paragraph">インベントリ、評価、修正、データベースの作成、サンドボックスクローンの作成</block>
-  <block id="c2d30b0b254c8547b9acbbdd90603d7a" category="cell"><block ref="60c6c6d38d8a5aa079b31fa10cc7c20a" prefix="" category="inline-code"></block></block>
-  <block id="8a2d6633dcb68e6ff0d85222e7082082" category="cell"><block ref="29eaac47a48cb18afd7ccf57582f12e4" prefix="" category="inline-code"></block></block>
-  <block id="fa51fd57abb0283d815c171a4b309940" category="paragraph">データベースの作成、サンドボックスクローンの作成</block>
-  <block id="c95188979745727b537f665c08755be5" category="cell"><block ref="af0cad6b0855295d542d0a31e5d61e2b" prefix="" category="inline-code"></block></block>
-  <block id="fa778d6d07c47f1228af4ce6bcb13480" category="paragraph">サンドボックスクローンの作成</block>
-  <block id="3f21b90f61021d5dd0aefe08d40a11a9" category="cell"><block ref="83a834b3af30dbb7c2007ab7f9bc913b" prefix="" category="inline-code"></block></block>
-  <block id="eb0cdf74b605d67e1444197ac2f77c91" category="cell"><block ref="8fdca9c0332e9935139d7384c2a814df" prefix="" category="inline-code"></block></block>
-  <block id="538b18c6800ad42458e0bf0bc8a311b6" category="paragraph">サンドボックスクローンの作成、MAXDOPの修復</block>
   <block id="25696569671071b8bd3db9a4c5f6613e" category="doc">ダッシュボードの機能拡張</block>
   <block id="04f9acced28b52e064ba8ccb957a615c" category="list-text">BlueXP  ワークロードファクトリコンソールのタブ間を移動すると、アカウント間ビューとリージョン間ビューを使用できます。新しいビューは、リソースの管理、監視、最適化を改善します。</block>
   <block id="6e21267988cadc818dd398393c695465" category="list-text">ダッシュボードの* Potential Savings *タイルから、Amazon Elastic Block StoreまたはAmazon FSx for WindowsファイルサーバからFSx for ONTAPに切り替えることで、削減可能なコストをすばやく確認できます。</block>
@@ -1039,10 +908,7 @@
   <block id="a7b97ab7d88b015e92ed51ef4bee9c25" category="paragraph">ワークロードファクトリのユーザインターフェイスとドキュメントでは、読み取り権限を「読み取り専用」に、自動権限を「読み取り/書き込み」に指定するようになりました。</block>
   <block id="2d07fc9146d02690dffeffa52fbd2ec4" category="list-text">オンプレミスのホストの削除</block>
   <block id="1c28fa92b25f4914c091b667402466d3" category="list-text">オンプレミスのMicrosoft SQL Serverホストの削減効果を確認したら、オンプレミスのホストレコードをBlueXP  ワークロードファクトリから削除することもできます。Microsoft SQL Serverオンプレミスホストの3ドットメニューを選択し、*[削除]*を選択します。</block>
-  <block id="d824014300a5fc7a6853a9182b4be5ef" category="list-text">クローン：60日を超過したクローン（サンドボックス）を更新および削除するオプションが含まれます。</block>
   <block id="04467e563313dfe5a1da17bd70a4de75" category="list-text">[インベントリ（Inventory）]*タブで、*[インスタンス（Instances）]*タブを選択します。</block>
-  <block id="8e3db49aef4ba359c0140eea33f2459c" category="list-text">最適化するインスタンスの3ドットメニューを選択し、*最適化*を選択します。</block>
-  <block id="77b2be525ee3461ec499242fca3978f8" category="list-text">クローンクリーンアップを除くすべての構成について、最適化ダイアログで最適化の詳細を確認し、最適化を選択した場合の動作を確認してください。最適化処理によっては、インスタンスのダウンタイムやサービスの中断が発生する場合があります。</block>
   <block id="c5d0b906e655aeb0e712fdc99742d179" category="list-text">クローンクリーンアップでは、更新または削除するクローンデータベース（サンドボックス）を選択します。</block>
   <block id="64b911fb444d2ba4347dbcba8d839d9c" category="list-text">クローンを更新すると、クローンがソースデータベースと同期されます。更新は、ワークロード工場で作成されたクローンに対してのみ使用できます。</block>
   <block id="b11d77d1a514a3b0bdf01908bc4826e9" category="list-text">クローンを削除すると、クローンが完全に削除され、ストレージスペースが解放されてコストが削減されます。ワークロードファクトリ内外で作成されたクローンを削除できます。</block>
@@ -1077,11 +943,152 @@
   <block id="e234d079cc2fccaeed8041a81e1e8122" category="list-text">* CloudShell CLI *：ワークロードファクトリには、1つのブラウザベースのCLIからアカウント間でAWSおよびNetApp環境を管理および運用するためのCloudShell CLIが含まれています。Workload FactoryコンソールのトップバーからCloudShellにアクセスします。</block>
   <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">* REST API *：ワークロードファクトリREST APIを使用して、FSx for ONTAPファイルシステムやその他のAWSリソースを導入、管理します。</block>
   <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">* CloudFormation *：AWS CloudFormationコードを使用して、ワークロードファクトリコンソールで定義したアクションを実行し、AWSアカウントのCloudFormationスタックからAWSおよびサードパーティリソースをモデル化、プロビジョニング、管理します。</block>
-  <block id="5614519834733a69bfb8911eae5d33b8" category="paragraph">[Inventory]タブとダッシュボードでは、ワークロードファクトリでSQL Serverインスタンス内の最大1,500のデータベースがサポートされます。</block>
   <block id="905bc3578e603008d83976307778ddcc" category="list-text">インスタンス タイプの推奨事項を取得し、コストの精度を向上させるには、次の手順を実行します。</block>
   <block id="10d9194778791c152af2c0be1806e0b1" category="list-text">Amazon CloudWatch および AWS Compute Optimizer に権限を付与します。</block>
   <block id="1dffe1578c264cd074d1fbf2823deeca" category="list-text">AWS マネジメントコンソールにサインインし、IAM サービスを開きます。</block>
   <block id="429fc992484e56fc5119b7b343df8bab" category="list-text">IAMロールのポリシーを編集します。以下のAmazon CloudWatchとAWS Compute Optimizerの権限をコピーして追加します。</block>
   <block id="948ce9adc60f5781dbfbd99d2c9d74d5" category="list-text">課金対象の AWS アカウントを AWS Compute Optimizer に登録します。</block>
   <block id="af06e2a95bd9706f705a4480e8f40846" category="list-text">*Terraform BlueXP  ワークロードファクトリプロバイダ*: Terraformを使用して、ワークロードファクトリコンソールで生成されるインフラワークフローを構築および管理します。</block>
+  <block id="938691193541892254da342a65418ef3" category="doc">PostgreSQLとOracleの検出</block>
+  <block id="a35833d039b2504ef8c787b30e723967" category="paragraph">ワークロードファクトリーコンソール内で、AWSアカウントでPostgreSQLサーバーデータベースとOracleデータベースデプロイメントを実行しているインスタンスを検出できるようになりました。検出されたインスタンスはデータベースインベントリに表示されます。</block>
+  <block id="fd1fe4efcf471a552598d4396db84a26" category="section-title">「最適化」の用語を更新しました</block>
+  <block id="a832a618559e9b6325bfe90eb3e86587" category="paragraph">以前は「最適化」と呼ばれていたワークロード ファクトリーでは、現在、「well-architected の問題」と「well-architected ステータス」を使用してデータベース構成の分析を説明し、「修正」を使用してベスト プラクティスの推奨事項を満たすようにデータベース構成を改善する機会の修復を説明します。</block>
+  <block id="c551233916d554410ddca9f767142b1a" category="inline-link-macro">ワークロードファクトリーにおけるデータベース環境の構成分析</block>
+  <block id="2cfa2ba77f1346dd5f1a96ad6f3af2b2" category="paragraph"><block ref="2cfa2ba77f1346dd5f1a96ad6f3af2b2" category="inline-link-macro-rx"></block></block>
+  <block id="f0b8560f05681c5a0a0de7a2cb0d761e" category="section-title">ホストインスタンスのオンボーディングの改善</block>
+  <block id="2acb806aac138a6758718c6f833095ab" category="paragraph">ホストインスタンスの管理において、「未検出」「管理対象外」「管理対象」といった用語が使用されていたのに対し、ワークロードファクトリーではホストインスタンスのオンボーディングに「登録」という用語を使用するようになりました。新しい登録プロセスには、ホストインスタンスの認証と準備が含まれており、ワークロードファクトリーコンソール内でデータベース構成のリソースを作成、監視、分析、修正できるようになります。登録プロセスの準備手順は、ホストインスタンスが管理の準備ができているかどうかを示します。</block>
+  <block id="4f91bce4a20615964f35d2fd97ddb2e1" category="inline-link-macro">インスタンス管理</block>
+  <block id="68d9261728b0a851ce7bc78b7cfd2a69" category="paragraph"><block ref="68d9261728b0a851ce7bc78b7cfd2a69" category="inline-link-macro-rx"></block></block>
+  <block id="a037440b0e452d149e3d4cdec9e6a911" category="doc">データベースのワークロードファクトリーに Microsoft SQL Server を作成する</block>
+  <block id="5d89a931c9c04b55c06760675a1ace5a" category="paragraph">データベースのワークロード ファクトリーで新しい Microsoft SQL Server またはデータベース ホストを作成するには、FSx for ONTAP ファイル システムのデプロイメントと Active Directory のリソースが必要です。</block>
+  <block id="633d049f8d85b55877f18aabc34b1da8" category="paragraph">ワークロード ファクトリから Microsoft SQL Server を作成する前に、データベース ホスト構成で使用可能なストレージ展開の種類、Microsoft マルチパス I/O 構成、Active Directory 展開、ネットワークの詳細、およびこの操作を完了するための要件について学習します。</block>
+  <block id="ccac5f43f95e209ed7e8f8ddd1b75d8b" category="inline-link-macro">AWS アカウントの認証情報と読み取り/書き込みモードの権限</block>
+  <block id="b949760a108bef94fc7f866ca09b5155" category="list-text">ワークロードファクトリで新しいデータベースホストを作成する必要があり<block ref="09d2f3d3c667abb40f8d2ba111b9c06b" category="inline-link-macro-rx"></block>ます。</block>
+  <block id="f8c2bea89896f4c645e761417ab6d4bd" category="paragraph">展開サブネットが既存のインターフェースエンドポイントに関連付けられており、セキュリティグループが選択したサブネットへの HTTPS (443) プロトコルへのアクセスを許可していることを確認します。</block>
+  <block id="e2aadc51c2249a0d2d63030bd046d5b5" category="paragraph">クロスVPC DNSを使用する場合、DNSが存在するもう一方のVPCのエンドポイントのセキュリティグループで、デプロイメントサブネットへのポート443を許可する必要があります。許可されていない場合は、クロスVPC Active Directoryに参加する際に、ローカルVPCのDNSリゾルバーを提供する必要があります。複数のドメインコントローラーが複製された環境で、サブネットから一部のドメインコントローラーにアクセスできない場合は、「CloudFormationにリダイレクト」して次のように入力できます。 <block ref="a756f9902f1db5a37f12d3f459f172a5" prefix=" " category="inline-code"></block> Active Directory に接続します。</block>
+  <block id="83e91497a1333c0a1b677d8c63d846d9" category="list-text">管理対象インスタンスの 3 つのドット メニューをクリックし、*ユーザー データベースの作成* を選択します。</block>
+  <block id="ed3f634cbd31e15d5053aa9ab9457edd" category="summary">インスタンス リソースをデプロイまたは監視する必要がなくなった場合は、ホスト インスタンスの登録を解除します。</block>
+  <block id="179df01f4b6338c16193d13eebec699f" category="doc">ワークロードファクトリーのホストインスタンスの登録を解除する</block>
+  <block id="d5b67e9f32aa7f075a02dc0f4ccc6c3a" category="paragraph">インスタンスリソースのデプロイや監視が不要になった場合は、ホストインスタンスの登録を解除してください。インスタンスの登録を解除すると、ホストインスタンスが使用していたストレージ容量も削除されます。</block>
+  <block id="db8588c095bdb42680df1d8ae6e6c242" category="paragraph">後でインスタンスを再登録できます。</block>
+  <block id="8271201bd0a4537e2de1fc26930a2ba9" category="list-text">ドロップダウン矢印をクリックして、登録解除するホスト インスタンスの行を展開します。</block>
+  <block id="6e58f833a8c88963786858e4cd0820f1" category="list-text">登録を解除するインスタンスの 3 つのドット メニューをクリックします。</block>
+  <block id="a20e9b47d2ae2e8dcad4b38296aada53" category="list-text">*登録解除*を選択します。</block>
+  <block id="ac142b4fd3c523bd0cca87e5783c6edf" category="paragraph">ホストインスタンスの登録が解除されました。インスタンスは後で再度登録できます。</block>
+  <block id="57b8b12d92efb891c61703846230423a" category="section-title">ホストインスタンス検出のサポート</block>
+  <block id="7d02c7321e50b7c2fa346dd9edc083f2" category="paragraph">ワークロード ファクトリーは、Amazon Linux オペレーティング システムでのみ実行されている PostgreSQL インスタンスと、Red Hat Enterprise Linux でのみ実行されている Oracle インスタンスの検出をサポートしています。</block>
+  <block id="6923ba19fe8a091f76827ff8c86785de" category="summary">Workload Factory for Databases は、最適化、自動シン クローニング、監視および解決機能のベスト プラクティスが組み込まれた、エンドツーエンドのデータベース導入および保守サービスです。</block>
+  <block id="bb3a81d6ea3e61933815d8c7984727a3" category="section-title">データベースのワークロード ファクトリーとは何ですか?</block>
+  <block id="2d2ef55c7d048aa8eb19ea9e98550603" category="paragraph">Workload Factory for Databases は、Microsoft SQL Server データを検出、評価、計画、プロビジョニングし、業界のベストプラクティスに準拠しながらパフォーマンスとコストの期待に応えるように最適化された Amazon FSx for NetApp ONTAP (FSx for ONTAP) デプロイメントに移動します。ライフサイクル全体を通じて、ワークロードファクトリはFSx for ONTAP上のデータベースの継続的な最適化と管理を提供します。</block>
+  <block id="9d31d07638cfa37e022a93f50a24a37a" category="paragraph">3つの異なる動作モード（_基本_、_読み取り専用_、_読み取り/書き込み_）により、ワークロードファクトリーの内外を問わず、柔軟な導入オプションを提供します。_ワークロードファクトリの外部で使用するコードスニペットを使用して、ゼロトラストのIN_BASIC_MODEですぐに価値を得ることができます。読み取り専用_モードと_読み取り/書き込み_モードでは、信頼性を段階的に高めることで、付加価値を高めることができます。</block>
+  <block id="a114eda0d7b20c56bc3d8d99fe48b64a" category="summary">データベースのワークロード ファクトリにおけるインスタンス管理について学習します。</block>
+  <block id="88425651b441fbd6a0bc45cd78baf191" category="doc">データベースのワークロードファクトリーにおけるインスタンス管理</block>
+  <block id="90df9f628849131025aeded82280eaa8" category="paragraph">ワークロードファクトリーで登録されたホストインスタンスの管理には、データベースやデータベースクローンの作成といったインスタンスのリソースのデプロイ、インスタンスとデータベースのステータス、リソース使用率、保護、ストレージパフォーマンスの監視が含まれます。さらに、データベース構成のWell-Architectedステータスを分析し、構成のベストプラクティスを実装することで、パフォーマンスを向上させ、運用コストを削減できます。インスタンス管理は、FSx for ONTAPファイルシステムストレージを使用するインスタンスのみで利用可能です。</block>
+  <block id="c68f5f76376c72c5e7b3bfeebbd4b69f" category="inline-link-macro">ホストインスタンスを登録する</block>
+  <block id="9dafbc056db1eec54c306ae9f92c0be1" category="paragraph">絶対です<block ref="44c655052a7d5397fca0e24c93e80dee" category="inline-link-macro-rx"></block>以下の管理タスクを実行します。</block>
+  <block id="a40a9332a94e9ee509dd52088052022f" category="paragraph">管理タスクには次のものが含まれます。</block>
+  <block id="32b73a9b89aeca54ae1906ac5b5c40a3" category="inline-link-macro">データベースの作成</block>
+  <block id="d0a9d2136da399d9e73cfadd54adfb7a" category="list-text"><block ref="d0a9d2136da399d9e73cfadd54adfb7a" category="inline-link-macro-rx"></block></block>
+  <block id="45e1b252e76746345363ea0d06920684" category="inline-link-macro">データベースクローンの作成（サンドボックス）</block>
+  <block id="fd8a54c517020c653ae1776e8e00d343" category="list-text"><block ref="fd8a54c517020c653ae1776e8e00d343" category="inline-link-macro-rx"></block></block>
+  <block id="050cc3957bb212dc2758e7dd27f7faf8" category="inline-link-macro">データベースの表示</block>
+  <block id="7a403e4f1f2e0af187fa5a95116054cc" category="list-text"><block ref="7a403e4f1f2e0af187fa5a95116054cc" category="inline-link-macro-rx"></block></block>
+  <block id="f4a7fa0c2cfabd3c771238fbdb6c7ae5" category="inline-link-macro">データベース操作の監視</block>
+  <block id="b92726505ce75a5aa80c8086ae979c25" category="list-text"><block ref="b92726505ce75a5aa80c8086ae979c25" category="inline-link-macro-rx"></block></block>
+  <block id="2f2280ee27b03fc450cd69afae071e39" category="inline-link-macro">適切に設計されたデータベース構成の実装</block>
+  <block id="d3379f7eb15b947ec99d4daad00317b3" category="list-text"><block ref="d3379f7eb15b947ec99d4daad00317b3" category="inline-link-macro-rx"></block></block>
+  <block id="c4363ade7c2d208d79dee9b60bc51922" category="doc">ワークロードファクトリーで適切に設計されたデータベース構成を実装する</block>
+  <block id="0006f418861a6fb47d59a74b3db28869" category="paragraph">構成分析の洞察と推奨事項を活用し、ワークロードファクトリーを活用してデータベース構成のベストプラクティスを実装します。信頼性、セキュリティ、効率性、パフォーマンス、コストが最適化されていない構成の問題を簡単に特定し、アーキテクチャを改善するための対策を講じることができます。</block>
+  <block id="bffcd6aaeac8e97cf82007491fd97512" category="paragraph">ワークロードファクトリーはデータベース構成を毎日分析します。毎日の分析では、構成の問題を自動的に修正するためのオプションを含む洞察と推奨事項が提供され、構成がベストプラクティスに準拠するようにします。</block>
+  <block id="622529f53e43499d3ab7bec3ddade638" category="paragraph">ワークロード ファクトリ コンソール内のデータベース インベントリから、構成の問題に関する推奨事項を確認し、それらの問題を修正するオプションがあります。</block>
+  <block id="681f8e0d48f8a5609d29d038dfdb7354" category="list-text">分析対象</block>
+  <block id="f6e75af7aefeb95ed6d70c67eae48cbc" category="list-text">ワークロード ファクトリーは、Microsoft SQL Server インスタンスの次の構成の well-architected ステータスを分析します。</block>
+  <block id="eb39e8dfd54bf78043b2372b30f7b2b6" category="list-text">クローン: ワークロード ファクトリー内または外で作成され、60 日以上経過したクローン (サンドボックス) を更新および削除するオプションが含まれます。</block>
+  <block id="05733d6679707441838e3ca92fcb1e85" category="inline-link-macro">AWS アカウントの認証情報と読み取り/書き込み権限</block>
+  <block id="e6ff59cff1eb616f7a9d6b770313807a" category="list-text">あなたは持っている必要があります<block ref="6428f71963510d960d64cd03bb6513ae" category="inline-link-macro-rx"></block>データベース構成を分析します。</block>
+  <block id="bb4dc454356e65051d8e22516b60a260" category="inline-link-macro">ホスト インスタンスを登録する方法を学びます。</block>
+  <block id="606bc152b33b9976e88d57b374a1d46f" category="list-text">Microsoft SQL Server インスタンスのストレージを評価するには、インスタンスがワークロード ファクトリに登録され、ストレージ タイプが FSx for ONTAP である必要があります。 <block ref="f22f9817b1d52aa896a88fe9442f70ef" category="inline-link-macro-rx"></block></block>
+  <block id="663c686f4608ad8e700ed1cd99a57fcc" category="list-text">設定または構成の修正を選択する前に、各推奨事項をよく確認してください。RSSおよびMAXDOPの設定については、本番環境を変更する前に、推奨設定をテストしてパフォーマンスの向上を確認することをお勧めします。</block>
+  <block id="55900adb296775523b32b30486b0de17" category="admonition">修正プロセスによって、インスタンスのダウンタイムやサービスの中断が発生する可能性があります。構成を修正することを選択する前に、推奨事項を慎重に確認してください。</block>
+  <block id="da0f3dbe0b914fb78e47ff54702db3df" category="list-text">インスタンスの構成の問題を表示するには、[*問題を修正*] を選択します。</block>
+  <block id="a85bf70a610b181df621eea76d0068e4" category="list-text">ホスト インスタンスの Well-architected ステータス ページで、分析の結果を確認します。</block>
+  <block id="8cdf23f9dd4f98a6b709a0a9d53ecd88" category="paragraph">構成の問題は、カテゴリ、サブカテゴリ、ステータス、重大度、タグでフィルタリングできます。</block>
+  <block id="dd78deb6ef5fa791112d358b2eccdf97" category="paragraph">*PDF エクスポート* を選択して、調査結果のレポートをダウンロードすることもできます。</block>
+  <block id="f73028254f9c4297e3f60654068105e0" category="list-text">ドロップダウン矢印を選択すると、構成の推奨事項が表示されます。推奨事項には、ベスト プラクティス、最適化されていない構成の潜在的な落とし穴、重要な考慮事項が含まれます。推奨事項をよく確認してください。</block>
+  <block id="dae891145ffbf1b1653fc3da2a87faac" category="list-text">オプションが利用可能な場合は、構成の問題を*表示して修正*することを選択します。</block>
+  <block id="af60fff54046e840f7e220def239ff80" category="list-text">クローンのクリーンアップを除くすべての構成について、最適化を選択した場合に何が起こるかを確認するには、推奨事項の詳細を確認してください。一部の修復操作では、インスタンスのダウンタイムやサービスの中断が発生する可能性があります。</block>
+  <block id="45b5dce37159255d07342e3102124571" category="list-text">構成の問題を修正するには、*[続行]*を選択します。</block>
+  <block id="94450f16c61ccd686586b6a304d73bda" category="paragraph">修復プロセスが開始されます。[ジョブ監視]*タブを選択して処理のステータスを表示します。</block>
+  <block id="79d26843be417ff5c9a9e3a3deda3e50" category="summary">データベースのワークロード ファクトリーは、Microsoft SQL Server の構成を定期的に分析して、問題があるかどうかを判断します。</block>
+  <block id="dd79b42f7eeac8287405a50984fca176" category="paragraph">Workload Factory for Databases は、Amazon FSx for NetApp ONTAP ストレージ上の Microsoft SQL Server のデプロイメントに問題がないか確認するために、データベース構成を定期的に分析します。問題が見つかった場合、Workload Factory は問題点を提示し、データベース構成が最高のパフォーマンス、コスト効率、そしてベストプラクティスへの準拠を実現するために必要な変更点を解説します。</block>
+  <block id="ebc3bf5de769bc75ad8e36a90a0ed695" category="list-text">日常的な構成分析</block>
+  <block id="fc34f37e0124ad3486b3476b4c3bf8ba" category="section-title">適切に設計されたステータス</block>
+  <block id="766f78d394e3aa97e328026acbda4d55" category="paragraph">ファイルシステムレベルのワークロードファクトリコンソールには、すべてのFSx for ONTAPファイルシステムについて、適切に設計されたステータスが表示されます。Well-Architectedステータスは、「問題」、「分析されていない」、または「Well-Architected」に分類されます。well-architectedステータスを選択すると、ファイルシステム内のwell-architectedステータスタブにリダイレクトされます。このタブでは、well-architectedスコア、構成カテゴリ、ファイルシステムのすべての構成を確認できます。</block>
+  <block id="a64cfe5c8ae4b3445ff288e9acf4b12e" category="list-text">適切に設計されたスコア</block>
+  <block id="3ae4c18410c2fa4fdf19fa3a943ef362" category="list-text">スコアには現在分析されているすべての構成が含まれ、パーセンテージで表示されます。25%のスコアは、25%のファイルシステム構成が適切に設計されていることを意味します。</block>
+  <block id="a4394e01049a42d14bd6258585de98b7" category="list-text">構成のカテゴリ</block>
+  <block id="d24dfe9869a3af3c94d86b476bc18a3d" category="list-text">ファイルシステム構成は、AWS Well-Architected Frameworkの次の5つの柱に沿ったカテゴリに分類されています。</block>
+  <block id="b88f659b2eb7813471f331b19c9d7f02" category="list-text">_信頼性_：システムが停止した場合でも、ワークロードが意図した機能を正しく一貫して実行するようにします。構成例としては、FSx for ONTAPのバックアップがあります。</block>
+  <block id="6a940b53f011e22baccafe058e7df66e" category="list-text">_セキュリティ_：リスク評価とリスク軽減戦略を通じて、データ、システム、資産を保護することに重点を置いています。</block>
+  <block id="d5f464c28ed994054fe98db4934a7da1" category="list-text">_優れた運用性_：最適なアーキテクチャとビジネスバリューを提供することに重点を置いています。</block>
+  <block id="03be89b5f488a61c9b35832aa58745c1" category="list-text">_コスト最適化_：コストを最小限に抑えながらビジネス価値を提供することを目指しています。</block>
+  <block id="49c47aadfeff1e01313108c157d381b4" category="list-text">_パフォーマンス効率_：リソースを効率的に使用してシステム要件を満たし、需要の変化に応じて最適なパフォーマンスを維持することに重点を置いています。</block>
+  <block id="8b75b787538a5ee0eb97dc541694c82a" category="list-text">分析範囲</block>
+  <block id="3f6f8b4e204fd3aa39cac35661de164d" category="section-title">分析要件</block>
+  <block id="389751c9d4b8ea76783de1b291cac92f" category="paragraph">完全なデータベース環境分析を行うには、ホスト インスタンスが登録され、オンラインになっている必要があります。</block>
+  <block id="f22f9817b1d52aa896a88fe9442f70ef" category="paragraph"><block ref="f22f9817b1d52aa896a88fe9442f70ef" category="inline-link-macro-rx"></block></block>
+  <block id="4eadd345921a1f4292d9b98892d3b84e" category="inline-link-macro">適切に設計されたデータベース構成を実装する</block>
+  <block id="9f79767d5e4eb4d13f2a6d925ed59d0f" category="paragraph"><block ref="9f79767d5e4eb4d13f2a6d925ed59d0f" category="inline-link-macro-rx"></block></block>
+  <block id="27cb094655bbfaa4d3b2c3b34d1c1557" category="summary">データベースのワークロード ファクトリを開始して、Infrastructure-as-Code スニペットの使用、ホストの検出、リソースの管理などを行います。</block>
+  <block id="9581188088644b11d46ac4ae29789386" category="doc">データベースのワークロードファクトリーのクイックスタート</block>
+  <block id="0bf39c9f8183add14af5a19ad4c80ff7" category="paragraph">データベース用のワークロード ファクトリーを使用すると、_基本_ モードですぐに開始できます。ワークロードファクトリを使用してホストの検出やリソースの管理などを行いたい場合は、いくつかの手順で作業を開始できます。</block>
+  <block id="742b9524a4ab93b49eb1614d2aa4287b" category="inline-link-macro">_基本_、_読み取り専用_、および_読み取り/書き込み_の動作モード</block>
+  <block id="e19be16b30ba3a27ed29174edef4c120" category="paragraph">いずれかを選択し <block ref="5653101a5bec855c555e8762c96ccdfc" category="inline-link-macro-rx"></block>ます。</block>
+  <block id="b60b67e70947e6a46c89e0d1c15f532f" category="paragraph">_読み取り専用_または_読み取り/書き込み_モードで操作する場合は、 <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>これには、データベースや GenAI などのワークロード機能の選択や、_読み取り専用_ モードまたは _読み取り/書き込み_ モードで操作するための適切な権限があることを確認するための IAM ポリシーの作成が含まれます。</block>
+  <block id="32077805607c935c0ac59dd7b4a3fdc6" category="inline-link-macro">ホストサーバーを展開する</block>
+  <block id="d53bce2cf4a36ab74378d06b70255899" category="inline-link-macro">インスタンスを登録する</block>
+  <block id="d4e3cc6f64d77dfb90b8f3a54369d97f" category="paragraph">最後に、_読み取り/書き込み_モードで操作することを選択した場合は、 <block ref="086045f9b9433534ba0bc16ba8744718" category="inline-link-macro-rx"></block>または<block ref="70dc6f6bba18b4f574a867d694f53a80" category="inline-link-macro-rx"></block>ホスト リソースを管理し、ユーザー データベースを追加する前に行います。</block>
+  <block id="db04547f806a50b5e3c5bbceb867c6c9" category="paragraph">データベースインベントリにFSx for ONTAPファイルシステムストレージのホストインスタンスを登録すると、 <block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block>または<block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block> 。</block>
+  <block id="8373481dd509f9b495f59748db1aa76d" category="doc">データベースのワークロードファクトリーにインスタンスを登録する</block>
+  <block id="794053eb13ca148da7e2fcaea90530b3" category="paragraph">ホスト インスタンスを登録すると、データベースのワークロード ファクトリでインスタンスとデータベースのステータス、リソース使用率、保護、ストレージ パフォーマンスを監視できるようになります。</block>
+  <block id="42c8e35152475231ef5a183766c9bebc" category="paragraph">データベースは、FSx for ONTAP ファイル システム ストレージにのみインスタンスを登録できます。</block>
+  <block id="91a3069301b0dd7ee29890c4b610ba27" category="section-title">タスクについて</block>
+  <block id="29e386e963401779c0de5dccb7b701a0" category="paragraph">ホスト インスタンスの登録には、インスタンスの認証と、すべての AWS、NetApp、および PowerShell モジュールがインスタンスにインストールされていることを確認してインスタンスを準備するという 2 つの手順が含まれます。</block>
+  <block id="dda5f7103fa5228c52d16c80f09cc5ad" category="paragraph">SQL Server 資格情報または Windows 資格情報を使用してリンクを認証できます。</block>
+  <block id="2a627091d8c05a05162dae18a0e3dc31" category="admonition">ワークロードファクトリーは、Microsoft SQL Server ホストインスタンスの登録と管理のみをサポートしています。ワークロードファクトリーで選択した AWS アカウントの認証情報によっては、PostgreSQL および Oracle ホストがインベントリに表示される場合があります。現在、ワークロードファクトリーは、Amazon Linux オペレーティングシステムでのみ実行されている未登録の PostgreSQL インスタンスと、Red Hat Enterprise Linux でのみ実行されている Oracle インスタンスをサポートしています。</block>
+  <block id="5e6ee18c02f118771f0e10235d44bd14" category="section-title">プライベートネットワークにホストインスタンスを登録する</block>
+  <block id="0af95213cc557c61a7ba3ca92d68f09e" category="paragraph">外部接続のないプライベート ネットワークにホスト インスタンスを登録するには、SQL サーバーが存在するサブネットに関連付けられた次のエンドポイントが VPC で使用可能である必要があります。接続されているセキュリティグループのポート443が、インターフェイスエンドポイントで許可されていることを確認します。</block>
+  <block id="d38541ea862d6762d01f5f9d42fbd683" category="inline-link-macro">AWSアカウントの認証情報と_read_または_automate_モードの権限を追加する必要があります</block>
+  <block id="36bfb43c49e597b3bb45a5bb2997033b" category="paragraph">インスタンスのホストはインベントリタブに表示されている必要があります。ホストがインベントリに表示されるには、 <block ref="dd302a73ba9dc99cb46da731db0bf41c" category="inline-link-macro-rx"></block> 。</block>
+  <block id="6a408aaa659cc5010ab5ed464d20688c" category="section-title">ホストインスタンスを登録する</block>
+  <block id="75cd4168051c5052e88a17b464261a1b" category="paragraph">ホスト インスタンスの登録には、インスタンスの認証と準備が含まれます。</block>
+  <block id="573898775af774ec571967393eb2000b" category="list-text">[インベントリ] タブで、[インスタンス] タブを選択します。</block>
+  <block id="c5058b99cc6deeedc6528c1f97fb85d0" category="list-text">管理するインスタンスに移動し、*インスタンスの登録*を選択します。</block>
+  <block id="aade5563fc6aa38dd34cae4243205c2f" category="list-text">[インスタンスの登録] ページで、SQL Server のユーザー名とパスワード、および FSx for ONTAP ファイル システムのユーザー名とパスワードを入力します。</block>
+  <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">「 * 次へ * 」を選択します。</block>
+  <block id="572a54088f94488130d1ac3055b373ac" category="list-text">インスタンスが必要な前提条件を満たしていることを確認し、準備を整えてください。必要なモジュールがすべてインストールされ、前提条件を満たしている場合は、「次へ」を選択してインスタンスを登録してください。必要な操作が必要な場合は、以下の手順に従ってください。</block>
+  <block id="6f46b8383b008a103c4bdd369e5fa92e" category="list-text">不足している場合は、ワークロード ファクトリを選択して、*不足している AWS および NetApp PowerShell モジュールをインストール*します。</block>
+  <block id="32ab85eda4f533657c12e81e940cffd6" category="list-text">不足している場合は、ワークロードファクトリーを選択して*不足しているPowerShell 7をインストール*してください。不足しているPowerShellモジュール7をインストールするには、システムを再起動する必要があります。</block>
+  <block id="3a36d2a0f50b8674db7030efa3481a16" category="list-text">以下の機能の前提条件リストを確認してください。インスタンスを登録するには、1つの前提条件を満たしている必要があります。</block>
+  <block id="63d045fa5e972b158cfb23097e222ca7" category="list-text">*適切に設計された問題と推奨事項を確認する*</block>
+  <block id="fadeabdd0af8696756351a03b6a3e38f" category="list-text">*適切に設計された問題を修正*</block>
+  <block id="682848268cf27965cff502f178244a95" category="list-text">*データベースを作成*</block>
+  <block id="e1f772db4ebe33be8870db0341b57f2e" category="list-text">*データベースのコピーを作成する（サンドボックス）*</block>
+  <block id="bbd75173916a59e2d03d0aa3c8453950" category="paragraph">前提条件を完了するには、AWS IAM ポリシーのアクセス許可、EC2 IAM インスタンス プロファイルのアクセス許可、SQL Server のアクセス許可、および PowerShell モジュールの更新が含まれます。</block>
+  <block id="00e81f5539f96548498b7f28a5b0bf73" category="list-text">続行するには、不足している前提条件を少なくとも 1 つ完了してください。</block>
+  <block id="efad96be420cc388123ecddd686d794e" category="list-text">1 つ以上の前提条件が完了し、チェックが *準備完了* になったら、インスタンスを *登録* することを選択できます。</block>
+  <block id="a037e794bf828053866493b8452ab9c7" category="paragraph">インスタンス登録リクエストが開始されます。進行状況を追跡するには、「ジョブ監視」タブを選択してください。</block>
+  <block id="5dfcf5a53e6a3c94eb359647b453a807" category="summary">ワークロードファクトリー内のデータベースリソースの概要を取得するには、データベースインベントリ内のすべてのデータベースを表示します。また、登録済みのインスタンスごとにデータベースを表示することもできます。</block>
+  <block id="34f8798aab35970d27e00ecdf2a9f526" category="doc">データベースのワークロードファクトリーでデータベースを表示する</block>
+  <block id="0ab190804913b1145bf64c21befa3286" category="list-text">データベース リソースを含むホスト インスタンスには、FSx for ONTAP ファイル システム ストレージが必要です。</block>
+  <block id="682d1e77482e7088c166b62c34287660" category="inline-link-macro">ホストインスタンスを登録する</block>
+  <block id="13e6dec9f19066e3153eb07ec978ea2b" category="list-text">ホスト インスタンスはワークロード ファクトリに登録する必要があります。方法をご確認ください<block ref="2dbc08dda5209ee806e4433f973c765a" category="inline-link-macro-rx"></block>。</block>
+  <block id="87301bee2c9587d1e63d873a81c4e6fa" category="open-title">単一インスタンスのデータベースを表示する</block>
+  <block id="25734f9761801ac27c5c548d5c1829ca" category="open-title">すべてのインスタンスのデータベースを表示</block>
+  <block id="91063ca7fb76f05148ae179b2f84b160" category="paragraph">ワークロード ファクトリー内のデータベース リソースを表示しました。</block>
+  <block id="4aa37f4d9a391345e9a54c68333e2503" category="section-title">2025年6月3日</block>
+  <block id="ebb5d0c39395173ae9cea85bcf7d498e" category="sidebar">インスタンスを登録する</block>
+  <block id="c38254582571637e4bded341a22ff035" category="sidebar">インスタンスを管理する</block>
+  <block id="414fc89f66239e288860442b939928c9" category="sidebar">構成のベストプラクティスを実装する</block>
+  <block id="a78c9036bfa9cb64272150072bb64123" category="sidebar">データベースの構成分析</block>
 </blocks>

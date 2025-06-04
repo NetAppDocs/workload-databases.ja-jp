@@ -2,22 +2,22 @@
 sidebar: sidebar 
 permalink: learn-databases.html 
 keywords: Databases 
-summary: BlueXP  Workload Factory for Databasesは、データベースの導入とメンテナンスをエンドツーエンドで行うサービスです。最適化、自動シンクローニング、監視と解決のためのベストプラクティスが組み込まれています。 
+summary: Workload Factory for Databases は、最適化、自動シン クローニング、監視および解決機能のベスト プラクティスが組み込まれた、エンドツーエンドのデータベース導入および保守サービスです。 
 ---
-= データベース向けBlueXP  ワークロードファクトリの詳細
+= データベース向けワークロードファクトリの詳細
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-BlueXP  Workload Factory for Databasesは、データベースの導入とメンテナンスをエンドツーエンドで行うサービスです。最適化、自動シンクローニング、監視と解決のためのベストプラクティスが組み込まれています。
+Workload Factory for Databases は、最適化、自動シン クローニング、監視および解決機能のベスト プラクティスが組み込まれた、エンドツーエンドのデータベース導入および保守サービスです。
 
 
 
-== BlueXP  Workload Factoryとは何ですか？
+== データベースのワークロード ファクトリーとは何ですか?
 
-BlueXP  Workload Factory for Databasesは、業界のベストプラクティスに準拠しながら、パフォーマンスとコストの期待に応えるよう最適化されたAmazon FSx for NetApp ONTAP（FSx for ONTAP）環境を検出、評価、計画、プロビジョニング、移行します。ライフサイクル全体を通じて、ワークロードファクトリはFSx for ONTAP上のデータベースの継続的な最適化と管理を提供します。
+Workload Factory for Databases は、Microsoft SQL Server データを検出、評価、計画、プロビジョニングし、業界のベストプラクティスに準拠しながらパフォーマンスとコストの期待に応えるように最適化された Amazon FSx for NetApp ONTAP (FSx for ONTAP) デプロイメントに移動します。ライフサイクル全体を通じて、ワークロードファクトリはFSx for ONTAP上のデータベースの継続的な最適化と管理を提供します。
 
 ワークロードファクトリの詳細については、を参照してlink:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["ワークロードファクトリの概要"^]ください。
 
@@ -81,7 +81,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["FSx 
 
 === Workload Factoryの動作モード
 
-_basic_、_read_and _automate_という3つの運用モードでは、ワークロード工場の内外に導入するための柔軟なオプションが提供されます。ワークロードファクトリの外部で使用するコードスニペットを使用して、ゼロトラストのIN_BASIC_MODEですぐに価値を得ることができます。_read_and_automate_modesで増分値を取得します。
+3つの異なる動作モード（_基本_、_読み取り専用_、_読み取り/書き込み_）により、ワークロードファクトリーの内外を問わず、柔軟な導入オプションを提供します。_ワークロードファクトリの外部で使用するコードスニペットを使用して、ゼロトラストのIN_BASIC_MODEですぐに価値を得ることができます。読み取り専用_モードと_読み取り/書き込み_モードでは、信頼性を段階的に高めることで、付加価値を高めることができます。
 
 詳細については、をご覧ください link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Workload Factoryの動作モード"^]。
 

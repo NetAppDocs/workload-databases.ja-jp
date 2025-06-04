@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
 permalink: quick-start-databases.html 
-keywords: requirements, basic mode, read mode, automate mode 
-summary: データベースには、要件が異なる3つのモードがあります。 
+keywords: requirements, basic mode, read-only mode, read/write mode 
+summary: データベースのワークロード ファクトリを開始して、Infrastructure-as-Code スニペットの使用、ホストの検出、リソースの管理などを行います。 
 ---
-= データベース用のBlueXP  ワークロード工場のクイックスタート
+= データベースのワークロードファクトリーのクイックスタート
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-BlueXP  Workload Factory for Databasesでは、_basic_modeですぐに作業を開始できます。ワークロードファクトリを使用してホストの検出やリソースの管理などを行いたい場合は、いくつかの手順で作業を開始できます。
+データベース用のワークロード ファクトリーを使用すると、_基本_ モードですぐに開始できます。ワークロードファクトリを使用してホストの検出やリソースの管理などを行いたい場合は、いくつかの手順で作業を開始できます。
 
 データベースを使用するにはAWSアカウントが必要です。
 
@@ -23,19 +23,19 @@ BlueXP  Workload Factory for Databasesでは、_basic_modeですぐに作業を
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2つ"] クレデンシャルと権限の追加
 [role="quick-margin-para"]
-いずれかを選択し link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["_basic_、_read_、および_automate_operationalモード"^]ます。
+いずれかを選択し link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["_基本_、_読み取り専用_、および_読み取り/書き込み_の動作モード"^]ます。
 
 [role="quick-margin-para"]
 _basic_modeで操作する場合は、これ以上操作する必要はありません。データベースの使用を開始して、部分的に完了したコードサンプルをコピーできます。[データベース]タイルで、*[データベースホストの導入]*をクリックします。link:create-database-server.html["データベースサーバの導入方法"]です。
 
 [role="quick-margin-para"]
-_read_or_automate_modeで操作する場合は、データベースや 生成AIなどのワークロード機能の選択、および_read_or_automate_modeで操作するための正しい権限を確実に持つためのIAMポリシーの作成が必要link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["アカウントへのクレデンシャルの手動追加"^]です。
+_読み取り専用_または_読み取り/書き込み_モードで操作する場合は、 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["アカウントへのクレデンシャルの手動追加"^]これには、データベースや GenAI などのワークロード機能の選択や、_読み取り専用_ モードまたは _読み取り/書き込み_ モードで操作するための適切な権限があることを確認するための IAM ポリシーの作成が含まれます。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["3つ"] データベースサーバの導入
 [role="quick-margin-para"]
-最後に、_automate_modeで動作するように選択した場合は、またはホストリソースを管理してから、ユーザデータベースを追加する必要があります link:create-database-server.html["導入する"] link:detect-host.html["データベースサーバの検出"] 。
+最後に、_読み取り/書き込み_モードで操作することを選択した場合は、 link:create-database-server.html["ホストサーバーを展開する"]またはlink:register-instance.html["インスタンスを登録する"]ホスト リソースを管理し、ユーザー データベースを追加する前に行います。
 
 .次のステップ
-データベースインベントリにFSx for ONTAP管理ホストがある場合は、またはを実行できます link:create-database.html["ユーザデータベースの作成"] link:create-sandbox-clone.html["ホストのクローンを作成してサンドボックスを作成する"]。
+データベースインベントリにFSx for ONTAPファイルシステムストレージのホストインスタンスを登録すると、 link:create-database.html["ユーザデータベースの作成"]またはlink:create-sandbox-clone.html["ホストのクローンを作成してサンドボックスを作成する"] 。
 
 データベースのインベントリにElastic Block StoreやFSx for Windowsファイルサーバのホストがあれば、それを実行できますlink:explore-savings.html["コスト削減試算ツールでコスト削減額を確認する"]。

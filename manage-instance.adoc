@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: manage-instance.html 
+keywords: host instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
+summary: データベースのワークロード ファクトリにおけるインスタンス管理について学習します。 
+---
+= データベースのワークロードファクトリーにおけるインスタンス管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+ワークロードファクトリーで登録されたホストインスタンスの管理には、データベースやデータベースクローンの作成といったインスタンスのリソースのデプロイ、インスタンスとデータベースのステータス、リソース使用率、保護、ストレージパフォーマンスの監視が含まれます。さらに、データベース構成のWell-Architectedステータスを分析し、構成のベストプラクティスを実装することで、パフォーマンスを向上させ、運用コストを削減できます。インスタンス管理は、FSx for ONTAPファイルシステムストレージを使用するインスタンスのみで利用可能です。
+
+絶対ですlink:register-instance.html["ホストインスタンスを登録する"]以下の管理タスクを実行します。
+
+管理タスクには次のものが含まれます。
+
+* link:create-database.html["データベースの作成"]
+* link:create-sandbox-clone.html["データベースクローンの作成（サンドボックス）"]
+* link:view-databases.html["データベースの表示"]
+* link:monitor-databases.html["データベース操作の監視"]
+* link:optimize-configurations.html["適切に設計されたデータベース構成の実装"]
+

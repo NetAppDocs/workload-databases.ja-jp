@@ -1,25 +1,21 @@
 ---
 sidebar: sidebar 
 permalink: optimize-overview.html 
-keywords: continuous optimization, optimize, assess, assessment, scan, optimization, Microsoft SQL Server, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
-summary: BlueXP  Workload Factory for Databasesは、Amazon FSx for NetApp ONTAPストレージ上のMicrosoft SQL Server環境を継続的に最適化します。 
+keywords: database configuration issues, issues, analyze, scan, optimize, improve, database configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations, storage, compute, application, resiliency, scan, optimization, SQL Server, host, instance 
+summary: データベースのワークロード ファクトリーは、Microsoft SQL Server の構成を定期的に分析して、問題があるかどうかを判断します。 
 ---
-= データベース向けのBlueXP  ワークロードファクトリ向けの継続的な最適化
+= ワークロードファクトリーにおけるデータベース環境の構成分析
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-BlueXP  Workload Factory for Databasesは、Amazon FSx for NetApp ONTAPストレージ上のMicrosoft SQL Server環境を継続的に最適化します。
-
-継続的最適化データベースインフラを大規模に自動的にスキャンして評価することで、大規模な環境で最高のパフォーマンス、コスト効率、ベストプラクティスへの準拠を実現します。この機能は、最適化のためのインサイトと推奨事項の包括的なレポートを提供します。
-
-継続的な最適化により、データベースインフラの問題を検出し、何を変更する必要があるかを把握して対策を講じることができます。
+Workload Factory for Databases は、Amazon FSx for NetApp ONTAP ストレージ上の Microsoft SQL Server のデプロイメントに問題がないか確認するために、データベース構成を定期的に分析します。問題が見つかった場合、Workload Factory は問題点を提示し、データベース構成が最高のパフォーマンス、コスト効率、そしてベストプラクティスへの準拠を実現するために必要な変更点を解説します。
 
 主な機能は次のとおりです。
 
-* 継続的な評価
+* 日常的な構成分析
 * ベストプラクティスの自動検証
 * サイズの適正化に関する推奨事項
 * プロアクティブなオブザーバビリティ
@@ -27,6 +23,34 @@ BlueXP  Workload Factory for Databasesは、Amazon FSx for NetApp ONTAPスト�
 * AWS Well-Architected Framework Advisor
 
 
-最適化の範囲は、評価するコンポーネントによって異なります。たとえば、ストレージの最適化はSQLインスタンスレベルで行われ、コンピューティングの最適化はホストレベルで行われます。
 
-link:optimize-configurations.html["Microsoft SQL Server環境向けに構成を最適化"]
+
+== 適切に設計されたステータス
+
+ファイルシステムレベルのワークロードファクトリコンソールには、すべてのFSx for ONTAPファイルシステムについて、適切に設計されたステータスが表示されます。Well-Architectedステータスは、「問題」、「分析されていない」、または「Well-Architected」に分類されます。well-architectedステータスを選択すると、ファイルシステム内のwell-architectedステータスタブにリダイレクトされます。このタブでは、well-architectedスコア、構成カテゴリ、ファイルシステムのすべての構成を確認できます。
+
+適切に設計されたスコア:: スコアには現在分析されているすべての構成が含まれ、パーセンテージで表示されます。25%のスコアは、25%のファイルシステム構成が適切に設計されていることを意味します。
+構成のカテゴリ:: ファイルシステム構成は、AWS Well-Architected Frameworkの次の5つの柱に沿ったカテゴリに分類されています。
++
+--
+* _信頼性_：システムが停止した場合でも、ワークロードが意図した機能を正しく一貫して実行するようにします。構成例としては、FSx for ONTAPのバックアップがあります。
+* _セキュリティ_：リスク評価とリスク軽減戦略を通じて、データ、システム、資産を保護することに重点を置いています。
+* _優れた運用性_：最適なアーキテクチャとビジネスバリューを提供することに重点を置いています。
+* _コスト最適化_：コストを最小限に抑えながらビジネス価値を提供することを目指しています。
+* _パフォーマンス効率_：リソースを効率的に使用してシステム要件を満たし、需要の変化に応じて最適なパフォーマンスを維持することに重点を置いています。
+
+
+--
+分析範囲:: 最適化の範囲は、評価するコンポーネントによって異なります。たとえば、ストレージの最適化はSQLインスタンスレベルで行われ、コンピューティングの最適化はホストレベルで行われます。
+
+
+
+
+== 分析要件
+
+完全なデータベース環境分析を行うには、ホスト インスタンスが登録され、オンラインになっている必要があります。
+
+link:register-instance.html["ホスト インスタンスを登録する方法を学びます。"]
+
+.次のステップ
+link:optimize-configurations.html["適切に設計されたデータベース構成を実装する"]

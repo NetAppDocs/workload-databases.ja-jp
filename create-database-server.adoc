@@ -4,17 +4,17 @@ permalink: create-database-server.html
 keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
 summary: データベース用のBlueXP  ワークロードファクトリ内に新しいMicrosoft SQL Serverを作成します。 
 ---
-= データベース用のBlueXP  ワークロードファクトリにデータベースサーバを作成
+= データベースのワークロードファクトリーに Microsoft SQL Server を作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-BlueXP  Workload Factory for Databasesで新しいMicrosoft SQL Server（データベースホスト）を作成するには、FSx for ONTAPファイルシステムの導入とActive Directory用のリソースが必要です。
+データベースのワークロード ファクトリーで新しい Microsoft SQL Server またはデータベース ホストを作成するには、FSx for ONTAP ファイル システムのデプロイメントと Active Directory のリソースが必要です。
 
 .タスクの内容
-ワークロードファクトリからMicrosoft SQL Serverを作成する前に、データベースホストの構成に使用できるストレージ導入タイプ、Active Directoryの導入、ワークロードファクトリの動作モード、およびこの処理を完了するための要件について学習します。
+ワークロード ファクトリから Microsoft SQL Server を作成する前に、データベース ホスト構成で使用可能なストレージ展開の種類、Microsoft マルチパス I/O 構成、Active Directory 展開、ネットワークの詳細、およびこの操作を完了するための要件について学習します。
 
 導入後は、次の手順を実行する必要があり <<手順2：Microsoft SQL Serverでリモート接続を有効にする,Microsoft SQL Serverでリモート接続を有効にする>>ます。
 
@@ -58,19 +58,12 @@ Active Directory:: 導入時にActive Directory（AD）に対して次の処理�
 
 
 --
-ワークロードファクトリ動作モード:: Workload Factoryには、ワークロードファクトリがAWSリソースを管理できるようにする方法に応じて、3つの運用モードが用意されています。
 
-
-*_Basic_mode *：この操作モードでは、ワークロードファクトリにAWSアカウントのクレデンシャルを関連付ける必要はありません。部分的に塗りつぶされたYAMLテンプレートをコードボックスからコピーまたはダウンロードして、ワークロードファクトリの外で完成させることができます。
-
-*_Read_mode *:この操作モードでは、AWSアカウントのクレデンシャルに読み取り権限を付与します。これにより、_Quick create_or_Advanced create_formを完成させ、コピーまたはダウンロードすることができます。入力したフォームの詳細を使用して、ワークロードファクトリからCloudFormationにリダイレクトすることもできます。また、ワークロードファクトリに導入されたデータベースサーバを管理できるようになります。
-
-*_automate_mode *：この操作モードでは、AWSアカウントのクレデンシャルに自動化権限を付与します。これにより、ワークロードファクトリ内でAWSリソースを作成および管理できます。
 
 .開始する前に
 新しいデータベースホストを作成する前に、次の前提条件を満たしていることを確認してください。
 
-クレデンシャルと権限:: ワークロードファクトリで新しいデータベースホストを作成する必要がありlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWSアカウントのクレデンシャルと自動モードの権限"^]ます。
+クレデンシャルと権限:: ワークロードファクトリで新しいデータベースホストを作成する必要がありlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS アカウントの認証情報と読み取り/書き込みモードの権限"^]ます。
 Active Directory:: Active Directoryに接続する場合は、次の作業を行うための権限を持つ管理者アクセス権が必要です。
 +
 --
@@ -125,13 +118,16 @@ AWS CloudFormationで展開するための完全なYAMLファイルテンプレ�
 
 .. *リージョンとVPC *：リージョンとVPCネットワークを選択します。
 +
-既存のインターフェイスエンドポイントのセキュリティグループが、選択したサブネットへのHTTPS（443）プロトコルへのアクセスを許可するようにします。
+展開サブネットが既存のインターフェースエンドポイントに関連付けられており、セキュリティグループが選択したサブネットへの HTTPS (443) プロトコルへのアクセスを許可していることを確認します。
 
 +
 AWSサービスインターフェイスエンドポイント（SQS、FSx、EC2、CloudWatch、CloudFormation、 SSM）とS3ゲートウェイエンドポイントが見つからない場合は、導入時に作成されます。
 
 +
 vPC DNS属性 `EnableDnsSupport` とが `EnableDnsHostnames` 変更され、エンドポイントアドレス解決がまだに設定されていない場合は有効になり `true`ます。
+
++
+クロスVPC DNSを使用する場合、DNSが存在するもう一方のVPCのエンドポイントのセキュリティグループで、デプロイメントサブネットへのポート443を許可する必要があります。許可されていない場合は、クロスVPC Active Directoryに参加する際に、ローカルVPCのDNSリゾルバーを提供する必要があります。複数のドメインコントローラーが複製された環境で、サブネットから一部のドメインコントローラーにアクセスできない場合は、「CloudFormationにリダイレクト」して次のように入力できます。  `Preferred domain controller` Active Directory に接続します。
 
 .. *アベイラビリティゾーン*：フェールオーバークラスタインスタンス（FCI）導入モデルに従って、アベイラビリティゾーンとサブネットを選択します。
 +

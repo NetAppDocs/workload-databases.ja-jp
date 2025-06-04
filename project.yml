@@ -38,20 +38,36 @@ sidebar:
         url: "/create-database-server.html"
       - title: PostgreSQLサーバの作成
         url: "/create-postgresql-server.html"
-    - title: データベースサーバの検出
-      url: "/detect-host.html"
-    - title: データベースの作成
-      url: "/create-database.html"
+    - title: インスタンスを管理する
+      entries:
+      - title: インスタンス管理
+        url: manage-instance.html
+      - title: インスタンスを登録する
+        url: "/register-instance.html"
+      - title: データベースの表示
+        url: "/view-databases.html"
+      - title: データベースの作成
+        url: "/create-database.html"
+      - title: サンドボックスクローンの作成
+        url: "/create-sandbox-clone.html"
     - title: Codeboxによる自動化
       url: "/automate-codebox.html"
   - title: 管理と監視
     entries:
+    - title: データベースの監視
+      url: "/monitor-databases.html"
+    - title: 構成のベストプラクティスを実装する
+      entries:
+      - title: データベースの構成分析
+        url: "/optimize-overview.html"
+      - title: 適切に設計されたデータベース構成を実装する
+        url: "/optimize-configurations.html"
+      - title: 構成解析の延期
+        url: "/postpone-analysis.html"
     - title: Microsoft SQL Serverの管理
       url: "/manage-server.html"
     - title: クローンの管理
       entries:
-      - title: サンドボックスクローンの作成
-        url: "/create-sandbox-clone.html"
       - title: サンドボックスクローンの整合性チェック
         url: "/check-clone-integrity.html"
       - title: サンドボックスクローンのリバート
@@ -66,16 +82,6 @@ sidebar:
         url: "/split-clone.html"
       - title: サンドボックスクローンを削除する
         url: "/delete-clone.html"
-    - title: データベースの監視
-      url: "/monitor-databases.html"
-    - title: SQL Serverの最適化
-      entries:
-      - title: 継続的最適化の概要
-        url: "/optimize-overview.html"
-      - title: 構成を最適化
-        url: "/optimize-configurations.html"
-      - title: 構成解析の延期
-        url: "/postpone-analysis.html"
   - title: 知識とサポート
     entries:
     - title: サポートに登録します

@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: deregister-instance.html 
+keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle host instance, deregister instance, unregister instance, remove instance 
+summary: インスタンス リソースをデプロイまたは監視する必要がなくなった場合は、ホスト インスタンスの登録を解除します。 
+---
+= ワークロードファクトリーのホストインスタンスの登録を解除する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+インスタンスリソースのデプロイや監視が不要になった場合は、ホストインスタンスの登録を解除してください。インスタンスの登録を解除すると、ホストインスタンスが使用していたストレージ容量も削除されます。
+
+後でインスタンスを再登録できます。
+
+.手順
+. いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
+. [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
+. [データベース]で、*[インベントリ]*タブを選択します。
+. ドロップダウン矢印をクリックして、登録解除するホスト インスタンスの行を展開します。
++
+ホストが展開され、ホストインスタンスが表示されます。
+
+. 登録を解除するインスタンスの 3 つのドット メニューをクリックします。
+. *登録解除*を選択します。
+
+
+.結果
+ホストインスタンスの登録が解除されました。インスタンスは後で再度登録できます。

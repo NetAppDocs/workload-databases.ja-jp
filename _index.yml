@@ -15,14 +15,12 @@ indexpage:
     links:
     - title: コスト削減の詳細
       url: "/explore-savings.html"
+    - title: インスタンスを登録する
+      url: "/register-instance.html"
     - title: Microsoft SQL Serverの作成
       url: "/create-database-server.html"
     - title: PostgreSQLサーバの作成
       url: "/create-postgresql-server.html"
-    - title: データベースの作成
-      url: "/create-database.html"
-    - title: 構成を最適化
-      url: "/optimize-configurations.html"
   - title: 知識とサポート
     links:
     - title: サポートに登録します
