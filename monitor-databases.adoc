@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: monitor-databases.html 
 keywords: monitor databases, monitor jobs, track database jobs 
-summary: データベースのジョブを追跡し、BlueXP  ワークロードファクトリ内のデータベースを監視します。 
+summary: データベース ジョブを追跡し、データベースのワークロード ファクトリ内でデータベースを監視します。 
 ---
-= BlueXP  Workload Factoryでのデータベースの監視
+= ワークロードファクトリーでデータベースジョブを監視する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-データベースのジョブを追跡し、BlueXP  ワークロードファクトリ内のデータベースを監視します。
+データベース ジョブを追跡し、データベースのワークロード ファクトリ内でデータベースを監視します。
 
 .タスクの内容
 データベースにはジョブ監視機能があり、ジョブの進捗状況を追跡したり、障害が発生した場合の診断とトラブルシューティングを行うことができます。タイプとステータスでジョブをフィルタリングしたり、検索機能を使用してジョブを検索したり、ジョブテーブルをダウンロードしたりできます。

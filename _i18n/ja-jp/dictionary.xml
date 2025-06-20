@@ -361,7 +361,6 @@
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">結果</block>
   <block id="ca6b20c311193d70fa95150e9aadfeff" category="list-text">ドロップダウン矢印をクリックしてホストの行を展開し、ホストのデータベースを表示します。</block>
   <block id="bab47e98a40b74089a0df1373390d048" category="list-text">[データベースの表示]*を選択します。</block>
-  <block id="252215232d636a7c096b2327e9a20b42" category="doc">データベースの監視</block>
   <block id="67b0a66954400448325457f930e0f82b" category="paragraph">ジョブ監視では、ジョブに応じて最大3つのレベルの監視がサポートされます。たとえば、新しいデータベースおよびサンドボックスクローンの作成では、ジョブ監視によって親ジョブとサブジョブが追跡されます。</block>
   <block id="b830a8f027299af6d1d8ffbb130bcc58" category="list-text">ジョブ監視レベル</block>
   <block id="f52bf93027629736a089ef7f590091e0" category="list-text">レベル1（親ジョブ）：ホスト導入ジョブを追跡します。</block>
@@ -453,7 +452,6 @@
   <block id="991fc877b6135bcda7435016745ae066" category="sidebar">データベースワークロードを使用</block>
   <block id="fbe27670bf06b7e38d268c77e7f002f0" category="sidebar">新しいデータベースサーバを作成する</block>
   <block id="5eb43e1edd4f0757c83c6d6f6632ff94" category="sidebar">管理と監視</block>
-  <block id="077bbf8da979e97e9f7ec7239eb76073" category="sidebar">Microsoft SQL Serverの管理</block>
   <block id="6ea5d3d06add60328b6497a58edc5878" category="sidebar">クローンの管理</block>
   <block id="7375873088079584bbffaf102f0fdae4" category="sidebar">サンドボックスクローンの作成</block>
   <block id="566d7361c862d8d2bd63be4cb3f852cd" category="sidebar">サンドボックスクローンの整合性チェック</block>
@@ -645,8 +643,6 @@
   <block id="37c0391f707d07b4c1d64a02e6944c56" category="paragraph">Microsoft SQL Serverのワークロード工場では、AWS、NetApp ONTAP、SQL Serverのベストプラクティスに従って、高可用性（Always Onフェイルオーバークラスタインスタンス）とシングルインスタンス環境の両方がサポートされています。</block>
   <block id="b9aff8d3c5ff2dd2a4ce0963f381f957" category="paragraph">ワークロードファクトリまたはワークロードファクトリのアプリケーションとサービスに関する一般的な質問については、を参照してください<block ref="b9da93c3ce08d7fb81177157f233c056" category="inline-link-macro-rx"></block>。</block>
   <block id="71e2f5eacc9fc09317bbe70e053aeb1e" category="summary">データベース用のBlueXP  ワークロードファクトリでMicrosoft SQL Serverインスタンスを管理します。</block>
-  <block id="72f7ef1037108c5eeefad1bcee23a0a8" category="summary">データベースのジョブを追跡し、BlueXP  ワークロードファクトリ内のデータベースを監視します。</block>
-  <block id="671ef5b67f2b7cbf660faa04c3d4622a" category="doc">BlueXP  Workload Factoryでのデータベースの監視</block>
   <block id="eb7ed5d3b1a2ff72006245ad37f9817b" category="paragraph">データベースを使用するにはAWSアカウントが必要です。</block>
   <block id="c37e590e9c50960a15f3292676cc0c18" category="paragraph">開始するには、次の手順を実行します。</block>
   <block id="3e7340039619cc08d8c1c5a3cd4bfb43" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>BlueXP  ワークロードファクトリにログイン</block>
@@ -986,8 +982,6 @@
   <block id="fd8a54c517020c653ae1776e8e00d343" category="list-text"><block ref="fd8a54c517020c653ae1776e8e00d343" category="inline-link-macro-rx"></block></block>
   <block id="050cc3957bb212dc2758e7dd27f7faf8" category="inline-link-macro">データベースの表示</block>
   <block id="7a403e4f1f2e0af187fa5a95116054cc" category="list-text"><block ref="7a403e4f1f2e0af187fa5a95116054cc" category="inline-link-macro-rx"></block></block>
-  <block id="f4a7fa0c2cfabd3c771238fbdb6c7ae5" category="inline-link-macro">データベース操作の監視</block>
-  <block id="b92726505ce75a5aa80c8086ae979c25" category="list-text"><block ref="b92726505ce75a5aa80c8086ae979c25" category="inline-link-macro-rx"></block></block>
   <block id="2f2280ee27b03fc450cd69afae071e39" category="inline-link-macro">適切に設計されたデータベース構成の実装</block>
   <block id="d3379f7eb15b947ec99d4daad00317b3" category="list-text"><block ref="d3379f7eb15b947ec99d4daad00317b3" category="inline-link-macro-rx"></block></block>
   <block id="c4363ade7c2d208d79dee9b60bc51922" category="doc">ワークロードファクトリーで適切に設計されたデータベース構成を実装する</block>
@@ -1093,4 +1087,7 @@
   <block id="1ecac8592ecd595bc4f53507e476fc53" category="list-text">ワークロードファクトリでサンドボックスクローンを作成する必要があり<block ref="9c62e895201e97f6c74e26e0f3de2d15" category="inline-link-macro-rx"></block>ます。</block>
   <block id="b2a6b8ac31e0bf9968f6f80649cc61cd" category="inline-link-macro">AWSアカウントの認証情報と_読み取り専用_または_読み取り/書き込み_モードの権限を追加する必要があります</block>
   <block id="b6693184dc0e8cc975fb8e936b04d129" category="paragraph">インスタンスのホストはインベントリタブに表示されている必要があります。ホストがインベントリに表示されるには、 <block ref="99382ab95f660f372dfed7d2289ac38a" category="inline-link-macro-rx"></block> 。</block>
+  <block id="a38d5cfb962091710b5c8c4cae183d64" category="summary">データベース ジョブを追跡し、データベースのワークロード ファクトリ内でデータベースを監視します。</block>
+  <block id="bcdf66d04230e723b2fc5152ae10a7ef" category="doc">ワークロードファクトリーでデータベースジョブを監視する</block>
+  <block id="9ae4e4b9fdc398feb3be344b26cbf99f" category="sidebar">データベースジョブを監視する</block>
 </blocks>

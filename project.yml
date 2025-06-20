@@ -54,7 +54,7 @@ sidebar:
       url: "/automate-codebox.html"
   - title: 管理と監視
     entries:
-    - title: データベースの監視
+    - title: データベースジョブを監視する
       url: "/monitor-databases.html"
     - title: 構成のベストプラクティスを実装する
       entries:
@@ -64,8 +64,6 @@ sidebar:
         url: "/optimize-configurations.html"
       - title: 構成解析の延期
         url: "/postpone-analysis.html"
-    - title: Microsoft SQL Serverの管理
-      url: "/manage-server.html"
     - title: クローンの管理
       entries:
       - title: サンドボックスクローンの整合性チェック
