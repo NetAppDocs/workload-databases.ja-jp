@@ -87,6 +87,8 @@ Active Directory:: Active Directoryに接続する場合は、次の作業を行
 
 NOTE: CodeboxからTerraformを使用すると、コピーまたはダウンロードしたコードが非表示になり、パスワードが表示され `fsxadmin` `vsadmin` ます。コードを実行するときは、パスワードを再入力する必要があります。ユーザーアカウントには、_automate_mode権限に加えて、次の権限を含める必要があります。および `iam:TagInstanceProfile`。 `iam:TagRole`link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox["CodeboxからTerraformを使用する方法を確認する"^]です。
 
+デプロイ中、ワークロードファクトリーは、SQLのプロビジョニング用スクリプトへの資格情報委任のためにCredSSPを有効にします。グループポリシーによってすべてのドメインコンピューターでCredSSPの委任がブロックされている場合、デプロイは失敗します。デプロイ後、ワークロードファクトリーはCredSSPを無効にします。
+
 [role="tabbed-block"]
 ====
 .クイック作成
