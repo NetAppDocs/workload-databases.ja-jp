@@ -36,6 +36,6 @@ _読み取り専用_または_読み取り/書き込み_モードで操作する
 最後に、_読み取り/書き込み_モードで操作することを選択した場合は、 link:create-database-server.html["ホストサーバーを展開する"]またはlink:register-instance.html["インスタンスを登録する"]ホスト リソースを管理し、ユーザー データベースを追加する前に行います。
 
 .次のステップ
-データベースインベントリにFSx for ONTAPファイルシステムストレージのホストインスタンスを登録すると、 link:create-database.html["ユーザデータベースの作成"]またはlink:create-sandbox-clone.html["ホストのクローンを作成してサンドボックスを作成する"] 。
+データベースインベントリにFSx for ONTAPファイルシステムストレージのインスタンスを登録すると、 link:create-database.html["ユーザデータベースの作成"]またはlink:create-sandbox-clone.html["ホストのクローンを作成してサンドボックスを作成する"] 。
 
 データベースのインベントリにElastic Block StoreやFSx for Windowsファイルサーバのホストがあれば、それを実行できますlink:explore-savings.html["コスト削減試算ツールでコスト削減額を確認する"]。

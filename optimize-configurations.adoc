@@ -35,7 +35,7 @@ summary: Workload Factory for Databases は、Microsoft SQL Server の構成を�
 
 .開始する前に
 * あなたは持っている必要がありますlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS アカウントの認証情報と読み取り/書き込み権限"^]データベース構成を分析します。
-* Microsoft SQL Server インスタンスのストレージを評価するには、インスタンスがワークロード ファクトリに登録され、ストレージ タイプが FSx for ONTAP である必要があります。 link:register-instance.html["ホスト インスタンスを登録する方法を学びます。"]
+* Microsoft SQL Server インスタンスのストレージを評価するには、インスタンスがワークロード ファクトリに登録され、ストレージ タイプが FSx for ONTAP である必要があります。 link:register-instance.html["インスタンスを登録する方法を学びます。"]
 * 設定または構成の修正を選択する前に、各推奨事項をよく確認してください。RSSおよびMAXDOPの設定については、本番環境を変更する前に、推奨設定をテストしてパフォーマンスの向上を確認することをお勧めします。
 
 
@@ -47,7 +47,7 @@ NOTE: 修正プロセスによって、インスタンスのダウンタイム�
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
 . [インベントリ（Inventory）]*タブで、*[インスタンス（Instances）]*タブを選択します。
 . インスタンスの構成の問題を表示するには、[*問題を修正*] を選択します。
-. ホスト インスタンスの Well-architected ステータス ページで、分析の結果を確認します。
+. インスタンスの Well-architected ステータス ページで、分析の結果を確認します。
 +
 構成の問題は、カテゴリ、サブカテゴリ、ステータス、重大度、タグでフィルタリングできます。
 

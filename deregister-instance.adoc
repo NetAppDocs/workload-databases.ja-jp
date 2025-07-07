@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: deregister-instance.html 
-keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle host instance, deregister instance, unregister instance, remove instance 
+keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle instance, deregister instance, unregister instance, remove instance 
 summary: インスタンス リソースをデプロイまたは監視する必要がなくなった場合は、インスタンスの登録を解除します。 
 ---
 = ワークロードファクトリーのインスタンスの登録を解除する

@@ -48,9 +48,9 @@ Workload Factory for Databases は、Amazon FSx for NetApp ONTAP ストレージ
 
 == 分析要件
 
-完全なデータベース環境分析を行うには、ホスト インスタンスが登録され、オンラインになっている必要があります。
+完全なデータベース環境分析を行うには、インスタンスが登録され、オンラインになっている必要があります。
 
-link:register-instance.html["ホスト インスタンスを登録する方法を学びます。"]
+link:register-instance.html["インスタンスを登録する方法を学びます。"]
 
 .次のステップ
 link:optimize-configurations.html["適切に設計されたデータベース構成を実装する"]
