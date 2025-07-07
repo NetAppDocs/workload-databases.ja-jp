@@ -13,7 +13,10 @@ summary: データベース用のBlueXP  ワークロードファクトリ内�
 [role="lead"]
 データベースのワークロード ファクトリーで新しい Microsoft SQL Server またはデータベース ホストを作成するには、FSx for ONTAP ファイル システムのデプロイメントと Active Directory のリソースが必要です。
 
-.タスクの内容
+
+
+== タスクの内容
+
 ワークロード ファクトリから Microsoft SQL Server を作成する前に、データベース ホスト構成で使用可能なストレージ展開の種類、Microsoft マルチパス I/O 構成、Active Directory 展開、ネットワークの詳細、およびこの操作を完了するための要件について学習します。
 
 導入後は、次の手順を実行する必要があり <<手順2：Microsoft SQL Serverでリモート接続を有効にする,Microsoft SQL Serverでリモート接続を有効にする>>ます。
@@ -42,14 +45,7 @@ Active Directory:: 導入時にActive Directory（AD）に対して次の処理�
 
 
 --
-
-
-
-
-== ユーザ管理のActive Directoryセキュリティグループ
-
-ワークロード工場でのMicrosoft SQL Serverの導入時に[User-managed Active Directory]を選択した場合は、EC2インスタンスとディレクトリサービスの間のトラフィックを許可するセキュリティグループを指定する必要があります。Workload Factoryでは、AWS Managed Microsoft ADと同様に、ユーザ管理Active Directoryのセキュリティグループが自動的に付加されません。
-
+ユーザ管理のActive Directoryセキュリティグループ:: ワークロード工場でのMicrosoft SQL Serverの導入時に[User-managed Active Directory]を選択した場合は、EC2インスタンスとディレクトリサービスの間のトラフィックを許可するセキュリティグループを指定する必要があります。Workload Factoryでは、AWS Managed Microsoft ADと同様に、ユーザ管理Active Directoryのセキュリティグループが自動的に付加されません。
 リソースのロールバック:: Domain Name System（DNS;ドメインネームシステム）リソースをロールバックする場合、ADおよびDNSのリソースレコードは自動的には削除されません。DNSサーバとADからレコードを削除するには、次の手順を実行します。
 +
 --
@@ -60,7 +56,10 @@ Active Directory:: 導入時にActive Directory（AD）に対して次の処理�
 --
 
 
-.開始する前に
+
+
+== 開始する前に
+
 新しいデータベースホストを作成する前に、次の前提条件を満たしていることを確認してください。
 
 クレデンシャルと権限:: ワークロードファクトリで新しいデータベースホストを作成する必要がありlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS アカウントの認証情報と読み取り/書き込みモードの権限"^]ます。
