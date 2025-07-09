@@ -971,8 +971,6 @@
   <block id="2f2280ee27b03fc450cd69afae071e39" category="inline-link-macro">適切に設計されたデータベース構成の実装</block>
   <block id="d3379f7eb15b947ec99d4daad00317b3" category="list-text"><block ref="d3379f7eb15b947ec99d4daad00317b3" category="inline-link-macro-rx"></block></block>
   <block id="c4363ade7c2d208d79dee9b60bc51922" category="doc">ワークロードファクトリーで適切に設計されたデータベース構成を実装する</block>
-  <block id="0006f418861a6fb47d59a74b3db28869" category="paragraph">構成分析の洞察と推奨事項を活用し、ワークロードファクトリーを活用してデータベース構成のベストプラクティスを実装します。信頼性、セキュリティ、効率性、パフォーマンス、コストが最適化されていない構成の問題を簡単に特定し、アーキテクチャを改善するための対策を講じることができます。</block>
-  <block id="bffcd6aaeac8e97cf82007491fd97512" category="paragraph">ワークロードファクトリーはデータベース構成を毎日分析します。毎日の分析では、構成の問題を自動的に修正するためのオプションを含む洞察と推奨事項が提供され、構成がベストプラクティスに準拠するようにします。</block>
   <block id="622529f53e43499d3ab7bec3ddade638" category="paragraph">ワークロード ファクトリ コンソール内のデータベース インベントリから、構成の問題に関する推奨事項を確認し、それらの問題を修正するオプションがあります。</block>
   <block id="681f8e0d48f8a5609d29d038dfdb7354" category="list-text">分析対象</block>
   <block id="f6e75af7aefeb95ed6d70c67eae48cbc" category="list-text">ワークロード ファクトリーは、Microsoft SQL Server インスタンスの次の構成の well-architected ステータスを分析します。</block>
@@ -1117,4 +1115,9 @@
   <block id="897c69f19b2f39fbf3080a555a679d8e" category="paragraph">データベースインベントリにFSx for ONTAPファイルシステムストレージのインスタンスを登録すると、 <block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block>または<block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block> 。</block>
   <block id="621bb50103e94b947974d2656fb451ec" category="list-text">データベース リソースを含むインスタンスには、FSx for ONTAP ファイル システム ストレージが必要です。</block>
   <block id="dd36ed4d606eb4686fae0a7232af1eac" category="list-text">インスタンスはワークロード ファクトリに登録する必要があります。方法をご確認ください<block ref="e24144bf29586c3fb748c1e1cf493cb5" category="inline-link-macro-rx"></block>。</block>
+  <block id="2eb8fe4398b92e5c2222314cd13b7749" category="paragraph">構成分析の洞察と推奨事項を活用し、ワークロードファクトリーを活用してデータベース構成のベストプラクティスを実装します。Well-Architected ステータスを簡単に確認し、データベース構成の問題を把握し、信頼性、セキュリティ、効率、パフォーマンス、コストが最適化されていない構成を改善するための措置を講じることができます。</block>
+  <block id="2bab4675fc931e32d65c62820186d2e3" category="inline-link-macro">ワークロード ファクトリーの構成分析と Well-Architected ステータスについて学習します。</block>
+  <block id="00d1bba61e4e880f08c0a9d89d53205b" category="paragraph"><block ref="00d1bba61e4e880f08c0a9d89d53205b" category="inline-link-macro-rx"></block></block>
+  <block id="8b2297ce6c1f7ab63874a40b0ca4a48f" category="paragraph">ワークロードファクトリーはデータベース構成を毎日分析します。毎日の分析では、適切に設計されたステータス、洞察、推奨事項が提供され、構成がベスト プラクティスを満たすように構成の問題を自動的に修正するオプションも提供されます。</block>
+  <block id="08957eb86dbd3276e4875a3910d67420" category="sidebar">インスタンスの Well-Architected ステータスを表示する</block>
 </blocks>

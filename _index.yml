@@ -17,6 +17,8 @@ indexpage:
       url: "/explore-savings.html"
     - title: インスタンスを登録する
       url: "/register-instance.html"
+    - title: インスタンスの Well-Architected ステータスを表示する
+      url: "/optimize-configurations.html"
     - title: Microsoft SQL Serverの作成
       url: "/create-database-server.html"
     - title: PostgreSQLサーバの作成
