@@ -26,16 +26,22 @@ summary: データベースのワークロード ファクトリを開始して�
 いずれかを選択し link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["_基本_、_読み取り専用_、および_読み取り/書き込み_の動作モード"^]ます。
 
 [role="quick-margin-para"]
-_basic_modeで操作する場合は、これ以上操作する必要はありません。データベースの使用を開始して、部分的に完了したコードサンプルをコピーできます。[データベース]タイルで、*[データベースホストの導入]*をクリックします。link:create-database-server.html["データベースサーバの導入方法"]です。
+_読み取り専用_または_読み取り/書き込み_モードで操作する場合は、link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["アカウントへのクレデンシャルの手動追加"^]データベースや GenAI などのワークロード機能を選択し、必要な権限の IAM ポリシーを作成します。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["3つ"]リソースの検出または展開
+[role="quick-margin-para"]
+認証情報とIAMポリシーを使用すると、インベントリ内の既存のデータベースリソースを検出したり、link:create-database-server.html["ホストサーバーを展開する"] 。インベントリは、リソースを管理するための統一されたインターフェースを提供します。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["4"]コスト削減の機会を探る
+[role="quick-margin-para"]
+オンプレミスまたはAWSでデータベースを実行し、Amazon Elastic Block Store（EBS）またはFSx for Windows File Serverにストレージがある場合は、link:explore-savings.html["Exploreの節約計算機を使用する"]コストを分析し、移行を効果的に計画します。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"]適切に設計されたデータベース構成を実装する
+[role="quick-margin-para"]
+Workload Factory for Databases は、Well-architected ダッシュボードからAmazon FSx for NetApp ONTAPストレージ上の Microsoft SQL Server デプロイメントを定期的に分析します。データベースリソースのWell-Architectedダッシュボードから問題をトラブルシューティングするには、まずlink:register-instance.html["インスタンスを登録する"]。
 
 [role="quick-margin-para"]
-_読み取り専用_または_読み取り/書き込み_モードで操作する場合は、 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["アカウントへのクレデンシャルの手動追加"^]これには、データベースや GenAI などのワークロード機能の選択や、_読み取り専用_ モードまたは _読み取り/書き込み_ モードで操作するための適切な権限があることを確認するための IAM ポリシーの作成が含まれます。
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["3つ"] データベースサーバの導入
-[role="quick-margin-para"]
-最後に、_読み取り/書き込み_モードで操作することを選択した場合は、 link:create-database-server.html["ホストサーバーを展開する"]またはlink:register-instance.html["インスタンスを登録する"]ホスト リソースを管理し、ユーザー データベースを追加する前に行います。
+インスタンスを登録した後、well-archectedステータスを確認し、link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html["適切に設計されたデータベース構成を実装する"]ワークロードファクトリー内。
 
 .次のステップ
 データベースインベントリにFSx for ONTAPファイルシステムストレージのインスタンスを登録すると、 link:create-database.html["ユーザデータベースの作成"]またはlink:create-sandbox-clone.html["ホストのクローンを作成してサンドボックスを作成する"] 。
-
-データベースのインベントリにElastic Block StoreやFSx for Windowsファイルサーバのホストがあれば、それを実行できますlink:explore-savings.html["コスト削減試算ツールでコスト削減額を確認する"]。

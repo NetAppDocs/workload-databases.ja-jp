@@ -358,8 +358,6 @@
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。</block>
   <block id="948d113c0ab3cb85650dda6912a734c5" category="list-text">データベースの表示</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">結果</block>
-  <block id="ca6b20c311193d70fa95150e9aadfeff" category="list-text">ドロップダウン矢印をクリックしてホストの行を展開し、ホストのデータベースを表示します。</block>
-  <block id="bab47e98a40b74089a0df1373390d048" category="list-text">[データベースの表示]*を選択します。</block>
   <block id="67b0a66954400448325457f930e0f82b" category="paragraph">ジョブ監視では、ジョブに応じて最大3つのレベルの監視がサポートされます。たとえば、新しいデータベースおよびサンドボックスクローンの作成では、ジョブ監視によって親ジョブとサブジョブが追跡されます。</block>
   <block id="b830a8f027299af6d1d8ffbb130bcc58" category="list-text">ジョブ監視レベル</block>
   <block id="f52bf93027629736a089ef7f590091e0" category="list-text">レベル1（親ジョブ）：ホスト導入ジョブを追跡します。</block>
@@ -374,10 +372,8 @@
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">1つ</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">2つ</block>
   <block id="27c19be9febabd1e2fb82d7a39784f2d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> クレデンシャルと権限の追加</block>
-  <block id="f13bb46705b371ce5ebc0ccc10f09bb0" category="inline-link-macro">データベースサーバの導入方法</block>
   <block id="ce8e7e98b5597e78e8fd7d6bc94729cb" category="inline-link-macro">アカウントへのクレデンシャルの手動追加</block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">3つ</block>
-  <block id="6f6390592b833a81a0bda8c296a3c5b6" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> データベースサーバの導入</block>
   <block id="76e0353f7732c65129a16b1dee5f98f2" category="inline-link-macro">ユーザデータベースの作成</block>
   <block id="9099614931eafcd02d62211a634872c7" category="inline-link-macro">ホストのクローンを作成してサンドボックスを作成する</block>
   <block id="24ba9febbdf4f0bdec223ad9cf7f746f" category="paragraph">クローンを更新すると、現在のソースデータベース、または過去の時点で作成されたソースデータベースのスナップショットに対してクローンが更新されます。サンドボックスクローンに対する変更はすべて削除されます。</block>
@@ -462,7 +458,6 @@
   <block id="651b8da486ba685aa80d9dd4866d0171" category="sidebar">サンドボックスクローンを削除する</block>
   <block id="e7310dc180b25aba87aadafb96fb45f4" category="inline-image-macro">削減試算ツールページのスクリーンショットには、左側に選択したAmazon Elastic Block Store上のMicrosoft SQL Server構成が表示され、スナップショットとクローンの値をカスタマイズするオプションが表示されます。コスト削減額の単位での金額と割合の削減に加え、左側に表示されるFSx for ONTAPおよびElastic Block StoreストレージでMicrosoft SQL Serverを使用した場合の月額総コストも表示されます。</block>
   <block id="dfa401fd4fd8841a340bd9f87c0910f8" category="list-text">* Snapshotの頻度*：ドロップダウンメニューからSnapshotの頻度を選択します。</block>
-  <block id="b92d49f94f8fe0dff03b4a997452d375" category="list-text">*クローンの更新頻度*：クローンの更新頻度をドロップダウンメニューから選択します。</block>
   <block id="3a886ba0c11f46f4a69567f2c732a39e" category="list-text">*クローニングされたコピーの数*：EBS設定のクローニングされたコピーの数を入力します。</block>
   <block id="6c8bc6142fe7d27949e96c7c1eb44a70" category="list-text">*リージョン*:ドロップダウンメニューからリージョンを選択します。</block>
   <block id="4b671e090adbd727a425c2dc7c229735" category="list-text">*展開モデル*:ドロップダウンメニューから展開モデルを選択します。</block>
@@ -540,7 +535,6 @@
   <block id="bd0005565e08b9807da651535d09e628" category="inline-xref">カスタマイズによるコスト削減の詳細</block>
   <block id="b2b254b73e406acc574452e9f29f5d9a" category="list-text">[Explore savings]タブで、EBSストレージを使用してデータベースサーバの*[Explore savings]*をクリックします。</block>
   <block id="3f1c1b5d06b7f8c588cd928fa1ac5e90" category="list-text">コスト削減試算ツールでは、必要に応じて、EBSストレージ内のクローンとSnapshotに関する以下の詳細情報を入力することで、より正確なコスト削減試算を行うことができます。</block>
-  <block id="8918771901c5636214df46e39006b50c" category="list-text">[コスト削減の詳細]タブで、FSx for Windowsファイルサーバストレージを使用したデータベースサーバの*コスト削減の詳細*をクリックします。</block>
   <block id="60d184cc6fb4054879723de86764a020" category="list-text">必要に応じて、Savings Calculatorで、FSx for Windowsストレージのクローン（シャドウコピー）とスナップショットに関する以下の詳細情報を提供し、コスト削減の見積もりをより正確にします。</block>
   <block id="c552646e3717f4144059bd229d9b3c96" category="paragraph">FSx for Windowsのシャドウコピーが検出された場合、デフォルト値は* Daily *です。シャドウコピーが検出されない場合、デフォルト値は*スナップショット頻度なし*です。</block>
   <block id="724d4c3a0255dd97a61657dd67fdf48f" category="list-text">*クローンコピーの数*：FSx for Windows構成でクローンコピーの数を入力します。</block>
@@ -647,7 +641,6 @@
   <block id="3e7340039619cc08d8c1c5a3cd4bfb43" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>BlueXP  ワークロードファクトリにログイン</block>
   <block id="d9eebdefd5feceb309eadc305ce81e6f" category="inline-link-macro">ワークロードファクトリでアカウントを設定する</block>
   <block id="f6c71053fa21be1c35ee95758a3d1050" category="paragraph">のいずれかを使用してログインする必要があります<block ref="782deaad814daa4f2ae09237c9394f09" category="inline-link-macro-rx"></block><block ref="68ceec76279c6913cdee16884c2d813a" category="inline-link-macro-rx"></block>。</block>
-  <block id="a4470118de925b41004832644492fcab" category="paragraph">_basic_modeで操作する場合は、これ以上操作する必要はありません。データベースの使用を開始して、部分的に完了したコードサンプルをコピーできます。[データベース]タイルで、*[データベースホストの導入]*をクリックします。<block ref="cf724fcba48c8dc4cbe06a87f2c5df99" category="inline-link-macro-rx"></block>です。</block>
   <block id="c1b68fc67f0e2b970d81dd29c91edb3c" category="summary">BlueXP  ワークロードファクトリでデータベース用のサンドボックスクローンを更新します。</block>
   <block id="6aa117cc6340cd2479e82444cbbadea9" category="doc">BlueXP  ワークロードファクトリでデータベース用のサンドボックスクローンを更新する</block>
   <block id="99ce2cd9a13526e0582af2c9fa2a4382" category="paragraph">現在または過去の時点のソースデータベースと同等になるように、BlueXP  ワークロードファクトリ内のデータベースクローンをデータベース用に更新します。</block>
@@ -739,12 +732,9 @@
   <block id="fc3e8f3c2017c33d444d483913a485ba" category="paragraph">Workload Factoryコミュニティに参加して、進行中のディスカッションをフォローしたり、新しいディスカッションを作成したりできます。</block>
   <block id="ffa18fada5deeeb1e533786297855e7d" category="paragraph">[Create a Case]*機能を使用するには、最初にサポートに登録する必要があります。NetAppサポートサイトのクレデンシャルをワークロードファクトリログインに関連付けます。<block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>です。</block>
   <block id="e13a5649dfef3a1c76c4be8e463226d7" category="list-text">Workload Factory Consoleの右上で、*[ヘルプ]&gt;[サポート]*を選択します。</block>
-  <block id="6b30d701929b5a35aad77b847528d165" category="list-text">表示するデータベースを含むインスタンスの3ドットのメニューをクリックします。</block>
   <block id="5f08a8bbfa89b18958e70a8c6cbc44c3" category="paragraph">データベースにはジョブ監視機能があり、ジョブの進捗状況を追跡したり、障害が発生した場合の診断とトラブルシューティングを行うことができます。タイプとステータスでジョブをフィルタリングしたり、検索機能を使用してジョブを検索したり、ジョブテーブルをダウンロードしたりできます。</block>
   <block id="5ade2a57e46cf328c900013574754aa9" category="list-text">ジョブ監視機能では、_ in progress_、_ completed_、_ completed with issues_、_ failed_jobs daily、weekly、bi-weekly、およびmonthlyが追跡されます。</block>
   <block id="10f9689e79d67ec4a1651805229939e6" category="list-text">ジョブの3ドットメニューをクリックし、* Go to CloudFormation *をクリックして、AWS CloudFormationコンソールにジョブログを表示します。</block>
-  <block id="7bbfa484f6d4f2fd489e0f9cbab2b174" category="inline-link-macro">コスト削減試算ツールでコスト削減額を確認する</block>
-  <block id="7634b96d2de45d4657e04dff8ecded5f" category="paragraph">データベースのインベントリにElastic Block StoreやFSx for Windowsファイルサーバのホストがあれば、それを実行できます<block ref="481992ff67d8db3be48d151b768f7ce5" category="inline-link-macro-rx"></block>。</block>
   <block id="1f14f9d15a2087e9bbf3c4dd4b699191" category="list-text">[Sandboxes]タブで、更新するサンドボックスクローンの3ドットのメニューをクリックします。</block>
   <block id="e464b3f9b68caf988cec7cd7b5263281" category="list-text">[Sandboxes]タブで、リバートするサンドボックスクローンの3ドットのメニューをクリックします。</block>
   <block id="07755964277c2a6aa1a5c2e771d7dbe0" category="list-text">[Sandboxes]タブで、スプリットするサンドボックスクローンの3ドットメニューをクリックします。</block>
@@ -772,7 +762,6 @@
   <block id="5e73d91731c9445e9a0cc34e1969976a" category="summary">Amazon Elastic Block Store（EBS）、FSx for Windowsファイルサーバ、SQL ServerのオンプレミスデータベースストレージとFSx for ONTAPストレージを使用した場合のコストを比較します。</block>
   <block id="6bcb23607586342322d4d9d515a81317" category="paragraph">Amazon Elastic Block Store（EBS）、FSx for Windowsファイルサーバ、オンプレミスストレージでMicrosoft SQL Serverを使用するコストをFSx for ONTAPストレージと比較して、データベースワークロードのデータベース向けBlueXP  ワークロード工場におけるコスト削減についてご確認ください。</block>
   <block id="7cf65e2ff3a983e2d864a8b1c64765f1" category="open-title">オンプレミスのMicrosoft SQL Server</block>
-  <block id="a2985bc0847d7596067c038e830be18b" category="list-text">[データベース]タイルで、ドロップダウンメニューから*[削減効果の確認]*を選択し、*[Microsoft SQL Serverオンプレミス]*を選択します。</block>
   <block id="979b029ad875506edc5721a6a441e313" category="list-text">[SQL Server On-Premises]タブからスクリプトをダウンロードし、オンプレミスのSQL Server環境を評価します。</block>
   <block id="db99a3f687ce317a37116a375a2f8e0a" category="list-text">評価スクリプトをダウンロードスクリプトは、PowerShellをベースとしたデータ収集ツールです。SQL Serverの構成データとパフォーマンスデータを収集し、BlueXP  ワークロード工場にアップロードします。移行アドバイザはデータを評価し、SQL Server環境向けのFSx for ONTAPの導入を計画します。</block>
   <block id="2840f80705232625a2e7a961c5ae7c57" category="inline-image-macro">[SQL Server On-Premises]タブのスクリーンショットには、評価スクリプトをダウンロードするためのオプションが表示されています。</block>
@@ -1008,10 +997,7 @@
   <block id="0bf39c9f8183add14af5a19ad4c80ff7" category="paragraph">データベース用のワークロード ファクトリーを使用すると、_基本_ モードですぐに開始できます。ワークロードファクトリを使用してホストの検出やリソースの管理などを行いたい場合は、いくつかの手順で作業を開始できます。</block>
   <block id="742b9524a4ab93b49eb1614d2aa4287b" category="inline-link-macro">_基本_、_読み取り専用_、および_読み取り/書き込み_の動作モード</block>
   <block id="e19be16b30ba3a27ed29174edef4c120" category="paragraph">いずれかを選択し <block ref="5653101a5bec855c555e8762c96ccdfc" category="inline-link-macro-rx"></block>ます。</block>
-  <block id="b60b67e70947e6a46c89e0d1c15f532f" category="paragraph">_読み取り専用_または_読み取り/書き込み_モードで操作する場合は、 <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>これには、データベースや GenAI などのワークロード機能の選択や、_読み取り専用_ モードまたは _読み取り/書き込み_ モードで操作するための適切な権限があることを確認するための IAM ポリシーの作成が含まれます。</block>
   <block id="32077805607c935c0ac59dd7b4a3fdc6" category="inline-link-macro">ホストサーバーを展開する</block>
-  <block id="d53bce2cf4a36ab74378d06b70255899" category="inline-link-macro">インスタンスを登録する</block>
-  <block id="d4e3cc6f64d77dfb90b8f3a54369d97f" category="paragraph">最後に、_読み取り/書き込み_モードで操作することを選択した場合は、 <block ref="086045f9b9433534ba0bc16ba8744718" category="inline-link-macro-rx"></block>または<block ref="70dc6f6bba18b4f574a867d694f53a80" category="inline-link-macro-rx"></block>ホスト リソースを管理し、ユーザー データベースを追加する前に行います。</block>
   <block id="8373481dd509f9b495f59748db1aa76d" category="doc">データベースのワークロードファクトリーにインスタンスを登録する</block>
   <block id="42c8e35152475231ef5a183766c9bebc" category="paragraph">データベースは、FSx for ONTAP ファイル システム ストレージにのみインスタンスを登録できます。</block>
   <block id="91a3069301b0dd7ee29890c4b610ba27" category="section-title">タスクについて</block>
@@ -1032,7 +1018,6 @@
   <block id="34f8798aab35970d27e00ecdf2a9f526" category="doc">データベースのワークロードファクトリーでデータベースを表示する</block>
   <block id="87301bee2c9587d1e63d873a81c4e6fa" category="open-title">単一インスタンスのデータベースを表示する</block>
   <block id="25734f9761801ac27c5c548d5c1829ca" category="open-title">すべてのインスタンスのデータベースを表示</block>
-  <block id="91063ca7fb76f05148ae179b2f84b160" category="paragraph">ワークロード ファクトリー内のデータベース リソースを表示しました。</block>
   <block id="4aa37f4d9a391345e9a54c68333e2503" category="section-title">2025年6月3日</block>
   <block id="ebb5d0c39395173ae9cea85bcf7d498e" category="sidebar">インスタンスを登録する</block>
   <block id="c38254582571637e4bded341a22ff035" category="sidebar">インスタンスを管理する</block>
@@ -1114,10 +1099,48 @@
   <block id="4dede94da0834ecd430bec6189bab6cc" category="paragraph"><block ref="4dede94da0834ecd430bec6189bab6cc" category="inline-link-macro-rx"></block></block>
   <block id="897c69f19b2f39fbf3080a555a679d8e" category="paragraph">データベースインベントリにFSx for ONTAPファイルシステムストレージのインスタンスを登録すると、 <block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block>または<block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block> 。</block>
   <block id="621bb50103e94b947974d2656fb451ec" category="list-text">データベース リソースを含むインスタンスには、FSx for ONTAP ファイル システム ストレージが必要です。</block>
-  <block id="dd36ed4d606eb4686fae0a7232af1eac" category="list-text">インスタンスはワークロード ファクトリに登録する必要があります。方法をご確認ください<block ref="e24144bf29586c3fb748c1e1cf493cb5" category="inline-link-macro-rx"></block>。</block>
   <block id="2eb8fe4398b92e5c2222314cd13b7749" category="paragraph">構成分析の洞察と推奨事項を活用し、ワークロードファクトリーを活用してデータベース構成のベストプラクティスを実装します。Well-Architected ステータスを簡単に確認し、データベース構成の問題を把握し、信頼性、セキュリティ、効率、パフォーマンス、コストが最適化されていない構成を改善するための措置を講じることができます。</block>
   <block id="2bab4675fc931e32d65c62820186d2e3" category="inline-link-macro">ワークロード ファクトリーの構成分析と Well-Architected ステータスについて学習します。</block>
   <block id="00d1bba61e4e880f08c0a9d89d53205b" category="paragraph"><block ref="00d1bba61e4e880f08c0a9d89d53205b" category="inline-link-macro-rx"></block></block>
   <block id="8b2297ce6c1f7ab63874a40b0ca4a48f" category="paragraph">ワークロードファクトリーはデータベース構成を毎日分析します。毎日の分析では、適切に設計されたステータス、洞察、推奨事項が提供され、構成がベスト プラクティスを満たすように構成の問題を自動的に修正するオプションも提供されます。</block>
   <block id="08957eb86dbd3276e4875a3910d67420" category="sidebar">インスタンスの Well-Architected ステータスを表示する</block>
+  <block id="65bff5c812b0782e85c3554a907e01d2" category="doc">Well-Architected分析には高可用性クラスタの検証が含まれる</block>
+  <block id="bdd55244a112c438dfe30c6c85a4fcb1" category="paragraph">Well-Architected 分析に、高可用性クラスターの検証が含まれるようになりました。この検証では、両方のノードのディスクの可用性と構成、Windows クラスターの構成、フェールオーバーの準備状況など、サーバー側からのすべてのクラスター関連の構成がチェックされます。これにより、Windows クラスターが適切にセットアップされ、必要に応じて正常にフェールオーバーできるようになります。</block>
+  <block id="ad229ca0142680e057d4328835a9c1ef" category="section-title">インスタンスに利用可能なマルチレベルメニュー</block>
+  <block id="de0915fdab5af6d02111d53dcfd6ccb3" category="paragraph">ワークロード ファクトリー コンソールに、インスタンスのマルチレベル メニューが追加されました。この変更により、インスタンスを管理するための、より整理された直感的なナビゲーション構造が提供されます。インスタンス管理のメニュー オプションには、インスタンス ダッシュボードの表示、データベースの表示、データベースの作成、サンドボックス クローンの作成などがあります。</block>
+  <block id="8d79c3f1283ecc54b044e383580c41e0" category="inline-image-macro">複数レベルのメニュー構造を持つインスタンス テーブル メニューのスクリーンショット。インスタンス テーブル メニューを選択し、インスタンスを管理して、データベースを表示し、データベースを作成し、サンドボックス クローンを作成します。</block>
+  <block id="6f3cad43f8bb61ac11ebd8e87e6d6240" category="paragraph"><block ref="6f3cad43f8bb61ac11ebd8e87e6d6240" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5892d833ba074396906362cfc3ad6370" category="section-title">節約を模索するための新しい認証オプション</block>
+  <block id="3035f336d9539562dbf5355f26c10a4f" category="paragraph">いつ<block ref="7254170b56a28e207df989a3f40b911f" prefix=" " category="inline-code"></block>ユーザーがMicrosoft SQL Serverに対して十分な権限を持っていない場合は、SQL Serverの資格情報で認証するか、不足しているSQL Serverの権限を追加することができます。<block ref="7254170b56a28e207df989a3f40b911f" prefix=" " category="inline-code"></block> 。</block>
+  <block id="79717347a64fe25d0ea054d1670b04c6" category="inline-link-macro">Amazon FSx for NetApp ONTAPでデータベース環境の潜在的なコスト削減を模索</block>
+  <block id="0c99e0e3525f8446afe1107c5294bead" category="paragraph"><block ref="0c99e0e3525f8446afe1107c5294bead" category="inline-link-macro-rx"></block></block>
+  <block id="0d1fd436d021926cae2510df23023f8f" category="list-text">必要に応じて、SQL Server 資格情報、Windows 資格情報、または不足している SQL Server 権限を追加して、データベース ホストを認証します。</block>
+  <block id="057a8460985f241177200f51e8c70447" category="paragraph">認証が成功した後も節約の探索ページにデータが読み込まれない場合は、*在庫*タブを選択してデータを再読み込みし、もう一度*節約の探索*タブを選択します。</block>
+  <block id="23a7f7680ea3dd0d8e35715312180e42" category="list-text">*スナップショット頻度*: メニューからスナップショット頻度を選択します。</block>
+  <block id="0f2833865dd9bd39be8189333dae1c4f" category="list-text">*クローンの更新頻度*: メニューからクローンの更新頻度を選択します。</block>
+  <block id="d0e7e25b5d4913c7506b7abe691c9fa9" category="list-text">[データベース] タイルで、メニューから [節約の検討] を選択し、[Microsoft SQL Server on FSx for Windows] を選択します。</block>
+  <block id="ca1bcaaac2fa2065767d6cb9b43a5bf7" category="list-text">[節約の検討] タブで、FSx for Windows ファイル サーバー ストレージを使用したデータベース ホストの *節約の検討* を選択します。</block>
+  <block id="e4b085b007f80e7f8236f3693c0d0198" category="list-text">[データベース] タイルで、メニューから [*節約の検討*] を選択し、[*Microsoft SQL Server オンプレミス*] を選択します。</block>
+  <block id="808d573e3971d8d03b14bfaef043f475" category="section-title">Exploreのデータベースホスト認証による節約</block>
+  <block id="546dcae8b2a33c531e585b76d51af0dd" category="paragraph">権限が制限されている場合、認証が成功した後も節約の探索ページにデータが読み込まれないことがあります。</block>
+  <block id="012a999834d8188ec17b6ec67f4db97d" category="list-text">回復力: ローカル スナップショット、FSx for ONTAPバックアップ、クロスリージョン レプリケーション (CRR)、Microsoft SQL High Availability が含まれます。</block>
+  <block id="884d3679394cea72f73ae724c1666492" category="paragraph">_読み取り専用_または_読み取り/書き込み_モードで操作する場合は、<block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>データベースや GenAI などのワークロード機能を選択し、必要な権限の IAM ポリシーを作成します。</block>
+  <block id="1caf2514b723d82877e2b000e3ba5e3f" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>リソースの検出または展開</block>
+  <block id="714bf7245115e9e60e5f4ba3dc04e4f5" category="paragraph">認証情報とIAMポリシーを使用すると、インベントリ内の既存のデータベースリソースを検出したり、<block ref="086045f9b9433534ba0bc16ba8744718" category="inline-link-macro-rx"></block> 。インベントリは、リソースを管理するための統一されたインターフェースを提供します。</block>
+  <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="inline-image-macro">4</block>
+  <block id="51632000dec3a4768004497c0cb1dc7a" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block>コスト削減の機会を探る</block>
+  <block id="27a00979342c6038e57c451a97056eba" category="inline-link-macro">Exploreの節約計算機を使用する</block>
+  <block id="dfc5bbea65d061d8ef65858dceb395dd" category="paragraph">オンプレミスまたはAWSでデータベースを実行し、Amazon Elastic Block Store（EBS）またはFSx for Windows File Serverにストレージがある場合は、<block ref="34af0e835becefaa17178e7fc48e3086" category="inline-link-macro-rx"></block>コストを分析し、移行を効果的に計画します。</block>
+  <block id="e5d9de39f7ca1ba2637e5640af3ae8aa" category="inline-image-macro">五</block>
+  <block id="b898d5d576224cd9ff29f84561766760" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block>適切に設計されたデータベース構成を実装する</block>
+  <block id="b06c1406344aa854d261bcc0a6e0f592" category="inline-link-macro">インスタンスを登録する</block>
+  <block id="e57096f2d1ce720a79c02a8e8f46d8de" category="paragraph">Workload Factory for Databases は、Well-architected ダッシュボードからAmazon FSx for NetApp ONTAPストレージ上の Microsoft SQL Server デプロイメントを定期的に分析します。データベースリソースのWell-Architectedダッシュボードから問題をトラブルシューティングするには、まず<block ref="001cc0ec03a1e5527fa917b277b2c766" category="inline-link-macro-rx"></block>。</block>
+  <block id="e8663036e4d283a237c51601bdcfc5cd" category="inline-link-macro">適切に設計されたデータベース構成を実装する</block>
+  <block id="fc5052ca3918c28b8e418893a6b982f9" category="paragraph">インスタンスを登録した後、well-archectedステータスを確認し、<block ref="1c0f7e78a2011839a2cb972a47f46536" category="inline-link-macro-rx"></block>ワークロードファクトリー内。</block>
+  <block id="38d8d5207d4ef99316428985c300feb1" category="list-text">データベースを表示するには、ワークロード ファクトリにインスタンスを登録する必要があります。。 <block ref="e24144bf29586c3fb748c1e1cf493cb5" category="inline-link-macro-rx"></block> 。</block>
+  <block id="19ceb4c9dbec8f50da133f5989360510" category="list-text">インスタンスの 3 つのドット メニューをクリックし、*データベースの表示* を選択します。</block>
+  <block id="d1a11c072934a6070961082a4f0ccfac" category="paragraph">データベースは、データベース タブに単一インスタンスに対して表示されます。</block>
+  <block id="ad6ac298077f67c060156edbddf13a36" category="list-text">*データベース*タブを選択します。</block>
+  <block id="d0c6ba62b6c3694f7b736785522100f6" category="paragraph">登録されているすべてのインスタンスのデータベースが表示されます。</block>
+  <block id="3488d38349240c72f75d081c2a79fa3b" category="section-title">2025年8月4日</block>
 </blocks>
