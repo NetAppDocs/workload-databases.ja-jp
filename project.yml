@@ -51,6 +51,8 @@ sidebar:
         url: "/create-sandbox-clone.html"
     - title: Codeboxによる自動化
       url: "/automate-codebox.html"
+    - title: Microsoft SQL Server ワークロードを保護する
+      url: "/protect-sql-server.html"
   - title: 管理と監視
     entries:
     - title: データベースジョブを監視する
