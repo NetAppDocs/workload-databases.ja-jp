@@ -23,7 +23,7 @@ summary: データベース向けBlueXP  ワークロードファクトリー�
 
 BlueXP backup and recoveryを使用すると、Microsoft SQL Server データベースおよび可用性グループのバックアップ、復元、検証、および複製が可能になります。ワークロード ファクトリー コンソールから、 BlueXP backup and recoveryにアクセスして使用し、Microsoft SQL Server ワークロードを保護できます。
 
-link:protect-sql-server.html["ワークロードファクトリーコンソールを使用して Microsoft SQL Server ワークロードを保護する方法を学びます"^] 。
+link:https://docs.netapp.com/us-en/workload-databases/protect-sql-server.html["ワークロードファクトリーコンソールを使用して Microsoft SQL Server ワークロードを保護する方法を学びます"] 。
 
 BlueXP backup and recoveryの詳細については、link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html["BlueXP backup and recoveryによる Microsoft SQL ワークロードの保護の概要"^] 。
 
