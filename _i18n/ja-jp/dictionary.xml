@@ -1153,22 +1153,13 @@
   <block id="3d5a9cd83b30ec6ec9f0802593907f05" category="doc">Microsoft SQL Server ワークロードを保護する</block>
   <block id="b488e89ecf7de1a4b1b2b7c08eaf5ec7" category="paragraph">BlueXP backup and recoveryは、 NetApp SnapMirrorデータ レプリケーション テクノロジーを活用して、スナップショット コピーを作成し、それをバックアップ場所に転送することで、すべてのバックアップが完全に同期されるようにします。</block>
   <block id="84e16205176c2d47e586e6b70d30c355" category="paragraph">BlueXP backup and recoveryによる保護の詳細については、<block ref="b3db6ed8425306b30d05a9028a6a4afe" category="inline-link-macro-rx"></block> 。</block>
-  <block id="e82861995008f0e567492658d395dd98" category="paragraph">BlueXP backup and recoveryを使用して Microsoft SQL Server ワークロードの保護を開始するための要件は次のとおりです。</block>
-  <block id="1814746c026b2253f1fd4e1ea066cea1" category="list-text">BlueXPコネクタ</block>
-  <block id="2859350d666beccb5f7f3adcb55da72a" category="inline-link-macro">BlueXPコネクタの設定方法を学ぶ</block>
-  <block id="26bb95e43b859cab3de780adc1ebf126" category="inline-link-macro">標準BlueXP要件</block>
-  <block id="4376a505059ca3d2e6efba73d67688bc" category="paragraph">参照<block ref="5d1caba14d7a0ff88bfb954ba5745b50" category="inline-link-macro-rx"></block>そして<block ref="683fab7823a8328c1541ba926b06d34c" category="inline-link-macro-rx"></block>。</block>
-  <block id="ea8eb433c4a49f8121f2ca469cb35c5e" category="paragraph">コネクタには Ubuntu 22.04 LTS オペレーティング システムが必要です。</block>
-  <block id="725ed7e687eb2753438380c183239505" category="list-text">BlueXP backup and recoveryのライセンス</block>
   <block id="f4b04af639ebf32754e26b928989f33f" category="inline-link-macro">BlueXP backup and recoveryのライセンスを設定する</block>
   <block id="3c075e9819b05a2e34af9858d549a406" category="paragraph"><block ref="3c075e9819b05a2e34af9858d549a406" category="inline-link-macro-rx"></block></block>
-  <block id="0c5a60b84e9bed78e59d37200b950d45" category="list-text">コネクタのホスト解像度の設定</block>
   <block id="2a664f2dff1a4229f6bce49f7fdfe6f2" category="paragraph">データベースを検出するには、コネクタでホスト解決を設定する必要があります。ホストデバイスで、IPアドレスとホスト名のマッピングを<block ref="ad942c725cd0cae65ca4c63717ec464c" prefix=" " category="inline-code"></block>ファイル。</block>
   <block id="c8e8c4da5256c1c745e327697c0ab942" category="list-text">*エンジン タイプ* を *Microsoft SQL Server* にフィルターします。</block>
   <block id="60cf19833f9c8f41398952fc003ec02d" category="list-text">保護するインスタンスのメニューから*保護*を選択します。</block>
   <block id="f44b851c9ab8fcb80a6dd8db43a90f89" category="list-text">ワークロードを登録して保護する *コネクタ* を選択します。</block>
   <block id="4aaf55799008f1b65a60e1b728d3e48c" category="list-text">データ保護を準備するために、ワークロード ファクトリーは SQL Server リソースを BlueXP backup and recoveryに自動的に登録し、Microsoft SQL Server 用プラグインを構成およびインストールし、SQL Server インスタンスを保護するための前提条件を満たすリソースを検出します。プロセスを開始するには、[*開始*] を選択します。</block>
-  <block id="bd1487d8bf14df1c9cdd38034c0c4915" category="list-text">前提条件が満たされたら、[リダイレクト] を選択してBlueXP backup and recoveryにリダイレクトします。</block>
   <block id="670bdffbda0cf3a120000d78ea9fef94" category="paragraph">BlueXP backup and recoveryから、Microsoft SQL Server インスタンスとデータベースを保護するためのポリシーを作成します。</block>
   <block id="9a4d384d3169400fc10e8236540a38e4" category="inline-link-macro">Microsoft SQL Server インスタンスとデータベースを保護するためのポリシーを作成する方法を学びます</block>
   <block id="ad2885286b9ea46a9ef4e984cc15fd97" category="paragraph"><block ref="5d8b861adb73a9004c15944cd0df7095" category="inline-link-macro-rx"></block> 。</block>
@@ -1178,7 +1169,17 @@
   <block id="82776afd94423c79dbb6478467a55ee1" category="paragraph"><block ref="01ada1ee9ae7e42f0ced5cd933931e08" category="inline-link-macro-rx"></block> 。</block>
   <block id="1d7888e9a7739b1a3282310704484ae5" category="doc">BlueXP backup and recoveryが Microsoft SQL Server のワークロードをサポートするようになりました</block>
   <block id="89f47c3c1994a3db38e0daf9dd673194" category="paragraph">ワークロード ファクトリー コンソールからBlueXP backup and recoveryを使用して、Microsoft SQL Server アプリケーション データを保護します。この統合により、ローカルプライマリAmazon FSx for NetApp ONTAP (FSx for ONTAP) ストレージ上のローカルスナップショットを使用してワークロードをバックアップし、セカンダリ FSx for ONTAPストレージにワークロードを複製するという保護目標を達成できます。</block>
-  <block id="e6de5e622a1f84159a72b6b36d0457bd" category="paragraph">ワークロード ファクトリーは、インスタンスおよびデータベース リソースの検出、前提条件の検証、Microsoft SQL Server 用プラグインの構成とインストールのプロセスを自動化するのに役立ちます。これらはすべて、 BlueXP backup and recoveryを使用して Microsoft SQL Server ワークロードを保護するための準備プロセスの一部です。このプラグインは、Microsoft SQL Server のワークロードを保護できるNetAppソフトウェアのホスト側コンポーネントです。</block>
   <block id="151fbaa196a40c93d8a7ab6cdfe564fe" category="section-title">BlueXP backup and recoveryで保護を準備する</block>
   <block id="0560cb07d58d813bf36ae0c3bcdcec57" category="paragraph">BlueXP backup and recoveryを使用して Microsoft SQL Server リソースを保護するための準備プロセスを完了します。</block>
+  <block id="b3aa6571a8796bf368f93709826c5cca" category="paragraph">ワークロード ファクトリーは、リソースの検出、前提条件の検証、Microsoft SQL Server 用プラグインの構成とインストールを自動化し、 BlueXP backup and recoveryを使用してワークロードを保護するための準備を行います。このプラグインは、Microsoft SQL Server のワークロードを保護できるNetAppソフトウェアのホスト側コンポーネントです。</block>
+  <block id="2e236abf3c6b1def80ac2b6884c1b5ab" category="paragraph">BlueXP backup and recoveryを使用して Microsoft SQL Server ワークロードを保護するには、次の要件を満たす必要があります。</block>
+  <block id="3d7cbbcb00b12dcb8b1ac2f24bf3ea56" category="inline-link-macro">BlueXP backup and recoverySQL Serverの要件</block>
+  <block id="ba3196b3748bf69daba9160040c84853" category="list-text">環境が<block ref="db876250b10693778272e32877c79f1e" category="inline-link-macro-rx"></block>。</block>
+  <block id="4499b1faa84c7528a77910b47c230bfb" category="inline-link-macro">BlueXPの要件を完了する</block>
+  <block id="36cb54a50029122a2701724926881723" category="list-text"><block ref="820c789cd0a515d3f846ace99ca806ea" category="inline-link-macro-rx"></block>BlueXP、IAM ロール、 BlueXPコネクタの設定が含まれます。</block>
+  <block id="27044efdd79fcbe78a3f6c73f94ff8ab" category="inline-xref">BlueXP backup and recoveryで保護を準備する</block>
+  <block id="ad9f1468b7af086344a7c9d7f3cfe5e6" category="paragraph">BlueXPアカウントの組織管理者アクセス権を持っている場合は、<block ref="d431b2247c053b79ca08cc138d1dc11a" prefix=" " category="inline-code"></block>役割は自動的に割り当てられます<block ref="fdfea7d26047cfb871b3d198f9393eab" category="inline-xref-macro-rx"></block>。</block>
+  <block id="b101f17cf16b7701e98ff3ad94847a38" category="list-text">コネクタのホスト解像度を設定する</block>
+  <block id="c2f8fe7ac0efafdc8fba2f5f885bc816" category="list-text">データベースのワークロード ファクトリでは、必ず Windows 資格情報を使用してインスタンスを登録してください。 Windows 資格情報を提供するには、インベントリからインスタンス タブに移動します。インスタンスを識別し、*インスタンスの管理*を選択して、*インスタンス ダッシュボード*を選択します。インスタンス ダッシュボードから、3 つのドット メニューを選択し、*Microsoft SQL Server パスワードの更新* を選択します。  Windows 認証を使用してパスワードを更新します。</block>
+  <block id="aa660deb360d337c08e7ddce4aada0d6" category="list-text">前提条件を満たしたら、[*リダイレクト*] を選択してBlueXP backup and recoveryにアクセスします。</block>
 </blocks>
