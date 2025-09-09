@@ -61,8 +61,6 @@ sidebar:
         url: "/optimize-overview.html"
       - title: 適切に設計されたデータベース構成を実装する
         url: "/optimize-configurations.html"
-      - title: 構成解析の延期
-        url: "/postpone-analysis.html"
     - title: エラーログを分析する
       url: "/analyze-error-logs.html"
     - title: クローンの管理
