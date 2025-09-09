@@ -2,23 +2,23 @@
 sidebar: sidebar 
 permalink: manage-instance.html 
 keywords: instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
-summary: データベースのワークロード ファクトリにおけるインスタンス管理について学習します。 
+summary: データベースのワークロード ファクトリにおけるインスタンスとデータベースの管理について学習します。 
 ---
-= データベースのワークロードファクトリーにおけるインスタンス管理
+= データベースのワークロードファクトリーにおけるリソース管理
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-ワークロード ファクトリーで登録されたインスタンスの管理には、データベースやデータベース クローンの作成などのインスタンスのリソースのデプロイ、インスタンスとデータベースのステータス、リソース使用率、保護、ストレージ パフォーマンスの監視が含まれます。さらに、データベース構成のWell-Architectedステータスを分析し、構成のベストプラクティスを実装することで、パフォーマンスを向上させ、運用コストを削減できます。インスタンス管理は、FSx for ONTAPファイルシステムストレージを使用するインスタンスのみで利用可能です。
+ワークロード ファクトリーでリソースを管理すると、データベースとクローンの作成、リソースの使用率と監視などの高度な機能を使用できます。さらに、データベース構成の適切なアーキテクチャの状態を分析し、構成のベスト プラクティスを実装して、パフォーマンスを向上させ、運用コストを削減することもできます。リソース管理は、FSx for ONTAPファイル システム ストレージ上で実行されている Microsoft SQL Server および Oracle 環境のみを対象としています。
 
-絶対ですlink:register-instance.html["インスタンスを登録する"]以下の管理タスクを実行します。
+絶対ですlink:register-instance.html["リソースを登録する"]以下の管理タスクを実行します。
 
 管理タスクには次のものが含まれます。
 
+* インベントリからデータベースを表示する
 * link:create-database.html["データベースの作成"]
 * link:create-sandbox-clone.html["データベースクローンの作成（サンドボックス）"]
-* link:view-databases.html["データベースの表示"]
 * link:optimize-configurations.html["適切に設計されたデータベース構成の実装"]
 

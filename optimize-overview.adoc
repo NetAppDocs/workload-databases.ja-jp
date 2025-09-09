@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: optimize-overview.html 
 keywords: database configuration issues, issues, analyze, scan, optimize, improve, database configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations, storage, compute, application, resiliency, scan, optimization, SQL Server, host, instance 
-summary: データベースのワークロード ファクトリーは、Microsoft SQL Server の構成を定期的に分析して、問題があるかどうかを判断します。 
+summary: データベースのワークロード ファクトリーは、Microsoft SQL Server および Oracle の構成を定期的に分析して、問題があるかどうかを判断します。 
 ---
 = ワークロードファクトリーにおけるデータベース環境の構成分析
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: データベースのワークロード ファクトリーは、Microso
 
 
 [role="lead"]
-Workload Factory for Databases は、Amazon FSx for NetApp ONTAP ストレージ上の Microsoft SQL Server のデプロイメントに問題がないか確認するために、データベース構成を定期的に分析します。問題が見つかった場合、Workload Factory は問題点を提示し、データベース構成が最高のパフォーマンス、コスト効率、そしてベストプラクティスへの準拠を実現するために必要な変更点を解説します。
+Workload Factory for Databases は、データベース構成を定期的に分析して、 Amazon FSx for NetApp ONTAPストレージ上の Microsoft SQL Server および Oracle のデプロイメントに問題があるかどうかを判断します。問題が見つかった場合、ワークロード ファクトリーは問題の内容を示し、データベース構成で最高のパフォーマンス、コスト効率、ベスト プラクティスへの準拠を実現するために何を変更する必要があるかを説明します。
 
 主な機能は次のとおりです。
 
@@ -29,10 +29,18 @@ Workload Factory for Databases は、Amazon FSx for NetApp ONTAP ストレージ
 
 ファイルシステムレベルのワークロードファクトリコンソールには、すべてのFSx for ONTAPファイルシステムについて、適切に設計されたステータスが表示されます。Well-Architectedステータスは、「問題」、「分析されていない」、または「Well-Architected」に分類されます。well-architectedステータスを選択すると、ファイルシステム内のwell-architectedステータスタブにリダイレクトされます。このタブでは、well-architectedスコア、構成カテゴリ、ファイルシステムのすべての構成を確認できます。
 
-適切に設計されたスコア:: スコアには現在分析されているすべての構成が含まれ、パーセンテージで表示されます。25%のスコアは、25%のファイルシステム構成が適切に設計されていることを意味します。
-構成のカテゴリ:: ファイルシステム構成は、AWS Well-Architected Frameworkの次の5つの柱に沿ったカテゴリに分類されています。
-+
---
+
+
+== 適切に設計されたスコア
+
+スコアには現在分析されているすべての構成が含まれ、パーセンテージで表示されます。25%のスコアは、25%のファイルシステム構成が適切に設計されていることを意味します。
+
+
+
+== 構成のカテゴリ
+
+ファイルシステム構成は、AWS Well-Architected Frameworkの次の5つの柱に沿ったカテゴリに分類されています。
+
 * _信頼性_：システムが停止した場合でも、ワークロードが意図した機能を正しく一貫して実行するようにします。構成例としては、FSx for ONTAPのバックアップがあります。
 * _セキュリティ_：リスク評価とリスク軽減戦略を通じて、データ、システム、資産を保護することに重点を置いています。
 * _優れた運用性_：最適なアーキテクチャとビジネスバリューを提供することに重点を置いています。
@@ -40,17 +48,19 @@ Workload Factory for Databases は、Amazon FSx for NetApp ONTAP ストレージ
 * _パフォーマンス効率_：リソースを効率的に使用してシステム要件を満たし、需要の変化に応じて最適なパフォーマンスを維持することに重点を置いています。
 
 
---
-分析範囲:: 最適化の範囲は、評価するコンポーネントによって異なります。たとえば、ストレージの最適化はSQLインスタンスレベルで行われ、コンピューティングの最適化はホストレベルで行われます。
 
+
+== 分析範囲
+
+最適化の範囲は、評価するコンポーネントによって異なります。たとえば、ストレージの最適化はSQLインスタンスレベルで行われ、コンピューティングの最適化はホストレベルで行われます。
 
 
 
 == 分析要件
 
-完全なデータベース環境分析を行うには、インスタンスが登録され、オンラインになっている必要があります。
+完全なデータベース環境分析を行うには、リソースが登録され、オンラインになっている必要があります。
 
-link:register-instance.html["インスタンスを登録する方法を学びます。"]
+link:register-instance.html["リソースを登録する方法を学びます。"]
 
 .次のステップ
 link:optimize-configurations.html["適切に設計されたデータベース構成を実装する"]

@@ -39,12 +39,10 @@ sidebar:
         url: "/create-postgresql-server.html"
     - title: インスタンスを管理する
       entries:
-      - title: インスタンス管理
+      - title: リソース管理
         url: manage-instance.html
-      - title: インスタンスを登録する
+      - title: リソースを登録する
         url: "/register-instance.html"
-      - title: データベースの表示
-        url: "/view-databases.html"
       - title: データベースの作成
         url: "/create-database.html"
       - title: サンドボックスクローンの作成
@@ -65,6 +63,8 @@ sidebar:
         url: "/optimize-configurations.html"
       - title: 構成解析の延期
         url: "/postpone-analysis.html"
+    - title: エラーログを分析する
+      url: "/analyze-error-logs.html"
     - title: クローンの管理
       entries:
       - title: サンドボックスクローンの整合性チェック
@@ -81,6 +81,8 @@ sidebar:
         url: "/split-clone.html"
       - title: サンドボックスクローンを削除する
         url: "/delete-clone.html"
+    - title: リソースの登録解除
+      url: "/deregister-instance.html"
   - title: 知識とサポート
     entries:
     - title: サポートに登録します

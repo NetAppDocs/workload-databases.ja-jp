@@ -42,7 +42,6 @@ BlueXPアカウントの組織管理者アクセス権を持っている場合�
 
 
 * link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html["BlueXP backup and recoveryのライセンスを設定する"^]
-* データベースのワークロード ファクトリでは、必ず Windows 資格情報を使用してインスタンスを登録してください。 Windows 資格情報を提供するには、インベントリからインスタンス タブに移動します。インスタンスを識別し、*インスタンスの管理*を選択して、*インスタンス ダッシュボード*を選択します。インスタンス ダッシュボードから、3 つのドット メニューを選択し、*Microsoft SQL Server パスワードの更新* を選択します。  Windows 認証を使用してパスワードを更新します。
 
 
 
@@ -57,7 +56,11 @@ BlueXP backup and recoveryを使用して Microsoft SQL Server リソースを�
 . [データベース]で、*[インベントリ]*タブを選択します。
 . *エンジン タイプ* を *Microsoft SQL Server* にフィルターします。
 . 保護するインスタンスのメニューから*保護*を選択します。
-. ワークロードを登録して保護する *コネクタ* を選択します。
+. プロンプトが表示されたら、管理者アクセス権を持つ Windows 資格情報を入力します。
++
+保護のためにBlueXP backup and recoveryを使用するには、SQL Server インスタンスを Windows 資格情報を使用してワークロード ファクトリに登録する必要があります。
+
+. 複数のコネクタがアクティブで利用可能な場合は、ワークロードを登録して保護する *コネクタ* を選択します。
 . データ保護を準備するために、ワークロード ファクトリーは SQL Server リソースを BlueXP backup and recoveryに自動的に登録し、Microsoft SQL Server 用プラグインを構成およびインストールし、SQL Server インスタンスを保護するための前提条件を満たすリソースを検出します。プロセスを開始するには、[*開始*] を選択します。
 . 前提条件を満たしたら、[*リダイレクト*] を選択してBlueXP backup and recoveryにアクセスします。
 
