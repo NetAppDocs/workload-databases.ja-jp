@@ -2,23 +2,23 @@
 sidebar: sidebar 
 permalink: view-clone-connection.html 
 keywords: view clone connection, copy connection information 
-summary: データベースのBlueXP  ワークロードファクトリでサンドボックスクローンの接続情報を表示およびコピーします。 
+summary: NetApp Workload Factory for Databases でデータベース クローンの接続情報を表示およびコピーします。 
 ---
-= サンドボックスクローンの接続情報の表示
+= データベースクローンの接続情報を表示する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-データベースのBlueXP  ワークロードファクトリでサンドボックスクローンの接続情報を表示およびコピーします。
+NetApp Workload Factory for Databases でデータベース クローンの接続情報を表示およびコピーします。
 
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
-. [データベース]で、[サンドボックス]タブを選択します。
-. [Sandboxes]タブで、サンドボックスクローンの3ドットのメニューをクリックして接続情報を表示します。
+. データベースメニューから*サンドボックス*を選択します。
+. サンドボックスで、サンドボックス クローンのアクション メニューを選択して、接続情報を表示します。
 . [接続情報を表示]*を選択します。
 . [接続情報の表示]ダイアログで、必要に応じて接続情報をコピーします。
-. [* 閉じる * ] をクリックします。
+. *閉じる*を選択します。
 

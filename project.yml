@@ -23,7 +23,7 @@ sidebar:
       url: "/known-limitations.html"
   - title: はじめに
     entries:
-    - title: データベース向けワークロードファクトリの詳細
+    - title: データベース向けワークロードファクトリーについて学ぶ
       url: "/learn-databases.html"
     - title: クイックスタート
       url: "/quick-start-databases.html"
@@ -90,5 +90,5 @@ sidebar:
   - title: 法的通知
     url: "/legal-notices.html"
 product-family:
-  name: BlueXP workload factory
+  name: NetApp Workload Factory
   repo: workload-family

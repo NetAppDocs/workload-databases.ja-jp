@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: register-instance.html 
 keywords: manage, register, Microsoft SQL Server instance, Oracle database, manage database, manage instance 
-summary: リソースを登録すると、データベースのワークロード ファクトリでリソースの状態、リソース使用率、保護、およびストレージ パフォーマンスを監視できるようになります。 
+summary: NetApp Workload Factory for Databases でリソースのステータス、リソース使用率、保護、ストレージ パフォーマンスを監視できるようにリソースを登録します。 
 ---
-= データベースのワークロードファクトリーにリソースを登録する
+= NetApp Workload Factory for Databases にリソースを登録する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Microsoft SQL Server のインスタンスと Oracle のデータベースを登録して、データベースのワークロード ファクトリでインスタンスとデータベースのステータス、リソース使用率、保護、およびストレージ パフォーマンスを監視できるようにします。
+NetApp Workload Factory for Databases でインスタンスとデータベースのステータス、リソース使用率、保護、ストレージ パフォーマンスを監視できるように、Microsoft SQL Server のインスタンスと Oracle のデータベースを登録します。
 
 登録は、FSx for ONTAPファイル システム ストレージ上で実行されているデータベース エンジンに対してのみ可能です。
 
@@ -24,7 +24,7 @@ Microsoft SQL Server のインスタンスと Oracle のデータベースを登
 SQL Server 資格情報または Windows 資格情報を使用して認証できます。
 
 
-NOTE: ワークロード ファクトリは、Microsoft SQL Server インスタンスと Oracle データベースの登録と管理のみをサポートします。ワークロードファクトリーで選択した AWS アカウントの認証情報に応じて、PostgreSQL ホストがインベントリに表示される場合があります。現在、ワークロードファクトリーは、Amazon Linux オペレーティングシステムでのみ実行されている未登録の PostgreSQL インスタンスをサポートしています。
+NOTE: Workload Factory は、Microsoft SQL Server インスタンスと Oracle データベースの登録と管理のみをサポートします。 Workload Factory で選択した AWS アカウントの認証情報に応じて、PostgreSQL ホストがインベントリに表示される場合があります。現在、Workload Factory は、Amazon Linux オペレーティングシステムでのみ実行されている未登録の PostgreSQL インスタンスをサポートしています。
 
 
 
@@ -32,7 +32,7 @@ NOTE: ワークロード ファクトリは、Microsoft SQL Server インスタ�
 
 インスタンスを登録する前に、次の点を考慮してください。
 
-インスタンスまたはデータベースのホストが [インベントリ] タブに表示される必要があります。ホストがインベントリに表示されるには、link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWSアカウントの認証情報と_読み取り専用_または_読み取り/書き込み_モードの権限を追加する必要があります"^] 。
+インスタンスまたはデータベースのホストがインベントリに表示されている必要があります。ホストがインベントリに表示されるには、link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWSアカウントの認証情報と_読み取り専用_または_読み取り/書き込み_モードの権限を追加する必要があります"^] 。
 
 
 
@@ -62,8 +62,8 @@ EC2インスタンスからのすべてのアウトバウンド接続にプロ�
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
-. [データベース]で、*[インベントリ]*タブを選択します。
-. エンジンの種類として*Microsoft SQL Server*を選択します。
+. データベース メニューから、*インベントリ* を選択します。
+. インベントリで、エンジンの種類として *Microsoft SQL Server* を選択します。
 . *インスタンス*タブを選択します。
 . 単一のインスタンスを登録するか、複数のインスタンスを登録するかを選択します。
 +
@@ -117,8 +117,8 @@ EC2インスタンスからのすべてのアウトバウンド接続にプロ�
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
-. [データベース]で、*[インベントリ]*タブを選択します。
-. [インベントリ] タブで、データベース エンジンとして *Oracle* を選択します。
+. データベース メニューから、*インベントリ* を選択します。
+. インベントリで、データベース エンジンとして *Oracle* を選択します。
 . *データベース*タブを選択します。
 . 単一のデータベースを登録するか、複数のデータベースを登録するかを選択します。
 +

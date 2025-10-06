@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: refresh-clone.html 
 keywords: refresh clone, sync, update, database, Microsoft SQL 
-summary: BlueXP  ワークロードファクトリでデータベース用のサンドボックスクローンを更新します。 
+summary: NetApp Workload Factory for Databases 内のデータベース クローンを更新して、現在の時点または以前の時点のソース データベースと同等にします。 
 ---
-= BlueXP  ワークロードファクトリでデータベース用のサンドボックスクローンを更新する
+= NetApp Workload Factory for Databases でデータベース クローンを更新する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-現在または過去の時点のソースデータベースと同等になるように、BlueXP  ワークロードファクトリ内のデータベースクローンをデータベース用に更新します。
+NetApp Workload Factory for Databases 内のデータベース (サンドボックス) クローンを更新して、現在の時点または以前の時点のソース データベースと同等にします。
 
 .タスクの内容
 クローンを更新すると、現在のソースデータベース、または過去の時点で作成されたソースデータベースのスナップショットに対してクローンが更新されます。サンドボックスクローンに対する変更はすべて削除されます。
@@ -24,8 +24,8 @@ Snapshotからデータベースクローンを更新するには、処理用に
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
-. [データベース]で、[サンドボックス]タブを選択します。
-. [Sandboxes]タブで、更新するサンドボックスクローンの3ドットのメニューをクリックします。
+. データベースメニューから*サンドボックス*を選択します。
+. サンドボックスで、更新するサンドボックス クローンのアクション メニューを選択します。
 . [更新]*を選択します。
 . [Refresh]ダイアログで、次のいずれかのオプションを選択します。
 +

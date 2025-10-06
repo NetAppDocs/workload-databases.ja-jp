@@ -2,23 +2,23 @@
 sidebar: sidebar 
 permalink: deregister-instance.html 
 keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle database, deregister instance, unregister instance, remove instance 
-summary: ワークロード ファクトリ コンソールからリソースをデプロイまたは監視する必要がなくなった場合は、リソースの登録を解除します。 
+summary: Workload Factory コンソールからリソースをデプロイまたは監視する必要がなくなった場合は、リソースの登録を解除します。 
 ---
-= ワークロードファクトリーのリソースを登録解除する
+= NetApp Workload Factory のリソースを登録解除する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-ワークロード ファクトリ コンソールからリソースを展開または監視する必要がなくなった場合は、Microsoft SQL Server インスタンスや Oracle データベースなどのリソースを登録解除します。リソースの登録を解除すると、インスタンスで使用されている FSx for ONTAPストレージ容量も削除されます。
+NetApp Workload Factory コンソールからリソースを展開または監視する必要がなくなった場合は、Microsoft SQL Server インスタンスや Oracle データベースなどのリソースを登録解除します。リソースの登録を解除すると、インスタンスで使用されている FSx for ONTAPストレージ容量も削除されます。
 
 リソースを再度登録することができます。
 
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
-. [データベース]で、*[インベントリ]*タブを選択します。
-. インベントリで、エンジンの種類 (Microsoft SQL Server、Oracle、または PostgreSQL) を選択します。
-. 登録を解除するリソースを見つけて、3 つのドットのメニューを選択し、[登録解除] を選択します。
+. データベース メニューから、*インベントリ* を選択します。
+. インベントリで、エンジンの種類として *Microsoft SQL Server*、*Oracle*、または *PostgreSQL* を選択します。
+. 登録解除するリソースを見つけて、アクション メニューを選択し、[登録解除] を選択します。
 

@@ -2,24 +2,24 @@
 sidebar: sidebar 
 permalink: quick-start-databases.html 
 keywords: requirements, basic mode, read-only mode, read/write mode 
-summary: データベースのワークロード ファクトリを開始して、Infrastructure-as-Code スニペットの使用、ホストの検出、リソースの管理などを行います。 
+summary: NetApp Workload Factory for Databases を使い始めると、Infrastructure-as-Code スニペットの使用、ホストの検出、リソースの管理などが可能になります。 
 ---
-= データベースのワークロードファクトリーのクイックスタート
+= NetApp Workload Factory for Databases のクイック スタート
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-データベース用のワークロード ファクトリーを使用すると、_基本_ モードですぐに開始できます。ワークロードファクトリを使用してホストの検出やリソースの管理などを行いたい場合は、いくつかの手順で作業を開始できます。
+NetApp Workload Factory for Databases を使用すると、_基本_ モードですぐに開始できます。  Workload Factory を使用してホストの検出、リソースの管理などを行う場合は、数ステップで開始できます。
 
 データベースを使用するにはAWSアカウントが必要です。
 
 開始するには、次の手順を実行します。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1つ"]BlueXP  ワークロードファクトリにログイン
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1つ"]NetAppワークロードファクトリーにログイン
 [role="quick-margin-para"]
-のいずれかを使用してログインする必要がありますlink:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["ワークロードファクトリでアカウントを設定する"^]link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]。
+必要となるのはlink:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["NetApp Workload Factoryでアカウントを設定する"^]次のいずれかを使用してログインしますlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2つ"] クレデンシャルと権限の追加
 [role="quick-margin-para"]
@@ -38,10 +38,10 @@ _読み取り専用_または_読み取り/書き込み_モードで操作する
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"]適切に設計されたデータベース構成を実装する
 [role="quick-margin-para"]
-Workload Factory for Databases は、Well-architected ダッシュボードからAmazon FSx for NetApp ONTAPストレージ上の Microsoft SQL Server デプロイメントを定期的に分析します。データベースリソースのWell-Architectedダッシュボードから問題をトラブルシューティングするには、まずlink:register-instance.html["インスタンスを登録する"]。
+Workload Factory for Databases は、Well-architected ダッシュボードからAmazon FSx for NetApp ONTAPストレージ上の Microsoft SQL Server および Oracle のデプロイメントを定期的に分析します。データベースリソースのWell-Architectedダッシュボードから問題をトラブルシューティングするには、まずlink:register-instance.html["インスタンスを登録する"]。
 
 [role="quick-margin-para"]
-インスタンスを登録した後、well-archectedステータスを確認し、link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html["適切に設計されたデータベース構成を実装する"]ワークロードファクトリー内。
+インスタンスを登録した後、well-archectedステータスを確認し、link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html["適切に設計されたデータベース構成を実装する"]ワークロード ファクトリーで。
 
 .次のステップ
-データベースインベントリにFSx for ONTAPファイルシステムストレージのインスタンスを登録すると、 link:create-database.html["ユーザデータベースの作成"]またはlink:create-sandbox-clone.html["ホストのクローンを作成してサンドボックスを作成する"] 。
+データベースインベントリのFSx for ONTAPファイルシステムストレージにリソースを登録すると、link:create-database.html["ユーザデータベースの作成"]またはlink:create-sandbox-clone.html["ホストのクローンを作成してサンドボックスを作成する"]。

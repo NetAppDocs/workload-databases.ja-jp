@@ -2,41 +2,41 @@
 sidebar: sidebar 
 permalink: create-postgresql-server.html 
 keywords: create, server, PostgreSQL, deploy, host, deploy a database host, database host 
-summary: データベース用のBlueXP  ワークロードファクトリ内に新しいPostgreSQLサーバを作成します。 
+summary: NetApp Workload Factory for Databases 内に新しい PostgreSQL SQL サーバーを作成します。 
 ---
-= BlueXP  ワークロードファクトリでPostgreSQLサーバを作成する
+= NetApp Workload FactoryでPostgreSQLサーバーを作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-BlueXP  Workload Factory for Databasesで新しいPostgreSQLサーバ（データベースホスト）を作成するには、FSx for ONTAPファイルシステムの導入とActive Directory用のリソースが必要です。
+NetApp Workload Factory for Databases で新しい PostgreSQL サーバーまたはデータベース ホストを作成するには、FSx for ONTAPファイル システムの展開と Active Directory のリソースが必要です。
 
-.タスクの内容
-BlueXP  ワークロードファクトリからPostgreSQLサーバーを作成する前に、データベースホスト構成で使用可能なストレージ配置タイプ、ワークロードファクトリ操作モード、およびこの操作を完了するための要件について学習します。
 
-FSx for ONTAPファイルシステムの導入:: 新しいPostgreSQLサーバを作成するには、ストレージバックエンドとしてFSx for ONTAPファイルシステムが必要です。FSx for ONTAPの既存のファイルシステムを使用することも、新しいファイルシステムを作成することもできます。データベースサーバのストレージバックエンドとして既存のFSx for ONTAPファイルシステムを選択した場合は、PostgreSQLワークロード用の新しいStorage VMを作成します。
-+
---
-FSx for ONTAPファイルシステムには、_High Availability（HA）_OR_SINGLE INSTANCE_という2つのPostgreSQLサーバ導入モデルがあります。FSx for ONTAPファイルシステム用に作成されるリソースは、選択したFSx for ONTAP導入モデルに応じて異なります。
+
+== タスクの内容
+
+Workload Factory から PostgreSQL サーバーを作成する前に、データベース ホスト構成で使用可能なストレージ展開タイプ、Workload Factory の操作モード、およびこの操作を完了するための要件について学習します。
+
+.FSx for ONTAPファイルシステムの導入
+新しいPostgreSQLサーバを作成するには、ストレージバックエンドとしてFSx for ONTAPファイルシステムが必要です。FSx for ONTAPの既存のファイルシステムを使用することも、新しいファイルシステムを作成することもできます。データベースサーバのストレージバックエンドとして既存のFSx for ONTAPファイルシステムを選択した場合は、PostgreSQLワークロード用の新しいStorage VMを作成します。
+
++ FSx for ONTAPファイル システムには、_高可用性 (HA)_ または _単一インスタンス_ という 2 つの PostgreSQL サーバー導入モデルがあります。選択した FSx for ONTAPデプロイメント モデルに応じて、FSx for ONTAPファイル システムに対して異なるリソースが作成されます。
 
 * *ハイアベイラビリティ（HA）導入*：新しいFSx for ONTAPファイルシステムがHA導入用に選択されると、マルチアベイラビリティゾーンFSx for NetApp ONTAPファイルシステムが導入されます。HA環境では、データ、ログ、およびtempdbファイル用に別 々 のボリュームとLUNが作成されます。Windowsクラスタのクォーラムまたは監視ディスク用に、追加のボリュームとLUNが作成されます。HA配置では、プライマリとセカンダリのPostgreSQLサーバ間でストリーミングレプリケーションが構成されます。
 * *単一インスタンスの導入*:新しいPostgreSQLサーバが作成されると、単一アベイラビリティゾーンFSx for ONTAPファイルシステムが作成されます。また、データ、ログ、およびtempdbファイル用に別 々 のボリュームとLUNが作成されます。
 
 
---
 
 
-.開始する前に
-新しいデータベースホストを作成する前に、次の前提条件を満たしていることを確認してください。
+== 開始する前に
 
-クレデンシャルと権限:: ワークロードファクトリで新しいデータベースホストを作成する必要がありlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS アカウントの認証情報と読み取り/書き込みモードの権限"^]ます。
-
+ワークロードファクトリで新しいデータベースホストを作成する必要がありlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS アカウントの認証情報と読み取り/書き込みモードの権限"^]ます。
 
 
 
-== データベースサーバの作成
+== PostgreSQLサーバの作成
 
 このタスクは、_Quick create_or_Advanced create_deploymentモードを使用して、_automate_mode権限でワークロードファクトリで実行できます。Codeboxで利用可能なREST API、AWS CLI、AWS CloudFormation、Terraformの各ツールを使用することもできます。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Codeboxを使用して自動化する方法"^]です。
 
@@ -52,7 +52,7 @@ NOTE: クイック作成_では、HAがデフォルトの配置モデル、Windo
 
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
-. [データベース]タイルで*[データベースホストの配置]*を選択し、ドロップダウンメニューから*[PostgreSQL Server]*を選択します。
+. データベース タイルで、*ホストのデプロイ* を選択し、メニューから *PostgreSQL サーバー* を選択します。
 . [クイック作成]*を選択します。
 . [ランディングゾーン]*で、次の情報を入力します。
 +
@@ -141,7 +141,7 @@ NOTE: HAの導入は、複数のアベイラビリティゾーン（MAZ）FSx fo
 --
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
-. [データベース]タイルで*[データベースホストの配置]*を選択し、ドロップダウンメニューから*[PostgreSQL Server]*を選択します。
+. データベース タイルで、*ホストのデプロイ* を選択し、メニューから *PostgreSQL サーバー* を選択します。
 . [詳細作成]*を選択します。
 . [導入モデル]*で、*[スタンドアロンインスタンス]*または*[ハイアベイラビリティ（HA）]*を選択します。
 . [ランディングゾーン]*で、次の情報を入力します。
@@ -174,20 +174,17 @@ vPC DNS属性 `EnableDnsSupport` とが `EnableDnsHostnames` 、エンドポイ�
 
 .. *アベイラビリティゾーン*：アベイラビリティゾーンとサブネットを選択します。
 +
-単一インスタンス環境向け::
+*単一インスタンスの展開の場合*
+
 +
---
 [クラスタ構成-ノード1 ]*フィールドで、*[アベイラビリティゾーン]*ドロップダウンメニューからアベイラビリティゾーンを選択し、*[サブネット]*ドロップダウンメニューからサブネットを選択します。
 
---
-HA導入の場合::
 +
---
+*HA展開の場合*
+
++
 ... [クラスタ構成-ノード1 ]*フィールドで、*[アベイラビリティゾーン]*ドロップダウンメニューからMAZ FSx for ONTAP構成のプライマリアベイラビリティゾーンを選択し、*[サブネット]*ドロップダウンメニューからプライマリアベイラビリティゾーンのサブネットを選択します。
 ... [クラスタ構成-ノード2 ]*フィールドで、*[アベイラビリティゾーン]*ドロップダウンメニューからMAZ FSx for ONTAP構成のセカンダリアベイラビリティゾーンを選択し、*[サブネット]*ドロップダウンメニューからセカンダリアベイラビリティゾーンのサブネットを選択します。
-
-
---
 
 
 .. *セキュリティグループ*:既存のセキュリティグループを選択するか、新しいセキュリティグループを作成します。

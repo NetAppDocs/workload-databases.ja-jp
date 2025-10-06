@@ -4,27 +4,27 @@ permalink: explore-savings.html
 keywords: cost, savings, compare costs, EBS, FSx for Windows File Server, SQL Server on-premises, on-premises, FSx for ONTAP 
 summary: Amazon Elastic Block Store（EBS）、FSx for Windowsファイルサーバ、SQL ServerのオンプレミスデータベースストレージとFSx for ONTAPストレージを使用した場合のコストを比較します。 
 ---
-= データベース向けのBlueXP  ワークロード工場でのコスト削減について詳しく見る
+= NetApp Workload Factory for Databases の割引情報をご覧ください
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Amazon Elastic Block Store（EBS）、FSx for Windowsファイルサーバ、オンプレミスストレージでMicrosoft SQL Serverを使用するコストをFSx for ONTAPストレージと比較して、データベースワークロードのデータベース向けBlueXP  ワークロード工場におけるコスト削減についてご確認ください。
+Amazon Elastic Block Store (EBS)、FSx for Windows File Server、オンプレミスストレージでの Microsoft SQL Server の使用コストを FSx for ONTAPストレージと比較することで、データベースワークロードに対するNetApp Workload Factory for Databases の節約額をご確認ください。
 
 
 
 == タスクの内容
 
-Workload Factoryには、Amazon Elastic Block Store（EBS）、FSx for Windows File Server、オンプレミスストレージで実行されているデータベースワークロードの削減効果を確認するための方法がいくつかあります。ダッシュボード、[Inventory]タブ、および[Explore savings]タブから確認できます。いずれの場合も、コスト削減試算ツールを使用して、FSx for ONTAPファイルシステム上のデータベースワークロードについて、ストレージ、コンピューティング、SQLライセンス、Snapshot、クローンなど、Microsoft SQL Serverワークロードを実行する際のさまざまなコストコンポーネントを、Elastic Block Store（EBS）、FSx for Windowsファイルサーバ、オンプレミスストレージと比較できます。
+Workload Factory には、ダッシュボード、インベントリ タブ、節約の探索タブなど、Amazon Elastic Block Store (EBS)、FSx for Windows ファイル サーバー、オンプレミス ストレージで実行されているデータベース ワークロードの節約を探索するいくつかの方法があります。いずれの場合も、節約計算ツールを使用すれば、FSx for ONTAPファイルシステム上のデータベースワークロードのストレージ、コンピューティング、SQL ライセンス、スナップショット、クローンなどの Microsoft SQL Server ワークロードを実行するためのさまざまなコスト要素を、Elastic Block Store (EBS)、FSx for Windows ファイルサーバー、オンプレミスストレージと比較できます。
 
-FSx for ONTAPファイルシステムでこれらのワークロードを実行することでコストを削減できるとワークロードファクトリが判断した場合は、ワークロードファクトリのコスト削減試算ツールから直接Microsoft SQL over FSx for ONTAPを導入できます。Elastic Block Store、FSx for Windowsファイルサーバ、またはオンプレミスのストレージで複数のMicrosoft SQL Serverインスタンスを使用している場合は、単一のSQLインスタンスを使用するFSx for ONTAP構成を推奨します。
+Workload Factory が、これらのワークロードを FSx for ONTAPファイルシステムで実行することでコストを削減できると判断した場合は、Workload Factory コンソールのコスト削減計算ツールから直接、Microsoft SQL over FSx for ONTAPをデプロイできます。  Elastic Block Store、FSx for Windows ファイルサーバー、またはオンプレミスストレージ上に複数の Microsoft SQL Server インスタンスがある場合は、単一の SQL インスタンスを使用した FSx for ONTAP構成をお勧めします。
 
 .すべてのデータベースワークロードの潜在的な削減効果
-Workload Factory ConsoleからDatabases * Dashboard *にアクセスして、FSx for ONTAPですべてのデータベースワークロードを実行することで実現可能なコスト削減の概要を確認してください。[Potential Savings]タイルでは、Elastic Block StoreとFSx for Windows File Server上にあるすべてのデータベースワークロードの数、潜在的なコスト削減率、削減率、ビジュアル表示を棒グラフで確認できます。
+Workload Factory コンソールのデータベース *ダッシュボード* にアクセスして、FSx for ONTAPですべてのデータベース ワークロードを実行する場合に削減される可能性のあるコストの概要を確認します。  *潜在的な節約*タイルでは、Elastic Block Store と FSx for Windows File Server にあるすべてのデータベース ワークロードの数、潜在的なコスト節約、節約率、棒グラフでの視覚的な表現を表示できます。
 
-image:screenshot-dashboard-potential-savings-tile.png["ワークロードファクトリコンソールのデータベースダッシュボードの[潜在的な削減量]タイルのスクリーンショット。[Potential Savings]タイルには、Elastic Block StoreとFSx for Windows File Server上にあるすべてのデータベースワークロードの数、潜在的なコスト削減率、削減率、棒グラフに視覚的に表示されます。"]
+image:screenshot-dashboard-potential-savings-tile.png["Workload Factory コンソールのデータベース ダッシュボードにある潜在的な節約タイルのスクリーンショット。潜在的な節約タイルには、Elastic Block Store と FSx for Windows File Server にあるすべてのデータベース ワークロードの数、潜在的なコスト節約額、節約率、棒グラフでの視覚的な表現が表示されます。"]
 
 .削減額計算ツール
 コスト削減計算ツールを使用すると、FSx for ONTAPファイルシステム上のデータベースワークロードについて、ストレージ、コンピューティング、SQLライセンス、Snapshot、クローンなど、Microsoft SQL Serverワークロードを実行する際のさまざまなコストコンポーネントを、Elastic Block Store（EBS）、FSx for Windowsファイルサーバ、オンプレミスストレージと比較できます。ストレージ要件によっては、FSx for ONTAPファイルシステムがデータベースワークロードにとって最も対費用効果の高いファイルシステムであることがわかります。
@@ -39,28 +39,18 @@ image:screenshot-ebs-savings-calculator-update.png["削減試算ツールペー�
 
 この計算ツールは、SQL Server環境の包括的な分析を実行して、使用されているリソースと機能がSQL Serverエディションと適切に一致していることを確認します。Standard Editionへのダウングレードを推奨する前に、Calculatorがチェックする主な要因と条件は次のとおりです。
 
-導入モデル:: Calculatorは、導入モデルとEnterprise Editionが必要かどうかを評価します。
-割り当てられたリソース:: Calculatorは、次のライセンスに依存して割り当てられたリソースの条件を評価します。
-+
---
-* Target Instance vCPU：インスタンスの仮想CPU数が48個以下である。
-* Memory Allocation：インスタンスのメモリ容量は128GB以下です。
+.導入モデル
+Calculatorは、導入モデルとEnterprise Editionが必要かどうかを評価します。
 
+.割り当てられたリソース
+Calculatorは、次のライセンスに依存して割り当てられたリソースの条件を評価します。
 
---
-エンタープライズ機能の使用:: 計算ツールは、次のエンタープライズ機能のいずれかが使用されているかどうかを確認します。
-+
---
-* データベースレベルのエンタープライズ機能
-* オンラインインデックス操作
-* リソースガバナ
-* ピアツーピアまたはOracleレプリケーション
-* R/Python拡張
-* メモリに最適化されたtempdb
++ * ターゲットインスタンスの vCPU: インスタンスには 48 個以下の仮想 CPU があります。  * メモリ割り当て: インスタンスのメモリは 128 GB 以下です。
 
+.エンタープライズ機能の使用
+計算ツールは、次のエンタープライズ機能のいずれかが使用されているかどうかを確認します。
 
---
-
++ * データベースレベルのエンタープライズ機能 * オンラインインデックス操作 * リソースガバナー * ピアツーピアまたはOracleレプリケーション * R/Python拡張機能 * メモリ最適化TempDB
 
 評価されたSQL Serverインスタンスが上記のEnterprise機能のいずれも使用せず、リソースの制約を満たしている場合は、ライセンスをStandard Editionにダウングレードすることをお勧めします。この推奨事項は、パフォーマンスや機能を犠牲にすることなく、SQL Serverのライセンスコストを最適化することを目的としています。
 
@@ -72,7 +62,7 @@ image:screenshot-ebs-savings-calculator-update.png["削減試算ツールペー�
 
 カスタマイズによるコスト削減の詳細を見る:地域、導入モデル、SQL Serverエディション、毎月のデータ変更率、スナップショットの頻度など、EBSまたはFSx for Windows File Serverを搭載したAmazon EC2上のMicrosoft SQL Serverの構成設定を提供します。
 
-検出されたホストの削減効果を確認します。ワークロードのファクトリは既存のMicrosoft SQL Serverにリンクし、詳細を計算ツールに入力して自動比較します。この電卓オプションを使用するには、grant_read-only_or_read/write_permissionsが必要です。ユースケースは変更できますが、その他の詳細はすべて計算で自動的に決定されます。
+検出されたホストの節約を調査: Workload Factory は既存の Microsoft SQL サーバーにリンクし、詳細を計算機に取り込んで自動的に比較します。この計算機オプションを使用するには、_読み取り専用_ または _読み取り/書き込み_ 権限を付与する必要があります。ユースケースは変更できますが、その他のすべての詳細は計算で自動的に決定されます。
 
 さらに、計算機分析の精度を向上させることができますlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWSクレデンシャルを追加"^]。[既存のリソースに基づいてコスト削減を計算する]*を選択します。[クレデンシャルの追加]ページにリダイレクトされます。クレデンシャルを追加したら、FSx for ONTAPと比較する既存のリソースを選択し、*[削減効果を確認する]*を選択します。
 
@@ -163,7 +153,7 @@ FSx for ONTAPに切り替えるには、の手順に従います <<FSx for ONTAP
 
 === 検出されたホストの削減量を確認する
 
-Workload factoryには、検出されたElastic Block StoreとFSx for Windows File Serverホストの特性が入力されるため、削減効果を自動的に確認できます。
+Workload Factory は、検出された Elastic Block Store および FSx for Windows File Server ホストの特性を入力するので、自動的に節約を検討できます。
 
 .開始する前に
 作業を開始する前に、次の前提条件を満たしてください。
@@ -231,7 +221,7 @@ Workload factoryには、検出されたElastic Block StoreとFSx for Windows Fi
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [Databases]タイルで、ドロップダウンメニューから*[Explore savings]*を選択し、*[Microsoft SQL Server on FSx for Windows]を選択します。
 +
-ワークロードファクトリがEBSホストを検出した場合は、[Explore savings（節約の確認）]タブにリダイレクトされます。ワークロードファクトリがEBSホストを検出しない場合は、にリダイレクトされます<<カスタマイズによるコスト削減の詳細,カスタマイズによるコスト削減の詳細>>。
+Workload Factory が EBS ホストを検出すると、[節約の探索] タブにリダイレクトされます。  Workload FactoryがEBSホストを検出しない場合は、計算ツールにリダイレクトされます。<<カスタマイズによるコスト削減の詳細,カスタマイズによるコスト削減の詳細>> 。
 
 . [Explore savings]タブで、EBSストレージを使用してデータベースサーバの*[Explore savings]*をクリックします。
 . 必要に応じて、SQL Server 資格情報、Windows 資格情報、または不足している SQL Server 権限を追加して、データベース ホストを認証します。
@@ -255,7 +245,7 @@ Workload factoryには、検出されたElastic Block StoreとFSx for Windows Fi
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース] タイルで、メニューから [節約の検討] を選択し、[Microsoft SQL Server on FSx for Windows] を選択します。
 +
-Workload FactoryがFSx for Windowsホストを検出した場合は、Explore savingsタブにリダイレクトされます。ワークロードファクトリがFSx for Windowsホストを検出しない場合は、にリダイレクトされます<<カスタマイズによるコスト削減の詳細,カスタマイズによるコスト削減の詳細>>。
+Workload Factory が FSx for Windows ホストを検出すると、[節約の探索] タブにリダイレクトされます。  Workload FactoryがFSx for Windowsホストを検出しない場合は、計算ツールにリダイレクトされます。<<カスタマイズによるコスト削減の詳細,カスタマイズによるコスト削減の詳細>> 。
 
 . [節約の検討] タブで、FSx for Windows ファイル サーバー ストレージを使用したデータベース ホストの *節約の検討* を選択します。
 . 必要に応じて、SQL Server 資格情報、Windows 資格情報、または不足している SQL Server 権限を追加して、データベース ホストを認証します。
@@ -283,12 +273,12 @@ FSx for Windowsのシャドウコピーが検出された場合、デフォル�
 . [データベース] タイルで、メニューから [*節約の検討*] を選択し、[*Microsoft SQL Server オンプレミス*] を選択します。
 . [SQL Server On-Premises]タブからスクリプトをダウンロードし、オンプレミスのSQL Server環境を評価します。
 +
-.. 評価スクリプトをダウンロードスクリプトは、PowerShellをベースとしたデータ収集ツールです。SQL Serverの構成データとパフォーマンスデータを収集し、BlueXP  ワークロード工場にアップロードします。移行アドバイザはデータを評価し、SQL Server環境向けのFSx for ONTAPの導入を計画します。
+.. 評価スクリプトをダウンロードしてください。このスクリプトは、PowerShell に基づくデータ収集ツールです。 SQL Server の構成とパフォーマンス データを収集し、Workload Factory にアップロードします。移行アドバイザーはデータを評価し、SQL Server 環境向けの FSx for ONTAPの導入を計画します。
 +
 image:screenshot-download-script-on-premises.png["[SQL Server On-Premises]タブのスクリーンショットには、評価スクリプトをダウンロードするためのオプションが表示されています。"]
 
 .. SQL Serverホストでスクリプトを実行します。
-.. ワークロードファクトリの[SQL Server On-Premises]タブでスクリプトの出力をアップロードします。
+.. Workload Factory の SQL Server オンプレミス タブにスクリプト出力をアップロードします。
 +
 image:screenshot-upload-script-on-premises.png["[SQL Server On-Premises]タブのスクリーンショットには、評価スクリプトをアップロードするオプションが表示されています。"]
 
@@ -323,8 +313,8 @@ FSx for Windowsのシャドウコピーが検出された場合、デフォル�
 
 FSx for ONTAPに切り替えるには、の手順に従います <<FSx for ONTAPを使用してAWS EC2にMicrosoft SQL Serverを導入,FSx for ONTAPファイルシステムを使用してAQS EC2にMicrosoft SQL Serverを導入>>。
 
-オンプレミスのホストの削除:: オンプレミスのMicrosoft SQL Serverホストの削減効果を確認したら、オンプレミスのホストレコードをBlueXP  ワークロードファクトリから削除することもできます。Microsoft SQL Serverオンプレミスホストの3ドットメニューを選択し、*[削除]*を選択します。
-
+.オンプレミスのホストの削除
+Microsoft SQL Server オンプレミス ホストの節約を検討した後、オンプレミス ホスト レコードを Workload Factory から削除するオプションがあります。  Microsoft SQL Server オンプレミス ホストのアクション メニューを選択し、[削除] を選択します。
 
 
 
@@ -333,12 +323,9 @@ FSx for ONTAPに切り替えるには、の手順に従います <<FSx for ONTAP
 コスト削減を実現するためにFSx for ONTAPに切り替えたい場合は、*[作成]*をクリックして新しいMicrosoft SQL Serverの作成ウィザードから直接推奨構成を作成するか、*[保存]*をクリックして推奨構成を保存しておきます。
 
 
-NOTE: Workload Factoryでは、複数のFSx for ONTAPファイルシステムの保存や作成はサポートされていません。
+NOTE: Workload Factory は、複数の FSx for ONTAPファイル システムの保存または作成をサポートしていません。
 
-導入方法:: _automate_modeでは、ワークロードファクトリからFSx for ONTAPを使用して、新しいMicrosoft SQL ServerをAWS EC2に導入できます。Codeboxウィンドウからコンテンツをコピーし、Codeboxメソッドのいずれかを使用して推奨構成を展開することもできます。
-+
---
-_basic_modeでは、Codeboxウィンドウからコンテンツをコピーし、Codeboxメソッドのいずれかを使用して推奨構成を展開できます。
+.導入方法
+_読み取り/書き込み_ モードでは、Workload Factory から直接 FSx for ONTAPを使用して、新しい Microsoft SQL サーバーを AWS EC2 にデプロイできます。また、Codebox ウィンドウからコンテンツをコピーし、Codebox メソッドのいずれかを使用して推奨構成を展開することもできます。
 
---
-
++ _基本_ モードでは、Codebox ウィンドウからコンテンツをコピーし、Codebox メソッドの 1 つを使用して推奨構成を展開できます。

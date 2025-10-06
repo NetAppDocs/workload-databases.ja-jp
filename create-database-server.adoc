@@ -2,58 +2,55 @@
 sidebar: sidebar 
 permalink: create-database-server.html 
 keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
-summary: データベース用のBlueXP  ワークロードファクトリ内に新しいMicrosoft SQL Serverを作成します。 
+summary: NetApp Workload Factory for Databases 内に新しい Microsoft SQL Server を作成します。 
 ---
-= データベースのワークロードファクトリーに Microsoft SQL Server を作成する
+= Workload Factory でデータベース用の Microsoft SQL Server を作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-データベースのワークロード ファクトリーで新しい Microsoft SQL Server またはデータベース ホストを作成するには、FSx for ONTAP ファイル システムのデプロイメントと Active Directory のリソースが必要です。
+Workload Factory for Databases で新しい Microsoft SQL Server またはデータベース ホストを作成するには、FSx for ONTAPファイル システムのデプロイメントと Active Directory のリソースが必要です。
 
 
 
 == タスクの内容
 
-ワークロード ファクトリから Microsoft SQL Server を作成する前に、データベース ホスト構成で使用可能なストレージ展開の種類、Microsoft マルチパス I/O 構成、Active Directory 展開、ネットワークの詳細、およびこの操作を完了するための要件について学習します。
+Workload Factory から Microsoft SQL Server を作成する前に、データベース ホスト構成で使用可能なストレージ展開タイプ、Microsoft マルチパス I/O 構成、Active Directory 展開、ネットワークの詳細、およびこの操作を完了するための要件について学習します。
 
 導入後は、次の手順を実行する必要があり <<手順2：Microsoft SQL Serverでリモート接続を有効にする,Microsoft SQL Serverでリモート接続を有効にする>>ます。
 
-FSx for ONTAPファイルシステムの導入:: 新しいMicrosoft SQL Serverを作成するには、ストレージバックエンドとしてFSx for ONTAPファイルシステムが必要です。FSx for ONTAPの既存のファイルシステムを使用することも、新しいファイルシステムを作成することもできます。データベースサーバのストレージバックエンドとして既存のFSx for ONTAPファイルシステムを選択された場合は、Microsoft SQLワークロード用の新しいStorage VMを作成します。
-+
---
+.FSx for ONTAPファイルシステムの導入
+新しいMicrosoft SQL Serverを作成するには、ストレージバックエンドとしてFSx for ONTAPファイルシステムが必要です。FSx for ONTAPの既存のファイルシステムを使用することも、新しいファイルシステムを作成することもできます。データベースサーバのストレージバックエンドとして既存のFSx for ONTAPファイルシステムを選択された場合は、Microsoft SQLワークロード用の新しいStorage VMを作成します。
+
 FSx for ONTAPファイルシステムには、2つのMicrosoft SQL Server導入モデル（_フェイルオーバークラスタインスタンス（FCI）_または_スタンドアロン_）があります。FSx for ONTAPファイルシステム用に作成されるリソースは、選択したFSx for ONTAP導入モデルに応じて異なります。
 
 * *フェイルオーバークラスタインスタンス（FCI）Microsoft SQL導入*：FCI導入用に新しいFSx for ONTAPファイルシステムが選択されると、複数のアベイラビリティゾーンFSx for NetApp ONTAPファイルシステムが導入されます。FCI環境では、データ、ログ、およびtempdbファイル用に別 々 のボリュームとLUNが作成されます。Windowsクラスタのクォーラムまたは監視ディスク用に、追加のボリュームとLUNが作成されます。
 * *スタンドアロンのMicrosoft SQL展開*:新しいMicrosoft SQL Serverが作成されると、単一のアベイラビリティゾーンFSx for ONTAPファイルシステムが作成されます。また、データ、ログ、およびtempdbファイル用に別 々 のボリュームとLUNが作成されます。
 
 
---
-MicrosoftマルチパスI/O構成:: Microsoft SQL Serverの導入モデルでは、どちらもiSCSIストレージプロトコルを使用してLUNを作成する必要があります。SQL Server over FSx for ONTAP用のLUNの設定の一環として、ワークロード工場でMicrosoftマルチパスI/O（MPIO）が設定されます。MPIOは、AWSとNetAppのベストプラクティスに基づいて設定されます。
+.MicrosoftマルチパスI/O構成
+Microsoft SQL Server の展開モデルでは、どちらも iSCSI ストレージ プロトコルを使用した LUN の作成が必要です。  Workload Factory は、SQL Server over FSx for ONTAPの LUN を構成する一環として、Microsoft マルチパス I/O (MPIO) を構成します。  MPIO は、AWS とNetApp のベスト プラクティスに基づいて構成されます。
 
+詳細については、 link:https://aws.amazon.com/blogs/modernizing-with-aws/sql-server-high-availability-amazon-fsx-for-netapp-ontap/["Amazon FSx for NetApp ONTAPを使用した SQL Server の高可用性デプロイメント"^] 。
 
-詳細については、を参照してください link:https://aws.amazon.com/blogs/modernizing-with-aws/sql-server-high-availability-amazon-fsx-for-netapp-ontap/["Amazon FSx for NetApp ONTAPを使用したSQL Server高可用性環境"^]。
+.Active Directory
+導入時にActive Directory（AD）に対して次の処理が実行されます。
 
-Active Directory:: 導入時にActive Directory（AD）に対して次の処理が実行されます。
-+
---
 * 既存のSQLサービスアカウントを指定しない場合は、ドメインに新しいMicrosoft SQLサービスアカウントが作成されます。
 * Windowsクラスタ、ノードホスト名、およびMicrosoft SQL FCI名は、管理対象コンピュータとしてMicrosoft SQLサービスアカウントに追加されます。
 * Windowsクラスタエントリには、ドメインにコンピュータを追加するための権限が割り当てられています。
 
 
---
-ユーザ管理のActive Directoryセキュリティグループ:: ワークロード工場でのMicrosoft SQL Serverの導入時に[User-managed Active Directory]を選択した場合は、EC2インスタンスとディレクトリサービスの間のトラフィックを許可するセキュリティグループを指定する必要があります。Workload Factoryでは、AWS Managed Microsoft ADと同様に、ユーザ管理Active Directoryのセキュリティグループが自動的に付加されません。
-リソースのロールバック:: Domain Name System（DNS;ドメインネームシステム）リソースをロールバックする場合、ADおよびDNSのリソースレコードは自動的には削除されません。DNSサーバとADからレコードを削除するには、次の手順を実行します。
-+
---
+.ユーザ管理のActive Directoryセキュリティグループ
+Workload Factory での Microsoft SQL Server のデプロイメント中に「ユーザー管理 Active Directory」を選択した場合は、デプロイメント用のディレクトリ サービスへの EC2 インスタンス間のトラフィックを許可するセキュリティ グループを指定する必要があります。  Workload Factory は、AWS Managed Microsoft AD の場合のように、ユーザー管理の Active Directory のセキュリティグループを自動的にアタッチしません。
+
+.リソースのロールバック
+Domain Name System（DNS;ドメインネームシステム）リソースをロールバックする場合、ADおよびDNSのリソースレコードは自動的には削除されません。DNSサーバとADからレコードを削除するには、次の手順を実行します。
+
 * ユーザ管理ADの場合は、最初に link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps["ADコンピュータの取り外し"^]。次に、DNSマネージャおよびからDNSサーバに接続します link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records["DNSリソースレコードの削除"^]。
 * AWSマネージドMicrosoft ADの場合は、 link:https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_install_ad_tools.html["AD管理ツールのインストール"^]次は link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps["ADコンピュータの取り外し"^]最後に、DNSマネージャおよびからDNSサーバに接続します link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records["DNSリソースレコードの削除"^]。
-
-
---
 
 
 
@@ -62,10 +59,12 @@ Active Directory:: 導入時にActive Directory（AD）に対して次の処理�
 
 新しいデータベースホストを作成する前に、次の前提条件を満たしていることを確認してください。
 
-クレデンシャルと権限:: ワークロードファクトリで新しいデータベースホストを作成する必要がありlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS アカウントの認証情報と読み取り/書き込みモードの権限"^]ます。
-Active Directory:: Active Directoryに接続する場合は、次の作業を行うための権限を持つ管理者アクセス権が必要です。
-+
---
+.クレデンシャルと権限
+あなたにはlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS アカウントの認証情報と読み取り/書き込みモードの権限"^]Workload Factory に新しいデータベース ホストを作成します。
+
+.Active Directory
+Active Directoryに接続する場合は、次の作業を行うための権限を持つ管理者アクセス権が必要です。
+
 * ドメインへの参加
 * コンピュータオブジェクトの作成
 * デフォルトの組織単位（OU）でオブジェクトを作成する
@@ -74,19 +73,16 @@ Active Directory:: Active Directoryに接続する場合は、次の作業を行
 * ADにMicrosoft SQL Serverサービスユーザが存在しない場合は作成します。
 
 
---
-
-
 
 
 == 手順1：データベースサーバを作成する
 
-このタスクは、_Quick create_or_Advanced create_deploymentモードを使用して、_automate_mode権限でワークロードファクトリで実行できます。Codeboxで利用可能なREST API、AWS CLI、AWS CloudFormation、Terraformの各ツールを使用することもできます。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Codeboxを使用して自動化する方法"^]です。
+_クイック作成_ または _詳細作成_ のデプロイメント モードを使用して、_自動化_ モード権限で Workload Factory でこのタスクを完了できます。 Codebox で利用可能な REST API、AWS CLI、AWS CloudFormation、Terraform などのツールも使用できます。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Codeboxを使用して自動化する方法"^] 。
 
 
 NOTE: CodeboxからTerraformを使用すると、コピーまたはダウンロードしたコードが非表示になり、パスワードが表示され `fsxadmin` `vsadmin` ます。コードを実行するときは、パスワードを再入力する必要があります。ユーザーアカウントには、_automate_mode権限に加えて、次の権限を含める必要があります。および `iam:TagInstanceProfile`。 `iam:TagRole`link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox["CodeboxからTerraformを使用する方法を確認する"^]です。
 
-デプロイ中、ワークロードファクトリーは、SQLのプロビジョニング用スクリプトへの資格情報委任のためにCredSSPを有効にします。グループポリシーによってすべてのドメインコンピューターでCredSSPの委任がブロックされている場合、デプロイは失敗します。デプロイ後、ワークロードファクトリーはCredSSPを無効にします。
+デプロイメント中に、Workload Factory は、SQL をプロビジョニングするためのスクリプトへの資格情報の委任のために CredSSP を有効にします。グループ ポリシーによってすべてのドメイン コンピューターに対して CredSSP 委任がブロックされている場合、展開は失敗します。デプロイ後、Workload Factory は CredSSP を無効にします。
 
 [role="tabbed-block"]
 ====
@@ -97,25 +93,25 @@ NOTE: クイック作成_では、FCIがデフォルトの配置モデル、Wind
 
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
-. [データベース]タイルで*[データベースホストの導入]*を選択し、ドロップダウンメニューから*[Microsoft SQL Server]*を選択します。
+. [データベース] タイルで、*ホストのデプロイ* を選択し、メニューから *Microsoft SQL Server* を選択します。
 . [クイック作成]*を選択します。
 . [AWS settings]*で、次の情報を指定します。
 +
 .. * AWSクレデンシャル*：自動化権限を持つAWSクレデンシャルを選択して、新しいデータベースホストを導入します。
 +
-_読み取り/書き込み_権限を持つ AWS 認証情報により、ワークロードファクトリーはワークロードファクトリー内の AWS アカウントから新しいデータベースホストをデプロイおよび管理できます。
+_読み取り/書き込み_権限を持つ AWS 認証情報により、Workload Factory は Workload Factory 内の AWS アカウントから新しいデータベースホストをデプロイおよび管理できるようになります。
 
 +
-_読み取り専用_権限を持つ AWS 認証情報を使用すると、ワークロードファクトリーで AWS CloudFormation コンソールで使用するための CloudFormation テンプレートを生成できます。
+読み取り専用権限を持つ AWS 認証情報を使用すると、Workload Factory は AWS CloudFormation コンソールで使用できる CloudFormation テンプレートを生成できます。
 
 +
-ワークロードファクトリにAWSクレデンシャルが関連付けられておらず、ワークロードファクトリに新しいサーバを作成する場合は、*オプション1 *に従って[クレデンシャル]ページに移動します。データベース ワークロードの _読み取り/書き込み_ モードに必要な資格情報と権限を手動で追加します。
+Workload Factory に AWS 認証情報が関連付けられておらず、Workload Factory に新しいサーバーを作成する場合は、*オプション 1* に従って認証情報ページに移動します。データベース ワークロードの _読み取り/書き込み_ モードに必要な資格情報と権限を手動で追加します。
 
 +
-AWS CloudFormationで展開するための完全なYAMLファイルテンプレートをダウンロードできるように、ワークロードファクトリで新しいサーバーの作成フォームに入力する場合は、*オプション2 *に従って、AWS CloudFormation内で新しいサーバーを作成するために必要な権限を持っていることを確認します。データベースワークロードの_read_modeに必要なクレデンシャルと権限を手動で追加します。
+Workload Factory で新しいサーバーの作成フォームを完了して、AWS CloudFormation にデプロイするための完全な YAML ファイルテンプレートをダウンロードできるようにするには、*オプション 2* に従って、AWS CloudFormation 内で新しいサーバーを作成するために必要な権限があることを確認します。データベース ワークロードの _read_ モードに必要な資格情報と権限を手動で追加します。
 
 +
-必要に応じて、部分的に完成したYAMLファイルテンプレートを[コードボックス]からダウンロードして、資格情報や権限なしでワークロードファクトリの外部にスタックを作成できます。[コードボックス]のドロップダウンから[CloudFormation]*を選択して、YAMLファイルをダウンロードします。
+オプションで、Codebox から部分的に完成した YAML ファイル テンプレートをダウンロードして、資格情報や権限なしで Workload Factory の外部にスタックを作成することもできます。  Codebox のドロップダウンから *CloudFormation* を選択して、YAML ファイルをダウンロードします。
 
 .. *リージョンとVPC *：リージョンとVPCネットワークを選択します。
 +
@@ -205,27 +201,26 @@ AWSが管理するActive Directoryの場合、DNS IPアドレスがドロップ�
 .高度な作成
 --
 .手順
-. いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
-. [データベース]タイルで*[データベースホストの導入]*を選択し、ドロップダウンメニューから*[Microsoft SQL Server]*を選択します。
+. 次のいずれかを使用してログインしますlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]。  [データベース] タイルで、*ホストのデプロイ* を選択し、メニューから *Microsoft SQL Server* を選択します。
 . [詳細作成]*を選択します。
 . [Deployment model]*で、*[Failover Cluster Instance]*または*[Single instance]*を選択します。
 . [AWS settings]*で、次の情報を指定します。
 +
 .. * AWSクレデンシャル*：自動化権限を持つAWSクレデンシャルを選択して、新しいデータベースホストを導入します。
 +
-_読み取り/書き込み_権限を持つ AWS 認証情報により、ワークロードファクトリーはワークロードファクトリー内の AWS アカウントから新しいデータベースホストをデプロイおよび管理できます。
+_読み取り/書き込み_権限を持つ AWS 認証情報により、Workload Factory は Workload Factory 内の AWS アカウントから新しいデータベースホストをデプロイおよび管理できるようになります。
 
 +
-_読み取り専用_権限を持つ AWS 認証情報を使用すると、ワークロードファクトリーで AWS CloudFormation コンソールで使用するための CloudFormation テンプレートを生成できます。
+読み取り専用権限を持つ AWS 認証情報を使用すると、Workload Factory は AWS CloudFormation コンソールで使用できる CloudFormation テンプレートを生成できます。
 
 +
-ワークロードファクトリにAWSクレデンシャルが関連付けられておらず、ワークロードファクトリに新しいサーバを作成する場合は、*オプション1 *に従って[クレデンシャル]ページに移動します。データベース ワークロードの _読み取り/書き込み_ モードに必要な資格情報と権限を手動で追加します。
+Workload Factory に AWS 認証情報が関連付けられておらず、Workload Factory に新しいサーバーを作成する場合は、*オプション 1* に従って認証情報ページに移動します。データベース ワークロードの _読み取り/書き込み_ モードに必要な資格情報と権限を手動で追加します。
 
 +
-AWS CloudFormationで展開するための完全なYAMLファイルテンプレートをダウンロードできるように、ワークロードファクトリで新しいサーバーの作成フォームに入力する場合は、*オプション2 *に従って、AWS CloudFormation内で新しいサーバーを作成するために必要な権限を持っていることを確認します。データベース ワークロードの _読み取り専用_ モードに必要な資格情報と権限を手動で追加します。
+Workload Factory で新しいサーバーの作成フォームを完了して、AWS CloudFormation にデプロイするための完全な YAML ファイルテンプレートをダウンロードできるようにするには、*オプション 2* に従って、AWS CloudFormation 内で新しいサーバーを作成するために必要な権限があることを確認します。データベース ワークロードの _読み取り専用_ モードに必要な資格情報と権限を手動で追加します。
 
 +
-必要に応じて、部分的に完成したYAMLファイルテンプレートを[コードボックス]からダウンロードして、資格情報や権限なしでワークロードファクトリの外部にスタックを作成できます。[コードボックス]のドロップダウンから[CloudFormation]*を選択して、YAMLファイルをダウンロードします。
+オプションで、Codebox から部分的に完成した YAML ファイル テンプレートをダウンロードして、資格情報や権限なしで Workload Factory の外部にスタックを作成することもできます。  Codebox のドロップダウンから *CloudFormation* を選択して、YAML ファイルをダウンロードします。
 
 .. *リージョンとVPC *：リージョンとVPCネットワークを選択します。
 +
@@ -237,30 +232,23 @@ AWSサービスインターフェイスエンドポイント（SQS、FSx、EC2�
 +
 vPC DNS属性 `EnableDnsSupport` とが `EnableDnsHostnames` 、エンドポイントアドレス解決を有効にするように変更されます（まだに設定されていない場合） `true`。
 
-.. *アベイラビリティゾーン*：選択した導入モデルに従ってアベイラビリティゾーンとサブネットを選択します。
+.. *可用性ゾーン*: 選択したデプロイメント モデルに応じて、可用性ゾーンとサブネットを選択します。高可用性を実現するために、サブネットは同じルート テーブルを共有しないでください。
 +
 
 NOTE: FCIの導入は、複数のアベイラビリティゾーン（MAZ）FSx for ONTAP構成でのみサポートされます。
 
 +
-ハイアベイラビリティを実現するためには、サブネットで同じルートテーブルを共有しないでください。
-
+*** 単一インスタンスの展開の場合:
 +
-単一インスタンス環境向け::
+**** [クラスタ構成-ノード1 ]*フィールドで、ドロップダウンメニューの*[アベイラビリティゾーン]*からアベイラビリティゾーンを選択し、*[サブネット]*ドロップダウンメニューからサブネットを選択します。
+
+
+*** FCI 展開の場合:
 +
---
-... [クラスタ構成-ノード1 ]*フィールドで、ドロップダウンメニューの*[アベイラビリティゾーン]*からアベイラビリティゾーンを選択し、*[サブネット]*ドロップダウンメニューからサブネットを選択します。
+**** [クラスタ構成-ノード1 ]*フィールドで、*[アベイラビリティゾーン]*ドロップダウンメニューからMAZ FSx for ONTAP構成のプライマリアベイラビリティゾーンを選択し、*[サブネット]*ドロップダウンメニューからプライマリアベイラビリティゾーンのサブネットを選択します。
+**** [クラスタ構成-ノード2 ]*フィールドで、*[アベイラビリティゾーン]*ドロップダウンメニューからMAZ FSx for ONTAP構成のセカンダリアベイラビリティゾーンを選択し、*[サブネット]*ドロップダウンメニューからセカンダリアベイラビリティゾーンのサブネットを選択します。
 
 
---
-FCI導入の場合::
-+
---
-... [クラスタ構成-ノード1 ]*フィールドで、*[アベイラビリティゾーン]*ドロップダウンメニューからMAZ FSx for ONTAP構成のプライマリアベイラビリティゾーンを選択し、*[サブネット]*ドロップダウンメニューからプライマリアベイラビリティゾーンのサブネットを選択します。
-... [クラスタ構成-ノード2 ]*フィールドで、*[アベイラビリティゾーン]*ドロップダウンメニューからMAZ FSx for ONTAP構成のセカンダリアベイラビリティゾーンを選択し、*[サブネット]*ドロップダウンメニューからセカンダリアベイラビリティゾーンのサブネットを選択します。
-
-
---
 
 
 .. *セキュリティグループ*:既存のセキュリティグループを選択するか、新しいセキュリティグループを作成します。新しいサーバの導入時に、3つのセキュリティグループがSQLノード（EC2インスタンス）に接続されます。
@@ -391,7 +379,7 @@ CloudWatchでは、スタックの名前でロググループが作成されま�
 
 == 手順2：Microsoft SQL Serverでリモート接続を有効にする
 
-サーバの導入後、ワークロードファクトリではMicrosoft SQL Serverでのリモート接続が有効になりません。リモート接続を有効にするには、次の手順を実行します。
+サーバーがデプロイされた後、Workload Factory は Microsoft SQL Server 上のリモート接続を有効にしません。リモート接続を有効にするには、次の手順を実行します。
 
 .手順
 . Microsoftのマニュアルのを参照して、NTLMのコンピュータIDを使用します link:https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-allow-local-system-to-use-computer-identity-for-ntlm["ネットワークセキュリティ:ローカルシステムがNTLMのコンピュータIDを使用できるようにする"^] 。
@@ -400,4 +388,4 @@ CloudWatchでは、スタックの名前でロググループが作成されま�
 
 
 .次のステップ
-できるようになりまし link:create-database.html["BlueXP  ワークロードファクトリでデータベース用のデータベースを作成"]た。
+今ならできるlink:create-database.html["Workload Factory for Databases でデータベースを作成する"]。

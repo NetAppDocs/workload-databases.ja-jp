@@ -2,30 +2,30 @@
 sidebar: sidebar 
 permalink: learn-databases.html 
 keywords: Databases 
-summary: Workload Factory for Databases は、最適化、自動シン クローニング、監視および解決機能のベスト プラクティスが組み込まれた、エンドツーエンドのデータベース導入および保守サービスです。 
+summary: NetApp Workload Factory for Databases は、最適化、自動シン クローニング、監視および解決機能に関するベスト プラクティスが組み込まれた、エンドツーエンドのデータベース導入および保守サービスです。 
 ---
-= データベース向けワークロードファクトリの詳細
+= NetApp Workload Factory for Databases の詳細
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Workload Factory for Databases は、最適化、自動シン クローニング、監視および解決機能のベスト プラクティスが組み込まれた、エンドツーエンドのデータベース導入および保守サービスです。
+NetApp Workload Factory for Databases は、最適化、自動シン クローニング、監視および解決機能に関するベスト プラクティスが組み込まれた、エンドツーエンドのデータベース導入および保守サービスです。
 
 
 
-== データベースのワークロード ファクトリーとは何ですか?
+== NetApp Workload Factory for Databases とは何ですか?
 
-Workload Factory for Databases は、Microsoft SQL Server データを検出、評価、計画、プロビジョニングし、業界のベストプラクティスに準拠しながらパフォーマンスとコストの期待に応えるように最適化された Amazon FSx for NetApp ONTAP (FSx for ONTAP) デプロイメントに移動します。ライフサイクル全体を通じて、ワークロードファクトリはFSx for ONTAP上のデータベースの継続的な最適化と管理を提供します。
+NetApp Workload Factory for Databases は、Microsoft SQL Server データを検出、評価、計画、プロビジョニングし、業界のベストプラクティスに準拠しながらパフォーマンスとコストの期待に応えるように最適化されたAmazon FSx for NetApp ONTAP (FSx for ONTAP) デプロイメントに移動します。  NetApp Workload Factory for Databases は、ライフサイクル全体を通じて、FSx for ONTAP上のデータベースの継続的な最適化と管理を実現します。
 
-ワークロードファクトリの詳細については、を参照してlink:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["ワークロードファクトリの概要"^]ください。
+ワークロードファクトリーの詳細については、link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["ワークロードファクトリーの概要"^] 。
 
 
 
-== 自己管理データベースに対するWorkload Factoryのメリット
+== セルフマネージドデータベースにおけるワークロードファクトリーのメリット
 
-Workload Factoryは、自己管理データベースに次のような有益なベストプラクティスと自動化を提供します。
+Workload Factory は、自己管理型データベース向けに次のような有益なベスト プラクティスと自動化を提供します。
 
 
 
@@ -34,31 +34,31 @@ Workload Factoryは、自己管理データベースに次のような有益な�
 * AWSクラウド、Microsoft WindowsおよびSQLサーバ、NetApp ONTAP for SQL ServerのEC2インスタンスへの導入に関する統合された知識。
 * TCO（総所有コスト）最適化された導入。
 * AWS、Microsoft、ONTAPのベストプラクティスに沿ったエンドツーエンドの導入自動化
-* 「Quick create」デプロイメントモードを使用すると、手動設定による潜在的な落とし穴を回避できます。
+* _クイック作成_ デプロイメント モードを使用すると、手動構成による潜在的な落とし穴を回避できます。
 
 
 
 
-=== Workload Factory Codeboxによる自動化
+=== Workload Factory Codebox による自動化
 
-Workload Factoryでは、_Codebox_を使用した自動化が組み込まれています。Codeboxには、次のような自動化の利点があります。
+Workload Factory は、_Codebox_ による組み込みの自動化を導入します。  Codebox は次のような自動化の利点を提供します。
 
 * *コードスニペットの生成*：IAC（Infrastructure as Code）スニペットはリソース作成時に生成されるため、既存のオーケストレーションワークフローとシームレスに統合できます。
-* *コードとしてのインフラコパイロット*:コードボックスは、開発者とDevOpsがワークロードファクトリでサポートされているすべての操作を実行するためのコードを生成するのを支援するコードとしてのインフラストラクチャ（IAC）コパイロットです。
+* *Infrastructure-as-code のコパイロット*: Codebox は、開発者と DevOps が Workload Factory でサポートされているあらゆる操作を実行するためのコードを生成するのに役立つ Infrastructure-as-code (IaC) コパイロットです。
 * *コードビューアと自動化カタログ*:コードボックスは、自動化の迅速な分析のためのコードビューアと、将来の迅速な再利用のための自動化カタログを提供します。
 
 
 
 
-=== データベース機能のワークロードファクトリ
+=== データベース向けワークロードファクトリーの機能
 
-Workload Factory for Databasesには次の機能があります。
+Workload Factory for Databases は次の機能を提供します。
 
 * *シンプルで迅速な導入*：仕様に関する質問に対する回答を選択し、Microsoft SQL Server on AWSのプロビジョニングおよび構成方法の調査に通常必要な時間を排除することで、プロビジョニングエクスペリエンスを簡素化および合理化します。
-* *自動オーケストレーション*：ワークロードファクトリのユーザーインターフェイスで、_Quick_and_Advanced_createデプロイメントモード、ワークロードファクトリのChatbot、AWS CloudFormationを使用したAPIを使用できます。
+* *自動オーケストレーション*: Workload Factory コンソールの _Quick_ および _Advanced_ 作成デプロイメント モード、Chatbot、および Codebox 経由の AWS CloudFormation から利用できます。
 * *組み込み機能*：NetApp、Microsoft、Amazonのベストプラクティスと、導入構成に組み込まれたAWSリソースの選択を活用します。
 * *コストの見積もり*：Savings Calculatorを使用して、既存のMicrosoft SQL Server環境（Elastic Block StoreとFSx for Windowsファイルサーバを使用）のストレージ、コンピューティング、SQLライセンス、スナップショット、クローンの項目別コストを、FSx for ONTAPと比較して試算および詳細化し、削減可能なコストを評価します。
-* *再利用可能な自動化テンプレート*:ワークロードファクトリCodeboxからCloudFormationテンプレートを作成、再利用、カスタマイズして、複数の環境でのMicrosoft SQL Serverの将来の導入に対応します。
+* *再利用可能な自動化テンプレート*: 複数の環境での将来の Microsoft SQL Server の展開のために、Workload Factory Codebox から CloudFormation テンプレートを作成、再利用、カスタマイズします。
 * * AWSリソースの検出とプロビジョニング*：AWSアカウントから導入されたFSx for ONTAP、FSx for Windowsファイルサーバ、Elastic Block StoreでMicrosoft SQL Serverを自動的に検出します。データベースインベントリは、他のAWSストレージシステム内のサーバのコスト削減の余地を探るための出発点として機能し、FSx for ONTAPベースのサーバとインスタンスの管理ツールとして機能します。
 * *サンドボックスの作成*：本番環境のデータに影響を与えることなく、テスト、統合、診断、トレーニングに使用できる、オンデマンドの分離されたデータベース環境を作成します。
 * *データベースの作成*:データベースの照合、ファイル名、およびサイズを構成するために、_Quick_or_Advanced_createモードを使用して、既存のMicrosoft SQL Server用のユーザーデータベースを作成します。ストレージ構成も含まれます。
@@ -75,97 +75,110 @@ Workload Factory for Databasesには次の機能があります。
 * *データの管理と効率化*：FSx for ONTAPは、スペース効率に優れたシンクローン、シンプロビジョニング、圧縮と重複排除、アクセス頻度の低いデータの容量プールへの階層化など、データの管理と効率化を強化する複数の機能を提供します。
 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["FSx for ONTAP for Workload Factoryの詳細"^]です。
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["ワークロードファクトリー向け FSx for ONTAPの詳細"^] 。
 
 
 
-=== Workload Factoryの動作モード
+=== ワークロードファクトリーの動作モード
 
-3つの異なる動作モード（_基本_、_読み取り専用_、_読み取り/書き込み_）により、ワークロードファクトリーの内外を問わず、柔軟な導入オプションを提供します。_ワークロードファクトリの外部で使用するコードスニペットを使用して、ゼロトラストのIN_BASIC_MODEですぐに価値を得ることができます。読み取り専用_モードと_読み取り/書き込み_モードでは、信頼性を段階的に高めることで、付加価値を高めることができます。
+3 つの異なる動作モード (_基本_、_読み取り専用_、_読み取り/書き込み_) により、Workload Factory の内外での展開に柔軟なオプションが提供されます。Workload Factory の外部で使用するためのコード スニペットを使用して、_基本_ モードでゼロ トラストの価値をすぐに得ることができます。_読み取り専用_ モードと _読み取り/書き込み_ モードで増分信頼を使用して増分値を取得します。
 
-詳細については、をご覧ください link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Workload Factoryの動作モード"^]。
-
-
-
-== ワークロードファクトリを使用するためのツール
-
-BlueXP  ワークロード工場では、次のツールを使用できます。
-
-* *ワークロードファクトリコンソール*:ワークロードファクトリコンソールは、アプリケーションとプロジェクトの視覚的で包括的なビューを提供します。
-* * BlueXP  コンソール*：BlueXP  コンソールはハイブリッドインターフェイスを提供するため、BlueXP  ワークロードファクトリを他のBlueXP  サービスと一緒に使用できます。
-* *確認*：AIアシスタント「Ask me」を使用すると、Workload FactoryのWeb UIから離れることなく、Workload Factoryについて質問したり、詳細を確認したりできます。[Workload Factory Help]メニューから[Ask me]にアクセスします。
-* * CloudShell CLI *：ワークロードファクトリには、1つのブラウザベースのCLIからアカウント間でAWSおよびNetApp環境を管理および運用するためのCloudShell CLIが含まれています。Workload FactoryコンソールのトップバーからCloudShellにアクセスします。
-* * REST API *：ワークロードファクトリREST APIを使用して、FSx for ONTAPファイルシステムやその他のAWSリソースを導入、管理します。
-* * CloudFormation *：AWS CloudFormationコードを使用して、ワークロードファクトリコンソールで定義したアクションを実行し、AWSアカウントのCloudFormationスタックからAWSおよびサードパーティリソースをモデル化、プロビジョニング、管理します。
-* *Terraform BlueXP  ワークロードファクトリプロバイダ*: Terraformを使用して、ワークロードファクトリコンソールで生成されるインフラワークフローを構築および管理します。
+詳細はこちらlink:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["ワークロードファクトリーの動作モード"^] 。
 
 
 
+== NetApp Workload Factory を使用するためのツール
 
-== 導入の詳細
+NetApp Workload Factory は次のツールで使用できます。
+
+* *Workload Factory コンソール*: Workload Factory コンソールは、アプリケーションとプロジェクトの視覚的かつ全体的なビューを提供します。
+* * NetAppコンソール*: NetAppコンソールはハイブリッド インターフェイス エクスペリエンスを提供するため、Workload Factory を他のNetAppデータ サービスと一緒に使用できます。
+* *質問する*: Ask me AI アシスタントを使用すると、Workload Factory コンソールを離れることなく、質問したり、Workload Factory について詳しく知ることができます。Workload Factory のヘルプ メニューから「Ask me」にアクセスします。
+* *CloudShell CLI*: Workload Factory には、単一のブラウザベースの CLI からアカウント全体の AWS およびNetApp環境を管理および操作するための CloudShell CLI が含まれています。Workload Factory コンソールの上部バーから CloudShell にアクセスします。
+* *REST API*: Workload Factory REST API を使用して、FSx for ONTAPファイルシステムやその他の AWS リソースをデプロイおよび管理します。
+* *CloudFormation*: AWS CloudFormation コードを使用して、Workload Factory コンソールで定義したアクションを実行し、AWS アカウントの CloudFormation スタックから AWS およびサードパーティのリソースをモデル化、プロビジョニング、管理します。
+* *Terraform NetApp Workload Factory プロバイダー*: Terraform を使用して、Workload Factory コンソールで生成されたインフラストラクチャ ワークフローを構築および管理します。
 
 
 
-=== サポートされる構成
 
-Microsoft SQL Serverのワークロード工場では、AWS、NetApp ONTAP、SQL Serverのベストプラクティスに従って、高可用性（Always Onフェイルオーバークラスタインスタンス）とシングルインスタンス環境の両方がサポートされています。
+== サポートされる構成
 
-[cols="2a,2a,2a,2a"]
+Workload Factory は、AWS、 NetApp ONTAP、Microsoft SQL Server、Oracle、PostgreSQL のベストプラクティスに従って、次のデータベース エンジン、バージョン、オペレーティング システム、およびデプロイメント モデルをサポートしています。
+
+[cols="1,1,1,1"]
 |===
-| SQL Serverのバージョン | Windows Server 2016 | Windows Server 2019 | Windows Server 2022 
+| エンジン | version | オペレーティング システム | 展開モデル 
 
 
- a| 
-SQL Server 2016
- a| 
-はい
- a| 
-はい
- a| 
-いいえ
+| Microsoft SQL Server | SQL Server 2016 | Windows Server 2016 | FCI、単一インスタンス 
 
 
-
- a| 
-SQL Server 2019
- a| 
-はい
- a| 
-はい
- a| 
-はい
+| Microsoft SQL Server | SQL Server 2019 | Windows Server 2016 | FCI、単一インスタンス 
 
 
+| Microsoft SQL Server | SQL Server 2022 | Windows Server 2016 | FCI、単一インスタンス 
 
- a| 
-SQL Server 2022
- a| 
-いいえ
- a| 
-はい
- a| 
-はい
 
+| Microsoft SQL Server | SQL Server 2016 | Windows Server 2019 | FCI、単一インスタンス 
+
+
+| Microsoft SQL Server | SQL Server 2019 | Windows Server 2019 | FCI、単一インスタンス 
+
+
+| Microsoft SQL Server | SQL Server 2022 | Windows Server 2019 | FCI、単一インスタンス 
+
+
+| Microsoft SQL Server | SQL Server 2016 | Windows Server 2022 | FCI、単一インスタンス 
+
+
+| Microsoft SQL Server | SQL Server 2019 | Windows Server 2022 | FCI、単一インスタンス 
+
+
+| Microsoft SQL Server | SQL Server 2022 | Windows Server 2022 | FCI、単一インスタンス 
+
+
+| Microsoft SQL Server | SQL Server 2017 | any | FCI、単一インスタンス 
+
+
+| Microsoft SQL Server | SQL Server 2016、2017、2019、2022 | any | FCI、単一インスタンス 
+
+
+| Microsoft SQL Server | SQL Server 2016、2019、2022 | any | Always On可用性グループ 
+
+
+| Oracle | 19世紀 | RHEL、SuSe Linux | スタンドアロン（シングル/マルチテナント） 
+
+
+| Oracle | 21c | RHEL、SuSe Linux | スタンドアロン（シングル/マルチテナント） 
+
+
+| Oracle | 19世紀 | RHEL、SuSe Linux | スタンドアロン（シングル/マルチテナント） 
+
+
+| Oracle | 21c | RHEL、SuSe Linux | スタンドアロン（シングル/マルチテナント） 
+
+
+| Oracle | 19世紀 | RHEL、SuSe Linux | ASM を使用したスタンドアロン (シングル/マルチテナント) 
+
+
+| Oracle | 21c | RHEL、SuSe Linux | ASM を使用したスタンドアロン (シングル/マルチテナント) 
+
+
+| Oracle | 19世紀 | RHEL、SuSe Linux | データガード 
+
+
+| Oracle | 21c | RHEL、SuSe Linux | データガード 
+
+
+| PostgreSQL | PostgreSQL 15 | Amazon Linux 2023 AMI | HA、スタンドアロンインスタンス 
+
+
+| PostgreSQL | PostgreSQL 16 | Amazon Linux 2023 AMI | HA、スタンドアロンインスタンス 
 |===
 
 
-=== 導入アーキテクチャ
-
-データベースでは、単一のアベイラビリティゾーンおよび複数のアベイラビリティゾーン配置アーキテクチャがサポートされます。
-
-.単一のアベイラビリティゾーン
-次の図は、単一のリージョンに単一のアベイラビリティゾーンがあるスタンドアロンアーキテクチャを示しています。
-
-image:diagram-SAZ-database-architecture.png["単一のリージョンにAmazon FSx for NetApp ONTAPを単一のアベイラビリティゾーンで導入するスタンドアロンアーキテクチャの図"]
-
-.複数のアベイラビリティゾーン
-次の図は、単一のリージョンにフェイルオーバークラスタインスタンス（FCI）クラスタを含む2ノードのハイアベイラビリティ（HA）アーキテクチャを示しています。
-
-image:diagram-MAZ-database-architecture.png["1つのリージョンにフェイルオーバークラスタインスタンスクラスタを含む2ノードの高可用性アーキテクチャの図"]
-
-
-
-=== AWS統合サービス
+== AWS統合サービス
 
 データベースには、次のAWS統合サービスが含まれています。
 
@@ -178,7 +191,7 @@ image:diagram-MAZ-database-architecture.png["1つのリージョンにフェイ�
 
 
 
-=== サポートされている地域
+== 地域
 
 データベースは、FSx for ONTAPがサポートされるすべての商用リージョンでサポートされます。 https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["サポート対象の Amazon リージョンを表示します。"^]
 
@@ -196,4 +209,4 @@ image:diagram-MAZ-database-architecture.png["1つのリージョンにフェイ�
 
 Amazon FSx for NetApp ONTAP は、AWSファーストパーティの解決策 です。FSx for ONTAPファイルシステム、インフラ、または本サービスを使用する解決策に関する質問やテクニカルサポートの問題については、AWS管理コンソールのサポートセンターを使用してAWSに対するサポートケースをオープンしてください。「 FSX for ONTAP 」サービスと該当するカテゴリを選択します。AWS サポートケースの作成に必要な残りの情報を指定します。
 
-ワークロードファクトリまたはワークロードファクトリのアプリケーションとサービスに関する一般的な質問については、を参照してくださいlink:get-help.html["BlueXP  Workload Factory for Databasesのヘルプ"]。
+Workload FactoryまたはWorkload Factoryアプリケーションとサービスに関する一般的な質問については、以下を参照してください。link:get-help.html["NetApp Workload Factory for Databases のヘルプを入手する"] 。

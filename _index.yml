@@ -1,7 +1,8 @@
 ---
 indexpage:
-  title: データベースに関するドキュメント用のBlueXP  ワークロードファクトリ
-  lead: BlueXP  ワークロード工場にあるFSx for ONTAPファイルシステムストレージ上にMicrosoft SQL Server構成を導入し、データベース環境を管理します。
+  title: NetApp Workload Factory for Databases のドキュメント
+  lead: NetApp Workload Factory の FSx for ONTAPファイル システム ストレージ上で Microsoft SQL Server
+    構成を展開し、データベース環境を管理します。
   tiles:
   - title: はじめに
     links:
@@ -31,9 +32,9 @@ indexpage:
       url: "/get-help.html"
   - title: ブログとコミュニティ
     links:
+    - title: NetAppコンソール
+      url: https://www.netapp.com/console
+    - title: NetAppデータサービス
+      url: https://www.netapp.com/data-services/
     - title: NetAppコミュニティ
-      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
-    - title: BlueXPのブログ
-      url: https://bluexp.netapp.com/blog
-    - title: クラウドに関する Web セミナー
-      url: https://bluexp.netapp.com/events
+      url: https://community.netapp.com/

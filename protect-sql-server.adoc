@@ -11,63 +11,64 @@ summary: Microsoft SQL Server インスタンスとデータベースを保護�
 
 
 [role="lead"]
-ワークロード ファクトリー コンソールからBlueXP backup and recoveryを使用して、Microsoft SQL Server アプリケーション データを保護します。この統合により、ローカルプライマリAmazon FSx for NetApp ONTAP (FSx for ONTAP) ストレージ上のローカルスナップショットを使用してワークロードをバックアップし、セカンダリ FSx for ONTAPストレージにワークロードを複製するという保護目標を達成できます。
+Workload Factory コンソールからNetApp Backup and Recovery を使用して、Microsoft SQL Server アプリケーション データを保護します。この統合により、ローカルプライマリAmazon FSx for NetApp ONTAP (FSx for ONTAP) ストレージ上のローカルスナップショットを使用してワークロードをバックアップし、セカンダリ FSx for ONTAPストレージにワークロードを複製するという保護目標を達成できます。
 
 
 
 == タスクの内容
 
-ワークロード ファクトリーは、リソースの検出、前提条件の検証、Microsoft SQL Server 用プラグインの構成とインストールを自動化し、 BlueXP backup and recoveryを使用してワークロードを保護するための準備を行います。このプラグインは、Microsoft SQL Server のワークロードを保護できるNetAppソフトウェアのホスト側コンポーネントです。
+Workload Factory は、リソースの検出、前提条件の検証、Microsoft SQL Server 用プラグインの構成とインストールを自動化し、 NetApp Backup and Recovery によるワークロードの保護を準備します。このプラグインは、Microsoft SQL Server のワークロードを保護できるNetAppソフトウェアのホスト側コンポーネントです。
 
-BlueXP backup and recoveryは、 NetApp SnapMirrorデータ レプリケーション テクノロジーを活用して、スナップショット コピーを作成し、それをバックアップ場所に転送することで、すべてのバックアップが完全に同期されるようにします。
+NetApp Backup and Recovery は、 NetApp SnapMirrorデータ レプリケーション テクノロジーを活用して、スナップショット コピーを作成し、それをバックアップの場所に転送することで、すべてのバックアップが完全に同期されるようにします。
 
-BlueXP backup and recoveryによる保護の詳細については、link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html["BlueXP backup and recoveryによる Microsoft SQL ワークロードの保護の概要"^] 。
+バックアップとリカバリによる保護の詳細については、link:https://docs.netapp.com/us-en/console-backup-recovery/br-use-mssql-protect-overview.html["バックアップとリカバリによる Microsoft SQL ワークロードの保護の概要"^] 。
 
 
 
 == 開始する前に
 
-BlueXP backup and recoveryを使用して Microsoft SQL Server ワークロードを保護するには、次の要件を満たす必要があります。
+バックアップとリカバリを使用して Microsoft SQL Server ワークロードを保護するには、次の要件を満たす必要があります。
 
-* 環境がlink:https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements["BlueXP backup and recoverySQL Serverの要件"^]。
-* link:https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-start-prereq.html#in-bluexp["BlueXPの要件を完了する"^]BlueXP、IAM ロール、 BlueXPコネクタの設定が含まれます。
-+
-BlueXPアカウントの組織管理者アクセス権を持っている場合は、 `backup and recovery super admin`役割は自動的に割り当てられます<<BlueXP backup and recoveryで保護を準備する,BlueXP backup and recoveryで保護を準備する>>。
+* 環境がlink:https://docs.netapp.com/us-en/console-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements["バックアップとリカバリのSQL Serverの要件"^]。
+* link:https://docs.netapp.com/us-en/console-backup-recovery/concept-start-prereq.html#in-netapp-console["NetAppコンソールの要件をすべて満たす"^]設定、IAM ロールの割り当て、コンソール エージェントのインストールなどが含まれます。
 
-+
-** コネクタのホスト解像度を設定する
+
+NetAppアカウントへの組織管理者アクセス権を持っている場合は、 `backup and recovery super admin`役割は自動的に割り当てられます<<NetAppバックアップとリカバリによる保護の準備,NetAppバックアップとリカバリによる保護の準備>>。
+
+* コネクタのホスト解像度を設定する
 +
 データベースを検出するには、コネクタでホスト解決を設定する必要があります。ホストデバイスで、IPアドレスとホスト名のマッピングを `/etc/hosts`ファイル。
 
++
+** link:https://docs.netapp.com/us-en/console-backup-recovery/br-start-licensing.html["NetAppバックアップおよびリカバリのライセンスを設定する"^]
 
 
-* link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html["BlueXP backup and recoveryのライセンスを設定する"^]
 
 
 
 
-== BlueXP backup and recoveryで保護を準備する
+== NetAppバックアップとリカバリによる保護の準備
 
-BlueXP backup and recoveryを使用して Microsoft SQL Server リソースを保護するための準備プロセスを完了します。
+NetApp Backup and Recovery を使用して Microsoft SQL Server リソースを保護するための準備プロセスを完了します。
 
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
-. [データベース]で、*[インベントリ]*タブを選択します。
-. *エンジン タイプ* を *Microsoft SQL Server* にフィルターします。
-. 保護するインスタンスのメニューから*保護*を選択します。
+. データベース メニューから、*インベントリ* を選択します。
+. インベントリで、エンジンの種類として *Microsoft SQL Server* を選択します。
+. 保護するインスタンスを見つけて、メニューから [保護] を選択します。
 . プロンプトが表示されたら、管理者アクセス権を持つ Windows 資格情報を入力します。
 +
-保護のためにBlueXP backup and recoveryを使用するには、SQL Server インスタンスを Windows 資格情報を使用してワークロード ファクトリに登録する必要があります。
+保護のためにNetApp Backup and Recovery を使用するには、SQL Server インスタンスを Windows 資格情報を使用して Workload Factory に登録する必要があります。
 
-. 複数のコネクタがアクティブで利用可能な場合は、ワークロードを登録して保護する *コネクタ* を選択します。
-. データ保護を準備するために、ワークロード ファクトリーは SQL Server リソースを BlueXP backup and recoveryに自動的に登録し、Microsoft SQL Server 用プラグインを構成およびインストールし、SQL Server インスタンスを保護するための前提条件を満たすリソースを検出します。プロセスを開始するには、[*開始*] を選択します。
-. 前提条件を満たしたら、[*リダイレクト*] を選択してBlueXP backup and recoveryにアクセスします。
+. 複数のコンソール エージェントがアクティブで利用可能な場合は、ワークロードを登録して保護する *コンソール エージェント* を選択します。
+. データ保護の準備として、Workload Factory は、Backup and Recovery に SQL Server リソースを自動的に登録し、Microsoft SQL Server 用プラグインを構成およびインストールし、SQL Server インスタンスを保護するための前提条件を満たすリソースを検出します。プロセスを開始するには、[*開始*] を選択します。
+. 前提条件を満たしたら、[*リダイレクト*] を選択してバックアップとリカバリにアクセスします。
 
 
 .次のステップ
-BlueXP backup and recoveryから、Microsoft SQL Server インスタンスとデータベースを保護するためのポリシーを作成します。
+バックアップとリカバリから、Microsoft SQL Server インスタンスとデータベースを保護するポリシーを作成します。
 
-link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-policies-create.html["Microsoft SQL Server インスタンスとデータベースを保護するためのポリシーを作成する方法を学びます"^] 。
+link:https://docs.netapp.com/us-en/console-backup-recovery/br-use-policies-create.html["Microsoft SQL Server インスタンスとデータベースを保護するためのポリシーを作成する方法を学びます"^] 。
 
-関連情報については、link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html["BlueXP backup and recoveryドキュメント"^] Microsoft SQL Server ワークロードを管理します。
+関連情報については、link:https://docs.netapp.com/us-en/console-backup-recovery/br-use-mssql-protect-overview.html["バックアップとリカバリのドキュメント"^] Microsoft SQL Server ワークロードを管理します。

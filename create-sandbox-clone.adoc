@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-sandbox-clone.html 
 keywords: create, clone, sandbox 
-summary: BlueXP  ワークロードファクトリでデータベース用のサンドボックスクローンを作成します。 
+summary: NetApp Workload Factory for Databases でサンドボックス クローンを作成します。 
 ---
-= BlueXP  ワークロードファクトリでデータベース用のサンドボックスクローンを作成
+= NetApp Workload Factory for Databases でサンドボックス クローンを作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-BlueXP  Workload Factory for Databasesでデータベースのサンドボックスクローンを作成すると、ソースデータベースを変更することなく、そのクローンを開発、テスト、統合、分析、トレーニング、QAなどに使用できます。
+NetApp Workload Factory for Databases でデータベースのサンドボックス クローンを作成すると、ソース データベースを変更することなく、開発、テスト、統合、分析、トレーニング、QA などにクローンを使用できます。
 
 .タスクの内容
 サンドボックスクローンは、ソースデータベースの最新のSnapshotから作成されます。ソースデータベースと同じMicrosoft SQL Serverでクローニングすることも、別のMicrosoft SQL Serverでクローニングすることもできます。ただし、同じFSx for ONTAPファイルシステムを共有している必要があります。
@@ -19,15 +19,13 @@ BlueXP  Workload Factory for Databasesでデータベースのサンドボッ�
 .開始する前に
 サンドボックスクローンを作成する前に、次の前提条件を満たしていることを確認してください。
 
-クレデンシャルと権限:: ワークロードファクトリでサンドボックスクローンを作成する必要がありlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS アカウントの認証情報と _読み取り専用_ または _読み取り/書き込み_ モードの権限"^]ます。
+* *資格情報と権限*: 必要なのはlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS アカウントの認証情報と _読み取り専用_ または _読み取り/書き込み_ モードの権限"^]Workload Factory でサンドボックス クローンを作成します。
 +
---
-または、[コードボックス]を使用して部分的に完成したテンプレートをコピーするか、完成したテンプレートを作成して、REST APIを使用してワークロードファクトリの外部にサンドボックスクローンを作成できます。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Codebox自動化の詳細"^]です。
+あるいは、Codebox を使用して部分的に完了したテンプレートをコピーしたり、完了したテンプレートを作成して、REST API を使用して Workload Factory の外部でサンドボックス クローンを作成することもできます。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Codebox自動化の詳細"^] 。
 
---
-Microsoft SQL Server:: データベースで新しいサンドボックスクローンをホストするには、管理対象のMicrosoft SQL Serverがワークロードファクトリにある必要があります。
-AWSシステムマネージャ:: AWS Systems Managerを使用してMicrosoft SQLホストでユーザ権限が有効になっていることを確認します `NT Authority\SYSTEM` 。
-ソースデータベース:: クローンに使用できるソースデータベースが必要です。
+* *Microsoft SQL Server*: 新しいサンドボックス クローンをホストするには、Workload Factory for Databases に管理された Microsoft SQL Server が必要です。
+* *AWSシステムマネージャー*: `NT Authority\SYSTEM` AWS Systems Manager を介して Microsoft SQL ホストでユーザー権限が有効になります。
+* *ソース データベース*: クローンにはソース データベースが使用可能である必要があります。
 
 
 .手順
@@ -49,7 +47,7 @@ AWSシステムマネージャ:: AWS Systems Managerを使用してMicrosoft SQL
 .. *ターゲットデータベース*：サンドボックスクローンの名前を入力します。
 
 
-. *マウント*：複数のデータファイルやログファイルを含むSQLデータベースをクローニングする場合、ワークロード工場では、自動割り当てまたは定義されたドライブレターの下にあるすべてのファイルのクローンが作成されます。
+. *マウント*: 複数のデータ ファイルやログ ファイルを持つ SQL データベースのクローンを作成する場合、Workload Factory は、自動的に割り当てられた、または定義されたドライブ文字の下にあるすべてのファイルをクローンします。
 +
 次のいずれかのオプションを選択します。
 

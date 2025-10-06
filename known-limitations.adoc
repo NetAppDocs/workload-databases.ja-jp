@@ -4,20 +4,20 @@ permalink: known-limitations.html
 keywords: limitations, databases 
 summary: このリリースの製品でサポートされていない、または正しく相互運用できないプラットフォーム、デバイス、または機能については、既知の制限事項が記載されています。これらの制限事項をよく確認してください。 
 ---
-= データベース用のBlueXP  ワークロードファクトリに関する既知の制限事項
+= NetApp Workload Factory for Databases の既知の制限事項
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-このリリースの製品でサポートされていない、または正しく相互運用できないプラットフォーム、デバイス、または機能については、既知の制限事項が記載されています。これらの制限事項をよく確認してください。
+既知の制限事項では、 NetApp Workload Factory for Databases でサポートされていない、または正しく相互運用されないプラットフォーム、デバイス、または機能が特定されます。これらの制限事項をよく確認してください。
 
 
 
 == インスタンス検出のサポート
 
-ワークロード ファクトリーは、Amazon Linux オペレーティング システムでのみ実行されている PostgreSQL インスタンスと、Red Hat Enterprise Linux でのみ実行されている Oracle インスタンスの検出をサポートしています。
+Workload Factory は、Amazon Linux オペレーティング システムでのみ実行される PostgreSQL インスタンスと、Red Hat Enterprise Linux でのみ実行される Oracle インスタンスの検出をサポートしています。
 
 
 
@@ -35,13 +35,13 @@ SQLバージョンごとに、AMIイメージの最新バージョンまたは�
 * スタンドアロン展開用にイメージ内の照合セット以外の照合を選択する場合
 
 
-導入の一環として、Workload Factoryでは、複数のMicrosoft SQL ServerインスタンスでカスタムAMIをインストールすることはありません。デフォルトのMicrosoft SQL Serverインスタンスのみが選択され、導入時に構成されます。
+デプロイメントの一環として、Workload Factory は複数の Microsoft SQL Server インスタンスを含むカスタム AMI をインストールしません。展開の一部として、デフォルトの Microsoft SQL Server インスタンスのみが選択され、構成されます。
 
 
 
 == 失敗した導入環境のロールバックと再試行
 
-失敗した展開のロールバックと再試行は、ワークロードファクトリではサポートされていません。AWSのCloudFormationコンソールから、失敗したスタックをロールバックまたは再試行できます。
+失敗したデプロイメントのロールバックと再試行は、Workload Factory ではサポートされていません。  AWS の CloudFormation コンソールから失敗したスタックをロールバックまたは再試行できます。
 
 
 
@@ -60,7 +60,7 @@ AWSのCloudFormationコンソールからテストまたはデプロイに失敗
 
 == Always-On可用性グループ構成のサポート
 
-Always On可用性グループ構成の管理は、ワークロードファクトリではサポートされていません。
+Always On 可用性グループ構成の管理は、Workload Factory ではサポートされていません。
 
 
 
@@ -84,7 +84,7 @@ FSx for ONTAPのカスタム暗号化キーは、サービスの適用性に応�
 
 == Microsoft SQL Serverの検出と管理
 
-Microsoft SQL Serverの検出は保存されません。[Databases in workload factory]にアクセスするたびに、Microsoft SQL Serverの検出が再度実行され、リージョン内のSQLインストールが特定されます。
+Microsoft SQL Server の検出は保存されません。  Workload Factory のデータベースにアクセスするたびに、Microsoft SQL Server の検出が再度実行され、そのリージョン内の SQL インストールが識別されます。
 
 
 
@@ -118,7 +118,7 @@ Workload Factoryでは、複数のFSx for ONTAPファイルシステムを使用
 
 === 最適化のためのオペレーティングシステムパッチ評価
 
-最適化のために行われたオペレーティングシステムのパッチ評価は、プライベートネットワークでは機能しない場合があります。この評価には、AWS Patch Managerが使用されます。プライベートネットワークでWindows EC2インスタンスにパッチを適用する方法については、を参照してくださいlink:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["AWS Cloud Operationsブログ「How to patch Windows EC2 instances in private subnets using AWS Systems Manager」"^]。
+最適化の目的で行われるオペレーティング システム パッチ評価は、プライベート ネットワークでは機能しない可能性があります。評価は AWS Patch Manager に依存します。プライベートネットワーク内のWindows EC2インスタンスにパッチを適用する方法については、AWSクラウド運用ブログを参照してください。link:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["AWS Systems Manager を使用してプライベートサブネット内の Windows EC2 インスタンスにパッチを適用する方法"^] 。
 
 
 
@@ -131,17 +131,35 @@ Workload Factoryでは、複数のFSx for ONTAPファイルシステムを使用
 == リージョン間レプリケーションの評価
 
 * 最適化評価では、ターゲットのFSx for ONTAPファイルシステムが別のAWSアカウントにある場合、リージョン間レプリケーション（CRR）が使用されているかどうかを判断できません。
-* Workload Factoryでは、ソースFSx for ONTAPファイルシステムのCRR構成のみが評価されます。
+* Workload Factory は、ソース FSx for ONTAPファイル システムの CRR 構成のみを評価します。
 
 
 
 
-== Exploreのデータベースホスト認証による節約
+== 節約を検討する際のデータベースホスト認証
 
 権限が制限されている場合、認証が成功した後も節約の探索ページにデータが読み込まれないことがあります。
 
 
 
-== BlueXP backup and recoveryとの統合
+== NetAppバックアップおよびリカバリとの統合
 
-保護のためにBlueXPバックアップおよびリカバリにホストを追加した後、データベースの検出が失敗することがあります。
+保護のためにNetApp Backup and Recovery にホストを追加した後、データベースの検出が失敗することがあります。
+
+
+
+== 地域サポート
+
+次のAWSリージョンはサポートされません。
+
+* 中国
+* GovCloud（US）リージョン
+* シークレットクラウド
+* 極秘
+
+
+
+
+== SUSE Linux Enterprise Server 12 への Oracle の登録
+
+SUSE Linux Enterprise Server 12 に Oracle Database を登録する場合、Workload Factory は Python 依存関係をインストールしません。必要な Python バージョンを手動で設定する必要があります。  Workload Factory には最低バージョン 3.6 が必要ですが、バージョン 3.11 を推奨します。

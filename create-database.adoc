@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-database.html 
 keywords: create, database, creation, Microsoft SQL 
-summary: データベース用のBlueXP  ワークロードファクトリを備えたMicrosoft SQLデータベースを作成します。 
+summary: NetApp Workload Factory for Databases を使用して Microsoft SQL データベースを作成します。 
 ---
-= BlueXP  ワークロードファクトリでデータベース用のMicrosoft SQLデータベースを作成
+= NetApp Workload Factory for Databases で Microsoft SQL データベースを作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-新しいMicrosoft SQLデータベースを作成すると、データベースのBlueXP  ワークロードファクトリ内でリソースを管理できるようになります。
+新しい Microsoft SQL データベースを作成すると、 NetApp Workload Factory for Databases 内でリソースを管理できるようになります。
 
 .タスクの内容
 データベースを作成すると、独立したLUNで構成されるFSx for ONTAPファイルシステムに2つのボリュームが作成され、データベースのデータファイルとログファイルをホストします。新しいデータベース内のデータベースファイルはシンプロビジョニングされ、新しいデータベースに割り当てられた合計サイズのわずか数MBしか消費しません。
@@ -26,15 +26,13 @@ NOTE: SMBプロトコルを使用するMicrosoft SQL Serverでは、データベ
 .開始する前に
 新しいデータベースを作成する前に、次の前提条件を満たしていることを確認してください。
 
-クレデンシャルと権限:: ワークロードファクトリで新しいデータベースを作成する必要がありlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS アカウントの認証情報と _読み取り専用_ または _読み取り/書き込み_ モードの権限"^]ます。
+* *資格情報と権限*: 必要なのはlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS アカウントの認証情報と _読み取り専用_ または _読み取り/書き込み_ モードの権限"^]ワークロード ファクトリーに新しいデータベースを作成します。
 +
---
 または、[コードボックス]を使用してテンプレートをコピーし、REST APIを使用してワークロードファクトリの外部にデータベースを導入することもできます。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Codebox自動化の詳細"^]です。
 
---
-Windowsホスト:: _Quick create_modeを使用する場合は、新しいデータベース用の新しいドライブを作成するために、Microsoft SQL Serverに十分な数のドライブレターが必要です。
-Microsoft SQL Server:: データベースで新しいデータベースをホストするには、管理対象のMicrosoft SQL Serverがワークロードファクトリにある必要があります。
-AWSシステムマネージャ:: AWS System Managerを使用してMicrosoft SQLホストで権限が有効になっていることを確認します `NT Authority\SYSTEM user` 。
+* *Windows ホスト*: _クイック作成_ モードを使用する場合は、新しいデータベース用の新しいドライブを作成するために、Microsoft SQL Server で十分なドライブ文字が必要です。
+* *Microsoft SQL Server*: 新しいデータベースをホストするには、データベースのワークロード ファクトリに管理された Microsoft SQL Server が必要です。
+* *AWSシステムマネージャー*: `NT Authority\SYSTEM` AWS Systems Manager を介して Microsoft SQL ホストでユーザー権限が有効になります。
 
 
 
@@ -50,9 +48,10 @@ _クイック作成_ または _詳細作成_ のデプロイメント モード
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
-. [データベース]で、*[インベントリ]*タブを選択します。
-. [インベントリ]タブで、データベースを作成する管理対象SQLサーバーインスタンスを持つデータベースサーバーを選択します。
-. 管理対象インスタンスの 3 つのドット メニューをクリックし、*ユーザー データベースの作成* を選択します。
+. データベース メニューから、*インベントリ* を選択します。
+. インベントリで、データベース エンジンの種類として *Microsoft SQL Server* を選択します。
+. データベースを作成するための、管理された SQL サーバー インスタンスを持つデータベース サーバーを選択します。
+. マネージドインスタンスのアクション メニューをクリックし、*ユーザー データベースの作成*を選択します。
 . [Create user database]ページの[Database information]で、次の情報を指定します。
 +
 .. *データベース名*：データベースの名前を入力します。
@@ -83,9 +82,10 @@ _クイック作成_ または _詳細作成_ のデプロイメント モード
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
 . [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
-. [データベース]で、*[インベントリ]*タブを選択します。
-. [インベントリ]タブで、データベースを作成する管理対象SQLサーバーインスタンスを持つデータベースサーバーを選択します。
-. 管理対象インスタンスの3ドットのメニューをクリックし、* Create user database *を選択します。
+. データベース メニューから、*インベントリ* を選択します。
+. インベントリで、データベース エンジンの種類として *Microsoft SQL Server* を選択します。
+. データベースを作成するための、管理された SQL サーバー インスタンスを持つデータベース サーバーを選択します。
+. マネージドインスタンスのアクション メニューをクリックし、*ユーザー データベースの作成*を選択します。
 . [ユーザーデータベースの作成]*を選択します。
 . [Create user database]ページの[Database information]で、次の情報を指定します。
 +
