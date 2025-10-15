@@ -1224,16 +1224,12 @@
   <block id="bb1b704677e0a9ac00a2bda88f85fe27" category="paragraph">Workload Factory は、リソースの検出、前提条件の検証、Microsoft SQL Server 用プラグインの構成とインストールを自動化し、 NetApp Backup and Recovery によるワークロードの保護を準備します。このプラグインは、Microsoft SQL Server のワークロードを保護できるNetAppソフトウェアのホスト側コンポーネントです。</block>
   <block id="e9575ae90b7ec054c43a9797544d0103" category="paragraph">NetApp Backup and Recovery は、 NetApp SnapMirrorデータ レプリケーション テクノロジーを活用して、スナップショット コピーを作成し、それをバックアップの場所に転送することで、すべてのバックアップが完全に同期されるようにします。</block>
   <block id="51c9172cf36fbb00094cffedddeabb88" category="inline-link-macro">バックアップとリカバリによる Microsoft SQL ワークロードの保護の概要</block>
-  <block id="a292d9789e1a8310e21f5a8a602daa0f" category="paragraph">バックアップとリカバリによる保護の詳細については、<block ref="85948b58ef5177befb6ab29aca8b19b5" category="inline-link-macro-rx"></block> 。</block>
   <block id="ce8e733ff697d3370377249dbc3ffd6d" category="paragraph">バックアップとリカバリを使用して Microsoft SQL Server ワークロードを保護するには、次の要件を満たす必要があります。</block>
   <block id="e3f8bb97f8af8ab70be96564f7d02f6f" category="inline-link-macro">バックアップとリカバリのSQL Serverの要件</block>
-  <block id="e08bd5423f9a375d5cb1f9f4c8b79db6" category="list-text">環境が<block ref="e98bf21ac036414aba6dc78dc64aa41b" category="inline-link-macro-rx"></block>。</block>
   <block id="c9fac6b51e56e1759975cd42fd695b0b" category="inline-link-macro">NetAppコンソールの要件をすべて満たす</block>
-  <block id="7f9a133b28a3d76a5c8f832f834cc204" category="list-text"><block ref="8acd0ec71994a25eb6e3e3ae982731d3" category="inline-link-macro-rx"></block>設定、IAM ロールの割り当て、コンソール エージェントのインストールなどが含まれます。</block>
   <block id="6c10f0d7d75df4253299ebf279f9f52e" category="inline-xref">NetAppバックアップとリカバリによる保護の準備</block>
   <block id="b807a81f390179f97e9c142515fa129d" category="paragraph">NetAppアカウントへの組織管理者アクセス権を持っている場合は、<block ref="d431b2247c053b79ca08cc138d1dc11a" prefix=" " category="inline-code"></block>役割は自動的に割り当てられます<block ref="18ec113fe3fddf3d32c25f017ae9116b" category="inline-xref-macro-rx"></block>。</block>
   <block id="50913c9499a96938febd19de9c1bf895" category="inline-link-macro">NetAppバックアップおよびリカバリのライセンスを設定する</block>
-  <block id="52a63c60e4cc1cb7e13a179287a93716" category="list-text"><block ref="52a63c60e4cc1cb7e13a179287a93716" category="inline-link-macro-rx"></block></block>
   <block id="45c35d83e41e395f7c62d7b77450c660" category="section-title">NetAppバックアップとリカバリによる保護の準備</block>
   <block id="de18c48772737ff03e5d5c7e6db0044c" category="paragraph">NetApp Backup and Recovery を使用して Microsoft SQL Server リソースを保護するための準備プロセスを完了します。</block>
   <block id="00151bd722bf3fd83e9173ec473238da" category="list-text">インベントリで、エンジンの種類として *Microsoft SQL Server* を選択します。</block>
@@ -1243,9 +1239,7 @@
   <block id="1f6bfa37836a1e9968d5ea7593e0629b" category="list-text">データ保護の準備として、Workload Factory は、Backup and Recovery に SQL Server リソースを自動的に登録し、Microsoft SQL Server 用プラグインを構成およびインストールし、SQL Server インスタンスを保護するための前提条件を満たすリソースを検出します。プロセスを開始するには、[*開始*] を選択します。</block>
   <block id="8b48bc7f871383eb926099b2126e0377" category="list-text">前提条件を満たしたら、[*リダイレクト*] を選択してバックアップとリカバリにアクセスします。</block>
   <block id="0a34414f3db7a7d22b890f0de8eb8225" category="paragraph">バックアップとリカバリから、Microsoft SQL Server インスタンスとデータベースを保護するポリシーを作成します。</block>
-  <block id="429cd6f061edda5c69ca25c65e8ea236" category="paragraph"><block ref="1712bcf9c278b15383d89f55649b8558" category="inline-link-macro-rx"></block> 。</block>
   <block id="a34428791f8c5ce4b1184d505db69402" category="inline-link-macro">バックアップとリカバリのドキュメント</block>
-  <block id="466ae7236a1ef5fce9dae7319a9d7e2f" category="paragraph">関連情報については、<block ref="708964af478ed2d68a5d28b41ebeb257" category="inline-link-macro-rx"></block> Microsoft SQL Server ワークロードを管理します。</block>
   <block id="d05a91a23b39b2ef83c7f917a0c9c7e5" category="summary">NetApp Workload Factory for Databases を使い始めると、Infrastructure-as-Code スニペットの使用、ホストの検出、リソースの管理などが可能になります。</block>
   <block id="91494b330cfa4716e9d4103109705d0c" category="doc">NetApp Workload Factory for Databases のクイック スタート</block>
   <block id="0680daa6368db6612af2c2ea36617ecc" category="paragraph">NetApp Workload Factory for Databases を使用すると、_基本_ モードですぐに開始できます。  Workload Factory を使用してホストの検出、リソースの管理などを行う場合は、数ステップで開始できます。</block>
@@ -1299,4 +1293,10 @@
   <block id="3c031b939f6ec312ee601d021e7a6644" category="sidebar">NetAppコンソール</block>
   <block id="cc58d3a9b2264c4fd8cb1d3f61b90bdc" category="sidebar">NetAppデータサービス</block>
   <block id="da799d994391b08e1d7460381c98559f" category="sidebar">データベース向けワークロードファクトリーについて学ぶ</block>
+  <block id="b932f0cf95f538a8c687f905809c4de8" category="paragraph">バックアップとリカバリによる保護の詳細については、 <block ref="aefe430dd4ebf4bd80cdc056d521c135" category="inline-link-macro-rx"></block>。</block>
+  <block id="1a60f402f44b25587846bc52b43a5256" category="list-text">環境が以下の要件を満たしていることを確認してください <block ref="e28e35d1fa3b60445b98139b282e0fe6" category="inline-link-macro-rx"></block>。</block>
+  <block id="b840c4396ce722a09c18899a4424775c" category="list-text"><block ref="3a4019be669eb0d9a01f9ed45fbe9c1e" category="inline-link-macro-rx"></block> 設定、IAM ロールの割り当て、コンソール エージェントのインストールなどが含まれます。</block>
+  <block id="1cad8c414706b5bcb0b45db25ebf8cb8" category="list-text"><block ref="1cad8c414706b5bcb0b45db25ebf8cb8" category="inline-link-macro-rx"></block></block>
+  <block id="8cddfd1e7d348910ccb9f33f1875227b" category="paragraph"><block ref="f04d9a72ed4e336f6d3f26aa1ae4191f" category="inline-link-macro-rx"></block>。</block>
+  <block id="99a41b50ffc589da72247d73d9ef02ed" category="paragraph">関連情報については、 <block ref="dc3edb02c7b9b729d8ce33699dc1f607" category="inline-link-macro-rx"></block> Microsoft SQL Server のワークロードを管理します。</block>
 </blocks>

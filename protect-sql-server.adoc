@@ -21,7 +21,7 @@ Workload Factory は、リソースの検出、前提条件の検証、Microsoft
 
 NetApp Backup and Recovery は、 NetApp SnapMirrorデータ レプリケーション テクノロジーを活用して、スナップショット コピーを作成し、それをバックアップの場所に転送することで、すべてのバックアップが完全に同期されるようにします。
 
-バックアップとリカバリによる保護の詳細については、link:https://docs.netapp.com/us-en/console-backup-recovery/br-use-mssql-protect-overview.html["バックアップとリカバリによる Microsoft SQL ワークロードの保護の概要"^] 。
+バックアップとリカバリによる保護の詳細については、 link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html["バックアップとリカバリによる Microsoft SQL ワークロードの保護の概要"^]。
 
 
 
@@ -29,8 +29,8 @@ NetApp Backup and Recovery は、 NetApp SnapMirrorデータ レプリケーシ�
 
 バックアップとリカバリを使用して Microsoft SQL Server ワークロードを保護するには、次の要件を満たす必要があります。
 
-* 環境がlink:https://docs.netapp.com/us-en/console-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements["バックアップとリカバリのSQL Serverの要件"^]。
-* link:https://docs.netapp.com/us-en/console-backup-recovery/concept-start-prereq.html#in-netapp-console["NetAppコンソールの要件をすべて満たす"^]設定、IAM ロールの割り当て、コンソール エージェントのインストールなどが含まれます。
+* 環境が以下の要件を満たしていることを確認してください link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements["バックアップとリカバリのSQL Serverの要件"^]。
+* link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#in-netapp-console["NetAppコンソールの要件をすべて満たす"^] 設定、IAM ロールの割り当て、コンソール エージェントのインストールなどが含まれます。
 
 
 NetAppアカウントへの組織管理者アクセス権を持っている場合は、 `backup and recovery super admin`役割は自動的に割り当てられます<<NetAppバックアップとリカバリによる保護の準備,NetAppバックアップとリカバリによる保護の準備>>。
@@ -40,7 +40,7 @@ NetAppアカウントへの組織管理者アクセス権を持っている場�
 データベースを検出するには、コネクタでホスト解決を設定する必要があります。ホストデバイスで、IPアドレスとホスト名のマッピングを `/etc/hosts`ファイル。
 
 +
-** link:https://docs.netapp.com/us-en/console-backup-recovery/br-start-licensing.html["NetAppバックアップおよびリカバリのライセンスを設定する"^]
+** link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html["NetAppバックアップおよびリカバリのライセンスを設定する"^]
 
 
 
@@ -69,6 +69,6 @@ NetApp Backup and Recovery を使用して Microsoft SQL Server リソースを�
 .次のステップ
 バックアップとリカバリから、Microsoft SQL Server インスタンスとデータベースを保護するポリシーを作成します。
 
-link:https://docs.netapp.com/us-en/console-backup-recovery/br-use-policies-create.html["Microsoft SQL Server インスタンスとデータベースを保護するためのポリシーを作成する方法を学びます"^] 。
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies-create.html["Microsoft SQL Server インスタンスとデータベースを保護するためのポリシーを作成する方法を学びます"^]。
 
-関連情報については、link:https://docs.netapp.com/us-en/console-backup-recovery/br-use-mssql-protect-overview.html["バックアップとリカバリのドキュメント"^] Microsoft SQL Server ワークロードを管理します。
+関連情報については、 link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html["バックアップとリカバリのドキュメント"^] Microsoft SQL Server のワークロードを管理します。
