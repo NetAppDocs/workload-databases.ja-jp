@@ -749,14 +749,7 @@
   <block id="ebc3bf5de769bc75ad8e36a90a0ed695" category="list-text">日常的な構成分析</block>
   <block id="fc34f37e0124ad3486b3476b4c3bf8ba" category="section-title">適切に設計されたステータス</block>
   <block id="a64cfe5c8ae4b3445ff288e9acf4b12e" category="list-text">適切に設計されたスコア</block>
-  <block id="3ae4c18410c2fa4fdf19fa3a943ef362" category="list-text">スコアには現在分析されているすべての構成が含まれ、パーセンテージで表示されます。25%のスコアは、25%のファイルシステム構成が適切に設計されていることを意味します。</block>
   <block id="a4394e01049a42d14bd6258585de98b7" category="list-text">構成のカテゴリ</block>
-  <block id="d24dfe9869a3af3c94d86b476bc18a3d" category="list-text">ファイルシステム構成は、AWS Well-Architected Frameworkの次の5つの柱に沿ったカテゴリに分類されています。</block>
-  <block id="b88f659b2eb7813471f331b19c9d7f02" category="list-text">_信頼性_：システムが停止した場合でも、ワークロードが意図した機能を正しく一貫して実行するようにします。構成例としては、FSx for ONTAPのバックアップがあります。</block>
-  <block id="6a940b53f011e22baccafe058e7df66e" category="list-text">_セキュリティ_：リスク評価とリスク軽減戦略を通じて、データ、システム、資産を保護することに重点を置いています。</block>
-  <block id="d5f464c28ed994054fe98db4934a7da1" category="list-text">_優れた運用性_：最適なアーキテクチャとビジネスバリューを提供することに重点を置いています。</block>
-  <block id="03be89b5f488a61c9b35832aa58745c1" category="list-text">_コスト最適化_：コストを最小限に抑えながらビジネス価値を提供することを目指しています。</block>
-  <block id="49c47aadfeff1e01313108c157d381b4" category="list-text">_パフォーマンス効率_：リソースを効率的に使用してシステム要件を満たし、需要の変化に応じて最適なパフォーマンスを維持することに重点を置いています。</block>
   <block id="8b75b787538a5ee0eb97dc541694c82a" category="list-text">分析範囲</block>
   <block id="3f6f8b4e204fd3aa39cac35661de164d" category="section-title">分析要件</block>
   <block id="4eadd345921a1f4292d9b98892d3b84e" category="inline-link-macro">適切に設計されたデータベース構成を実装する</block>
@@ -896,7 +889,6 @@
   <block id="e13a1019f98bb51abab8e23f9bf0c5c2" category="list-text">EC2インスタンスプロファイルロールの権限</block>
   <block id="51338cb33c95537fe95c754fca16bf96" category="list-text">ワークロード データベース管理 (wlmdb) に関連付けられた資格情報</block>
   <block id="88c29fe90401d537c3fb507300ab6c20" category="paragraph">スキャン後、コンソールにエラーが表示され、スマート エラー ログ アナライザーによって検出された問題の包括的なビューが提供されます。</block>
-  <block id="1bdd4c6f4051ac693645d05ee75e84ec" category="list-text">フィルターを使用して、重大度、期間、エラー コードなどの基準に基づいて、表示されるエラーを絞り込みます。</block>
   <block id="d57a30f2af1e68603bcbf4d88ae44c7f" category="list-text">元のエラー メッセージ、AI ベースの説明、エラーを解決するための推奨される修復手順など、詳細なエラー情報を確認します。</block>
   <block id="ada60b484b7d2e3edafc98754146c7c3" category="paragraph">リソースを再度登録することができます。</block>
   <block id="605deef06e1372beea22ad9cd2be1a6a" category="inline-link-macro">リソースを登録する</block>
@@ -969,7 +961,6 @@
   <block id="24373c35884bc6090ef23efe0b026c1e" category="paragraph"><block ref="24373c35884bc6090ef23efe0b026c1e" category="inline-link-macro-rx"></block></block>
   <block id="d90600b832876e9302411cfab905b9bc" category="section-title">データベースインベントリの強化</block>
   <block id="3772c3dfbcdf91deef3f77333da3ced1" category="paragraph">データベース インベントリのインスタンス画面では、Microsoft SQL Server の単一または複数のインスタンス、あるいは Oracle の単一または複数のデータベースに対して、構成の問題を修正、延期、および破棄するオプションが利用できます。</block>
-  <block id="945d9800b1b25a8b224232b57dabb8a6" category="section-title">Amazon Elastic Block Store (EBS) のストレージ計算ツールで節約を最適化</block>
   <block id="b051b129322b1fa228bb46d5704f8ad2" category="paragraph">Workload Factory は、EBS パフォーマンスの使用状況を分析し、最適かつ最もコスト効率の高い FSx for ONTAP構成を提案します。これにより、FSx for ONTAPに切り替えることで、より多くのコストを節約できます。</block>
   <block id="75851f48043c7a3877391f5330fb19c1" category="inline-link-macro">Workload Factory コンソールで検出されたストレージ環境の節約を調べる</block>
   <block id="a0766b901d28d8d972d369d556ae3e10" category="paragraph"><block ref="a0766b901d28d8d972d369d556ae3e10" category="inline-link-macro-rx"></block></block>
@@ -1197,7 +1188,6 @@
   <block id="15ff0edfa22106f59b2d6897f5c93ff7" category="paragraph">Workload Factory コンソール内のデータベース インベントリから、構成の問題に関する推奨事項を確認し、それらの問題を修正するオプションがあります。</block>
   <block id="61ee1dd5e668df870f53e81aa15e3813" category="paragraph">Workload Factory は、次の構成の well-architected ステータスを分析します。</block>
   <block id="b8995cc72a69581d30a1bda023cdd963" category="list-text">クローン: Workload Factory 内または外で作成され、60 日以上経過したクローン (サンドボックス) を更新および削除するオプションが含まれます。</block>
-  <block id="aaab95005352513769753dbb1a879086" category="list-text">ストレージ構成: 容量管理、シン プロビジョニング、階層化ポリシー、スナップショット、ストレージ効率、および Microsoft マルチパス I/O (MPIO) のステータスと設定を含む、自動ストレージ管理 (ASM) の有無にかかわらず iSCSI を使用した展開のオペレーティング システム構成が含まれます。</block>
   <block id="7ad2228e24b645ace87b19a4d0e1ea84" category="list-text">ストレージレイアウト: REDOログの配置、一時表領域の配置、データファイルの配置、アーカイブログの配置、制御ファイルの配置とバイナリの配置、ASMディスクグループのLUN数が含まれます。</block>
   <block id="d8e924feff88175a3a6e329d7a242ef9" category="list-text">Microsoft SQL Server インスタンスまたは Oracle データベースのストレージを評価するには、リソースを Workload Factory に登録し、ストレージ タイプを FSx for ONTAPにする必要があります。<block ref="aed8a618f1e8a1dc325945b821521d6c" category="inline-link-macro-rx"></block></block>
   <block id="bf2b2769ceeef90639022670d2ded3af" category="list-text">*インベントリ*で、エンジンの種類（Microsoft SQL Server または Oracle）を選択します。</block>
@@ -1219,7 +1209,6 @@
   <block id="7c6a7786a083c7d074bada76f0bcd33b" category="summary">Workload Factory for Databases は、Microsoft SQL Server および Oracle の構成を定期的に分析して、問題があるかどうかを判断します。</block>
   <block id="8317ffd1a53e5d269aaac07d321b8dd0" category="doc">Workload Factory におけるデータベース環境の構成分析</block>
   <block id="1725276922bab9d023ef938d5fce0d7c" category="paragraph">Workload Factory for Databases は、データベース構成を定期的に分析して、 Amazon FSx for NetApp ONTAPストレージ上の Microsoft SQL Server および Oracle のデプロイメントに問題があるかどうかを判断します。問題が見つかった場合、Workload Factory は問題の内容を示し、データベース構成で最高のパフォーマンス、コスト効率、ベスト プラクティスへの準拠を実現するために何を変更する必要があるかを説明します。</block>
-  <block id="b0a0826c5a9c2b2e6c919de33e89dbfe" category="paragraph">Workload Factory コンソールのファイルシステム レベルでは、すべての FSx for ONTAPファイルシステムの well-architected ステータスがリストされます。Well-Architected のステータスは、「問題」、「未分析」、または「Well-Architected」に分類されます。Well-Architected ステータスを選択すると、ファイル システム内の Well-Architected ステータス タブにリダイレクトされ、そこで Well-Architected スコア、構成カテゴリ、ファ​​イル システムのすべての構成を確認できます。</block>
   <block id="84ee3cc4e2a4f169585c115121112580" category="paragraph">Workload Factory コンソールからNetApp Backup and Recovery を使用して、Microsoft SQL Server アプリケーション データを保護します。この統合により、ローカルプライマリAmazon FSx for NetApp ONTAP (FSx for ONTAP) ストレージ上のローカルスナップショットを使用してワークロードをバックアップし、セカンダリ FSx for ONTAPストレージにワークロードを複製するという保護目標を達成できます。</block>
   <block id="bb1b704677e0a9ac00a2bda88f85fe27" category="paragraph">Workload Factory は、リソースの検出、前提条件の検証、Microsoft SQL Server 用プラグインの構成とインストールを自動化し、 NetApp Backup and Recovery によるワークロードの保護を準備します。このプラグインは、Microsoft SQL Server のワークロードを保護できるNetAppソフトウェアのホスト側コンポーネントです。</block>
   <block id="e9575ae90b7ec054c43a9797544d0103" category="paragraph">NetApp Backup and Recovery は、 NetApp SnapMirrorデータ レプリケーション テクノロジーを活用して、スナップショット コピーを作成し、それをバックアップの場所に転送することで、すべてのバックアップが完全に同期されるようにします。</block>
@@ -1299,4 +1288,37 @@
   <block id="1cad8c414706b5bcb0b45db25ebf8cb8" category="list-text"><block ref="1cad8c414706b5bcb0b45db25ebf8cb8" category="inline-link-macro-rx"></block></block>
   <block id="8cddfd1e7d348910ccb9f33f1875227b" category="paragraph"><block ref="f04d9a72ed4e336f6d3f26aa1ae4191f" category="inline-link-macro-rx"></block>。</block>
   <block id="99a41b50ffc589da72247d73d9ef02ed" category="paragraph">関連情報については、 <block ref="dc3edb02c7b9b729d8ce33699dc1f607" category="inline-link-macro-rx"></block> Microsoft SQL Server のワークロードを管理します。</block>
+  <block id="58abe9f5fbda29b547f9ab2de50f2332" category="section-title">Amazon Elastic Block Store (EBS) の使用状況に基づいて節約を最適化</block>
+  <block id="3cab156afe8725e62725f4973a3c9949" category="doc">ダッシュボードの改善</block>
+  <block id="18657a21385444f338b37f8f0116ffc3" category="paragraph">新しいダッシュボードは合理化され、整理され、データベース リソースと Workload Factory の主要機能の概要を 1 つの画面でより明確に表示します。1 枚のカードではデータベース リソースが強調表示され、1 枚のカードでは Well-Architected スコアと分析に関する情報が提供され、1 枚のカードではエラー分析が表示され、2 枚のカードでは月間コストと潜在的な節約額が表示され、1 枚のカードではサンドボックスに関する情報が表示されます。</block>
+  <block id="52d93a06ea30bbc0d2d568569c6686f5" category="paragraph">Well-Architected 分析には、Oracle 構成に対する次の評価と修正が含まれます。</block>
+  <block id="4667bb7539009ed136b942febb5737ba" category="list-text">NFS プロトコルを使用したストレージ構成オペレーティング システム: 既存の Oracle データベース デプロイメントの NFS 構成に関する構成の問題を評価および修正します。</block>
+  <block id="679f71c6d98f7a5f25e9535eb16a19b5" category="list-text">iSCSI プロトコルを使用したストレージ構成オペレーティング システム: 既存の Oracle データベース デプロイメントの iSCSI 構成に関する構成問題を評価して修正します。</block>
+  <block id="7548e2cbb02ea769fa6f01e70f1d34ee" category="list-text">Automatic Storage Management (ASM) を使用したストレージ構成オペレーティング システム: 既存の Oracle データベース展開の ASM 構成に関する構成の問題を評価します。</block>
+  <block id="bff5f6ac72c7a46da345751a22e8e0a1" category="section-title">Workload Factory for Databases の権限の変更</block>
+  <block id="c3cf114e732250ac6b24d30e117ab24b" category="paragraph">Workload Factory for Databases では、権限ポリシーが更新され、特定のアクションに必要な内容がより明確になり、必要な権限のみを選択するための細分性が高まりました。資格情報を追加すると、以前の権限モデルである _読み取り専用_ と _読み取り/書き込み_ の代わりに、3 つの権限オプションから選択できるようになります。新しい権限モデルでは、権限ポリシーが次のように分割されます。</block>
+  <block id="d9fff61478503c71474a780705c79af6" category="list-text">_表示、計画、分析_: データベース リソースのインベントリを表示し、リソースの健全性を把握し、データベース構成の Well-Architected 分析を確認し、エラー ログ分析を取得し、節約を検討します。</block>
+  <block id="9ef8eb2bc51c8c6f6ba459302a542484" category="list-text">_運用と修復_: データベース リソースの運用タスクを実行し、データベース構成と基盤となる FSx for ONTAPファイル システム ストレージの問題を修正します。</block>
+  <block id="3f285f24375531d34b8b7d73726b69bc" category="list-text">_データベース ホストの作成_: ベスト プラクティスに従って、データベース ホストと、その基盤となる FSx for ONTAPファイル システム ストレージを展開します。</block>
+  <block id="6ca55df595e9339b20f869e49eb0d710" category="paragraph">資格情報を追加するときに、Workload Factory for Databases に提供するアクセス レベルに基づいて、これらのアクセス許可ポリシーを 1 つ以上選択できます。</block>
+  <block id="b20b01e02162a68002ca1747d1bd3c10" category="inline-link-macro">ワークロードファクトリーの権限リファレンス</block>
+  <block id="444b052e3d1349e221d4ceb42e6c1cf7" category="paragraph"><block ref="444b052e3d1349e221d4ceb42e6c1cf7" category="inline-link-macro-rx"></block></block>
+  <block id="034b7227f8903ae8faac7359c9b3d064" category="section-title">よく設計されたダッシュボード画面が追加されました</block>
+  <block id="7a524d371f7a263dae481eea0bc3de88" category="paragraph">新しい _Well-architected_ ダッシュボード画面がデータベース メニューに追加されました。この画面から、データベース資産全体の構成ステータスの集約ビューを取得できます。</block>
+  <block id="54543cd5b64fb08ea26d865ed21c8691" category="section-title">NetApp Backup and Recoveryにおけるデータベース導入時の編集保護</block>
+  <block id="c7c9b75c76356b2b8aa328068cd75a1c" category="paragraph">Workload Factory コンソールから、保護されたリソースの保護を編集することを選択すると、 NetApp Consoleのバックアップとリカバリにリダイレクトされ、保護ポリシーまたはスケジュールを変更できます。</block>
+  <block id="f3a2b46dc542d840ca95ad3799ace39b" category="inline-link-macro">データベースデプロイメントの編集保護</block>
+  <block id="2a601eb3188e615c20b76da1a5734646" category="paragraph"><block ref="2a601eb3188e615c20b76da1a5734646" category="inline-link-macro-rx"></block></block>
+  <block id="cf6dca9fc5d1f30c46f70906ef3152ce" category="section-title">エラー分析機能で利用可能なタグによるエラーフィルタリング</block>
+  <block id="b79d711ddf4eb26397c99031692c7a26" category="paragraph">Workload Factory のエラー分析機能を使用すると、インフラストラクチャ指向のタグで Microsoft SQL Server エラー ログをフィルター処理して表示できます。この機能強化により、問題を迅速にトリアージ、トラブルシューティング、解決できるようになります。</block>
+  <block id="c9c975f5587642db7fde90312ee94825" category="inline-link-macro">タグフィルタリングでエラーログを分析する</block>
+  <block id="99d2df171fdf12824fa9334fd19cf105" category="paragraph"><block ref="99d2df171fdf12824fa9334fd19cf105" category="inline-link-macro-rx"></block></block>
+  <block id="2598ae987a85e3352d674a4bfade0940" category="list-text">フィルターを使用して、重大度、期間、エラー コードなどの基準に基づいて、またはコンピューティング、ストレージ、ネットワーク、セキュリティなどのインフラストラクチャ指向のタグによって、表示されるエラーを絞り込みます。</block>
+  <block id="f24e1b415d71fa7221e6c4409d9ddcb9" category="list-text">ストレージ構成: 容量管理、シン プロビジョニング、階層化ポリシー、スナップショット、ストレージ効率、および Microsoft マルチパス I/O (MPIO) のステータスと設定を含む、自動ストレージ管理 (ASM) の有無にかかわらず NFS または iSCSI を使用した展開のオペレーティング システム構成が含まれます。</block>
+  <block id="cb7f9c10896377bc079174e74f841859" category="section-title">構成分析の構成要素</block>
+  <block id="6ef2457afc865f25d3bed5cf0e06ad81" category="paragraph">構成分析には次のコンポーネントが含まれます。</block>
+  <block id="1fa0a7ab43424d65902e6734a2c7cc84" category="list-text">Well-Architected ステータスは、データベース構成の全体的な健全性を示します。構成は、「最適化済み」、「最適化されていない」、「過剰プロビジョニング」に分類されます。構成の well-architected ステータスは、Workload Factory コンソールの Microsoft SQL Server インスタンスまたは Oracle データベース内から参照されます。</block>
+  <block id="5c947d6fa21e25852d9b8fc4ae1d52fb" category="list-text">スコアには現在分析されているすべての構成が含まれ、パーセンテージで表示されます。スコアが 25% の場合、データベース デプロイメントの 25% が適切に設計されていることを意味します。Well-Architected スコアは、*Well-Architected* 画面および Workload Factory コンソールの Microsoft SQL Server インスタンスまたは Oracle データベース内から参照されます。</block>
+  <block id="b63a27b7b1942197825500589350fdb1" category="list-text">構成は、ストレージ、コンピューティング、アプリケーション、復元力、クローン作成のカテゴリに分類されます。各カテゴリには、定期的に分析される特定の構成評価が含まれます。構成カテゴリは、*Well-architected* 画面および Workload Factory コンソールの Microsoft SQL Server インスタンスまたは Oracle データベース内から参照されます。</block>
+  <block id="2afa479317acb4455a0a649aab2944d1" category="section-title">2025年11月2日</block>
 </blocks>
