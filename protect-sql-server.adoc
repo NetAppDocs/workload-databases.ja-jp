@@ -72,3 +72,20 @@ NetApp Backup and Recovery を使用して Microsoft SQL Server リソースを�
 link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies-create.html["Microsoft SQL Server インスタンスとデータベースを保護するためのポリシーを作成する方法を学びます"^]。
 
 関連情報については、 link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html["バックアップとリカバリのドキュメント"^] Microsoft SQL Server のワークロードを管理します。
+
+
+
+== Microsoft SQL Server リソースの編集保護
+
+NetApp Backup and Recoveryですでに保護されている Microsoft SQL Server インスタンスおよびデータベースの保護を編集できます。保護を編集すると、保護された SQL Server インスタンスの保護ポリシーまたはスケジュールを変更できます。
+
+. いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
+. [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
+. データベース メニューから、*インベントリ* を選択します。
+. インベントリで、エンジンの種類として *Microsoft SQL Server* を選択します。
+. *データベース*タブを選択します。
+. 保護を編集するデータベースを見つけて、メニューから*保護の編集*を選択します。
++
+NetApp Consoleのバックアップとリカバリにリダイレクトされ、保護ポリシーまたはスケジュールを変更できます。
+
+

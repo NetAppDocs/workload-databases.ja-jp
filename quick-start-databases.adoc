@@ -23,10 +23,13 @@ NetApp Workload Factory for Databases を使用すると、_基本_ モードで
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2つ"] クレデンシャルと権限の追加
 [role="quick-margin-para"]
-いずれかを選択し link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["_基本_、_読み取り専用_、および_読み取り/書き込み_の動作モード"^]ます。
+選択してくださいlink:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["権限ポリシー"^]お客様のニーズを満たすために。
 
 [role="quick-margin-para"]
-_読み取り専用_または_読み取り/書き込み_モードで操作する場合は、link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["アカウントへのクレデンシャルの手動追加"^]データベースや GenAI などのワークロード機能を選択し、必要な権限の IAM ポリシーを作成します。
+権限を付与しない場合は、Workload Factory for Databases を使用して、部分的に完了したコード サンプルをコピーできます。
+
+[role="quick-margin-para"]
+権限を付与する場合は、link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["アカウントへのクレデンシャルの手動追加"^]これには、データベースや AI などのワークロード機能の選択や、必要な権限の IAM ポリシーの作成が含まれます。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["3つ"]リソースの検出または展開
 [role="quick-margin-para"]

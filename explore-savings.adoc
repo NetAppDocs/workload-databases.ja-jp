@@ -62,7 +62,7 @@ Calculatorは、次のライセンスに依存して割り当てられたリソ�
 
 カスタマイズによるコスト削減の詳細を見る:地域、導入モデル、SQL Serverエディション、毎月のデータ変更率、スナップショットの頻度など、EBSまたはFSx for Windows File Serverを搭載したAmazon EC2上のMicrosoft SQL Serverの構成設定を提供します。
 
-検出されたホストの節約を調査: Workload Factory は既存の Microsoft SQL サーバーにリンクし、詳細を計算機に取り込んで自動的に比較します。この計算機オプションを使用するには、_読み取り専用_ または _読み取り/書き込み_ 権限を付与する必要があります。ユースケースは変更できますが、その他のすべての詳細は計算で自動的に決定されます。
+検出されたホストの節約を調査: Workload Factory は既存の Microsoft SQL サーバーにリンクし、詳細を計算機に取り込んで自動的に比較します。この計算オプションを使用するには、_表示、計画、および分析_の権限を付与する必要があります。ユースケースは変更できますが、その他のすべての詳細は計算で自動的に決定されます。
 
 さらに、計算機分析の精度を向上させることができますlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWSクレデンシャルを追加"^]。[既存のリソースに基づいてコスト削減を計算する]*を選択します。[クレデンシャルの追加]ページにリダイレクトされます。クレデンシャルを追加したら、FSx for ONTAPと比較する既存のリソースを選択し、*[削減効果を確認する]*を選択します。
 
@@ -158,7 +158,7 @@ Workload Factory は、検出された Elastic Block Store および FSx for Win
 .開始する前に
 作業を開始する前に、次の前提条件を満たしてください。
 
-* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["grant_read-only_or_read/write_permissions"^]AWSアカウントで、*[Explore savings]*タブでElastic Block Store（EBS）とFSx for Windowsシステムを検出し、削減額の計算結果をSavings Calculatorに表示します。
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["表示、計画、分析の権限を付与する"^] AWS アカウントの *節約の調査* タブで Elastic Block Store (EBS) および FSx for Windows システムを検出し、節約計算ツールで節約計算を表示します。
 * インスタンス タイプの推奨事項を取得し、コストの精度を向上させるには、次の手順を実行します。
 +
 .. Amazon CloudWatch および AWS Compute Optimizer に権限を付与します。
@@ -326,6 +326,9 @@ Microsoft SQL Server オンプレミス ホストの節約を検討した後、�
 NOTE: Workload Factory は、複数の FSx for ONTAPファイル システムの保存または作成をサポートしていません。
 
 .導入方法
-_読み取り/書き込み_ モードでは、Workload Factory から直接 FSx for ONTAPを使用して、新しい Microsoft SQL サーバーを AWS EC2 にデプロイできます。また、Codebox ウィンドウからコンテンツをコピーし、Codebox メソッドのいずれかを使用して推奨構成を展開することもできます。
+_データベース ホスト作成権限_ があれば、Workload Factory から直接 FSx for ONTAPを使用して、AWS EC2 に新しい Microsoft SQL サーバーをデプロイできます。また、Codebox ウィンドウからコンテンツをコピーし、Codebox メソッドのいずれかを使用して推奨構成を展開することもできます。
 
-+ _基本_ モードでは、Codebox ウィンドウからコンテンツをコピーし、Codebox メソッドの 1 つを使用して推奨構成を展開できます。
+権限がなくても、Codebox ウィンドウからコンテンツをコピーし、Codebox メソッドのいずれかを使用して推奨構成を展開できます。
+
+.関連情報
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["ワークロードファクトリーの権限リファレンス"^]

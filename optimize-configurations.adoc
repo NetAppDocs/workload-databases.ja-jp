@@ -49,7 +49,7 @@ Oracle データベースの場合:
 
 == 開始する前に
 
-* あなたは持っている必要がありますlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS アカウントの認証情報と読み取り/書き込み権限"^]データベース構成を分析します。
+* 絶対ですlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["操作と修復の権限を付与する"^]AWS アカウントで。
 * Microsoft SQL Server インスタンスまたは Oracle データベースのストレージを評価するには、リソースを Workload Factory に登録し、ストレージ タイプを FSx for ONTAPにする必要があります。link:register-instance.html["リソースを登録する方法を学びます。"]
 * 設定または構成の修正を選択する前に、各推奨事項をよく確認してください。RSSおよびMAXDOPの設定については、本番環境を変更する前に、推奨設定をテストしてパフォーマンスの向上を確認することをお勧めします。
 

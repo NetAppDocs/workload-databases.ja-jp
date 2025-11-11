@@ -32,7 +32,7 @@ Workload Factory から PostgreSQL サーバーを作成する前に、データ
 
 == 開始する前に
 
-ワークロードファクトリで新しいデータベースホストを作成する必要がありlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS アカウントの認証情報と読み取り/書き込みモードの権限"^]ます。
+あなたには link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["_データベースホスト作成_権限を付与する"^] AWS アカウントでワークロードファクトリーに新しいデータベース ホストを作成します。
 
 
 

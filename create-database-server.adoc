@@ -60,7 +60,7 @@ Domain Name System（DNS;ドメインネームシステム）リソースをロ�
 新しいデータベースホストを作成する前に、次の前提条件を満たしていることを確認してください。
 
 .クレデンシャルと権限
-あなたにはlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS アカウントの認証情報と読み取り/書き込みモードの権限"^]Workload Factory に新しいデータベース ホストを作成します。
+絶対です link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["_データベースホスト作成_権限を付与する"^] AWS アカウントで、Workload Factory に新しいデータベース ホストを作成します。
 
 .Active Directory
 Active Directoryに接続する場合は、次の作業を行うための権限を持つ管理者アクセス権が必要です。

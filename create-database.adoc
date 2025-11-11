@@ -18,7 +18,7 @@ summary: NetApp Workload Factory for Databases を使用して Microsoft SQL デ
 
 データベースのストレージを分離する場合は、_ virtualマウントポイント_を使用します。仮想マウントポイントを使用すると、ホスト上のいくつかの共通ドライブにデータベースを統合できます。
 
-ワークロードファクトリでデータベースを作成するには、自動モードの権限が必要です。または、基本モードでは、部分的に完了したコードテンプレートをコピーまたはダウンロードして、ワークロードファクトリ外での操作を完了できます。link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["ワークロードファクトリの運用モードの詳細"^] 使用するモードを決定します。
+ワークロード ファクトリーでデータベースを作成するには、_表示、計画、および分析_ の権限が必要です。あるいは、部分的に完了したコード テンプレートをコピーまたはダウンロードして、ワークロード ファクトリー外で操作を完了することもできます。link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["ワークロードファクトリーの権限について学ぶ"^] 使用するモードを決定します。
 
 
 NOTE: SMBプロトコルを使用するMicrosoft SQL Serverでは、データベースの作成はサポートされていません。
@@ -26,7 +26,7 @@ NOTE: SMBプロトコルを使用するMicrosoft SQL Serverでは、データベ
 .開始する前に
 新しいデータベースを作成する前に、次の前提条件を満たしていることを確認してください。
 
-* *資格情報と権限*: 必要なのはlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS アカウントの認証情報と _読み取り専用_ または _読み取り/書き込み_ モードの権限"^]ワークロード ファクトリーに新しいデータベースを作成します。
+* *資格情報と権限*: 必要なのは link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS アカウントの認証情報と _表示、計画、分析_ の権限"^] Workload Factory に新しいデータベースを作成します。
 +
 または、[コードボックス]を使用してテンプレートをコピーし、REST APIを使用してワークロードファクトリの外部にデータベースを導入することもできます。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Codebox自動化の詳細"^]です。
 
@@ -39,7 +39,7 @@ NOTE: SMBプロトコルを使用するMicrosoft SQL Serverでは、データベ
 
 == データベースの作成
 
-_クイック作成_ または _詳細作成_ のデプロイメント モードを使用して、_読み取り専用_ または _読み取り/書き込み_ モードの権限でワークロード ファクトリでこのタスクを完了できます。
+Workload Factory でこのタスクを完了するには、_クイック作成_ または _詳細作成_ のデプロイメント モードを使用できます。
 
 [role="tabbed-block"]
 ====

@@ -19,7 +19,7 @@ NetApp Workload Factory for Databases でデータベースのサンドボック
 .開始する前に
 サンドボックスクローンを作成する前に、次の前提条件を満たしていることを確認してください。
 
-* *資格情報と権限*: 必要なのはlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS アカウントの認証情報と _読み取り専用_ または _読み取り/書き込み_ モードの権限"^]Workload Factory でサンドボックス クローンを作成します。
+* *資格情報と権限*: 必要なのは link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS アカウントの認証情報と _表示、計画、分析_ の権限"^] Workload Factory でサンドボックス クローンを作成します。
 +
 あるいは、Codebox を使用して部分的に完了したテンプレートをコピーしたり、完了したテンプレートを作成して、REST API を使用して Workload Factory の外部でサンドボックス クローンを作成することもできます。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Codebox自動化の詳細"^] 。
 

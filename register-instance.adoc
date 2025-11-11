@@ -32,7 +32,7 @@ NOTE: Workload Factory は、Microsoft SQL Server インスタンスと Oracle �
 
 インスタンスを登録する前に、次の点を考慮してください。
 
-インスタンスまたはデータベースのホストがインベントリに表示されている必要があります。ホストがインベントリに表示されるには、link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWSアカウントの認証情報と_読み取り専用_または_読み取り/書き込み_モードの権限を追加する必要があります"^] 。
+インスタンスまたはデータベースのホストがインベントリに表示されている必要があります。ホストをインベントリに表示するには、 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["表示、計画、分析の権限を付与する"^] AWS アカウントで。
 
 
 
