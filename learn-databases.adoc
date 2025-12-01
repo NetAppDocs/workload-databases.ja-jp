@@ -79,14 +79,6 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["ワ�
 
 
 
-=== ワークロードファクトリーの動作モード
-
-3 つの異なる動作モード (_基本_、_読み取り専用_、_読み取り/書き込み_) により、Workload Factory の内外での展開に柔軟なオプションが提供されます。Workload Factory の外部で使用するためのコード スニペットを使用して、_基本_ モードでゼロ トラストの価値をすぐに得ることができます。_読み取り専用_ モードと _読み取り/書き込み_ モードで増分信頼を使用して増分値を取得します。
-
-詳細はこちらlink:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["ワークロードファクトリーの動作モード"^] 。
-
-
-
 == NetApp Workload Factory を使用するためのツール
 
 NetApp Workload Factory は次のツールで使用できます。

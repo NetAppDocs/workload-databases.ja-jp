@@ -219,11 +219,11 @@ Workload Factory は、検出された Elastic Block Store および FSx for Win
 --
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
-. [Databases]タイルで、ドロップダウンメニューから*[Explore savings]*を選択し、*[Microsoft SQL Server on FSx for Windows]を選択します。
+. [データベース] タイルで、メニューから [節約の検討] を選択し、[Microsoft SQL Server on FSx for Windows] を選択します。
 +
 Workload Factory が EBS ホストを検出すると、[節約の探索] タブにリダイレクトされます。  Workload FactoryがEBSホストを検出しない場合は、計算ツールにリダイレクトされます。<<カスタマイズによるコスト削減の詳細,カスタマイズによるコスト削減の詳細>> 。
 
-. [Explore savings]タブで、EBSストレージを使用してデータベースサーバの*[Explore savings]*をクリックします。
+. *節約の検討*から、EBS 上で実行されている 1 つ以上のデータベース ホストを選択し、*節約の検討*を選択します。
 . 必要に応じて、SQL Server 資格情報、Windows 資格情報、または不足している SQL Server 権限を追加して、データベース ホストを認証します。
 +
 認証が成功した後も節約の探索ページにデータが読み込まれない場合は、*在庫*タブを選択してデータを再読み込みし、もう一度*節約の探索*タブを選択します。
@@ -234,6 +234,10 @@ Workload Factory が EBS ホストを検出すると、[節約の探索] タブ�
 .. *クローンの更新頻度*: メニューからクローンの更新頻度を選択します。
 .. *クローニングされたコピーの数*：EBS設定のクローニングされたコピーの数を入力します。
 .. *毎月の変更率*：クローンおよびスナップショットのデータの1カ月あたりの平均変更率を入力します。
+.. *ホストの追加*: オプションで、節約計算に含める検出された EBS ホストを最大 5 つ選択します。
++
+Workload Factory は、選択した EBS ホストが単一の FSx for ONTAPファイルシステムのスループット、容量、または IOPS 制限を超えない限り、複数の SQL Server ホストを単一の FSx for ONTAP構成推奨事項に統合して、コスト削減を最適化します。
+
 
 
 

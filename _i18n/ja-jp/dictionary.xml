@@ -474,9 +474,7 @@
   <block id="0df73578de7c34ef150c1f37953113f5" category="paragraph">Amazon EC2上で検出されたMicrosoft SQL Serverの削減効果を、FSx for Windows File Serverストレージを使用して試算ツールで確認できるようになりました。SQL Serverとストレージの要件によっては、FSx for ONTAPストレージがデータベースワークロードにとって最も対費用効果の高いストレージであることがわかります。</block>
   <block id="b68e42fa600661a13849ea15c997cea3" category="paragraph">お客様のシステムとFSx for ONTAPのコストを比較するために、カスタマイズと検出という2つの計算ツールオプションが用意されています。</block>
   <block id="0e98c2470a9fecd3035980d6c9bd5dfe" category="section-title">検出されたホストの削減量を確認する</block>
-  <block id="8f334cc9204ebef849d5d29b3d23b485" category="list-text">[Databases]タイルで、ドロップダウンメニューから*[Explore savings]*を選択し、*[Microsoft SQL Server on FSx for Windows]を選択します。</block>
   <block id="bd0005565e08b9807da651535d09e628" category="inline-xref">カスタマイズによるコスト削減の詳細</block>
-  <block id="b2b254b73e406acc574452e9f29f5d9a" category="list-text">[Explore savings]タブで、EBSストレージを使用してデータベースサーバの*[Explore savings]*をクリックします。</block>
   <block id="3f1c1b5d06b7f8c588cd928fa1ac5e90" category="list-text">コスト削減試算ツールでは、必要に応じて、EBSストレージ内のクローンとSnapshotに関する以下の詳細情報を入力することで、より正確なコスト削減試算を行うことができます。</block>
   <block id="60d184cc6fb4054879723de86764a020" category="list-text">必要に応じて、Savings Calculatorで、FSx for Windowsストレージのクローン（シャドウコピー）とスナップショットに関する以下の詳細情報を提供し、コスト削減の見積もりをより正確にします。</block>
   <block id="c552646e3717f4144059bd229d9b3c96" category="paragraph">FSx for Windowsのシャドウコピーが検出された場合、デフォルト値は* Daily *です。シャドウコピーが検出されない場合、デフォルト値は*スナップショット頻度なし*です。</block>
@@ -868,7 +866,6 @@
   <block id="888aee60b948bfcee3f85cb52d4d62f0" category="inline-link-macro">Amazon Bedrockの価格</block>
   <block id="2064dc6bc6a42df41c5d58cafe4e5108" category="paragraph"><block ref="2064dc6bc6a42df41c5d58cafe4e5108" category="inline-link-macro-rx"></block></block>
   <block id="15f8b2f1668baad2a169d2b56f5bf029" category="inline-link-macro">SQL Server インスタンスを登録する</block>
-  <block id="e2b234d864fc8c9cad0b4ac907f4b4cb" category="list-text">[インスタンス] タブで、分析する特定の SQL Server インスタンスを見つけて、メニューから [エラーの調査] を選択します。</block>
   <block id="3c6ac7ef553b64f6b1a8db2d3034177d" category="list-text">*エラー調査* タブで、コンソールに説明されているように次の前提条件を完了します。</block>
   <block id="34048930da0f8b448828d6774b139b17" category="list-text">アマゾンの岩盤</block>
   <block id="6b0d68ff65de404d491b6292064a079f" category="list-text">ネットワーキング: Amazon Bedrock のプライベートエンドポイント</block>
@@ -952,8 +949,6 @@
   <block id="a0766b901d28d8d972d369d556ae3e10" category="paragraph"><block ref="a0766b901d28d8d972d369d556ae3e10" category="inline-link-macro-rx"></block></block>
   <block id="c6ce33e049285b31d2f12d7b30e16106" category="summary">Workload Factory for Databases 内のエラー ログを分析します。</block>
   <block id="de5aa3916ae7d5763f4d4fe818491a77" category="doc">Workload Factory のエラーログを分析する</block>
-  <block id="538c4703bd3218c445fac5ee3d4f4df1" category="paragraph">スマート エラー ログ アナライザーを使用すると、Microsoft SQL Server のエラー ログを自動的に解釈して、問題を迅速に特定し解決することができます。Agentic AI ベースの分析には、Amazon Bedrock の統合が必要です。</block>
-  <block id="4f3d050ec78741e4f048cd1a9c202d21" category="paragraph">エラー ログの分析と修復は、SQL Server インスタンスの正常性とパフォーマンスの維持に役立ちます。SQL Server エラー ログを効果的に解釈するには、慎重な分析と専門知識が必要です。手動による監視、エラー検出、根本原因分析には時間がかかり、エラーが発生しやすくなります。これらの課題により、問題解決が遅れ、ダウンタイムが増加し、運用効率が低下する可能性があります。スマート エラー ログ アナライザーは、次のような主な利点によってこれらの課題に対処します。</block>
   <block id="3d573c7428ab9f849be508456eb81821" category="paragraph">エラー ログ アナライザーを使用するたびに、高度な AI 分析のメリットを活用しながら、環境を完全に制御できます。</block>
   <block id="14f1fce00d2e95227126f5556a73ec6a" category="paragraph">エラー ログ アナライザーを使用するには、Amazon Bedrock をアクティブ化し、Workload Factory が使用するモデルを選択し、Amazon Bedrock に接続するためのプライベート エンドポイントを作成し、アクセス許可を追加して、エンタープライズ ライセンスを作成する必要があります。</block>
   <block id="bf71ae5aa16f5632361df660e7d643c6" category="section-title">データのプライバシーとセキュリティ</block>
@@ -964,18 +959,12 @@
   <block id="ff8598dd406774c1ca9008fc13afdda5" category="inline-link-macro">Amazon Bedrock データ保護ドキュメント</block>
   <block id="f3bdceeaea10004cfc3c616ca8eb3736" category="paragraph">顧客データはモデルのトレーニングや改善には使用されません。 Amazon Bedrock はログをリアルタイムで処理しますが、ユーザーのデータに基づいてトレーニングを行うことはありません。結果は参照のみを目的として環境に保存されます。詳細については、<block ref="b066fd87fd1e8a2b8d520c5977ecc43e" category="inline-link-macro-rx"></block> 。</block>
   <block id="b9ab059dc08ef721b8e84a71c31836ca" category="paragraph">エラー ログ アナライザーを使用するには、次の前提条件を満たしている必要があります。</block>
-  <block id="1638ab4de4a9db0d742db9639754f78d" category="list-text"><block ref="873d2450d820ba11c34ebce38f7d81a0" category="inline-link-macro-rx"></block>ワークロード ファクトリーで。</block>
   <block id="646959962ba0d3aba0b9eba63fd30f66" category="list-text">以下の前提条件も満たす必要があります。ログ エラーを分析する手順の一部として、これらの前提条件を完了するように求められます。</block>
   <block id="b731c0685ba6b81efc2a3730248eb9d5" category="list-text">*Amazon Bedrock のアクティベーション*</block>
-  <block id="81516992886ccf91505613c45ff870d0" category="paragraph">Workload Factory の SQL ノードで実行されている AI エージェントが Bedrock にシームレスに接続し、特定されたエラーログに関する AI ベースの分析情報を取得できるようにするには、Amazon Bedrock が必要です。</block>
   <block id="d0e5aa254f1ccca87a0cd6748a924c03" category="list-text">*ネットワーキング*</block>
-  <block id="cb8d218eea5cb58b307a5ab0213e0e7b" category="paragraph">Amazon Bedrock VPC エンドポイントは、Amazon Bedrock API を使用した SQL ノードのプライベート通信を保証し、パブリックインターネットへの露出を排除します。  Amazon Bedrock VPC エンドポイントが SQL Server ノードのサブネットに関連付けられていることを確認します (例: vpce-050cb2f33a1380ffd)。</block>
   <block id="7ed47c99073de0aed63f1c44842de720" category="list-text">*AWS IAM 権限*</block>
-  <block id="c2c7ac9892a54cd8c39b1d9c5f58fee8" category="paragraph">SQL ノードに関連付けられた EC2 インスタンス プロファイル ロールと、Workload Factory に関連付けられた AWS 認証情報には、次の権限が必要です。</block>
   <block id="25977d35457399335400a71d0f8a6a75" category="list-text">「bedrock:InvokeModel」権限を持つ EC2 インスタンス プロファイル ロール</block>
-  <block id="75b51e246b2117f69d42b2da83b880cf" category="paragraph">この権限により、対応する SQL ノード上の EC2 インスタンスは、プロアクティブなエラー調査と修復ガイダンスのために Bedrock モデルを呼び出すことができます。このプロファイルは、カスタマイズされた分析情報を得るための安全な AI アクセスも保証します。</block>
   <block id="378a86b0e0b9ed128b62cbb2ee357b61" category="list-text">Workload Factory に関連付けられた AWS 認証情報: 「bedrock:GetFoundationModelAvailability」および「bedrock:ListInferenceProfiles」権限</block>
-  <block id="c44ddf9ba9f5224d51227669678fea5f" category="paragraph">これらの権限は、SQL ノードのリージョンにおけるモデルの可用性と構成を確認し、信頼性の高いリージョン固有のパフォーマンスを保証します。</block>
   <block id="7bc852edc2e072288bc0aee045416ffb" category="paragraph">Workload Factory コンソールを使用して、SQL Server エラー ログを分析します。</block>
   <block id="759696af629832df91ea2580617b889c" category="list-text">データベース メニューから、*インベントリ* を選択します。</block>
   <block id="e671fcca7a0408f20ff0ad8657e918fe" category="list-text">インベントリで、データベース エンジンの種類として *Microsoft SQL Server* を選択します。</block>
@@ -1109,10 +1098,6 @@
   <block id="00642e68a741fc0fb7b3297f3d85e094" category="list-text">*再利用可能な自動化テンプレート*: 複数の環境での将来の Microsoft SQL Server の展開のために、Workload Factory Codebox から CloudFormation テンプレートを作成、再利用、カスタマイズします。</block>
   <block id="b637a3cf08f073bba2452017262c6f0e" category="inline-link-macro">ワークロードファクトリー向け FSx for ONTAPの詳細</block>
   <block id="5451b14a2cc0c73081374e5d49684660" category="paragraph"><block ref="c8d2af036244cbf733f21cfd3484b898" category="inline-link-macro-rx"></block> 。</block>
-  <block id="4f7eefbe2de22aca4f898d56772c8c9f" category="section-title">ワークロードファクトリーの動作モード</block>
-  <block id="7b3be34e841ef7654765950b44c0736d" category="paragraph">3 つの異なる動作モード (_基本_、_読み取り専用_、_読み取り/書き込み_) により、Workload Factory の内外での展開に柔軟なオプションが提供されます。Workload Factory の外部で使用するためのコード スニペットを使用して、_基本_ モードでゼロ トラストの価値をすぐに得ることができます。_読み取り専用_ モードと _読み取り/書き込み_ モードで増分信頼を使用して増分値を取得します。</block>
-  <block id="d7df29879844d570a3e64b343a7227e2" category="inline-link-macro">ワークロードファクトリーの動作モード</block>
-  <block id="dde084f0d745ae579f63b79d128d3cac" category="paragraph">詳細はこちら<block ref="006fa329b97a0e61c793bc816f297534" category="inline-link-macro-rx"></block> 。</block>
   <block id="4bbb8d481021011f9afb73ca196bfecd" category="section-title">NetApp Workload Factory を使用するためのツール</block>
   <block id="227f846d45d01d0f9fb62a784d506d51" category="paragraph">NetApp Workload Factory は次のツールで使用できます。</block>
   <block id="36445dd6e44838348239a5d874596e0d" category="list-text">*Workload Factory コンソール*: Workload Factory コンソールは、アプリケーションとプロジェクトの視覚的かつ全体的なビューを提供します。</block>
@@ -1325,4 +1310,32 @@
   <block id="611dad37557a2cb5ae289c5e019aed4c" category="paragraph">権限を付与しない場合は、Workload Factory for Databases を使用して、部分的に完了したコード サンプルをコピーできます。</block>
   <block id="38c4c72673e051381c12c32e1dd20f50" category="paragraph">権限を付与する場合は、<block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>これには、データベースや AI などのワークロード機能の選択や、必要な権限の IAM ポリシーの作成が含まれます。</block>
   <block id="14a812993e30c1769069f1d355d3b4a0" category="paragraph">インスタンスまたはデータベースのホストがインベントリに表示されている必要があります。ホストをインベントリに表示するには、 <block ref="74a62493240df6cc0643a248f282a25a" category="inline-link-macro-rx"></block> AWS アカウントで。</block>
+  <block id="4afeabae14ccab1ba1ff53887c3a9701" category="doc">Amazon Elastic Block Store (EBS) のデータベース計算ツールで節約を最適化</block>
+  <block id="d9f7bd12b1b11b300e5288560b5e9987" category="paragraph">2 つの新しい計算機能により、EBS ストレージを使用して複数のインスタンスを実行する際のコスト削減分析が改善され、FSx for ONTAPに切り替えることでさらにコストを削減できるようになります。</block>
+  <block id="32ccdc5dd4f059ebfa9dabaa8c301cf0" category="list-text">Workload Factory は、1 つの FSx for ONTAPファイル システム上の複数のデータベース ホストに統合されたストレージ ソリューションを提供します。この統合により、複数のデータベース ホストに必要なファイル システムの数が削減され、ストレージ コストが最適化され、コスト削減が向上します。</block>
+  <block id="e11501c7d779140aaf7bc3e06e0c5005" category="list-text">Workload Factory は、EBS パフォーマンスの使用状況を分析し、最適かつ最もコスト効率の高い FSx for ONTAP構成を提案します。</block>
+  <block id="754cab29df96851e5cc6bac19fb8e4de" category="inline-link-macro">検出されたEBSホストの節約を調べる</block>
+  <block id="9c9dd70e9f385deab27852576ec6db9a" category="paragraph"><block ref="9c9dd70e9f385deab27852576ec6db9a" category="inline-link-macro-rx"></block></block>
+  <block id="0694112a63d48c58b25bbffa268e0b70" category="section-title">Well-Architected ダッシュボードで利用可能な Excel レポート</block>
+  <block id="5f00eea0cea6c8b64f9e110f5d403194" category="paragraph">適切に設計されたダッシュボードの Excel レポートをダウンロードできます。このレポートには、データベース リソースの well-architeccted ステータスと、オペレーティング システムおよびONTAPのサブ構成を含むすべてのリソース構成の推奨事項が示されます。</block>
+  <block id="9dc9a356684c35282d9c1ed4aa30e7a3" category="section-title">Oracle データベースで利用可能なエラー ログ アナライザー</block>
+  <block id="269a351d2772f2eea3d4497bdc4e42cf" category="paragraph">Agentic AI 搭載のエラー ログ アナライザーは、Oracle データベースで使用できます。この機能は、高度な機械学習アルゴリズムを活用して、ログ ファイル内のエラーを自動的に検出して分析します。このツールは、ログで識別されたパターンに基づいて開発者に実用的な洞察と推奨事項を提供することで、トラブルシューティング プロセスを合理化することを目的としています。</block>
+  <block id="08b4436fffbd9bb2227d03f1cf33889b" category="paragraph">Well-Architected 分析には、2 つの新しいストレージ サイズ設定構成が含まれています。この分析では、既存の Oracle データベース デプロイメントのスワップ領域の割り当てとファイル システムのヘッドルームに関連する構成の問題を評価および修正します。</block>
+  <block id="9d152669cfbc7f26b96ac365effedae4" category="paragraph">スマート エラー ログ アナライザーを使用すると、Microsoft SQL Server および Oracle データベースのエラー ログを自動的に解釈し、問題を迅速に特定して解決できます。Agentic AI ベースの分析には、Amazon Bedrock の統合が必要です。</block>
+  <block id="0a44a8722c7bac67d404e7b828b0fa66" category="paragraph">エラー ログの分析と修復は、SQL Server インスタンスと Oracle データベースの正常性とパフォーマンスを維持するのに役立ちます。エラー ログを効果的に解釈するには、慎重な分析と専門知識が必要です。手動による監視、エラー検出、根本原因分析には時間がかかり、エラーが発生しやすくなります。これらの課題により、問題解決が遅れ、ダウンタイムが増加し、運用効率が低下する可能性があります。スマート エラー ログ アナライザーは、次のような主な利点によってこれらの課題に対処します。</block>
+  <block id="8a1fc074135ca97c3e41c2b6603201b5" category="list-text"><block ref="b116d1667af242d32122d5079d1ba5fa" category="inline-link-macro-rx"></block>ワークロード ファクトリーで。</block>
+  <block id="8f591971d60ff379567cac1d6fe605a9" category="paragraph">Workload Factory の SQL Server または Oracle ホストで実行されている AI エージェントが Bedrock にシームレスに接続し、特定されたエラーログに関する AI ベースの分析情報を取得できるようにするには、Amazon Bedrock が必要です。</block>
+  <block id="55746a60f65a4c4a669e341395ff898b" category="paragraph">Amazon Bedrock VPC エンドポイントは、Amazon Bedrock API を使用した SQL Server または Oracle ホストのプライベート通信を保証し、パブリックインターネットへの露出を排除します。  Amazon Bedrock VPC エンドポイントが SQL Server または Oracle ホストのサブネットに関連付けられていることを確認します (例: vpce-050cb2f33a1380ffd)。</block>
+  <block id="0c3497bd788216b96538a7c6f6e071b2" category="paragraph">SQL Server または Oracle ホストに関連付けられた EC2 インスタンス プロファイル ロールと、Workload Factory に関連付けられた AWS 認証情報には、次の権限が必要です。</block>
+  <block id="65fcd4fbdfb629efb51ac6136101fcd6" category="paragraph">この権限により、対応する SQL Server または Oracle ホスト上の EC2 インスタンスは、プロアクティブなエラー調査と修復ガイダンスのために Bedrock モデルを呼び出すことができます。このプロファイルは、カスタマイズされた分析情報を得るための安全な AI アクセスも保証します。</block>
+  <block id="f7991fd16b87e08bdd167a0aae7a8290" category="paragraph">これらの権限は、SQL Server または Oracle ホストのリージョンにおけるモデルの可用性と構成を確認し、信頼性の高いリージョン固有のパフォーマンスを保証します。</block>
+  <block id="9d4b0b2e78136984a24846c364551a8e" category="list-text">*Oracleユーザー権限*</block>
+  <block id="55048a1306ae548163118fae2191def0" category="paragraph">次の権限は、拡張診断アラートへの読み取りアクセスを許可し、AI を活用したパターン検出と修復のためにログからエラー/トレースの詳細を抽出できるようにします。<block ref="289f8a65a303930e56cd71bf1396d56b" prefix=" " category="inline-code"></block> 。この権限は Oracle データベースにのみ必要です。</block>
+  <block id="631911b60e468e3d1142502ce7c0e907" category="list-text">インベントリで、データベース エンジンの種類として *Microsoft SQL Server* または *Oracle* を選択します。</block>
+  <block id="2f57066fb8b36f0342f8c3cbc677339f" category="list-text">[インスタンス] タブで、分析する特定の SQL Server インスタンスまたは Oracle データベースを見つけて、メニューから [エラーの調査] を選択します。</block>
+  <block id="a28f3ff00a54ce62f89b0b2d838a9b82" category="list-text">*節約の検討*から、EBS 上で実行されている 1 つ以上のデータベース ホストを選択し、*節約の検討*を選択します。</block>
+  <block id="cb736a07db8d1010837499448f949516" category="list-text">*ホストの追加*: オプションで、節約計算に含める検出された EBS ホストを最大 5 つ選択します。</block>
+  <block id="edb81fcd705508c0f4e0b66b31bfc44f" category="paragraph">Workload Factory は、選択した EBS ホストが単一の FSx for ONTAPファイルシステムのスループット、容量、または IOPS 制限を超えない限り、複数の SQL Server ホストを単一の FSx for ONTAP構成推奨事項に統合して、コスト削減を最適化します。</block>
+  <block id="7bc5d760eb2707645670155d907850e9" category="list-text">ストレージのサイズ設定: スワップ領域の割り当てとファイルシステムのヘッドルームを含む</block>
+  <block id="815e75619b370a1b845eccec6979ed74" category="section-title">2025年11月27日</block>
 </blocks>
