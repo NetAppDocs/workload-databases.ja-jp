@@ -561,7 +561,6 @@
   <block id="5c89f4f6af1a71c2ed6cfac605e94c16" category="paragraph"><block ref="5c89f4f6af1a71c2ed6cfac605e94c16" category="inline-link-macro-rx"></block></block>
   <block id="fd3039d7fbe9d24b3141aca3c62383a2" category="section-title">オーバープロビジョニングされたMicrosoft SQL Serverライセンスの評価と最適化</block>
   <block id="f90a806c02db45741274868bc065ab90" category="paragraph">コスト削減試算ツールで、Microsoft SQL Server環境にEnterprise Editionが必要かどうかを評価できるようになりました。ライセンスがオーバープロビジョニングされている場合は、ダウングレードすることを推奨します。アプリケーションを最適化することで、データベースのライセンスを自動的にダウングレードできます。</block>
-  <block id="f319ba887c03b66fa6a83807c78f65e9" category="list-text">[データベース]タイルで、*[データベースインベントリに移動]*を選択します。</block>
   <block id="770dee3f954306dca2e369d2ef823c94" category="section-title">SQL Server導入の分析</block>
   <block id="1d93f11e5331c46990f076ad4257106e" category="paragraph">この計算ツールは、SQL Server環境の包括的な分析を実行して、使用されているリソースと機能がSQL Serverエディションと適切に一致していることを確認します。Standard Editionへのダウングレードを推奨する前に、Calculatorがチェックする主な要因と条件は次のとおりです。</block>
   <block id="a0e3089d312c100208595d685b4104d2" category="list-text">導入モデル</block>
@@ -1354,4 +1353,7 @@
   <block id="5e3b7f958129022f75fe2931c55615b2" category="doc">Ask me AIアシスタントのホームページ統合</block>
   <block id="65bcc541760e8f25e0281edbfdfbf7f3" category="paragraph">Workload Factory コンソールのホームページには Ask me AI アシスタントが組み込まれており、独自のストレージ資産について質問したり、環境から直接パーソナライズされた分析情報を取得したり、以前の会話を参照したりすることができます。コンソールを離れることなく、「Ask me」と対話してワークロードを理解し、問題をトラブルシューティングし、Workload Factory について詳しく知ることができます。</block>
   <block id="334f5b13a66630c66877aaf36ce24673" category="section-title">2026年1月4日</block>
+  <block id="342a19841e494c61bf9c06a5879eaffa" category="inline-image-macro">ハンバーガー メニュー アイコンは、ストレージ、eda、ai、データベース、vmware、管理などのワークロードに移動するために使用されます。</block>
+  <block id="1d59c9bea900e36e3d5b9ca53cd55587" category="list-text">メニューを選択 <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> 次に、[*データベース*]を選択します。</block>
+  <block id="757a7ffb20a279d7239febb013141ad5" category="list-text">メニューを選択 <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> 次に*ストレージ*を選択します。</block>
 </blocks>

@@ -15,7 +15,7 @@ NetApp Workload Factory for Databases のサンドボックス クローンが�
 
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
-. [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
+. メニューを選択 image:workloads-menu-icon.png["ハンバーガー メニュー アイコンは、ストレージ、eda、ai、データベース、vmware、管理などのワークロードに移動するために使用されます。"] 次に、[*データベース*]を選択します。
 . データベースメニューから*サンドボックス*を選択します。
 . サンドボックスで、削除するサンドボックス クローンのアクション メニューを選択します。
 . 「 * 削除」を選択します。

@@ -41,7 +41,7 @@ NetApp Workload Factory for Databases 内でデータベース ジョブを追�
 
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
-. [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
+. メニューを選択 image:workloads-menu-icon.png["ハンバーガー メニュー アイコンは、ストレージ、eda、ai、データベース、vmware、管理などのワークロードに移動するために使用されます。"] 次に、[*データベース*]を選択します。
 . [データベース] メニューから、[ジョブ監視] を選択します。
 . ジョブ監視では、フィルターまたは検索を使用してジョブの結果を絞り込みます。求人レポートをダウンロードすることもできます。
 . オプションで、ジョブのアクションメニューを選択し、「*CloudFormation に移動*」をクリックして、AWS CloudFormation コンソールでジョブのログを表示します。

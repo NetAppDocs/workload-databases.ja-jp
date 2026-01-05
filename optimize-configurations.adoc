@@ -69,7 +69,7 @@ NOTE: 修復プロセスにより、インスタンスのダウンタイムや�
 
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
-. [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
+. メニューを選択 image:workloads-menu-icon.png["ハンバーガー メニュー アイコンは、ストレージ、eda、ai、データベース、vmware、管理などのワークロードに移動するために使用されます。"] 次に、[*データベース*]を選択します。
 . *インベントリ*で、エンジンの種類（Microsoft SQL Server または Oracle）を選択します。
 . 特定の構成を修正するリソースを選択します。
 +
@@ -130,7 +130,7 @@ Workload Factory が問題の修正を開始します。操作のステータス
 
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
-. [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
+. メニューを選択 image:workloads-menu-icon.png["ハンバーガー メニュー アイコンは、ストレージ、eda、ai、データベース、vmware、管理などのワークロードに移動するために使用されます。"] 次に、[*データベース*]を選択します。
 . データベース メニューから、*インベントリ* を選択します。
 . インベントリで、データベース エンジンの種類として *Microsoft SQL Server* または *Oracle* を選択します。
 . 延期する構成を持つ SQL Server インスタンスまたは Oracle データベースに移動し、アクション メニューを選択して、*Well-architected* を選択します。
@@ -148,7 +148,7 @@ Workload Factory が問題の修正を開始します。操作のステータス
 
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
-. [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
+. メニューを選択 image:workloads-menu-icon.png["ハンバーガー メニュー アイコンは、ストレージ、eda、ai、データベース、vmware、管理などのワークロードに移動するために使用されます。"] 次に、[*データベース*]を選択します。
 . データベース メニューから、*インベントリ* を選択します。
 . インベントリで、データベース エンジンの種類として *Microsoft SQL Server* または *Oracle* を選択します。
 . 延期する構成を持つ SQL Server インスタンスまたは Oracle データベースに移動し、アクション メニューを選択して、*Well-architected* を選択します。
@@ -166,7 +166,7 @@ Workload Factory が問題の修正を開始します。操作のステータス
 
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
-. [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
+. メニューを選択 image:workloads-menu-icon.png["ハンバーガー メニュー アイコンは、ストレージ、eda、ai、データベース、vmware、管理などのワークロードに移動するために使用されます。"] 次に、[*データベース*]を選択します。
 . データベース メニューから、*インベントリ* を選択します。
 . インベントリで、データベース エンジンの種類として *Microsoft SQL Server* または *Oracle* を選択します。
 . 延期する構成を持つ SQL Server インスタンスまたは Oracle データベースに移動し、アクション メニューを選択して、*Well-architected* を選択します。

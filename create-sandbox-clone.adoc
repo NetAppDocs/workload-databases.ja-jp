@@ -30,7 +30,7 @@ NetApp Workload Factory for Databases でデータベースのサンドボック
 
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
-. [データベース]タイルで、*[データベースインベントリに移動]*を選択します。
+. メニューを選択 image:workloads-menu-icon.png["ハンバーガー メニュー アイコンは、ストレージ、eda、ai、データベース、vmware、管理などのワークロードに移動するために使用されます。"] 次に、[*データベース*]を選択します。
 . [データベース]で、[サンドボックス]タブを選択します。
 . [サンドボックス]タブで、*[新しいサンドボックスの作成]*を選択します。
 . [Create new sandbox]ページの[Database source]で、次の情報を指定します。
