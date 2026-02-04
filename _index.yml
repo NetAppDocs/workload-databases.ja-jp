@@ -16,7 +16,7 @@ indexpage:
     links:
     - title: コスト削減の詳細
       url: "/explore-savings.html"
-    - title: インスタンスを登録する
+    - title: リソースを登録する
       url: "/register-instance.html"
     - title: インスタンスの Well-Architected ステータスを表示する
       url: "/optimize-configurations.html"

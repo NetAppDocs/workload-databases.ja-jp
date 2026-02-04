@@ -37,7 +37,7 @@ sidebar:
         url: "/create-database-server.html"
       - title: PostgreSQLサーバの作成
         url: "/create-postgresql-server.html"
-    - title: インスタンスを管理する
+    - title: リソースを管理する
       entries:
       - title: リソース管理
         url: manage-instance.html
