@@ -1340,11 +1340,8 @@
   <block id="a26f5beb654e47a87608f8a28b573758" category="list-text">FSx for ONTAPファイルシステムのユーザー名とパスワードを入力し、*次へ*を選択します。</block>
   <block id="34b2f9d708b57fa0ab164ac81a844832" category="paragraph">FSx for ONTAPファイルシステムが認証されたら、*次へ*を選択します。</block>
   <block id="9ed181f71730a4b981c04369e2f1719e" category="list-text">準備するには（手順 3）、インスタンスが最小要件を満たしていることを確認します。</block>
-  <block id="6b5a6b5bbb8db715d3ff675c1200264b" category="paragraph">最小要件を満たすには、インスタンスにAWSとNetApp PowerShellモジュールとPowerShell 7モジュールがインストールされており、「前提条件チェック」にリストされている機能の少なくとも1つについて前提条件を完了する必要があります。..*前提条件チェックビュー*で前提条件を確認します。</block>
-  <block id="a50f4670050c58a2a08ccc2babd2d5b2" category="paragraph">+ インスタンスを登録するには、*Well-Architected の問題と推奨事項を確認する*などの単一の機能のすべての前提条件を完了する必要があります。</block>
   <block id="4aa1b1ff22a8dfe18a969e9e18594ab0" category="list-text">各機能の*セットアップの詳細*を選択して、機能の前提条件を確認し、画面上の指示に従って機能の不足している前提条件を完了します。</block>
   <block id="d521398ad1462fd891ea513e4855ce5b" category="inline-link-macro">適切に設計された問題を確認して修正</block>
-  <block id="de1cc997e7f69a895e3fb53fb41d279d" category="paragraph">Workload Factory に<block ref="78fb719485add27049471292c9f9720d" category="inline-link-macro-rx"></block>インスタンスについては、*Well-Architected の問題と推奨事項を確認する*および*Well-Architected の問題を修正する*機能の下にリストされているすべての前提条件を完了してください。</block>
   <block id="f035f450e95801f1197ab2843b43b16a" category="list-text">前提条件が完了したら、インスタンスを*登録*します。</block>
   <block id="9d96bcc0867ec5be17a78fc127af4785" category="paragraph">インスタンスの登録が開始されます。進行状況を追跡するには、*ジョブ監視*タブを選択します。</block>
   <block id="efd81ed9168d148e7b33debfd48f5bbe" category="paragraph">インスタンスの登録には、データベース認証、FSx for ONTAP認証、および不足している前提条件を完了するための準備の3つのステップがあります。単一または複数のデータベースを登録できます。</block>
@@ -1357,9 +1354,12 @@
   <block id="aea7afc9754b2383c56fbbaee6c6009d" category="list-text">準備するには（手順3）、データベースが必要な前提条件を満たしていることを確認します。必要なモジュールがすべてインストールされ、前提条件が満たされている場合は、*次へ*を選択してデータベースを登録します。それ以外の場合は、次の手順に従ってください。</block>
   <block id="1717c98238cd6bd4091f92979d40a891" category="list-text">*Prerequisite check view*で前提条件を確認します。</block>
   <block id="3f4c61df91a8ed4b5fc7622369d6e56d" category="paragraph">データベースを登録するには、*適切に設計された問題と推奨事項を確認する*などの単一の機能のすべての前提条件を完了する必要があります。</block>
-  <block id="7a38e7578edd4ba664ee05634d9ac39e" category="paragraph">Workload Factory でデータベースの<block ref="78fb719485add27049471292c9f9720d" category="inline-link-macro-rx"></block>を実行するには、「*Well-Architected の問題と推奨事項を確認*」および「*Well-Architected の問題を修正*」機能に記載されているすべての前提条件を完了してください。</block>
   <block id="9e7001c2bb163521a51de7186846104e" category="list-text">前提条件が完了したら、データベースを*登録*します。</block>
   <block id="aece37c900cf74271d49a4aec3628d66" category="paragraph">データベースの登録が開始されます。進行状況を追跡するには、*ジョブ監視*タブを選択します。</block>
   <block id="e6437d0fab94a9cc41e9fc0354b23716" category="section-title">2026年2月2日</block>
   <block id="ecd36d02576c4fe28ab61b5c14fa69c4" category="sidebar">リソースを管理する</block>
+  <block id="5dd712766e41aed3df90d60e36279568" category="paragraph">最小要件を満たすには、インスタンスにAWSとNetApp PowerShellモジュールとPowerShell 7モジュールがインストールされており、「前提条件チェック」にリストされている機能の少なくとも1つについて前提条件を完了する必要があります。</block>
+  <block id="4f04ccc3925b5039da28842c277cda6c" category="paragraph">インスタンスを登録するには、*Review well-architected issues and recommendations* などの単一の機能のすべての前提条件を完了する必要があります。</block>
+  <block id="747eccfe479b7957e243e10257e40143" category="paragraph">Workload Factory を使用して<block ref="78fb719485add27049471292c9f9720d" category="inline-link-macro-rx"></block>インスタンスについては、*Well-Architected の問題と推奨事項を確認する*および*Well-Architected の問題を修正する*機能の下にリストされているすべての前提条件を完了してください。</block>
+  <block id="7fa2af2634cfeecc9f90ce75c17fad3f" category="paragraph">データベースに Workload Factory <block ref="78fb719485add27049471292c9f9720d" category="inline-link-macro-rx"></block>を導入するには、*well-architected の問題と推奨事項を確認する*および*well-architected の問題を修正する*機能の下にリストされているすべての前提条件を完了してください。</block>
 </blocks>
