@@ -1,12 +1,12 @@
-= オンプレミスデータベース環境のコスト分析と移行計画
+= SQL Server オンプレミス データベース環境のコスト分析と移行計画
 :allow-uri-read: 
 
 
 
 
-=== オンプレミスデータベース環境のコスト分析と移行計画
+=== SQL Server オンプレミス データベース環境のコスト分析と移行計画
 
-BlueXP  Workload Factory for Databasesが、オンプレミスのAmazon FSx for NetApp ONTAPへのデータベース移行を検出、分析、計画できるようになりました。コスト削減試算ツールを使用して、オンプレミスのデータベース環境をクラウドで運用するコストを試算し、オンプレミスのデータベース環境をクラウドに移行する際の推奨事項を確認できます。
+BlueXP workload factory for Databasesは、SQL Serverオンプレミスデータベースの検出、分析を行い、Amazon FSx for NetApp ONTAPへの移行計画を支援します。節約計算ツールを使用すると、SQL Serverオンプレミスデータベース環境をクラウドで実行する際のコストを見積もり、オンプレミスデータベース環境をクラウドに移行するための推奨事項を確認できます。
 
 link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["オンプレミスデータベース環境のコスト削減効果をご確認ください"]
 

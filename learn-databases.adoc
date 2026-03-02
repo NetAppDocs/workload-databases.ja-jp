@@ -136,6 +136,9 @@ Workload Factory は、AWS、 NetApp ONTAP、Microsoft SQL Server、Oracle、Pos
 | Microsoft SQL Server | SQL Server 2016、2017、2019、2022 | any | FCI、Standalone 
 
 
+| Microsoft SQL Server | SQL Server 2016、2017、2019、2022 | any | Always On 可用性グループ 
+
+
 | Oracle | 19世紀 | RHEL、SuSe Linux | スタンドアロン（シングル/マルチテナント） 
 
 
@@ -152,6 +155,9 @@ Workload Factory は、AWS、 NetApp ONTAP、Microsoft SQL Server、Oracle、Pos
 
 
 | Oracle | 21c | RHEL、SuSe Linux | ASM を使用したスタンドアロン (シングル/マルチテナント) 
+
+
+| Oracle | 19c、21c | RHEL、SuSe Linux | Data Guard 
 
 
 | PostgreSQL | PostgreSQL 15 | Amazon Linux 2023 AMI | HA、スタンドアロンインスタンス 
