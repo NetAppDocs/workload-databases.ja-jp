@@ -587,7 +587,6 @@
   <block id="222ef17ae6eab247553156232cd650e1" category="list-text">より正確な結果を得るには、コンピューティング情報とストレージとパフォーマンスの詳細を更新してください。</block>
   <block id="b0398f49dbe9d04be8ddd17378899545" category="list-text">必要に応じて、オンプレミスデータベース環境のクローン（シャドウコピー）とSnapshotに関する次の詳細情報を指定し、コスト削減の見積もりをより正確にします。</block>
   <block id="7240997fa0d75a11f0b991615772d5d3" category="list-text">*クローンコピーの数*：オンプレミス構成のクローンコピーの数を入力します。</block>
-  <block id="af022f8b2257d68b04e48e672c457177" category="list-text">アプリケーション：Microsoft SQL Serverライセンス、Microsoft SQL Serverパッチ、およびMAXDOP設定を含む</block>
   <block id="1c8d307950dbef59ce61b6bc729fdb52" category="section-title">2025年2月3日</block>
   <block id="382e51924c0a806fea2a0017322199a5" category="section-title">最適化の制限事項</block>
   <block id="d65e48d2f6a810cde4c31e5a88aecedb" category="section-title">ONTAPとOSの設定の最適化</block>
@@ -674,7 +673,6 @@
   <block id="514f1fc0ac0ff6e4200d3637146367f1" category="section-title">権限に関する用語を更新</block>
   <block id="2d07fc9146d02690dffeffa52fbd2ec4" category="list-text">オンプレミスのホストの削除</block>
   <block id="c5d0b906e655aeb0e712fdc99742d179" category="list-text">クローンクリーンアップでは、更新または削除するクローンデータベース（サンドボックス）を選択します。</block>
-  <block id="bfc2ef5a56455cfacfde13cf1612e36b" category="paragraph">構成分析が停止します。</block>
   <block id="822748e99c70e9162ce5432b2e1eff5c" category="section-title">2025年5月4日</block>
   <block id="905bc3578e603008d83976307778ddcc" category="list-text">インスタンス タイプの推奨事項を取得し、コストの精度を向上させるには、次の手順を実行します。</block>
   <block id="10d9194778791c152af2c0be1806e0b1" category="list-text">Amazon CloudWatch および AWS Compute Optimizer に権限を付与します。</block>
@@ -735,7 +733,6 @@
   <block id="4698c78219bd6bc2a4fb47e8f4149213" category="section-title">ワークロードファクトリーでの Windows 認証のサポート</block>
   <block id="a3fbe9088342ceac653613ae546dd620" category="list-text">ストレージ構成: 容量管理、シンプロビジョニング、階層化ポリシー、スナップショット、Microsoft マルチパス I/O (MPIO) ステータス、および MPIO タイムアウト設定が含まれます。</block>
   <block id="29ce878a000bdfaa01aa19a803eb9f01" category="paragraph">*すべて選択*がデフォルトですが、修正する特定のリソースを選択することもできます。</block>
-  <block id="476140ae72277e361d19df8904bed3f8" category="list-text">クローン クリーンアップ以外のすべての構成については、推奨事項の詳細を確認して、問題を修正した場合に何が起こるかを確認してください。一部の修復操作では、インスタンスのダウンタイムやサービスの中断が発生する可能性があります。</block>
   <block id="b223957af5cc7e8c75e716638466ec57" category="section-title">プライベートネットワークにインスタンスを登録する</block>
   <block id="b77e8ec0a3425747f32b3dbc303adecb" category="section-title">2025年6月30日</block>
   <block id="d2240cc857b28c2cc0c761811ebb0e4d" category="paragraph">Workload Factory for Databases は、Amazon FSx for NetApp ONTAP ストレージ上で稼働するインスタンスの登録プロセスを改善しました。これにより、登録するインスタンスを一括で選択できるようになりました。インスタンスが登録されると、ワークロード ファクトリー コンソール内でデータベース リソースを作成および管理できるようになります。</block>
@@ -817,14 +814,12 @@
   <block id="ada60b484b7d2e3edafc98754146c7c3" category="paragraph">リソースを再度登録することができます。</block>
   <block id="605deef06e1372beea22ad9cd2be1a6a" category="inline-link-macro">リソースを登録する</block>
   <block id="cdef502718e102280b7153349fc5453d" category="paragraph">絶対です<block ref="7b211aa8ea2e7da5bf6451b8c7477b8d" category="inline-link-macro-rx"></block>以下の管理タスクを実行します。</block>
-  <block id="8778288856610f6bf20035173fbad2be" category="paragraph">不要なアラートや不正確な最適化結果を回避するために、環境に当てはまらない特定の構成の分析を無視することもできます。</block>
   <block id="e40dd147294abaab8b8ebe348a6ff323" category="paragraph">Microsoft SQL Server インスタンスの場合:</block>
   <block id="e13a21e0f6e79bd6e277440afe81c7a2" category="list-text">コンピューティング: 適切なサイズ設定、オペレーティング システムのパッチ、受信側スケーリング (RSS)、TCP オフロード、MTU アライメントなどのネットワーク アダプタ設定が含まれます。</block>
   <block id="dede452df8eba39c0a57cc96ce3b98c4" category="paragraph">Oracle データベースの場合:</block>
   <block id="438f1f56c44366f5204e6f9931b85516" category="inline-link-macro">リソースを登録する方法を学びます。</block>
   <block id="74bdd3d51d7fef35f3c1e1829b2c63fe" category="section-title">構成の問題を修正する</block>
   <block id="1c6128cdb2d10cb97e9f36f037cb4ceb" category="paragraph">FSx for ONTAPストレージ上で実行されている SQL Server または Oracle 環境の構成の問題を修正します。</block>
-  <block id="47df3bf0f7ade58852082d72bcde28c6" category="admonition">修復プロセスにより、インスタンスのダウンタイムやサービスの中断が発生する可能性があります。構成の問題を修正することを選択する前に、推奨事項を慎重に確認してください。</block>
   <block id="15e4986095a476a300a86c98e005c03f" category="list-text">プロンプトが表示されたら、管理者アクセス権を持つ Windows 資格情報を入力します。</block>
   <block id="0670483b9d94213fd07ca4df3baae2eb" category="list-text"><block ref="c202a4052bc97ff0191552ea4c2c865c" prefix="" category="inline-code"></block>（SQLサーバー）</block>
   <block id="6da87aebc1358666c2653e7d0852ee63" category="list-text"><block ref="1f378775539050b7c7b5e1cdfe121e2f" prefix="" category="inline-code"></block>（SQLサーバー）</block>
@@ -1300,8 +1295,6 @@
   <block id="56b090f7afa365cc9265c8fc7c52c73c" category="paragraph">BlueXP workload factory for Databasesは、SQL Serverオンプレミスデータベースの検出、分析を行い、Amazon FSx for NetApp ONTAPへの移行計画を支援します。節約計算ツールを使用すると、SQL Serverオンプレミスデータベース環境をクラウドで実行する際のコストを見積もり、オンプレミスデータベース環境をクラウドに移行するための推奨事項を確認できます。</block>
   <block id="8d73c4037df134a624f4a3cc9d442a9e" category="doc">Ask Me AIアシスタントのホームページ統合</block>
   <block id="a00917b130263595d00c3587c0e66a4f" category="paragraph">Workload Factory コンソールのホームページには Ask Me AI アシスタントが組み込まれており、独自のストレージ資産について質問したり、環境から直接パーソナライズされた分析情報を取得したり、以前の会話を参照したりすることができます。コンソールを離れることなく、Ask Me を操作してワークロードを理解し、問題をトラブルシューティングし、Workload Factory について詳しく知ることができます。</block>
-  <block id="4b51d568a03393cf563624fcbba9143f" category="doc">1回限りの評価</block>
-  <block id="c87bb3ba3f920d90c329acddc2fe7385" category="paragraph">Workload Factory では、新しいデプロイメント、移行後、トラブルシューティングなど、必要なときにいつでもデータベース デプロイメントの構成を分析するための 1 回限りの評価が提供されるようになりました。デプロイメント構成を最適化し、ベスト プラクティスに準拠するのに役立つ推奨事項が得られます。これは、セットアップ プロセスを完全に実行せずに、適切に設計された機能を使用できる機会です。Workload Factory にクレデンシャルを保存したり、データベース リソースを登録したり、外部接続を設定したりすることなく、データベースを評価できます。</block>
   <block id="e0b323aef6004097ab97ed7d77d06388" category="inline-link-macro">データベース導入の 1 回限りの評価を実行する</block>
   <block id="fa29998d7ba5fe0bb430a106a7dd86bc" category="paragraph"><block ref="fa29998d7ba5fe0bb430a106a7dd86bc" category="inline-link-macro-rx"></block></block>
   <block id="db82eade40cb0d84a1267b72a439d756" category="section-title">Microsoft SQL Server上のAlways On可用性グループおよびOracle上のData Guardの登録サポート</block>
@@ -1347,31 +1340,22 @@
   <block id="650870d240bc8043d6977b1a1c975ce0" category="cell">19c、21c</block>
   <block id="edd8af7eaa131179cb70a5db89636876" category="cell">Data Guard</block>
   <block id="5a493bafe2fb35c6f5339a3ced4adce7" category="paragraph">Workload Factory はデータベース構成を毎日分析します。毎日の分析により、適切に設計されたステータス、洞察、推奨事項が提供されます。ベストプラクティスを満たすように構成の問題を自動的に修正できます。</block>
-  <block id="4ec20b6d44158ae33673aec51794c09b" category="paragraph">Workload Factory コンソール内のデータベース インベントリから、構成の問題に関する推奨事項を確認し、それらの問題を修正できます。</block>
-  <block id="4a798c756347a1f9f34d59ee0f8fb34d" category="paragraph">SQL Server リソースの場合、1 回限りの評価を実行して、データベース構成のベスト プラクティスを確認できます。1 回限りの評価を実行するために、リソースを登録したり資格情報を保存したりする必要はありません。</block>
   <block id="cac9df85ec3dc71ff56914f00db69c7a" category="list-text">コンピューティング：オペレーティング システムのパッチを含む</block>
   <block id="2ad033703ef0dac4d52edf323faa1918" category="paragraph">Oracle の Well-Architected 分析では、構成が他の構成に依存している場合に通知し、リンクされた構成を最適化するためのアクションをリストします。</block>
-  <block id="89e18dfb2f73d9aea558dfa37e146a3d" category="section-title">SQL Server データベース構成の 1 回限りの評価を実行します</block>
-  <block id="fc1edbd0f2b3738c54d8f2398b9945a0" category="paragraph">資格情報を保存したりインスタンスを登録したりせずに、1回限りの評価を実行して、Microsoft SQL Serverインスタンスの適切なアーキテクチャステータスを確認します。</block>
-  <block id="f64b3cb5f5729ca0945015067499622a" category="paragraph">スクリプトを何度でも実行し、結果をアップロードできます。アップロードするたびに、最新の結果に基づいてwell-architectedのステータスと分析情報が更新されます。</block>
   <block id="a790f6e28b649137870b00ccf3589944" category="list-text">メニュー<block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block>を選択します。次に、*データベース*を選択します。</block>
-  <block id="6095483bc20af74df0bca991f69f87dd" category="list-text">*インベントリ*で、*1回限りの評価* &gt; *評価の詳細*を選択します。1回限りの評価に関する情報を確認します。</block>
   <block id="be87867043f3a6e9ec43771084901ca7" category="list-text">*Download script*を選択します。</block>
   <block id="79473441dd5f2ed36fd986a90db7c9cf" category="list-text">スクリプトを Microsoft SQL Server ホストにコピーします。</block>
   <block id="cea7ad7075430d1bd0be98ca92701bcb" category="list-text">PowerShellでスクリプトを実行します。1つのスクリプトですべてのインスタンスからメタデータを収集します。</block>
   <block id="b33feb370f35879eddcd9293135b1df1" category="list-text">*1回限りの評価* &gt; *アップロード*を選択します。ファイルを見つけて、Workload Factoryコンソールにアップロードします。</block>
-  <block id="3065c918b2ac31893b241184a7b01959" category="list-text">任意の構成の推奨事項を表示します。推奨事項には、ベスト プラクティスと、構成が最適化されていない場合に発生する可能性のある問題が含まれます。</block>
   <block id="c70615017296ffdedf34ebb8730eaa77" category="section-title">構成の修正、却下、再有効化を始める前に</block>
   <block id="50bac09b5a353b5521f0ff914fff6808" category="list-text">リソースは Workload Factory に登録されている必要があり、ストレージタイプは FSx for ONTAP である必要があります。<block ref="aed8a618f1e8a1dc325945b821521d6c" category="inline-link-macro-rx"></block></block>
   <block id="85d21d13c3f58b49f129dacfb4cab3a1" category="list-text">設定または構成を修正する前に、各推奨事項を確認してください。RSSとMAXDOPについては、本番環境を変更する前に推奨設定をテストしてパフォーマンスを確認してください。</block>
-  <block id="550a46672ef778ca098c025d166cdd66" category="admonition">構成を修正すると、インスタンスのダウンタイムやサービスの中断が発生する可能性があります。構成を修正することを選択する前に、推奨事項を慎重に確認してください。</block>
   <block id="88228ff74222d41a7b32f7f73b628495" category="paragraph">調査結果のレポートをダウンロードするには、* Export PDF * を選択します。</block>
   <block id="370419de045637c04622917ea040cd16" category="section-title">データベース構成の分析を閉じる</block>
   <block id="b3af08a651def642c2a5741d36be8f65" category="paragraph">データベース環境に適用されない特定のデータベース構成の分析を無視して、不要なアラートや不正確な最適化結果を回避します。無視した構成分析はいつでも再アクティブ化できます。</block>
   <block id="d6b510061438391f590afb73a62f098c" category="paragraph">分析はいつでも再アクティブ化できます。この構成は、全体的な最適化スコアに含まれなくなりました。</block>
   <block id="61ab3b6f044b76185565a9f1d6db2113" category="section-title">却下された構成分析を再アクティブ化する</block>
   <block id="99206ff00921c00b5d887375a108d167" category="paragraph">閉じた構成分析はいつでも再アクティブ化できます。再アクティブ化する構成を 1 つ以上選択できます。</block>
-  <block id="a25cb7311bf319b68bd7bff7ddd66451" category="paragraph">構成分析が再度アクティブ化され、今後は毎日実行されます。</block>
   <block id="1a0cee014540e049f4d08b2ca15c2447" category="inline-link-macro">適切に設計された評価</block>
   <block id="27cfb14157482da47350bb4484f7e792" category="paragraph">インスタンス（SQL Server）またはデータベース（Oracle）の登録には、インスタンスまたはデータベースの認証、FSx for ONTAP認証、準備の3つのステップがあります。準備として、AWSをインストールし、NetApp、PowerShellモジュールをインスタンスまたはデータベースにインストールし、<block ref="b3b44214924ae2c9e9d272ea31fcb428" category="inline-link-macro-rx"></block>または<block ref="d21897e75c312daacd024fa4c48cd6a7" category="inline-link-macro-rx"></block>などのWorkload Factory for Databasesの機能の最小要件を満たす必要があります。</block>
   <block id="672da44d295a636d22c64c52022ddf81" category="paragraph">Workload Factory は、Microsoft SQL Server インスタンスと Oracle データベースの登録と管理のみをサポートしています。Workload Factory で選択した AWS アカウントの認証情報に応じて、PostgreSQL ホストがインベントリに表示されます。現在、Workload Factory は、Amazon Linux オペレーティングシステムでのみ実行されている未登録の PostgreSQL インスタンスをサポートしています。</block>
@@ -1388,7 +1372,6 @@
   <block id="1fab3ff575faec37f5f5855ba6c44e9b" category="paragraph">ご使用の環境に適用されない構成の分析を無視することができます。これにより、不要なアラートや不正確な最適化結果を回避できます。特定の構成分析を無視すると、Workload Factory ではその構成が全体の最適化スコアに含められません。</block>
   <block id="ee25e0b6cd574166f206b4c5b7f02df3" category="section-title">重要な理由</block>
   <block id="1ae45cc8915c23757127ca10c1cc4000" category="paragraph">Workload Factoryは、継続的な評価と推奨事項、および修復策を組み合わせることで、大規模なストレージ、データベース、およびVMware環境にベストプラクティスを適用します。Workload Factoryコンソールで適用される自動修正により、人的ミスが削減され、統一された管理が確保され、ワークロードインフラストラクチャ全体でパフォーマンスと信頼性が維持されます。</block>
-  <block id="b5c307f00406a7d48e2b76f206ea8a5f" category="paragraph">完全なデータベース環境分析を行うには、以下の手順を実行する必要があります：</block>
   <block id="a54f5b1fe41547cbf19f1fb9561340dc" category="inline-link-macro">リソースを登録する</block>
   <block id="32b8a48be5601496781767d49968bd51" category="list-text"><block ref="89c16bb90a0fdfa73434baf56ae09810" category="inline-link-macro-rx"></block>オンラインになっていることを確認してください。</block>
   <block id="25c44f83d9d45dc9b2d2a8e46fcc5b19" category="list-text">リンクを関連付けます。リンク接続により、Workload Factoryは、ストレージ レイアウトや復元性などのすべてのデータベース展開構成を分析できます。</block>
@@ -1466,4 +1449,57 @@
   <block id="d1bf0b5773fa36619112fb2acdf1eef8" category="paragraph">ボリュームのシンプロビジョニング、自動サイズ設定、およびスペース管理を有効にして、Oracle データベース用の FSx for ONTAP 構成を最適化します。パフォーマンスとコストのバランスを取るために、適切な Snapshot ポリシーと階層化戦略を設定します。LUN については、書き込みエラーを防ぎ、自動スペース再利用を有効にするために、適切な OS タイプのアライメント、スペース リザベーション、およびスペース割り当て設定を確保します。</block>
   <block id="ec2a0c82b5fcb006f719221eff77fb9b" category="paragraph">Oracle データベースのパフォーマンスを最適化するために、オペレーティング システムの設定を構成します。これには、データベース ワークロードに合わせてカーネル パラメータを調整したり、ネットワーク ファイル システムへのアクセスに適した NFS または dNFS の設定を構成したりすることが含まれます。</block>
   <block id="f02adb373ce0bc6a6199e6d2ba9b16b9" category="paragraph">セキュリティ、安定性、パフォーマンスの向上を確実にするために、Oracleデータベース環境のオペレーティング システムのパッチを定期的に適用してください。</block>
+  <block id="d3274d6efd4629f10f6f21cf8a7c4820" category="doc">SQL Serverの1回限りの評価</block>
+  <block id="8f42179a48bba7e0f2424b2849f64183" category="paragraph">Workload Factoryは、新規導入、移行後、トラブルシューティングなど、必要に応じていつでもSQL Serverデータベースの導入構成を分析する、1回限りの評価サービスを提供しています。デプロイメント構成を最適化し、ベストプラクティスに準拠するための推奨事項が得られます。これは、セットアッププロセスに完全にコミットすることなく、優れた設計の機能を利用できる機会です。Workload Factoryに認証情報を保存したり、データベースリソースを登録したり、外部接続を設定したりすることなく、データベースを評価できます。</block>
+  <block id="d34510ab77e099f24fa05ceac3ff150c" category="paragraph">適切に設計された分析には、Oracle 向けの以下の新しい構成が含まれています：</block>
+  <block id="9712df87120461c7551eea660e7f56a6" category="list-text">*Oracle Critical Patch Updates*：サポート対象のOracleセルフマネージドデータベースインストールに必要なセキュリティパッチの不足状況を評価します。</block>
+  <block id="b435abcc161e9c500b1c5e15baf0cbb5" category="list-text">*リージョン間レプリケーション*：Oracle データベースを提供する FSx for ONTAP ファイルシステムでリージョン間レプリケーション（CRR）が有効になっているかどうかを確認します。</block>
+  <block id="1d06ae97515a4da719bc482a7995a7ae" category="list-text">*アプリケーション整合性スナップショット*：NetApp SnapCenterを使用したアプリケーション整合性スナップショットによってOracleデータベースが保護されているかどうかを確認します。</block>
+  <block id="6a4580dc4131680131fa2d1447aa1deb" category="section-title">Oracleの1回限りの評価</block>
+  <block id="d268ce986e7de78be251b51e6126893b" category="paragraph">Workload Factoryは、新規導入、移行後、トラブルシューティングなど、必要に応じていつでもOracleデータベースの導入構成を分析する、1回限りの評価サービスを提供開始しました。デプロイメント構成を最適化し、ベストプラクティスに準拠するための推奨事項が得られます。これは、セットアッププロセスに完全にコミットすることなく、優れた設計の機能を利用できる機会です。Workload Factoryに認証情報を保存したり、データベースリソースを登録したり、外部接続を設定したりすることなく、データベースを評価できます。</block>
+  <block id="9c1752a9ed07d091eb717e163d985505" category="inline-link-macro">Oracle データベース環境の 1 回限りの評価を実施</block>
+  <block id="24d6ca96f32f995e477bbc13ce8c644a" category="paragraph"><block ref="24d6ca96f32f995e477bbc13ce8c644a" category="inline-link-macro-rx"></block></block>
+  <block id="48b0592736b0870e6ff074c10fa5d5dc" category="section-title">複数のOracleデータベースにおけるコスト削減効果の向上</block>
+  <block id="dc6ae15573380001d0b7dbda2215fba9" category="paragraph">Oracleのコスト削減分析を強化し、1つのFSx for ONTAPファイルシステム上の複数のOracleオンプレミスデータベース向けに統合ストレージソリューションを提供しています。この統合により、複数のデータベースに必要なファイルシステムの数を削減することでストレージコストが最適化され、コスト削減効果が向上します。</block>
+  <block id="141e832aa43713671a149000ddcd45e7" category="inline-link-macro">Oracleオンプレミスで検出されたデータベースの節約効果を検証する</block>
+  <block id="dd6bcf35b4739e139fa3041add91e4f2" category="paragraph"><block ref="dd6bcf35b4739e139fa3041add91e4f2" category="inline-link-macro-rx"></block></block>
+  <block id="7e54439875eebd71cfeadcfc4cd7318c" category="paragraph">Workload Factoryは、選択されたオンプレミスデータベースが単一のFSx for ONTAPファイルシステムのスループット、容量、またはIOPS制限を超えない限り、複数のOracleオンプレミスデータベースを単一のFSx for ONTAP構成推奨に統合してコスト削減を最適化します。</block>
+  <block id="6a5a609e38cb11091780a0494b87dc4d" category="paragraph">不要なアラートや不正確な結果を避けるため、ご自身の環境に適用されない構成の分析は無視することもできます。</block>
+  <block id="c3ebb88c8fa8ba0761ebfdca34dbaeba" category="paragraph">Workload Factoryコンソール内のデータベースインベントリまたはWell-architectedダッシュボードから、問題の確認と修正を行うことができます。</block>
+  <block id="3a40f68be193f0f7bc0c01f622d3cc5f" category="paragraph">オプションとして、クレデンシャルを保存したりリソースを登録したりすることなく、データベース構成のベストプラクティスを確認するための1回限りの評価を実行できます。</block>
+  <block id="e112d8634bd0280eb27ad63e9eeb9493" category="list-text">アプリケーション：Microsoft SQL Serverライセンス、Microsoft SQL Serverパッチ、およびMAXDOP設定が含まれます</block>
+  <block id="f953bb98ceaddd49464d672fa425c300" category="list-text">アプリケーション：Oracle Critical Patch Updatesを含む</block>
+  <block id="10e1b7780581fec77099c3ba816f3e14" category="list-text">回復力：リージョン間レプリケーション（CRR）およびアプリケーション整合性Snapshotを含む</block>
+  <block id="c20a2029d45b71b182aee84243212b9d" category="section-title">設定の 1 回限りの評価を実行します</block>
+  <block id="384e59575141746d138a94a55377c6e8" category="paragraph">認証情報を保存したりリソースを登録したりすることなく、1回限りの評価を実行して、Microsoft SQL ServerインスタンスまたはOracleデータベースの適切なアーキテクチャステータスを確認します。</block>
+  <block id="c091a4936cfa8cd2dad53f925bd5aee2" category="paragraph">スクリプトは複数回実行して結果をアップロードできます。Workload Factoryは、アップロードのたびに、適切に設計されたステータスとインサイトを更新します。</block>
+  <block id="16764b6a83028e2ba158fe9563fecab0" category="open-title">Microsoft SQL Serverインスタンス</block>
+  <block id="95cd2e65021832c5e9a52a57dd07ff01" category="list-text">*Inventory*で、エンジンタイプとして*SQL Server*を選択します。</block>
+  <block id="9d98556bc723d858756fd0843fa906c5" category="list-text">*One-time assessment* &gt; *Learn about assessment* を選択します。1回限りの評価に関する情報を確認します。</block>
+  <block id="7c0eb4e39d40023981d0b86686c042ec" category="list-text">任意の構成に対する推奨事項を表示します。Workload Factoryは、構成が最適化されていない場合に起こりうる問題点と、ベストプラクティスを推奨事項に含めています。</block>
+  <block id="5ffbe0deb5b41148dc58e63a20df8411" category="open-title">Oracleデータベース</block>
+  <block id="5ff54af90bf02d618e79e03c84b00700" category="list-text">*Inventory*で、エンジンタイプとして*Oracle*を選択します。</block>
+  <block id="8cbcf57c0ff19d0bfce7c5c703a985f7" category="list-text">PythonスクリプトをOracleデータベースホストにコピーします。</block>
+  <block id="1403600c1d66e7c9c648c18cc49caa6b" category="list-text">適切なシェルでスクリプトを実行してください。1つのスクリプトで、すべてのデータベースからメタデータを収集します。</block>
+  <block id="b740c45c86ad7009995655549fe4d99e" category="paragraph">データベース環境の継続的な監視と設定問題の自動修正には、以下の要件が必要です。これらの要件は、1回限りの評価には必要ありません。</block>
+  <block id="ee3b04dc1b62ec42f7ac81b2e81b8eef" category="admonition">設定を修正すると、ダウンタイムやサービスの中断が発生する可能性があります。設定を修正する前に、推奨事項をよく確認してください。</block>
+  <block id="4f03f223eb6e4b828fcf786106ebb22e" category="list-text">クローンクリーンアップを除くすべての構成については、推奨事項の詳細を確認し、問題の修正による影響を確認してください。一部の修復作業では、ダウンタイムやサービスの中断が発生する可能性があります。</block>
+  <block id="9d5f676da687a39223271ef7bfef6eb9" category="paragraph">Workload Factory は構成分析を停止します。</block>
+  <block id="26ba07e6b041d123d9095fe79f71abdf" category="paragraph">Workload Factoryは構成分析を再開し、今後は毎日実行します。</block>
+  <block id="ba52550fcd053eb4d2da84f252e514e7" category="section-title">データベース環境を分析するためのオプション</block>
+  <block id="fbce5e4a64b8c9a295b946cbdba92ed5" category="paragraph">Workload Factory は、データベース環境を分析するための以下のオプションを提供します：</block>
+  <block id="b2583e88253ca682a5c9db94c5ed500a" category="inline-link-macro">1回限りの評価</block>
+  <block id="552cb152a031acb4dd113f600e3ade2f" category="list-text">*1回限りの評価*：<block ref="8a4d4d5f036a1f87bfd488fd328f962f" category="inline-link-macro-rx"></block>を実行して、認証情報を保存したりリソースを登録したりすることなく、Microsoft SQL ServerインスタンスまたはOracleデータベースの適切に設計された状態を確認します。</block>
+  <block id="2527ed375db9a9b7c8eb438c41b158af" category="list-text">*継続的監視*：継続的監視を有効にするには、リソースを登録してください。Workload Factory は、データベース環境を定期的に分析し、設定を最適化するための継続的な推奨事項を提供し、問題を自動的に修正します。</block>
+  <block id="c00d1429cf92a83ae3a29f82b1d3ce87" category="paragraph">1回限りの評価では、分析対象のMicrosoft SQL ServerインスタンスまたはOracleデータベースに対して、認証情報を1回だけ提供すれば済みます。</block>
+  <block id="8e66e2128d2e2c62b019aa77535f4ea2" category="paragraph">継続的な監視を行うには、AWSアカウントでリソースを登録し、リンクを関連付け、権限を付与する必要があります。</block>
+  <block id="e498749f3c42246d50b15c81c101d988" category="section-title">Application</block>
+  <block id="6f4c4a3cb603b128e3558183f12a42c6" category="list-text">*Oracle クリティカルパッチアップデート*</block>
+  <block id="b73450e7e11af7bf00f7fdd615541be8" category="paragraph">セキュリティ脆弱性に対処し、データベース環境の整合性を維持するために、最新のOracleクリティカルパッチアップデートを適用してください。潜在的な脅威から保護し、セキュリティのベストプラクティスを遵守するために、定期的にパッチをレビューして適用してください。</block>
+  <block id="02bc0523497de72834c4c7990e32d155" category="section-title">耐障害性</block>
+  <block id="10797d31a69c2502a69facc97a069c1e" category="list-text">*クロスリージョンレプリケーション（CRR）*</block>
+  <block id="a9e4d72be69fab8a75dc490382a14871" category="paragraph">Oracleデータベースのデータ可用性と災害復旧機能を強化するには、リージョン間レプリケーション（CRR）を有効にしてください。CRRは、地理的に分散した拠点間でデータを複製することで、地域的な障害からシステムを守り、事業継続性を確保します。</block>
+  <block id="4e3fbfcdffe2becd73a5b796de048459" category="list-text">*アプリケーション整合性Snapshot*</block>
+  <block id="0d0d1e59f6397f54691afa326ea6ef15" category="paragraph">NetApp SnapCenterでアプリケーション整合性スナップショットを使用して、特定の時点におけるボリュームデータの正確で信頼性の高いスナップショットを取得できます。これにより、アプリがスムーズに動作し、データが安全に保たれます。SnapCenterは、バックアップを容易にし、データの迅速かつ正確な復元を支援することで、ダウンタイムを削減し、最も重要なワークロードを保護します。</block>
+  <block id="7f65119c79afd09b7f99936d13e97909" category="section-title">2026年4月6日</block>
 </blocks>
