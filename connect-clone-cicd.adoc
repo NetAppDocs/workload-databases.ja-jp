@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: connect-clone-cicd.html 
-keywords: connect ci/cd pipeline, clone 
-summary: REST APIコードを使用してサンドボックスクローンをCI / CDパイプラインに接続し、自動化によってソフトウェア提供を改善します。 
+keywords: connect ci and cd pipeline, clone 
+summary: REST API コードを使用してサンドボックスクローンを CI および CD パイプラインに接続し、自動化によってソフトウェア配信を改善します。 
 ---
 = サンドボックスクローンをCI/CDツールに接続する
 :allow-uri-read: 
