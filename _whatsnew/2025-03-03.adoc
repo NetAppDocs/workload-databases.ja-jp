@@ -8,7 +8,7 @@
 
 PostgreSQLサーバにハイアベイラビリティ（HA）構成を導入できるようになりました。
 
-link:https://review.docs.netapp.com/us-en/workload-databases_explore-savings-updates/create-postgresql-server.html["PostgreSQLサーバの作成"]
+link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.html["PostgreSQLサーバの作成"]
 
 
 

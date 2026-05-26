@@ -17,7 +17,7 @@ NetApp Workload Factory for Databases は、最適化、自動シン クロー�
 
 == NetApp Workload Factory for Databases とは何ですか?
 
-NetApp Workload Factory for Databases は、Microsoft SQL Server データを検出、評価、計画、プロビジョニングし、業界のベストプラクティスに準拠しながらパフォーマンスとコストの期待に応えるように最適化されたAmazon FSx for NetApp ONTAP (FSx for ONTAP) デプロイメントに移動します。  NetApp Workload Factory for Databases は、ライフサイクル全体を通じて、FSx for ONTAP上のデータベースの継続的な最適化と管理を実現します。
+NetApp Workload Factory for Databasesは、Microsoft SQL Server、PostgreSQL、およびOracleデータを検出、評価、計画、プロビジョニングし、業界のベストプラクティスを遵守しながら、パフォーマンスとコストの期待に応えるように最適化されたAmazon FSx for NetApp ONTAP（FSx for ONTAP）環境に移行します。NetApp Workload Factory for Databasesは、FSx for ONTAP上のデータベースを継続的に最適化および管理します。
 
 ワークロードファクトリーの詳細については、link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["ワークロードファクトリーの概要"^] 。
 
@@ -25,7 +25,7 @@ NetApp Workload Factory for Databases は、Microsoft SQL Server データを検
 
 == セルフマネージドデータベースにおけるワークロードファクトリーのメリット
 
-Workload Factory は、自己管理型データベース向けに次のような有益なベスト プラクティスと自動化を提供します。
+Workload Factoryは、自己管理型データベース向けのベストプラクティスと自動化機能を提供します。
 
 
 
@@ -43,7 +43,7 @@ Workload Factory は、自己管理型データベース向けに次のような
 
 Workload Factory は、_Codebox_ による組み込みの自動化を導入します。  Codebox は次のような自動化の利点を提供します。
 
-* *コードスニペットの生成*：IAC（Infrastructure as Code）スニペットはリソース作成時に生成されるため、既存のオーケストレーションワークフローとシームレスに統合できます。
+* *コードスニペットの生成*：Workload Factoryは、リソース作成時にInfrastructure-as-Code（IaC）スニペットを生成し、既存のオーケストレーションワークフローとのシームレスな統合を可能にします。
 * *Infrastructure-as-code のコパイロット*: Codebox は、開発者と DevOps が Workload Factory でサポートされているあらゆる操作を実行するためのコードを生成するのに役立つ Infrastructure-as-code (IaC) コパイロットです。
 * *コードビューアと自動化カタログ*:コードボックスは、自動化の迅速な分析のためのコードビューアと、将来の迅速な再利用のための自動化カタログを提供します。
 
@@ -54,16 +54,16 @@ Workload Factory は、_Codebox_ による組み込みの自動化を導入し�
 
 Workload Factory for Databases は次の機能を提供します。
 
-* *シンプルで迅速な導入*：仕様に関する質問に対する回答を選択し、Microsoft SQL Server on AWSのプロビジョニングおよび構成方法の調査に通常必要な時間を排除することで、プロビジョニングエクスペリエンスを簡素化および合理化します。
-* *自動オーケストレーション*: Workload Factory コンソールの _Quick_ および _Advanced_ 作成デプロイメント モード、Chatbot、および Codebox 経由の AWS CloudFormation から利用できます。
-* *組み込み機能*：NetApp、Microsoft、Amazonのベストプラクティスと、導入構成に組み込まれたAWSリソースの選択を活用します。
-* *コストの見積もり*：Savings Calculatorを使用して、既存のMicrosoft SQL Server環境（Elastic Block StoreとFSx for Windowsファイルサーバを使用）のストレージ、コンピューティング、SQLライセンス、スナップショット、クローンの項目別コストを、FSx for ONTAPと比較して試算および詳細化し、削減可能なコストを評価します。
-* *再利用可能な自動化テンプレート*: 複数の環境での将来の Microsoft SQL Server の展開のために、Workload Factory Codebox から CloudFormation テンプレートを作成、再利用、カスタマイズします。
-* * AWSリソースの検出とプロビジョニング*：AWSアカウントから導入されたFSx for ONTAP、FSx for Windowsファイルサーバ、Elastic Block StoreでMicrosoft SQL Serverを自動的に検出します。データベースインベントリは、他のAWSストレージシステム内のサーバのコスト削減の余地を探るための出発点として機能し、FSx for ONTAPベースのサーバとインスタンスの管理ツールとして機能します。
-* *サンドボックスの作成*：本番環境のデータに影響を与えることなく、テスト、統合、診断、トレーニングに使用できる、オンデマンドの分離されたデータベース環境を作成します。
-* *データベースの作成*:データベースの照合、ファイル名、およびサイズを構成するために、_Quick_or_Advanced_createモードを使用して、既存のMicrosoft SQL Server用のユーザーデータベースを作成します。ストレージ構成も含まれます。
-* *ジョブ監視*:データベースジョブの実行状況を監視および追跡し、障害が発生した場合の問題を診断およびトラブルシューティングします。
-* *継続的な最適化*：Microsoft SQL Server環境をオフラインで継続的にスキャンし、優れた運用性の実現に役立つインサイト、機会、推奨事項の包括的なレポートを提供します。
+* *コスト見積もり*：Elastic Block Store、FSx for Windows File Server、オンプレミスと比較して、FSx for ONTAPを使用した既存のMicrosoft SQL ServerおよびOracleデプロイメントのストレージ、コンピューティング、SQLライセンス、スナップショット、クローンの項目別コストを見積もり、詳細化する節約計算ツールを使用して、潜在的なコスト削減を評価します。
+* *シンプルで高速な導入*：組み込みのNetApp、Microsoft、Amazon のベストプラクティスにより、ホスト、データベース、サンドボックスのプロビジョニングを簡素化および合理化し、AWS 上の Microsoft SQL Server および PostgreSQL インスタンスの手動設定の複雑さを排除します。
++
+** Workload Factory コンソールから_Quick_または_Advanced_作成モードを使用してデプロイするか、Codebox を通じて AWS CloudFormation テンプレートを作成、再利用、カスタマイズして、複数の環境にわたる将来のデプロイメントに活用します。
+** 本番データに影響を与えることなく、テスト、統合、診断、トレーニングに使用できる、ストレージ構成とサンドボックスクローンを備えたオンデマンドの隔離されたデータベースを作成します。
+
+
+* *Well-architected assessment機能*:Microsoft SQL ServerおよびOracleの環境を継続的にスキャンし、AWSのベストプラクティスに基づいて運用上の卓越性、セキュリティ、信頼性、パフォーマンス効率、コスト最適化の実現に役立つ洞察、機会、推奨事項を網羅した包括的なレポートを提供します。
+* *エラー分析*：AIアナライザーを使用してログエラーを分析およびトラブルシューティングし、詳細なエラーメッセージ、トラブルシューティング手順、および問題を解決するための推奨事項を取得します。
+* *集中管理*：Microsoft SQL Server、Oracle、PostgreSQL の各リソースを FSx for ONTAP 上で一元管理できます。Workload Factory では、接続されているインフラ、AWS アカウント、クレデンシャル、接続されている FSx for ONTAP ファイルシステム、NFS ボリュームや iSCSI LUN を含むストレージ使用状況、保護ステータス、パフォーマンス、Well-Architected ステータス、エラー分析を表示できます。
 
 
 
@@ -96,7 +96,7 @@ NetApp Workload Factory は次のツールで使用できます。
 
 == サポートされる構成
 
-Workload Factory は、AWS、 NetApp ONTAP、Microsoft SQL Server、Oracle、PostgreSQL のベストプラクティスに従って、次のデータベース エンジン、バージョン、オペレーティング システム、およびデプロイメント モデルをサポートしています。
+Workload Factoryは、AWS、NetApp ONTAP、Microsoft SQL Server、Oracle、およびPostgreSQLのベストプラクティスに従い、以下のデータベースエンジン、バージョン、オペレーティングシステム、および導入モデルで使用できます。
 
 [cols="1,1,1,1"]
 |===
@@ -169,7 +169,7 @@ Workload Factory は、AWS、 NetApp ONTAP、Microsoft SQL Server、Oracle、Pos
 
 == AWS統合サービス
 
-データベースには、次のAWS統合サービスが含まれています。
+データベースには、以下の統合されたAWSサービスが含まれています：
 
 * クラウド形成
 * 簡易通知サービス
