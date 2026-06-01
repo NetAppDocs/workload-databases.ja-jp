@@ -212,10 +212,10 @@ GovCloudアカウントの場合は、認証情報のAWS SSMパラメータARN�
 +
 ... *新しいFSx for ONTAPを作成*：ユーザー名とパスワードを入力します。
 +
-+ GovCloudアカウントの場合は、FSx for ONTAPクレデンシャルのAWS SSMパラメータARN値を次の形式で入力します： `{fsx:{"username":"fsxadmin","password":"pass"}}`。AWS SSMパラメータタイプは「Secure String」である必要があり、名前は次の形式にする必要があります： `/netapp/wlmdb/<anyname>`。SSMパラメータの取得の詳細については、link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloudドキュメント"^]を参照してください。
+GovCloudアカウントの場合は、FSx for ONTAPクレデンシャルのAWS SSMパラメータARN値を次の形式で入力します： `{fsx:{"username":"fsxadmin","password":"pass"}}`。AWS SSMパラメータタイプは「Secure String」で、名前は次の形式である必要があります `/netapp/wlmdb/<anyname>`。SSMパラメータの取得の詳細については、link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloudドキュメント"^]を参照してください。
 
 +
-+ 新しいFSx for ONTAPファイルシステムによっては、インストール時間が30分以上長くなる場合があります。
+新しいFSx for ONTAPファイルシステムでは、インストールに30分以上かかる場合があります。
 
 ... *既存のFSx for ONTAPを選択*：ドロップダウンメニューからFSx for ONTAP名を選択し、ファイルシステムのユーザ名とパスワードを入力します。
 +
