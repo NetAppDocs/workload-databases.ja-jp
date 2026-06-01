@@ -139,6 +139,13 @@ NOTE: FCIの導入は、複数のアベイラビリティゾーン（MAZ）FSx f
 
 
 . [アプリケーションの設定]*で、*データベースクレデンシャル*のユーザ名とパスワードを入力します。
++
+GovCloudアカウントの場合は、AWS SSM パラメーター ARN の値を次の形式で入力してください：
+`{fsx:{"username":"fsxadmin","password":"pass"}}`
+
++
+この値は、AWS マネジメントコンソールのパラメーターストアの「パラメーターの詳細」に表示されます。AWS SSM パラメータのタイプは「セキュア文字列」で、名前の形式は次のようになります `/netapp/wlmdb/<anyname>`。SSMパラメータの取得方法については、以下をご覧くださいlink:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloudドキュメント"^]。
+
 . [Connectivity]*で、次の情報を入力します。
 +
 .. *キーペア*:キーペアを選択します。
@@ -156,6 +163,9 @@ AWSが管理するActive Directoryの場合、DNS IPアドレスがドロップ�
 
 ... [ユーザ名]フィールドに、Active Directoryドメインのユーザ名を入力します。
 ... [パスワード]*フィールドに、Active Directoryドメインのパスワードを入力します。
++
+GovCloudアカウントの場合は、Active Directory認証情報用のAWS SSMパラメータARN値を次の形式で入力してください： `{fsx:{"username":"fsxadmin","password":"pass"}}`AWS SSM パラメータのタイプは「セキュア文字列」で、名前の形式は次のようになります `/netapp/wlmdb/<anyname>`SSMパラメータの取得方法については、link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloudドキュメント"^]を参照してください。
+
 
 
 
@@ -166,9 +176,12 @@ AWSが管理するActive Directoryの場合、DNS IPアドレスがドロップ�
 +
 ... *新しいFSx for ONTAPを作成*：ユーザー名とパスワードを入力します。
 +
+GovCloudアカウントの場合は、FSx for ONTAPクレデンシャルのAWS SSMパラメータARN値を次の形式で入力します： `{fsx:{"username":"fsxadmin","password":"pass"}}`。AWS SSMパラメータタイプは「Secure String」で、名前は次の形式である必要があります `/netapp/wlmdb/<anyname>`。SSMパラメータの取得の詳細については、link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloudドキュメント"^]を参照してください。
+
++
 新しいFSx for ONTAPファイルシステムでは、インストールに30分以上かかる場合があります。
 
-... *既存のFSx for ONTAPを選択*：ドロップダウンメニューからFSx for ONTAP名を選択し、ファイルシステムのユーザ名とパスワードを入力します。
+... *既存のFSx for ONTAPを選択*：FSx for ONTAP名を選択し、ファイルシステムのユーザー名とパスワードを入力してください。
 +
 既存のFSx for ONTAPファイルシステムについては、次の点を確認します。
 
@@ -251,16 +264,7 @@ NOTE: FCIの導入は、複数のアベイラビリティゾーン（MAZ）FSx f
 
 
 
-.. *セキュリティグループ*:既存のセキュリティグループを選択するか、新しいセキュリティグループを作成します。新しいサーバの導入時に、3つのセキュリティグループがSQLノード（EC2インスタンス）に接続されます。
-+
-... ノード上のMicrosoft SQLおよびWindowsクラスタ通信に必要なポートとプロトコルを許可するために、ワークロードセキュリティグループが作成されます。
-... AWSが管理するActive Directoryの場合、ディレクトリサービスに関連付けられたセキュリティグループがMicrosoft SQLノードに自動的に追加され、Active Directoryとの通信が可能になります。
-... 既存のFSx for ONTAPファイルシステムでは、関連付けられているセキュリティグループがSQLノードに自動的に追加され、ファイルシステムとの通信が可能になります。新しいFSx for ONTAPシステムが作成されると、FSx for ONTAPファイルシステム用の新しいセキュリティグループが作成され、同じセキュリティグループがSQLノードに接続されます。
-+
-ユーザが管理するActive Directoryの場合は、ADインスタンスに設定されたセキュリティグループが、導入に使用するサブネットからのトラフィックを許可していることを確認します。セキュリティグループは、Microsoft SQLのEC2インスタンスが設定されているサブネットからActive Directoryドメインコントローラへの通信を許可する必要があります。
-
-
-
+.. *セキュリティグループ*：ワークロードセキュリティグループが作成され、ノード上の Microsoft SQL Server および Windows クラスタ通信に必要なポートとプロトコルが許可されます。さらに、1つまたは複数のセキュリティグループを選択することもできます。
 
 
 . [アプリケーションの設定]*で、次の情報を入力します。
@@ -288,6 +292,13 @@ NOTE: 選択した照合セットがインストールに互換性がない場�
 +
 オプション: SQL Server サービス アカウントに *管理されたサービス アカウントを使用する* を選択します。環境で MSA (Managed Service Account) またはグループ管理サービス アカウント (gMSA) が使用され、パスワード管理が Active Directory によって処理される場合は、このオプションを使用します。
 
++
+GovCloudアカウントの場合は、AWS SSM パラメーター ARN の値を次の形式で入力してください：
+`{fsx:{"username":"fsxadmin","password":"pass"}}`
+
++
+この値は、AWS マネジメントコンソールのパラメーターストアの「パラメーターの詳細」に表示されます。AWS SSM パラメータのタイプは「セキュア文字列」で、名前の形式は次のようになります `/netapp/wlmdb/<anyname>`。SSMパラメータの取得方法については、以下をご覧くださいlink:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloudドキュメント"^]。
+
 
 
 . [Connectivity]*で、次の情報を入力します。
@@ -305,8 +316,10 @@ NOTE: 選択した照合セットがインストールに互換性がない場�
 +
 AWSが管理するActive Directoryの場合、DNS IPアドレスがドロップダウンメニューに表示されます。
 
-... [ユーザ名]フィールドに、Active Directoryドメインのユーザ名を入力します。
-... [パスワード]*フィールドに、Active Directoryドメインのパスワードを入力します。
+... Active Directoryドメインのユーザー名とパスワードを入力します。
++
+GovCloudアカウントの場合は、Active Directory認証情報用のAWS SSMパラメータARN値を次の形式で入力してください： `{fsx:{"username":"fsxadmin","password":"pass"}}`AWS SSM パラメータのタイプは「セキュア文字列」で、名前の形式は次のようになります `/netapp/wlmdb/<anyname>`SSMパラメータの取得方法については、link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloudドキュメント"^]を参照してください。
+
 ... *優先ドメイン コントローラ*: オプションで、Active Directory が参加するために使用する優先ドメイン コントローラを入力します。
 ... *優先組織単位パス*: オプションで、参加する Active Directory 内の優先組織単位 (OU) を入力します。
 ... *ターゲット Active Directory グループ*: オプションで、コンピューターを追加するターゲット Active Directory グループを入力します。
@@ -320,6 +333,9 @@ AWSが管理するActive Directoryの場合、DNS IPアドレスがドロップ�
 .. * FSx for ONTAPシステム*：新しいFSx for ONTAPファイルシステムを作成するか、既存のFSx for ONTAPファイルシステムを使用します。
 +
 ... *新しいFSx for ONTAPを作成*：ユーザー名とパスワードを入力します。
++
+GovCloudアカウントの場合は、FSx for ONTAPクレデンシャルのAWS SSMパラメータARN値を次の形式で入力します： `{fsx:{"username":"fsxadmin","password":"pass"}}`。AWS SSMパラメータタイプは「Secure String」で、名前は次の形式である必要があります `/netapp/wlmdb/<anyname>`。SSMパラメータの取得の詳細については、link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloudドキュメント"^]を参照してください。
+
 +
 新しいFSx for ONTAPファイルシステムでは、インストールに30分以上かかる場合があります。
 

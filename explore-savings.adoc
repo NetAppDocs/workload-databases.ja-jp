@@ -78,6 +78,12 @@ Calculatorは、次のライセンスに依存して割り当てられたリソ�
 
 === カスタマイズによるコスト削減の詳細
 
+最も正確な節約額の見積もりを得るには、計算ツールの各項目をカスタマイズしてください。
+
+
+
+==== Microsoft SQL Serverホストの節約をカスタマイズする
+
 ストレージタイプに応じたタブの手順に従います。
 
 [role="tabbed-block"]
@@ -157,7 +163,54 @@ Calculatorは、次のライセンスに依存して割り当てられたリソ�
 * *計算結果を表示*
 
 
-FSx for ONTAPに切り替えるには、の手順に従います <<FSx for ONTAPを使用してAWS EC2にMicrosoft SQL Serverを導入,FSx for ONTAPファイルシステムを使用してAQS EC2にMicrosoft SQL Serverを導入>>。
+FSx for ONTAPに切り替えるには、<<FSx for ONTAPを使用してAWS EC2にMicrosoft SQL Serverを導入,FSx for ONTAP ファイルシステムを使用して AWS EC2 に Microsoft SQL Server を導入する>>の手順に従ってください。
+
+
+
+==== EBS上のOracleホストの節約をカスタマイズ
+
+Amazon Elastic Block Store（EBS）で実行されているOracleホストの最も正確な節約見積もりを取得するには、計算ツールのフィールドをカスタマイズしてください。
+
+.手順
+. いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
+. メニューを選択 image:workloads-menu-icon.png["ハンバーガー メニュー アイコンは、ストレージ、eda、ai、データベース、vmware、管理などのワークロードに移動するために使用されます。"] 次に、[*データベース*]を選択します。
+. データベースから、*節約を探る*を選択し、次に*Oracle on EBS*を選択します。
+. Savings Calculatorで、次の詳細を入力します。
++
+.. *リージョン*:ドロップダウンメニューからリージョンを選択します。
+.. *展開モデル*:ドロップダウンメニューから展開モデルを選択します。
+.. *Oracleエディション*：ドロップダウンメニューからOracleエディションを選択してください。
+.. *毎月のデータ変更率（%）*：クローンおよびスナップショットのデータ変更率を1カ月あたりの平均で入力します。
+.. * Snapshotの頻度*：ドロップダウンメニューからSnapshotの頻度を選択します。
+.. *クローニングされたコピーの数*：EBS設定のクローニングされたコピーの数を入力します。
+.. *Oracle BYOLの月額費用（$）*：必要に応じて、Oracle BYOLの月額費用をドルで入力してください。
+.. [EC2 specifications]で、次の情報を入力します。
++
+*** *マシンの説明*：オプションで、マシンを説明する名前を入力します。
+*** *インスタンスタイプ*：ドロップダウンメニューからEC2インスタンスタイプを選択します。
+
+
+.. [Volume Types]で、少なくとも1つのボリュームタイプについて次の詳細を指定します。IOPSとスループットは特定のディスクタイプボリュームに適用されます。
++
+*** *ボリューム数*
+*** *ボリュームあたりのストレージ容量（GiB）*
+*** *ボリュームあたりのプロビジョニングIOPS *
+*** *スループット（MB/秒）*
+
+
+.. 常時稼働の可用性導入モデルを選択した場合は、*セカンダリEC2の仕様*および*ボリュームタイプ*の詳細を指定します。
+
+
+
+
+データベースホストの設定の詳細を指定したら、ページに表示される計算式と推奨事項を確認します。
+
+さらに、次のいずれかを選択して、ページの一番下までスクロールしてレポートを表示します。
+
+* * PDFのエクスポート*
+* *電子メールで送信*
+* *計算結果を表示*
+
 
 
 
@@ -336,7 +389,7 @@ Microsoft SQL Server オンプレミス ホストの節約を検討した後、�
 * *計算結果を表示*
 
 
-FSx for ONTAPに切り替えるには、の手順に従います <<FSx for ONTAPを使用してAWS EC2にMicrosoft SQL Serverを導入,FSx for ONTAPファイルシステムを使用してAQS EC2にMicrosoft SQL Serverを導入>>。
+FSx for ONTAPに切り替えるには、<<FSx for ONTAPを使用してAWS EC2にMicrosoft SQL Serverを導入,FSx for ONTAP ファイルシステムを使用して AWS EC2 に Microsoft SQL Server を導入する>>の手順に従ってください。
 
 
 
@@ -423,8 +476,6 @@ Oracle オンプレミスホストのコスト削減効果を確認した後、W
 * *電子メールで送信*
 * *計算結果を表示*
 
-
-FSx for ONTAPに切り替えるには、の手順に従います <<FSx for ONTAPを使用してAWS EC2にMicrosoft SQL Serverを導入,FSx for ONTAPファイルシステムを使用してAQS EC2にMicrosoft SQL Serverを導入>>。
 
 
 

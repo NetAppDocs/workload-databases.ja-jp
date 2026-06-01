@@ -105,6 +105,9 @@ NOTE: HAの導入は、複数のアベイラビリティゾーン（MAZ）FSx fo
 +
 ... *新しいFSx for ONTAPを作成*：ユーザー名とパスワードを入力します。
 +
+GovCloudアカウントの場合は、FSx for ONTAPクレデンシャルのAWS SSMパラメータARN値を次の形式で入力します： `{fsx:{"username":"fsxadmin","password":"pass"}}`。AWS SSMパラメータタイプは「Secure String」で、名前は次の形式である必要があります `/netapp/wlmdb/<anyname>`。SSMパラメータの取得の詳細については、link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloudドキュメント"^]を参照してください。
+
++
 新しいFSx for ONTAPファイルシステムでは、インストールに30分以上かかる場合があります。
 
 ... *既存のFSx for ONTAPを選択*：ドロップダウンメニューからFSx for ONTAP名を選択し、ファイルシステムのユーザ名とパスワードを入力します。
@@ -187,15 +190,7 @@ vPC DNS属性 `EnableDnsSupport` とが `EnableDnsHostnames` 、エンドポイ�
 ... [クラスタ構成-ノード2 ]*フィールドで、*[アベイラビリティゾーン]*ドロップダウンメニューからMAZ FSx for ONTAP構成のセカンダリアベイラビリティゾーンを選択し、*[サブネット]*ドロップダウンメニューからセカンダリアベイラビリティゾーンのサブネットを選択します。
 
 
-.. *セキュリティグループ*:既存のセキュリティグループを選択するか、新しいセキュリティグループを作成します。
-+
-新しいサーバの導入時に、2つのセキュリティグループがSQLノード（EC2インスタンス）に接続されます。
-
-+
-... PostgreSQLに必要なポートとプロトコルを許可するために、ワークロードセキュリティグループが作成されます。
-... 新しいFSx for ONTAPファイルシステムの場合は、新しいセキュリティグループが作成されてSQLノードに接続されます。既存のFSx for ONTAPファイルシステムでは、関連付けられているセキュリティグループがPostgreSQLノードに自動的に追加され、ファイルシステムとの通信が可能になります。
-
-
+.. *セキュリティグループ*：PostgreSQLに必要なポートとプロトコルを許可するために、ワークロードセキュリティグループが作成されます。さらに、1つまたは複数のセキュリティグループを選択することもできます。
 
 
 . [アプリケーションの設定]*で、次の情報を入力します。
@@ -204,6 +199,9 @@ vPC DNS属性 `EnableDnsSupport` とが `EnableDnsHostnames` 、エンドポイ�
 .. ドロップダウンメニューから* PostgreSQLバージョン*を選択します。
 .. *データベースサーバ名*：データベースクラスタ名を入力します。
 .. *データベース資格情報*：新しいサービスアカウントのユーザー名とパスワードを入力するか、Active Directoryの既存のサービスアカウント資格情報を使用します。
++
+GovCloudアカウントの場合は、認証情報のAWS SSMパラメータARN値を次の形式で入力してください： `{fsx:{"username":"fsxadmin","password":"pass"}}`AWS SSMパラメータのタイプは「Secure String」で、名前の形式は次のようになります： `/netapp/wlmdb/<anyname>`SSMパラメータの取得の詳細については、link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloudドキュメント"^]を参照してください。
+
 
 
 . [Connectivity]*で、インスタンスに安全に接続するキーペアを選択します。
@@ -214,7 +212,10 @@ vPC DNS属性 `EnableDnsSupport` とが `EnableDnsHostnames` 、エンドポイ�
 +
 ... *新しいFSx for ONTAPを作成*：ユーザー名とパスワードを入力します。
 +
-新しいFSx for ONTAPファイルシステムでは、インストールに30分以上かかる場合があります。
++ GovCloudアカウントの場合は、FSx for ONTAPクレデンシャルのAWS SSMパラメータARN値を次の形式で入力します： `{fsx:{"username":"fsxadmin","password":"pass"}}`。AWS SSMパラメータタイプは「Secure String」である必要があり、名前は次の形式にする必要があります： `/netapp/wlmdb/<anyname>`。SSMパラメータの取得の詳細については、link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloudドキュメント"^]を参照してください。
+
++
++ 新しいFSx for ONTAPファイルシステムによっては、インストール時間が30分以上長くなる場合があります。
 
 ... *既存のFSx for ONTAPを選択*：ドロップダウンメニューからFSx for ONTAP名を選択し、ファイルシステムのユーザ名とパスワードを入力します。
 +
@@ -245,7 +246,7 @@ FSx for ONTAPのカスタム暗号化キーは、サービスの適用性に応�
 AWSで管理されるキーは、サービスの適用可能性に基づいてフィルタリングされます。
 
 .. *タグ*:オプションで、最大40個のタグを追加できます。
-.. * Simple Notification Service *：必要に応じて、ドロップダウンメニューからMicrosoft SQL ServerのSNSトピックを選択して、この構成のSimple Notification Service（SNS）を有効にすることができます。
+.. *Simple Notification Service*：オプションで、ドロップダウンメニューからPostgreSQL用のSNSトピックを選択することで、この構成に対してSimple Notification Service（SNS）を有効にできます。
 +
 ... Simple Notification Serviceを有効にします。
 ... ドロップダウンメニューからARNを選択します。

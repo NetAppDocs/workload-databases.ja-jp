@@ -23,6 +23,8 @@ NetApp Workload Factory for Databases でインスタンスとデータベース
 
 Workload Factory は、Microsoft SQL Server インスタンスと Oracle データベースの登録と管理のみをサポートしています。Workload Factory で選択した AWS アカウントの認証情報に応じて、PostgreSQL ホストがインベントリに表示されます。現在、Workload Factory は、Amazon Linux オペレーティングシステムでのみ実行されている未登録の PostgreSQL インスタンスをサポートしています。
 
+AWS GovCloud（US）ユーザーは、FSx for ONTAP クレデンシャルの認証に AWS Secrets Manager を使用する必要があります。その他のすべてのユーザーは、ファイルシステムクレデンシャルを使用して FSx for ONTAP を認証する必要があります。
+
 
 
 == 開始する前に
@@ -72,10 +74,13 @@ Workload Factory は、SQL Server のフェールオーバークラスタイン�
 
 
 
-. FSx for ONTAPを認証するには（手順2）、次の操作を行います：
+. FSx for ONTAPを認証するには（手順2）、次の操作を実行してから、*次へ*を選択します：
 +
 .. *すべてのリソースに同じクレデンシャルを使用する*か*クレデンシャルを手動で管理する*かを選択します。
-.. FSx for ONTAPファイルシステムのユーザー名とパスワードを入力し、*次へ*を選択します。
+.. GovCloudアカウントの場合は FSx for ONTAP クレデンシャルを含む AWS SSM パラメータ ARN を入力し、その他すべてのアカウントの場合は FSx for ONTAP ファイルシステムのユーザー名とパスワードを入力して、*次へ*を選択します。
++
+GovCloudアカウントの場合、AWS SSM Parameter ARN値は、AWS Management ConsoleのParameter StoreのParameter detailsに次の形式で表示されます： `{fsx:{"username":"fsxadmin","password":"pass"}}`。AWS SSM ParameterタイプはSecure Stringで、名前の形式は次のようになります： `/netapp/wlmdb/<fsx_filesystemID>`。SSMパラメータの取得の詳細については、link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloudドキュメント"^]を参照してください。
+
 +
 FSx for ONTAPファイルシステムが認証されたら、*次へ*を選択します。
 
@@ -115,10 +120,10 @@ Workload Factory でlink:optimize-configurations.html["適切に設計された�
 . インベントリで、エンジンタイプとして *Oracle* を選択します。
 . *データベース*タブを選択します。
 . 単一のデータベースを登録するか、複数のデータベースを登録するかを選択します。
-. データベースを認証するには（手順1）、次の手順を実行します：
+. データベースを認証するには（手順1）、以下の手順を実行し、*次へ*を選択してください：
 +
-** *すべてのインスタンスに同じクレデンシャルを使用する*か*クレデンシャルを手動で管理する*かを選択します。
-** ユーザー名とパスワード情報を指定して、Oracle ユーザーと Automatic Storage Management（ASM）グリッドユーザー（該当する場合）を認証します。
+.. *すべてのインスタンスに同じクレデンシャルを使用する*か*クレデンシャルを手動で管理する*かを選択します。
+.. ユーザー名とパスワード情報を指定して、Oracle ユーザーと Automatic Storage Management（ASM）グリッドユーザー（該当する場合）を認証します。
 +
 データベースが認証されている場合は、*次へ*を選択します。
 
@@ -126,8 +131,12 @@ Workload Factory でlink:optimize-configurations.html["適切に設計された�
 
 . FSx for ONTAPを認証するには（手順2）、次の操作を実行してから、*次へ*を選択します：
 +
-** *すべてのリソースに同じクレデンシャルを使用する*か*クレデンシャルを手動で管理する*かを選択します。
-** FSx for ONTAP ファイル システムのユーザー名とパスワードを入力してください。
+.. *すべてのリソースに同じクレデンシャルを使用する*か*クレデンシャルを手動で管理する*かを選択します。
+.. GovCloudアカウントの場合は FSx for ONTAP クレデンシャルを含む AWS SSM パラメータ ARN を入力し、その他すべてのアカウントの場合は FSx for ONTAP ファイルシステムのユーザー名とパスワードを入力して、*次へ*を選択します。
++
+AWS SSM パラメータのタイプは「Secure String」で、名前の形式は次のようになります `/netapp/wlmdb/<fsx_filesystemID>`。AWS SSM パラメータ ARN の値を次の形式で入力してください：
+`{fsx:{"username":"fsxadmin","password":"pass"}}`。SSM パラメータの取得方法については、link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloudドキュメント"^]を参照してください。
+
 +
 FSx for ONTAPファイルシステムが認証されたら、*次へ*を選択します。
 
