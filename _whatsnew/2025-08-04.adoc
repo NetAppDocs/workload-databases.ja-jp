@@ -4,6 +4,7 @@
 
 
 
+[[well-architected-analysis-includes-high-availability-cluster-validation]]
 === Well-Architected分析には高可用性クラスタの検証が含まれる
 
 Well-Architected 分析に、高可用性クラスターの検証が含まれるようになりました。この検証では、両方のノードのディスクの可用性と構成、Windows クラスターの構成、フェールオーバーの準備状況など、サーバー側からのすべてのクラスター関連の構成がチェックされます。これにより、Windows クラスターが適切にセットアップされ、必要に応じて正常にフェールオーバーできるようになります。
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[multi-level-menu-available-for-instances]]
 === インスタンスに利用可能なマルチレベルメニュー
 
 ワークロード ファクトリー コンソールに、インスタンスのマルチレベル メニューが追加されました。この変更により、インスタンスを管理するための、より整理された直感的なナビゲーション構造が提供されます。インスタンス管理のメニュー オプションには、インスタンス ダッシュボードの表示、データベースの表示、データベースの作成、サンドボックス クローンの作成などがあります。
@@ -20,6 +22,7 @@ image:manage-instance-table-menu.png["複数レベルのメニュー構造を持
 
 
 
+[[new-authentication-option-to-explore-savings]]
 === 節約を模索するための新しい認証オプション
 
 いつ `NT Authority\SYSTEM`ユーザーがMicrosoft SQL Serverに対して十分な権限を持っていない場合は、SQL Serverの資格情報で認証するか、不足しているSQL Serverの権限を追加することができます。 `NT Authority\SYSTEM` 。

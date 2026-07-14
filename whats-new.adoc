@@ -15,10 +15,12 @@ NetApp Workload Factory for Databases の新機能について説明します。
 
 
 
+[[01-june-2026]]
 == 2026年6月1日
 
 
 
+[[custom-savings-for-oracle-hosts-on-amazon-elastic-block-store]]
 === Amazon Elastic Block Store の Oracle ホスト向けカスタム割引
 
 NetApp Workload Factory for Databases を使用すると、Amazon Elastic Block Store（EBS）上の Oracle ホストの節約をカスタマイズできます。スナップショットの頻度、クローンコピーの数、ボリュームの詳細など、いくつかの項目を調整することで、それらが節約効果にどのような影響を与えるかを確認できます。
@@ -27,6 +29,7 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["EBS�
 
 
 
+[[multiple-security-group-selection-for-microsoft-sql-server-and-postgresql-host-deployment]]
 === Microsoft SQL ServerおよびPostgreSQLホストの導入における複数のセキュリティグループの選択
 
 Microsoft SQL ServerおよびPostgreSQLホストを導入する際に、NetApp Workload Factory for Databasesで複数のセキュリティグループを選択できるようになりました。これにより、データベースワークロードのネットワークセキュリティを構成する際の柔軟性が向上します。
@@ -37,16 +40,19 @@ Microsoft SQL ServerおよびPostgreSQLホストを導入する際に、NetApp W
 
 
 
+[[support-for-aws-govcloud-us-in-netapp-workload-factory]]
 === NetApp Workload FactoryでのAWS GovCloud（US）のサポート
 
 NetApp Workload FactoryはAWS GovCloud（US）アカウントをサポートしています。GovCloudアカウントを使用すると、AWS GovCloud（US）リージョンでデータベースワークロードをデプロイおよび管理できます。
 
 
 
+[[03-may-2026]]
 == 2026年5月3日
 
 
 
+[[well-architected-analysis-for-oracle]]
 === Oracle 向けの Well-Architected 分析
 
 適切に設計された分析には、Oracle 向けの以下の新しい構成が含まれています：
@@ -59,6 +65,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[automatic-savings-calculation-for-oracle-databases-on-amazon-elastic-block-store-ebs]]
 === Amazon Elastic Block Store（EBS）上のOracleデータベースの自動節約計算
 
 Workload Factory は、Oracle データベースに使用される EBS ストレージのコストを自動的に分析し、最適でコスト効率の高い FSx for ONTAP 構成を提案します。複数の EBS ホストを選択して分析し、それらのホストを EBS で実行する場合と FSx for ONTAP で実行する場合のコストを比較できます。
@@ -67,6 +74,7 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explo
 
 
 
+[[crr-configuration-prerequisite-check]]
 === CRR設定の前提条件チェック
 
 データベース資産に対してクロスリージョンレプリケーション（CRR）を有効にすると、データベースワークロードは、FSx for ONTAPファイルシステムに関連付けられたリンクとレプリケーションのセットアップがあるかどうかを確認します。必要に応じて、データベースワークロードは、ストレージと同じ方法でリンクの前提条件を処理するために、FSx for ONTAPストレージワークロードレプリケーションウィザードにリダイレクトします。
@@ -75,16 +83,19 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[associated-luns-for-microsoft-sql-server-databases]]
 === Microsoft SQL Serverデータベースに関連付けられたLUN
 
 Workload Factoryのインベントリ画面から、Microsoft SQL ServerデータベースにマッピングされたLUNを表示できるようになりました。これにより、どのLUNがどのデータベースに関連付けられているかを簡単に識別できるため、ストレージリソースの管理と最適化が容易になります。
 
 
 
+[[06-april-2026]]
 == 2026年4月6日
 
 
 
+[[well-architected-analysis-for-oracle]]
 === Oracle 向けの Well-Architected 分析
 
 適切に設計された分析には、Oracle 向けの以下の新しい構成が含まれています：
@@ -98,6 +109,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[one-time-assessment-for-oracle]]
 === Oracleの1回限りの評価
 
 Workload Factoryは、新規導入、移行後、トラブルシューティングなど、必要に応じていつでもOracleデータベースの導入構成を分析する、1回限りの評価サービスを提供開始しました。デプロイメント構成を最適化し、ベストプラクティスに準拠するための推奨事項が得られます。これは、セットアッププロセスに完全にコミットすることなく、優れた設計の機能を利用できる機会です。Workload Factoryに認証情報を保存したり、データベースリソースを登録したり、外部接続を設定したりすることなく、データベースを評価できます。
@@ -106,6 +118,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[improved-cost-savings-for-several-oracle-databases]]
 === 複数のOracleデータベースにおけるコスト削減効果の向上
 
 Oracleのコスト削減分析を強化し、1つのFSx for ONTAPファイルシステム上の複数のOracleオンプレミスデータベース向けに統合ストレージソリューションを提供しています。この統合により、複数のデータベースに必要なファイルシステムの数を削減することでストレージコストが最適化され、コスト削減効果が向上します。
@@ -114,10 +127,12 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explo
 
 
 
+[[02-march-2026]]
 == 2026年3月2日
 
 
 
+[[one-time-assessment-for-sql-server]]
 === SQL Serverの1回限りの評価
 
 Workload Factoryは、新規導入、移行後、トラブルシューティングなど、必要に応じていつでもSQL Serverデータベースの導入構成を分析する、1回限りの評価サービスを提供しています。デプロイメント構成を最適化し、ベストプラクティスに準拠するための推奨事項が得られます。これは、セットアッププロセスに完全にコミットすることなく、優れた設計の機能を利用できる機会です。Workload Factoryに認証情報を保存したり、データベースリソースを登録したり、外部接続を設定したりすることなく、データベースを評価できます。
@@ -126,6 +141,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[registration-support-for-always-on-availability-groups-on-microsoft-sql-server-and-data-guard-on-oracle]]
 === Microsoft SQL Server上のAlways On可用性グループおよびOracle上のData Guardの登録サポート
 
 Always On 可用性グループ（AOAG）展開モデルを使用した Microsoft SQL Server インスタンスと、Data Guard 展開モデルを使用した Oracle データベースを、NetApp Workload Factory のデータベース ワークロードで検出および登録できるようになりました。この機能強化により、Workload Factory コンソール内での SQL Server および Oracle リソースの管理が向上します。
@@ -138,6 +154,7 @@ link:https://docs.netapp.com/us-en/workload-databases/register-instance.html#reg
 
 
 
+[[well-architected-analysis-for-oracle]]
 === Oracle 向けの Well-Architected 分析
 
 Well-Architected 分析には、Oracle の *オペレーティング システム パッチ* が含まれており、オペレーティング システムに最新のパッチが適用されているかどうかを確認し、そのインストール方法を案内します。
@@ -148,6 +165,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[oracle-on-premises-database-environments-cost-analysis-and-migration-planning]]
 === Oracle オンプレミス データベース環境のコスト分析と移行計画
 
 Workload Factory for Databasesは、OracleオンプレミスデータベースのAmazon FSx for NetApp ONTAPへの移行を分析し、計画を支援します。節約計算ツールを使用すると、Oracleオンプレミスデータベース環境をクラウドで実行する際のコストを見積もり、オンプレミスデータベース環境をクラウドに移行するための推奨事項を確認できます。
@@ -156,6 +174,7 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["オ�
 
 
 
+[[new-ask-me-bookmark-available-in-workload-factory]]
 === Workload Factory で新しい Ask Me ブックマークが利用可能になりました
 
 Workload Factory コンソールのすべての画面に新しい Ask Me ブックマークを追加しました。この改善により、ヘルプが必要なときにいつでも Ask Me に簡単かつ迅速にアクセスできるようになります。Ask Me は AI アシスタントであり、独自のワークロード環境について質問したり、環境から直接パーソナライズされた分析情報を取得したり、以前の会話を参照したりすることができます。
@@ -166,10 +185,12 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overvie
 
 
 
+[[02-february-2026]]
 == 2026年2月2日
 
 
 
+[[improved-cost-savings-for-several-database-hosts-on-microsoft-sql-server-on-premises]]
 === オンプレミスのMicrosoft SQL Server上の複数のデータベースホストのコスト削減を改善
 
 Microsoft SQL Server オンプレミスストレージのコスト削減分析が強化され、1つのFSx for ONTAPファイルシステム上で複数のデータベースホストに統合されたストレージソリューションが提供されるようになりました。この統合により、複数のデータベースホストに必要なファイルシステムの数が削減され、ストレージコストが最適化され、コスト削減が向上します。
@@ -178,6 +199,7 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explo
 
 
 
+[[well-architected-analysis-for-oracle]]
 === Oracle 向けの Well-Architected 分析
 
 Well-Architected分析には、Oracleのストレージ構成分析のための4つの新しいサブ評価が含まれています：dNFSの有効化、dNFSの一貫性のあるIP解決、dNFS構成ファイル、およびdNFS `nosharecache`。これらの評価は、Oracle環境でDirect NFS（dNFS）を有効にして設定することに関するもので、ホストNFSクライアントをバイパスし、NFSサーバ上でNFSファイル操作を直接実行することで、I/Oパフォーマンスが向上し、I/Oがより効率的に実行されるため、ホストとストレージシステムの負荷が軽減されます。
@@ -186,20 +208,24 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[04-january-2026]]
 == 2026年1月4日
 
 
 
+[[ask-me-ai-assistant-home-page-integration]]
 === Ask Me AIアシスタントのホームページ統合
 
 Workload Factory コンソールのホームページには Ask Me AI アシスタントが組み込まれており、独自のストレージ資産について質問したり、環境から直接パーソナライズされた分析情報を取得したり、以前の会話を参照したりすることができます。コンソールを離れることなく、Ask Me を操作してワークロードを理解し、問題をトラブルシューティングし、Workload Factory について詳しく知ることができます。
 
 
 
+[[18-december-2025]]
 == 2025年12月18日
 
 
 
+[[active-directory-integration-enhancements]]
 === Active Directory統合の強化
 
 Workload Factory for Databases には、*詳細作成* オプションを使用して Microsoft SQL Server を展開するときに、3 つの新しい Active Directory (AD) フィールドが含まれます。これらの機能強化により、Active Directory 参加の設定を指定し、管理されたサービス アカウントを使用できるようになります。
@@ -215,10 +241,12 @@ link:https://docs.netapp.com/us-en/workload-databases/create-database.html["Micr
 
 
 
+[[27-november-2025]]
 == 2025年11月27日
 
 
 
+[[optimize-savings-in-the-databases-calculator-for-amazon-elastic-block-store-ebs]]
 === Amazon Elastic Block Store (EBS) のデータベース計算ツールで節約を最適化
 
 2 つの新しい計算機能により、EBS ストレージを使用して複数のインスタンスを実行する際のコスト削減分析が改善され、FSx for ONTAPに切り替えることでさらにコストを削減できるようになります。
@@ -231,12 +259,14 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explo
 
 
 
+[[excel-report-available-for-the-well-architected-dashboard]]
 === Well-Architected ダッシュボードで利用可能な Excel レポート
 
 適切に設計されたダッシュボードの Excel レポートをダウンロードできます。このレポートには、データベース リソースの well-architeccted ステータスと、オペレーティング システムおよびONTAPのサブ構成を含むすべてのリソース構成の推奨事項が示されます。
 
 
 
+[[error-log-analyzer-available-for-oracle-databases]]
 === Oracle データベースで利用可能なエラー ログ アナライザー
 
 Agentic AI 搭載のエラー ログ アナライザーは、Oracle データベースで使用できます。この機能は、高度な機械学習アルゴリズムを活用して、ログ ファイル内のエラーを自動的に検出して分析します。このツールは、ログで識別されたパターンに基づいて開発者に実用的な洞察と推奨事項を提供することで、トラブルシューティング プロセスを合理化することを目的としています。
@@ -245,6 +275,7 @@ link:https://docs.netapp.com/us-en/workload-databases/analyze-error-logs.html["A
 
 
 
+[[well-architected-analysis-for-oracle]]
 === Oracle 向けの Well-Architected 分析
 
 Well-Architected 分析には、2 つの新しいストレージ サイズ設定構成が含まれています。この分析では、既存の Oracle データベース デプロイメントのスワップ領域の割り当てとファイル システムのヘッドルームに関連する構成の問題を評価および修正します。
@@ -253,16 +284,19 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[02-november-2025]]
 == 2025年11月2日
 
 
 
+[[dashboard-improvements]]
 === ダッシュボードの改善
 
 新しいダッシュボードは合理化され、整理され、データベース リソースと Workload Factory の主要機能の概要を 1 つの画面でより明確に表示します。1 枚のカードではデータベース リソースが強調表示され、1 枚のカードでは Well-Architected スコアと分析に関する情報が提供され、1 枚のカードではエラー分析が表示され、2 枚のカードでは月間コストと潜在的な節約額が表示され、1 枚のカードではサンドボックスに関する情報が表示されます。
 
 
 
+[[well-architected-analysis-for-oracle]]
 === Oracle 向けの Well-Architected 分析
 
 Well-Architected 分析には、Oracle 構成に対する次の評価と修正が含まれます。
@@ -276,6 +310,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[permissions-changes-for-workload-factory-for-databases]]
 === Workload Factory for Databases の権限の変更
 
 Workload Factory for Databases では、権限ポリシーが更新され、特定のアクションに必要な内容がより明確になり、必要な権限のみを選択するための細分性が高まりました。資格情報を追加すると、以前の権限モデルである _読み取り専用_ と _読み取り/書き込み_ の代わりに、3 つの権限オプションから選択できるようになります。新しい権限モデルでは、権限ポリシーが次のように分割されます。
@@ -291,12 +326,14 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.ht
 
 
 
+[[well-architected-dashboard-screen-added]]
 === よく設計されたダッシュボード画面が追加されました
 
 新しい _Well-architected_ ダッシュボード画面がデータベース メニューに追加されました。この画面から、データベース資産全体の構成ステータスの集約ビューを取得できます。
 
 
 
+[[edit-protection-for-database-deployments-in-netapp-backup-and-recovery]]
 === NetApp Backup and Recoveryにおけるデータベース導入時の編集保護
 
 Workload Factory コンソールから、保護されたリソースの保護を編集することを選択すると、 NetApp Consoleのバックアップとリカバリにリダイレクトされ、保護ポリシーまたはスケジュールを変更できます。
@@ -305,6 +342,7 @@ link:https://docs.netapp.com/us-en/workload-databases/protect-sql-server.html["�
 
 
 
+[[error-filtering-by-tags-available-for-the-error-analysis-feature]]
 === エラー分析機能で利用可能なタグによるエラーフィルタリング
 
 Workload Factory のエラー分析機能を使用すると、インフラストラクチャ指向のタグで Microsoft SQL Server エラー ログをフィルター処理して表示できます。この機能強化により、問題を迅速にトリアージ、トラブルシューティング、解決できるようになります。
@@ -313,16 +351,19 @@ link:https://docs.netapp.com/us-en/workload-databases/analyze-error-logs.html["�
 
 
 
+[[06-october-2025]]
 == 2025年10月6日
 
 
 
+[[bluexp-workload-factory-now-netapp-workload-factory]]
 === BlueXP workload factoryがNetAppワークロードファクトリーに
 
 BlueXP は、データ インフラストラクチャの管理における役割をより適切に反映するために、名前が変更され、再設計されました。その結果、 BlueXP workload factoryの名前がNetAppワークロード ファクトリーに変更されました。
 
 
 
+[[enhancements-for-oracle-in-the-workload-factory-console]]
 === Workload Factory コンソールの Oracle 向けの機能強化
 
 
@@ -349,12 +390,14 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[databases-inventory-enhancements]]
 === データベースインベントリの強化
 
 データベース インベントリのインスタンス画面では、Microsoft SQL Server の単一または複数のインスタンス、あるいは Oracle の単一または複数のデータベースに対して、構成の問題を修正、延期、および破棄するオプションが利用できます。
 
 
 
+[[optimize-savings-based-on-usage-for-amazon-elastic-block-store-ebs]]
 === Amazon Elastic Block Store (EBS) の使用状況に基づいて節約を最適化
 
 Workload Factory は、EBS パフォーマンスの使用状況を分析し、最適かつ最もコスト効率の高い FSx for ONTAP構成を提案します。これにより、FSx for ONTAPに切り替えることで、より多くのコストを節約できます。
@@ -363,10 +406,12 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explo
 
 
 
+[[1-september-2025]]
 == 2025年9月1日
 
 
 
+[[agentic-ai-powered-error-log-analyzer]]
 === Agentic AI搭載エラーログアナライザー
 
 Agentic AI 搭載エラー ログ アナライザーは、高度な機械学習アルゴリズムを活用して、ログ ファイル内のエラーを自動的に検出して分析する新しい機能です。このツールは、ログで識別されたパターンに基づいて開発者に実用的な洞察と推奨事項を提供することで、トラブルシューティング プロセスを合理化することを目的としています。
@@ -375,6 +420,7 @@ link:https://docs.netapp.com/us-en/workload-databases/analyze-error-logs.html["A
 
 
 
+[[oracle-support]]
 === Oracleサポート
 
 ワークロード ファクトリーには、Oracle データベースのサポートが含まれています。ワークロード ファクトリー コンソールでは、インベントリから Oracle データベースを表示したり、ワークロード ファクトリーの高度な機能を使用するためにデータベースを登録したり、well-architected 機能を使用して Oracle データベースを分析し、ベスト プラクティスに準拠しているかどうかを判断したりできます。 Well-Architected 分析により、Oracle データベースのストレージ構成が最適化されているかどうかが判断されます。この情報を使用することで、データベースの導入について十分な情報に基づいた意思決定を行い、効率的に実行されていることを確認できます。
@@ -383,12 +429,14 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[support-for-microsoft-sql-server-deployments-on-second-generation-fsx-for-ontap-file-systems]]
 === 第 2 世代 FSx for ONTAPファイルシステムでの Microsoft SQL Server デプロイメントのサポート
 
 ワークロード ファクトリーは、第 2 世代の FSx for ONTAPファイル システムでの Microsoft SQL Server のデプロイメントをサポートします。この機能強化により、SQL Server ワークロードを管理しながら、第 2 世代のファイル システムで利用可能な最新の機能とパフォーマンスの向上を活用できるようになります。
 
 
 
+[[windows-authentication-for-sql-server-protection]]
 === SQL Server 保護のための Windows 認証
 
 Windows 資格情報を使用した Microsoft SQL Server インスタンスの認証は、BlueXP backup and recoveryによる保護のために Microsoft SQL Server ホストを準備するためのワークフローに組み込まれています。これは以前は手動で完了するための前提条件の手順でした。代わりに、Windows 資格情報を使用してワークロード ファクトリにホストを登録していない場合は、管理者アクセス権を持つ Windows 資格情報を共有するように求められます。
@@ -397,6 +445,7 @@ link:https://docs.netapp.com/us-en/workload-databases/protect-sql-server.html["�
 
 
 
+[[well-architected-analysis-includes-mtu-alignment-for-sql-server]]
 === Well-Architected 分析には SQL Server の MTU 調整が含まれます
 
 Well-Architected 分析では、FSx for ONTAPストレージ上の Microsoft SQL Server のエンドポイント間の最大転送単位 (MTU) の不整合を評価し、修正します。  MTU 設定を調整すると、ネットワーク パフォーマンスが最適化され、SQL Server ワークロードの待機時間が短縮されます。
@@ -405,10 +454,12 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[12-august-2025]]
 == 2025年8月12日
 
 
 
+[[bluexp-backup-and-recovery-now-supports-microsoft-sql-server-workloads]]
 === BlueXP backup and recoveryが Microsoft SQL Server のワークロードをサポートするようになりました
 
 BlueXP backup and recoveryを使用すると、Microsoft SQL Server データベースおよび可用性グループのバックアップ、復元、検証、および複製が可能になります。ワークロード ファクトリー コンソールから、 BlueXP backup and recoveryにアクセスして使用し、Microsoft SQL Server ワークロードを保護できます。
@@ -419,10 +470,12 @@ BlueXP backup and recoveryの詳細については、link:https://docs.netapp.co
 
 
 
+[[04-august-2025]]
 == 2025年8月4日
 
 
 
+[[well-architected-analysis-includes-high-availability-cluster-validation]]
 === Well-Architected分析には高可用性クラスタの検証が含まれる
 
 Well-Architected 分析に、高可用性クラスターの検証が含まれるようになりました。この検証では、両方のノードのディスクの可用性と構成、Windows クラスターの構成、フェールオーバーの準備状況など、サーバー側からのすべてのクラスター関連の構成がチェックされます。これにより、Windows クラスターが適切にセットアップされ、必要に応じて正常にフェールオーバーできるようになります。
@@ -431,6 +484,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[multi-level-menu-available-for-instances]]
 === インスタンスに利用可能なマルチレベルメニュー
 
 ワークロード ファクトリー コンソールに、インスタンスのマルチレベル メニューが追加されました。この変更により、インスタンスを管理するための、より整理された直感的なナビゲーション構造が提供されます。インスタンス管理のメニュー オプションには、インスタンス ダッシュボードの表示、データベースの表示、データベースの作成、サンドボックス クローンの作成などがあります。
@@ -439,6 +493,7 @@ image:manage-instance-table-menu.png["複数レベルのメニュー構造を持
 
 
 
+[[new-authentication-option-to-explore-savings]]
 === 節約を模索するための新しい認証オプション
 
 いつ `NT Authority\SYSTEM`ユーザーがMicrosoft SQL Serverに対して十分な権限を持っていない場合は、SQL Serverの資格情報で認証するか、不足しているSQL Serverの権限を追加することができます。 `NT Authority\SYSTEM` 。
@@ -447,10 +502,12 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Amaz
 
 
 
+[[30-june-2025]]
 == 2025年6月30日
 
 
 
+[[bluexp-workload-factory-notification-service-support]]
 === BlueXPワークロードファクトリー通知サービスのサポート
 
 BlueXP ワークロードファクトリー通知サービスを使用すると、ワークロードファクトリーは BlueXP アラートサービスまたは Amazon SNS トピックに通知を送信できます。BlueXPアラートに送信された通知は、BlueXP アラートパネルに表示されます。ワークロードファクトリーが Amazon SNS トピックに通知を発行すると、トピックのサブスクライバー（ユーザーや他のアプリケーションなど）は、トピックに設定されたエンドポイント（E メールや SMS メッセージなど）で通知を受け取ります。
@@ -465,6 +522,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 
 
+[[onboarding-enhancement-for-registering-instances]]
 === インスタンス登録のオンボーディング強化
 
 Workload Factory for Databases は、Amazon FSx for NetApp ONTAP ストレージ上で稼働するインスタンスの登録プロセスを改善しました。これにより、登録するインスタンスを一括で選択できるようになりました。インスタンスが登録されると、ワークロード ファクトリー コンソール内でデータベース リソースを作成および管理できるようになります。
@@ -473,6 +531,7 @@ link:https://docs.netapp.com/us-en/workload-databases/manage-instance.html["イ�
 
 
 
+[[analysis-and-fix-for-microsoft-multipath-io-timeout-setting]]
 === Microsoft マルチパス I/O タイムアウト設定の分析と修正
 
 データベース インスタンスの well-architected ステータスに、Microsoft Multipath I/O (MPIO) タイムアウト設定の分析と修正が含まれるようになりました。タイムアウトを60秒に設定することで、FSx for ONTAPストレージの接続性とフェイルオーバー時の安定性が確保されます。MPIO設定が適切に設定されていない場合は、ワークロードファクトリーがMPIOタイムアウト値を60秒に設定する修正を提供します。
@@ -481,6 +540,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[enhancements-to-graphics-in-instance-inventory]]
 === インスタンスインベントリのグラフィックの強化
 
 インスタンス インベントリ画面では、スループットや IOPS などのさまざまなリソース使用率グラフに 7 日間のデータが表示されるようになり、ワークロード ファクトリー コンソールから SQL ノードのパフォーマンスをより効率的に監視できるようになりました。ノードから収集されたパフォーマンスメトリクスはAmazon CloudWatchに保存され、Logs Insightsや環境内の他の分析サービスとの統合に使用できます。
@@ -489,6 +549,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[support-for-windows-authentication-in-workload-factory]]
 === ワークロードファクトリーでの Windows 認証のサポート
 
 現在、ワークロード ファクトリーは、インスタンスを登録し、管理機能のメリットを享受するために、Windows 認証ユーザーを使用した SQL Server 認証をサポートしています。
@@ -497,16 +558,19 @@ link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["�
 
 
 
+[[03-june-2025]]
 == 2025年6月3日
 
 
 
+[[postgresql-and-oracle-detection]]
 === PostgreSQLとOracleの検出
 
 ワークロードファクトリーコンソール内で、AWSアカウントでPostgreSQLサーバーデータベースとOracleデータベースデプロイメントを実行しているインスタンスを検出できるようになりました。検出されたインスタンスはデータベースインベントリに表示されます。
 
 
 
+[[updated-optimization-terminology]]
 === 「最適化」の用語を更新しました
 
 以前は「最適化」と呼ばれていたワークロード ファクトリーでは、現在、「well-architected の問題」と「well-architected ステータス」を使用してデータベース構成の分析を説明し、「修正」を使用してベスト プラクティスの推奨事項を満たすようにデータベース構成を改善する機会の修復を説明します。
@@ -515,6 +579,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-overview.html["�
 
 
 
+[[improved-onboarding-for-instances]]
 === インスタンスのオンボーディングの改善
 
 インスタンス管理において「未検出」「管理対象外」「管理対象」といった用語が使用されるのに対し、ワークロードファクトリーではインスタンスのオンボーディングに「登録」という用語を使用するようになりました。新しい登録プロセスには、インスタンスの認証と準備が含まれており、ワークロードファクトリーコンソール内でデータベース構成のリソースを作成、監視、分析、修正できるようになります。登録プロセスの準備手順は、インスタンスが管理の準備ができているかどうかを示します。
@@ -523,10 +588,12 @@ link:https://docs.netapp.com/us-en/workload-databases/manage-instance.html["イ�
 
 
 
+[[04-may-2025]]
 == 2025年5月4日
 
 
 
+[[dashboard-enhancements]]
 === ダッシュボードの機能拡張
 
 * BlueXP  ワークロードファクトリコンソールのタブ間を移動すると、アカウント間ビューとリージョン間ビューを使用できます。新しいビューは、リソースの管理、監視、最適化を改善します。
@@ -535,18 +602,21 @@ link:https://docs.netapp.com/us-en/workload-databases/manage-instance.html["イ�
 
 
 
+[[ad-hoc-scan-available-for-database-configurations]]
 === データベース構成で使用可能なアドホックスキャン
 
 BlueXP  Workload Factory for Databasesは、管理対象のMicrosoft SQL ServerインスタンスをFSx for ONTAPストレージで自動的にスキャンし、潜在的な構成の問題がないかどうかを確認します。毎日のスキャンに加えて、いつでもスキャンできます。
 
 
 
+[[removal-of-on-premises-assessment-records]]
 === オンプレミス評価記録の削除
 
 オンプレミスのMicrosoft SQL Serverホストの削減効果を確認したら、オンプレミスのホストレコードをBlueXP  ワークロードファクトリから削除することもできます。
 
 
 
+[[optimization-enhancements]]
 === 最適化の機能拡張
 
 
@@ -563,16 +633,19 @@ BlueXP  Workload Factory for Databasesは、管理対象のMicrosoft SQL Server
 
 
 
+[[updated-permissions-terminology]]
 === 権限に関する用語を更新
 
 ワークロード ファクトリのユーザー インターフェースとドキュメントでは、読み取り権限を示すために「読み取り専用」を使用し、自動化権限を示すために「読み取り/書き込み」を使用するようになりました。
 
 
 
+[[04-april-2025]]
 == 2025年4月4日
 
 
 
+[[optimization-enhancements]]
 === 最適化の機能拡張
 
 データベース環境を最適化する際に、新しい最適化評価、修正、複数のリソースの表示を利用できます。
@@ -611,12 +684,14 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[improved-inventory-view]]
 === インベントリビューの改善
 
 ワークロードファクトリコンソールの[Inventory]タブは合理化され、Amazon FSx for NetApp ONTAPで実行されるSQLサーバのみが含まれるようになりました。SQLサーバーはオンプレミスで、Amazon Elastic Block StoreとAmazon FSx for Windows File Serverで稼働しています。
 
 
 
+[[quick-create-available-for-postgresql-server-deployment]]
 === PostgreSQLサーバー展開で利用可能なクイック作成
 
 この迅速な導入オプションを使用すると、HA構成とベストプラクティスが組み込まれたPostgreSQLサーバを作成できます。
@@ -625,10 +700,12 @@ link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.h
 
 
 
+[[03-march-2025]]
 == 2025 年 3 月 3 日
 
 
 
+[[postgresql-high-availability-configuration]]
 === PostgreSQLの高可用性構成
 
 PostgreSQLサーバにハイアベイラビリティ（HA）構成を導入できるようになりました。
@@ -637,6 +714,7 @@ link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.h
 
 
 
+[[terraform-support-for-postgresql-server-creation]]
 === PostgreSQLサーバ作成のTerraformサポート
 
 CodeboxからTerraformを使用してPostgreSQLをデプロイできるようになりました。
@@ -647,6 +725,7 @@ CodeboxからTerraformを使用してPostgreSQLをデプロイできるように
 
 
 
+[[resiliency-assessment-for-local-snapshot-schedule]]
 === ローカルSnapshotスケジュールの耐障害性評価
 
 データベースワークロードに新しい耐障害性評価を提供します。Microsoft SQL Serverインスタンスのボリュームにスケジュールされた有効なSnapshotポリシーが設定されているかどうかを評価します。Snapshotは、データのポイントインタイムコピーであり、データ損失が発生した場合にデータベース環境の耐障害性を維持するのに役立ちます。
@@ -655,6 +734,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[maxdop-remediation-for-database-workloads]]
 === MAXDOPによるデータベースワークロードの修正
 
 BlueXP  Workload Factory for Databasesでは、最大並列化(MAXDOP)サーバ構成の修復がサポートされるようになりました。MAXDOP設定が最適でない場合、BlueXP  Workload Factoryに設定を最適化させることができます。
@@ -663,16 +743,19 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[email-savings-analysis-report]]
 === コスト削減分析レポートをEメールで送信
 
 Amazon Elastic Block StoreとFSx for Windowsファイルサーバのストレージ環境でFSx for ONTAPと比較してコスト削減を検討している場合、推奨レポートを自分、チームメンバー、お客様にEメールで送信できるようになりました。
 
 
 
+[[03-february-2025]]
 == 2025年2月3日
 
 
 
+[[sql-server-on-premises-database-environments-cost-analysis-and-migration-planning]]
 === SQL Server オンプレミス データベース環境のコスト分析と移行計画
 
 BlueXP workload factory for Databasesは、SQL Serverオンプレミスデータベースの検出、分析を行い、Amazon FSx for NetApp ONTAPへの移行計画を支援します。節約計算ツールを使用すると、SQL Serverオンプレミスデータベース環境をクラウドで実行する際のコストを見積もり、オンプレミスデータベース環境をクラウドに移行するための推奨事項を確認できます。
@@ -681,6 +764,7 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["オ�
 
 
 
+[[new-optimization-assessments-for-databases]]
 === データベースの新しい最適化評価
 
 BlueXP  Workload Factory for Databasesでは、次の評価を利用できます。これらの評価は、潜在的なセキュリティの脆弱性を検出して防御し、パフォーマンスのボトルネックを検出して軽減することに重点を置いています。
@@ -694,10 +778,12 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[06-january-2025]]
 == 2025年1月6日
 
 
 
+[[databases-dashboard-enhancements]]
 === データベースダッシュボードの機能拡張
 
 ダッシュボードの新しい設計には、次のグラフィックと機能拡張が含まれています。
@@ -713,6 +799,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[new-completed-with-issues-status-in-job-monitoring]]
 === ジョブ監視の新しい「問題ありで完了」ステータス
 
 データベースのジョブ監視機能で、新しい「問題ありで完了」ステータスが提供されるようになりました。これにより、問題が発生したサブジョブと問題の内容を確認できます。
@@ -721,6 +808,7 @@ link:https://docs.netapp.com/us-en/workload-databases/monitor-databases.html["�
 
 
 
+[[assessment-and-optimization-for-over-provisioned-microsoft-sql-server-licenses]]
 === オーバープロビジョニングされたMicrosoft SQL Serverライセンスの評価と最適化
 
 コスト削減試算ツールで、Microsoft SQL Server環境にEnterprise Editionが必要かどうかを評価できるようになりました。ライセンスがオーバープロビジョニングされている場合は、ダウングレードすることを推奨します。アプリケーションを最適化することで、データベースのライセンスを自動的にダウングレードできます。
@@ -731,10 +819,12 @@ link:https://docs.netapp.com/us-en/workload-databases/monitor-databases.html["�
 
 
 
+[[01-december-2024]]
 == 2024年12月1日
 
 
 
+[[continuous-optimization-adds-compute-remediation-and-assessment]]
 === 継続的な最適化により、コンピューティングの修正と評価を追加
 
 Microsoft SQL Serverインスタンスのコンピューティングリソースの最適化に役立つ分析情報と推奨事項がデータベースから提供されるようになりました。CPU利用率を測定し、AWS Compute Optimizerサービスを活用して最適なサイズのインスタンスタイプを推奨し、利用可能なオペレーティングシステムパッチをユーザに通知します。コンピューティングリソースを最適化することで、インスタンスタイプに関する十分な情報に基づいた意思決定が可能になり、コスト削減とリソース利用率の効率化につながります。
@@ -743,6 +833,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[postgresql-support]]
 === PostgreSQLのサポート
 
 スタンドアロンPostgreSQLサーバーの配置をデータベースに配置して管理できるようになりました。
@@ -751,10 +842,12 @@ link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.h
 
 
 
+[[3-november-2024]]
 == 2024年11月3日
 
 
 
+[[continuously-optimize-your-microsoft-sql-server-workloads-with-databases]]
 === データベースでMicrosoft SQL Serverワークロードを継続的に最適化
 
 BlueXP  ワークロードファクトリでは、Amazon FSx for NetApp ONTAP上のMicrosoft SQL Serverワークロードのストレージコンポーネントに関する継続的な最適化とベストプラクティスへの準拠を保証するために、継続的なガイダンスとガードレールが導入されています。この機能は、Microsoft SQL Serverの資産をオフラインで継続的にスキャンし、分析情報、機会、推奨事項の包括的なレポートを提供して、最高レベルのパフォーマンス、コスト効率、コンプライアンスの達成を支援します。
@@ -763,6 +856,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[terraform-support]]
 === Terraformのサポート
 
 CodeboxからTerraformを使用してMicrosoft SQL Serverを導入できるようになりました。
@@ -773,10 +867,12 @@ CodeboxからTerraformを使用してMicrosoft SQL Serverを導入できるよ�
 
 
 
+[[29-september-2024]]
 == 2024年9月29日
 
 
 
+[[explore-savings-for-detected-microsoft-sql-servers-on-fsx-for-windows-file-server]]
 === FSx for Windowsファイルサーバで検出されたMicrosoft SQLサーバの削減効果を確認
 
 Amazon EC2上で検出されたMicrosoft SQL Serverの削減効果を、FSx for Windows File Serverストレージを使用して試算ツールで確認できるようになりました。SQL Serverとストレージの要件によっては、FSx for ONTAPストレージがデータベースワークロードにとって最も対費用効果の高いストレージであることがわかります。
@@ -785,10 +881,12 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["デ�
 
 
 
+[[1-september-2024]]
 == 2024年9月1日
 
 
 
+[[explore-savings-via-customization]]
 === カスタマイズによるコスト削減の詳細
 
 Amazon EC2上のMicrosoft SQL Serverの構成設定を、FSx for Windows File ServerとElastic Block Storeストレージを使用してコスト削減試算ツールでカスタマイズできるようになりました。お客様のストレージ要件によっては、FSx for ONTAPストレージがデータベースワークロードにとって最も対費用効果の高いストレージであることがわかります。
@@ -797,6 +895,7 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["デ�
 
 
 
+[[navigate-to-the-savings-calculator-from-the-home-page]]
 === ホームページからSavings Calculatorに移動する
 
 link:https://console.workloads.netapp.com["ワークロードファクトリコンソール"]ホームページからSavings Calculatorに移動できるようになりました。まずは、Elastic Block StoreとFSx for Windows File Serverから選択してください。
@@ -805,10 +904,12 @@ image:screenshot-explore-savings-home-small.png["ワークロードファクト�
 
 
 
+[[4-august-2024]]
 == 2024 年 8 月 4 日
 
 
 
+[[savings-calculator-enhancements]]
 === Savings Calculatorの機能拡張
 
 * コスト見積もりの説明
@@ -837,10 +938,12 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["デ�
 
 
 
+[[7-july-2024]]
 == 2024年7月7日
 
 
 
+[[initial-release-of-bluexp-workload-factory-for-databases]]
 === BlueXP  Workload Factory for Databasesの初版リリース
 
 初期リリースには、データベースワークロードのストレージ環境としてAmazon FSx for NetApp ONTAPを使用した場合のコスト削減の検討、Microsoft SQL Serverの検出、管理、導入、データベースの導入とクローニング、ワークロードファクトリ内でのジョブの監視が含まれています。

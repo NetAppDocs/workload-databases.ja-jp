@@ -19,6 +19,7 @@ link:optimize-overview.html["Workload Factory の構成分析と Well-Architecte
 
 
 
+[[about-this-task]]
 == タスクの内容
 
 Workload Factory はデータベース構成を毎日分析します。毎日の分析により、適切に設計されたステータス、洞察、推奨事項が提供されます。ベストプラクティスを満たすように構成の問題を自動的に修正できます。
@@ -55,6 +56,7 @@ Oracle の Well-Architected 分析では、構成が他の構成に依存して�
 
 
 
+[[perform-a-one-time-assessment-of-your-configurations]]
 == 設定の 1 回限りの評価を実行します
 
 認証情報を保存したりリソースを登録したりすることなく、1回限りの評価を実行して、Microsoft SQL ServerインスタンスまたはOracleデータベースの適切なアーキテクチャステータスを確認します。
@@ -102,6 +104,7 @@ Oracle の Well-Architected 分析では、構成が他の構成に依存して�
 ====
 
 
+[[before-you-begin-fixing-dismissing-and-re-activating-configurations]]
 == 構成の修正、却下、再有効化を始める前に
 
 データベース環境の継続的な監視と設定問題の自動修正には、以下の要件が必要です。これらの要件は、1回限りの評価には必要ありません。
@@ -113,6 +116,7 @@ Oracle の Well-Architected 分析では、構成が他の構成に依存して�
 
 
 
+[[fix-a-configuration-issue]]
 == 構成の問題を修正する
 
 FSx for ONTAPストレージ上で実行されている SQL Server または Oracle 環境の構成の問題を修正します。
@@ -161,6 +165,7 @@ Workload Factory が問題の修正を開始します。操作のステータス
 
 
 
+[[dismiss-the-analysis-of-database-configurations]]
 == データベース構成の分析を閉じる
 
 データベース環境に適用されない特定のデータベース構成の分析を無視して、不要なアラートや不正確な最適化結果を回避します。無視した構成分析はいつでも再アクティブ化できます。
@@ -182,6 +187,7 @@ Workload Factory は構成分析を停止します。
 
 
 
+[[reactivate-a-dismissed-configuration-analysis]]
 == 却下された構成分析を再アクティブ化する
 
 閉じた構成分析はいつでも再アクティブ化できます。再アクティブ化する構成を 1 つ以上選択できます。

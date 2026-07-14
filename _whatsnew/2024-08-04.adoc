@@ -4,6 +4,7 @@
 
 
 
+[[savings-calculator-enhancements]]
 === Savings Calculatorの機能拡張
 
 * コスト見積もりの説明

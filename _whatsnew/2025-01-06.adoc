@@ -4,6 +4,7 @@
 
 
 
+[[databases-dashboard-enhancements]]
 === データベースダッシュボードの機能拡張
 
 ダッシュボードの新しい設計には、次のグラフィックと機能拡張が含まれています。
@@ -19,6 +20,7 @@
 
 
 
+[[new-completed-with-issues-status-in-job-monitoring]]
 === ジョブ監視の新しい「問題ありで完了」ステータス
 
 データベースのジョブ監視機能で、新しい「問題ありで完了」ステータスが提供されるようになりました。これにより、問題が発生したサブジョブと問題の内容を確認できます。
@@ -27,6 +29,7 @@ link:https://docs.netapp.com/us-en/workload-databases/monitor-databases.html["�
 
 
 
+[[assessment-and-optimization-for-over-provisioned-microsoft-sql-server-licenses]]
 === オーバープロビジョニングされたMicrosoft SQL Serverライセンスの評価と最適化
 
 コスト削減試算ツールで、Microsoft SQL Server環境にEnterprise Editionが必要かどうかを評価できるようになりました。ライセンスがオーバープロビジョニングされている場合は、ダウングレードすることを推奨します。アプリケーションを最適化することで、データベースのライセンスを自動的にダウングレードできます。

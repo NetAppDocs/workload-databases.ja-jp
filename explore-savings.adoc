@@ -15,6 +15,7 @@ Amazon Elastic Block Store (EBS)、FSx for Windows File Server、オンプレミ
 
 
 
+[[about-this-task]]
 == タスクの内容
 
 ダッシュボード、インベントリタブ、または節約の探索タブを使用して、EBS、FSx for Windows File Server、およびオンプレミスストレージ上のデータベースワークロードの節約を調べることができます。いずれの場合も、節約計算ツールを使用して、FSx for ONTAP ファイルシステム上のデータベースワークロード用のストレージ、コンピューティング、SQLライセンス、スナップショット、クローンなど、Microsoft SQL Server ワークロードの実行に関するさまざまなコスト要素を、Elastic Block Store（EBS）、FSx for Windows File Server、およびオンプレミスストレージと比較できます。
@@ -35,6 +36,7 @@ image:screenshot-ebs-savings-calculator-update.png["削減試算ツールペー�
 
 
 
+[[sql-server-deployment-analysis]]
 == SQL Server導入の分析
 
 計算機は SQL Server の展開をチェックし、使用されているリソースと機能が SQL Server のエディションと一致していることを確認します。Standard Edition へのダウングレードを推奨する前に計算機がチェックする主な要素と条件は次のとおりです：
@@ -64,6 +66,7 @@ Calculatorは、次のライセンスに依存して割り当てられたリソ�
 
 
 
+[[calculator-options]]
 == 電卓オプション
 
 お客様のシステムとFSx for ONTAPのコストを比較するために、カスタマイズと検出という2つの計算ツールオプションが用意されています。
@@ -76,6 +79,7 @@ Calculatorは、次のライセンスに依存して割り当てられたリソ�
 
 
 
+[[explore-savings-via-customization]]
 === カスタマイズによるコスト削減の詳細
 
 最も正確な節約額の見積もりを得るには、計算ツールの各項目をカスタマイズしてください。
@@ -214,6 +218,7 @@ Amazon Elastic Block Store（EBS）で実行されているOracleホストの最
 
 
 
+[[explore-savings-for-detected-hosts]]
 === 検出されたホストの削減量を確認する
 
 Workload Factoryは検出されたホスト特性を入力するため、自動的にコスト削減の可能性を探ることができます。
@@ -479,6 +484,7 @@ Oracle オンプレミスホストのコスト削減効果を確認した後、W
 
 
 
+[[deploy-microsoft-sql-server-on-aws-ec2-using-fsx-for-ontap]]
 == FSx for ONTAPを使用してAWS EC2にMicrosoft SQL Serverを導入
 
 コスト削減を実現するためにFSx for ONTAPに切り替えたい場合は、*[作成]*をクリックして新しいMicrosoft SQL Serverの作成ウィザードから直接推奨構成を作成するか、*[保存]*をクリックして推奨構成を保存しておきます。

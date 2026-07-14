@@ -15,18 +15,21 @@ summary: このリリースの製品でサポートされていない、また�
 
 
 
+[[instance-detection-support]]
 == インスタンス検出のサポート
 
 Workload Factory は、Amazon Linux オペレーティング システムでのみ実行される PostgreSQL インスタンスと、Red Hat Enterprise Linux でのみ実行される Oracle インスタンスの検出をサポートしています。
 
 
 
+[[ami-image-version-support]]
 == AMIイメージバージョンのサポート
 
 SQLバージョンごとに、AMIイメージの最新バージョンまたはリビジョンが4つまで表示されます。最新の4つのバージョンより古いAMIイメージからのインストールは許可されていません。
 
 
 
+[[custom-ami]]
 == カスタムAMI
 
 カスタムAMIを使用した展開では、インストールメディアがイメージに存在することが前提となります。これは、次の理由からFCIの設定に必要です。
@@ -39,12 +42,14 @@ SQLバージョンごとに、AMIイメージの最新バージョンまたは�
 
 
 
+[[roll-back-and-retry-for-failed-deployments]]
 == 失敗した導入環境のロールバックと再試行
 
 失敗したデプロイメントのロールバックと再試行は、Workload Factory ではサポートされていません。  AWS の CloudFormation コンソールから失敗したスタックをロールバックまたは再試行できます。
 
 
 
+[[active-directory-and-dns-resource-rollback]]
 == Active DirectoryおよびDNSリソースのロールバック
 
 AWSのCloudFormationコンソールからテストまたはデプロイに失敗した場合、次のDNSリソースはActive DirectoryおよびDNSから削除されません。
@@ -58,76 +63,89 @@ AWSのCloudFormationコンソールからテストまたはデプロイに失敗
 
 
 
+[[always-on-availability-groups-configuration-support]]
 == Always-On可用性グループ構成のサポート
 
 Always On 可用性グループ構成の管理は、Workload Factory ではサポートされていません。
 
 
 
+[[custom-encryption-keys]]
 == カスタム暗号化キー
 
 FSx for ONTAPのカスタム暗号化キーは、サービスの適用性に応じて表示されません。適切なキーを選択する必要があります。AWSで管理されるキーは、サービスへの適用性に基づいてフィルタリングされます。
 
 
 
+[[cloudformation-template]]
 == CloudFormationテンプレート
 
 ダウンロードまたはコピーされたCodeboxで生成されたCloudFormationテンプレート（YAMLファイル）の保存期間は7日間に制限されています。
 
 
 
+[[sandbox-support]]
 == サンドボックスのサポート
 
 データベースサーバから作成できるサンドボックスクローンの最大数は90です。
 
 
 
+[[microsoft-sql-server-detection-and-management]]
 == Microsoft SQL Serverの検出と管理
 
 Microsoft SQL Server の検出は保存されません。  Workload Factory のデータベースにアクセスするたびに、Microsoft SQL Server の検出が再度実行され、そのリージョン内の SQL インストールが識別されます。
 
 
 
+[[explore-savings]]
 == コスト削減の詳細
 
 [Inventory]タブでは、Microsoft SQLインスタンスごとに表示される推定コストは、SQLインスタンスをホストしているボリュームではなく、FSx for ONTAPファイルシステムレベルで計算されます。
 
 
 
+[[multiple-fsx-for-ontap-file-systems]]
 == 複数のFSx for ONTAPファイルシステム
 
 Workload Factoryでは、複数のFSx for ONTAPファイルシステムを使用するMicrosoft SQL Serverの構成の作成や保存はサポートされていません。FSx for ONTAPファイルシステム構成の導入は1つだけサポートされます。
 
 
 
+[[optimization-limitations]]
 == 最適化の制限事項
 
 
 
+[[compute-rightsizing-optimization]]
 === コンピューティングのサイズ適正化
 
 特定のインスタンスタイプに変更すると、ネットワーク設定がリセットされ、最適化中にノード接続エラーが発生してジョブが失敗することがあります。DNS設定とiSCSIセッションを確認および更新するには、手動操作が必要になる場合があります。EC2サイズ変更の制限の詳細については、を参照してくださいlink:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resize-limitations.html["Amazon Elastic Compute Cloudのドキュメント"^]。
 
 
 
+[[ontap-and-os-configuration-optimization]]
 === ONTAPとOSの設定の最適化
 
 複数のSQL Serverインスタンスの一括最適化は、ONTAP構成およびOS構成ではサポートされていません。
 
 
 
+[[operating-system-patch-assessment-for-optimization]]
 === 最適化のためのオペレーティングシステムパッチ評価
 
 最適化の目的で行われるオペレーティング システム パッチ評価は、プライベート ネットワークでは機能しない可能性があります。評価は AWS Patch Manager に依存します。プライベートネットワーク内のWindows EC2インスタンスにパッチを適用する方法については、AWSクラウド運用ブログを参照してください。link:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["AWS Systems Manager を使用してプライベートサブネット内の Windows EC2 インスタンスにパッチを適用する方法"^] 。
 
 
 
+[[on-premises-savings-calculation]]
 == オンプレミスでのコスト削減額の計算
 
 オンプレミスのMicrosoft SQL Serverストレージのボリュームサイズのコスト削減率と削減率の計算は考慮されません。
 
 
 
+[[cross-region-replication-assessment]]
 == リージョン間レプリケーションの評価
 
 * 最適化評価では、ターゲットのFSx for ONTAPファイルシステムが別のAWSアカウントにある場合、リージョン間レプリケーション（CRR）が使用されているかどうかを判断できません。
@@ -136,30 +154,33 @@ Workload Factoryでは、複数のFSx for ONTAPファイルシステムを使用
 
 
 
+[[database-host-authentication-when-exploring-savings]]
 == 節約を検討する際のデータベースホスト認証
 
 権限が制限されている場合、認証が成功した後も節約の探索ページにデータが読み込まれないことがあります。
 
 
 
+[[integration-with-netapp-backup-and-recovery]]
 == NetAppバックアップおよびリカバリとの統合
 
 保護のためにNetApp Backup and Recovery にホストを追加した後、データベースの検出が失敗することがあります。
 
 
 
+[[region-support]]
 == 地域サポート
 
 次のAWSリージョンはサポートされません。
 
 * 中国
-* GovCloud（US）リージョン
 * シークレットクラウド
 * 極秘
 
 
 
 
+[[registering-oracle-on-suse-linux-enterprise-server-12]]
 == SUSE Linux Enterprise Server 12 への Oracle の登録
 
 SUSE Linux Enterprise Server 12 に Oracle Database を登録する場合、Workload Factory は Python 依存関係をインストールしません。必要な Python バージョンを手動で設定する必要があります。  Workload Factory には最低バージョン 3.6 が必要ですが、バージョン 3.11 を推奨します。

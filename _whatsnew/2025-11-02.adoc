@@ -4,12 +4,14 @@
 
 
 
+[[dashboard-improvements]]
 === ダッシュボードの改善
 
 新しいダッシュボードは合理化され、整理され、データベース リソースと Workload Factory の主要機能の概要を 1 つの画面でより明確に表示します。1 枚のカードではデータベース リソースが強調表示され、1 枚のカードでは Well-Architected スコアと分析に関する情報が提供され、1 枚のカードではエラー分析が表示され、2 枚のカードでは月間コストと潜在的な節約額が表示され、1 枚のカードではサンドボックスに関する情報が表示されます。
 
 
 
+[[well-architected-analysis-for-oracle]]
 === Oracle 向けの Well-Architected 分析
 
 Well-Architected 分析には、Oracle 構成に対する次の評価と修正が含まれます。
@@ -23,6 +25,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[permissions-changes-for-workload-factory-for-databases]]
 === Workload Factory for Databases の権限の変更
 
 Workload Factory for Databases では、権限ポリシーが更新され、特定のアクションに必要な内容がより明確になり、必要な権限のみを選択するための細分性が高まりました。資格情報を追加すると、以前の権限モデルである _読み取り専用_ と _読み取り/書き込み_ の代わりに、3 つの権限オプションから選択できるようになります。新しい権限モデルでは、権限ポリシーが次のように分割されます。
@@ -38,12 +41,14 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.ht
 
 
 
+[[well-architected-dashboard-screen-added]]
 === よく設計されたダッシュボード画面が追加されました
 
 新しい _Well-architected_ ダッシュボード画面がデータベース メニューに追加されました。この画面から、データベース資産全体の構成ステータスの集約ビューを取得できます。
 
 
 
+[[edit-protection-for-database-deployments-in-netapp-backup-and-recovery]]
 === NetApp Backup and Recoveryにおけるデータベース導入時の編集保護
 
 Workload Factory コンソールから、保護されたリソースの保護を編集することを選択すると、 NetApp Consoleのバックアップとリカバリにリダイレクトされ、保護ポリシーまたはスケジュールを変更できます。
@@ -52,6 +57,7 @@ link:https://docs.netapp.com/us-en/workload-databases/protect-sql-server.html["�
 
 
 
+[[error-filtering-by-tags-available-for-the-error-analysis-feature]]
 === エラー分析機能で利用可能なタグによるエラーフィルタリング
 
 Workload Factory のエラー分析機能を使用すると、インフラストラクチャ指向のタグで Microsoft SQL Server エラー ログをフィルター処理して表示できます。この機能強化により、問題を迅速にトリアージ、トラブルシューティング、解決できるようになります。

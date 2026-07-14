@@ -15,6 +15,7 @@ NetApp Workload Factory for Databases で新しい PostgreSQL サーバーまた
 
 
 
+[[about-this-task]]
 == タスクの内容
 
 Workload Factory から PostgreSQL サーバーを作成する前に、データベース ホスト構成で使用可能なストレージ展開タイプ、Workload Factory の操作モード、およびこの操作を完了するための要件について学習します。
@@ -30,12 +31,14 @@ Workload Factory から PostgreSQL サーバーを作成する前に、データ
 
 
 
+[[before-you-begin]]
 == 開始する前に
 
 あなたには link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["_データベースホスト作成_権限を付与する"^] AWS アカウントでワークロードファクトリーに新しいデータベース ホストを作成します。
 
 
 
+[[create-a-postgresql-server]]
 == PostgreSQLサーバの作成
 
 このタスクは、_Quick create_or_Advanced create_deploymentモードを使用して、_automate_mode権限でワークロードファクトリで実行できます。Codeboxで利用可能なREST API、AWS CLI、AWS CloudFormation、Terraformの各ツールを使用することもできます。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Codeboxを使用して自動化する方法"^]です。

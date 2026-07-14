@@ -4,6 +4,7 @@
 
 
 
+[[continuously-optimize-your-microsoft-sql-server-workloads-with-databases]]
 === データベースでMicrosoft SQL Serverワークロードを継続的に最適化
 
 BlueXP  ワークロードファクトリでは、Amazon FSx for NetApp ONTAP上のMicrosoft SQL Serverワークロードのストレージコンポーネントに関する継続的な最適化とベストプラクティスへの準拠を保証するために、継続的なガイダンスとガードレールが導入されています。この機能は、Microsoft SQL Serverの資産をオフラインで継続的にスキャンし、分析情報、機会、推奨事項の包括的なレポートを提供して、最高レベルのパフォーマンス、コスト効率、コンプライアンスの達成を支援します。
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[terraform-support]]
 === Terraformのサポート
 
 CodeboxからTerraformを使用してMicrosoft SQL Serverを導入できるようになりました。

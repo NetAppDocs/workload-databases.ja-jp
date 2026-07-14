@@ -4,6 +4,7 @@
 
 
 
+[[active-directory-integration-enhancements]]
 === Active Directory統合の強化
 
 Workload Factory for Databases には、*詳細作成* オプションを使用して Microsoft SQL Server を展開するときに、3 つの新しい Active Directory (AD) フィールドが含まれます。これらの機能強化により、Active Directory 参加の設定を指定し、管理されたサービス アカウントを使用できるようになります。

@@ -4,6 +4,7 @@
 
 
 
+[[one-time-assessment-for-sql-server]]
 === SQL Serverの1回限りの評価
 
 Workload Factoryは、新規導入、移行後、トラブルシューティングなど、必要に応じていつでもSQL Serverデータベースの導入構成を分析する、1回限りの評価サービスを提供しています。デプロイメント構成を最適化し、ベストプラクティスに準拠するための推奨事項が得られます。これは、セットアッププロセスに完全にコミットすることなく、優れた設計の機能を利用できる機会です。Workload Factoryに認証情報を保存したり、データベースリソースを登録したり、外部接続を設定したりすることなく、データベースを評価できます。
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[registration-support-for-always-on-availability-groups-on-microsoft-sql-server-and-data-guard-on-oracle]]
 === Microsoft SQL Server上のAlways On可用性グループおよびOracle上のData Guardの登録サポート
 
 Always On 可用性グループ（AOAG）展開モデルを使用した Microsoft SQL Server インスタンスと、Data Guard 展開モデルを使用した Oracle データベースを、NetApp Workload Factory のデータベース ワークロードで検出および登録できるようになりました。この機能強化により、Workload Factory コンソール内での SQL Server および Oracle リソースの管理が向上します。
@@ -24,6 +26,7 @@ link:https://docs.netapp.com/us-en/workload-databases/register-instance.html#reg
 
 
 
+[[well-architected-analysis-for-oracle]]
 === Oracle 向けの Well-Architected 分析
 
 Well-Architected 分析には、Oracle の *オペレーティング システム パッチ* が含まれており、オペレーティング システムに最新のパッチが適用されているかどうかを確認し、そのインストール方法を案内します。
@@ -34,6 +37,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[oracle-on-premises-database-environments-cost-analysis-and-migration-planning]]
 === Oracle オンプレミス データベース環境のコスト分析と移行計画
 
 Workload Factory for Databasesは、OracleオンプレミスデータベースのAmazon FSx for NetApp ONTAPへの移行を分析し、計画を支援します。節約計算ツールを使用すると、Oracleオンプレミスデータベース環境をクラウドで実行する際のコストを見積もり、オンプレミスデータベース環境をクラウドに移行するための推奨事項を確認できます。
@@ -42,6 +46,7 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["オ�
 
 
 
+[[new-ask-me-bookmark-available-in-workload-factory]]
 === Workload Factory で新しい Ask Me ブックマークが利用可能になりました
 
 Workload Factory コンソールのすべての画面に新しい Ask Me ブックマークを追加しました。この改善により、ヘルプが必要なときにいつでも Ask Me に簡単かつ迅速にアクセスできるようになります。Ask Me は AI アシスタントであり、独自のワークロード環境について質問したり、環境から直接パーソナライズされた分析情報を取得したり、以前の会話を参照したりすることができます。

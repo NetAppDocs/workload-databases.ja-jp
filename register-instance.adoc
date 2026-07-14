@@ -17,6 +17,7 @@ NetApp Workload Factory for Databases でインスタンスとデータベース
 
 
 
+[[about-the-task]]
 == タスクについて
 
 インスタンス（SQL Server）またはデータベース（Oracle）の登録には、インスタンスまたはデータベースの認証、FSx for ONTAP認証、準備の3つのステップがあります。準備として、AWSをインストールし、NetApp、PowerShellモジュールをインスタンスまたはデータベースにインストールし、link:analyze-error-logs.html["エラーログ分析"]またはlink:optimize-configurations.html["適切に設計された評価"]などのWorkload Factory for Databasesの機能の最小要件を満たす必要があります。
@@ -27,12 +28,14 @@ AWS GovCloud（US）ユーザーは、FSx for ONTAP クレデンシャルの認�
 
 
 
+[[before-you-begin]]
 == 開始する前に
 
 インスタンスまたはデータベースのホストがインベントリに表示されている必要があります。ホストをインベントリに表示するには、 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["表示、計画、分析の権限を付与する"^] AWS アカウントで。
 
 
 
+[[registering-an-instance-in-a-private-network]]
 === プライベートネットワークにインスタンスを登録する
 
 外部接続のないプライベート ネットワークにインスタンスまたはデータベースを登録するには、必要なエンドポイントを VPC で使用できるようにし、それらを関連するサブネットに関連付けます。インターフェイス エンドポイントのセキュリティ グループでポート 443 を許可します。
@@ -52,6 +55,7 @@ AWS GovCloud（US）ユーザーは、FSx for ONTAP クレデンシャルの認�
 
 
 
+[[register-a-microsoft-sql-server-instance]]
 == Microsoft SQL Serverインスタンスを登録する
 
 インスタンスの登録には、インスタンス認証、FSx for ONTAP認証、および不足している前提条件を完了するための準備の3つのステップがあります。単一または複数のインスタンスを登録できます。
@@ -109,6 +113,7 @@ Workload Factory でlink:optimize-configurations.html["適切に設計された�
 
 
 
+[[register-an-oracle-database]]
 == Oracleデータベースを登録する
 
 インスタンスの登録には、データベース認証、FSx for ONTAP認証、および不足している前提条件を完了するための準備の3つのステップがあります。単一または複数のデータベースを登録できます。

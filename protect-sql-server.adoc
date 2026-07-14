@@ -15,6 +15,7 @@ Workload Factory コンソールからNetApp Backup and Recovery を使用して
 
 
 
+[[about-this-task]]
 == タスクの内容
 
 Workload Factory は、リソースの検出、前提条件の検証、Microsoft SQL Server 用プラグインの構成とインストールを自動化し、 NetApp Backup and Recovery によるワークロードの保護を準備します。このプラグインは、Microsoft SQL Server のワークロードを保護できるNetAppソフトウェアのホスト側コンポーネントです。
@@ -25,6 +26,7 @@ NetApp Backup and Recovery は、 NetApp SnapMirrorデータ レプリケーシ�
 
 
 
+[[before-you-begin]]
 == 開始する前に
 
 バックアップとリカバリを使用して Microsoft SQL Server ワークロードを保護するには、次の要件を満たす必要があります。
@@ -47,6 +49,7 @@ NetAppアカウントへの組織管理者アクセス権を持っている場�
 
 
 
+[[prepare-for-protection-with-netapp-backup-and-recovery]]
 == NetAppバックアップとリカバリによる保護の準備
 
 NetApp Backup and Recovery を使用して Microsoft SQL Server リソースを保護するための準備プロセスを完了します。
@@ -75,6 +78,7 @@ link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies
 
 
 
+[[edit-protection-for-microsoft-sql-server-resources]]
 == Microsoft SQL Server リソースの編集保護
 
 NetApp Backup and Recoveryですでに保護されている Microsoft SQL Server インスタンスおよびデータベースの保護を編集できます。保護を編集すると、保護された SQL Server インスタンスの保護ポリシーまたはスケジュールを変更できます。

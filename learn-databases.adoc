@@ -15,6 +15,7 @@ NetApp Workload Factory for Databases は、最適化、自動シン クロー�
 
 
 
+[[what-is-netapp-workload-factory-for-databases]]
 == NetApp Workload Factory for Databases とは何ですか?
 
 NetApp Workload Factory for Databasesは、Microsoft SQL Server、PostgreSQL、およびOracleデータを検出、評価、計画、プロビジョニングし、業界のベストプラクティスを遵守しながら、パフォーマンスとコストの期待に応えるように最適化されたAmazon FSx for NetApp ONTAP（FSx for ONTAP）環境に移行します。NetApp Workload Factory for Databasesは、FSx for ONTAP上のデータベースを継続的に最適化および管理します。
@@ -23,12 +24,14 @@ NetApp Workload Factory for Databasesは、Microsoft SQL Server、PostgreSQL、�
 
 
 
+[[workload-factory-benefits-for-self-managed-databases]]
 == セルフマネージドデータベースにおけるワークロードファクトリーのメリット
 
 Workload Factoryは、自己管理型データベース向けのベストプラクティスと自動化機能を提供します。
 
 
 
+[[best-practices]]
 === ベストプラクティス
 
 * AWSクラウド、Microsoft WindowsおよびSQLサーバ、NetApp ONTAP for SQL ServerのEC2インスタンスへの導入に関する統合された知識。
@@ -39,6 +42,7 @@ Workload Factoryは、自己管理型データベース向けのベストプラ�
 
 
 
+[[automation-with-workload-factory-codebox]]
 === Workload Factory Codebox による自動化
 
 Workload Factory は、_Codebox_ による組み込みの自動化を導入します。  Codebox は次のような自動化の利点を提供します。
@@ -50,6 +54,7 @@ Workload Factory は、_Codebox_ による組み込みの自動化を導入し�
 
 
 
+[[workload-factory-for-databases-features]]
 === データベース向けワークロードファクトリーの機能
 
 Workload Factory for Databases は次の機能を提供します。
@@ -68,6 +73,7 @@ Workload Factory for Databases は次の機能を提供します。
 
 
 
+[[benefits-of-amazon-fsx-for-ontap-for-self-managed-databases]]
 == 自己管理型データベースでのAmazon FSx for ONTAPのメリット
 
 * *耐久性、可用性、信頼性*：FSx for ONTAPは、単一および複数のアベイラビリティゾーンの導入をサポートする高可用性、アプリケーション対応のスナップショット、レプリケーションを使用したディザスタリカバリの向上、効率的なバックアップなど、FSx for ONTAPでホストされる自己管理データベースの耐久性と可用性を強化する複数の機能を提供します。
@@ -79,6 +85,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["ワ�
 
 
 
+[[tools-to-use-netapp-workload-factory]]
 == NetApp Workload Factory を使用するためのツール
 
 NetApp Workload Factory は次のツールで使用できます。
@@ -94,6 +101,7 @@ NetApp Workload Factory は次のツールで使用できます。
 
 
 
+[[supported-configurations]]
 == サポートされる構成
 
 Workload Factoryは、AWS、NetApp ONTAP、Microsoft SQL Server、Oracle、およびPostgreSQLのベストプラクティスに従い、以下のデータベースエンジン、バージョン、オペレーティングシステム、および導入モデルで使用できます。
@@ -167,6 +175,7 @@ Workload Factoryは、AWS、NetApp ONTAP、Microsoft SQL Server、Oracle、お�
 |===
 
 
+[[integrated-aws-services]]
 == AWS統合サービス
 
 データベースには、以下の統合されたAWSサービスが含まれています：
@@ -180,6 +189,7 @@ Workload Factoryは、AWS、NetApp ONTAP、Microsoft SQL Server、Oracle、お�
 
 
 
+[[regions]]
 == 地域
 
 データベースは、FSx for ONTAPがサポートされるすべての商用リージョンでサポートされます。 https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["サポート対象の Amazon リージョンを表示します。"^]
@@ -187,13 +197,13 @@ Workload Factoryは、AWS、NetApp ONTAP、Microsoft SQL Server、Oracle、お�
 次のAWSリージョンはサポートされません。
 
 * 中国
-* GovCloud（US）リージョン
 * シークレットクラウド
 * トップシークレットクラウド
 
 
 
 
+[[getting-help]]
 == サポートを受ける
 
 Amazon FSx for NetApp ONTAP は、AWSファーストパーティの解決策 です。FSx for ONTAPファイルシステム、インフラ、または本サービスを使用する解決策に関する質問やテクニカルサポートの問題については、AWS管理コンソールのサポートセンターを使用してAWSに対するサポートケースをオープンしてください。「 FSX for ONTAP 」サービスと該当するカテゴリを選択します。AWS サポートケースの作成に必要な残りの情報を指定します。

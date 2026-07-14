@@ -15,6 +15,7 @@ Workload Factory for Databases で新しい Microsoft SQL Server またはデー
 
 
 
+[[about-this-task]]
 == タスクの内容
 
 Workload Factory から Microsoft SQL Server を作成する前に、データベース ホスト構成で使用可能なストレージ展開タイプ、Microsoft マルチパス I/O 構成、Active Directory 展開、ネットワークの詳細、およびこの操作を完了するための要件について学習します。
@@ -55,6 +56,7 @@ Domain Name System（DNS;ドメインネームシステム）リソースをロ�
 
 
 
+[[before-you-begin]]
 == 開始する前に
 
 新しいデータベースホストを作成する前に、次の前提条件を満たしていることを確認してください。
@@ -75,6 +77,7 @@ Active Directoryに接続する場合は、次の作業を行うための権限�
 
 
 
+[[step-1-create-a-database-server]]
 == 手順1：データベースサーバを作成する
 
 _クイック作成_ または _詳細作成_ のデプロイメント モードを使用して、_自動化_ モード権限で Workload Factory でこのタスクを完了できます。 Codebox で利用可能な REST API、AWS CLI、AWS CloudFormation、Terraform などのツールも使用できます。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Codeboxを使用して自動化する方法"^] 。
@@ -399,6 +402,7 @@ CloudWatchでは、スタックの名前でロググループが作成されま�
 ====
 
 
+[[step-2-enable-remote-connection-on-the-microsoft-sql-server]]
 == 手順2：Microsoft SQL Serverでリモート接続を有効にする
 
 サーバーがデプロイされた後、Workload Factory は Microsoft SQL Server 上のリモート接続を有効にしません。リモート接続を有効にするには、次の手順を実行します。

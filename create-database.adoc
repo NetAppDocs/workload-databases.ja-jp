@@ -37,6 +37,7 @@ NOTE: SMBプロトコルを使用するMicrosoft SQL Serverでは、データベ
 
 
 
+[[create-a-database]]
 == データベースの作成
 
 Workload Factory でこのタスクを完了するには、_クイック作成_ または _詳細作成_ のデプロイメント モードを使用できます。

@@ -15,6 +15,7 @@ summary: Workload Factory for Databases 内のエラー ログを分析します
 
 
 
+[[about-this-task]]
 == タスクの内容
 
 エラー ログの分析と修復は、SQL Server インスタンスと Oracle データベースの正常性とパフォーマンスを維持するのに役立ちます。エラー ログを効果的に解釈するには、慎重な分析と専門知識が必要です。手動による監視、エラー検出、根本原因分析には時間がかかり、エラーが発生しやすくなります。これらの課題により、問題解決が遅れ、ダウンタイムが増加し、運用効率が低下する可能性があります。スマート エラー ログ アナライザーは、次のような主な利点によってこれらの課題に対処します。
@@ -33,6 +34,7 @@ link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrockの価格"^]
 
 
 
+[[data-privacy-and-security]]
 === データのプライバシーとセキュリティ
 
 この機能は、次の対策によりデータのプライバシーとセキュリティを確保します。
@@ -45,6 +47,7 @@ link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrockの価格"^]
 
 
 
+[[before-you-begin]]
 == 開始する前に
 
 エラー ログ アナライザーを使用するには、次の前提条件を満たしている必要があります。
@@ -86,6 +89,7 @@ SQL Server または Oracle ホストに関連付けられた EC2 インスタ�
 
 
 
+[[analyze-error-logs]]
 == エラーログを分析する
 
 Workload Factory コンソールを使用して、SQL Server エラー ログを分析します。

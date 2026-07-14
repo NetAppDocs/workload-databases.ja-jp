@@ -4,6 +4,7 @@
 
 
 
+[[continuous-optimization-adds-compute-remediation-and-assessment]]
 === 継続的な最適化により、コンピューティングの修正と評価を追加
 
 Microsoft SQL Serverインスタンスのコンピューティングリソースの最適化に役立つ分析情報と推奨事項がデータベースから提供されるようになりました。CPU利用率を測定し、AWS Compute Optimizerサービスを活用して最適なサイズのインスタンスタイプを推奨し、利用可能なオペレーティングシステムパッチをユーザに通知します。コンピューティングリソースを最適化することで、インスタンスタイプに関する十分な情報に基づいた意思決定が可能になり、コスト削減とリソース利用率の効率化につながります。
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[postgresql-support]]
 === PostgreSQLのサポート
 
 スタンドアロンPostgreSQLサーバーの配置をデータベースに配置して管理できるようになりました。

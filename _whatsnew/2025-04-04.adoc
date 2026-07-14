@@ -4,6 +4,7 @@
 
 
 
+[[optimization-enhancements]]
 === 最適化の機能拡張
 
 データベース環境を最適化する際に、新しい最適化評価、修正、複数のリソースの表示を利用できます。
@@ -42,12 +43,14 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[improved-inventory-view]]
 === インベントリビューの改善
 
 ワークロードファクトリコンソールの[Inventory]タブは合理化され、Amazon FSx for NetApp ONTAPで実行されるSQLサーバのみが含まれるようになりました。SQLサーバーはオンプレミスで、Amazon Elastic Block StoreとAmazon FSx for Windows File Serverで稼働しています。
 
 
 
+[[quick-create-available-for-postgresql-server-deployment]]
 === PostgreSQLサーバー展開で利用可能なクイック作成
 
 この迅速な導入オプションを使用すると、HA構成とベストプラクティスが組み込まれたPostgreSQLサーバを作成できます。

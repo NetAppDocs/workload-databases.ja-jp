@@ -4,6 +4,7 @@
 
 
 
+[[bluexp-workload-factory-notification-service-support]]
 === BlueXPワークロードファクトリー通知サービスのサポート
 
 BlueXP ワークロードファクトリー通知サービスを使用すると、ワークロードファクトリーは BlueXP アラートサービスまたは Amazon SNS トピックに通知を送信できます。BlueXPアラートに送信された通知は、BlueXP アラートパネルに表示されます。ワークロードファクトリーが Amazon SNS トピックに通知を発行すると、トピックのサブスクライバー（ユーザーや他のアプリケーションなど）は、トピックに設定されたエンドポイント（E メールや SMS メッセージなど）で通知を受け取ります。
@@ -18,6 +19,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 
 
+[[onboarding-enhancement-for-registering-instances]]
 === インスタンス登録のオンボーディング強化
 
 Workload Factory for Databases は、Amazon FSx for NetApp ONTAP ストレージ上で稼働するインスタンスの登録プロセスを改善しました。これにより、登録するインスタンスを一括で選択できるようになりました。インスタンスが登録されると、ワークロード ファクトリー コンソール内でデータベース リソースを作成および管理できるようになります。
@@ -26,6 +28,7 @@ link:https://docs.netapp.com/us-en/workload-databases/manage-instance.html["イ�
 
 
 
+[[analysis-and-fix-for-microsoft-multipath-io-timeout-setting]]
 === Microsoft マルチパス I/O タイムアウト設定の分析と修正
 
 データベース インスタンスの well-architected ステータスに、Microsoft Multipath I/O (MPIO) タイムアウト設定の分析と修正が含まれるようになりました。タイムアウトを60秒に設定することで、FSx for ONTAPストレージの接続性とフェイルオーバー時の安定性が確保されます。MPIO設定が適切に設定されていない場合は、ワークロードファクトリーがMPIOタイムアウト値を60秒に設定する修正を提供します。
@@ -34,6 +37,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[enhancements-to-graphics-in-instance-inventory]]
 === インスタンスインベントリのグラフィックの強化
 
 インスタンス インベントリ画面では、スループットや IOPS などのさまざまなリソース使用率グラフに 7 日間のデータが表示されるようになり、ワークロード ファクトリー コンソールから SQL ノードのパフォーマンスをより効率的に監視できるようになりました。ノードから収集されたパフォーマンスメトリクスはAmazon CloudWatchに保存され、Logs Insightsや環境内の他の分析サービスとの統合に使用できます。
@@ -42,6 +46,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[support-for-windows-authentication-in-workload-factory]]
 === ワークロードファクトリーでの Windows 認証のサポート
 
 現在、ワークロード ファクトリーは、インスタンスを登録し、管理機能のメリットを享受するために、Windows 認証ユーザーを使用した SQL Server 認証をサポートしています。

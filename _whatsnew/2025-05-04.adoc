@@ -4,6 +4,7 @@
 
 
 
+[[dashboard-enhancements]]
 === ダッシュボードの機能拡張
 
 * BlueXP  ワークロードファクトリコンソールのタブ間を移動すると、アカウント間ビューとリージョン間ビューを使用できます。新しいビューは、リソースの管理、監視、最適化を改善します。
@@ -12,18 +13,21 @@
 
 
 
+[[ad-hoc-scan-available-for-database-configurations]]
 === データベース構成で使用可能なアドホックスキャン
 
 BlueXP  Workload Factory for Databasesは、管理対象のMicrosoft SQL ServerインスタンスをFSx for ONTAPストレージで自動的にスキャンし、潜在的な構成の問題がないかどうかを確認します。毎日のスキャンに加えて、いつでもスキャンできます。
 
 
 
+[[removal-of-on-premises-assessment-records]]
 === オンプレミス評価記録の削除
 
 オンプレミスのMicrosoft SQL Serverホストの削減効果を確認したら、オンプレミスのホストレコードをBlueXP  ワークロードファクトリから削除することもできます。
 
 
 
+[[optimization-enhancements]]
 === 最適化の機能拡張
 
 
@@ -40,6 +44,7 @@ BlueXP  Workload Factory for Databasesは、管理対象のMicrosoft SQL Server
 
 
 
+[[updated-permissions-terminology]]
 === 権限に関する用語を更新
 
 ワークロード ファクトリのユーザー インターフェースとドキュメントでは、読み取り権限を示すために「読み取り専用」を使用し、自動化権限を示すために「読み取り/書き込み」を使用するようになりました。
