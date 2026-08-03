@@ -33,6 +33,9 @@ summary: Workload Factory for Databases 内のエラー ログを分析します
 link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrockの価格"^]
 
 
+NOTE: アカウント管理者がAI機能を無効にしている場合、メッセージが表示され、AI分析を使用できなくなります。管理者に連絡するか、link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["AI管理について学ぶ"^]。
+
+
 
 [[data-privacy-and-security]]
 === データのプライバシーとセキュリティ

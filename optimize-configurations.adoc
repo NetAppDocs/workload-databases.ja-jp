@@ -22,11 +22,15 @@ link:optimize-overview.html["Workload Factory の構成分析と Well-Architecte
 [[about-this-task]]
 == タスクの内容
 
-Workload Factory はデータベース構成を毎日分析します。毎日の分析により、適切に設計されたステータス、洞察、推奨事項が提供されます。ベストプラクティスを満たすように構成の問題を自動的に修正できます。
+Workload Factory はデータベース構成を毎日分析します。毎日の分析により、適切に設計されたステータス、洞察、推奨事項が提供されます。
 
-Workload Factoryコンソール内のデータベースインベントリまたはWell-architectedダッシュボードから、問題の確認と修正を行うことができます。
+AWSアカウントに「表示」「計画」「分析」の権限を付与すると、多くの推奨事項が利用可能になります。「操作および修復」の権限を付与すると、すべての推奨事項が利用可能になり、構成上の問題を自動的に修正してベストプラクティスに準拠させることができます。
+
+Workload Factoryコンソール内のデータベースインベントリまたはWell-architectedダッシュボードから、問題の確認と修正を行うことができます。データベース構成の要件はさまざまであるため、お使いのデータベース環境に適用されない特定の構成の分析を無視することができます。これにより、不要なアラートや不正確な最適化結果を回避できます。
 
 オプションとして、クレデンシャルを保存したりリソースを登録したりすることなく、データベース構成のベストプラクティスを確認するための1回限りの評価を実行できます。
+
+また、組織の標準とNetAppのベストプラクティスに照らして環境を検証するために、平易な言葉でカスタムルールを作成することもできます。ドライランでルールをテストし、各環境で実行するようにスケジュールを設定します。link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html["カスタムルールについて詳しくはこちらをご覧ください。"^]
 
 .分析対象
 Workload Factory は、次の構成の well-architected ステータスを分析します。
@@ -62,6 +66,8 @@ Oracle の Well-Architected 分析では、構成が他の構成に依存して�
 認証情報を保存したりリソースを登録したりすることなく、1回限りの評価を実行して、Microsoft SQL ServerインスタンスまたはOracleデータベースの適切なアーキテクチャステータスを確認します。
 
 スクリプトは複数回実行して結果をアップロードできます。Workload Factoryは、アップロードのたびに、適切に設計されたステータスとインサイトを更新します。
+
+各設定について、現在の値と推奨値を確認できます。
 
 [role="tabbed-block"]
 ====
@@ -104,13 +110,29 @@ Oracle の Well-Architected 分析では、構成が他の構成に依存して�
 ====
 
 
+[[perform-an-on-demand-assessment]]
+== オンデマンド評価を実行する
+
+AWS アカウントで _操作と修復_ の権限を付与すると、Oracle データベースのオンデマンド評価を実行できます。この評価を実行するために、リソースを登録する必要はありません。
+
+.手順
+. いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
+. メニューimage:workloads-menu-icon.png["ハンバーガー メニュー アイコンは、ストレージ、eda、ai、データベース、vmware、管理などのワークロードに移動するために使用されます。"]を選択します。次に、*データベース*を選択します。
+. *Inventory*で、エンジンタイプとして*Oracle*を選択します。
+. 「表示と修正」を選択します。
+. 「Well-architected」ステータスタブで、*今すぐ分析*を選択します。
+. 任意の構成に対する推奨事項を表示します。Workload Factoryは、構成が最適化されていない場合に起こりうる問題点と、ベストプラクティスを推奨事項に含めています。
+
+
+
+
 [[before-you-begin-fixing-dismissing-and-re-activating-configurations]]
 == 構成の修正、却下、再有効化を始める前に
 
-データベース環境の継続的な監視と設定問題の自動修正には、以下の要件が必要です。これらの要件は、1回限りの評価には必要ありません。
+以下の要件は、データベース環境の継続的な評価と設定上の問題の自動修正に必要です。これらの要件は、1回限りの評価には必要ありません。
 
 * 絶対ですlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["操作と修復の権限を付与する"^]AWS アカウントで。
-* リソースは Workload Factory に登録されている必要があり、ストレージタイプは FSx for ONTAP である必要があります。link:register-instance.html["リソースを登録する方法を学びます。"]
+* リソースをWorkload Factoryに登録し、ストレージタイプはFSx for ONTAPである必要があります。link:register-instance.html["リソースを登録する方法を学びます。"]
 * 設定または構成を修正する前に、各推奨事項を確認してください。RSSとMAXDOPについては、本番環境を変更する前に推奨設定をテストしてパフォーマンスを確認してください。
 
 
@@ -204,3 +226,13 @@ Workload Factory は構成分析を停止します。
 
 .結果
 Workload Factoryは構成分析を再開し、今後は毎日実行します。
+
+
+
+[[related-information]]
+== 関連情報
+
+* link:optimize-overview.html["Workload Factory におけるデータベース リソースの構成分析とウェルアーキテクテッドステータスについて説明します。"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["リンクを使用してFSx for ONTAPファイルシステムに接続する"^]
+* link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html["カスタムルールについて"^]
+

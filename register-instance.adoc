@@ -11,7 +11,7 @@ summary: NetApp Workload Factory for Databases でリソースのステータス
 
 
 [role="lead"]
-NetApp Workload Factory for Databases でインスタンスとデータベースのステータス、リソース使用率、保護、ストレージ パフォーマンスを監視できるように、Microsoft SQL Server のインスタンスと Oracle のデータベースを登録します。
+Microsoft SQL Server のインスタンスおよび Oracle のデータベースを登録することで、リソースの管理、データベースとサンドボックス クローンの作成、エラー ログ分析の実行、および構成の最適化を NetApp Workload Factory for Databases で行うことができます。
 
 リソースを登録できるのは、FSx for ONTAP ファイルシステムストレージで実行されている場合のみです。
 
@@ -20,18 +20,20 @@ NetApp Workload Factory for Databases でインスタンスとデータベース
 [[about-the-task]]
 == タスクについて
 
-インスタンス（SQL Server）またはデータベース（Oracle）の登録には、インスタンスまたはデータベースの認証、FSx for ONTAP認証、準備の3つのステップがあります。準備として、AWSをインストールし、NetApp、PowerShellモジュールをインスタンスまたはデータベースにインストールし、link:analyze-error-logs.html["エラーログ分析"]またはlink:optimize-configurations.html["適切に設計された評価"]などのWorkload Factory for Databasesの機能の最小要件を満たす必要があります。
+インスタンス（SQL Server）またはデータベース（Oracle）の登録には、インスタンスまたはデータベースの認証と準備という2つのステップが必要です。認証とは、インスタンスまたはデータベースの資格情報を検証するプロセスです。準備には、link:create-database.html["データベースの作成"]、link:create-sandbox-clone.html["サンドボックスの作成"]、link:analyze-error-logs.html["エラーログ分析"]、またはlink:optimize-configurations.html["Well-Architected評価"]などのWorkload Factory for Databasesの機能の最小要件を満たすために、AWS、NetApp、およびPowerShellモジュールをインスタンスまたはデータベースにインストールすることが含まれます。
 
 Workload Factory は、Microsoft SQL Server インスタンスと Oracle データベースの登録と管理のみをサポートしています。Workload Factory で選択した AWS アカウントの認証情報に応じて、PostgreSQL ホストがインベントリに表示されます。現在、Workload Factory は、Amazon Linux オペレーティングシステムでのみ実行されている未登録の PostgreSQL インスタンスをサポートしています。
-
-AWS GovCloud（US）ユーザーは、FSx for ONTAP クレデンシャルの認証に AWS Secrets Manager を使用する必要があります。その他のすべてのユーザーは、ファイルシステムクレデンシャルを使用して FSx for ONTAP を認証する必要があります。
 
 
 
 [[before-you-begin]]
 == 開始する前に
 
-インスタンスまたはデータベースのホストがインベントリに表示されている必要があります。ホストをインベントリに表示するには、 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["表示、計画、分析の権限を付与する"^] AWS アカウントで。
+インスタンスまたはデータベースを登録する前に、以下の手順を実行する必要があります。
+
+* 登録したいリソースのホストがインベントリに表示されていることを確認してください。link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["操作および修復の権限を付与する"^] AWSアカウントで。
+* 登録するリソースをホストする FSx for ONTAP ファイルシステムにリンクを関連付けます。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["既存のリンクを関連付ける方法、または新しいリンクを作成して関連付ける方法について説明します。"^] リンクが関連付けられたら、この操作に戻ります。
+
 
 
 
@@ -58,7 +60,7 @@ AWS GovCloud（US）ユーザーは、FSx for ONTAP クレデンシャルの認�
 [[register-a-microsoft-sql-server-instance]]
 == Microsoft SQL Serverインスタンスを登録する
 
-インスタンスの登録には、インスタンス認証、FSx for ONTAP認証、および不足している前提条件を完了するための準備の3つのステップがあります。単一または複数のインスタンスを登録できます。
+インスタンスの登録には、インスタンス認証と準備という2つのステップがあります。単一のインスタンス、または複数のインスタンスを登録できます。
 
 Workload Factory は、SQL Server のフェールオーバークラスタインスタンス（FCI）およびスタンドアロン導入の登録をサポートしています。
 
@@ -78,19 +80,7 @@ Workload Factory は、SQL Server のフェールオーバークラスタイン�
 
 
 
-. FSx for ONTAPを認証するには（手順2）、次の操作を実行してから、*次へ*を選択します：
-+
-.. *すべてのリソースに同じクレデンシャルを使用する*か*クレデンシャルを手動で管理する*かを選択します。
-.. GovCloudアカウントの場合は FSx for ONTAP クレデンシャルを含む AWS SSM パラメータ ARN を入力し、その他すべてのアカウントの場合は FSx for ONTAP ファイルシステムのユーザー名とパスワードを入力して、*次へ*を選択します。
-+
-GovCloudアカウントの場合、AWS SSM Parameter ARN値は、AWS Management ConsoleのParameter StoreのParameter detailsに次の形式で表示されます： `{fsx:{"username":"fsxadmin","password":"pass"}}`。AWS SSM ParameterタイプはSecure Stringで、名前の形式は次のようになります： `/netapp/wlmdb/<fsx_filesystemID>`。SSMパラメータの取得の詳細については、link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloudドキュメント"^]を参照してください。
-
-+
-FSx for ONTAPファイルシステムが認証されたら、*次へ*を選択します。
-
-
-
-. 準備するには（手順 3）、インスタンスが最小要件を満たしていることを確認します。
+. 準備するには（手順 2）、インスタンスが最小要件を満たしていることを確認します。
 +
 最小要件を満たすには、インスタンスにAWSとNetApp PowerShellモジュールとPowerShell 7モジュールがインストールされており、「前提条件チェック」にリストされている機能の少なくとも1つについて前提条件を完了する必要があります。
 
@@ -116,7 +106,7 @@ Workload Factory でlink:optimize-configurations.html["適切に設計された�
 [[register-an-oracle-database]]
 == Oracleデータベースを登録する
 
-インスタンスの登録には、データベース認証、FSx for ONTAP認証、および不足している前提条件を完了するための準備の3つのステップがあります。単一または複数のデータベースを登録できます。
+インスタンスの登録には、データベース認証と準備という2つのステップがあります。単一のインスタンスまたは複数のデータベースを登録できます。
 
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
@@ -134,20 +124,7 @@ Workload Factory でlink:optimize-configurations.html["適切に設計された�
 
 
 
-. FSx for ONTAPを認証するには（手順2）、次の操作を実行してから、*次へ*を選択します：
-+
-.. *すべてのリソースに同じクレデンシャルを使用する*か*クレデンシャルを手動で管理する*かを選択します。
-.. GovCloudアカウントの場合は FSx for ONTAP クレデンシャルを含む AWS SSM パラメータ ARN を入力し、その他すべてのアカウントの場合は FSx for ONTAP ファイルシステムのユーザー名とパスワードを入力して、*次へ*を選択します。
-+
-AWS SSM パラメータのタイプは「Secure String」で、名前の形式は次のようになります `/netapp/wlmdb/<fsx_filesystemID>`。AWS SSM パラメータ ARN の値を次の形式で入力してください：
-`{fsx:{"username":"fsxadmin","password":"pass"}}`。SSM パラメータの取得方法については、link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloudドキュメント"^]を参照してください。
-
-+
-FSx for ONTAPファイルシステムが認証されたら、*次へ*を選択します。
-
-
-
-. 準備するには（手順3）、データベースが必要な前提条件を満たしていることを確認します。必要なモジュールがすべてインストールされ、前提条件が満たされている場合は、*次へ*を選択してデータベースを登録します。それ以外の場合は、次の手順に従ってください。
+. 準備するには（手順2）、データベースが必要な前提条件を満たしていることを確認します。必要なモジュールがすべてインストールされ、前提条件が満たされている場合は、*次へ*を選択してデータベースを登録します。それ以外の場合は、次の手順に従ってください。
 +
 .. *Prerequisite check view*で前提条件を確認します。
 +
@@ -171,5 +148,5 @@ FSx for ONTAPファイルシステムが認証されたら、*次へ*を選択�
 * インベントリからデータベースを表示する
 * link:create-database.html["データベースの作成"]
 * link:create-sandbox-clone.html["データベースクローン（サンドボックス）を作成する"]
-* link:optimize-configurations.html["適切に設計されたデータベース構成を実装する"]
+* link:optimize-configurations.html["データベース構成に関する包括的かつ適切なアーキテクチャ評価を取得します。"]
 

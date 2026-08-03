@@ -136,7 +136,6 @@
   <block id="6f03d6ad36824b69611930dbe2fb4d42" category="paragraph">データベースを作成すると、独立したLUNで構成されるFSx for ONTAPファイルシステムに2つのボリュームが作成され、データベースのデータファイルとログファイルをホストします。新しいデータベース内のデータベースファイルはシンプロビジョニングされ、新しいデータベースに割り当てられた合計サイズのわずか数MBしか消費しません。</block>
   <block id="6d7b2a50e46356cb2ecf2805e3b5bb59" category="paragraph">データベースのストレージを分離する場合は、_ virtualマウントポイント_を使用します。仮想マウントポイントを使用すると、ホスト上のいくつかの共通ドライブにデータベースを統合できます。</block>
   <block id="92e04fe5d2a269f38993f394f5b1eb9b" category="admonition">SMBプロトコルを使用するMicrosoft SQL Serverでは、データベースの作成はサポートされていません。</block>
-  <block id="7dd1095f5b5a654fc784015352d1066d" category="paragraph">新しいデータベースを作成する前に、次の前提条件を満たしていることを確認してください。</block>
   <block id="78898e52fcbdc5337204a384f2456d4f" category="list-text">Microsoft SQL Server</block>
   <block id="1271a3d360115d2332889fc326f89944" category="section-title">データベースの作成</block>
   <block id="16b7e1ed68be5b41e619ec00b93a3de0" category="list-text">[Create user database]ページの[Database information]で、次の情報を指定します。</block>
@@ -288,7 +287,6 @@
   <block id="ad308330f566581c7c1ac5769e060883" category="paragraph">データベースは、FSx for ONTAPがサポートされるすべての商用リージョンでサポートされます。<block ref="54b85ac4e794c565ea8c7aad421e6e67" category="inline-link-rx"></block></block>
   <block id="186585d175a4fff1722ac82a5520c584" category="paragraph">次のAWSリージョンはサポートされません。</block>
   <block id="cc6dcf46ebcb08f1caa420526cc0ab18" category="list-text">中国</block>
-  <block id="1411debdb32e6b128ca27ec92a708cbd" category="list-text">GovCloud（US）リージョン</block>
   <block id="ecd96786b112acf6970d6aaf3be575ca" category="list-text">シークレットクラウド</block>
   <block id="151ef168e17772f7a361db78a0c86552" category="list-text">トップシークレットクラウド</block>
   <block id="20c404f3ca0633629eee9b1b4ccd6737" category="section-title">サポートを受ける</block>
@@ -480,12 +478,6 @@
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">Codeboxを使用して自動化する方法</block>
   <block id="04dff47f9a41cfa54b616dd86a4a6043" category="list-text">ストレージのサイジング：ストレージ階層、ファイルシステムのヘッドルーム、ログドライブのサイズ、tempdbドライブのサイズを含む</block>
   <block id="b1107628010e55afc5ec740439838f10" category="list-text">ストレージレイアウト：ユーザデータファイルの配置、ログファイルの配置、tempdbの配置を含む</block>
-  <block id="1c11d2e59190fe6a4e37f1e68abafcb4" category="paragraph">主な機能は次のとおりです。</block>
-  <block id="8c0981b34ea19373e1dcf1c3d034f097" category="list-text">ベストプラクティスの自動検証</block>
-  <block id="029d49350caff46ab3e1f31c9c60f494" category="list-text">サイズの適正化に関する推奨事項</block>
-  <block id="3583e4a3e4e2e122cff65b8ad9045348" category="list-text">プロアクティブなオブザーバビリティ</block>
-  <block id="16fcd85dc9469370b62b4b46381f8e2a" category="list-text">インサイトからアクションへ</block>
-  <block id="7a3fc3cf12e9da54628c7311398bee5c" category="list-text">AWS Well-Architected Framework Advisor</block>
   <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">2024年11月3日</block>
   <block id="d1e68728a28b7936858b1484445ef50f" category="sidebar">構成を最適化</block>
   <block id="35c4b7b7975b86786b96de60f8d9159c" category="doc">BlueXP  Workload Factory for Databasesの初版リリース</block>
@@ -679,8 +671,6 @@
   <block id="f73028254f9c4297e3f60654068105e0" category="list-text">ドロップダウン矢印を選択すると、構成の推奨事項が表示されます。推奨事項には、ベスト プラクティス、最適化されていない構成の潜在的な落とし穴、重要な考慮事項が含まれます。推奨事項をよく確認してください。</block>
   <block id="dae891145ffbf1b1653fc3da2a87faac" category="list-text">オプションが利用可能な場合は、構成の問題を*表示して修正*することを選択します。</block>
   <block id="45b5dce37159255d07342e3102124571" category="list-text">構成の問題を修正するには、*[続行]*を選択します。</block>
-  <block id="ebc3bf5de769bc75ad8e36a90a0ed695" category="list-text">日常的な構成分析</block>
-  <block id="3f6f8b4e204fd3aa39cac35661de164d" category="section-title">分析要件</block>
   <block id="4eadd345921a1f4292d9b98892d3b84e" category="inline-link-macro">適切に設計されたデータベース構成を実装する</block>
   <block id="9f79767d5e4eb4d13f2a6d925ed59d0f" category="paragraph"><block ref="9f79767d5e4eb4d13f2a6d925ed59d0f" category="inline-link-macro-rx"></block></block>
   <block id="32077805607c935c0ac59dd7b4a3fdc6" category="inline-link-macro">ホストサーバーを展開する</block>
@@ -1030,7 +1020,6 @@
   <block id="bc4a349f7f95e73490c3e2f8aaabe892" category="list-text">延期または却下された構成の構成分析を再開するには、「再アクティブ化」を選択します。</block>
   <block id="7c6a7786a083c7d074bada76f0bcd33b" category="summary">Workload Factory for Databases は、Microsoft SQL Server および Oracle の構成を定期的に分析して、問題があるかどうかを判断します。</block>
   <block id="8317ffd1a53e5d269aaac07d321b8dd0" category="doc">Workload Factory におけるデータベース環境の構成分析</block>
-  <block id="1725276922bab9d023ef938d5fce0d7c" category="paragraph">Workload Factory for Databases は、データベース構成を定期的に分析して、 Amazon FSx for NetApp ONTAPストレージ上の Microsoft SQL Server および Oracle のデプロイメントに問題があるかどうかを判断します。問題が見つかった場合、Workload Factory は問題の内容を示し、データベース構成で最高のパフォーマンス、コスト効率、ベスト プラクティスへの準拠を実現するために何を変更する必要があるかを説明します。</block>
   <block id="84ee3cc4e2a4f169585c115121112580" category="paragraph">Workload Factory コンソールからNetApp Backup and Recovery を使用して、Microsoft SQL Server アプリケーション データを保護します。この統合により、ローカルプライマリAmazon FSx for NetApp ONTAP (FSx for ONTAP) ストレージ上のローカルスナップショットを使用してワークロードをバックアップし、セカンダリ FSx for ONTAPストレージにワークロードを複製するという保護目標を達成できます。</block>
   <block id="bb1b704677e0a9ac00a2bda88f85fe27" category="paragraph">Workload Factory は、リソースの検出、前提条件の検証、Microsoft SQL Server 用プラグインの構成とインストールを自動化し、 NetApp Backup and Recovery によるワークロードの保護を準備します。このプラグインは、Microsoft SQL Server のワークロードを保護できるNetAppソフトウェアのホスト側コンポーネントです。</block>
   <block id="e9575ae90b7ec054c43a9797544d0103" category="paragraph">NetApp Backup and Recovery は、 NetApp SnapMirrorデータ レプリケーション テクノロジーを活用して、スナップショット コピーを作成し、それをバックアップの場所に転送することで、すべてのバックアップが完全に同期されるようにします。</block>
@@ -1066,7 +1055,6 @@
   <block id="63ba9d2341fcd316dd11a8e4d659a680" category="list-text">サンドボックスで、更新するサンドボックス クローンのアクション メニューを選択します。</block>
   <block id="5c312d6e56cb086ef38ed7860931fe1c" category="summary">NetApp Workload Factory for Databases でリソースのステータス、リソース使用率、保護、ストレージ パフォーマンスを監視できるようにリソースを登録します。</block>
   <block id="ec1098eb54d9b05cc1e929562eb8d30d" category="doc">NetApp Workload Factory for Databases にリソースを登録する</block>
-  <block id="0bc907adb7562b30973df586f142f009" category="paragraph">NetApp Workload Factory for Databases でインスタンスとデータベースのステータス、リソース使用率、保護、ストレージ パフォーマンスを監視できるように、Microsoft SQL Server のインスタンスと Oracle のデータベースを登録します。</block>
   <block id="1d72541b2e1a224311e8b78af73bab83" category="summary">NetApp Workload Factory for Databases でデータベース (サンドボックス) クローンを、作成時の元のバージョンに戻します。</block>
   <block id="ecf8d68388a40ca09bc6475e0cb33a92" category="doc">NetApp Workload Factory for Databases でデータベース クローンを元に戻す</block>
   <block id="b006ea3a9fc3f700c7ea6c3fc404a855" category="paragraph">データベースのクローンを作成すると、作成時のクローンはベースライン クローンになります。クローンされたデータベースのデータは、作成時のソース データベースと同じです。データベース クローン内のデータは時間の経過とともに変化するため、クローンが最初に作成されたときのベースラインにデータを戻すことが必要になる場合があります。この操作はクローンの再ベースライン化と呼ばれます。新しいクローンを作成するのではなく、クローンを再ベースライン化するとスペースが節約されます。ただし、データベース クローンに加えられた変更はすべて削除されます。</block>
@@ -1139,11 +1127,8 @@
   <block id="465e9d802e89a57d0c6d975dfa335b10" category="paragraph">絶対です <block ref="c00ccdcb7558b1384f2bfe03bc0ccfc2" category="inline-link-macro-rx"></block> AWS アカウントで、Workload Factory に新しいデータベース ホストを作成します。</block>
   <block id="faf57b7ea755136ba278c7ca635d000d" category="inline-link-macro">ワークロードファクトリーの権限について学ぶ</block>
   <block id="ee8d92152066f3db5bcbd21ab0bf2f95" category="paragraph">ワークロード ファクトリーでデータベースを作成するには、_表示、計画、および分析_ の権限が必要です。あるいは、部分的に完了したコード テンプレートをコピーまたはダウンロードして、ワークロード ファクトリー外で操作を完了することもできます。<block ref="2ed05d763ad52dc4a74c37608a2573bc" category="inline-link-macro-rx"></block> 使用するモードを決定します。</block>
-  <block id="24f052bbfc9bd9df6db2a9420a7adf2b" category="inline-link-macro">AWS アカウントの認証情報と _表示、計画、分析_ の権限</block>
-  <block id="4f56231d78cda077af94d3e0dfd51958" category="list-text">*資格情報と権限*: 必要なのは <block ref="acc024b2636f2b609a405107ce7e1e7a" category="inline-link-macro-rx"></block> Workload Factory に新しいデータベースを作成します。</block>
   <block id="93d1a10f5427dcaad9dbfd835a2f78c4" category="paragraph">Workload Factory でこのタスクを完了するには、_クイック作成_ または _詳細作成_ のデプロイメント モードを使用できます。</block>
   <block id="2025a0042a0ae8427cc7478e4f0629ea" category="paragraph">あなたには <block ref="c00ccdcb7558b1384f2bfe03bc0ccfc2" category="inline-link-macro-rx"></block> AWS アカウントでワークロードファクトリーに新しいデータベース ホストを作成します。</block>
-  <block id="c2a828d4f87d9d9d6977488310b2783f" category="list-text">*資格情報と権限*: 必要なのは <block ref="acc024b2636f2b609a405107ce7e1e7a" category="inline-link-macro-rx"></block> Workload Factory でサンドボックス クローンを作成します。</block>
   <block id="e271b1d3bc72a38f89e2810646dd71a1" category="paragraph">検出されたホストの節約を調査: Workload Factory は既存の Microsoft SQL サーバーにリンクし、詳細を計算機に取り込んで自動的に比較します。この計算オプションを使用するには、_表示、計画、および分析_の権限を付与する必要があります。ユースケースは変更できますが、その他のすべての詳細は計算で自動的に決定されます。</block>
   <block id="d186a87b5715922555a4959a0edebfb5" category="inline-link-macro">表示、計画、分析の権限を付与する</block>
   <block id="1dd2a215cce31e07e812222b302e45d0" category="list-text"><block ref="eb47095b3da29cffa9f1ed319e537b9b" category="inline-link-macro-rx"></block> AWS アカウントの *節約の調査* タブで Elastic Block Store (EBS) および FSx for Windows システムを検出し、節約計算ツールで節約計算を表示します。</block>
@@ -1160,7 +1145,6 @@
   <block id="4e9dffb84355d8e05d841ef09cb0b14f" category="paragraph">選択してください<block ref="7cb8f01033b9f51b50ad23ef165f92b6" category="inline-link-macro-rx"></block>お客様のニーズを満たすために。</block>
   <block id="611dad37557a2cb5ae289c5e019aed4c" category="paragraph">権限を付与しない場合は、Workload Factory for Databases を使用して、部分的に完了したコード サンプルをコピーできます。</block>
   <block id="38c4c72673e051381c12c32e1dd20f50" category="paragraph">権限を付与する場合は、<block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>これには、データベースや AI などのワークロード機能の選択や、必要な権限の IAM ポリシーの作成が含まれます。</block>
-  <block id="14a812993e30c1769069f1d355d3b4a0" category="paragraph">インスタンスまたはデータベースのホストがインベントリに表示されている必要があります。ホストをインベントリに表示するには、 <block ref="74a62493240df6cc0643a248f282a25a" category="inline-link-macro-rx"></block> AWS アカウントで。</block>
   <block id="4afeabae14ccab1ba1ff53887c3a9701" category="doc">Amazon Elastic Block Store (EBS) のデータベース計算ツールで節約を最適化</block>
   <block id="d9f7bd12b1b11b300e5288560b5e9987" category="paragraph">2 つの新しい計算機能により、EBS ストレージを使用して複数のインスタンスを実行する際のコスト削減分析が改善され、FSx for ONTAPに切り替えることでさらにコストを削減できるようになります。</block>
   <block id="32ccdc5dd4f059ebfa9dabaa8c301cf0" category="list-text">Workload Factory は、1 つの FSx for ONTAPファイル システム上の複数のデータベース ホストに統合されたストレージ ソリューションを提供します。この統合により、複数のデータベース ホストに必要なファイル システムの数が削減され、ストレージ コストが最適化され、コスト削減が向上します。</block>
@@ -1230,24 +1214,17 @@
   <block id="8a91764939fe812c81b542206d9d0af7" category="paragraph">リソースを登録できるのは、FSx for ONTAP ファイルシステムストレージで実行されている場合のみです。</block>
   <block id="905518fc8d8d1e03b6625a1429570b1f" category="inline-link-macro">エラーログ分析</block>
   <block id="ad93849f6190198b574a03052debf9ee" category="section-title">Microsoft SQL Serverインスタンスを登録する</block>
-  <block id="92d119793835b54b4d7e2c5bcf09d96d" category="paragraph">インスタンスの登録には、インスタンス認証、FSx for ONTAP認証、および不足している前提条件を完了するための準備の3つのステップがあります。単一または複数のインスタンスを登録できます。</block>
   <block id="1e353ab5fd8467e0928740d5976845d6" category="paragraph">Workload Factory は、SQL Server のフェールオーバークラスタインスタンス（FCI）およびスタンドアロン導入の登録をサポートしています。</block>
   <block id="eb0b58928657c5dc4eb473380f85c004" category="list-text">インスタンスを認証するには（手順 1）、次の手順を実行し、*次へ*を選択します：</block>
   <block id="6b49f93b8fce5f712f19faf1d7e86198" category="list-text">*すべてのインスタンスに同じクレデンシャルを使用する*か*クレデンシャルを手動で管理する*かを選択します。</block>
   <block id="f401c2a4f95521388399cd9160d348c0" category="list-text">ユーザー名とパスワード情報を提供して、SQL Server と Windows を認証します。</block>
   <block id="5af06cdcd5f2ae831a171dc46f044c7f" category="paragraph">インスタンスが認証されている場合は、*次へ*を選択します。</block>
-  <block id="69724d4e89d54d12f3752423c87be644" category="list-text">*すべてのリソースに同じクレデンシャルを使用する*か*クレデンシャルを手動で管理する*かを選択します。</block>
-  <block id="34b2f9d708b57fa0ab164ac81a844832" category="paragraph">FSx for ONTAPファイルシステムが認証されたら、*次へ*を選択します。</block>
-  <block id="9ed181f71730a4b981c04369e2f1719e" category="list-text">準備するには（手順 3）、インスタンスが最小要件を満たしていることを確認します。</block>
   <block id="4aa1b1ff22a8dfe18a969e9e18594ab0" category="list-text">各機能の*セットアップの詳細*を選択して、機能の前提条件を確認し、画面上の指示に従って機能の不足している前提条件を完了します。</block>
   <block id="d521398ad1462fd891ea513e4855ce5b" category="inline-link-macro">適切に設計された問題を確認して修正</block>
   <block id="9d96bcc0867ec5be17a78fc127af4785" category="paragraph">インスタンスの登録が開始されます。進行状況を追跡するには、*ジョブ監視*タブを選択します。</block>
-  <block id="efd81ed9168d148e7b33debfd48f5bbe" category="paragraph">インスタンスの登録には、データベース認証、FSx for ONTAP認証、および不足している前提条件を完了するための準備の3つのステップがあります。単一または複数のデータベースを登録できます。</block>
   <block id="67b60232330635a005ec1fd48b8378f5" category="list-text">インベントリで、エンジンタイプとして *Oracle* を選択します。</block>
   <block id="4a259cdca92c769ffaab7b1900cdf9a3" category="list-text">ユーザー名とパスワード情報を指定して、Oracle ユーザーと Automatic Storage Management（ASM）グリッドユーザー（該当する場合）を認証します。</block>
   <block id="d80e97cf9f44825e6a448342f9ee18ae" category="paragraph">データベースが認証されている場合は、*次へ*を選択します。</block>
-  <block id="90252dc7d534ac36ea9f5b1fd7c90573" category="list-text">FSx for ONTAPを認証するには（手順2）、次の操作を実行してから、*次へ*を選択します：</block>
-  <block id="aea7afc9754b2383c56fbbaee6c6009d" category="list-text">準備するには（手順3）、データベースが必要な前提条件を満たしていることを確認します。必要なモジュールがすべてインストールされ、前提条件が満たされている場合は、*次へ*を選択してデータベースを登録します。それ以外の場合は、次の手順に従ってください。</block>
   <block id="1717c98238cd6bd4091f92979d40a891" category="list-text">*Prerequisite check view*で前提条件を確認します。</block>
   <block id="3f4c61df91a8ed4b5fc7622369d6e56d" category="paragraph">データベースを登録するには、*適切に設計された問題と推奨事項を確認する*などの単一の機能のすべての前提条件を完了する必要があります。</block>
   <block id="aece37c900cf74271d49a4aec3628d66" category="paragraph">データベースの登録が開始されます。進行状況を追跡するには、*ジョブ監視*タブを選択します。</block>
@@ -1304,7 +1281,6 @@
   <block id="4511f32d33e21257085df585e8c9dc3a" category="cell">Always On 可用性グループ</block>
   <block id="650870d240bc8043d6977b1a1c975ce0" category="cell">19c、21c</block>
   <block id="edd8af7eaa131179cb70a5db89636876" category="cell">Data Guard</block>
-  <block id="5a493bafe2fb35c6f5339a3ced4adce7" category="paragraph">Workload Factory はデータベース構成を毎日分析します。毎日の分析により、適切に設計されたステータス、洞察、推奨事項が提供されます。ベストプラクティスを満たすように構成の問題を自動的に修正できます。</block>
   <block id="cac9df85ec3dc71ff56914f00db69c7a" category="list-text">コンピューティング：オペレーティング システムのパッチを含む</block>
   <block id="2ad033703ef0dac4d52edf323faa1918" category="paragraph">Oracle の Well-Architected 分析では、構成が他の構成に依存している場合に通知し、リンクされた構成を最適化するためのアクションをリストします。</block>
   <block id="a790f6e28b649137870b00ccf3589944" category="list-text">メニュー<block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block>を選択します。次に、*データベース*を選択します。</block>
@@ -1313,7 +1289,6 @@
   <block id="cea7ad7075430d1bd0be98ca92701bcb" category="list-text">PowerShellでスクリプトを実行します。1つのスクリプトですべてのインスタンスからメタデータを収集します。</block>
   <block id="b33feb370f35879eddcd9293135b1df1" category="list-text">*1回限りの評価* &gt; *アップロード*を選択します。ファイルを見つけて、Workload Factoryコンソールにアップロードします。</block>
   <block id="c70615017296ffdedf34ebb8730eaa77" category="section-title">構成の修正、却下、再有効化を始める前に</block>
-  <block id="50bac09b5a353b5521f0ff914fff6808" category="list-text">リソースは Workload Factory に登録されている必要があり、ストレージタイプは FSx for ONTAP である必要があります。<block ref="aed8a618f1e8a1dc325945b821521d6c" category="inline-link-macro-rx"></block></block>
   <block id="85d21d13c3f58b49f129dacfb4cab3a1" category="list-text">設定または構成を修正する前に、各推奨事項を確認してください。RSSとMAXDOPについては、本番環境を変更する前に推奨設定をテストしてパフォーマンスを確認してください。</block>
   <block id="88228ff74222d41a7b32f7f73b628495" category="paragraph">調査結果のレポートをダウンロードするには、* Export PDF * を選択します。</block>
   <block id="370419de045637c04622917ea040cd16" category="section-title">データベース構成の分析を閉じる</block>
@@ -1321,8 +1296,6 @@
   <block id="d6b510061438391f590afb73a62f098c" category="paragraph">分析はいつでも再アクティブ化できます。この構成は、全体的な最適化スコアに含まれなくなりました。</block>
   <block id="61ab3b6f044b76185565a9f1d6db2113" category="section-title">却下された構成分析を再アクティブ化する</block>
   <block id="99206ff00921c00b5d887375a108d167" category="paragraph">閉じた構成分析はいつでも再アクティブ化できます。再アクティブ化する構成を 1 つ以上選択できます。</block>
-  <block id="1a0cee014540e049f4d08b2ca15c2447" category="inline-link-macro">適切に設計された評価</block>
-  <block id="27cfb14157482da47350bb4484f7e792" category="paragraph">インスタンス（SQL Server）またはデータベース（Oracle）の登録には、インスタンスまたはデータベースの認証、FSx for ONTAP認証、準備の3つのステップがあります。準備として、AWSをインストールし、NetApp、PowerShellモジュールをインスタンスまたはデータベースにインストールし、<block ref="b3b44214924ae2c9e9d272ea31fcb428" category="inline-link-macro-rx"></block>または<block ref="d21897e75c312daacd024fa4c48cd6a7" category="inline-link-macro-rx"></block>などのWorkload Factory for Databasesの機能の最小要件を満たす必要があります。</block>
   <block id="672da44d295a636d22c64c52022ddf81" category="paragraph">Workload Factory は、Microsoft SQL Server インスタンスと Oracle データベースの登録と管理のみをサポートしています。Workload Factory で選択した AWS アカウントの認証情報に応じて、PostgreSQL ホストがインベントリに表示されます。現在、Workload Factory は、Amazon Linux オペレーティングシステムでのみ実行されている未登録の PostgreSQL インスタンスをサポートしています。</block>
   <block id="7651418602ee7e0d7035d3f2eed1ac58" category="paragraph">外部接続のないプライベート ネットワークにインスタンスまたはデータベースを登録するには、必要なエンドポイントを VPC で使用できるようにし、それらを関連するサブネットに関連付けます。インターフェイス エンドポイントのセキュリティ グループでポート 443 を許可します。</block>
   <block id="aa880a36f751894aa3fd6f4bc9d30355" category="paragraph">アウトバウンド EC2 接続にプロキシ サーバを使用する場合は、管理操作のために次のドメインへのアクセスを許可します：</block>
@@ -1334,85 +1307,12 @@
   <block id="9ffdb95250e26c7a6b468126ac7c75b0" category="section-title">仕組み</block>
   <block id="2888fa977354ad1bf513fa2f17fdd7df" category="paragraph">Workload Factory は、Amazon FSx for NetApp ONTAP ファイルシステムの導入環境で実行されているワークロードを毎日分析します。この分析により、適切に設計された状態、インサイト、および推奨事項が提供されます。</block>
   <block id="678b83ba882b41e4bae10f8e48f4a766" category="paragraph">日々の分析が完了すると、デプロイメントのWell-architectedダッシュボードに、構成が「最適化済み」または「最適化されていない」として表示されます。総合的な最適化スコア、カテゴリ別の構成の問題、および構成の問題と推奨事項の一覧が表示されます。構成の問題に関する推奨事項を確認できます。一部の問題はWorkload Factoryによって自動的に修正できますが、その他の問題は手動での介入が必要です。この場合、Workload Factoryは、推奨される変更を実装するのに役立つ詳細な手順を提供します。</block>
-  <block id="1fab3ff575faec37f5f5855ba6c44e9b" category="paragraph">ご使用の環境に適用されない構成の分析を無視することができます。これにより、不要なアラートや不正確な最適化結果を回避できます。特定の構成分析を無視すると、Workload Factory ではその構成が全体の最適化スコアに含められません。</block>
   <block id="ee25e0b6cd574166f206b4c5b7f02df3" category="section-title">重要な理由</block>
   <block id="1ae45cc8915c23757127ca10c1cc4000" category="paragraph">Workload Factoryは、継続的な評価と推奨事項、および修復策を組み合わせることで、大規模なストレージ、データベース、およびVMware環境にベストプラクティスを適用します。Workload Factoryコンソールで適用される自動修正により、人的ミスが削減され、統一された管理が確保され、ワークロードインフラストラクチャ全体でパフォーマンスと信頼性が維持されます。</block>
-  <block id="a54f5b1fe41547cbf19f1fb9561340dc" category="inline-link-macro">リソースを登録する</block>
-  <block id="32b8a48be5601496781767d49968bd51" category="list-text"><block ref="89c16bb90a0fdfa73434baf56ae09810" category="inline-link-macro-rx"></block>オンラインになっていることを確認してください。</block>
-  <block id="25c44f83d9d45dc9b2d2a8e46fcc5b19" category="list-text">リンクを関連付けます。リンク接続により、Workload Factoryは、ストレージ レイアウトや復元性などのすべてのデータベース展開構成を分析できます。</block>
-  <block id="be8334e3a8f0885af8e03ba816b24537" category="inline-link-macro">既存のリンクを関連付ける方法、または新しいリンクを作成して関連付ける方法を学びます</block>
-  <block id="3b1785543fb9e9ab18e56f4cf89f47d9" category="paragraph"><block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。</block>
-  <block id="64aefaaa1ffe9f3b50d13850f89ff59a" category="list-text">AWS アカウントで_表示、計画、分析_の権限を付与してください。</block>
-  <block id="bf2ef084e923ce6ebc4b57db27892de8" category="inline-link-macro">AWS アカウントに権限を付与する方法を説明します</block>
-  <block id="582f3532371a870cf4bd6406f93d26de" category="paragraph"><block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block></block>
-  <block id="1828f0f67d6613341efbc43d822fd8dc" category="section-title">データベース ワークロードに関するベスト プラクティスと推奨事項</block>
-  <block id="1ed3d8c93156794cc432b123457d635f" category="paragraph">Workload Factoryは、適切に設計されたデータベースワークロードを運用するためのベストプラクティスと推奨事項を提供します。適切に設計された分析は、Microsoft SQL ServerおよびOracle Databaseの構成と設定（ストレージサイジング、ストレージ レイアウト、ストレージ構成、コンピューティング、アプリケーション（SQL Server）、および回復力に関連）を評価します。</block>
-  <block id="894445e8ea6df545bfbc4247797a2162" category="section-title">ストレージのサイジング</block>
-  <block id="5418270ffed466b82b925869518520c0" category="list-text">*ストレージ階層*</block>
-  <block id="117987020781031a1637fb2474fcda5a" category="paragraph">FSx for ONTAP ボリュームにプライマリ SSD 階層を使用して、最適なパフォーマンスを確保します。容量プール階層を使用すると、パフォーマンスが低下し、レイテンシが増加する可能性があります。プライマリ SSD 階層はハイパフォーマンスワークロード向けに設計されていますが、容量プール階層はコスト効率に最適化されており、SQL Server ワークロードのパフォーマンス要件を満たさない場合があります。</block>
-  <block id="50a35154861297e0463ad6610197fd71" category="list-text">*ファイルシステムのヘッドルーム*</block>
-  <block id="d3b9cd115041e7966b18702c6a73f2a0" category="paragraph">ファイルシステムの容量は、総ボリュームサイズよりも十分に確保しておいてください。余裕が少なすぎるとパフォーマンスの問題が生じ、多すぎるとストレージ容量が無駄になりコストが増加します。</block>
-  <block id="e52ac523a924c00b4c5ccd742f0d98f3" category="list-text">*ログ ドライブのサイズ*</block>
-  <block id="88a778779ac5da9ed188a4ca76e5ea7b" category="paragraph">トランザクションのロールバック、データベースの利用不能、データ破損、およびログ ドライブがいっぱいになったことによるパフォーマンスの問題を防ぐために、SQL Server ログ ドライブのサイズを適切に設定し、監視してください。</block>
-  <block id="300311b18477e304f1d9e66ce254c8fd" category="list-text">*TempDB ドライブのサイズ*</block>
-  <block id="6f6c8627ab8cdaf7724764b892b49c26" category="paragraph">最適なパフォーマンスとシステム安定性を維持するために、TempDBのサイズを適切に設定し、監視してください。TempDBの容量が不足すると、クエリの速度低下、アプリケーションのタイムアウト、システムクラッシュが発生する可能性があります。</block>
-  <block id="196cc0216fd769aaf46f47da965f30f0" category="section-title">ストレージ レイアウト</block>
-  <block id="983e88e86ed869a9aab818469a6f0c9d" category="list-text">*データ ファイル（.mdf）の配置*および*ログ ファイル（.ldf）の配置*</block>
-  <block id="cea56a3ff1140d20f606958853a708ce" category="paragraph">パフォーマンスを向上させ、独立したバックアップおよびリストア操作を可能にするため、データファイルとログファイルを別々のドライブに配置する。</block>
-  <block id="5b9b356226fe0fdbf3042c364d45373b" category="list-text">*TempDB の配置*</block>
-  <block id="7a94f55aa80442d5d46490909ae726d7" category="paragraph">TempDBを専用ドライブに配置することで、I/O競合を回避し、SQL Serverのパフォーマンスと安定性を向上させることができます。そうしないと、I/Oボトルネック、クエリの速度低下、システムの不安定性が発生する可能性があります。</block>
-  <block id="6e8775bd755a8835ce86806d669677ea" category="section-title">ストレージ構成</block>
-  <block id="6fff5b0f8a5584251f9c517e970984b4" category="list-text">*ONTAP 構成*</block>
-  <block id="7824f7be61b3770dbf45d9c0e7149f1a" category="paragraph">FSx for ONTAP ボリュームのシンプロビジョニング、自動サイズ、およびスペース管理を有効にして、ストレージ効率とコスト効率を最適化します。階層化ポリシーを設定して、古いスナップショットを容量階層に移動させつつ、アクティブなデータのハイパフォーマンスを維持します。LUN については、適切な I/O アライメントのために OS タイプがオペレーティングシステムのパーティショニング スキームと一致していることを確認し、スペース リザベーションを有効にして書き込みエラーを防止し、ストレージがいっぱいになったときに自動的に領域を解放し、ホストに通知できるように、領域割り当てを有効にします。</block>
-  <block id="f17cbc45bebb2b318df7730cf320226f" category="list-text">*オペレーティング システム*</block>
-  <block id="64845b1fc47ddfef3f821cf6b77deab0" category="paragraph">適切なタイムアウト設定を使用して Microsoft Multipath I/O（MPIO）を有効にして構成し、FSx for ONTAP を使用した EC2 上の SQL Server データベースの高可用性とデータ アクセスの一貫性を確保します。MPIO は、フェイルオーバー時の回復力とパフォーマンスを向上させるために、冗長なパスを提供します。最適なディスク利用率とパフォーマンスを実現するために、NTFS 割り当て単位サイズを適切に設定してください。</block>
   <block id="a623a8d0366bf079411aa30be45b2d10" category="section-title">コンピューティング</block>
-  <block id="552508d9abd0206f8a2258a4e950c0ce" category="list-text">*コンピューティングの適正規模化*</block>
-  <block id="e2f45442bdec494bd836b4ec7ed91332" category="paragraph">ワークロードの要求に基づいてSQL Server EC2インスタンスのサイズを最適化し、パフォーマンスとコスト効率のバランスを取りましょう。現在ご利用のインスタンスのリソースが不足している場合は、アップグレードすることでCPU、メモリ、I/Oの容量を向上させることができます。過剰にリソースが供給されている場合は、ダウングレードすることでパフォーマンスを維持しながらコストを削減できます。</block>
-  <block id="f4aa5339a6267f9aa498876d3f99817d" category="list-text">*オペレーティング システム パッチ*</block>
-  <block id="9078834dd366cfbcfbb7495028b90ff2" category="paragraph">セキュリティとシステムの信頼性を向上させるため、最新のオペレーティング システム パッチを適用してください。</block>
-  <block id="f7ea56e7a1a3d21f93afb8868a46597f" category="list-text">*ネットワークアダプタの設定*</block>
-  <block id="3e87f3ec9808572e9326017dfb470169" category="paragraph">受信側スケーリング（RSS）を設定して、ネットワーク処理を複数のプロセッサに分散させ、ネットワークパフォーマンスを向上させます。本番環境に適用する前に、設定をテストしてください。</block>
-  <block id="46042d8ee782bd40a22e572200cc7f86" category="list-text">*MTU アライメント*</block>
-  <block id="0ffe6b9fe982d3cb2c6117acb223809c" category="paragraph">EC2インスタンスの最大伝送単位（MTU）設定をFSx for ONTAPに合わせて、ネットワークの断片化を防ぎ、SQL Serverのパフォーマンスを最適化します。MTUの不整合を修正することで、すべてのノードとネットワークパスにおいて一貫したMTU構成が確保されます。</block>
-  <block id="213ae318e1d77a9d7c891744d5e088ad" category="section-title">アプリケーション（SQL Server）</block>
-  <block id="ee998db55a5373c890946748cb8dafeb" category="list-text">*ライセンス*</block>
-  <block id="dc2c42603ecce6ed6ff4935c61807ce2" category="paragraph">SQL Server のライセンス評価と推奨事項は、ホスト レベルで提供されます。Workload Factory は、データベース インフラストラクチャが、お客様が料金を支払っている商用ソフトウェア ライセンスの機能を一切使用していないことを検出した場合、そのライセンスを「最適化されていない」と判断します。最適化されていないライセンスは、不必要なコストにつながる可能性があります。SQL Server のライセンス使用状況を確認し、料金を支払っているすべての機能を適切に利用していることを確認してください。</block>
-  <block id="a8642bb1e88dfe2e58d1d4d34aed2d28" category="list-text">*Microsoft SQL Server パッチ*</block>
-  <block id="aeb19b16f26ffba9cda709a80fdd7572" category="paragraph">セキュリティを強化し、脆弱性から保護し、システムの信頼性を向上させるために、最新の SQL Server パッチを適用してください。</block>
-  <block id="4eddb0eeecb1e4ae314e258e08e465e3" category="list-text">*MAXDOP*</block>
   <block id="a87a9d28595a379a45146753041d53f3" category="paragraph">クエリのパフォーマンスを最適化するために、MAXDOPを設定してください。4、8、または16の値は一般的にうまく機能します。ワークロードをテストし、CXPACKETなどの並列処理待機タイプを監視してください。</block>
-  <block id="277088f7a0bc1d2b0023dc08b1d30e37" category="list-text">*ローカルスナップショットのスケジュール設定*</block>
-  <block id="2a18a15eebd0bb67a6bfebc30c94b035" category="paragraph">ポイントインタイムバックアップと誤削除、データ破損、その他の問題からの迅速な復旧のために、定期的なスナップショットをスケジュールします。</block>
-  <block id="29e7ad88f894625110c66db9a5db3cae" category="list-text">*バックアップ構成*</block>
-  <block id="4f191d1258f960fe582f682581657e6d" category="paragraph">FSx for ONTAP バックアップまたは AWS Backup を設定して、データ保持およびコンプライアンス要件を満たします。冗長なバックアップは避けてください。</block>
-  <block id="b34347ddf6e48f7eb5aee09d6f7b92a6" category="list-text">*リージョン間レプリケーション*</block>
-  <block id="d4a143ea376b0803a77b86507a94ef57" category="paragraph">データの可用性と災害復旧を向上させるために、リージョン間レプリケーション（CRR）を有効にしてください。CRRを使用して、地域的な停電から保護し、事業継続性を確保してください。</block>
-  <block id="7b3f859ceed0c4f3ae005839c139cd94" category="list-text">*Microsoft SQL Server の高可用性*</block>
-  <block id="95e2d9af5f0697796bab45294c72c532" category="paragraph">SQL Server の高可用性が正しく設定されていることを確認するには、すべての共有ストレージがすべてのクラスタノードからアクセス可能であること、フェイルオーバー時の競合を防ぐためにノード間でドライブ文字が同じであること、クラスタの健全性のためにクォーラムが設定されていること、クラウド環境向けにハートビートしきい値が設定されていること、および SQL Server サービスが自動起動とフェイルオーバー用に設定されていることを確認します。</block>
-  <block id="e2521a2a2f696d450620b08167cf1c24" category="list-text">*クローンのクリーンアップ*</block>
-  <block id="a794e82abecb038fd6fa9a47fd045637" category="paragraph">ストレージコストを削減するため、定期的に古いクローンを見直して削除してください。古くて使われていないクローンは、高額なコストの原因となります。</block>
-  <block id="652ffdd012027e3af53ecb01c1e500ab" category="paragraph">ストレージ性能を最適化し、性能低下を防ぐために、十分なファイルシステム容量を維持してください。十分な余裕容量があれば、効率的なストレージ管理が可能になり、データベースの拡張にも対応できます。</block>
-  <block id="2162171f540307c958ebbf45ee85c9e6" category="list-text">*スワップ領域*</block>
   <block id="d84ec6da982197f7083af7347dab367c" category="paragraph">システムがメモリ負荷に対応し、動作の遅延やクラッシュを回避できるよう、RAM 容量に基づいてスワップ領域を設定してください。</block>
-  <block id="8e2df12faf538d6bacaf28eee1c9ba5c" category="list-text">*Oracle バイナリ配置*</block>
-  <block id="b783d71d72c6af6a879383d98084b39c" category="paragraph">Oracleバイナリを専用ボリュームに配置することで、I/O競合を軽減し、最適なパフォーマンスと安定性を確保できます。この分離により、ソフトウェアのアップデートが簡素化され、意図しない変更やデータ破損のリスクが最小限に抑えられます。</block>
-  <block id="191de1563ead1b097eb12ccf44a2c6e4" category="list-text">*データ ファイルの配置*</block>
-  <block id="c16d7b149b235cecee807abf5f897328" category="paragraph">ランダムI/Oを分離してパフォーマンスを向上させるため、データファイルを専用ボリュームまたは制御ファイルと同じ場所に配置してください。この分離により、カスタマイズされたスナップショット構成、階層化ポリシー、および効率化メカニズムが可能になり、パフォーマンスとコストを最適化できます。</block>
-  <block id="5c5a39c795bca8602578d6afc0b265b0" category="list-text">*制御ファイルの配置*</block>
-  <block id="d8dcefdf0aa7cd4e098cfddd267dc143" category="paragraph">単一障害点を回避し、冗長性を高めるため、制御ファイルのコピーを異なるボリュームまたはディスクに保存してください。制御ファイルは専用ボリュームに配置するか、REDOログやデータファイルと共有してください。ただし、パフォーマンス要件のため、オブジェクトストレージに階層化されたボリュームには配置しないでください。</block>
-  <block id="d2a9eedab15224a70b510d60bff1eacf" category="list-text">*Redo ログの配置*</block>
-  <block id="874e6770e7350eb26458ff75f3c9371b" category="paragraph">書き込み頻度の高いI/O操作を分離し、パフォーマンスを向上させるために、REDOログを専用ボリュームに配置するか、一時ファイルや制御ファイルと適切に共有してください。冗長性を確保するため、REDOログの各コピーは別々のボリュームに保存してください。ボリュームSnapshotやオブジェクトストレージに階層化されたボリュームには、REDOログを配置しないでください。これらは頻繁に更新されるためです。</block>
-  <block id="cef21d61286ad1feaed1b9c70b94e413" category="list-text">*一時配置*</block>
-  <block id="cf0091757f6ff40803416e58f1745563" category="paragraph">一時ファイルを専用ボリュームに配置するか、リドゥファイルや制御ファイルと適切に共有することで、書き込み頻度の高いI/O操作を分離し、パフォーマンスを向上させます。冗長性を確保するため、多重化された各一時コピーは別々のボリュームに保存する必要があります。一時ファイルは、更新頻度が高いため、ボリュームスナップショットやオブジェクトストレージに階層化されたボリュームには配置すべきではありません。</block>
-  <block id="e160b9717e54bc435262f70122ed19d8" category="list-text">*アーカイブ配置*</block>
-  <block id="a0659f391b761a5b4ff8b65f28154fd3" category="paragraph">アーカイブログを専用ボリュームに配置することで、高い I/O 負荷が他のデータベース操作に干渉するのを防ぎ、パフォーマンスとリカバリプロセスを向上させることができます。</block>
-  <block id="ba4e74fb4a08b807adc219f9df1ea143" category="list-text">*ASM 専用構成：ASM データ ディスク グループ LUN、ASM ログ ディスク グループ LUN、および ASM アーカイブ ディスク グループ LUN*</block>
   <block id="e7c6352933ceb00c7f004d9b3b578903" category="paragraph">最適なパフォーマンスと冗長性を実現するために、LUNをAutomatic Storage Management（ASM）のデータ、REDOログ、およびアーカイブログのディスク グループ全体に分散させます。</block>
-  <block id="d911b17f4f4cdcca62a04ad77aa9403d" category="list-text">*ONTAP*</block>
-  <block id="d1bf0b5773fa36619112fb2acdf1eef8" category="paragraph">ボリュームのシンプロビジョニング、自動サイズ設定、およびスペース管理を有効にして、Oracle データベース用の FSx for ONTAP 構成を最適化します。パフォーマンスとコストのバランスを取るために、適切な Snapshot ポリシーと階層化戦略を設定します。LUN については、書き込みエラーを防ぎ、自動スペース再利用を有効にするために、適切な OS タイプのアライメント、スペース リザベーション、およびスペース割り当て設定を確保します。</block>
-  <block id="ec2a0c82b5fcb006f719221eff77fb9b" category="paragraph">Oracle データベースのパフォーマンスを最適化するために、オペレーティング システムの設定を構成します。これには、データベース ワークロードに合わせてカーネル パラメータを調整したり、ネットワーク ファイル システムへのアクセスに適した NFS または dNFS の設定を構成したりすることが含まれます。</block>
-  <block id="f02adb373ce0bc6a6199e6d2ba9b16b9" category="paragraph">セキュリティ、安定性、パフォーマンスの向上を確実にするために、Oracleデータベース環境のオペレーティング システムのパッチを定期的に適用してください。</block>
   <block id="d3274d6efd4629f10f6f21cf8a7c4820" category="doc">SQL Serverの1回限りの評価</block>
   <block id="8f42179a48bba7e0f2424b2849f64183" category="paragraph">Workload Factoryは、新規導入、移行後、トラブルシューティングなど、必要に応じていつでもSQL Serverデータベースの導入構成を分析する、1回限りの評価サービスを提供しています。デプロイメント構成を最適化し、ベストプラクティスに準拠するための推奨事項が得られます。これは、セットアッププロセスに完全にコミットすることなく、優れた設計の機能を利用できる機会です。Workload Factoryに認証情報を保存したり、データベースリソースを登録したり、外部接続を設定したりすることなく、データベースを評価できます。</block>
   <block id="d34510ab77e099f24fa05ceac3ff150c" category="paragraph">適切に設計された分析には、Oracle 向けの以下の新しい構成が含まれています：</block>
@@ -1429,7 +1329,6 @@
   <block id="dd6bcf35b4739e139fa3041add91e4f2" category="paragraph"><block ref="dd6bcf35b4739e139fa3041add91e4f2" category="inline-link-macro-rx"></block></block>
   <block id="7e54439875eebd71cfeadcfc4cd7318c" category="paragraph">Workload Factoryは、選択されたオンプレミスデータベースが単一のFSx for ONTAPファイルシステムのスループット、容量、またはIOPS制限を超えない限り、複数のOracleオンプレミスデータベースを単一のFSx for ONTAP構成推奨に統合してコスト削減を最適化します。</block>
   <block id="6a5a609e38cb11091780a0494b87dc4d" category="paragraph">不要なアラートや不正確な結果を避けるため、ご自身の環境に適用されない構成の分析は無視することもできます。</block>
-  <block id="c3ebb88c8fa8ba0761ebfdca34dbaeba" category="paragraph">Workload Factoryコンソール内のデータベースインベントリまたはWell-architectedダッシュボードから、問題の確認と修正を行うことができます。</block>
   <block id="3a40f68be193f0f7bc0c01f622d3cc5f" category="paragraph">オプションとして、クレデンシャルを保存したりリソースを登録したりすることなく、データベース構成のベストプラクティスを確認するための1回限りの評価を実行できます。</block>
   <block id="e112d8634bd0280eb27ad63e9eeb9493" category="list-text">アプリケーション：Microsoft SQL Serverライセンス、Microsoft SQL Serverパッチ、およびMAXDOP設定が含まれます</block>
   <block id="f953bb98ceaddd49464d672fa425c300" category="list-text">アプリケーション：Oracle Critical Patch Updatesを含む</block>
@@ -1444,7 +1343,6 @@
   <block id="5ff54af90bf02d618e79e03c84b00700" category="list-text">*Inventory*で、エンジンタイプとして*Oracle*を選択します。</block>
   <block id="8cbcf57c0ff19d0bfce7c5c703a985f7" category="list-text">PythonスクリプトをOracleデータベースホストにコピーします。</block>
   <block id="1403600c1d66e7c9c648c18cc49caa6b" category="list-text">適切なシェルでスクリプトを実行してください。1つのスクリプトで、すべてのデータベースからメタデータを収集します。</block>
-  <block id="b740c45c86ad7009995655549fe4d99e" category="paragraph">データベース環境の継続的な監視と設定問題の自動修正には、以下の要件が必要です。これらの要件は、1回限りの評価には必要ありません。</block>
   <block id="ee3b04dc1b62ec42f7ac81b2e81b8eef" category="admonition">設定を修正すると、ダウンタイムやサービスの中断が発生する可能性があります。設定を修正する前に、推奨事項をよく確認してください。</block>
   <block id="4f03f223eb6e4b828fcf786106ebb22e" category="list-text">クローンクリーンアップを除くすべての構成については、推奨事項の詳細を確認し、問題の修正による影響を確認してください。一部の修復作業では、ダウンタイムやサービスの中断が発生する可能性があります。</block>
   <block id="9d5f676da687a39223271ef7bfef6eb9" category="paragraph">Workload Factory は構成分析を停止します。</block>
@@ -1453,17 +1351,9 @@
   <block id="fbce5e4a64b8c9a295b946cbdba92ed5" category="paragraph">Workload Factory は、データベース環境を分析するための以下のオプションを提供します：</block>
   <block id="b2583e88253ca682a5c9db94c5ed500a" category="inline-link-macro">1回限りの評価</block>
   <block id="552cb152a031acb4dd113f600e3ade2f" category="list-text">*1回限りの評価*：<block ref="8a4d4d5f036a1f87bfd488fd328f962f" category="inline-link-macro-rx"></block>を実行して、認証情報を保存したりリソースを登録したりすることなく、Microsoft SQL ServerインスタンスまたはOracleデータベースの適切に設計された状態を確認します。</block>
-  <block id="2527ed375db9a9b7c8eb438c41b158af" category="list-text">*継続的監視*：継続的監視を有効にするには、リソースを登録してください。Workload Factory は、データベース環境を定期的に分析し、設定を最適化するための継続的な推奨事項を提供し、問題を自動的に修正します。</block>
-  <block id="c00d1429cf92a83ae3a29f82b1d3ce87" category="paragraph">1回限りの評価では、分析対象のMicrosoft SQL ServerインスタンスまたはOracleデータベースに対して、認証情報を1回だけ提供すれば済みます。</block>
-  <block id="8e66e2128d2e2c62b019aa77535f4ea2" category="paragraph">継続的な監視を行うには、AWSアカウントでリソースを登録し、リンクを関連付け、権限を付与する必要があります。</block>
   <block id="e498749f3c42246d50b15c81c101d988" category="section-title">Application</block>
-  <block id="6f4c4a3cb603b128e3558183f12a42c6" category="list-text">*Oracle クリティカルパッチアップデート*</block>
   <block id="b73450e7e11af7bf00f7fdd615541be8" category="paragraph">セキュリティ脆弱性に対処し、データベース環境の整合性を維持するために、最新のOracleクリティカルパッチアップデートを適用してください。潜在的な脅威から保護し、セキュリティのベストプラクティスを遵守するために、定期的にパッチをレビューして適用してください。</block>
   <block id="02bc0523497de72834c4c7990e32d155" category="section-title">耐障害性</block>
-  <block id="10797d31a69c2502a69facc97a069c1e" category="list-text">*クロスリージョンレプリケーション（CRR）*</block>
-  <block id="a9e4d72be69fab8a75dc490382a14871" category="paragraph">Oracleデータベースのデータ可用性と災害復旧機能を強化するには、リージョン間レプリケーション（CRR）を有効にしてください。CRRは、地理的に分散した拠点間でデータを複製することで、地域的な障害からシステムを守り、事業継続性を確保します。</block>
-  <block id="4e3fbfcdffe2becd73a5b796de048459" category="list-text">*アプリケーション整合性Snapshot*</block>
-  <block id="0d0d1e59f6397f54691afa326ea6ef15" category="paragraph">NetApp SnapCenterでアプリケーション整合性スナップショットを使用して、特定の時点におけるボリュームデータの正確で信頼性の高いスナップショットを取得できます。これにより、アプリがスムーズに動作し、データが安全に保たれます。SnapCenterは、バックアップを容易にし、データの迅速かつ正確な復元を支援することで、ダウンタイムを削減し、最も重要なワークロードを保護します。</block>
   <block id="7f65119c79afd09b7f99936d13e97909" category="section-title">2026年4月6日</block>
   <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">2025年10月6日</block>
   <block id="e41556fc62415ea0a9f5770be89f198d" category="summary">REST API コードを使用してサンドボックスクローンを CI および CD パイプラインに接続し、自動化によってソフトウェア配信を改善します。</block>
@@ -1521,8 +1411,6 @@
   <block id="f00fe8f9c85e91dd0181e63717f16462" category="paragraph">GovCloudアカウントの場合は、FSx for ONTAPクレデンシャルのAWS SSMパラメータARN値を次の形式で入力します：<block ref="e9051332cce6a4a45153762fd24852b2" prefix=" " category="inline-code"></block>。AWS SSMパラメータタイプは「Secure String」で、名前は次の形式である必要があります<block ref="2bf2dc3b6c5a539d284c40964555ce50" prefix=" " category="inline-code"></block>。SSMパラメータの取得の詳細については、<block ref="19e2986392c22c543c40f011778abe34" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="5703c433440d20d33af4c4796d45da41" category="list-text">*セキュリティグループ*：PostgreSQLに必要なポートとプロトコルを許可するために、ワークロードセキュリティグループが作成されます。さらに、1つまたは複数のセキュリティグループを選択することもできます。</block>
   <block id="48aa17a242c1289545660436a5da586e" category="paragraph">GovCloudアカウントの場合は、認証情報のAWS SSMパラメータARN値を次の形式で入力してください：<block ref="e9051332cce6a4a45153762fd24852b2" prefix=" " category="inline-code"></block>AWS SSMパラメータのタイプは「Secure String」で、名前の形式は次のようになります：<block ref="2bf2dc3b6c5a539d284c40964555ce50" prefix=" " category="inline-code"></block>SSMパラメータの取得の詳細については、<block ref="19e2986392c22c543c40f011778abe34" category="inline-link-macro-rx"></block>を参照してください。</block>
-  <block id="79841a1330c11b7cedd1a1d3cbb4ae1c" category="paragraph">+ GovCloudアカウントの場合は、FSx for ONTAPクレデンシャルのAWS SSMパラメータARN値を次の形式で入力します：<block ref="e9051332cce6a4a45153762fd24852b2" prefix=" " category="inline-code"></block>。AWS SSMパラメータタイプは「Secure String」である必要があり、名前は次の形式にする必要があります：<block ref="2bf2dc3b6c5a539d284c40964555ce50" prefix=" " category="inline-code"></block>。SSMパラメータの取得の詳細については、<block ref="19e2986392c22c543c40f011778abe34" category="inline-link-macro-rx"></block>を参照してください。</block>
-  <block id="6e9a724ad6108741081bde02ae2912e7" category="paragraph">+ 新しいFSx for ONTAPファイルシステムによっては、インストール時間が30分以上長くなる場合があります。</block>
   <block id="d452bc6133c698b08bf18ab5b595d341" category="list-text">*Simple Notification Service*：オプションで、ドロップダウンメニューからPostgreSQL用のSNSトピックを選択することで、この構成に対してSimple Notification Service（SNS）を有効にできます。</block>
   <block id="4a82368a947d7ff0c661da3504176f5c" category="paragraph">最も正確な節約額の見積もりを得るには、計算ツールの各項目をカスタマイズしてください。</block>
   <block id="9ef59a9ba51ad7927edec8e6fcbeb5ed" category="section-title">Microsoft SQL Serverホストの節約をカスタマイズする</block>
@@ -1533,10 +1421,247 @@
   <block id="8e99d4b967a68c2639bd0e29eb652859" category="list-text">データベースから、*節約を探る*を選択し、次に*Oracle on EBS*を選択します。</block>
   <block id="cb1217d0ae1d0062d087d1a39e9f29af" category="list-text">*Oracleエディション*：ドロップダウンメニューからOracleエディションを選択してください。</block>
   <block id="298643abfe0d666f175f7f94a8751629" category="list-text">*Oracle BYOLの月額費用（$）*：必要に応じて、Oracle BYOLの月額費用をドルで入力してください。</block>
-  <block id="45d65f4c65aa938b39f96d1b869cd23a" category="paragraph">AWS GovCloud（US）ユーザーは、FSx for ONTAP クレデンシャルの認証に AWS Secrets Manager を使用する必要があります。その他のすべてのユーザーは、ファイルシステムクレデンシャルを使用して FSx for ONTAP を認証する必要があります。</block>
-  <block id="2ef73c74b0cad2520f602596db0ba30e" category="list-text">GovCloudアカウントの場合は FSx for ONTAP クレデンシャルを含む AWS SSM パラメータ ARN を入力し、その他すべてのアカウントの場合は FSx for ONTAP ファイルシステムのユーザー名とパスワードを入力して、*次へ*を選択します。</block>
-  <block id="9fc473da6470452a4af104eed53ea7a9" category="paragraph">GovCloudアカウントの場合、AWS SSM Parameter ARN値は、AWS Management ConsoleのParameter StoreのParameter detailsに次の形式で表示されます：<block ref="e9051332cce6a4a45153762fd24852b2" prefix=" " category="inline-code"></block>。AWS SSM ParameterタイプはSecure Stringで、名前の形式は次のようになります：<block ref="a698aa1fbee7824723aef2f6f3386343" prefix=" " category="inline-code"></block>。SSMパラメータの取得の詳細については、<block ref="19e2986392c22c543c40f011778abe34" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="fcf9f8c650605555c801d6284a159f59" category="list-text">データベースを認証するには（手順1）、以下の手順を実行し、*次へ*を選択してください：</block>
-  <block id="4c290bde270addf9889d6824ca16e3ab" category="paragraph">AWS SSM パラメータのタイプは「Secure String」で、名前の形式は次のようになります<block ref="a698aa1fbee7824723aef2f6f3386343" prefix=" " category="inline-code"></block>。AWS SSM パラメータ ARN の値を次の形式で入力してください：<block ref="e9051332cce6a4a45153762fd24852b2" prefix=" " category="inline-code"></block>。SSM パラメータの取得方法については、<block ref="19e2986392c22c543c40f011778abe34" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="431b3c73dcd090440f753c5d3af80bb0" category="section-title">2026年6月1日</block>
+  <block id="78a4e31d1c34a343ac1189ff737a0982" category="doc">ウェルアーキテクテッド分析における Oracle および Microsoft SQL Server の構成変更</block>
+  <block id="1d617de46837a3d67b6850fd27b13c02" category="paragraph">複数のデータベース構成が統合され、適切なアーキテクチャ分析において以下の構成に名称変更されました。</block>
+  <block id="70dc13ee7e3320f270e7236f7fa9f60d" category="list-text">*ブロックデバイス領域管理*：スペース リザベーション、スペース割り当て、およびフラクショナルリザーブが含まれます</block>
+  <block id="c75bc7e1a77b2b8e809bf87a1b1c2b5b" category="list-text">*ストレージ効率*：圧縮、重複排除、およびコンパクションが含まれます</block>
+  <block id="706125d817b831eb4c31ea90c004eee2" category="list-text">*階層化/TCO最適化*：階層化ポリシーと階層化最低冷却日数が含まれます</block>
+  <block id="08ab4e6e5d6d250dd93617842402b41f" category="list-text">*ローカルスナップショットのスケジュール*：スナップショットポリシーが含まれます</block>
+  <block id="3791b9a912543795aa72719e1fa5c488" category="inline-link-macro">ワークロードファクトリーにおける構成分析</block>
+  <block id="5874b771173388bd46c8912da31750a0" category="paragraph"><block ref="5874b771173388bd46c8912da31750a0" category="inline-link-macro-rx"></block></block>
+  <block id="da0c92072a1db7fee3208bcad3ad822b" category="section-title">データベースのIAMアクセス許可ポリシーを更新しました</block>
+  <block id="e9e3af45119a834b75ee5ce8ad5fc96d" category="paragraph">データベースのアクセス権限が更新され、機能へのアクセス性が向上し、不要なSSMへのアクセスが制限されました。</block>
+  <block id="6f70bfe68d48e1ab770cfb69bea59dfd" category="paragraph">表示、計画、および分析の権限は、AWS SSM ドキュメントに限定されます。これらの権限があれば、ホスト、インスタンス、データベースを表示できます。また、リソースの基本的なオンデマンドの Well-Architected 分析を実行することもできます。</block>
+  <block id="e9ad7ba5991717b52c215bd25e788b28" category="paragraph">操作および修復権限を使用すると、リソースの変更、エラーログの分析、リソースの包括的なウェルアーキテクテッド分析の取得、および構成上の問題の修正を行うことができます。</block>
+  <block id="b8646f09ea34b75c077cfea12f75617b" category="inline-link-macro">権限リファレンス</block>
+  <block id="c041c2dfd235a9062883922df8e04748" category="paragraph"><block ref="c041c2dfd235a9062883922df8e04748" category="inline-link-macro-rx"></block></block>
+  <block id="21b694dc2503eab08ab245a8bcfe9f1c" category="inline-link-macro">AI管理について学ぶ</block>
+  <block id="d4d3603f8d07cf225f744c7e81bf9374" category="admonition">アカウント管理者がAI機能を無効にしている場合、メッセージが表示され、AI分析を使用できなくなります。管理者に連絡するか、<block ref="a4efb9d0168cfdc15063741b91ed0040" category="inline-link-macro-rx"></block>。</block>
+  <block id="08c0c91e4ebd389e49d8401cc707b402" category="paragraph">新しいデータベースを作成する前に、以下の前提条件をすべて満たしてください。</block>
+  <block id="e58af96aa41efa7b7129c35a28907a57" category="inline-link-macro">AWSアカウントの認証情報と_操作および修復_権限</block>
+  <block id="1e4408f83c8df67583019f5dfedf1213" category="list-text">*認証情報と権限*：Workload Factoryで新しいデータベースを作成するには、<block ref="1a05fe4795203e9e173c7abb17442c68" category="inline-link-macro-rx"></block>が必要です。</block>
+  <block id="73a7f4e2adc565d1202c5f44437f9744" category="list-text">*認証情報と権限*：Workload Factory でサンドボックスクローンを作成するには、<block ref="1a05fe4795203e9e173c7abb17442c68" category="inline-link-macro-rx"></block>が必要です。</block>
+  <block id="2699ce4834e3dde5ebf6ecc63a20668f" category="paragraph">Workload Factory はデータベース構成を毎日分析します。毎日の分析により、適切に設計されたステータス、洞察、推奨事項が提供されます。</block>
+  <block id="13a5b378a5653f612b43f5a72bd01ebf" category="paragraph">AWSアカウントに「表示」「計画」「分析」の権限を付与すると、多くの推奨事項が利用可能になります。「操作および修復」の権限を付与すると、すべての推奨事項が利用可能になり、構成上の問題を自動的に修正してベストプラクティスに準拠させることができます。</block>
+  <block id="f0e6b8c01ee6280b1e2c01fc31fc15bc" category="paragraph">Workload Factoryコンソール内のデータベースインベントリまたはWell-architectedダッシュボードから、問題の確認と修正を行うことができます。データベース構成の要件はさまざまであるため、お使いのデータベース環境に適用されない特定の構成の分析を無視することができます。これにより、不要なアラートや不正確な最適化結果を回避できます。</block>
+  <block id="6988a60bf6eae2f55b7ea830a8e6eb42" category="inline-link-macro">カスタムルールについて詳しくはこちらをご覧ください。</block>
+  <block id="7d42d1268339efac1f7013d0c68448d7" category="paragraph">また、組織の標準とNetAppのベストプラクティスに照らして環境を検証するために、平易な言葉でカスタムルールを作成することもできます。ドライランでルールをテストし、各環境で実行するようにスケジュールを設定します。<block ref="bb56f08e5b6beded55992987f1280d78" category="inline-link-macro-rx"></block></block>
+  <block id="bbb1ab722da0458db430250c6f9c7ecf" category="paragraph">各設定について、現在の値と推奨値を確認できます。</block>
+  <block id="51648136bc76557527e95cc08d7d8442" category="section-title">オンデマンド評価を実行する</block>
+  <block id="5c27d2d0f6aa4dc0aa396077ed4f1d4a" category="paragraph">AWS アカウントで _操作と修復_ の権限を付与すると、Oracle データベースのオンデマンド評価を実行できます。この評価を実行するために、リソースを登録する必要はありません。</block>
+  <block id="5227b8ee327ecf194cc43a7ae9929373" category="list-text">「表示と修正」を選択します。</block>
+  <block id="de660a2c1b217998786c97e826fbaebe" category="list-text">「Well-architected」ステータスタブで、*今すぐ分析*を選択します。</block>
+  <block id="51a946e47b36e2a8e6bdc90ecaffb549" category="paragraph">以下の要件は、データベース環境の継続的な評価と設定上の問題の自動修正に必要です。これらの要件は、1回限りの評価には必要ありません。</block>
+  <block id="0073a9a9fec00b0e0d441fbce3c544fa" category="list-text">リソースをWorkload Factoryに登録し、ストレージタイプはFSx for ONTAPである必要があります。<block ref="aed8a618f1e8a1dc325945b821521d6c" category="inline-link-macro-rx"></block></block>
+  <block id="b1ae0ae9242e09dd4fa8f55938d508c0" category="inline-link-macro">Workload Factory におけるデータベース リソースの構成分析とウェルアーキテクテッドステータスについて説明します。</block>
+  <block id="b043d22379220d7c37654b5eb6a3d126" category="list-text"><block ref="b043d22379220d7c37654b5eb6a3d126" category="inline-link-macro-rx"></block></block>
+  <block id="a9d8fc136a7c1528e9a5743b9de2661a" category="inline-link-macro">リンクを使用してFSx for ONTAPファイルシステムに接続する</block>
+  <block id="dd4a2200748e1259c6fcaf870c467634" category="list-text"><block ref="dd4a2200748e1259c6fcaf870c467634" category="inline-link-macro-rx"></block></block>
+  <block id="4bd4792ab17b2dfaf1c72610c348727b" category="inline-link-macro">カスタムルールについて</block>
+  <block id="8444c5470da00bec410076ad80f12456" category="list-text"><block ref="8444c5470da00bec410076ad80f12456" category="inline-link-macro-rx"></block></block>
+  <block id="c249c97fe800a930c35e0c53dc6aee34" category="paragraph">Workload Factory for Databases は、Amazon FSx for NetApp ONTAP ストレージ上の Microsoft SQL Server および Oracle のデプロイメントに問題がないかどうかを判断するために、データベース構成を定期的に分析します。問題が検出された場合、Workload Factory は問題点を示し、データベース構成が最高のパフォーマンス、コスト効率、およびベストプラクティスへの準拠を実現するために必要な変更点を説明します。</block>
+  <block id="963b0a9785e6644e0fdfc032d0cd9b6d" category="paragraph">Workload Factoryは、適切に設計されたデータベースワークロードのためのベストプラクティスと推奨事項を提供します。適切に設計された分析では、ストレージ、コンピューティング、アプリケーション、耐障害性、クローニングに関連するMicrosoft SQL ServerおよびOracle Databaseの構成と設定を評価します。</block>
+  <block id="8215457eb88ef1fb110b79579b908e3d" category="paragraph">ご自身の環境に適用されない構成の分析を無視することができます。これにより、不要なアラートや不正確な最適化結果を回避できます。</block>
+  <block id="8817b0c6f0795c52cab62044416eee8a" category="inline-link-macro">カスタムルールについて詳しくはこちらをご覧ください</block>
+  <block id="821af7226458ea25572e88e8ab2026e4" category="paragraph">また、組織の標準および NetApp のベストプラクティスに照らして環境を検証するために、平易な言葉でカスタムルールを作成することもできます。ドライランでルールをテストし、各環境で実行するようにスケジュールを設定します。<block ref="ce039b478eb432b675a03c04866f31ab" category="inline-link-macro-rx"></block>。</block>
+  <block id="8be08850265c9930c26a8e5b28183a2e" category="paragraph">また、組織の標準および NetApp のベストプラクティスに照らして環境を検証するために、平易な言葉でカスタムルールを作成することもできます。ドライランでルールをテストし、各環境で実行するようにスケジュールを設定します。</block>
+  <block id="7c24f3892a999a3e8d688cabe068b17a" category="paragraph"><block ref="ce039b478eb432b675a03c04866f31ab" category="inline-link-macro-rx"></block>。</block>
+  <block id="e2f155aff866bc2907bb5aaf211ff083" category="paragraph">1回限りの評価では、分析対象のMicrosoft SQL Serverインスタンスまたはオラクルデータベースに対して、認証情報を1回だけ提供するだけで済みます。</block>
+  <block id="3132f405525cd70f7bad3d7130c03410" category="list-text">*継続的な評価*：Workload Factory は、お客様のデータベース環境を定期的に分析し、設定を最適化するための継続的な推奨事項を提供し、問題を自動的に修正します。</block>
+  <block id="90d64ee5b341967517900bb62d4c728f" category="paragraph">継続的な評価を行うには、AWSアカウントでリソースを登録し、リンクを関連付け、権限を付与する必要があります。</block>
+  <block id="49a10780393d000b311748a7793ade55" category="section-title">Microsoft SQL Server ベストプラクティス</block>
+  <block id="7d1cc293036e2017c7baf9a6bb73fd17" category="paragraph">以下のベストプラクティスと推奨事項は、Microsoft SQL Server ワークロードに適用されます。</block>
+  <block id="8c4aa541ee911e8d80451ef8cc304806" category="section-title">ストレージ</block>
+  <block id="d2c74a0b2370a7994e2c41c03e1f69bf" category="paragraph-title">ストレージ階層</block>
+  <block id="48792e7901f205d3495a4ceecf82104d" category="paragraph">パフォーマンスが重視されるSQLワークロードには、プライマリSSD層を使用してください。</block>
+  <block id="eeddaf6dcc22498a1ca23cbb5ab462e1" category="paragraph">FSx for ONTAP ボリュームのプライマリ SSD 階層を使用して、最適なパフォーマンスを実現します。容量プール階層では、パフォーマンスが低下したり、レイテンシが増加したりする可能性があります。プライマリ SSD 階層はハイパフォーマンスワークロード向けに設計されており、容量プール階層はコスト効率を重視して最適化されているため、SQL Server ワークロードのパフォーマンス要件を満たさない場合があります。</block>
+  <block id="69d3d1b390fe55f780caca8f8609eba0" category="paragraph-title">ファイルシステムの余裕度</block>
+  <block id="d523849e567b425b986c6490d0b079c9" category="paragraph">総ボリュームサイズを超える十分な空き容量を確保してください。</block>
+  <block id="d03ee155a1b1c5adedc8bc1ea1a60c3f" category="paragraph">ファイルシステムの容量は、総ボリュームサイズよりも十分に確保しておいてください。空き容量が少なすぎるとパフォーマンスに問題が生じ、多すぎるとストレージが無駄になりコストが増加します。</block>
+  <block id="a3b0d7ad4ce9d75cff9d4aef3eb86b62" category="paragraph-title">ログドライブサイズ</block>
+  <block id="0d7fedb3fb94ac9db7d03559c12e2023" category="paragraph">ログドライブのサイズを適切に設定し、監視することで、ロールバックやシステム障害を回避します。</block>
+  <block id="55839a84a9d5f4546a06311512c78e78" category="paragraph">トランザクションのロールバック、データベースの利用不能、データ破損、およびログドライブがいっぱいになることによるパフォーマンスの問題を防ぐために、SQL Server ログドライブのサイズを適切に設定し、監視してください。</block>
+  <block id="b75b38b240aa16e7f7a133981a60673a" category="paragraph-title">TempDBドライブサイズ</block>
+  <block id="3d7ec405e5245de459ac95b0e0cf9408" category="paragraph">ボトルネックやタイムアウトを回避するために、TempDBのサイズを適切に設定してください。</block>
+  <block id="b8b2e35bc22e3e4ee50b55a84f59d89e" category="paragraph">パフォーマンスと安定性を維持するために、TempDBのサイズ設定と監視を行ってください。TempDBの容量が不足すると、クエリの速度低下、アプリケーションのタイムアウト、システムクラッシュを引き起こす可能性があります。</block>
+  <block id="894e4914bdd54c61d3c018914b6bfe7e" category="paragraph-title">データおよびログファイルの配置</block>
+  <block id="edaa44b4673f1ace33a6bf9e95e6fd62" category="paragraph">別々の<block ref="937f38432beb92fdba3d47780720bdf7" prefix=" " category="inline-code"></block>と<block ref="cb15b9539ae0d984ff8740c68b52561c" prefix=" " category="inline-code"></block>のパス。</block>
+  <block id="e7ebfdd1505a7af8df3df607fc4f76de" category="paragraph">並列I/O、バックアップの柔軟性、および復元動作を向上させるため、データファイルとログファイルを別々のドライブに分離してください。小規模なデータベースの場合は、データLUNとログLUNのパスを別々のボリュームに分けることをお勧めします。</block>
+  <block id="761c97293a8026d7c7f8ec2593a47382" category="paragraph-title">TempDBの配置</block>
+  <block id="04f18a6883939a0f0475c400a6f1b379" category="paragraph">専用ドライブを使用してください。</block>
+  <block id="eb90a59c44b45a41d6b8156ff6bb6d5f" category="paragraph">TempDBを専用ドライブに配置することで、I/O競合を回避し、SQL Serverのパフォーマンスと安定性を向上させることができます。</block>
+  <block id="6cd880eabbec3488232c6cba3fbcf998" category="paragraph-title">シンプロビジョニング</block>
+  <block id="5c98dcfd59ba12311a4b40fe4c061502" category="paragraph">必要に応じてストレージを割り当てます。</block>
+  <block id="7d00f267930eb94ba2b5e3ffd925a4d6" category="paragraph">FSx for ONTAP ボリュームのシンプロビジョニングを設定して、ストレージをより有効活用し、コストを削減します。シンプロビジョニングを使用すると、すべての容量を一度に予約するのではなく、必要に応じてストレージを割り当てることができます。</block>
+  <block id="dac3217c156bbf86e088921748624a95" category="paragraph-title">自動サイズと自動サイズモード</block>
+  <block id="6d5b78a56096b43f47ab2b1559418542" category="paragraph">ボリュームを自動的に拡張します。</block>
+  <block id="f8b1a4ac4b87f668ed344cedc89310e0" category="paragraph">自動サイズをオンにしてモードを<block ref="4d200fce73a8e1cc965cfc2c43343824" prefix=" " category="inline-code"></block>に設定することで、ボリュームが容量いっぱいになって読み取り専用になる前に自動的に拡張されます。</block>
+  <block id="ea87fe154a3b0752922812472bd1e33d" category="paragraph-title">ブロックデバイスのスペース管理</block>
+  <block id="d82733fa8b83c7e6ff9b3484ae4ddbdb" category="paragraph">SQL Serverで使用されるLUNのブロックデバイス領域設定を構成します。</block>
+  <block id="1a4af9dd8b0718ca82a5280f6ee0cf01" category="paragraph">Microsoft SQL Server インスタンスで使用される LUN のブロック デバイス スペース設定を構成して、書き込みエラーを防止し、FSx for ONTAP のスペース効率を向上させます。</block>
+  <block id="8a707a0c8529edc214836d6a826d0e58" category="paragraph-title">Snapshotコピーのリザーブと自動削除</block>
+  <block id="228fa58f3d0893b479077c0e80653337" category="paragraph">アクティブなデータのためのスペースを確保してください。</block>
+  <block id="134980a2b985cf7e78464d1df07f8900" category="paragraph">スナップショットコピーのリザーブを0%に設定し、スナップショットの自動削除を有効にして、アクティブデータのスペースを保護してください。</block>
+  <block id="9b4c3976d453e66a3dd22e2793fc3a8e" category="paragraph-title">スペース管理</block>
+  <block id="0ce6d7a30d8954cd07ff4dba5cbe7d03" category="paragraph">スナップショットコピーを削除する前に、ボリュームを拡張してください。</block>
+  <block id="2476aa452a62d62160e670e98f0ab2fb" category="paragraph">空き容量が少なくなったら、スナップショットコピーを削除する前にボリュームを拡張してください。ボリュームを拡張することで、「ボリュームがいっぱいです」というエラーを防ぎ、書き込みエラーを減らし、スナップショットの復元ポイントを保持できます。</block>
+  <block id="99a4db627c18d74e0c6835ad609e2644" category="paragraph-title">階層化／TCO最適化</block>
+  <block id="0cbe9d93db06e8320c6315e8347f8e0c" category="paragraph">スナップショット専用の階層化ポリシーを使用して、スナップショットデータを階層化します。</block>
+  <block id="b04592a941f106f17c24013cd67843c0" category="paragraph">スナップショット専用の階層化ポリシーを使用すると、スナップショットデータのみを容量階層に移動し、アクティブなデータはSSD階層に保持されます。このアプローチにより、SQLワークロードの低レイテンシパフォーマンスを維持しながら、ストレージコストを削減できます。7日間のクーリング期間後にスナップショットデータを階層化します。</block>
+  <block id="af20abc7154e9ee224c54b48b6ec7d63" category="paragraph-title">ストレージ効率</block>
+  <block id="97d67971c5e355df3efafcc19837ddfb" category="paragraph">重複排除、圧縮、およびコンパクションを使用してください。</block>
+  <block id="6c49bace7f5a1990fdc7dc4d7a9dcfae" category="paragraph">重複排除、圧縮、およびコンパクションを有効にすることで、パフォーマンスを維持しながらストレージ使用量とコストを削減できます。</block>
+  <block id="6fcd25081a49cfc1b0ec4806afa3d35f" category="paragraph-title">OS タイプ</block>
+  <block id="24acec3b12ef97ec2b34e3a2fa7efc85" category="paragraph">ONTAP LUN の OS タイプをホストのパーティショニングに合わせます。</block>
+  <block id="4dc199c782f9154731cbef4836a8c1a1" category="paragraph">ONTAP LUN オペレーティングシステムの値をホストのパーティショニングスキームに合わせて、正しい I/O アライメントを維持してください。</block>
+  <block id="90999b34ec14dedf379fa674961057fa" category="paragraph-title">MPIOポリシー、セッション、ステータス、タイムアウト設定</block>
+  <block id="1a48fbbfd5ce10ce23ee05574028ed47" category="paragraph">マルチパスI/O（MPIO）ポリシー、セッション、ステータス、およびタイムアウト設定を構成します。</block>
+  <block id="aa5db6de95fdbce8978cd3d3ab233a3c" category="paragraph">耐障害性とスループットを向上させるために、マルチパス I/O （MPIO）を設定します。iSCSI LUN 上の SQL Server に対して、ターゲットインターフェイスごとに 5 つの MPIO セッションを使用し、パスの状態を監視し、ホストタイムアウトを 60 秒に設定します。</block>
+  <block id="a42fd8229369082ad3674453750c8cb7" category="paragraph-title">NTFS割り当て単位サイズ</block>
+  <block id="c7e18970a572792767bc4d2fd2ea05a3" category="paragraph">64K に設定します。</block>
+  <block id="54fb57e43ead133701d85d34f84385d2" category="paragraph">SQL Serverワークロードにおけるディスク効率の向上と断片化の軽減のため、NTFSアロケーションユニットサイズを64Kに設定してください。</block>
+  <block id="aff279b636a9024db3b44375d88e80eb" category="paragraph-title">ローカルスナップショットのスケジュール設定</block>
+  <block id="94c95b7b51d009b9d2eb49440bbfc689" category="paragraph">スケジュールされたスナップショットを無効にします。</block>
+  <block id="45eb819837b9c2a7adbea195ac9d00c8" category="paragraph">Microsoft SQL Server で使用される FSx for ONTAP ボリュームのスケジュールされたスナップショットを無効にします。代わりに、NetApp SnapCenter などのツールを使用して外部でスナップショットを管理します。これにより、アプリケーションと整合性のあるバックアップが作成され、リストア操作中のデータ破損を防ぐことができます。</block>
+  <block id="34d46ee23892b96b30e5db7bf4eb7871" category="paragraph-title">コンピューティングリソースの最適化</block>
+  <block id="4ea5f06406337856ac6939d3241f93ea" category="paragraph">EC2インスタンスのサイズをワークロードの需要に合わせて調整してください。</block>
+  <block id="3054d94c8571ba5fe02a5baa9c0f0238" category="paragraph">ワークロードの需要に基づいて、SQL Server EC2インスタンスのサイズを最適化します。コストとパフォーマンスのバランスを取るため、リソースが不足している場合はサイズを増やし、リソースが過剰の場合はサイズを縮小してください。</block>
+  <block id="826f844c1cfe489216a00374ad7ffcfa" category="paragraph-title">オペレーティングシステムのパッチ</block>
+  <block id="46868a13e02001f08f80086c305d3290" category="paragraph">最新のOSパッチを適用してください。</block>
+  <block id="f352d91096fcc4d14791e6774b46f28f" category="paragraph">セキュリティと信頼性を向上させるため、最新のオペレーティングシステムパッチを適用してください。</block>
+  <block id="eabac3a6cb984e4c8283a694dac970bd" category="paragraph-title">ネットワークアダプターの設定</block>
+  <block id="a9573723b19fee57f1cfdf4839a30d2d" category="paragraph">受信側スケーリング（RSS）を設定します。</block>
+  <block id="250a8a619f4d75c094b3ca829aaf8237" category="paragraph">ネットワークパフォーマンスを向上させるために、受信側スケーリング（RSS）を設定して、ネットワーク処理を複数のCPUに分散させます。本番環境への展開前に設定を検証してください。</block>
+  <block id="94c600c47cccc2c5504c4a78652a9b1c" category="paragraph-title">MTUアライメント</block>
+  <block id="1e5e4a55729302c4b7b903922447c1dc" category="paragraph">ホストパスとストレージパス間で最大伝送単位（MTU）を一致させます。</block>
+  <block id="fec54de77fb3838fcfbd089d1ba12851" category="paragraph">EC2 の最大伝送単位（MTU）設定を FSx for ONTAP のパスに合わせて調整し、フラグメンテーションを防ぎ、安定したスループットを維持します。</block>
+  <block id="794df3791a8c800841516007427a2aa3" category="paragraph-title">ライセンス</block>
+  <block id="986d440f729677f3208e7605d0553393" category="paragraph">有料機能のライセンス使用状況を確認してください。</block>
+  <block id="858d6ed360d78ca4829972c8007e4c9b" category="paragraph">ホストレベルでの SQL Server ライセンスの使用状況を確認してください。有料機能が使用されていない場合、ライセンスは最適化されず、コストが増加する可能性があります。</block>
+  <block id="1a1cd903f6318a6355509caa78de1faa" category="paragraph-title">Microsoft SQL Server パッチ</block>
+  <block id="ac4e66143f8aeac9f82bf332c8e729c4" category="paragraph">最新のSQL Serverパッチを適用してください。</block>
+  <block id="a4a0b4e39ec2b5db6f473a0de3736956" category="paragraph">セキュリティとシステムの信頼性を向上させるために、最新の SQL Server パッチを適用してください。</block>
+  <block id="1abedc5f6ab369ab9fcd16d6b7990638" category="paragraph-title">MAXDOP</block>
+  <block id="1193fbb5e90747775b0e24d142eb0d02" category="paragraph">ワークロードテスト済みの値を使用してください。</block>
+  <block id="090926c93cbf85baf7fc9ebeda7b568c" category="paragraph-title">アプリケーションと整合性のあるスナップショット</block>
+  <block id="0b01ca87b42f013664121c6824e598a9" category="paragraph">アプリケーション整合性スナップショットを NetApp SnapCenter とともに使用します。</block>
+  <block id="93d7629752a3e1bb4b1cb9519e2ebd7a" category="paragraph">アプリケーション整合性スナップショットを NetApp SnapCenter とともに使用することで、特定の時点におけるボリュームデータの正確で信頼性の高いスナップショットを取得できます。SnapCenter はバックアップを容易にし、データの迅速な復元を支援することで、ダウンタイムを削減し、重要なワークロードを保護します。</block>
+  <block id="ae2679a66d07f8c7efd50d972a34a112" category="paragraph-title">クロスリージョンレプリケーション</block>
+  <block id="c385b3e4deb1a87960e4b4dc01ac87c7" category="paragraph">地域的な障害から保護します。</block>
+  <block id="a24f4d9aebe2602012f407e3fdff57d0" category="paragraph">SQL Server環境におけるデータ可用性とディザスタリカバリを向上させるには、リージョン間レプリケーション（CRR）を有効にしてください。CRRは、異なる拠点間でデータを複製することで、地域的な障害から保護し、事業継続性を確保します。</block>
+  <block id="a550061a86038966d9bac1bce9c12b7b" category="paragraph-title">バックアップ構成</block>
+  <block id="d6d0f5a3f08bc3750fdaef02669400e4" category="paragraph">FSx for ONTAPバックアップまたはAWS Backupを設定します。</block>
+  <block id="99f480d7c489c8218cb3c7e344ade5e2" category="paragraph">FSx for ONTAPバックアップまたはAWS Backupを設定して、保持要件とコンプライアンス要件を満たしつつ、重複するバックアップワークフローを回避します。</block>
+  <block id="6716a97e4d0f5c2b2ba84a9c8a65b74d" category="paragraph-title">クラスタークォーラム</block>
+  <block id="3349e51783007390a7aa0ebe76cb1c9b" category="paragraph">フェイルオーバークラスタインスタンスのクォーラムを設定します。</block>
+  <block id="1c0ee6d7592730324673f23436a1cb1f" category="paragraph">SQL Server フェールオーバー クラスター インスタンスのクォーラムを正しく構成して、クラスターが想定されるノード障害に耐えられるようにします。</block>
+  <block id="2fd93710037364874693d0231e709aea" category="paragraph-title">ドライブ文字</block>
+  <block id="cc552ddb219e28c92b4169787045d8ec" category="paragraph">ノード間でドライブ文字を統一してください。</block>
+  <block id="e16012d9dda9cc9c6ee2bc352a4ae759" category="paragraph">SQL Serverの高可用性構成では、すべてのノードで同じドライブ文字を使用してください。これにより管理が容易になり、フェイルオーバーが正しく機能するようになります。</block>
+  <block id="e6293976a81f8762e8b3c80832b4f7d5" category="paragraph-title">ハートビート設定</block>
+  <block id="884528a1b26c385906fcd05f57e1ad62" category="paragraph">安定したフェイルオーバー動作のためにハートビートを調整します。</block>
+  <block id="e56dd572af77c70d30157e05e6ce82eb" category="paragraph">ハートビート設定を調整して、不要なフェイルオーバーを回避しつつ、実際の障害を迅速に検出できるようにします。</block>
+  <block id="928fe421f0c735b90f3b3ec353741235" category="paragraph-title">共有ストレージ</block>
+  <block id="73a67c7a0024044c6850a532fe8c9d9f" category="paragraph">両方のノードが共有iSCSI LUNにアクセスできることを確認してください。</block>
+  <block id="9aab42dd8ff5fdf6ae9ac858e113b2bb" category="paragraph">FCI展開モデルでは、フェイルオーバーを機能させるために、すべての共有ディスク（iSCSI LUN）が両方のノードからアクセス可能である必要があります。</block>
+  <block id="af5433572271233c7e656fe582076960" category="paragraph-title">SQL Serverサービス</block>
+  <block id="bcc3a6ae2fc2f20ec81542e152329a7e" category="paragraph">サービスアカウントと起動時の依存関係を検証します。</block>
+  <block id="323efe827a0b8d392fb1ca53fdf4477f" category="paragraph">信頼性の高い高可用性動作を実現するために、サービスアカウントの権限、起動タイプ、および依存関係を検証します。</block>
+  <block id="217601d383b816e6a2548e57b5006f92" category="section-title">クローニング</block>
+  <block id="61339cb538c00d138c281cf003e6daa0" category="paragraph">古いクローンは定期的に削除してください。</block>
+  <block id="63da65562cf9a00b9876985cee9f85c8" category="paragraph">ストレージコストと運用上の煩雑さを軽減するため、古くなったクローンは定期的に削除してください。古くて使われていないクローンは、高額なコストの原因となります。</block>
+  <block id="36a6bee8815abfd7b4cc2eff4afd7b69" category="section-title">Oracleのベストプラクティス</block>
+  <block id="696a4bf0fabb46881f722e0f6b9477a5" category="paragraph">以下のベストプラクティスと推奨事項は、Oracleワークロードに適用されます。</block>
+  <block id="38be62841af5eb1b3fd9b70e7cab0c13" category="paragraph">自動サイズをオンにしてモードを<block ref="4d200fce73a8e1cc965cfc2c43343824" prefix=" " category="inline-code"></block>に設定すると、ボリュームが容量いっぱいになって読み取り専用になる前に自動的に拡張されます。</block>
+  <block id="da35784c3d0985ae5f62d676de22f8a3" category="paragraph">Oracleデータベースで使用されるLUNのブロックデバイス スペース設定を構成して、書き込みエラーを防止し、FSx for ONTAPのスペース効率を向上させます。</block>
+  <block id="45bd6a67c7bf42b606ad0eec042c1dde" category="paragraph-title">スワップ スペース</block>
+  <block id="f04d6ae7c13c82ac4f025f6c794c5bf3" category="paragraph">RAMに基づいてスワップを設定します。</block>
+  <block id="e5f1fd3cebcf908444382289a3b320f9" category="paragraph-title">アーカイブ、データ、制御、リドゥ、および一時配置</block>
+  <block id="c5712399e507c16911100e7798a70fcc" category="paragraph">Oracleファイルの種類ごとに専用のボリュームを使用することで、I/Oパターンを分離し、パフォーマンスを向上させることができます。</block>
+  <block id="ac7c9e1bf60e62d895269f1119ef6903" category="paragraph">アーカイブ ログ、データ ファイル、制御ファイル、redo ログ、および一時ファイルを別々のドライブに配置することで、I/O パターンを分離し、耐障害性を向上させます。必要に応じて、冗長コピーを別のボリュームに保管してください。</block>
+  <block id="99909d9059d74886fd5c52eb6bd6859b" category="paragraph-title">Oracleバイナリ配置</block>
+  <block id="1cc12633815798dcf3f3c411875a347c" category="paragraph">専用ボリュームを使用してください。</block>
+  <block id="bac97783eb2663a0753cdde4c1824c5b" category="paragraph">Oracleバイナリを専用ボリュームに配置することで、I/O競合を軽減できます。この分離により、ソフトウェアのアップデートが簡素化され、意図しない変更やデータ破損のリスクが最小限に抑えられます。</block>
+  <block id="1aaa0ec9581d3a6477d2aae7e94f7138" category="paragraph">ローカルでのスケジュールされたスナップショットを無効にします。</block>
+  <block id="39374be868860832a209dd66605ab324" category="paragraph">Oracle が使用する FSx for ONTAP ボリュームのスケジュールされたスナップショットを無効にすることで、容量を節約しコストを削減できます。代わりに、NetApp SnapCenter などのツールを使用して外部でスナップショットを管理してください。これらのツールはアプリケーションと整合性のあるバックアップを作成し、リストア操作中のデータ破損を防ぐのに役立ちます。</block>
+  <block id="fa0aea5064b5bf5dc0f261f37a637fab" category="paragraph-title">NFS rootonly</block>
+  <block id="4c2f444c20b5fc7382a5cc918b3b93b3" category="paragraph">dNFSを無効にします。</block>
+  <block id="f414483fe953bd9573db2c3275f75b95" category="paragraph">dNFS の ONTAP<block ref="77743dec92afc92eca95c255fd9333d7" prefix=" " category="inline-code"></block> パラメータを無効にします。<block ref="77743dec92afc92eca95c255fd9333d7" prefix=" " category="inline-code"></block> NFS 接続を特権ポート（1024 未満）に制限します。NFSv4+ の dNFS プロセスは root として実行されず、より高いポートを使用するため、このパラメータを無効にすることで必要な接続が可能になります。</block>
+  <block id="6c348de071434b3bb4f1295a52711603" category="paragraph-title">バイナリエクスポートポリシー</block>
+  <block id="a4eb79b95fb4a3fec2083cf140deb305" category="paragraph">Oracleバイナリ専用のエクスポートポリシーに、スーパーユーザー権限とsetuid権限を含めます。</block>
+  <block id="c8be78bc7a152a3013a32b128e5ee03b" category="paragraph">Oracle バイナリが NFS 共有上に配置されている場合は、エクスポートポリシーにスーパーユーザー権限と setuid 権限が含まれていることを確認してください。スーパーユーザー（root）アクセスにより、NFS クライアントは root としてマッピングすることができ、バイナリ実行に必要となります。</block>
+  <block id="37ef805076476027b7ee89af1cec0cc2" category="paragraph-title">ASMのセットアップ</block>
+  <block id="be849ab14c8918a65f233bcdeaf09cfc" category="paragraph">FSx for ONTAP上で動作するiSCSIベースのストレージ用にOracle Automatic Storage Management（ASM）を設定します。</block>
+  <block id="802ce068e53ceb792da4548471c660d5" category="paragraph">FSx for ONTAP 上で実行される iSCSI ベースのストレージに Oracle Automatic Storage Management （ASM） を使用することで、Oracle Database 導入におけるパフォーマンスの最適化、ストレージ管理の簡素化、およびスケーラビリティの向上を実現します。</block>
+  <block id="f7a768d30472beee2a39f3fc0da1b86e" category="list-title">ASMのみの構成</block>
+  <block id="f2780427ca033806c8dd715ca7ef2ca8" category="list-text">*ASM データ ディスク グループ、ASM ログ ディスク グループ、ASM FRA ディスク グループ、および ASM アーカイブ ディスク グループ LUN*</block>
+  <block id="1b9d631e7ab100885da6fc994b421909" category="paragraph">LUNをAutomatic Storage Management（ASM）ディスク グループリソース全体に分散させます。</block>
+  <block id="1112b6f26197effaa44503985bf6147d" category="list-text">*ASM外部冗長性*</block>
+  <block id="b0d43bfdbd4c8549d283c290d18f0373" category="paragraph">Oracle ASM ディスク グループを EXTERNAL 冗長構成で設定します。</block>
+  <block id="b96572dfbc47d5f38d4bf92438e2a958" category="paragraph">FSx for ONTAP の iSCSI LUN に対して Oracle ASM ディスク グループを EXTERNAL 冗長性で構成することで、FSx for ONTAP の組み込み高可用性を活用し、ストレージ効率を最適化して、Oracle レベルのデータ ミラーリングを回避することでコストを削減できます。</block>
+  <block id="2f6bbbc420968e67a09f1cc4a6901165" category="list-text">*ASMフィルタドライバとASMLibの論理ブロックサイズのアライメント*</block>
+  <block id="bf6586df87afaab6a9f4dd83266830e4" category="paragraph">Oracle ASM Filter Driver (AFD) と ASMLib を構成して、基盤となる FSx for ONTAP ストレージの論理ブロック サイズを使用するようにします。</block>
+  <block id="99cf847a99446d87e0935576a63b9b99" category="paragraph">Oracle ASM フィルタドライバ（AFD）と ASMLib を ASMLib 構成ファイルで構成して、基盤となる FSx for ONTAP ストレージの論理ブロックサイズを使用するようにします。これにより、AFD と ASMLib は I/O 操作をストレージのブロックサイズに合わせ、レイテンシを最小限に抑え、不要な I/O オーバーヘッドを削減することでパフォーマンスを最適化します。</block>
+  <block id="7868dbfdabfbdc991050a9525bbaf81c" category="paragraph-title">TCPスロットテーブル</block>
+  <block id="4f038091793d701c74a472affe9e3faa" category="paragraph">NFSベースのOracleワークロードの場合は128に設定します。</block>
+  <block id="2239fe06179e36f0432df56889009996" category="paragraph">NFS上で実行されるOracleワークロードの場合、TCPスロットテーブルのカーネルパラメータを128に設定してください。この構成により、同時実行I/O操作が増加し、Oracleデータ ファイルアクセスなどの高スループットシナリオにおけるレイテンシが低減されます。カーネルパラメータは、TCP経由で処理可能なNFSリクエストの最大数を制御し、ファイバーチャネル構成におけるキューの深さのような役割を果たします。Linuxのデフォルト値（通常は16に設定）では、最適なデータベースパフォーマンスは得られません。</block>
+  <block id="e3e5ba88ce9dac34df243578b82d21a5" category="paragraph-title">NFSマウントオプション - データベース ファイル</block>
+  <block id="07c9f35036db9318dc67bc8488e924ed" category="paragraph">データベース ファイルのパフォーマンスを最適化する NFS マウント オプションを使用してください。</block>
+  <block id="0e3683440b3c91a8adf8fbc8feab2ac4" category="paragraph">データベース ファイルには、最適化された NFS マウント オプションを使用してください。主なパラメータには、読み取り / 書き込みアクセス用の<block ref="038c0dc8a958ffea17af047244fb6960" prefix=" " category="inline-code"></block>、バックグラウンド マウント用の<block ref="5523c88dd347d1b7cc617f632b7efdb7" prefix=" " category="inline-code"></block>、障害発生時の無期限再試行用の<block ref="d64a84456adc959f56de6af685d0dadd" prefix=" " category="inline-code"></block>、および確実な配信用の<block ref="d730f7fb328f30a84ee9742562b9295f" prefix=" " category="inline-code"></block>が含まれます。<block ref="2c8f7e3ea90b72af8582c0f2716bd2b8" prefix=" " category="inline-code"></block>および<block ref="374422a639d51557c7fcfc9c97aa4c07" prefix=" " category="inline-code"></block>の値 262144 は大規模な I/O 操作を改善してスループットを向上させ、<block ref="ee11561e2136a5c9308a88da37690b2d" prefix=" " category="inline-code"></block>は長時間実行中のタスクを中断しません。この構成により、特に高スループット環境において、データベースのパフォーマンスと耐障害性が向上します。</block>
+  <block id="25a244403a35913993f825b673e426d2" category="paragraph-title">ADRホームのNFSマウントオプション</block>
+  <block id="156573ad09e164898f281869695f86fe" category="paragraph">ADRホームディレクトリのパフォーマンスを最適化するNFSマウントオプションを使用してください。</block>
+  <block id="d43a2be16ef10e0f68ab8c52d183873a" category="paragraph">Automatic Diagnostic Repository（ADR）のホーム ディレクトリまたはルート ディレクトリには、最適化されたNFSマウント オプションを使用します。ADRホームにはログとトレースが格納されます。これらはコア データベース ファイルと同様の信頼性オプションのメリットを得られますが、処理の中断に対する感度が低いため、<block ref="ee11561e2136a5c9308a88da37690b2d" prefix=" " category="inline-code"></block>マウント オプションは必要ありません。</block>
+  <block id="d69395b39602b93b8de7577bd1d01da3" category="paragraph-title">NFSv4ドメイン名</block>
+  <block id="be46a35eaff0a0f4998bb76cd05f3526" category="paragraph">ホストと NFSサーバ間で NFSv4 ドメイン名を一致させます。</block>
+  <block id="e77fd06a075f4ac68cd5a4da6e166281" category="paragraph">ホスト間でNFSv4ドメイン名を一致させる<block ref="f606fb2da2ae329157d791c6955a0337" prefix="(" category="inline-code"></block>または<block ref="de8eb7e79f8adee89501d0d7a83427ac" prefix=" " category="inline-code"></block>）とNFSサーバ<block ref="c54a41b01595bd7042188e1a80fd2682" prefix="(" category="inline-code"></block>（ONTAP）。</block>
+  <block id="9cce33269f5443b166a643ec86a07eeb" category="paragraph-title">NFSキャッシュオプション</block>
+  <block id="dae3d8af9ee67826a33dc041750329e7" category="paragraph">スタンドアロン環境では、ホストキャッシュを無効にしないでください。</block>
+  <block id="a1fb4bd70dc4087cc2722a4bceb5e76a" category="paragraph">スタンドアロンの Oracle 環境において効率性と信頼性を向上させるため、ホストキャッシュを無効にする NFS マウントオプション（<block ref="3504e2b0e7c968444314433be465518d" prefix=" " category="inline-code"></block>や<block ref="79fea224ffd9e8111e4e87cab732464b" prefix=" " category="inline-code"></block>など）は省略してください。これらのオプションは、キャッシュの一貫性を確保するためにクラスタ環境に適用されますが、シングルインスタンス環境では不必要にキャッシュをバイパスしてしまい、パフォーマンスを大幅に低下させる可能性があります。</block>
+  <block id="5017259dadba571295ba93287ef883f9" category="paragraph-title">dNFSの有効化</block>
+  <block id="f3ea8f6b6e0f1cc3ff1fa39b2fffd01d" category="paragraph">dNFSを有効にします。</block>
+  <block id="769631bf3f7ef2a761523236336ff53c" category="paragraph">Oracle環境でDirect NFS（dNFS）を有効にすると、NFSストレージのパフォーマンスと信頼性が向上します。</block>
+  <block id="3968d7d3f8cb0f09289a934bc1584128" category="paragraph-title">dNFS 一貫性のある IP 解決</block>
+  <block id="258af232c30d61bf5f6d7843f786b2ef" category="paragraph">ラウンドロビン方式の名前解決は避けてください。</block>
+  <block id="67e6488bb67f9c078ed9b0f2696c3140" category="paragraph">Direct NFS (dNFS) を、DNS、DDNS、NIS、またはその他の方法を含む、あらゆる種類のラウンドロビン名前解決と組み合わせて使用することは避けてください。これには、ONTAP で利用可能な DNS ロード バランシング機能が含まれます。一貫した IP アドレス解決により、データベースの安定性が維持され、潜在的なクラッシュやデータ破損を防ぐことができます。</block>
+  <block id="a727ea61b65e8aff8729b4fc3c629094" category="paragraph-title">dNFS設定ファイル</block>
+  <block id="03b447c34fed08ce6d9597fffb98709f" category="paragraph">コンテンツを検証します<block ref="2372935c504c62470d80387029c2d069" prefix=" " category="inline-code"></block>。</block>
+  <block id="88698d771a4d8305b08d15b08d706baf" category="paragraph"><block ref="2372935c504c62470d80387029c2d069" prefix=" " category="inline-code"></block>ファイルの内容を確認および更新して、Direct NFS（dNFS）が適切に使用されるようにします。<block ref="2372935c504c62470d80387029c2d069" prefix=" " category="inline-code"></block>ファイルは、マルチパスや特定のNFSオプションなど、高度なdNFS機能を設定するために不可欠です。適切な設定を行うことで、データへのアクセスと管理の効率が向上します。</block>
+  <block id="7259678c27bfd15f5edb583d463192b4" category="paragraph-title">dNFS共有キャッシュなし</block>
+  <block id="f955bf964f282b5a4cf1d966190aaa72" category="paragraph">特定のマルチマウントケースには<block ref="4740c034d97ca90a96b8050082816605" prefix=" " category="inline-code"></block>を使用してください。</block>
+  <block id="9390fa8e9f932f71646f336e5a80b1ff" category="paragraph">Direct NFS （dNFS）が有効になっている環境で、ネストされた NFS マウントを使用してソース ボリュームが単一サーバー上に複数回マウントされている場合の<block ref="4740c034d97ca90a96b8050082816605" prefix=" " category="inline-code"></block>マウント オプションを設定します。この設定により、マウント間でのキャッシュ共有が防止され、データの一貫性と最適なパフォーマンスが確保されます。</block>
+  <block id="d67d25983d4252e6111c706ccde7cdfc" category="paragraph">最新のパッチを適用してください。</block>
+  <block id="a936acc7c69423ed1ac751a9607788fa" category="paragraph-title">Transparent huge pages</block>
+  <block id="886fc568c19edaf8ae5578270ca36404" category="paragraph">Transparent Huge Pages （THP）を無効にします。</block>
+  <block id="5e3516309d634b611d3bdddebdd430f9" category="paragraph">Oracleデータベースを実行しているデータベースホストでは、パフォーマンスの低下を防ぎ、メモリ管理を改善するために、Transparent Huge Pages（THP）を無効にしてください。</block>
+  <block id="2361ad388b530c520aedb64fd0ff6e8e" category="paragraph-title">TCPの詳細オプション</block>
+  <block id="a449e30ee76868472a4c42879b1b3be3" category="paragraph">伝送制御プロトコル（TCP）の詳細オプションを有効にします。</block>
+  <block id="ff69e71473557a4a76527191db21c9cb" category="paragraph">ネットワークのパフォーマンスと信頼性を最大限に高めるには、TCPタイムスタンプ、SACK、およびウィンドウスケーリングを有効にしてください。</block>
+  <block id="575eddb1382086cefb426267e48f70aa" category="paragraph-title">ファイル システムのI/Oオプション</block>
+  <block id="63cb59e2a0a7c927aec7ca1249956fa5" category="paragraph">セット<block ref="6a1623be7d673ed665d6446f22dbb37c" prefix=" " category="inline-code"></block>。</block>
+  <block id="dd626f1fb52d9514e13696aa723b8a9f" category="paragraph">最適な I/O パフォーマンスを実現するために設定します<block ref="6a1623be7d673ed665d6446f22dbb37c" prefix=" " category="inline-code"></block>。バッファリングされた I/O から移行する場合は、必要に応じてシステム グローバル エリア （SGA） のサイズを調整してください。</block>
+  <block id="ef350a6e6ea9d94712da2ef1d329bfe9" category="paragraph-title">マルチブロック読み取りカウント</block>
+  <block id="016a831106cc17785b93a6e6cc19490e" category="paragraph"><block ref="d3cc759510a3aba837fc8efeb2e24b91" prefix=" " category="inline-code"></block>パラメータを削除します。</block>
+  <block id="f99f871af6af75a896b4a609228f8acf" category="paragraph">Oracle データベースのパフォーマンスの問題を防止し、Oracle がこの設定を自動的に管理できるようにするために、テキストベース of FILE<block ref="b6bd7c570605affc5b50bbd3e436f0c0" prefix=" " category="inline-code"></block> またはサーバ管理のバイナリ SPFILE <block ref="11515cb7cf24e9929a59b3ce6c560d8f" prefix="(" category="inline-code"></block>) から<block ref="d3cc759510a3aba837fc8efeb2e24b91" prefix=" " category="inline-code"></block> パラメータを削除します。</block>
+  <block id="8548dd4b6475455aa5e42bb42850e02c" category="paragraph-title">Oracle Critical Patch Updates</block>
+  <block id="d8039e71b5c2a89fd072db6355ecb7ef" category="paragraph">最新のCPUアップデートを適用してください。</block>
+  <block id="edeae11e7d0e740c1ce1808a0d8e1007" category="paragraph">Oracleデータベースのデータ可用性と災害復旧を向上させるには、リージョン間レプリケーション（CRR）を有効にしてください。CRRは、異なる拠点間でデータを複製することで、地域的な障害から保護し、事業継続性を確保します。</block>
+  <block id="f1d6739b2edd7c40d8bb5296ef99bc14" category="paragraph">Microsoft SQL Server のインスタンスおよび Oracle のデータベースを登録することで、リソースの管理、データベースとサンドボックス クローンの作成、エラー ログ分析の実行、および構成の最適化を NetApp Workload Factory for Databases で行うことができます。</block>
+  <block id="66838c4423bf1c8d4c224cf83659c73e" category="inline-link-macro">データベースの作成</block>
+  <block id="1afcb9bffd23494eb7082b6174279b4d" category="inline-link-macro">サンドボックスの作成</block>
+  <block id="192b0c17a5a27f63674a4d9452d69504" category="inline-link-macro">Well-Architected評価</block>
+  <block id="fa02160083eeafd4641b6b5afb04b76d" category="paragraph">インスタンス（SQL Server）またはデータベース（Oracle）の登録には、インスタンスまたはデータベースの認証と準備という2つのステップが必要です。認証とは、インスタンスまたはデータベースの資格情報を検証するプロセスです。準備には、<block ref="8da16c4c34e559d912e7bb550c09127f" category="inline-link-macro-rx"></block>、<block ref="634e501de898ade0d86425983c3d2aaf" category="inline-link-macro-rx"></block>、<block ref="b3b44214924ae2c9e9d272ea31fcb428" category="inline-link-macro-rx"></block>、または<block ref="669a5b35f31c2d438554bfd3664e70fd" category="inline-link-macro-rx"></block>などのWorkload Factory for Databasesの機能の最小要件を満たすために、AWS、NetApp、およびPowerShellモジュールをインスタンスまたはデータベースにインストールすることが含まれます。</block>
+  <block id="a2a913b400e09d69af0a98ae84160d0c" category="paragraph">インスタンスまたはデータベースを登録する前に、以下の手順を実行する必要があります。</block>
+  <block id="e2176f2c95e1c5e96b502c5753a9d9fc" category="inline-link-macro">操作および修復の権限を付与する</block>
+  <block id="6d77b284c5d4fef59e4ee4a93a4df81e" category="list-text">登録したいリソースのホストがインベントリに表示されていることを確認してください。<block ref="62d24a992d64a0168253dffbd51a5da4" category="inline-link-macro-rx"></block> AWSアカウントで。</block>
+  <block id="eb53f00e7f60995176fbd9714071211a" category="inline-link-macro">既存のリンクを関連付ける方法、または新しいリンクを作成して関連付ける方法について説明します。</block>
+  <block id="afa025dafea9385f0d320d45e580c19d" category="list-text">登録するリソースをホストする FSx for ONTAP ファイルシステムにリンクを関連付けます。<block ref="89d491b5ade88a91deb72b16afa18293" category="inline-link-macro-rx"></block> リンクが関連付けられたら、この操作に戻ります。</block>
+  <block id="39ad0edf1fcb7cdf08722a87826835d9" category="paragraph">インスタンスの登録には、インスタンス認証と準備という2つのステップがあります。単一のインスタンス、または複数のインスタンスを登録できます。</block>
+  <block id="7af860cadb4b06a3271bc297b39bb97f" category="list-text">準備するには（手順 2）、インスタンスが最小要件を満たしていることを確認します。</block>
+  <block id="1a1d10440fb1e367272741222fb63f2b" category="paragraph">インスタンスの登録には、データベース認証と準備という2つのステップがあります。単一のインスタンスまたは複数のデータベースを登録できます。</block>
+  <block id="2fd311c2ea2e47a076be77a578b2ee7b" category="list-text">準備するには（手順2）、データベースが必要な前提条件を満たしていることを確認します。必要なモジュールがすべてインストールされ、前提条件が満たされている場合は、*次へ*を選択してデータベースを登録します。それ以外の場合は、次の手順に従ってください。</block>
+  <block id="ecf2ed7ba31a9f6e31583b9d9052f055" category="inline-link-macro">データベース構成に関する包括的かつ適切なアーキテクチャ評価を取得します。</block>
+  <block id="75c47d4b747a86f2b6de36d602facc46" category="list-text"><block ref="75c47d4b747a86f2b6de36d602facc46" category="inline-link-macro-rx"></block></block>
+  <block id="91d90ea5487ed9ed44e834f42f272ccb" category="section-title">2026年8月3日</block>
 </blocks>

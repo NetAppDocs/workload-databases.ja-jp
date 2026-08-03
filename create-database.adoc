@@ -24,9 +24,9 @@ summary: NetApp Workload Factory for Databases を使用して Microsoft SQL デ
 NOTE: SMBプロトコルを使用するMicrosoft SQL Serverでは、データベースの作成はサポートされていません。
 
 .開始する前に
-新しいデータベースを作成する前に、次の前提条件を満たしていることを確認してください。
+新しいデータベースを作成する前に、以下の前提条件をすべて満たしてください。
 
-* *資格情報と権限*: 必要なのは link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS アカウントの認証情報と _表示、計画、分析_ の権限"^] Workload Factory に新しいデータベースを作成します。
+* *認証情報と権限*：Workload Factoryで新しいデータベースを作成するには、link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWSアカウントの認証情報と_操作および修復_権限"^]が必要です。
 +
 または、[コードボックス]を使用してテンプレートをコピーし、REST APIを使用してワークロードファクトリの外部にデータベースを導入することもできます。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Codebox自動化の詳細"^]です。
 
