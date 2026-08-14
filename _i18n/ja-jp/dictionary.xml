@@ -310,15 +310,6 @@
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">オープンソース</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">結果</block>
-  <block id="67b0a66954400448325457f930e0f82b" category="paragraph">ジョブ監視では、ジョブに応じて最大3つのレベルの監視がサポートされます。たとえば、新しいデータベースおよびサンドボックスクローンの作成では、ジョブ監視によって親ジョブとサブジョブが追跡されます。</block>
-  <block id="b830a8f027299af6d1d8ffbb130bcc58" category="list-text">ジョブ監視レベル</block>
-  <block id="f52bf93027629736a089ef7f590091e0" category="list-text">レベル1（親ジョブ）：ホスト導入ジョブを追跡します。</block>
-  <block id="0954e42bf0119b1189263290f1e567d2" category="list-text">レベル2（サブジョブ）：ホスト展開の親ジョブに関連するサブジョブを追跡します。</block>
-  <block id="df942ff3756f5cbd24f42b521acc64f8" category="list-text">レベル3（タスク）：各リソースに対して実行された一連のアクションを一覧表示します。</block>
-  <block id="79ea79a1991592553b64d7ab6d30bdc0" category="list-text">ジョブステータス</block>
-  <block id="5c7a83ffcacee6b5f8b97e61c20dc908" category="list-text">ジョブイベントの保持</block>
-  <block id="a4c455fbdb91b6c5a283d4a40626cd5b" category="list-text">ジョブ監視イベントは、ユーザインターフェイスに30日間保持されます。</block>
-  <block id="4639d0e2e2909a747265c2f704128bca" category="section-title">ジョブの監視</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">1つ</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">2つ</block>
   <block id="27c19be9febabd1e2fb82d7a39784f2d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> クレデンシャルと権限の追加</block>
@@ -539,8 +530,6 @@
   <block id="9812aa4803326e6a5401134b4e94a3d3" category="list-text">Calculatorは、次のライセンスに依存して割り当てられたリソースの条件を評価します。</block>
   <block id="509a14e7eed7c8c8d42162d9af93a1ec" category="list-text">エンタープライズ機能の使用</block>
   <block id="4fdb074e0b83810d198c8cb5f3b2752e" category="list-text">計算ツールは、次のエンタープライズ機能のいずれかが使用されているかどうかを確認します。</block>
-  <block id="5f08a8bbfa89b18958e70a8c6cbc44c3" category="paragraph">データベースにはジョブ監視機能があり、ジョブの進捗状況を追跡したり、障害が発生した場合の診断とトラブルシューティングを行うことができます。タイプとステータスでジョブをフィルタリングしたり、検索機能を使用してジョブを検索したり、ジョブテーブルをダウンロードしたりできます。</block>
-  <block id="5ade2a57e46cf328c900013574754aa9" category="list-text">ジョブ監視機能では、_ in progress_、_ completed_、_ completed with issues_、_ failed_jobs daily、weekly、bi-weekly、およびmonthlyが追跡されます。</block>
   <block id="13ac5039f81a1aa4ae7419bf17b5b6a0" category="section-title">2025年1月6日</block>
   <block id="f2398fe4ddb880ba6c52b376ef9b960c" category="list-text"><block ref="f2398fe4ddb880ba6c52b376ef9b960c" category="inline-link-macro-rx"></block></block>
   <block id="f7626e6c4414254923965c059c538355" category="section-title">最適化のためのオペレーティングシステムパッチ評価</block>
@@ -992,12 +981,6 @@
   <block id="11a6396604d8219ed002cb8225307c46" category="paragraph">NetApp Workload Factory for Databases でリソースを管理すると、データベースとクローンの作成、リソースの使用率と監視などの高度な機能を使用できます。さらに、データベース構成の適切なアーキテクチャの状態を分析し、構成のベスト プラクティスを実装して、パフォーマンスを向上させ、運用コストを削減することもできます。リソース管理は、FSx for ONTAPファイル システム ストレージ上で実行されている Microsoft SQL Server および Oracle 環境のみを対象としています。</block>
   <block id="e98220d7d332a2a7434542839da04607" category="list-text">インベントリからデータベースを表示する</block>
   <block id="0690b01336afa366f51f1055a4ad9fe3" category="summary">NetApp Workload Factory for Databases 内でデータベース ジョブを追跡し、データベースを監視します。</block>
-  <block id="a6b42ef301955a90099ca61e9ef81cf4" category="doc">Workload Factory for Databases でデータベース ジョブを監視する</block>
-  <block id="286fce2abd655f344b009a041e8e00c8" category="paragraph">NetApp Workload Factory for Databases 内でデータベース ジョブを追跡し、データベースを監視して、データベース操作の可視性と制御を向上させます。</block>
-  <block id="1cd28a54c1c28cd395b6d2b065f22570" category="paragraph">ジョブを監視してデータベース操作の進行状況を追跡し、障害が発生した場合に診断およびトラブルシューティングを行います。</block>
-  <block id="83ec30ad643377590496c7c3f631d82e" category="list-text">[データベース] メニューから、[ジョブ監視] を選択します。</block>
-  <block id="25372b696736cc8872762877a51aa062" category="list-text">ジョブ監視では、フィルターまたは検索を使用してジョブの結果を絞り込みます。求人レポートをダウンロードすることもできます。</block>
-  <block id="a2d1f59bacfe584c82f07fe77341a830" category="list-text">オプションで、ジョブのアクションメニューを選択し、「*CloudFormation に移動*」をクリックして、AWS CloudFormation コンソールでジョブのログを表示します。</block>
   <block id="58ee6063aaed57090a82d5cfa901a882" category="summary">NetApp Workload Factory for Databases は、Microsoft SQL Server の構成をスキャンして、運用効率の向上に役立つ洞察と推奨事項を提供します。</block>
   <block id="04b3e1206245453c778ab6cffd793ea7" category="inline-link-macro">Workload Factory の構成分析と Well-Architected ステータスについて学習します。</block>
   <block id="9198e3a1fac406d0bf2e8a31d569e09c" category="paragraph"><block ref="9198e3a1fac406d0bf2e8a31d569e09c" category="inline-link-macro-rx"></block></block>
@@ -1466,8 +1449,6 @@
   <block id="8215457eb88ef1fb110b79579b908e3d" category="paragraph">ご自身の環境に適用されない構成の分析を無視することができます。これにより、不要なアラートや不正確な最適化結果を回避できます。</block>
   <block id="8817b0c6f0795c52cab62044416eee8a" category="inline-link-macro">カスタムルールについて詳しくはこちらをご覧ください</block>
   <block id="821af7226458ea25572e88e8ab2026e4" category="paragraph">また、組織の標準および NetApp のベストプラクティスに照らして環境を検証するために、平易な言葉でカスタムルールを作成することもできます。ドライランでルールをテストし、各環境で実行するようにスケジュールを設定します。<block ref="ce039b478eb432b675a03c04866f31ab" category="inline-link-macro-rx"></block>。</block>
-  <block id="8be08850265c9930c26a8e5b28183a2e" category="paragraph">また、組織の標準および NetApp のベストプラクティスに照らして環境を検証するために、平易な言葉でカスタムルールを作成することもできます。ドライランでルールをテストし、各環境で実行するようにスケジュールを設定します。</block>
-  <block id="7c24f3892a999a3e8d688cabe068b17a" category="paragraph"><block ref="ce039b478eb432b675a03c04866f31ab" category="inline-link-macro-rx"></block>。</block>
   <block id="e2f155aff866bc2907bb5aaf211ff083" category="paragraph">1回限りの評価では、分析対象のMicrosoft SQL Serverインスタンスまたはオラクルデータベースに対して、認証情報を1回だけ提供するだけで済みます。</block>
   <block id="3132f405525cd70f7bad3d7130c03410" category="list-text">*継続的な評価*：Workload Factory は、お客様のデータベース環境を定期的に分析し、設定を最適化するための継続的な推奨事項を提供し、問題を自動的に修正します。</block>
   <block id="90d64ee5b341967517900bb62d4c728f" category="paragraph">継続的な評価を行うには、AWSアカウントでリソースを登録し、リンクを関連付け、権限を付与する必要があります。</block>
@@ -1664,4 +1645,38 @@
   <block id="ecf2ed7ba31a9f6e31583b9d9052f055" category="inline-link-macro">データベース構成に関する包括的かつ適切なアーキテクチャ評価を取得します。</block>
   <block id="75c47d4b747a86f2b6de36d602facc46" category="list-text"><block ref="75c47d4b747a86f2b6de36d602facc46" category="inline-link-macro-rx"></block></block>
   <block id="91d90ea5487ed9ed44e834f42f272ccb" category="section-title">2026年8月3日</block>
+  <block id="454b8bf6ce5d6ce9ec4bbed2cbcc375b" category="doc">データベース向けワークロードファクトリーにおける操作の監視</block>
+  <block id="674b84367e7a585d7eb4cb69538ab5be" category="paragraph">FSx for ONTAP、クレデンシャル、リンク操作の実行を監視および追跡し、NetApp Workload Factory の Tracker でタスクの進捗状況を監視します。</block>
+  <block id="8dbebb7d8525e0c16443f866feb41a02" category="paragraph">Workload Factory は、監視機能である Tracker を提供しており、FSx for ONTAP、クレデンシャル、およびリンク操作の進捗状況とステータスを監視および追跡し、操作タスクとサブタスクの詳細を確認し、問題や障害を診断することができます。</block>
+  <block id="6092aff2fd96382c8039bf4b05f69f42" category="paragraph">Trackerでは、いくつかの操作が可能です。ジョブは、期間（過去24時間、7日間、14日間、または30日間）、ワークロード、ステータス、およびユーザーでフィルタリングしたり、検索機能を使用してジョブを検索したり、ジョブテーブルをCSVファイルとしてダウンロードしたりできます。Trackerはいつでも更新できます。また、失敗した操作をすぐに再試行したり、失敗した操作のパラメータを編集して再度操作を試行したりすることもできます。</block>
+  <block id="9233b1148f18eb744b69d4d3620c296c" category="paragraph">Trackerは、運用状況に応じて2段階の監視レベルをサポートしています。ファイルシステム展開などの各タスクには、タスクの説明、ステータス、開始時刻、タスクの実行時間、ユーザー、リージョン、プロキシリソース、タスクID、および関連するすべてのサブタスクが表示されます。APIレスポンスを確認することで、操作中に何が起こったのかを理解できます。</block>
+  <block id="5cdbeb1c4cc65e8f551e161828701113" category="list-text">トラッカーのタスクレベルと例</block>
+  <block id="21a1f3fb63f8e2b67d072b29080f89f9" category="list-text">レベル1（タスク）：ファイルシステムの展開状況を追跡します。</block>
+  <block id="5517abda6821fee1e969e9d59498b33e" category="list-text">レベル2（サブタスク）：ファイルシステム展開に関連するサブタスクを追跡します。</block>
+  <block id="88ebc1f479e6de47fd711c4be81c4d26" category="list-text">動作状況</block>
+  <block id="afcc9733e2e2e0ce70f1ecee29c8f008" category="list-text">Trackerにおける操作ステータスは、_進行中_、_成功_、_失敗_の3つです。</block>
+  <block id="de32977622108a1960ab0fcf45adaf80" category="list-text">動作周波数</block>
+  <block id="a9853b6069302c4152781f48222c3541" category="list-text">稼働頻度は、ジョブの種類とジョブスケジュールに基づいて決定されます。</block>
+  <block id="01b0a4fcc33bdafd6e65537f24f463de" category="list-text">イベント保持</block>
+  <block id="b3c382e94f4b4abcc049ce95e85dc998" category="list-text">イベントはユーザーインターフェースに30日間保持されます。</block>
+  <block id="cfd98e00a6e308c04ab9f76a854b6989" category="section-title">業務を追跡および監視する</block>
+  <block id="e80eb219e8472681a001172074028f46" category="paragraph">Tracker を使用して NetApp Console での操作を追跡および監視します。</block>
+  <block id="90f9c44ed80c8f4c833d62a795593434" category="list-text">メニュー <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> を選択し、次に「管理」を選択します。</block>
+  <block id="31793001124176cff5a1e8aea00621a1" category="list-text">管理メニューから*Tracker*を選択します。</block>
+  <block id="2ba65fb298b74a9b72d949d4fe3479b3" category="list-text">Trackerでは、フィルターまたは検索を使用してジョブ結果を絞り込むことができます。また、ジョブレポートをダウンロードすることもできます。</block>
+  <block id="aa2a2cd452f8a71b2f2dcdae68114732" category="section-title">APIリクエストを表示する</block>
+  <block id="68538d555ae12c680ea428aaa850d90f" category="paragraph">TrackerのタスクのAPIリクエストをCodeboxで確認できます。</block>
+  <block id="968877018213bf42962084001c210472" category="list-text">Trackerでタスクを選択します。</block>
+  <block id="bd56fc255ce900fc195c9bc0d7ed20c0" category="list-text">アクションメニューを選択し、次に「APIリクエストの表示」を選択します。</block>
+  <block id="1448fba076a066622a9f93a25ab170a2" category="section-title">失敗した操作を再試行する</block>
+  <block id="89f1070b2ef1ba678a8cb4823fa74cb2" category="paragraph">Trackerで失敗した操作を再試行します。失敗した操作のエラーメッセージをコピーすることもできます。</block>
+  <block id="2d7556f00012ad460e93441b51cce6ea" category="admonition">失敗した操作に対しては、x回までしか再試行できません。</block>
+  <block id="b866b632b7f32ded2a0a0907100641bf" category="list-text">Trackerで、失敗した操作を選択します。</block>
+  <block id="9d506eb8fb5e05c2467a690e5e727cd8" category="list-text">アクションメニューを選択し、次に*再試行*を選択してください。</block>
+  <block id="121145d60db2324903b129ae74d6c0a9" category="paragraph">操作が再開されました。</block>
+  <block id="bde5076ae2a993de9042a7e1dd4dc445" category="section-title">失敗した操作を編集して再試行する</block>
+  <block id="2ae5a8ae85adca2aebf16aa81130c9c5" category="paragraph">失敗した操作のパラメータを編集し、Tracker の外で操作を再試行してください。</block>
+  <block id="0270fd4391a6b334aa157faf0a6b7304" category="list-text">アクションメニューを選択し、次に*編集して再試行*を選択します。</block>
+  <block id="a071e4310b0dbc18ec326c217f47692f" category="paragraph">操作ページにリダイレクトされますので、そこでパラメータを編集して操作を再試行できます。</block>
+  <block id="49814788ce382c87a117a40e54ae858b" category="paragraph">操作が再開されました。Tracker にアクセスして、操作のステータスを確認してください。</block>
 </blocks>
