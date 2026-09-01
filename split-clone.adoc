@@ -4,7 +4,7 @@ permalink: split-clone.html
 keywords: split, clone, source, new database 
 summary: ソース データベースからデータベース クローンを分割して、 NetApp Workload Factory for Databases に新しいデータベースを作成します。 
 ---
-= ソースデータベースからデータベースクローンを分割する
+= NetApp Workload Factory for Databases でデータベースクローンを分割する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

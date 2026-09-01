@@ -4,7 +4,7 @@ permalink: deregister-instance.html
 keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle database, deregister instance, unregister instance, remove instance 
 summary: Workload Factory コンソールからリソースをデプロイまたは監視する必要がなくなった場合は、リソースの登録を解除します。 
 ---
-= NetApp Workload Factory のリソースを登録解除する
+= NetApp Workload Factory for Databases でリソースの登録を解除する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

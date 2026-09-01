@@ -4,7 +4,7 @@ permalink: analyze-error-logs.html
 keywords: analyze error logs, errors, error severity, Microsoft SQL Server error logs, Oracle database error logs, smart analysis, Agentic AI 
 summary: Workload Factory for Databases 内のエラー ログを分析します。 
 ---
-= Workload Factory のエラーログを分析する
+= データベース向け NetApp Workload Factory のエラーログを分析する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

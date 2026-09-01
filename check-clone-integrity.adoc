@@ -4,7 +4,7 @@ permalink: check-clone-integrity.html
 keywords: integrity check, data corruption 
 summary: NetApp Workload Factory for Databases で整合性チェックを実行し、サンドボックス クローン データが損傷していないか破損しているかを確認します。 
 ---
-= サンドボックスクローン内のデータの整合性をチェックする
+= NetApp Workload Factory for Databases でサンドボックスのデータ整合性を確認する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

@@ -4,7 +4,6 @@
   <block id="2ea6aca63123969c1931cd33bf4619a0" category="doc">Codeboxによる自動化</block>
   <block id="bd282943a337f4287ca0d70f9a836261" category="inline-link-macro">コードボックス自動化</block>
   <block id="7954c9f6b266222ad558a397a97a8531" category="paragraph">詳細とその使用方法については、こちらをご覧 <block ref="d6a91743d83ea88006a3d66c27289981" category="inline-link-macro-rx"></block> ください。</block>
-  <block id="7a5c12f2d0d30b237d1a31e54803d0f8" category="doc">サンドボックスクローン内のデータの整合性をチェックする</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">タスクの内容</block>
   <block id="6a2235a7d08e9218e23793c114adf3a3" category="paragraph">ソースデータベースがビジー状態のときにソースデータベースからサンドボックスクローンを作成すると、クローンのデータがソースデータベースの最新のスナップショットと同期していない可能性があります。この処理では、サンドボックスクローン内のすべてのオブジェクトの整合性がチェックされ、サンドボックスクローンデータが最新かどうかが確認されます。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">手順</block>
@@ -13,7 +12,6 @@
   <block id="655a2ef85749dcbb368e1b8b32300552" category="list-text">[整合性チェック]ダイアログで、*[整合性チェック]*をクリックします。</block>
   <block id="d2212da19c03bb2b369faeaf9d65f109" category="list-text">サンドボックスまたはジョブ監視で整合性チェックのステータスを確認します。</block>
   <block id="8ea37d89915fca644158ae5283f70e68" category="paragraph">整合性チェックに失敗した場合は、サンドボックスクローンを使用せずに、新しいサンドボックスクローンを作成することを推奨します。</block>
-  <block id="2af2cf99863645202599afd2708773e2" category="doc">サンドボックスクローンをCI/CDツールに接続する</block>
   <block id="bc71cf96586c8edb703f886cce218a0c" category="paragraph">新しいバージョンのソフトウェアをデータベースクローンに自動的に提供するには、CI / CDパイプラインに接続する必要があります。この処理で提供されるREST APIコードを使用して接続を確立します。</block>
   <block id="452804eac893658bcf658126b3087551" category="list-text">[CI/CDツールに接続]*を選択します。</block>
   <block id="8191f4b1aee7fafe827afe8814de01a6" category="list-text">[CI/CD]ダイアログで、CI/CDツールへの接続に必要なREST APIコードをコピーまたはダウンロードします。</block>
@@ -809,7 +807,6 @@
   <block id="75851f48043c7a3877391f5330fb19c1" category="inline-link-macro">Workload Factory コンソールで検出されたストレージ環境の節約を調べる</block>
   <block id="a0766b901d28d8d972d369d556ae3e10" category="paragraph"><block ref="a0766b901d28d8d972d369d556ae3e10" category="inline-link-macro-rx"></block></block>
   <block id="c6ce33e049285b31d2f12d7b30e16106" category="summary">Workload Factory for Databases 内のエラー ログを分析します。</block>
-  <block id="de5aa3916ae7d5763f4d4fe818491a77" category="doc">Workload Factory のエラーログを分析する</block>
   <block id="3d573c7428ab9f849be508456eb81821" category="paragraph">エラー ログ アナライザーを使用するたびに、高度な AI 分析のメリットを活用しながら、環境を完全に制御できます。</block>
   <block id="14f1fce00d2e95227126f5556a73ec6a" category="paragraph">エラー ログ アナライザーを使用するには、Amazon Bedrock をアクティブ化し、Workload Factory が使用するモデルを選択し、Amazon Bedrock に接続するためのプライベート エンドポイントを作成し、アクセス許可を追加して、エンタープライズ ライセンスを作成する必要があります。</block>
   <block id="bf71ae5aa16f5632361df660e7d643c6" category="section-title">データのプライバシーとセキュリティ</block>
@@ -838,7 +835,6 @@
   <block id="6c66105ac3f36d7885800e03e5285fd9" category="paragraph">REST API コードを使用してサンドボックス クローンを継続的インテグレーションおよび継続的デリバリー (CI/CD) パイプラインに接続し、 NetApp Workload Factory for Databases の自動化によってソフトウェア配信を改善します。</block>
   <block id="db976ff1c57ed4bcfb284135455febc2" category="list-text">サンドボックスで、サンドボックス クローンのアクション メニューを選択して、CI/CD ツールに接続します。</block>
   <block id="b95fa4e6e7b8f2168ad9a4d81e4e65cb" category="summary">NetApp Workload Factory for Databases 内に新しい Microsoft SQL Server を作成します。</block>
-  <block id="03f5b1a395b2051aedbbb6bf1bdb40e6" category="doc">Workload Factory でデータベース用の Microsoft SQL Server を作成する</block>
   <block id="197df9493ba9fcc2016851ab07990409" category="paragraph">Workload Factory for Databases で新しい Microsoft SQL Server またはデータベース ホストを作成するには、FSx for ONTAPファイル システムのデプロイメントと Active Directory のリソースが必要です。</block>
   <block id="a6955f3c1d9afee975ddac409c1488f3" category="paragraph">Workload Factory から Microsoft SQL Server を作成する前に、データベース ホスト構成で使用可能なストレージ展開タイプ、Microsoft マルチパス I/O 構成、Active Directory 展開、ネットワークの詳細、およびこの操作を完了するための要件について学習します。</block>
   <block id="bc032bc6a4cd520164072ac886f6e6fe" category="paragraph">Microsoft SQL Server の展開モデルでは、どちらも iSCSI ストレージ プロトコルを使用した LUN の作成が必要です。  Workload Factory は、SQL Server over FSx for ONTAPの LUN を構成する一環として、Microsoft マルチパス I/O (MPIO) を構成します。  MPIO は、AWS とNetApp のベスト プラクティスに基づいて構成されます。</block>
@@ -870,7 +866,6 @@
   <block id="33802730984f4af59a8f5644e1ba546a" category="list-text">データベースを作成するための、管理された SQL サーバー インスタンスを持つデータベース サーバーを選択します。</block>
   <block id="9b54a5b8ea82e880e1fd6cc2a1d063e7" category="list-text">マネージドインスタンスのアクション メニューをクリックし、*ユーザー データベースの作成*を選択します。</block>
   <block id="af3c6f6c1f47dc04d93d4779689c9eca" category="summary">NetApp Workload Factory for Databases 内に新しい PostgreSQL SQL サーバーを作成します。</block>
-  <block id="3df8ab93e6ee66742b140a409805477c" category="doc">NetApp Workload FactoryでPostgreSQLサーバーを作成する</block>
   <block id="8b9f915cb2ecd69bdd7dd72955de0196" category="paragraph">NetApp Workload Factory for Databases で新しい PostgreSQL サーバーまたはデータベース ホストを作成するには、FSx for ONTAPファイル システムの展開と Active Directory のリソースが必要です。</block>
   <block id="aee2d1bda2fa7a372599f9dc76274403" category="paragraph">Workload Factory から PostgreSQL サーバーを作成する前に、データベース ホスト構成で使用可能なストレージ展開タイプ、Workload Factory の操作モード、およびこの操作を完了するための要件について学習します。</block>
   <block id="ff041d4f4cf4ed6c6abc6b5c4266cc8c" category="paragraph">+ FSx for ONTAPファイル システムには、_高可用性 (HA)_ または _単一インスタンス_ という 2 つの PostgreSQL サーバー導入モデルがあります。選択した FSx for ONTAPデプロイメント モデルに応じて、FSx for ONTAPファイル システムに対して異なるリソースが作成されます。</block>
@@ -885,11 +880,9 @@
   <block id="c4445bf1142f4fd36aa3139618ee4f3f" category="list-text">*ソース データベース*: クローンにはソース データベースが使用可能である必要があります。</block>
   <block id="969e7140d33129e87f01e95c59fed40f" category="list-text">*マウント*: 複数のデータ ファイルやログ ファイルを持つ SQL データベースのクローンを作成する場合、Workload Factory は、自動的に割り当てられた、または定義されたドライブ文字の下にあるすべてのファイルをクローンします。</block>
   <block id="e84beb556a76fd6484a39d4447262026" category="summary">NetApp Workload Factory for Databases のサンドボックス クローンが不要になり、ストレージ容量を解放したい場合は、それを削除します。</block>
-  <block id="b0a116a4eb9216062a5e5afb2cd40a82" category="doc">NetApp Workload Factory for Databases でデータベースクローンを削除する</block>
   <block id="e0c0b02aa121e916724ee28f460bc605" category="list-text">サンドボックスで、削除するサンドボックス クローンのアクション メニューを選択します。</block>
   <block id="478b782141e49e75e5d4d0534bf71587" category="list-text">[削除] ダイアログで [*削除*] を選択して削除を確認します。</block>
   <block id="54be7afd7595249ed399278de89305fa" category="summary">Workload Factory コンソールからリソースをデプロイまたは監視する必要がなくなった場合は、リソースの登録を解除します。</block>
-  <block id="5a2d38279bf5114017c85d3f5b74a52f" category="doc">NetApp Workload Factory のリソースを登録解除する</block>
   <block id="df442bf005a0d53e338d95bb9b23b0c2" category="paragraph">NetApp Workload Factory コンソールからリソースを展開または監視する必要がなくなった場合は、Microsoft SQL Server インスタンスや Oracle データベースなどのリソースを登録解除します。リソースの登録を解除すると、インスタンスで使用されている FSx for ONTAPストレージ容量も削除されます。</block>
   <block id="5e515299dfd2f2c8ff923eaac6bbb1bf" category="list-text">インベントリで、エンジンの種類として *Microsoft SQL Server*、*Oracle*、または *PostgreSQL* を選択します。</block>
   <block id="e91df2086570d35902c167d64feb1a17" category="list-text">登録解除するリソースを見つけて、アクション メニューを選択し、[登録解除] を選択します。</block>
@@ -1002,7 +995,6 @@
   <block id="51bbd388cda4367b34d6dc50a5e134a5" category="list-text">Well-architected 分析ページで、*無視された構成* を選択して、無視された構成のみを表示します。</block>
   <block id="bc4a349f7f95e73490c3e2f8aaabe892" category="list-text">延期または却下された構成の構成分析を再開するには、「再アクティブ化」を選択します。</block>
   <block id="7c6a7786a083c7d074bada76f0bcd33b" category="summary">Workload Factory for Databases は、Microsoft SQL Server および Oracle の構成を定期的に分析して、問題があるかどうかを判断します。</block>
-  <block id="8317ffd1a53e5d269aaac07d321b8dd0" category="doc">Workload Factory におけるデータベース環境の構成分析</block>
   <block id="84ee3cc4e2a4f169585c115121112580" category="paragraph">Workload Factory コンソールからNetApp Backup and Recovery を使用して、Microsoft SQL Server アプリケーション データを保護します。この統合により、ローカルプライマリAmazon FSx for NetApp ONTAP (FSx for ONTAP) ストレージ上のローカルスナップショットを使用してワークロードをバックアップし、セカンダリ FSx for ONTAPストレージにワークロードを複製するという保護目標を達成できます。</block>
   <block id="bb1b704677e0a9ac00a2bda88f85fe27" category="paragraph">Workload Factory は、リソースの検出、前提条件の検証、Microsoft SQL Server 用プラグインの構成とインストールを自動化し、 NetApp Backup and Recovery によるワークロードの保護を準備します。このプラグインは、Microsoft SQL Server のワークロードを保護できるNetAppソフトウェアのホスト側コンポーネントです。</block>
   <block id="e9575ae90b7ec054c43a9797544d0103" category="paragraph">NetApp Backup and Recovery は、 NetApp SnapMirrorデータ レプリケーション テクノロジーを活用して、スナップショット コピーを作成し、それをバックアップの場所に転送することで、すべてのバックアップが完全に同期されるようにします。</block>
@@ -1044,7 +1036,6 @@
   <block id="b9b9dcaedb68518f618349de0f962cda" category="list-text">サンドボックスで、元に戻すデータベース クローンのアクション メニューを選択します。</block>
   <block id="6e9172aaf947b38ec5222c7fb3133fb6" category="list-text">再ベースライン ダイアログで、*再ベースライン* を選択します。</block>
   <block id="9fb5614e3401e433c6a39f267483e3be" category="summary">ソース データベースからデータベース クローンを分割して、 NetApp Workload Factory for Databases に新しいデータベースを作成します。</block>
-  <block id="e56d0520400755a2305a399e4c431a50" category="doc">ソースデータベースからデータベースクローンを分割する</block>
   <block id="9d708cb240624cc1bb63ba25da0a742b" category="paragraph">NetApp Workload Factory for Databases では、データベース クローンをソース データベースから分割すると、一定量のストレージ容量を消費する新しいデータベースが作成されます。分割が完了するとクローンが削除され、新しいデータベースがインベントリに表示されます。</block>
   <block id="98af8bdb2147926a0a4db45c478851f0" category="list-text">サンドボックスで、分割するデータベース クローンのアクション メニューを選択します。</block>
   <block id="2c9eebdddd5694f0300c1318fc1f439d" category="list-text">分割ダイアログで、*分割*を選択します。</block>
@@ -1061,7 +1052,6 @@
   <block id="40eff8559acd41057187b6cb11fa1919" category="list-text">以下の手順を実行して、新しいNSSアカウントをNetAppコンソールログインに関連付けます。<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block> 。</block>
   <block id="f335678326583cea28377216c5515221" category="paragraph">NetAppサポートサイトのアカウントを取得したら、以下の手順を実行して、アカウントをNetAppコンソールのログインに関連付けます。<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block> 。</block>
   <block id="e4fded9c69219e4b9e3629dcc1d6ec81" category="summary">NetApp Workload Factory for Databases でデータベース クローンの接続情報を表示およびコピーします。</block>
-  <block id="b5e7499b294ed4ae4fad36d6e70d1cdf" category="doc">データベースクローンの接続情報を表示する</block>
   <block id="cfb19a0ff7e382b29551267d52377e0f" category="list-text">サンドボックスで、サンドボックス クローンのアクション メニューを選択して、接続情報を表示します。</block>
   <block id="4a553bf9ebe9a32a6743c78be912cfbc" category="list-text">*閉じる*を選択します。</block>
   <block id="0b640c5e49490eb540208568a359492b" category="summary">NetApp Workload Factory for Databases の新機能について説明します。</block>
@@ -1679,4 +1669,23 @@
   <block id="0270fd4391a6b334aa157faf0a6b7304" category="list-text">アクションメニューを選択し、次に*編集して再試行*を選択します。</block>
   <block id="a071e4310b0dbc18ec326c217f47692f" category="paragraph">操作ページにリダイレクトされますので、そこでパラメータを編集して操作を再試行できます。</block>
   <block id="49814788ce382c87a117a40e54ae858b" category="paragraph">操作が再開されました。Tracker にアクセスして、操作のステータスを確認してください。</block>
+  <block id="619b54ce9e8c031c19256b4d8d750363" category="doc">貯蓄計算ツールのアップデート</block>
+  <block id="e5dcb68e9a92c735dc0967956647bc80" category="paragraph">FSx for ONTAP ファイルシステム上のデータベースワークロードにおける Microsoft SQL Server ワークロードの実行コストのさまざまな要素（ストレージ、コンピューティング、SQL ライセンス、スナップショット、クローンなど）を、Elastic Block Store （EBS）、FSx for Windows File Server、およびオンプレミスストレージと比較できます。この比較には、表示、計画、分析の権限のみを使用します。</block>
+  <block id="fa97573f07318758714d48498eeb8beb" category="inline-link-macro">データベースワークロードのコスト削減策を探る</block>
+  <block id="99e479d341973e05fca0c15ab9ffdad2" category="list-text"><block ref="99e479d341973e05fca0c15ab9ffdad2" category="inline-link-macro-rx"></block></block>
+  <block id="a5ca0e96d815aa95d08fcc15e4dee05c" category="inline-link-macro">データベースワークロードの権限</block>
+  <block id="6c371a91504dc6f98ab6ece596f7ab2f" category="list-text"><block ref="6c371a91504dc6f98ab6ece596f7ab2f" category="inline-link-macro-rx"></block></block>
+  <block id="82c635e3b100afc233299479fb3eda14" category="doc">データベース向け NetApp Workload Factory のエラーログを分析する</block>
+  <block id="8b5884ee309b1732b4b26db4f1d9391b" category="doc">NetApp Workload Factory for Databases でサンドボックスのデータ整合性を確認する</block>
+  <block id="0354b35f78b3b0a2abc4857046c8bb44" category="doc">データベース向け NetApp Workload Factory でサンドボックスクローンを CI/CD に接続する</block>
+  <block id="c4e3c9361d524348aecb1ccf6a70b736" category="doc">Microsoft SQL Server を NetApp Workload Factory for Databases に作成する</block>
+  <block id="1929af40476a50a593dc74fdadb92f44" category="doc">データベース向け NetApp Workload Factory で PostgreSQL サーバーを作成する</block>
+  <block id="0f1488f1cffdc496b17aa68133f45409" category="doc">NetApp Workload Factory for Databases でデータベースクローンを削除する</block>
+  <block id="06eec6f6dae375e43105994b315f1664" category="doc">NetApp Workload Factory for Databases でリソースの登録を解除する</block>
+  <block id="5719a8b368e4d1cde735746b2f77b822" category="doc">NetApp Workload Factoryで適切に設計されたデータベース構成を実装する</block>
+  <block id="c845f87358189f25588e9dd9d9cf0101" category="doc">NetApp Workload Factory for Databases の構成分析について</block>
+  <block id="b1ac22e25e1bec51612ad9e1ac8a5f03" category="doc">NetApp Workload Factory for Databasesを使用してMicrosoft SQL Serverワークロードを保護します</block>
+  <block id="1251c2c3562b89a08c4f6e3d98cee073" category="doc">NetApp Workload Factory for Databases でデータベースクローンを分割する</block>
+  <block id="95d5b5a9387ddb73c562c266681172d5" category="doc">NetApp Workload Factory for Databasesでのクローン接続情報の表示</block>
+  <block id="1641126472d40ab162e3acf05ac611ba" category="section-title">2026年8月30日</block>
 </blocks>

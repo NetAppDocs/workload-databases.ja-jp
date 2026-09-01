@@ -4,7 +4,7 @@ permalink: protect-sql-server.html
 keywords: protect, server, Microsoft SQL Server, SQL Server, protect instance, protect database 
 summary: Microsoft SQL Server インスタンスとデータベースを保護します。 
 ---
-= Microsoft SQL Server ワークロードを保護する
+= NetApp Workload Factory for Databasesを使用してMicrosoft SQL Serverワークロードを保護します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
