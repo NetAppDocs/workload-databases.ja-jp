@@ -22,7 +22,7 @@ AOAG インスタンスと Data Guard データベースを登録すると、リ
 
 Workload Factory for Databasesは、AOAGデプロイメントモデルを使用したMicrosoft SQL Serverインスタンスの優れたアーキテクチャの分析もサポートしています。可用性グループ内のSQL Serverインスタンスの構成を分析し、デプロイメント構成を最適化してベストプラクティスに準拠するための推奨事項を受け取ることができます。この機能を有効にするには、AOAGインスタンスを登録してください。
 
-link:https://docs.netapp.com/us-en/workload-databases/register-instance.html#register-a-sql-server-instance["Workload Factory for Databases にリソースを登録する"]
+link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Workload Factory for Databases にリソースを登録する"]
 
 
 

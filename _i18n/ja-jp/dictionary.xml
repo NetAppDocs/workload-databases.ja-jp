@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
   <block id="08c1bf6e31ef174ff608b5eb3d282063" category="summary">Codeboxを使用すると、ホストの導入やデータベースの作成などを自動化できます。</block>
-  <block id="2ea6aca63123969c1931cd33bf4619a0" category="doc">Codeboxによる自動化</block>
   <block id="bd282943a337f4287ca0d70f9a836261" category="inline-link-macro">コードボックス自動化</block>
   <block id="7954c9f6b266222ad558a397a97a8531" category="paragraph">詳細とその使用方法については、こちらをご覧 <block ref="d6a91743d83ea88006a3d66c27289981" category="inline-link-macro-rx"></block> ください。</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">タスクの内容</block>
@@ -368,18 +367,8 @@
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識とサポート</block>
   <block id="aef814f0c9c4dccfb365b3322172cb51" category="sidebar">データベースワークロードのドキュメント</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新機能</block>
-  <block id="991fc877b6135bcda7435016745ae066" category="sidebar">データベースワークロードを使用</block>
-  <block id="fbe27670bf06b7e38d268c77e7f002f0" category="sidebar">新しいデータベースサーバを作成する</block>
-  <block id="5eb43e1edd4f0757c83c6d6f6632ff94" category="sidebar">管理と監視</block>
   <block id="6ea5d3d06add60328b6497a58edc5878" category="sidebar">クローンの管理</block>
   <block id="7375873088079584bbffaf102f0fdae4" category="sidebar">サンドボックスクローンの作成</block>
-  <block id="566d7361c862d8d2bd63be4cb3f852cd" category="sidebar">サンドボックスクローンの整合性チェック</block>
-  <block id="6de665240f982d480aa54b5ebea09683" category="sidebar">サンドボックスクローンのリバート</block>
-  <block id="6f78b6d7089b4700a6ce9674115ea116" category="sidebar">サンドボックスクローンの更新</block>
-  <block id="93aaedd59af13c8ec678bc053a076fe4" category="sidebar">CI / CDパイプラインへの接続</block>
-  <block id="d1512bc8e97fad026d3a9604a38eafeb" category="sidebar">クローン接続情報の表示</block>
-  <block id="3ed62cfc8918e6f101daf8572a05eac8" category="sidebar">サンドボックスクローンをスプリットする</block>
-  <block id="651b8da486ba685aa80d9dd4866d0171" category="sidebar">サンドボックスクローンを削除する</block>
   <block id="e7310dc180b25aba87aadafb96fb45f4" category="inline-image-macro">削減試算ツールページのスクリーンショットには、左側に選択したAmazon Elastic Block Store上のMicrosoft SQL Server構成が表示され、スナップショットとクローンの値をカスタマイズするオプションが表示されます。コスト削減額の単位での金額と割合の削減に加え、左側に表示されるFSx for ONTAPおよびElastic Block StoreストレージでMicrosoft SQL Serverを使用した場合の月額総コストも表示されます。</block>
   <block id="dfa401fd4fd8841a340bd9f87c0910f8" category="list-text">* Snapshotの頻度*：ドロップダウンメニューからSnapshotの頻度を選択します。</block>
   <block id="3a886ba0c11f46f4a69567f2c732a39e" category="list-text">*クローニングされたコピーの数*：EBS設定のクローニングされたコピーの数を入力します。</block>
@@ -946,7 +935,6 @@
   <block id="65c95ed5c9f895be6dfa81e8583c86af" category="list-text">*CloudShell CLI*: Workload Factory には、単一のブラウザベースの CLI からアカウント全体の AWS およびNetApp環境を管理および操作するための CloudShell CLI が含まれています。Workload Factory コンソールの上部バーから CloudShell にアクセスします。</block>
   <block id="34904d30d825a389b588efb76a1ceb16" category="list-text">*REST API*: Workload Factory REST API を使用して、FSx for ONTAPファイルシステムやその他の AWS リソースをデプロイおよび管理します。</block>
   <block id="3995165ba76339d9d4d08edf5a17c07c" category="list-text">*CloudFormation*: AWS CloudFormation コードを使用して、Workload Factory コンソールで定義したアクションを実行し、AWS アカウントの CloudFormation スタックから AWS およびサードパーティのリソースをモデル化、プロビジョニング、管理します。</block>
-  <block id="a1b1209dad1b58c4e66fd68ee5bc0148" category="list-text">*Terraform NetApp Workload Factory プロバイダー*: Terraform を使用して、Workload Factory コンソールで生成されたインフラストラクチャ ワークフローを構築および管理します。</block>
   <block id="7bfa30721c5e726ff17e3f972237a82c" category="cell">エンジン</block>
   <block id="34b6cd75171affba6957e308dcbd92be" category="cell">version</block>
   <block id="64d354dc5879cf570ce7b4ef676e75bd" category="cell">オペレーティング システム</block>
@@ -1024,14 +1012,11 @@
   <block id="5e0206d9f6dda7994dfcc67c593023cc" category="paragraph">Workload Factory for Databases は、Well-architected ダッシュボードからAmazon FSx for NetApp ONTAPストレージ上の Microsoft SQL Server および Oracle のデプロイメントを定期的に分析します。データベースリソースのWell-Architectedダッシュボードから問題をトラブルシューティングするには、まず<block ref="001cc0ec03a1e5527fa917b277b2c766" category="inline-link-macro-rx"></block>。</block>
   <block id="3fbdba44cc285fba2fa390c4a2d7bd17" category="paragraph">インスタンスを登録した後、well-archectedステータスを確認し、<block ref="1c0f7e78a2011839a2cb972a47f46536" category="inline-link-macro-rx"></block>ワークロード ファクトリーで。</block>
   <block id="1783d14ebd2dc685cc9c5fb74ee32f49" category="paragraph">データベースインベントリのFSx for ONTAPファイルシステムストレージにリソースを登録すると、<block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block>または<block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block>。</block>
-  <block id="f151b3fb8dc81419491717835cd44e64" category="summary">NetApp Workload Factory for Databases 内のデータベース クローンを更新して、現在の時点または以前の時点のソース データベースと同等にします。</block>
-  <block id="b7a6cd6a59539d67306baf5891d48224" category="doc">NetApp Workload Factory for Databases でデータベース クローンを更新する</block>
   <block id="c22418865f823dceb3fa0031532d541e" category="paragraph">NetApp Workload Factory for Databases 内のデータベース (サンドボックス) クローンを更新して、現在の時点または以前の時点のソース データベースと同等にします。</block>
   <block id="63ba9d2341fcd316dd11a8e4d659a680" category="list-text">サンドボックスで、更新するサンドボックス クローンのアクション メニューを選択します。</block>
   <block id="5c312d6e56cb086ef38ed7860931fe1c" category="summary">NetApp Workload Factory for Databases でリソースのステータス、リソース使用率、保護、ストレージ パフォーマンスを監視できるようにリソースを登録します。</block>
   <block id="ec1098eb54d9b05cc1e929562eb8d30d" category="doc">NetApp Workload Factory for Databases にリソースを登録する</block>
   <block id="1d72541b2e1a224311e8b78af73bab83" category="summary">NetApp Workload Factory for Databases でデータベース (サンドボックス) クローンを、作成時の元のバージョンに戻します。</block>
-  <block id="ecf8d68388a40ca09bc6475e0cb33a92" category="doc">NetApp Workload Factory for Databases でデータベース クローンを元に戻す</block>
   <block id="b006ea3a9fc3f700c7ea6c3fc404a855" category="paragraph">データベースのクローンを作成すると、作成時のクローンはベースライン クローンになります。クローンされたデータベースのデータは、作成時のソース データベースと同じです。データベース クローン内のデータは時間の経過とともに変化するため、クローンが最初に作成されたときのベースラインにデータを戻すことが必要になる場合があります。この操作はクローンの再ベースライン化と呼ばれます。新しいクローンを作成するのではなく、クローンを再ベースライン化するとスペースが節約されます。ただし、データベース クローンに加えられた変更はすべて削除されます。</block>
   <block id="b9b9dcaedb68518f618349de0f962cda" category="list-text">サンドボックスで、元に戻すデータベース クローンのアクション メニューを選択します。</block>
   <block id="6e9172aaf947b38ec5222c7fb3133fb6" category="list-text">再ベースライン ダイアログで、*再ベースライン* を選択します。</block>
@@ -1217,7 +1202,6 @@
   <block id="f7b5008af0a2a63908c672bf116eb9cd" category="paragraph">AOAG インスタンスと Data Guard データベースを登録すると、リソースの詳細の表示やエラー ログの分析など、Workload Factory for Databases のさまざまな機能を利用できるようになります。</block>
   <block id="b670d12d9dbeacc2f76bcbbabb59b072" category="paragraph">Workload Factory for Databasesは、AOAGデプロイメントモデルを使用したMicrosoft SQL Serverインスタンスの優れたアーキテクチャの分析もサポートしています。可用性グループ内のSQL Serverインスタンスの構成を分析し、デプロイメント構成を最適化してベストプラクティスに準拠するための推奨事項を受け取ることができます。この機能を有効にするには、AOAGインスタンスを登録してください。</block>
   <block id="fd16a8943ae80384234824f7a04cb2eb" category="inline-link-macro">Workload Factory for Databases にリソースを登録する</block>
-  <block id="e2da1373bb80f776ff6f57fbbe534851" category="paragraph"><block ref="e2da1373bb80f776ff6f57fbbe534851" category="inline-link-macro-rx"></block></block>
   <block id="acc6acf63c7f7148c690b518cbbc53ca" category="paragraph">Well-Architected 分析には、Oracle の *オペレーティング システム パッチ* が含まれており、オペレーティング システムに最新のパッチが適用されているかどうかを確認し、そのインストール方法を案内します。</block>
   <block id="10c0be29accc7dc47a6524aa470214cb" category="paragraph">さらに、Oracle の Well-Architected 分析では、ストレージ レイアウトなどの構成が他の構成に依存している場合に通知されます。通知には、リンクされた構成を最適化するためのアクションが示され、提供されるすべての推奨事項が最適になります。</block>
   <block id="c02b138b3ded0ad5c64dc6ef4350f29e" category="section-title">Oracle オンプレミス データベース環境のコスト分析と移行計画</block>
@@ -1329,7 +1313,6 @@
   <block id="02bc0523497de72834c4c7990e32d155" category="section-title">耐障害性</block>
   <block id="7f65119c79afd09b7f99936d13e97909" category="section-title">2026年4月6日</block>
   <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">2025年10月6日</block>
-  <block id="e41556fc62415ea0a9f5770be89f198d" category="summary">REST API コードを使用してサンドボックスクローンを CI および CD パイプラインに接続し、自動化によってソフトウェア配信を改善します。</block>
   <block id="7c82c4b76396ded628b47eba74c65565" category="paragraph">Workload Factoryは検出されたホスト特性を入力するため、自動的にコスト削減の可能性を探ることができます。</block>
   <block id="d3fcf12bb075f268d31cdb0724f5ce8c" category="section-title">検出されたMicrosoft SQL Serverホストの節約効果を確認する</block>
   <block id="86a575769a61e2abed6c5895311f8530" category="section-title">検出された Oracle ホストの節約効果を確認する</block>
@@ -1676,16 +1659,36 @@
   <block id="a5ca0e96d815aa95d08fcc15e4dee05c" category="inline-link-macro">データベースワークロードの権限</block>
   <block id="6c371a91504dc6f98ab6ece596f7ab2f" category="list-text"><block ref="6c371a91504dc6f98ab6ece596f7ab2f" category="inline-link-macro-rx"></block></block>
   <block id="82c635e3b100afc233299479fb3eda14" category="doc">データベース向け NetApp Workload Factory のエラーログを分析する</block>
-  <block id="8b5884ee309b1732b4b26db4f1d9391b" category="doc">NetApp Workload Factory for Databases でサンドボックスのデータ整合性を確認する</block>
-  <block id="0354b35f78b3b0a2abc4857046c8bb44" category="doc">データベース向け NetApp Workload Factory でサンドボックスクローンを CI/CD に接続する</block>
   <block id="c4e3c9361d524348aecb1ccf6a70b736" category="doc">Microsoft SQL Server を NetApp Workload Factory for Databases に作成する</block>
   <block id="1929af40476a50a593dc74fdadb92f44" category="doc">データベース向け NetApp Workload Factory で PostgreSQL サーバーを作成する</block>
-  <block id="0f1488f1cffdc496b17aa68133f45409" category="doc">NetApp Workload Factory for Databases でデータベースクローンを削除する</block>
   <block id="06eec6f6dae375e43105994b315f1664" category="doc">NetApp Workload Factory for Databases でリソースの登録を解除する</block>
   <block id="5719a8b368e4d1cde735746b2f77b822" category="doc">NetApp Workload Factoryで適切に設計されたデータベース構成を実装する</block>
   <block id="c845f87358189f25588e9dd9d9cf0101" category="doc">NetApp Workload Factory for Databases の構成分析について</block>
   <block id="b1ac22e25e1bec51612ad9e1ac8a5f03" category="doc">NetApp Workload Factory for Databasesを使用してMicrosoft SQL Serverワークロードを保護します</block>
   <block id="1251c2c3562b89a08c4f6e3d98cee073" category="doc">NetApp Workload Factory for Databases でデータベースクローンを分割する</block>
-  <block id="95d5b5a9387ddb73c562c266681172d5" category="doc">NetApp Workload Factory for Databasesでのクローン接続情報の表示</block>
   <block id="1641126472d40ab162e3acf05ac611ba" category="section-title">2026年8月30日</block>
+  <block id="b5ed82020518e1a667b7f42bf1da1877" category="paragraph"><block ref="b5ed82020518e1a667b7f42bf1da1877" category="inline-link-macro-rx"></block></block>
+  <block id="b3ae445fa637203f0dc17550b5c4a56c" category="doc">適切に設計されたダッシュボードに含まれるデータベース構成</block>
+  <block id="a04fc413f106e041524732d895e4258e" category="paragraph">適切に設計されたダッシュボードには、データベース構成に関する推奨事項が含まれるようになり、ベストプラクティスに基づいて設定を評価および最適化できるようになりました。最初の構成には以下が含まれます：</block>
+  <block id="0ab265b548fdc40b21483e61ffde3aba" category="list-text">コールドデータ階層化</block>
+  <block id="4c0abf2d4c54820b8d33061abaf30759" category="list-text">Snapshot ポリシー</block>
+  <block id="6f5cf50fa90f8d99bf50f65e676c6cba" category="list-text">SSDの容量余裕</block>
+  <block id="4dcac8e07a1246e665077c1572955236" category="paragraph">Workload Factory コンソールのメインメニューを選択し、*Well-architected* を選択すると、Well-architected ダッシュボードが表示されます。</block>
+  <block id="2d647234501319107057acb4d3f8dfaf" category="inline-image-macro">Workload Factory コンソールの Well-architected メニューオプション</block>
+  <block id="353cc99df6b21e74c805e74bdab4b8aa" category="paragraph"><block ref="353cc99df6b21e74c805e74bdab4b8aa" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="06e2f75907573850abfa673fd6e8572a" category="list-text">*NetApp Terraformプロバイダー*：Terraformを使用して、Workload Factoryコンソールで生成されたインフラストラクチャワークフローを構築および管理します。</block>
+  <block id="8ffaca7bd1131475769b15e5950997fd" category="summary">NetApp Workload Factory for Databases でサンドボックスクローンを管理して、開発環境とテスト環境の信頼性を維持し、対費用効果の高い状態を保ちます。</block>
+  <block id="b4f39381f48079f073b43be17aadcceb" category="doc">NetApp Workload Factory for Databases でデータベースクローンを管理する</block>
+  <block id="cdfd274ec9252902ff30c3bd23bbcaba" category="paragraph">データベース向け NetApp Workload Factory でサンドボックスクローンを管理し、開発環境とテスト環境の信頼性を維持しながら対費用効果の高い運用を実現します。クローンのデータが完全であることを確認したり、クローンを CI/CD パイプラインに接続してソフトウェア配信を自動化したり、クローンを更新、元に戻したり、分割して現在の開発ニーズに合わせたりすることができます。クローンが不要になったら、削除してストレージ容量を解放してください。</block>
+  <block id="db54b9f026ef1c8abbb8346ab98e867f" category="section-title">サンドボックスデータの整合性を確認する</block>
+  <block id="5b88b561c9410bf3c277c33679dc3e85" category="section-title">サンドボックスクローンをCI/CDに接続する</block>
+  <block id="d4af634ce853b3cd21c6be2c615e7967" category="section-title">データベースクローンを削除する</block>
+  <block id="a47b976ddc050be325174233baded1f1" category="section-title">データベースクローンを更新する</block>
+  <block id="c615884836ba8ff129bccac26af65a58" category="section-title">データベースクローンを元に戻す</block>
+  <block id="74c32f8fc6fe86c04537074f1e3cb88e" category="section-title">データベースクローンを分割する</block>
+  <block id="2f06756420805ba71f60842577c60dc8" category="section-title">クローンの接続情報を表示する</block>
+  <block id="301497b54979bb49bba5249c4f44b4ad" category="section-title">2026年9月27日</block>
+  <block id="e30e82b6ba088958ce23ba4d6a33b01f" category="sidebar">データベースワークロードに Workload Factory を使用する</block>
+  <block id="573be33921395db38cda47a4830a127e" category="sidebar">データベースリソースを作成する</block>
+  <block id="33995eab65a0112a35f0233d5de5a0a6" category="sidebar">データベースリソースの保護、監視、最適化</block>
 </blocks>

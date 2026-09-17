@@ -15,6 +15,28 @@ NetApp Workload Factory for Databases の新機能について説明します。
 
 
 
+[[27-september-2026]]
+== 2026年9月27日
+
+
+
+[[database-configurations-included-in-well-architected-dashboard]]
+=== 適切に設計されたダッシュボードに含まれるデータベース構成
+
+適切に設計されたダッシュボードには、データベース構成に関する推奨事項が含まれるようになり、ベストプラクティスに基づいて設定を評価および最適化できるようになりました。最初の構成には以下が含まれます：
+
+* コールドデータ階層化
+* ストレージ効率
+* Snapshot ポリシー
+* SSDの容量余裕
+
+
+Workload Factory コンソールのメインメニューを選択し、*Well-architected* を選択すると、Well-architected ダッシュボードが表示されます。
+
+image:well-architected-menu-option.png["Workload Factory コンソールの Well-architected メニューオプション"]
+
+
+
 [[30-august-2026]]
 == 2026年8月30日
 
@@ -199,7 +221,7 @@ AOAG インスタンスと Data Guard データベースを登録すると、リ
 
 Workload Factory for Databasesは、AOAGデプロイメントモデルを使用したMicrosoft SQL Serverインスタンスの優れたアーキテクチャの分析もサポートしています。可用性グループ内のSQL Serverインスタンスの構成を分析し、デプロイメント構成を最適化してベストプラクティスに準拠するための推奨事項を受け取ることができます。この機能を有効にするには、AOAGインスタンスを登録してください。
 
-link:https://docs.netapp.com/us-en/workload-databases/register-instance.html#register-a-sql-server-instance["Workload Factory for Databases にリソースを登録する"]
+link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Workload Factory for Databases にリソースを登録する"]
 
 
 
