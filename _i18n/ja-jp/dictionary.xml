@@ -1668,14 +1668,6 @@
   <block id="1251c2c3562b89a08c4f6e3d98cee073" category="doc">NetApp Workload Factory for Databases でデータベースクローンを分割する</block>
   <block id="1641126472d40ab162e3acf05ac611ba" category="section-title">2026年8月30日</block>
   <block id="b5ed82020518e1a667b7f42bf1da1877" category="paragraph"><block ref="b5ed82020518e1a667b7f42bf1da1877" category="inline-link-macro-rx"></block></block>
-  <block id="b3ae445fa637203f0dc17550b5c4a56c" category="doc">適切に設計されたダッシュボードに含まれるデータベース構成</block>
-  <block id="a04fc413f106e041524732d895e4258e" category="paragraph">適切に設計されたダッシュボードには、データベース構成に関する推奨事項が含まれるようになり、ベストプラクティスに基づいて設定を評価および最適化できるようになりました。最初の構成には以下が含まれます：</block>
-  <block id="0ab265b548fdc40b21483e61ffde3aba" category="list-text">コールドデータ階層化</block>
-  <block id="4c0abf2d4c54820b8d33061abaf30759" category="list-text">Snapshot ポリシー</block>
-  <block id="6f5cf50fa90f8d99bf50f65e676c6cba" category="list-text">SSDの容量余裕</block>
-  <block id="4dcac8e07a1246e665077c1572955236" category="paragraph">Workload Factory コンソールのメインメニューを選択し、*Well-architected* を選択すると、Well-architected ダッシュボードが表示されます。</block>
-  <block id="2d647234501319107057acb4d3f8dfaf" category="inline-image-macro">Workload Factory コンソールの Well-architected メニューオプション</block>
-  <block id="353cc99df6b21e74c805e74bdab4b8aa" category="paragraph"><block ref="353cc99df6b21e74c805e74bdab4b8aa" category="inline-image-macro-rx" type="image"></block></block>
   <block id="06e2f75907573850abfa673fd6e8572a" category="list-text">*NetApp Terraformプロバイダー*：Terraformを使用して、Workload Factoryコンソールで生成されたインフラストラクチャワークフローを構築および管理します。</block>
   <block id="8ffaca7bd1131475769b15e5950997fd" category="summary">NetApp Workload Factory for Databases でサンドボックスクローンを管理して、開発環境とテスト環境の信頼性を維持し、対費用効果の高い状態を保ちます。</block>
   <block id="b4f39381f48079f073b43be17aadcceb" category="doc">NetApp Workload Factory for Databases でデータベースクローンを管理する</block>
@@ -1691,4 +1683,6 @@
   <block id="e30e82b6ba088958ce23ba4d6a33b01f" category="sidebar">データベースワークロードに Workload Factory を使用する</block>
   <block id="573be33921395db38cda47a4830a127e" category="sidebar">データベースリソースを作成する</block>
   <block id="33995eab65a0112a35f0233d5de5a0a6" category="sidebar">データベースリソースの保護、監視、最適化</block>
+  <block id="753d621a767f80f69e64e577e1856e54" category="doc">単一インスタンスで複数のファイルシステムをサポート</block>
+  <block id="6adeb7328ee4497e74b45036bf16ff9d" category="paragraph">Workload Factory for Databases は、単一の Microsoft SQL Server インスタンスに対して複数のファイルシステムをサポートします。SQL Server インスタンスに複数のファイルシステムを登録し、SQL Server インスタンス内の複数のファイルシステムに関する構成上の問題を同時に修正できます。</block>
 </blocks>
