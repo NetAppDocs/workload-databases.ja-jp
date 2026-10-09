@@ -138,6 +138,9 @@ Workload Factoryは、AWS、NetApp ONTAP、Microsoft SQL Server、Oracle、お�
 | Microsoft SQL Server | SQL Server 2022 | Windows Server 2022 | FCI、Standalone 
 
 
+| Microsoft SQL Server | SQL Server 2025 | Windows Server 2025 | FCI、Standalone 
+
+
 | Microsoft SQL Server | SQL Server 2017 | any | FCI、Standalone 
 
 
