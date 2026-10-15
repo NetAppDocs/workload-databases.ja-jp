@@ -1,0 +1,204 @@
+---
+sidebar: sidebar 
+permalink: faq-workload-factory-databases.html 
+keywords: faq, frequently asked questions, frequently asked questions about workload factory for databases, workload factory, databases, sql server, oracle, postgresql, fsx for ontap, savings calculator, well-architected, sandbox clones, codebox, backup and recovery 
+summary: データベース向けNetApp Workload Factoryに関するよくある質問。 
+---
+= データベース向けNetApp Workload Factoryのよくある質問
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Amazon FSx for NetApp ONTAP上でデータベースワークロードをデプロイ、登録、最適化、クローン、保護する際に役立つ概念、前提条件、動作など、NetApp Workload Factory for Databasesに関するよくある質問への回答をご紹介します。
+
+
+
+[[getting-started-and-permissions]]
+== はじめにおよび権限
+
+.Workload Factory for Databasesとは何ですか？また、どのようなデータベースエンジンとデプロイメントモデルをサポートしていますか？
+Workload Factory for Databasesは、FSx for ONTAP上のSQL Server、PostgreSQL、Oracleデータベースを検出、評価、プロビジョニング、管理します。
+
+サポートされているモデルについては、link:learn-databases.html["データベース向けワークロードファクトリーについて学ぶ"]を参照してください。
+
+.Workload Factory for Databasesは、どのAWSリージョンで利用できますか？
+Workload Factory for Databasesは、FSx for ONTAPがサポートされているすべての商用リージョンで動作しますが、中国リージョン、Secret Cloud、またはTop Secret Cloudではサポートされていません。
+
+https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["サポート対象の Amazon リージョンを表示します。"^]
+
+.Workload Factory for Databasesの使用を開始するには、AWSに権限を付与する必要がありますか？
+いいえ。権限を付与せずに基本モードで開始し、Codeboxから部分的に完成したコードサンプルをコピーすることができます。ホストを検出してリソースを管理するには、AWS認証情報を追加し、必要な権限に対するIAMポリシーを作成する必要があります。link:quick-start-databases.html["クイックスタート"]を参照してください。
+
+.各タスク（検出、登録、データベース作成、ホスト展開、構成修正）には、どの権限レベルが必要ですか？
+検出されたホストの節約計算ツールとエラーログアナライザーには、表示、計画、および分析の権限が必要です。リソースの登録、データベースの作成、サンドボックスのクローン作成、および適切に設計された問題の修正には、操作権限と修復権限が必要です。新しいデータベースホストをデプロイするには、データベースホストの作成権限が必要です。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#permissions-for-database-workloads["データベースワークロードの権限"^]
+
+
+
+[[deploy-database-hosts]]
+== データベースホストをデプロイする
+
+.SQL Serverホストをデプロイする際、クイック作成と詳細作成の違いは何ですか？
+クイック作成ではデフォルトが適用されます：FCI展開、Windows Server 2016、およびSQL Server 2019 Standard Edition。高度な作成では、デプロイモデル（FCIまたはシングルインスタンス）、オペレーティングシステム、エディション、バージョン、インスタンスタイプ、プロビジョニングされたIOPSとスループット、暗号化、および監視をカスタマイズできます。
+
+link:create-database-server.html["SQL Serverホストを作成します"]。
+
+.新しいSQL Server FCIまたはスタンドアロン展開では、どのようなFSx for ONTAP構成が作成されますか？
+FCIのデプロイではマルチAZのFSx for ONTAPファイルシステムが作成され、FCIはマルチAZ構成でのみサポートされます。スタンドアロンのデプロイでは、シングルAZファイルシステムが作成されます。既存のファイルシステムを選択した場合、SQL Serverワークロード用に新しいストレージVMが作成されます。
+
+link:create-database-server.html["SQL Serverホストを作成します"]。
+
+.ホストをデプロイすると、VPCネットワーク構成は変更されますか？
+可能性はあります。デプロイメントは、必要なAWSインターフェースエンドポイントとS3ゲートウェイエンドポイントが存在しない場合、それらを作成します。また、VPC DNS属性 `EnableDnsSupport`および `EnableDnsHostnames`がまだtrueに設定されていない場合は、trueに設定します。
+
+link:create-database-server.html["SQL Serverホストの作成について詳しくはこちらをご覧ください"]。
+
+.SQL Serverホストをデプロイするには、どのようなActive Directoryアクセスが必要ですか？
+展開プロセスがドメインに参加し、コンピューターオブジェクトを作成するには、Active Directoryの管理者権限が必要です。SQLサービスアカウントを指定しない場合、展開プロセスがアカウントを作成します。ユーザー管理型のActive Directoryの場合、EC2インスタンスからディレクトリサービスへのトラフィックを許可するセキュリティグループを指定する必要があります。
+
+link:create-database-server.html["SQL Serverホストの作成について詳しくはこちらをご覧ください"]。
+
+.なぜSQL ServerのデプロイがCredSSPが原因で失敗する可能性があるのでしょうか？
+デプロイ時に、Workload Factory はプロビジョニングスクリプトへの認証情報委任のために CredSSP を有効にします。グループポリシーによってドメイン内のすべてのコンピューターに対するCredSSP委任がブロックされている場合、デプロイは失敗します。Workload Factoryは、デプロイ後にCredSSPを無効にします。
+
+link:create-database-server.html["SQL Serverホストの作成について詳しくはこちらをご覧ください"]。
+
+.デプロイ直後にSQL Serverに接続できますか？
+すぐにはできません。Workload FactoryはデプロイされたSQL Serverでのリモート接続を有効にしないため、セキュリティグループで必要なクライアントIPまたはサブネットを許可するなど、お客様ご自身で設定していただく必要があります。
+
+link:create-database-server.html["SQL Serverでリモート接続を有効にする方法を確認します"]。
+
+
+
+[[register-and-manage-resources]]
+== リソースの登録と管理
+
+.Workload Factoryにインスタンスを登録すると、どのようなメリットがありますか？また、登録の前提条件は何ですか？
+登録することで、データベースやサンドボックスのクローンを作成したり、エラーログの分析を実行したり、構成を最適化したりすることができます。リソースはFSx for ONTAPストレージ上で実行され、インベントリに表示される必要があります。これにはAWS認証情報が必要です。また、リンクをFSx for ONTAPファイルシステムに関連付け、SQL Server用のAWSおよびNetApp PowerShellモジュールを含む前提条件チェックを完了する必要があります。
+
+link:register-instance.html["リソースを登録する"]。
+
+.どのデータベースを登録および管理できますか？また、PostgreSQLについてはどうですか？
+登録および管理できるのは、SQL Serverインスタンス（FCIおよびスタンドアロン）とOracleデータベースのみです。PostgreSQLホストは、AWS認証情報に基づいてインベントリに表示されますが、登録はされていません。検出対象は、Amazon Linux上のPostgreSQLのみ、およびRed Hat Enterprise Linux上のOracleのみとなります。
+
+.インターネット接続のないプライベートネットワークでインスタンスを登録するには何が必要ですか？
+S3、AWS Systems Manager、およびFSx for ONTAPのVPCエンドポイントをVPC内で利用できるようにし、インターフェイスエンドポイントのセキュリティグループでポート443を許可します。プロキシを使用する場合は、必要なMicrosoft、PowerShell Gallery（SQL Server）、およびAWSのドメインも許可する必要があります。
+
+link:register-instance.html["リソースの登録方法を確認する"]。
+
+.リソースの登録を解除するとどうなりますか？
+コンソールからリソースにデプロイしたり監視したりすることはできなくなります。また、そのFSx for ONTAPストレージ容量は、インスタンスが使用している容量としてカウントされなくなります。後でリソースを再度登録できます。
+
+link:deregister-instance.html["リソースの登録を解除する"]。
+
+.データベースを作成する際に知っておくべきことは何ですか？
+データベースを作成すると、データファイルとログファイル用にそれぞれ独立したLUNを持つ2つの新しいボリュームが追加されます。ファイルはシンプロビジョニングされ、割り当てられた容量のうち数MBしか消費しません。SMBを使用するSQL Serverは、データベースの作成をサポートしていません。
+
+link:create-database.html["SQL Serverデータベースを作成する"]。
+
+
+
+[[savings-calculator]]
+== 削減額計算ツール
+
+.削減額計算ツールは何を比較し、オンプレミスのSQL Serverホストはどのように評価されますか？
+Amazon Elastic Block Store、FSx for Windows File Server、およびオンプレミスストレージと、FSx for ONTAPでのストレージ、コンピューティング、SQLライセンス、スナップショット、およびクローンのコストを比較します。オンプレミスホストの場合は、PowerShell評価スクリプトをダウンロードしてホスト上で実行し、結果をアップロードします。その後、分析するホストを最大5つまで選択できます。オンプレミスのボリュームサイズは、コストおよび削減率の計算には考慮されないことに注意してください。
+
+link:explore-savings.html["削減額計算ツールの使用方法"]。
+
+.なぜこの計算ツールは、SQL Server EnterpriseをStandard Editionにダウングレードすることを推奨するのですか？
+インスタンスのvCPU数が48以下、メモリ容量が128 GB以下の場合、ダウングレードを推奨します。また、インスタンスは、オンラインインデックス操作、Resource Governor、ピアツーピアまたはOracleレプリケーション、R/Python拡張機能、メモリ最適化TempDBなどのEnterprise機能を使用してはなりません。導入モデルもEnterpriseを必須とするものであってはなりません。
+
+.複数のホストを選択した場合、計算ツールはどのようにFSx for ONTAP構成のサイズを決定しますか？
+検出されたホストを最大5台まで選択できます。Workload Factoryは、ホストが単一のファイルシステムのスループット、容量、またはIOPSの制限を超えない限り、それらを1つのSQLインスタンスを持つ単一のFSx for ONTAP構成の推奨事項に統合します。複数のFSx for ONTAPファイルシステムの作成または保存はサポートされていません。
+
+link:explore-savings.html["コスト削減の詳細"]。
+
+
+
+[[well-architected-configurations]]
+== 適切に設計された構成
+
+.単発のWell-Architected評価と継続的なWell-Architected評価の違いは何ですか？
+この一度限りの評価では、ホスト上でスクリプトが実行され、結果がアップロードされるため、認証情報は保存されず、リソースの登録も不要です。継続的な評価には、リソースの登録、リンクの関連付け、および権限の付与が必要です。毎日分析を行い、問題を自動的に修正できます。
+
+link:optimize-configurations.html["データベース構成を最適化する"]。
+
+.適切に設計された構成上の問題を修正する前に、どのようなリスクを考慮すべきでしょうか？
+一部の修正はダウンタイムやサービスの中断を引き起こす可能性があるため、各推奨事項を事前に確認してください。例えば、本番環境に変更を加える前に、RSSとMAXDOPの推奨事項についてパフォーマンステストを実施してください。
+
+link:optimize-configurations.html["構成に関する推奨事項の詳細については、評価を実行してください"]。
+
+.自分の環境に適用されない、優れたアーキテクチャに関する推奨事項を無視しても良いでしょうか？
+はい。設定を却下すると、その設定の分析が停止し、不要なアラートが回避され、最適化スコアの合計から除外されます。いつでも再有効化でき、その後は毎日分析が再開されます。
+
+link:optimize-configurations.html["構成を適切なアーキテクチャ評価から除外する"]。
+
+.ベストプラクティスで、SQL ServerとOracleのボリュームのスケジュールされたローカルスナップショットを無効にすることが推奨されているのはなぜですか？
+スケジュールされたFSx for ONTAPスナップショットはアプリケーション整合性がありません。アプリケーション整合性のあるバックアップを取得し、リストア時の破損を回避するために、NetApp SnapCenterなどのツールを使用してスナップショットを外部で管理することをお勧めします。なお、Advanced createによるホストの導入では、デフォルトで7日間の保持期間を持つ日次スナップショットポリシーが有効になります。
+
+link:optimize-overview.html["データベース構成の分析について詳しくはこちらをご覧ください"]。
+
+
+
+[[sandbox-clones]]
+== サンドボックスクローン
+
+.サンドボックスのクローンはどのように作成され、どこに配置できるのですか？
+サンドボックスクローンは、ソースデータベースの最新のスナップショットから作成されます。ターゲットホストが同じVPC内にあり、ソースと同じFSx for ONTAPファイルシステムを共有している限り、同じSQL Serverインスタンス上でも別のインスタンス上でもかまいません。作成するには、管理対象（登録済み）のSQL Serverと、操作および修復の権限が必要です。
+
+link:create-sandbox-clone.html["サンドボックスクローンの作成"]。
+
+.サンドボックスクローンにおけるリフレッシュ、ベースライン再設定、分割の違いは何ですか？
+更新機能は、クローンをソースデータベースの現在の状態または以前のスナップショットに同期させ、クローンに対して行った変更をすべて削除します。ベースラインを再設定すると、クローンが作成時の状態に復元され、変更内容も削除されます。また、新しいクローンを作成する場合と比べて容量を節約できます。分割処理を行うと、クローンはストレージ容量を消費する独立したデータベースとなり、分割処理が完了するとクローンは削除されます。
+
+* link:manage-clones.html["データベースクローンを管理する"]。
+* link:split-clone.html["データベースクローンを分割する"]。
+
+
+.サンドボックスクローンのデータが正常であることを検証するにはどうすればよいですか？また、検証が失敗した場合はどうすればよいですか？
+ソースデータベースがビジー状態のときにクローンを作成すると、クローンが最新のスナップショットと同期していない可能性があります。整合性チェックでは、クローン内のすべてのオブジェクトが検査されます。失敗した場合は、クローンを使用せず、新しいクローンを作成してください。
+
+link:manage-clones.html["データベースクローンの整合性を確認する"]。
+
+.クローンを分割する前に確認すべきことは何ですか？
+分割すると、追加のストレージ容量を消費する新しいデータベースが作成されます。必要な容量を計画し、必要に応じて事前にFSx for ONTAPファイルシステムの容量を拡張してください。
+
+link:split-clone.html["データベースクローンを分割する"]。
+
+
+
+[[data-protection]]
+== データ保護
+
+.バックアップとリカバリは、SQL Serverワークロードに対してどのような保護を提供しますか？
+プライマリFSx for ONTAPストレージ上のローカルスナップショットでワークロードをバックアップし、SnapMirrorテクノロジを使用してセカンダリFSx for ONTAPストレージにレプリケートします。Backup and Recoveryで保護ポリシーを作成します。
+
+link:protect-sql-server.html["Backup and Recoveryを使用してSQL Serverワークロードを保護します"]。
+
+.NetApp Backup and Recoveryを使用してSQL Serverを保護するには何が必要ですか？
+SQL Serverインスタンスは、Windowsの認証情報を使用して登録する必要があります。また、Backup and RecoveryのSQL Server要件、NetApp Consoleの要件（Consoleエージェントを含む）、およびライセンス要件を満たす必要があります。その後、Workload FactoryはMicrosoft SQL Server用プラグインをインストールし、保護ポリシーを作成するためにBackup and Recoveryにリダイレクトします。
+
+link:protect-sql-server.html["Backup and Recoveryを使用してSQL Serverワークロードを保護します"]。
+
+
+
+[[automation-and-error-analysis]]
+== 自動化とエラー分析
+
+.Codeboxとは何ですか？また、生成されたコードを使用する際の注意点はありますか？
+Codeboxは、Workload Factoryでサポートされる操作のためのREST API、AWS CLI、CloudFormation、およびTerraformコードを生成するインフラストラクチャ・アズ・コードのコパイロットです。Terraformコードではfsxadminとvsadminのパスワードが隠されているため、再入力する必要があります。ダウンロードまたはコピーされたCloudFormationテンプレートは7日間のみ保持されます。link:automate-codebox.html["Codeboxで自動化"]を参照してください。
+
+.AI搭載のエラーログアナライザーを使用するには、どのような設定が必要ですか？
+アナライザーを使用するには、Amazon Bedrock のアクティベーション、ホストのサブネットに関連付けられた Bedrock VPC エンドポイント、登録済みのリソース、および必要な IAM 権限が必要です。Oracleの場合、V$DIAG_ALERT_EXTへのアクセス権も付与する必要があります。アカウント管理者がAI機能を無効にしている場合、アナライザーは利用できません。
+
+link:analyze-error-logs.html["Workload Factory でエラーログを分析する方法を学習します"]。
+
+.エラーログアナライザーを使用する場合、ログデータは安全ですか？
+ログデータと集計データはお客様のAWSアカウント内に保持され、プライベートVPCエンドポイントを経由して送信されるため、インターネット上に公開されることはありません。顧客データは、モデルの学習や改善には使用されません。Bedrockはログをリアルタイムで処理し、その結果はお客様の環境内に保存されます。

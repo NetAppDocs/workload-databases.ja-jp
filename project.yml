@@ -65,6 +65,8 @@ sidebar:
       url: "/monitor-databases.html"
     - title: Microsoft SQL Server ワークロードを保護する
       url: "/protect-sql-server.html"
+  - title: FAQ
+    url: "/faq-workload-factory-databases.html"
   - title: 知識とサポート
     entries:
     - title: サポートに登録します

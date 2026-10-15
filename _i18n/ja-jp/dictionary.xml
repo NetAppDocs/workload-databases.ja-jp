@@ -1687,4 +1687,114 @@
   <block id="74bc5d714652a3ae18c64ee93e4ba085" category="section-title">2026年9月30日</block>
   <block id="3fba0171e458258e875a2f8013e395b8" category="cell">SQL Server 2025</block>
   <block id="9e5f96378bed43aac0d5d94368775263" category="cell">Windows Server 2025</block>
+  <block id="4782267fdadc095a2cd17da937e1ccad" category="summary">データベース向けNetApp Workload Factoryに関するよくある質問。</block>
+  <block id="2a4cac40440a22026c2bfd855df4dbe7" category="doc">データベース向けNetApp Workload Factoryのよくある質問</block>
+  <block id="1e1a3b6ab01f226ca1e127f75f84287e" category="paragraph">Amazon FSx for NetApp ONTAP上でデータベースワークロードをデプロイ、登録、最適化、クローン、保護する際に役立つ概念、前提条件、動作など、NetApp Workload Factory for Databasesに関するよくある質問への回答をご紹介します。</block>
+  <block id="ff937566d140b3beee0ae05fa3bf1d16" category="section-title">はじめにおよび権限</block>
+  <block id="49806e49d4920a1a191dc7edec063393" category="paragraph-title">Workload Factory for Databasesとは何ですか？また、どのようなデータベースエンジンとデプロイメントモデルをサポートしていますか？</block>
+  <block id="2534f34768fea6d6d2a3f455dcdd11b6" category="paragraph">Workload Factory for Databasesは、FSx for ONTAP上のSQL Server、PostgreSQL、Oracleデータベースを検出、評価、プロビジョニング、管理します。</block>
+  <block id="9edc1f7174eb2abf6e14bc33c86eb1ed" category="paragraph">サポートされているモデルについては、<block ref="de005eec6ae9c7f16694e816ae3da980" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="8f8ab4a3f82cb0a5c9ace0c25cb1f331" category="paragraph-title">Workload Factory for Databasesは、どのAWSリージョンで利用できますか？</block>
+  <block id="d58b792ff3cf7eb876f7a2615ce9c542" category="paragraph">Workload Factory for Databasesは、FSx for ONTAPがサポートされているすべての商用リージョンで動作しますが、中国リージョン、Secret Cloud、またはTop Secret Cloudではサポートされていません。</block>
+  <block id="ee9b3af8630059982f4d1dd2fd3834a3" category="paragraph"><block ref="ee9b3af8630059982f4d1dd2fd3834a3" category="inline-link-rx"></block></block>
+  <block id="9b97f837f597c001894db81a4bf49825" category="paragraph-title">Workload Factory for Databasesの使用を開始するには、AWSに権限を付与する必要がありますか？</block>
+  <block id="583f7ad88c222c9eeb6be0a5adabca4a" category="paragraph">いいえ。権限を付与せずに基本モードで開始し、Codeboxから部分的に完成したコードサンプルをコピーすることができます。ホストを検出してリソースを管理するには、AWS認証情報を追加し、必要な権限に対するIAMポリシーを作成する必要があります。<block ref="701d6c5998b7a600f073d19741bb6f76" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="d5a49a1760f5eae8454d84b8ea1027b1" category="paragraph-title">各タスク（検出、登録、データベース作成、ホスト展開、構成修正）には、どの権限レベルが必要ですか？</block>
+  <block id="5574a5c0b6d209a5d99bf1cd351dd82d" category="paragraph">検出されたホストの節約計算ツールとエラーログアナライザーには、表示、計画、および分析の権限が必要です。リソースの登録、データベースの作成、サンドボックスのクローン作成、および適切に設計された問題の修正には、操作権限と修復権限が必要です。新しいデータベースホストをデプロイするには、データベースホストの作成権限が必要です。</block>
+  <block id="818beeb2b71e78e10efcaea058043e4a" category="section-title">データベースホストをデプロイする</block>
+  <block id="520f3a0f200db765ec937ead78ce446b" category="paragraph-title">SQL Serverホストをデプロイする際、クイック作成と詳細作成の違いは何ですか？</block>
+  <block id="75983eb7ad3c1f715505bd02a3095fb3" category="paragraph">クイック作成ではデフォルトが適用されます：FCI展開、Windows Server 2016、およびSQL Server 2019 Standard Edition。高度な作成では、デプロイモデル（FCIまたはシングルインスタンス）、オペレーティングシステム、エディション、バージョン、インスタンスタイプ、プロビジョニングされたIOPSとスループット、暗号化、および監視をカスタマイズできます。</block>
+  <block id="ba03f36f2433a2b0aac616d2bb21982c" category="inline-link-macro">SQL Serverホストを作成します</block>
+  <block id="fca5317673ab7aed382180b8b3e0459c" category="paragraph"><block ref="5c93d04b6d4ac34e7791c381e0707def" category="inline-link-macro-rx"></block>。</block>
+  <block id="c8b3a2b20e28f630c501ddc4dd6be315" category="paragraph-title">新しいSQL Server FCIまたはスタンドアロン展開では、どのようなFSx for ONTAP構成が作成されますか？</block>
+  <block id="8a42f97bc55e5daa61133e176e70fafb" category="paragraph">FCIのデプロイではマルチAZのFSx for ONTAPファイルシステムが作成され、FCIはマルチAZ構成でのみサポートされます。スタンドアロンのデプロイでは、シングルAZファイルシステムが作成されます。既存のファイルシステムを選択した場合、SQL Serverワークロード用に新しいストレージVMが作成されます。</block>
+  <block id="1379a0f6a94145014fed6787720550c7" category="paragraph-title">ホストをデプロイすると、VPCネットワーク構成は変更されますか？</block>
+  <block id="f74756cfd372f6bc4d1c6a6538a11682" category="paragraph">可能性はあります。デプロイメントは、必要なAWSインターフェースエンドポイントとS3ゲートウェイエンドポイントが存在しない場合、それらを作成します。また、VPC DNS属性<block ref="cb0df2380d372b70fd568d139d704794" prefix=" " category="inline-code"></block>および<block ref="df550516571c5adda5f49cb0f14d22f1" prefix=" " category="inline-code"></block>がまだtrueに設定されていない場合は、trueに設定します。</block>
+  <block id="74c1ffeee10328970a7ab8ceb202160a" category="inline-link-macro">SQL Serverホストの作成について詳しくはこちらをご覧ください</block>
+  <block id="6ead88c28062baaf60c6d5e6f4f1f313" category="paragraph"><block ref="bda43f4548ee4bc87595f0de68111ac7" category="inline-link-macro-rx"></block>。</block>
+  <block id="7cb60af25bc13129ccee186d65ba8511" category="paragraph-title">SQL Serverホストをデプロイするには、どのようなActive Directoryアクセスが必要ですか？</block>
+  <block id="d81468426a0a35f10d104f45b9adfa5b" category="paragraph">展開プロセスがドメインに参加し、コンピューターオブジェクトを作成するには、Active Directoryの管理者権限が必要です。SQLサービスアカウントを指定しない場合、展開プロセスがアカウントを作成します。ユーザー管理型のActive Directoryの場合、EC2インスタンスからディレクトリサービスへのトラフィックを許可するセキュリティグループを指定する必要があります。</block>
+  <block id="d0f051280c736f69fc18f3a0710773d7" category="paragraph-title">なぜSQL ServerのデプロイがCredSSPが原因で失敗する可能性があるのでしょうか？</block>
+  <block id="4eb056bd12f0faec74839c64756e414d" category="paragraph">デプロイ時に、Workload Factory はプロビジョニングスクリプトへの認証情報委任のために CredSSP を有効にします。グループポリシーによってドメイン内のすべてのコンピューターに対するCredSSP委任がブロックされている場合、デプロイは失敗します。Workload Factoryは、デプロイ後にCredSSPを無効にします。</block>
+  <block id="71c15050afabf2e28c17ebb68e94db0c" category="paragraph-title">デプロイ直後にSQL Serverに接続できますか？</block>
+  <block id="a5157316a874f41547a714f96d5153dd" category="paragraph">すぐにはできません。Workload FactoryはデプロイされたSQL Serverでのリモート接続を有効にしないため、セキュリティグループで必要なクライアントIPまたはサブネットを許可するなど、お客様ご自身で設定していただく必要があります。</block>
+  <block id="4958c8f1ec71818c73a1e2d3efaedbaf" category="inline-link-macro">SQL Serverでリモート接続を有効にする方法を確認します</block>
+  <block id="f97e008ec427b318ebfaef6889042295" category="paragraph"><block ref="14cf7d66aa5058a706da37f374ee402c" category="inline-link-macro-rx"></block>。</block>
+  <block id="a9e05cf4049d5a4138457dc4467edeb6" category="section-title">リソースの登録と管理</block>
+  <block id="84410efd9f37ce7811945ec68cc2b64e" category="paragraph-title">Workload Factoryにインスタンスを登録すると、どのようなメリットがありますか？また、登録の前提条件は何ですか？</block>
+  <block id="4f37599f7acfe386ce98d17026d91d5f" category="paragraph">登録することで、データベースやサンドボックスのクローンを作成したり、エラーログの分析を実行したり、構成を最適化したりすることができます。リソースはFSx for ONTAPストレージ上で実行され、インベントリに表示される必要があります。これにはAWS認証情報が必要です。また、リンクをFSx for ONTAPファイルシステムに関連付け、SQL Server用のAWSおよびNetApp PowerShellモジュールを含む前提条件チェックを完了する必要があります。</block>
+  <block id="9c40ded53e74c2102ef6e824ab1b6db6" category="paragraph"><block ref="2dd9f57d2265bdf5844c29c119e8ca9c" category="inline-link-macro-rx"></block>。</block>
+  <block id="e53c6b066d6c6602a811c3d11467d84a" category="paragraph-title">どのデータベースを登録および管理できますか？また、PostgreSQLについてはどうですか？</block>
+  <block id="3356e42ee4c2ec8d9acbd45ac17c1497" category="paragraph">登録および管理できるのは、SQL Serverインスタンス（FCIおよびスタンドアロン）とOracleデータベースのみです。PostgreSQLホストは、AWS認証情報に基づいてインベントリに表示されますが、登録はされていません。検出対象は、Amazon Linux上のPostgreSQLのみ、およびRed Hat Enterprise Linux上のOracleのみとなります。</block>
+  <block id="6c9d9e9e8f1e090fee51f5e6b35cffbf" category="paragraph-title">インターネット接続のないプライベートネットワークでインスタンスを登録するには何が必要ですか？</block>
+  <block id="7877d69d57003f53050f42fd212847ac" category="paragraph">S3、AWS Systems Manager、およびFSx for ONTAPのVPCエンドポイントをVPC内で利用できるようにし、インターフェイスエンドポイントのセキュリティグループでポート443を許可します。プロキシを使用する場合は、必要なMicrosoft、PowerShell Gallery（SQL Server）、およびAWSのドメインも許可する必要があります。</block>
+  <block id="f0997ab9b5b94cc907f86118e2e69a5e" category="inline-link-macro">リソースの登録方法を確認する</block>
+  <block id="b00857e376acec9ec806f92fa888fd00" category="paragraph"><block ref="553020237d27eff9374392b59b689fd2" category="inline-link-macro-rx"></block>。</block>
+  <block id="019bc8bdc013ea6dd01441af0dd627b8" category="paragraph-title">リソースの登録を解除するとどうなりますか？</block>
+  <block id="cb06b21ddc280eb470693219ca29e347" category="paragraph">コンソールからリソースにデプロイしたり監視したりすることはできなくなります。また、そのFSx for ONTAPストレージ容量は、インスタンスが使用している容量としてカウントされなくなります。後でリソースを再度登録できます。</block>
+  <block id="258e1dcdf969c7c797e745f6a20f7e0d" category="inline-link-macro">リソースの登録を解除する</block>
+  <block id="fa489722060669b6cbfe6be503909b15" category="paragraph"><block ref="611e4576ed62c821287b729b7dab411f" category="inline-link-macro-rx"></block>。</block>
+  <block id="c1f0a545597f1b39d635f65446676dfc" category="paragraph-title">データベースを作成する際に知っておくべきことは何ですか？</block>
+  <block id="6626cd1c97285f801e13ba3e2c689004" category="paragraph">データベースを作成すると、データファイルとログファイル用にそれぞれ独立したLUNを持つ2つの新しいボリュームが追加されます。ファイルはシンプロビジョニングされ、割り当てられた容量のうち数MBしか消費しません。SMBを使用するSQL Serverは、データベースの作成をサポートしていません。</block>
+  <block id="539522affb555c466b5c8f976eb383f3" category="inline-link-macro">SQL Serverデータベースを作成する</block>
+  <block id="2da0747e53050b6c56950827d0893fc4" category="paragraph"><block ref="75046a90403261241119455d1696bc5d" category="inline-link-macro-rx"></block>。</block>
+  <block id="0cda48b44d12625b3d3d3ec35e20bd75" category="paragraph-title">削減額計算ツールは何を比較し、オンプレミスのSQL Serverホストはどのように評価されますか？</block>
+  <block id="3593386e7986db9c4b4d29ff9618b055" category="paragraph">Amazon Elastic Block Store、FSx for Windows File Server、およびオンプレミスストレージと、FSx for ONTAPでのストレージ、コンピューティング、SQLライセンス、スナップショット、およびクローンのコストを比較します。オンプレミスホストの場合は、PowerShell評価スクリプトをダウンロードしてホスト上で実行し、結果をアップロードします。その後、分析するホストを最大5つまで選択できます。オンプレミスのボリュームサイズは、コストおよび削減率の計算には考慮されないことに注意してください。</block>
+  <block id="d29c90b4f82c166798f1f8e15dcd72f2" category="inline-link-macro">削減額計算ツールの使用方法</block>
+  <block id="3892560eb1e15954593d8839a8469893" category="paragraph"><block ref="8d0197f1622e03b4410d58423c12a49b" category="inline-link-macro-rx"></block>。</block>
+  <block id="8c73290e62f99a78591a57f6892086a1" category="paragraph-title">なぜこの計算ツールは、SQL Server EnterpriseをStandard Editionにダウングレードすることを推奨するのですか？</block>
+  <block id="1d2450e32998a69e802f089a858f7ce2" category="paragraph">インスタンスのvCPU数が48以下、メモリ容量が128 GB以下の場合、ダウングレードを推奨します。また、インスタンスは、オンラインインデックス操作、Resource Governor、ピアツーピアまたはOracleレプリケーション、R/Python拡張機能、メモリ最適化TempDBなどのEnterprise機能を使用してはなりません。導入モデルもEnterpriseを必須とするものであってはなりません。</block>
+  <block id="46d01e5ed21aca01e1648b2531ed1a77" category="paragraph-title">複数のホストを選択した場合、計算ツールはどのようにFSx for ONTAP構成のサイズを決定しますか？</block>
+  <block id="71df076cb0fed0fad9fd4d4c052d4e8f" category="paragraph">検出されたホストを最大5台まで選択できます。Workload Factoryは、ホストが単一のファイルシステムのスループット、容量、またはIOPSの制限を超えない限り、それらを1つのSQLインスタンスを持つ単一のFSx for ONTAP構成の推奨事項に統合します。複数のFSx for ONTAPファイルシステムの作成または保存はサポートされていません。</block>
+  <block id="92199d6114a18ff14ac267b0173c17cf" category="paragraph"><block ref="e22e7e4f32e98dc6a7aba821004e4eb9" category="inline-link-macro-rx"></block>。</block>
+  <block id="150b53a82438f77e58d4d56e871000c4" category="section-title">適切に設計された構成</block>
+  <block id="426068083195285a1aab3a4ac3dad0aa" category="paragraph-title">単発のWell-Architected評価と継続的なWell-Architected評価の違いは何ですか？</block>
+  <block id="e62f13f574bfb5c2fd45fa1ab5cd278f" category="paragraph">この一度限りの評価では、ホスト上でスクリプトが実行され、結果がアップロードされるため、認証情報は保存されず、リソースの登録も不要です。継続的な評価には、リソースの登録、リンクの関連付け、および権限の付与が必要です。毎日分析を行い、問題を自動的に修正できます。</block>
+  <block id="0e4628a5e4d70a809c14848ca21c2f82" category="inline-link-macro">データベース構成を最適化する</block>
+  <block id="f6985afd62801e041de4bdbdf125b562" category="paragraph"><block ref="10be26d607b04ac41b48d14462192458" category="inline-link-macro-rx"></block>。</block>
+  <block id="36484a6959ea51ce2f860df0759af8ad" category="paragraph-title">適切に設計された構成上の問題を修正する前に、どのようなリスクを考慮すべきでしょうか？</block>
+  <block id="26115cb105e2df3aff2a9d2157750eec" category="paragraph">一部の修正はダウンタイムやサービスの中断を引き起こす可能性があるため、各推奨事項を事前に確認してください。例えば、本番環境に変更を加える前に、RSSとMAXDOPの推奨事項についてパフォーマンステストを実施してください。</block>
+  <block id="76d360863ce992220cc5e13d969b6bf5" category="inline-link-macro">構成に関する推奨事項の詳細については、評価を実行してください</block>
+  <block id="88423f215b257810305394aaec401fc4" category="paragraph"><block ref="79479fcdf0af6ed1d4212c50bf618c17" category="inline-link-macro-rx"></block>。</block>
+  <block id="c25f05e3f5c4c56586f6b9a81eee18aa" category="paragraph-title">自分の環境に適用されない、優れたアーキテクチャに関する推奨事項を無視しても良いでしょうか？</block>
+  <block id="6ab26fb5272a8e6062288d07b5a960ad" category="paragraph">はい。設定を却下すると、その設定の分析が停止し、不要なアラートが回避され、最適化スコアの合計から除外されます。いつでも再有効化でき、その後は毎日分析が再開されます。</block>
+  <block id="216b0f9d0defb9c7b2fc90a44d91b17e" category="inline-link-macro">構成を適切なアーキテクチャ評価から除外する</block>
+  <block id="1d694d6efb18a8286bf26f017330481b" category="paragraph"><block ref="415cc2faf846f6c4919c812f17ee1f68" category="inline-link-macro-rx"></block>。</block>
+  <block id="861078a51e1d73e99a256817c9a5a154" category="paragraph-title">ベストプラクティスで、SQL ServerとOracleのボリュームのスケジュールされたローカルスナップショットを無効にすることが推奨されているのはなぜですか？</block>
+  <block id="3af2059afd09ef0862a548bd0ec73305" category="paragraph">スケジュールされたFSx for ONTAPスナップショットはアプリケーション整合性がありません。アプリケーション整合性のあるバックアップを取得し、リストア時の破損を回避するために、NetApp SnapCenterなどのツールを使用してスナップショットを外部で管理することをお勧めします。なお、Advanced createによるホストの導入では、デフォルトで7日間の保持期間を持つ日次スナップショットポリシーが有効になります。</block>
+  <block id="65d2da016345bf35d0d44ca8442e33fe" category="inline-link-macro">データベース構成の分析について詳しくはこちらをご覧ください</block>
+  <block id="75fbe2066fe307cd782606b24bd4869b" category="paragraph"><block ref="07c33d76d8f0770dfab847775db7d241" category="inline-link-macro-rx"></block>。</block>
+  <block id="b106daf2fdae0a4bd49b38f8d420b68d" category="section-title">サンドボックスクローン</block>
+  <block id="391ca9db72946303109a24d4896a9267" category="paragraph-title">サンドボックスのクローンはどのように作成され、どこに配置できるのですか？</block>
+  <block id="3bbf7c958cb2e4ab495a36a32d5d63a1" category="paragraph">サンドボックスクローンは、ソースデータベースの最新のスナップショットから作成されます。ターゲットホストが同じVPC内にあり、ソースと同じFSx for ONTAPファイルシステムを共有している限り、同じSQL Serverインスタンス上でも別のインスタンス上でもかまいません。作成するには、管理対象（登録済み）のSQL Serverと、操作および修復の権限が必要です。</block>
+  <block id="1c1dbe56fdf08bd43c074d9a934cd336" category="paragraph"><block ref="6504d115c0eb5a22b47c2642ce84b891" category="inline-link-macro-rx"></block>。</block>
+  <block id="982c02d5df1637bf58d01b9461097110" category="paragraph-title">サンドボックスクローンにおけるリフレッシュ、ベースライン再設定、分割の違いは何ですか？</block>
+  <block id="98c2003f15ada0740fd4faa8e94e0045" category="paragraph">更新機能は、クローンをソースデータベースの現在の状態または以前のスナップショットに同期させ、クローンに対して行った変更をすべて削除します。ベースラインを再設定すると、クローンが作成時の状態に復元され、変更内容も削除されます。また、新しいクローンを作成する場合と比べて容量を節約できます。分割処理を行うと、クローンはストレージ容量を消費する独立したデータベースとなり、分割処理が完了するとクローンは削除されます。</block>
+  <block id="e1f1b37e7b02212acbe08f9f82f26b8e" category="inline-link-macro">データベースクローンを管理する</block>
+  <block id="5aa6f3dd95bb84df52cc5b97e9fd7a9f" category="list-text"><block ref="2a272be59d3fc3e9b24f62aa8d372380" category="inline-link-macro-rx"></block>。</block>
+  <block id="5f7aaee7c16475aab769c15496c46e5d" category="list-text"><block ref="b7b6079009afe43a128528756b1dbee0" category="inline-link-macro-rx"></block>。</block>
+  <block id="0dae0c13a95ce8c681bc28a121c3ae69" category="paragraph-title">サンドボックスクローンのデータが正常であることを検証するにはどうすればよいですか？また、検証が失敗した場合はどうすればよいですか？</block>
+  <block id="e7ed74627b1561cd8461a79358810b61" category="paragraph">ソースデータベースがビジー状態のときにクローンを作成すると、クローンが最新のスナップショットと同期していない可能性があります。整合性チェックでは、クローン内のすべてのオブジェクトが検査されます。失敗した場合は、クローンを使用せず、新しいクローンを作成してください。</block>
+  <block id="dbb8c4266166bc0f89a2824c48e50dc4" category="inline-link-macro">データベースクローンの整合性を確認する</block>
+  <block id="c2ba1a80540f225e5274dff0d33108e1" category="paragraph"><block ref="8ac128c775c2cc11f12b591126762515" category="inline-link-macro-rx"></block>。</block>
+  <block id="a330102b21fc2aa74640b5b0f6d20d7f" category="paragraph-title">クローンを分割する前に確認すべきことは何ですか？</block>
+  <block id="3cc98a05c0bcbde8d2308b172248e95b" category="paragraph">分割すると、追加のストレージ容量を消費する新しいデータベースが作成されます。必要な容量を計画し、必要に応じて事前にFSx for ONTAPファイルシステムの容量を拡張してください。</block>
+  <block id="7e7397a7b79323762c61941fc0e6b5f9" category="section-title">データ保護</block>
+  <block id="d404dd8427b4c28dbfa1d2c86416a047" category="paragraph-title">バックアップとリカバリは、SQL Serverワークロードに対してどのような保護を提供しますか？</block>
+  <block id="65bae2ad8db3bdaec75f329c8a5c1340" category="paragraph">プライマリFSx for ONTAPストレージ上のローカルスナップショットでワークロードをバックアップし、SnapMirrorテクノロジを使用してセカンダリFSx for ONTAPストレージにレプリケートします。Backup and Recoveryで保護ポリシーを作成します。</block>
+  <block id="134f4db723fad5218b0420d296c36f6a" category="inline-link-macro">Backup and Recoveryを使用してSQL Serverワークロードを保護します</block>
+  <block id="682e931964d4d25dc4a6e06bb893382e" category="paragraph"><block ref="235de46f62004f88453be487a16a47c1" category="inline-link-macro-rx"></block>。</block>
+  <block id="e6e540463f0da11c64286b3213d032da" category="paragraph-title">NetApp Backup and Recoveryを使用してSQL Serverを保護するには何が必要ですか？</block>
+  <block id="1f2c4d8d8181aba9734a284d26f3c4a9" category="paragraph">SQL Serverインスタンスは、Windowsの認証情報を使用して登録する必要があります。また、Backup and RecoveryのSQL Server要件、NetApp Consoleの要件（Consoleエージェントを含む）、およびライセンス要件を満たす必要があります。その後、Workload FactoryはMicrosoft SQL Server用プラグインをインストールし、保護ポリシーを作成するためにBackup and Recoveryにリダイレクトします。</block>
+  <block id="2e593c29b9200c847ee51d180b1672af" category="section-title">自動化とエラー分析</block>
+  <block id="067d3f9b6c9ef0aac1905cdc0585e3dd" category="paragraph-title">Codeboxとは何ですか？また、生成されたコードを使用する際の注意点はありますか？</block>
+  <block id="2ea6aca63123969c1931cd33bf4619a0" category="inline-link-macro">Codeboxで自動化</block>
+  <block id="d53f23cf23eba63c40f3cc866dbe6cfd" category="paragraph">Codeboxは、Workload Factoryでサポートされる操作のためのREST API、AWS CLI、CloudFormation、およびTerraformコードを生成するインフラストラクチャ・アズ・コードのコパイロットです。Terraformコードではfsxadminとvsadminのパスワードが隠されているため、再入力する必要があります。ダウンロードまたはコピーされたCloudFormationテンプレートは7日間のみ保持されます。<block ref="4d16796654a24e4b45ccd7b4cddbdc2e" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="f97304e52b5c3c013082ec79473f77a0" category="paragraph-title">AI搭載のエラーログアナライザーを使用するには、どのような設定が必要ですか？</block>
+  <block id="5e7e8f81a0ac4fd14f2f16c1ab2fa852" category="paragraph">アナライザーを使用するには、Amazon Bedrock のアクティベーション、ホストのサブネットに関連付けられた Bedrock VPC エンドポイント、登録済みのリソース、および必要な IAM 権限が必要です。Oracleの場合、V$DIAG_ALERT_EXTへのアクセス権も付与する必要があります。アカウント管理者がAI機能を無効にしている場合、アナライザーは利用できません。</block>
+  <block id="d1abcf29bd372f70cbfc47a67e60c139" category="inline-link-macro">Workload Factory でエラーログを分析する方法を学習します</block>
+  <block id="04449fe0790df54b48e4cb6221e921ab" category="paragraph"><block ref="52e72fd03a4cc0d6f5999e643649e945" category="inline-link-macro-rx"></block>。</block>
+  <block id="c205c53a606156f982f2d7d7c8d9b4a3" category="paragraph-title">エラーログアナライザーを使用する場合、ログデータは安全ですか？</block>
+  <block id="2aec8f10b1cd6aa48fdd1951d13b132d" category="paragraph">ログデータと集計データはお客様のAWSアカウント内に保持され、プライベートVPCエンドポイントを経由して送信されるため、インターネット上に公開されることはありません。顧客データは、モデルの学習や改善には使用されません。Bedrockはログをリアルタイムで処理し、その結果はお客様の環境内に保存されます。</block>
+  <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="sidebar">FAQ</block>
 </blocks>
