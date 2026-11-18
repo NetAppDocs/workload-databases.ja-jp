@@ -2,25 +2,25 @@
 sidebar: sidebar 
 permalink: protect-sql-server.html 
 keywords: protect, server, Microsoft SQL Server, SQL Server, protect instance, protect database 
-summary: Microsoft SQL Server インスタンスとデータベースを保護します。 
+summary: Workload FactoryのNetApp Backup and Recoveryを使用した保護に向けてMicrosoft SQL Serverインスタンスを準備し、インスタンスとデータベースの保護を編集します。 
 ---
-= NetApp Workload Factory for Databasesを使用してMicrosoft SQL Serverワークロードを保護します
+= Workload Factory for Databasesを使用してMicrosoft SQL Serverワークロードを保護する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Workload Factory コンソールからNetApp Backup and Recovery を使用して、Microsoft SQL Server アプリケーション データを保護します。この統合により、ローカルプライマリAmazon FSx for NetApp ONTAP (FSx for ONTAP) ストレージ上のローカルスナップショットを使用してワークロードをバックアップし、セカンダリ FSx for ONTAPストレージにワークロードを複製するという保護目標を達成できます。
+Workload FactoryコンソールからNetApp Backup and Recoveryを使用して、Microsoft SQL Serverアプリケーションデータを保護します。この統合により、プライマリAmazon FSx for NetApp ONTAP（FSx for ONTAP）ストレージ上のローカルスナップショットを使用してワークロードをバックアップし、セカンダリFSx for ONTAPストレージにワークロードをレプリケートできます。
 
 
 
 [[about-this-task]]
 == タスクの内容
 
-Workload Factory は、リソースの検出、前提条件の検証、Microsoft SQL Server 用プラグインの構成とインストールを自動化し、 NetApp Backup and Recovery によるワークロードの保護を準備します。このプラグインは、Microsoft SQL Server のワークロードを保護できるNetAppソフトウェアのホスト側コンポーネントです。
+Workload Factoryは、NetApp Backup and Recoveryを使用してワークロードを保護する準備として、リソースの検出、前提条件の検証、およびMicrosoft SQL Server向けプラグインの構成とインストールを自動化します。このプラグインは、Microsoft SQL Serverワークロードを保護できるようにするNetAppソフトウェアのホスト側コンポーネントです。
 
-NetApp Backup and Recovery は、 NetApp SnapMirrorデータ レプリケーション テクノロジーを活用して、スナップショット コピーを作成し、それをバックアップの場所に転送することで、すべてのバックアップが完全に同期されるようにします。
+NetApp Backup and Recoveryは、NetApp SnapMirrorデータレプリケーションテクノロジを使用して、スナップショットコピーを作成し、バックアップ場所に転送することで、すべてのバックアップが完全に同期されるようにします。
 
 バックアップとリカバリによる保護の詳細については、 link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html["バックアップとリカバリによる Microsoft SQL ワークロードの保護の概要"^]。
 
@@ -29,17 +29,17 @@ NetApp Backup and Recovery は、 NetApp SnapMirrorデータ レプリケーシ�
 [[before-you-begin]]
 == 開始する前に
 
-バックアップとリカバリを使用して Microsoft SQL Server ワークロードを保護するには、次の要件を満たす必要があります。
+Backup and Recoveryを使用してMicrosoft SQL Serverワークロードを保護する前に、これらの要件を満たしてください。
 
 * 環境が以下の要件を満たしていることを確認してください link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements["バックアップとリカバリのSQL Serverの要件"^]。
-* link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#in-netapp-console["NetAppコンソールの要件をすべて満たす"^] 設定、IAM ロールの割り当て、コンソール エージェントのインストールなどが含まれます。
+* link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#in-netapp-console["NetAppコンソールの要件をすべて満たす"^]、セットアップ、IAMロールの割り当て、Consoleエージェントのインストールなどが含まれます
 
 
 NetAppアカウントへの組織管理者アクセス権を持っている場合は、 `backup and recovery super admin`役割は自動的に割り当てられます<<NetAppバックアップとリカバリによる保護の準備,NetAppバックアップとリカバリによる保護の準備>>。
 
-* コネクタのホスト解像度を設定する
+* Consoleエージェントでホスト解像度を設定する
 +
-データベースを検出するには、コネクタでホスト解決を設定する必要があります。ホストデバイスで、IPアドレスとホスト名のマッピングを `/etc/hosts`ファイル。
+データベースを検出するには、Consoleエージェントでホスト解決を設定する必要があります。ホストデバイスで、IPアドレスとホスト名のマッピングを `/etc/hosts`ファイルに追加します。
 
 +
 ** link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html["NetAppバックアップおよびリカバリのライセンスを設定する"^]
@@ -65,8 +65,8 @@ NetApp Backup and Recovery を使用して Microsoft SQL Server リソースを�
 保護のためにNetApp Backup and Recovery を使用するには、SQL Server インスタンスを Windows 資格情報を使用して Workload Factory に登録する必要があります。
 
 . 複数のコンソール エージェントがアクティブで利用可能な場合は、ワークロードを登録して保護する *コンソール エージェント* を選択します。
-. データ保護の準備として、Workload Factory は、Backup and Recovery に SQL Server リソースを自動的に登録し、Microsoft SQL Server 用プラグインを構成およびインストールし、SQL Server インスタンスを保護するための前提条件を満たすリソースを検出します。プロセスを開始するには、[*開始*] を選択します。
-. 前提条件を満たしたら、[*リダイレクト*] を選択してバックアップとリカバリにアクセスします。
+. データ保護の準備を行うには、*Start*を選択します。Workload Factoryは、SQL ServerリソースをBackup and Recoveryに自動的に登録し、Microsoft SQL Server向けプラグインを構成およびインストールして、SQL Serverインスタンスを保護するための前提条件を満たすリソースを検出します。
+. 前提条件を満たしたら、*Redirect*を選択してBackup and Recoveryにアクセスしてください。
 
 
 .次のステップ
